@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiac Ejection Fraction (EF) Calculator: Calculation by Teicholtz and Volumes</title>
+    <meta name="description" content="Cardiac Ejection Fraction (EF) Calculator: Calculation by Teicholtz and Volumes - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Cardiac Ejection Fraction (EF) Calculator: Calculation by Teicholtz and Volumes</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (Premium UX + Адаптивность) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal { width: 100%; max-width: 100%; box-sizing: border-box;}
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 16px;}
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #334155; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; padding:0 6px; border:1px solid #cbd5e1; border-radius:6px; font-weight:700; font-size:12px; color:#64748b; background:#f8fafc; margin-left:6px;}
+    
+    .c-input, .c-select { width:100%; padding:12px 14px; border:1px solid #cbd5e1; border-radius:8px; font-size:14px; background:#fff; transition: border-color 0.2s;}
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0ea5e9; box-shadow:0 0 0 3px #e0f2fe; }
+
+    .c-group-title { font-weight:700; color:#0f172a; margin: 15px 0 10px; font-size: 15px; display: flex; align-items: center; gap: 8px;}
+    .c-group-title::after { content: ''; flex: 1; height: 1px; background: #e2e8f0; }
+
+    .c-actions { display:flex; gap:16px; flex-wrap:wrap; margin-top: 24px; margin-bottom: 20px;}
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:14px 20px; cursor:pointer; font-weight:700; transition:.2s; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0284c7, #0369a1); color:#fff; box-shadow: 0 4px 6px -1px rgba(2, 132, 199, 0.2); }
+    .c-btn-secondary { background:#f1f5f9; color:#475569; }
+    .c-btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 8px -1px rgba(2, 132, 199, 0.3); }
+
+    .c-result { border:2px solid #e0f2fe; border-radius:16px; padding:24px; background:#fff; display:none; width: 100%; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);}
+    .c-result.show { display:block; }
+    
+    .c-resline { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-bottom: 1px dashed #e2e8f0; gap: 10px;}
+    .c-resline:last-child { border-bottom:none; }
+    
+    .c-resleft { font-size:14px; color:#475569; font-weight: 600; }
+    .c-resval { font-weight:800; font-size:16px; text-align: right; color: #0f172a; }
+    .c-subtext { font-size: 12px; color: #94a3b8; font-weight: normal; display: block; margin-top: 3px; }
+
+    .c-notice { padding: 12px; border-radius: 8px; font-size: 14px; margin-bottom: 16px; display: none; font-weight: 500;}
+    .c-notice.show { display: block; }
+    .c-notice.error { background: #fee2e2; color: #b91c1c; border: 1px solid #fecaca; }
+
+    /* Шкала Фракции Выброса */
+    .c-hero-score { text-align: center; margin-bottom: 24px; padding-bottom: 20px; border-bottom: 2px solid #f8fafc;}
+    .c-score-num { font-size: 54px; font-weight: 900; color: #0f172a; line-height: 1; margin-bottom: 8px; transition: color 0.5s ease;}
+    .c-score-label { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px;}
+    
+    .c-scale-box { width: 100%; }
+    .c-scale { height: 12px; border-radius: 6px; background: #e2e8f0; overflow: hidden; position: relative;}
+    .c-scale-fill { height: 100%; width: 0%; transition: width 1s cubic-bezier(0.4, 0, 0.2, 1), background 1s ease;}
+    .c-scale-markers { display:flex; justify-content:space-between; font-size:11px; color:#94a3b8; margin-top:6px; font-weight: 600; position: relative;}
+    .c-scale-markers span { position: absolute; transform: translateX(-50%); }
+
+    /* Бейджи */
+    .c-badge { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 13px; font-weight: 700; background: #f1f5f9; color: #475569;}
+
+    .is-hidden { display:none !important; }
+
+    @media (max-width: 480px) {
+       .c-resline { flex-direction: column; align-items: flex-start; gap: 6px;}
+       .c-resval { text-align: left; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-body">
+<div class="c-group-title">⚙️ Calculation settings</div>
+<div class="c-row" style="grid-template-columns: 1fr;">
+<div class="c-field">
+<label class="c-label">Method for assessing LV volume</label>
+<select class="c-select" id="calcMethod">
+<option selected="" value="volumes">By volume (KDO and CSR) - Simpson / 3D</option>
+<option value="teichholz">According to Teicholtz (KDR and KSR) - Linear dimensions</option>
+</select>
+</div>
+</div>
+<div class="c-group-title">📊 EchoCG data</div>
+<div id="blockVolumes">
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">EDV (Diastole)<span class="c-term">ml</span></label>
+<input class="c-input" id="edv" placeholder="For example: 120" step="1" type="number"/>
+</div>
+<div class="c-field">
+<label class="c-label">KSO (Systole)<span class="c-term">ml</span></label>
+<input class="c-input" id="esv" placeholder="For example: 50" step="1" type="number"/>
+</div>
+</div>
+</div>
+<div class="is-hidden" id="blockTeichholz">
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">EDR (Diastole)<span class="c-term">mm</span></label>
+<input class="c-input" id="lvidd" placeholder="For example: 50" step="1" type="number"/>
+</div>
+<div class="c-field">
+<label class="c-label">CSR (Systole)<span class="c-term">mm</span></label>
+<input class="c-input" id="lvids" placeholder="For example: 32" step="1" type="number"/>
+</div>
+</div>
+</div>
+<div class="c-group-title">❤️ Hemodynamics (Optional)</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Heart rate<span class="c-term">beats/min</span></label>
+<input class="c-input" id="hr" placeholder="To calculate minute volume (MV)" step="1" type="number"/>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Clear</button>
+</div>
+<div class="c-notice error" id="validationError">
+<span id="errorMsg"></span>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-hero-score">
+<div class="c-score-label" id="resStatus">Ejection Fraction (EF)</div>
+<div class="c-score-num" id="resEF">0%</div>
+<div class="c-scale-box">
+<div class="c-scale"><div class="c-scale-fill" id="scaleFill"></div></div>
+<div class="c-scale-markers">
+<span style="left: 0%">0</span>
+<span style="left: 40%">40</span>
+<span style="left: 50%">50</span>
+<span style="left: 70%">70</span>
+<span style="left: 100%">100%</span>
+</div>
+</div>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Stroke volume (SV)<span class="c-subtext">Blood volume per contraction</span>
+</div>
+<div class="c-resval" id="resSV">0 ml</div>
+</div>
+<div class="c-resline" id="rowCO">
+<div class="c-resleft">Minute volume (CO/MOK)<span class="c-subtext">Blood flow in one minute</span>
+</div>
+<div class="c-resval">
+<span class="c-badge" id="resCO" style="background:#e0f2fe; color:#0369a1;">0 l/min</span>
+</div>
+</div>
+<div class="c-resline is-hidden" id="rowFS">
+<div class="c-resleft">Fractional Shortening (FS)<span class="c-subtext">Relative change in LV size</span>
+</div>
+<div class="c-resval" id="resFS">0%</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика =====
+  const $ = (s) => wrap.querySelector(s);
+  
+  const resBox = $('#resultBox');
+  const errorBox = $('#validationError');
+  const errorMsg = $('#errorMsg');
+  const methodSelect = $('#calcMethod');
+  const scaleFill = $('#scaleFill');
+  
+  function num(v){ const n = parseFloat(String(v).replace(',', '.')); return Number.isFinite(n) ? n : NaN; }
+  
+  function updateUI() {
+      const mode = methodSelect.value;
+      if (mode === 'volumes') {
+          $('#blockVolumes').classList.remove('is-hidden');
+          $('#blockTeichholz').classList.add('is-hidden');
+      } else {
+          $('#blockVolumes').classList.add('is-hidden');
+          $('#blockTeichholz').classList.remove('is-hidden');
+      }
+      resBox.classList.remove('show');
+      errorBox.classList.remove('show');
+  }
+
+  methodSelect.addEventListener('change', updateUI);
+
+  function setError(msg) {
+    errorMsg.textContent = msg;
+    errorBox.classList.add('show');
+    resBox.classList.remove('show');
+  }
+
+  function calc() {
+    errorBox.classList.remove('show');
+    
+    const mode = methodSelect.value;
+    let EDV = 0; 
+    let ESV = 0; 
+    let FS = 0;
+    
+    if (mode === 'volumes') {
+        EDV = num($('#edv').value);
+        ESV = num($('#esv').value);
+        
+        if (isNaN(EDV)) { setError('Specify KDO.'); return; }
+        if (isNaN(ESV)) { setError('Specify CSR.'); return; }
+        
+        if (Math.sign(EDV) !== 1) { setError('EDC must be > 0.'); return; }
+        if (Math.sign(ESV) === -1) { setError('CSR cannot be negative.'); return; }
+        if (Math.sign(EDV - ESV) !== 1) { setError('EDV must be greater than ESV (heart must contract).'); return; }
+        
+    } else { 
+        const LVIDd_mm = num($('#lvidd').value);
+        const LVIDs_mm = num($('#lvids').value);
+        
+        if (isNaN(LVIDd_mm)) { setError('Specify the CDR.'); return; }
+        if (isNaN(LVIDs_mm)) { setError('Specify the CSR.'); return; }
+
+        if (Math.sign(LVIDd_mm) !== 1) { setError('CDR must be > 0.'); return; }
+        if (Math.sign(LVIDs_mm) === -1) { setError('The CSR cannot be negative.'); return; }
+        if (Math.sign(LVIDd_mm - LVIDs_mm) !== 1) { setError('The CDR must be greater than the CSR.'); return; }
+        
+        // В формуле нужны см
+        const LVIDd = LVIDd_mm / 10; 
+        const LVIDs = LVIDs_mm / 10;
+        
+        EDV = (7 * Math.pow(LVIDd, 3)) / (2.4 + LVIDd);
+        ESV = (7 * Math.pow(LVIDs, 3)) / (2.4 + LVIDs);
+        FS = ((LVIDd - LVIDs) / LVIDd) * 100;
+    }
+    
+    // Основные расчеты
+    const SV = EDV - ESV; 
+    const EF = (SV / EDV) * 100; 
+    
+    // Гемодинамика
+    const HR = num($('#hr').value);
+    let CO = 0;
+    let hasHR = false;
+    if (!isNaN(HR)) {
+        if (Math.sign(HR) === 1) {
+            CO = (SV * HR) / 1000; // Литры в минуту
+            hasHR = true;
+        }
+    }
+    
+    // Определение статуса (ASE/EACVI guidelines)
+    let statusText = '';
+    let barColor = '';
+    let textColor = '';
+    
+    if (Math.sign(40 - EF) === 1) { // EF < 40
+        statusText = 'Reduced EF (HFrEF)';
+        barColor = '#ef4444'; // Red
+        textColor = '#b91c1c';
+    } else {
+        if (Math.sign(50 - EF) === 1) { // EF < 50
+            statusText = 'Moderately reduced EF (SNusEF)';
+            barColor = '#f59e0b'; // Orange
+            textColor = '#b45309';
+        } else {
+            if (Math.sign(70 - EF) === 1) { // EF < 70
+                statusText = 'Normal systolic function';
+                barColor = '#10b981'; // Green
+                textColor = '#047857';
+            } else { // EF >= 70
+                statusText = 'Hyperdynamia (High EF)';
+                barColor = '#8b5cf6'; // Purple
+                textColor = '#6d28d9';
+            }
+        }
+    }
+
+    // Вывод в UI
+    $('#resEF').textContent = EF.toFixed(1) + '%';
+    $('#resEF').style.color = textColor;
+    $('#resStatus').textContent = statusText;
+    $('#resStatus').style.color = textColor;
+    $('#resSV').textContent = SV.toFixed(1) + 'ml';
+    
+    if (hasHR) {
+        $('#rowCO').classList.remove('is-hidden');
+        $('#resCO').textContent = CO.toFixed(2) + 'l/min';
+    } else {
+        $('#rowCO').classList.add('is-hidden');
+    }
+
+    if (mode === 'teichholz') {
+        $('#rowFS').classList.remove('is-hidden');
+        $('#resFS').textContent = FS.toFixed(1) + '%';
+    } else {
+        $('#rowFS').classList.add('is-hidden');
+    }
+
+    resBox.classList.add('show');
+    
+    // Анимация градусника
+    setTimeout(() => {
+        let fillWidth = EF;
+        if (Math.sign(fillWidth - 100) === 1) fillWidth = 100;
+        scaleFill.style.width = fillWidth + '%';
+        scaleFill.style.background = barColor;
+    }, 50);
+  }
+
+  $('#calcBtn').addEventListener('click', calc);
+  
+  $('#resetBtn').addEventListener('click', () => {
+    $('#edv').value = ''; $('#esv').value = '';
+    $('#lvidd').value = ''; $('#lvids').value = '';
+    $('#hr').value = '';
+    resBox.classList.remove('show');
+    errorBox.classList.remove('show');
+    scaleFill.style.width = '0%';
+  });
+});
+</script>
+
+        <div class="post-content">
+<h2 class="wp-block-heading" id="chto-takoe-fraktsiya-vybrosa-i-zachem-eyo-schitat-2">What is ejection fraction and why calculate it?</h2>
+<p><strong>Ejection Fraction (EF)</strong> is one of the most important indicators of heart health. It shows how efficiently the left ventricle pumps blood with each contraction. This parameter is measured as a percentage and is the gold standard for diagnosing heart failure.</p>
+<p>Our online calculator allows you to instantly interpret echocardiography (cardiac ultrasound) or MRI data using two main calculation methods.</p>
+<h2 class="wp-block-heading" id="metody-rascheta-2">Calculation methods</h2>
+<p>In cardiology, different approaches are used to calculate EF depending on the available data.</p>
+<h3 class="wp-block-heading" id="1-raschet-po-obemam-klassicheskij-2">1. Calculation by volume (Classic)</h3>
+<p>This method is the most accurate. It is used if the doctor's report indicates ventricular volumes.</p>
+<p>Formula:</p>
+<p>$$EF = \frac{EDV — ESV}{EDV} \times 100\%$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li><strong>EDV (KDO)</strong> - End-diastolic volume (the amount of blood in the ventricle before the beat).</li>
+<li><strong>ESV (CSR)</strong> - End systolic volume (the amount of blood remaining after a stroke).</li>
+</ul>
+<p>The difference $(EDV — ESV)$ is called <strong>Stroke Volume (SV)</strong>.</p>
+<h3 class="wp-block-heading" id="2-metod-tejholtsa-teichholz-2">2. Teichholz method</h3>
+<p>Often, ultrasound reports indicate only the linear dimensions (diameters) of the ventricle. The Teicholtz method allows one to approximately convert these diameters into volumes and calculate the ejection fraction.</p>
+<p>Teicholz volume formula:</p>
+<p>$$V = \frac{7 \times D^3}{2.4 + D}$$</p>
+<p>Where $D$ is the ventricular diameter (VDR or VSD).</p>
+<h2 class="wp-block-heading" id="tablitsa-norm-fraktsii-vybrosa-2">Table of Emission Fraction Standards</h2>
+<p>How to understand the result? According to the recommendations of the European Society of Cardiology (ESC), the classification is as follows:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Ejection Fraction (EF)</strong></td><td><strong>Interpretation</strong></td><td><strong>What does it mean?</strong></td></tr></thead><tbody><tr><td><strong>≥ 50%</strong></td><td><strong>Norm</strong></td><td>The pumping function of the heart is preserved. The heart works efficiently.</td></tr><tr><td><strong>40 – 49%</strong></td><td><strong>Moderately reduced</strong></td><td>"Gray Zone". Monitoring and control of risk factors is required.</td></tr><tr><td><strong>&lt; 40%</strong></td><td><strong>Reduced</strong></td><td>Systolic dysfunction. High risk of developing heart failure (HF).</td></tr><tr><td><strong>&gt; 75%</strong></td><td><strong>Hyperdynamia</strong></td><td>The heart contracts too much (often found in hypertrophy or thyrotoxicosis).</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="kak-polzovatsya-kalkulyatorom-2">How to use the calculator?</h2>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Select method:</strong>
+<ul class="wp-block-list">
+<li>If you have values ​​in milliliters (ml), select <strong>"By volume"</strong>.</li>
+<li>If you have values ​​in millimeters (mm) from the ultrasound report, select <strong>"According to Teicholz"</strong>.</li>
+</ul>
+</li>
+<li><strong>Enter details:</strong>
+<ul class="wp-block-list">
+<li>For volumes: EDV (End-Diastolic Volume) and CSO (End-Systolic Volume).</li>
+<li>For Teicholz: CDR (LVIDd) and CSR (LVIDs).</li>
+</ul>
+</li>
+<li><strong>Get the result:</strong> The script will calculate the ejection percentage, stroke volume and show the status (Normal or Pathological).</li>
+</ol>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p><strong>Important:</strong> A low ejection fraction does not always mean a death sentence. Modern therapy can significantly improve this indicator. The results of the calculator are for informational purposes only; To make a diagnosis, consult a cardiologist.</p>
+</blockquote>
+</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer consumption calculator per m²</title>
+    <meta name="description" content="Primer consumption calculator per m² - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Primer consumption calculator per m²</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const root = document.getElementById('converter-block');
+  if (!root) return;
+
+  // ====== ЕДИНЫЕ СТИЛИ ШАБЛОНА ======
+  const style = document.createElement('style');
+  style.textContent = `
+.c-row3 {display: grid;grid-template-columns: 1fr 1fr 1fr;gap: 10px;}
+  .c-universal * { box-sizing: border-box; }
+  .c-body { padding: 0px; }
+  .c-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .c-row.single { grid-template-columns: 1fr; }
+  .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+  .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+  .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+  .c-input, .c-select { width: 100%; padding: 12px 14px; border: 1px solid #ccc; border-radius: 8px; font-size: 14px; }
+  .c-input:focus, .c-select:focus { outline: none; border-color: #0693e3; box-shadow: 0 0 0 3px #0693e34f; }
+
+  .c-inline { display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content: center; font-weight: 600; margin: 10px;}
+
+  .c-actions { display: flex; gap: 20px; margin-top: 16px; }
+  .c-btn { appearance: none; border: none; border-radius: 10px; padding: 12px 18px; cursor: pointer; font-weight: 600; transition: .2s; width: 100%; }
+  .c-btn-primary { background: #0693e3; color: #fff; }
+  .c-btn-secondary { background: #4a5565; color: #fff; }
+  .c-btn:hover { box-shadow: 0 2px 10px rgba(0,0,0,.06); }
+
+  /* Результат — табличный и скрыт до расчёта */
+  .c-result { margin-top: 16px; border: 1px dashed #4caf50; border-radius: 10px; padding: 10px; gap: 0; background: #fff; display: none; }
+  .c-result.show { display: grid; }
+  .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom: 1px dashed #4caf50; grid-template-columns: 0.4fr 0.5fr 0.1fr; }
+  .c-resline:last-child { border-bottom:none; }
+  .c-resleft { font-size:14px; color:#333; }
+  .c-resval { font-weight:700; font-size:16px; word-break: break-word; }
+
+  /* Копирование — иконка через CSS */
+  .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden;
+            background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+            background-repeat:no-repeat; background-position:center; background-size:20px 20px; }
+  .c-help { font-size: 12px; color:#555; margin-top:8px; text-align:center; }
+
+  @media (max-width: 860px) { .c-row { grid-template-columns: 1fr; } .c-row3 { grid-template-columns: 1fr; } .c-actions { flex-wrap: wrap; } .c-resval { font-size: 14px; } }
+  `;
+  document.head.appendChild(style);
+
+  // ====== РАЗМЕТКА ======
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+Top block: type, surface, layers, losses
+<div class="c-row">
+<div class="c-field">
+<label class="c-label" for="primerType">Primer type<span class="c-term">kg/m²</span></label>
+<select class="c-select" id="primerType">
+<option value="0.20">Deep penetrating ≈0.20</option>
+<option selected="" value="0.12">Acrylic universal ≈0.12</option>
+<option value="0.10">Alkyd ≈0.10</option>
+<option value="0.18">Epoxy ≈0.18</option>
+<option value="0.25">Quartz (adhesive) ≈0.25</option>
+</select>
+</div>
+<div class="c-field">
+<label class="c-label" for="surface">Surface<span class="c-term">coefficient</span></label>
+<select class="c-select" id="surface">
+<option value="0.90">Thick/previously painted (0.90)</option>
+<option selected="" value="1.00">Smooth putty (1.00)</option>
+<option value="1.15">Plaster/brick (1.15)</option>
+<option value="1.20">Concrete (1.20)</option>
+<option value="1.40">Aerated concrete/highly absorbent (1.40)</option>
+</select>
+</div>
+<div class="c-field">
+<label class="c-label" for="layers">Layers</label>
+<input class="c-input" id="layers" inputmode="numeric" min="1" step="1" type="number" value="2"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="loss">Losses<span class="c-term">%</span></label>
+<input class="c-input" id="loss" inputmode="numeric" min="0" step="1" type="number" value="10"/>
+</div>
+</div>
+Area input mode
+<div class="c-inline" style="margin-top:6px">
+<label class="c-inline"><input checked="" id="modeArea" name="mode" type="radio" value="area"/>By area</label>
+<label class="c-inline"><input id="modeSize" name="mode" type="radio" value="size"/>By size</label>
+</div>
+By area
+<div class="c-row" id="blockArea" style="margin-top:6px">
+<div class="c-field">
+<label class="c-label" for="areaVal">Square<span class="c-term">m²</span></label>
+<input class="c-input" id="areaVal" inputmode="decimal" min="0.1" step="0.1" type="number" value="20"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="density">Density<span class="c-term">kg/l (optional)</span></label>
+<input class="c-input" id="density" inputmode="decimal" min="0.5" step="0.05" type="number" value="1"/>
+</div>
+</div>
+By size
+<div class="c-row3" id="blockSize" style="display:none;margin-top:6px">
+<div class="c-field">
+<label class="c-label" for="lenVal">Length<span class="c-term">m</span></label>
+<input class="c-input" id="lenVal" inputmode="decimal" min="0.1" step="0.1" type="number" value="4"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="widVal">Width<span class="c-term">m</span></label>
+<input class="c-input" id="widVal" inputmode="decimal" min="0.1" step="0.1" type="number" value="5"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="density2">Density<span class="c-term">kg/l (optional)</span></label>
+<input class="c-input" id="density2" inputmode="decimal" min="0.5" step="0.05" type="number" value="1"/>
+</div>
+</div>
+Packaging and price
+<div class="c-row3" style="margin-top:6px">
+<div class="c-field">
+<label class="c-label" for="packUnit">Unit packaging</label>
+<select class="c-select" id="packUnit">
+<option selected="" value="kg">kg</option>
+<option value="l">liters</option>
+</select>
+</div>
+<div class="c-field">
+<label class="c-label" for="packSize">Container size</label>
+<input class="c-input" id="packSize" inputmode="decimal" min="0.1" step="0.1" type="number" value="10"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="packPrice">Price<span class="c-term">$</span></label>
+<input class="c-input" id="packPrice" inputmode="decimal" min="0" step="0.01" type="number" value="0"/>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="btnCalc" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="btnClear" type="button">Reset</button>
+</div>
+Results
+<div class="c-result" id="resBox">
+<div class="c-resline">
+<div class="c-resleft">Square</div>
+<div class="c-resval" id="rArea">—</div>
+<button class="c-copy" id="copyArea" type="button">Copy</button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Primer type</div>
+<div class="c-resval" id="rType">—</div>
+<button class="c-copy" id="copyType" type="button">Copy</button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Basic flow</div>
+<div class="c-resval" id="rRate">—</div>
+<button class="c-copy" id="copyRate" type="button">Copy</button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Layers</div>
+<div class="c-resval" id="rLayers">—</div>
+<button class="c-copy" id="copyLayers" type="button">Copy</button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Coef. surfaces</div>
+<div class="c-resval" id="rSurf">—</div>
+<button class="c-copy" id="copySurf" type="button">Copy</button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Losses</div>
+<div class="c-resval" id="rLoss">—</div>
+<button class="c-copy" id="copyLoss" type="button">Copy</button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Total weight</div>
+<div class="c-resval" id="rKg">—</div>
+<button class="c-copy" id="copyKg" type="button">Copy</button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Total volume</div>
+<div class="c-resval" id="rL">—</div>
+<button class="c-copy" id="copyL" type="button">Copy</button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Tara</div>
+<div class="c-resval" id="rPacksLine">—</div>
+<button class="c-copy" id="copyPacks" type="button">Copy</button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Landmark. price</div>
+<div class="c-resval" id="rCost">—</div>
+<button class="c-copy" id="copyCost" type="button">Copy</button>
+</div>
+</div>
+</div>
+</div>
+`;
+  root.appendChild(wrap);
+
+  // ====== ЛОГИКА ======
+  const $ = (sel) => wrap.querySelector(sel);
+
+  // Переключение режимов
+  const modeArea = $('#modeArea');
+  const modeSize = $('#modeSize');
+  const blockArea = $('#blockArea');
+  const blockSize = $('#blockSize');
+
+  modeArea.addEventListener('change', () => { blockArea.style.display='grid'; blockSize.style.display='none'; });
+  modeSize.addEventListener('change', () => { blockArea.style.display='none'; blockSize.style.display='grid'; });
+
+  // Ссылки на элементы
+  const primerType = $('#primerType');
+  const surface = $('#surface');
+  const layers = $('#layers');
+  const loss = $('#loss');
+
+  const areaVal = $('#areaVal');
+  const density = $('#density');
+  const lenVal = $('#lenVal');
+  const widVal = $('#widVal');
+  const density2 = $('#density2');
+
+  const packUnit = $('#packUnit');
+  const packSize = $('#packSize');
+  const packPrice = $('#packPrice');
+
+  const btnCalc = $('#btnCalc');
+  const btnClear = $('#btnClear');
+
+  // Результаты
+  const rArea = $('#rArea');
+  const rType = $('#rType');
+  const rRate = $('#rRate');
+  const rLayers = $('#rLayers');
+  const rSurf = $('#rSurf');
+  const rLoss = $('#rLoss');
+  const rKg = $('#rKg');
+  const rL = $('#rL');
+  const rPacksLine = $('#rPacksLine');
+  const rCost = $('#rCost');
+  const resBox = $('#resBox');
+
+  function num(el){ const v = parseFloat(el.value); return isNaN(v)?0:v; }
+  function int(el){ const v = parseInt(el.value,10); return isNaN(v)?0:v; }
+  function fix(x,n){ return (typeof x==='number' && isFinite(x))? x.toFixed(n):'—'; }
+
+  function calc() {
+    const rate = num(primerType);
+    const lay = Math.max(1, int(layers));
+    const surf = num(surface);
+    const lossPct = Math.max(0, num(loss));
+
+    // Площадь
+    let area = 0;
+    let dens = num(density);
+    if (modeSize.checked) {
+      const L = num(lenVal);
+      const W = num(widVal);
+      area = L * W;
+      dens = num(density2);
+    } else {
+      area = num(areaVal);
+    }
+
+    // Валидация
+    if (!(rate>0 && lay>=1 && surf>0 && area>0)) {
+      resBox.classList.remove('show');
+      alert('Fill in the fields correctly.');
+      return;
+    }
+
+    // Масса и литры
+    let kg = area * rate * lay * surf;
+    kg = kg * (1 + (lossPct/100));
+    const liters = (dens>0) ? (kg / dens) : 0;
+
+    // Тара и стоимость
+    const unit = packUnit.value;                  // 'kg' | 'l'
+    const pSize = num(packSize);
+    const pPrice = num(packPrice);
+    let packs = 0;
+    if (pSize>0) {
+      packs = Math.ceil((unit==='kg' ? kg : Math.max(liters,0)) / pSize);
+    }
+    const cost = (pPrice>0 && packs>0) ? packs * pPrice : 0;
+
+    // Вывод (с единицами)
+    rArea.textContent = `${fix(area,2)} м²`;
+    rType.textContent = primerType.options[primerType.selectedIndex].text;
+    rRate.textContent = `${fix(rate,2)} кг/м²`;
+    rLayers.textContent = String(lay);
+    rSurf.textContent = fix(surf,2);
+    rLoss.textContent = `${fix(lossPct,0)} %`;
+    rKg.textContent = `${fix(kg,2)} кг`;
+    rL.textContent  = (dens>0 ? `${fix(liters,2)} л` : '—');
+    rPacksLine.textContent = (packs>0 ? `${packs} шт × ${fix(pSize,2)} ${unit==='kg'?'kg':'l'}` : '—');
+    rCost.textContent = (cost>0 ? cost.toFixed(2) : '—');
+
+    resBox.classList.add('show');
+  }
+
+  function clearAll() {
+    layers.value = 2; loss.value = 10;
+    areaVal.value = 20; lenVal.value = 4; widVal.value = 5;
+    density.value = 1.0; density2.value = 1.0;
+    packUnit.value='kg'; packSize.value=10; packPrice.value=0;
+    resBox.classList.remove('show');
+  }
+
+  btnCalc.addEventListener('click', calc);
+  btnClear.addEventListener('click', clearAll);
+
+  // Enter запускает расчёт
+  [primerType, surface, layers, loss, areaVal, density, lenVal, widVal, density2, packUnit, packSize, packPrice]
+    .forEach(el => el.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ e.preventDefault(); calc(); }}));
+
+  // Копирование значений
+  const copyMap = {
+    copyArea: rArea, copyType: rType, copyRate: rRate, copyLayers: rLayers, copySurf: rSurf, copyLoss: rLoss,
+    copyKg: rKg, copyL: rL, copyPacks: rPacksLine, copyCost: rCost
+  };
+  wrap.addEventListener('click', (e) => {
+    const id = e.target && e.target.id;
+    if (id && copyMap[id]) {
+      try { navigator.clipboard.writeText(copyMap[id].textContent.trim()); } catch(_) {}
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p><strong>Primer consumption calculator per m²</strong> will help you calculate how much primer will be needed to treat the surface before painting or plastering.<br/>The tool is suitable for professional builders and home craftsmen - just specify the type of primer, area, number of layers and additional parameters.</p>
+<p><strong>Main features of the calculator:</strong></p>
+<ul class="wp-block-list">
+<li>Calculation by <strong>area</strong> or by <strong>wall dimensions (length × height)</strong>.</li>
+<li>Accounting <strong>absorption coefficient</strong> for different types of surfaces (concrete, plaster, brick, wood).</li>
+<li>Settings <strong>number of layers</strong> and percentage of losses.</li>
+<li>Converting mass to <strong>liters by density</strong> primer composition.</li>
+<li>Calculation <strong>required number of packages</strong> and approximate cost.</li>
+</ul>
+<h2 class="wp-block-heading" id="kak-polzovatsya-kalkulyatorom-2">How to use the calculator</h2>
+<ol class="wp-block-list">
+<li>Select the type of primer from the list (deep-penetrating, acrylic, etc.).</li>
+<li>Indicate the area or dimensions of the wall.</li>
+<li>Enter the number of layers, losses and, if necessary, density.</li>
+<li>Click “Calculate” - the calculator will show the total consumption in kg and liters, as well as the number of containers.</li>
+</ol>
+<h2 class="wp-block-heading" id="primernye-normy-rashoda-gruntovki-2">Approximate primer consumption rates</h2>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><th>Primer type</th><th>Average consumption, kg/m²</th><th>Features of application</th></tr></thead><tbody><tr><td>Deep penetrating</td><td>0.18–0.22</td><td>Absorbent substrates: concrete, aerated concrete</td></tr><tr><td>Acrylic universal</td><td>0.10–0.14</td><td>For painting and plastering</td></tr><tr><td>Quartz (adhesive)</td><td>0.25–0.30</td><td>For smooth surfaces and slabs</td></tr><tr><td>Alkyd</td><td>0.08–0.12</td><td>For metal, wood, old coatings</td></tr><tr><td>Epoxy</td><td>0.15–0.20</td><td>For floors and industrial substrates</td></tr></tbody></table></div></figure>
+<h3 class="wp-block-heading" id="polezno-znat-2">Good to know</h3>
+<ul class="wp-block-list">
+<li>How <strong>more porous</strong> base, the higher the consumption.</li>
+<li>When applied <strong>in two layers</strong> consumption is multiplied by 2.</li>
+<li>When using a roller or spray gun, losses can reach <strong>10–15 %</strong>.</li>
+<li>The average density of most primers is <strong>1 kg/l</strong>, which is convenient for converting to liters.</li>
+</ul>
+<p><strong>Primer calculator</strong> is a convenient tool that will help you avoid unnecessary costs and accurately calculate the required amount of material for any construction task.</p>
+<p></p>
+</div>
+    </div>
+</body>
+</html>

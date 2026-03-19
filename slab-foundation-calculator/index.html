@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monolithic slab calculator: online foundation calculation</title>
+    <meta name="description" content="Monolithic slab calculator: online foundation calculation - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Monolithic slab calculator: online foundation calculation</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const root = document.getElementById('converter-block');
+  if (!root) return;
+
+  // ====== ЕДИНЫЕ СТИЛИ ШАБЛОНА ======
+  const style = document.createElement('style');
+  style.textContent = `
+  .c-universal * { box-sizing: border-box; }
+  .c-body { padding: 0px; }
+  .c-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .c-row.single { grid-template-columns: 1fr; }
+  .c-field { display: flex; flex-direction: column; gap: 8px; }
+  .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+
+  .c-input, .c-select { width: 100%; padding: 12px 14px; border: 1px solid #ccc; border-radius: 8px; font-size: 14px; text-align: left; }
+  .c-input:focus, .c-select:focus { outline: none; border-color: #0693e3; box-shadow: 0 0 0 3px #0693e34f; }
+
+  /* Внутренние единицы измерения */
+  .c-input-wrap { position: relative; }
+  .c-input-wrap .c-input,
+  .c-input-wrap .c-select { padding-right: 54px; }
+  .c-input-wrap .c-term { 
+    position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+    display:inline-flex; align-items:center; justify-content:center;
+    height: 22px; min-width: 28px; padding: 0 6px;
+    border: 1px solid #ddd; border-radius: 6px;
+    font-weight: 700; font-size: 12px; color:#555; background:#fff;
+    pointer-events: none;
+  }
+
+  .c-actions { display: flex; gap: 20px; margin-top: 16px; }
+  .c-btn { appearance: none; border: none; border-radius: 10px; padding: 12px 18px; cursor: pointer; font-weight: 600; transition: .2s; width: 100%; }
+  .c-btn-primary { background: #0693e3; color: #fff; }
+  .c-btn-secondary { background: #4a5565; color: #fff; }
+  .c-btn:hover { box-shadow: 0 2px 10px rgba(0,0,0,.06); }
+
+  /* Результат скрыт до расчёта */
+  .c-result { margin-top: 16px; border: 1px dashed #0693e3; border-radius: 10px; padding: 10px; gap: 10px; background: #fff; display: none; }
+  .c-result.show { display: grid; }
+  .c-resline { display:flex; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom: 1px dashed #0693e3; }
+  .c-resline:last-child { border-bottom:none; }
+  .c-resleft { font-size:14px; color:#333; }
+  .c-resval { font-weight:700; font-size:16px; }
+
+  /* Копирование — иконка через CSS */
+  .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden;
+            background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+            background-repeat:no-repeat; background-position:center; background-size:20px 20px; }
+  .c-help { font-size: 12px; color:#555; margin-top:8px; text-align:center; }
+
+  /* Иллюстрация слева */
+  .c-illustration { border: 1px solid #eee; border-radius: 10px; padding: 8px; background:#fff; }
+  .c-illustration img { display:block; max-width:100%; height:auto; border-radius: 8px; }
+  .c-legend { font-size: 12px; text-align:center; margin-top:6px; color:#555; }
+
+  /* Опции */
+  .opt-toggle { display:flex; align-items:center; gap:10px; margin-top:8px; }
+  .opt-box { border:1px dashed #ddd; border-radius:8px; padding:12px; margin-top:6px; display:none; }
+
+  @media (max-width: 640px) { .c-row { grid-template-columns: 1fr; } .c-actions { flex-wrap: wrap; }}
+@media (max-width: 600px) {
+        .c-resline { display: grid; grid-template-columns: 1fr 34px; grid-template-rows: auto auto; }
+        .c-resval { display: grid; grid-column: 1; grid-row: 2; text-align: left; }
+        .c-copy { display: grid; grid-column: 2; grid-row: 1 / 3; width: 34px; height: 34px; background-size: 22px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  // ====== РАЗМЕТКА ======
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-row">
+Left column: picture
+<div class="c-field">
+<div class="c-illustration">
+<img alt="Calculation of a monolithic slab" decoding="async" loading="lazy" src="/wp-content/uploads/2025/09/slab-foundation.DBjI8xM6.png" title="Monolithic slab"/>
+</div>
+<div class="c-legend">Monolithic slab</div>
+</div>
+Right column: margins
+<div class="c-field">
+<div class="c-row single">
+<div class="c-field">
+<div class="c-label">Slab dimensions</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Width<span style="color:#e53935">B</span></label>
+<div class="c-input-wrap">
+<input class="c-input" id="width" inputmode="decimal" min="1" placeholder="Width" step="0.1" type="number" value="6"/>
+<span class="c-term">m</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Length<span style="color:#e53935">A</span></label>
+<div class="c-input-wrap">
+<input class="c-input" id="length" inputmode="decimal" min="1" placeholder="Length" step="0.1" type="number" value="8"/>
+<span class="c-term">m</span>
+</div>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Height<span style="color:#e53935">C</span></label>
+<div class="c-input-wrap">
+<input class="c-input" id="height" inputmode="numeric" min="10" placeholder="Height" step="10" type="number" value="250"/>
+<span class="c-term">mm</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Concrete grade</label>
+<div class="c-input-wrap">
+<select class="c-select" id="concrete">
+<option>M100 (B7.5)</option><option>M150 (B12.5)</option><option selected="">M200 (B15)</option>
+<option>M250 (B20)</option><option>M300 (B22.5)</option><option>M400 (B30)</option>
+<option>M450 (B35)</option><option>M500 (B40)</option><option>M600 (B45)</option>
+<option>M700 (B55)</option><option>M800 (B60)</option>
+</select>
+<span class="c-term">Class</span>
+</div>
+</div>
+</div>
+<div class="opt-toggle">
+<input id="armature" type="checkbox"/>
+<label for="armature">Reinforcement calculation</label>
+</div>
+<div class="opt-box" id="armatureBox">
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Cell length</label>
+<div class="c-input-wrap">
+<input class="c-input" id="cellLength" inputmode="numeric" min="50" step="10" type="number" value="200"/>
+<span class="c-term">mm</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Cell width</label>
+<div class="c-input-wrap">
+<input class="c-input" id="cellWidth" inputmode="numeric" min="50" step="10" type="number" value="200"/>
+<span class="c-term">mm</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Number of grids</label>
+<div class="c-input-wrap">
+<input class="c-input" id="rows" inputmode="numeric" min="1" step="1" type="number" value="2"/>
+<span class="c-term">pcs</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Reinforcement diameter</label>
+<div class="c-input-wrap">
+<select class="c-select" id="diameter">
+<option>6</option><option>8</option><option selected="">10</option><option>12</option><option>14</option>
+<option>16</option><option>18</option><option>20</option><option>22</option><option>25</option>
+<option>28</option><option>32</option>
+</select>
+<span class="c-term">mm</span>
+</div>
+</div>
+</div>
+</div>
+<div class="opt-toggle">
+<input id="formwork" type="checkbox"/>
+<label for="formwork">Formwork calculation</label>
+</div>
+<div class="opt-box" id="formworkBox">
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Board width</label>
+<div class="c-input-wrap">
+<input class="c-input" id="boardWidth" inputmode="numeric" min="50" step="10" type="number" value="150"/>
+<span class="c-term">mm</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Board length</label>
+<div class="c-input-wrap">
+<input class="c-input" id="boardLength" inputmode="numeric" min="500" step="100" type="number" value="6000"/>
+<span class="c-term">mm</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Board thickness</label>
+<div class="c-input-wrap">
+<input class="c-input" id="boardThickness" inputmode="numeric" min="10" step="5" type="number" value="25"/>
+<span class="c-term">mm</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="slabCalcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="slabClear" type="button">Reset</button>
+</div>
+<div class="c-result" id="slabResult">
+<div class="c-resline">
+<div class="c-resleft">Volume of concrete</div>
+<div class="c-resval" id="resVolume">—</div>
+<button aria-label="Copy" class="c-copy" id="copyVolume" type="button">Copy</button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Concrete grade</div>
+<div class="c-resval" id="resGrade">—</div>
+<button aria-label="Copy" class="c-copy" id="copyGrade" type="button">Copy</button>
+</div>
+<div class="c-resline" id="resArmLenLine" style="display:none;">
+<div class="c-resleft">Reinforcement: total length</div>
+<div class="c-resval" id="resArmLen">—</div>
+<button aria-label="Copy" class="c-copy" id="copyArmLen" type="button">Copy</button>
+</div>
+<div class="c-resline" id="resArmMassLine" style="display:none;">
+<div class="c-resleft">Reinforcement: mass (≈)</div>
+<div class="c-resval" id="resArmMass">—</div>
+<button aria-label="Copy" class="c-copy" id="copyArmMass" type="button">Copy</button>
+</div>
+<div class="c-resline" id="resBoardsLine" style="display:none;">
+<div class="c-resleft">Formwork: estimating the number of boards</div>
+<div class="c-resval" id="resBoards">—</div>
+<button aria-label="Copy" class="c-copy" id="copyBoards" type="button">Copy</button>
+</div>
+<div class="c-help" id="slabFormulaHint">Volume formula: V = A × B × C, where C is converted from mm to meters.</div>
+</div>
+</div>
+</div>
+`;
+  root.appendChild(wrap);
+
+  // ====== ЛОГИКА ======
+  const $ = (sel) => wrap.querySelector(sel);
+  const widthEl = $('#width');
+  const lengthEl = $('#length');
+  const heightEl = $('#height');
+  const concreteEl = $('#concrete');
+
+  const armChk = $('#armature');
+  const armBox = $('#armatureBox');
+  const cellLenEl = $('#cellLength');
+  const cellWidEl = $('#cellWidth');
+  const rowsEl = $('#rows');
+  const diaEl = $('#diameter');
+
+  const formChk = $('#formwork');
+  const formBox = $('#formworkBox');
+  const boardWEl = $('#boardWidth');
+  const boardLEl = $('#boardLength');
+  const boardTEl = $('#boardThickness');
+
+  const btnCalc = $('#slabCalcBtn');
+  const btnClear = $('#slabClear');
+
+  const resBlock = $('#slabResult');
+  const resVolume = $('#resVolume');
+  const resGrade  = $('#resGrade');
+  const resArmLenLine = $('#resArmLenLine');
+  const resArmMassLine = $('#resArmMassLine');
+  const resBoardsLine  = $('#resBoardsLine');
+  const resArmLen = $('#resArmLen');
+  const resArmMass = $('#resArmMass');
+  const resBoards = $('#resBoards');
+
+  const copyBtns = {
+    copyVolume: resVolume,
+    copyGrade:  resGrade,
+    copyArmLen: resArmLen,
+    copyArmMass: resArmMass,
+    copyBoards: resBoards
+  };
+
+  armChk.addEventListener('change', () => { armBox.style.display = armChk.checked ? 'block' : 'none'; });
+  formChk.addEventListener('change', () => { formBox.style.display = formChk.checked ? 'block' : 'none'; });
+
+  function fmt(n, d = 3) {
+    if (!isFinite(n)) return '—';
+    const s = Number.parseFloat(n.toFixed(d)).toString();
+    return s.replace(/(\.\d*?[1-9])0+$|\.0+$/,'$1');
+  }
+
+  function calc() {
+    const W = parseFloat(widthEl.value || 0);   // м
+    const L = parseFloat(lengthEl.value || 0);  // м
+    const Hmm = parseFloat(heightEl.value || 0);// мм
+    const H = Hmm / 1000;                       // м
+
+    if (!(W > 0 && L > 0 && H > 0)) {
+      resVolume.textContent = 'Error: check dimensions';
+      resGrade.textContent  = '—';
+      resArmLenLine.style.display = 'none';
+      resArmMassLine.style.display = 'none';
+      resBoardsLine.style.display = 'none';
+      resBlock.classList.add('show');
+      return;
+    }
+
+    const volume = W * L * H; // м³
+    resVolume.textContent = `${fmt(volume, 3)} м³`;
+    resGrade.textContent  = concreteEl.value;
+
+    // Арматура
+    if (armChk.checked) {
+      const cellLen = (parseFloat(cellLenEl.value || 0))/1000; // м
+      const cellWid = (parseFloat(cellWidEl.value || 0))/1000; // м
+      const rows = Math.max(1, parseInt(rowsEl.value || 1, 10));
+      const d = parseFloat(diaEl.value || 10);                 // мм
+
+      if (cellLen > 0 && cellWid > 0) {
+        const nAlongLength = Math.floor(W / cellWid) + 1; // стержни вдоль длины (L)
+        const nAlongWidth  = Math.floor(L / cellLen) + 1; // стержни вдоль ширины (W)
+        let totalLen = (nAlongLength * L + nAlongWidth * W) * rows;
+        totalLen *= 1.10; // +10% запас
+
+        const area = Math.PI * Math.pow(d/1000, 2) / 4;
+        const massPerM = 7850 * area; // кг/м
+        const totalMass = totalLen * massPerM;
+
+        resArmLen.textContent  = `${fmt(totalLen, 1)} м`;
+        resArmMass.textContent = `${fmt(totalMass, 1)} кг`;
+        resArmLenLine.style.display = '';
+        resArmMassLine.style.display = '';
+      } else {
+        resArmLen.textContent = 'incorrect cell parameters';
+        resArmMass.textContent = '—';
+        resArmLenLine.style.display = '';
+        resArmMassLine.style.display = '';
+      }
+    } else {
+      resArmLenLine.style.display = 'none';
+      resArmMassLine.style.display = 'none';
+    }
+
+    // Опалубка
+    if (formChk.checked) {
+      const bw = (parseFloat(boardWEl.value || 0))/1000; // м
+      const bl = (parseFloat(boardLEl.value || 0))/1000; // м
+      if (bw > 0 && bl > 0) {
+        const perimeter = 2 * (W + L);
+        const formArea = perimeter * H;
+        const boardArea = bw * bl;
+        const boardsCount = Math.ceil(formArea / boardArea);
+        resBoards.textContent = `${boardsCount} шт`;
+        resBoardsLine.style.display = '';
+      } else {
+        resBoards.textContent = 'incorrect board sizes';
+        resBoardsLine.style.display = '';
+      }
+    } else {
+      resBoardsLine.style.display = 'none';
+    }
+
+    resBlock.classList.add('show');
+  }
+
+  function clearAll() {
+    widthEl.value = '6';
+    lengthEl.value = '8';
+    heightEl.value = '250';
+    concreteEl.value = 'M200 (B15)';
+    armChk.checked = false; armBox.style.display = 'none';
+    formChk.checked = false; formBox.style.display = 'none';
+    resBlock.classList.remove('show');
+  }
+
+  // Слушатели
+  btnCalc.addEventListener('click', calc);
+  btnClear.addEventListener('click', clearAll);
+  [widthEl, lengthEl, heightEl].forEach(el => el.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ e.preventDefault(); calc(); }}));
+
+  // Копирование значений
+  wrap.addEventListener('click', (e) => {
+    const id = e.target && e.target.id;
+    const map = {
+      copyVolume: resVolume,
+      copyGrade:  resGrade,
+      copyArmLen: resArmLen,
+      copyArmMass: resArmMass,
+      copyBoards: resBoards
+    };
+    if (id && map[id]) {
+      try { navigator.clipboard.writeText(map[id].textContent.replace(/\s+(м³|кг|шт)$/,'').trim()); } catch (_) {}
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Monolithic foundation slab is a solid reinforced concrete foundation that <strong>distributes the load evenly</strong> and works confidently on difficult/weak soils, at high groundwater levels and for projects with a basement or plinth. To avoid recalculations “by eye” and overexpenditure of materials, use an online calculator: it will help you understand the volumes, budget and technological parameters in advance.</p>
+<h2 class="wp-block-heading" id="chto-schitaet-kalkulyator-2">What does the calculator calculate?</h2>
+<ul class="wp-block-list">
+<li><strong>Volume of concrete</strong> for the slab according to the entered dimensions.</li>
+<li><strong>Armature</strong>: length, approximate weight, mesh pitch and diameter (for one- or two-layer reinforcement).</li>
+<li><strong>Formwork</strong>: lateral surface area and approximate <strong>number of boards</strong> according to specified sizes.</li>
+<li>(Optional) <strong>Brand of concrete</strong> - for orientation on strength in the project.</li>
+</ul>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>Recommendation: pawn <strong>add. margin 5–7%</strong> for concreting and <strong>~10 %</strong> on reinforcement (overlaps, cuts, waste).</p>
+</blockquote>
+<h2 class="wp-block-heading" id="kak-eto-rabotaet-2">How does this work</h2>
+<ol class="wp-block-list">
+<li>Enter <strong>width B, length A</strong> And <strong>thickness C</strong> (in mm) - the calculator will instantly give <strong>volume of concrete</strong>:<br/><code>Объём = A × B × (C/1000)</code>.</li>
+<li>For fittings, indicate <strong>cell pitch</strong> (usually 150–200 mm), <strong>diameter</strong> (often Ø12–Ø14 for residential buildings) and <strong>number of grids</strong> (usually 2 - top/bottom).<br/>The tool will calculate the total <strong>rod length</strong> And <strong>approximate weight</strong> (taking into account standard steel density).</li>
+<li>For formwork, set the dimensions of the boards - you will get <strong>area</strong> and assessment <strong>quantities</strong>.</li>
+</ol>
+<h3 class="wp-block-heading" id="primer-2">Example</h3>
+<p>House 10×10 m, slab 300 mm:<br/><code>10 × 10 × 0,3 = 30 м³</code>concrete. With a margin of 5–7% - <strong>31.5–32.1 m³</strong>.<br/>Two-layer mesh Ø12, pitch 200×200 mm - the calculator will tell you the length and weight of the steel.</p>
+<h2 class="wp-block-heading" id="kogda-osobenno-umestna-plita-2">When is a stove particularly appropriate?</h2>
+<ul class="wp-block-list">
+<li><strong>Heaving, weak, heterogeneous</strong> soils;</li>
+<li><strong>High groundwater</strong>, risk of precipitation changes;</li>
+<li>Required <strong>basement/basement/heavy box</strong>;</li>
+<li>Need <strong>simple geometry</strong> and high crack resistance of the base.</li>
+</ul>
+<h2 class="wp-block-heading" id="ushp-uteplyonnaya-shvedskaya-plita-2">USHP (insulated Swedish plate)</h2>
+<p>Layers are important for USP: <strong>insulation under the slab</strong>, heated floor contours, <strong>waterproofing</strong> And <strong>drainage</strong>. Enter the geometry of the slab into the calculator, and include the thickness of thermal and waterproofing in the project (calculation of bearing capacity, distribution of reinforcement and cross-section - according to the project).</p>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>Tips:<br/>• Insulation under the slab is rigid XPS;<br/>• Mandatory <strong>foundation preparation</strong> (geotextiles, sand, crushed stone, tamping), <strong>slope/drainage</strong>, waterproofing joints.</p>
+</blockquote>
+<h2 class="wp-block-heading" id="horoshaya-praktika-ustrojstva-plity-2">Good slab design practice</h2>
+<ul class="wp-block-list">
+<li><strong>Base</strong>: geotextile → sand cushion → crushed stone preparation → compaction in layers.</li>
+<li><strong>Protective layer of concrete</strong> to fittings: usually <strong>at least 30–40 mm</strong> (specify by project).</li>
+<li>Application <strong>clamps/frogs</strong> for precise grid position.</li>
+<li>Concrete - according to design <strong>stamp</strong> And <strong>mobility</strong>; ensure continuity of laying and <strong>vibration compaction</strong>.</li>
+<li><strong>Curing</strong> (humidity conditions, protection from sun/wind/frost) for the first 7 days.</li>
+<li>Pawn <strong>temperature-shrinkable seams</strong> for blind areas and adjacent elements.</li>
+</ul>
+<h2 class="wp-block-heading" id="na-chto-kalkulyator-ne-otvechaet-osoznannye-ogranicheniya-2">What the calculator does not answer (realized limitations)</h2>
+<ul class="wp-block-list">
+<li>Doesn't count <strong>bearing capacity</strong> soil/base, <strong>moment and deflection</strong> slabs are a zone <strong>constructive calculation</strong>.</li>
+<li>Doesn't take into account <strong>stiffening ribs</strong>, <strong>crossbars</strong>, complex shapes and cuts, <strong>point loads</strong> (columns, stoves, heavy partitions).</li>
+<li>Does not replace <strong>project documentation</strong> And <strong>geology</strong> plot.</li>
+</ul>
+<h2 class="wp-block-heading" id="kak-ispolzovat-rezultaty-2">How to use the results</h2>
+<ul class="wp-block-list">
+<li>Get <strong>volume of concrete</strong>, <strong>weight/meter of reinforcement</strong> And <strong>formwork</strong> - this is the basis for <strong>estimates and procurement</strong>.</li>
+<li>Check with the project: concrete grade/class, actual thickness, reinforcement scheme, protective layers.</li>
+<li>Add logistics (mixer/pump), <strong>seams, additions, fasteners</strong>, consumables and <strong>stocks</strong>.</li>
+</ul>
+<p>The online monolithic slab calculator helps you quickly and transparently estimate key volumes without “by eye.” This saves budget and time on construction, and most importantly, reduces the risk of errors at the start. Use the calculated figures together with the project and the engineer’s recommendations - this way you will lay <strong>reliable foundation</strong> under the house.</p>
+</div>
+    </div>
+</body>
+</html>

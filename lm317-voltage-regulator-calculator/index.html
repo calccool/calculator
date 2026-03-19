@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voltage Stabilizer Calculator LM317 (LM350, LM338): Online Calculation</title>
+    <meta name="description" content="Voltage Stabilizer Calculator LM317 (LM350, LM338): Online Calculation - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Voltage Stabilizer Calculator LM317 (LM350, LM338): Online Calculation</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (строго по шаблону) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-row.cols-3 { grid-template-columns: repeat(3, minmax(220px, 1fr)); }
+    .c-row.single { grid-template-columns: 1fr; }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    .c-help {font-size:12px;color:#777;text-align:center;}
+    .c-input, .c-select, .c-textarea { width:100%; padding:12px 14px; border:1px solid #ccc; border-radius:8px; font-size:14px; }
+    .c-input:focus, .c-select:focus, .c-textarea:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap;margin-bottom: 16px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+
+    /* Результат */
+    .c-result { border:1px dashed #4caf50; border-radius:10px; padding:10px; background:#fff; display:none; }
+    .c-result.show { display:grid; }
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #4caf50; grid-template-columns: 0.4fr 0.5fr 0.1fr; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; }
+    
+    /* Статусы */
+    .c-resval.heat { color: #d32f2f; }
+    .c-resval.cool { color: #2e7d32; }
+
+    /* Кнопка копирования */
+    .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden;
+      background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+      background-repeat:no-repeat; background-position:center; background-size:20px 20px; }
+
+    .is-hidden { display:none !important; }
+    @media (max-width: 860px) { .c-resval { font-size:14px; } }
+    @media (max-width: 720px) { .c-row.cols-3 { grid-template-columns: 1fr; } }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-row single">
+<div class="c-field">
+<label class="c-label" for="calcMode">What needs to be calculated?</label>
+<select class="c-select" id="calcMode">
+<option selected="" value="vout">Output voltage (Vout)</option>
+<option value="r2">Resistor R2 (Adjustment)</option>
+<option value="r1">Resistor R1 (Reference)</option>
+</select>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field" id="field_vout">
+<label class="c-label" for="vout">Vout <span class="c-term">IN</span></label>
+<input class="c-input" id="vout" min="1.25" step="0.1" type="number" value="5"/>
+</div>
+<div class="c-field" id="field_r1">
+<label class="c-label" for="r1">R1 (Reference)<span class="c-term">Ohm</span></label>
+<input class="c-input" id="r1" min="10" step="10" type="number" value="240"/>
+</div>
+<div class="c-field" id="field_r2">
+<label class="c-label" for="r2">R2 (Reg.)<span class="c-term">Ohm</span></label>
+<input class="c-input" id="r2" min="0" step="10" type="number" value="720"/>
+</div>
+</div>
+<div class="c-row cols-3">
+<div class="c-field">
+<label class="c-label" for="vin">Vin <span class="c-term">IN</span></label>
+<input class="c-input" id="vin" min="0" step="0.5" type="number" value="12"/>
+<div class="c-help">Input voltage</div>
+</div>
+<div class="c-field">
+<label class="c-label" for="iout">I load <span class="c-term">A</span></label>
+<input class="c-input" id="iout" min="0" step="0.1" type="number" value="0.5"/>
+<div class="c-help">Load current</div>
+</div>
+<div class="c-field">
+<div style="height:28px;"></div>
+<div class="c-help" style="margin-top:5px;">Fill in to calculate heating</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div aria-live="polite" class="c-result" id="resultBox">
+<div class="c-resline is-hidden" id="validationError" style="background:#ffdddd; color:#cc0000;">
+<div class="c-resleft">Error:</div>
+<div class="c-resval" id="errorMsg" style="color:#cc0000; font-weight: 500;"></div>
+<button class="c-copy is-hidden" disabled=""></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft" id="resMainLabel">Result</div>
+<div class="c-resval" id="resMain"></div>
+<button aria-label="Copy result" class="c-copy" id="copyMain" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Power dissipation (Pd)</div>
+<div class="c-resval" id="resPower"></div>
+<button aria-label="Copy power" class="c-copy" id="copyPower" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Circuit efficiency (η)</div>
+<div class="c-resval" id="resEff"></div>
+<button aria-label="Copy efficiency" class="c-copy" id="copyEff" title="Copy"></button>
+</div>
+<div class="c-resline single">
+<div class="c-resleft">Cooling Recommendation</div>
+<div class="c-resval" id="resHeatsink" style="font-weight:400;"></div>
+<button class="c-copy is-hidden" disabled=""></button>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика =====
+  const $ = (s) => wrap.querySelector(s);
+  
+  const resBox = $('#resultBox');
+  const errorBox = $('#validationError');
+  const errorMsg = $('#errorMsg');
+  
+  const calcMode = $('#calcMode');
+  const f_Vout = $('#field_vout');
+  const f_R1 = $('#field_r1');
+  const f_R2 = $('#field_r2');
+  
+  const outputs = {
+      main: $('#resMain'),
+      label: $('#resMainLabel'),
+      power: $('#resPower'),
+      eff: $('#resEff'),
+      heatsink: $('#resHeatsink')
+  };
+
+  // ----- Вспомогательные функции -----
+  function num(v){ const n = parseFloat(String(v).replace(',', '.')); return Number.isFinite(n) ? n : NaN; }
+  
+  function fmt(v, d=2){
+    if (isNaN(v)) return '—';
+    return v.toLocaleString('ru-RU', { maximumFractionDigits: d });
+  }
+
+  // ИСПРАВЛЕНО: Функция isZero
+  function isZero(val) {
+    const tolerance = 1e-9;
+    const check = Math.sign(tolerance - Math.abs(val));
+    if (check === -1) return false;
+    return true;
+  }
+  
+  function setError(msg) {
+    errorMsg.textContent = msg;
+    errorBox.classList.remove('is-hidden');
+    resBox.classList.add('show');
+  }
+  function hideError() {
+    errorBox.classList.add('is-hidden');
+  }
+  
+  function updateUI() {
+      const mode = calcMode.value;
+      f_Vout.classList.remove('is-hidden');
+      f_R1.classList.remove('is-hidden');
+      f_R2.classList.remove('is-hidden');
+      
+      if (mode === 'vout') {
+          f_Vout.classList.add('is-hidden');
+          outputs.label.textContent = 'Output voltage';
+      } else if (mode === 'r2') {
+          f_R2.classList.add('is-hidden');
+          outputs.label.textContent = 'Resistor R2';
+      } else { // r1
+          f_R1.classList.add('is-hidden');
+          outputs.label.textContent = 'Resistor R1';
+      }
+      resBox.classList.remove('show');
+  }
+
+  // ----- Главный расчет -----
+  function calc() {
+    hideError();
+    
+    // 1. Сбор данных
+    const mode = calcMode.value;
+    const vin = num($('#vin').value);
+    const iout = num($('#iout').value);
+    
+    // Параметры LM317
+    const vref = 1.25;
+    
+    let vout = 0;
+    let r1 = 0;
+    let r2 = 0;
+    
+    // 2. Логика по режимам
+    if (mode === 'vout') {
+        r1 = num($('#r1').value);
+        r2 = num($('#r2').value);
+        
+        if (isNaN(r1) || isNaN(r2)) { setError('Enter R1 and R2.'); return; }
+        if (isZero(r1)) { setError('R1 cannot be 0.'); return; }
+        
+        // Vout = 1.25 * (1 + R2/R1)
+        vout = vref * (1 + r2 / r1);
+        
+        outputs.main.textContent = `${fmt(vout)} В`;
+        
+    } else if (mode === 'r2') {
+        vout = num($('#vout').value);
+        r1 = num($('#r1').value);
+        
+        if (isNaN(vout) || isNaN(r1)) { setError('Enter Vout and R1.'); return; }
+        // ИСПРАВЛЕНО: vout < vref (1.25)
+        if (Math.sign(vout - vref) === -1) { setError('Vout cannot be less than 1.25V.'); return; }
+        
+        // R2 = R1 * ((Vout / 1.25) - 1)
+        r2 = r1 * ((vout / vref) - 1);
+        
+        outputs.main.textContent = `${fmt(r2)} Ом`;
+        
+    } else { // r1
+        vout = num($('#vout').value);
+        r2 = num($('#r2').value);
+        
+        if (isNaN(vout) || isNaN(r2)) { setError('Enter Vout and R2.'); return; }
+        if (Math.sign(vout - vref) === -1) { setError('Vout cannot be less than 1.25V.'); return; }
+        
+        // R1 = R2 / ((Vout / 1.25) - 1)
+        const denominator = (vout / vref) - 1;
+        
+        if (isZero(denominator)) {
+             // Если Vout = 1.25, то R2 должно быть 0. Если R2 > 0, то R1 стремится к бесконечности
+             if (isZero(r2)) r1 = 0; // условно
+             else r1 = Infinity;
+        } else {
+             r1 = r2 / denominator;
+        }
+        
+        if (!isFinite(r1)) {
+            outputs.main.textContent = '∞ (Gap)';
+        } else {
+            outputs.main.textContent = `${fmt(r1)} Ом`;
+        }
+    }
+    
+    // 3. Расчет мощности и тепла
+    // Если введен Vin и Iout
+    if (isNaN(vin) === false && isNaN(iout) === false) {
+        
+        // Проверка DropOut (Vin - Vout >= 3V)
+        const dropout = vin - vout;
+        
+        // Pd = (Vin - Vout) * Iout
+        let pd = dropout * iout;
+        if (Math.sign(pd) === -1) pd = 0; // Не может быть отрицательной в этом контексте (значит vin < vout)
+        
+        outputs.power.textContent = `${fmt(pd)} Вт`;
+        
+        // Эффективность = Pout / Pin = (Vout * I) / (Vin * I) = Vout / Vin
+        let eff = 0;
+        if (isZero(vin) === false) {
+            eff = (vout / vin) * 100;
+        }
+        if (Math.sign(eff - 100) === 1) eff = 0; // Некорректно
+        
+        outputs.eff.textContent = `${fmt(eff)} %`;
+        
+        // Рекомендации
+        let heatText = '';
+        let heatClass = '';
+        
+        // ИСПРАВЛЕНО: dropout < 3
+        if (Math.sign(dropout - 3) === -1) {
+            heatText = 'Attention: Input voltage is too low! (Vin - Vout < 3V). Stabilization may not work.';
+            heatClass = 'c-resval heat';
+        } 
+        else {
+             // ИСПРАВЛЕНО: pd < 0.25
+             if (Math.sign(0.25 - pd) !== -1) {
+                 heatText = 'Heating is insignificant. No radiator required.';
+                 heatClass = 'c-resval cool';
+             } 
+             // ИСПРАВЛЕНО: pd > 1.0 (или 1.5)
+             else if (Math.sign(pd - 1.0) === 1) {
+                 heatText = 'High heat! Requires a massive heatsink.';
+                 heatClass = 'c-resval heat';
+             } else {
+                 heatText = 'Moderate heating. A small radiator is recommended.';
+                 heatClass = 'c-resval warn'; // warn не определен в CSS выше, используем heat или добавим в логику. Пусть будет дефолт
+             }
+        }
+        
+        outputs.heatsink.textContent = heatText;
+        outputs.heatsink.className = heatClass;
+        
+    } else {
+        outputs.power.textContent = '—';
+        outputs.eff.textContent = '—';
+        outputs.heatsink.textContent = 'Enter Vin and Current to calculate heat.';
+        outputs.heatsink.className = '';
+    }
+
+    resBox.classList.add('show');
+  }
+
+  // ----- Слушатели -----
+  calcMode.addEventListener('change', updateUI);
+  $('#calcBtn').addEventListener('click', calc);
+  $('#resetBtn').addEventListener('click', () => {
+    $('#vout').value = '5';
+    $('#r1').value = '240';
+    $('#r2').value = '720';
+    $('#vin').value = '12';
+    $('#iout').value = '0.5';
+    $('#calcMode').value = 'vout';
+    updateUI();
+    resBox.classList.remove('show');
+    hideError();
+  });
+
+  // Копирование
+  wrap.addEventListener('click', (e) => {
+    let textToCopy = null;
+    let targetId = e.target.id;
+    
+    function clean(s) { return s.split(' ')[0]; }
+    
+    if (targetId === 'copyMain') textToCopy = clean(outputs.main.textContent);
+    if (targetId === 'copyPower') textToCopy = clean(outputs.power.textContent);
+    if (targetId === 'copyEff') textToCopy = clean(outputs.eff.textContent);
+    
+    if (textToCopy) {
+      try { navigator.clipboard?.writeText(textToCopy.trim()); } catch (_) {}
+    }
+  });
+
+  // Enter
+  wrap.addEventListener('keydown', (e) => {
+    // ИСПРАВЛЕНО: Замена &&
+    if (e.key === 'Enter') {
+      if (e.target.matches('input, select')) {
+        e.preventDefault();
+        calc();
+      }
+    }
+  });
+  
+  updateUI();
+});
+</script>
+
+        <div class="post-content">
+<h2 class="wp-block-heading" id="spravochnik-i-raschet-reguliruemogo-stabilizatora-2">Reference book and calculation of adjustable stabilizer</h2>
+<p>LM317 is a legendary chip familiar to every radio amateur. This is an adjustable three-terminal positive voltage regulator capable of delivering up to 1.5 A of current over a range of 1.25 V to 37 V.</p>
+<p>Our online calculator will help you not only select resistors to obtain the desired voltage, but also (more importantly) check whether your microcircuit will burn out from overheating. The algorithm is also suitable for more powerful analogues: <strong>LM350</strong> (up to 3 A) and <strong>LM338</strong> (up to 5 A).</p>
+<h2 class="wp-block-heading" id="formula-rascheta-napryazheniya-2">Voltage calculation formula</h2>
+<p>The operation of the LM317 is based on maintaining a reference voltage ( $V_{ref}$ ) equal to <strong>1.25 Volt</strong> between the output (OUT) and the control terminal (ADJ). This voltage drops across resistor $R_1$ , creating a constant current.</p>
+<p>Basic formula for calculating output voltage:</p>
+<p>$$V_{out} = 1.25 \times \left(1 + \frac{R_2}{R_1}\right)$$</p>
+<p><em>Note: The exact engineering formula takes into account the control pin current ( $I_{adj}$ ), but it is so small (about 50-100 µA) that it is often neglected in amateur calculations.</em></p>
+<h2 class="wp-block-heading" id="kak-vybrat-rezistory-2">How to choose resistors?</h2>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li>Resistor R1 (Reference): The manufacturer recommends installing the $R_1$ in the 240 Ohm range. This is necessary to ensure the minimum load current (about 5-10 mA) that the microcircuit requires for stable operation. If you set the $R_1$ to a value that is too large (eg 1k ohm) without a load connected, the output voltage may be higher than rated.</li>
+<li>Resistor R2 (Adjustment): It is this resistor that sets the output voltage. Typically, instead of a fixed resistor, a potentiometer (variable resistor) is used to create an adjustable power supply.</li>
+</ol>
+<h2 class="wp-block-heading" id="teplovoj-rezhim-i-radiator-2">Thermal Mode and Radiator</h2>
+<p>The most common mistake when designing a power supply on the LM317 is ignoring heating. A linear stabilizer works like a “smart resistor”, burning excess voltage into heat.</p>
+<p>The power that the chip must dissipate ( $P_d$ ) is calculated as follows:</p>
+<p>$$P_d = (V_{in} — V_{out}) \times I_{load}$$</p>
+<p><strong>Example:</strong> If you supply 24V and want to get 5V at 1A, the chip will have to dissipate 19 Watts of heat!</p>
+<ul class="wp-block-list">
+<li>Without a heatsink, the LM317 can only dissipate about <strong>0.25 - 0.5 W</strong>.</li>
+<li>With a small radiator - up to <strong>5-10 W</strong>.</li>
+<li>For powers above 10-15 W, massive radiators with active cooling (cooler) are required.</li>
+</ul>
+<h2 class="wp-block-heading" id="tablitsa-populyarnyh-nominalov-2">Table of popular denominations</h2>
+<p>To quickly select fixed voltages (assuming $R_1 = 240$ Ohms), use the table below:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Desired Vout</strong></td><td><strong>Nominal R2​ (Calculated)</strong></td><td><strong>Nearest standard (E24)</strong></td></tr></thead><tbody><tr><td><strong>3.3 V</strong></td><td>394 Ohm</td><td>390 Ohm</td></tr><tr><td><strong>5.0 V</strong></td><td>720 Ohm</td><td>750 Ohm (better than 720 from E96)</td></tr><tr><td><strong>9.0 V</strong></td><td>1488 Ohm</td><td>1.5 kOhm</td></tr><tr><td><strong>12.0 V</strong></td><td>2064 Ohm</td><td>2 kOhm or 2.2 kOhm</td></tr><tr><td><strong>15.0 V</strong></td><td>2640 Ohm</td><td>2.7 kOhm</td></tr></tbody></table></div></figure>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p><strong>Advice:</strong> To fine-tune the output voltage, it is recommended to install a multi-turn trimmer resistor as $R_2$ .</p>
+</blockquote>
+</div>
+    </div>
+</body>
+</html>

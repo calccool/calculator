@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polar day and night length calculator by latitude</title>
+    <meta name="description" content="Polar day and night length calculator by latitude - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Polar day and night length calculator by latitude</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #f8fafc; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; display:flex; align-items:center; gap:8px;}
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-dot { width:10px; height:10px; border-radius:3px; flex-shrink:0;}
+    .c-dot-pd { background: #fcd34d; }
+    .c-dot-pn { background: #1e293b; }
+    .c-dot-wn { background: #38bdf8; }
+    .c-dot-norm { background: #94a3b8; }
+
+    .c-highlight-line { background: #eff6ff; border: 1px solid #bae6fd; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05); }
+    .c-highlight-line:hover { background: #e0f2fe; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .c-switch-wrap { display: flex; align-items: center; gap: 12px; cursor: pointer; margin-bottom: 5px; padding: 14px 16px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 2px 6px rgba(0,0,0,0.02); transition: 0.3s; }
+    .c-switch-wrap:hover { border-color: #cbd5e1; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .c-switch-track { width: 44px; height: 24px; background: #cbd5e1; border-radius: 24px; position: relative; transition: 0.3s; flex-shrink: 0; }
+    .c-switch-thumb { width: 18px; height: 18px; background: #fff; border-radius: 50%; position: absolute; top: 3px; left: 3px; transition: 0.3s; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+    input:checked + .c-switch-track { background: #0693e3; }
+    input:checked + .c-switch-track .c-switch-thumb { left: 23px; }
+    .c-switch-label { font-weight: 600; font-size: 15px; color: #333; }
+    
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* Advanced Visualization */
+    .c-vis-box { margin: 15px 0 25px; padding: 25px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); display: flex; flex-direction: column; align-items: center; }
+    .c-vis-title { font-weight: 700; color: #0f172a; font-size: 15px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    
+    .c-donut-wrapper { position: relative; width: 180px; height: 180px; margin-bottom: 20px; }
+    .c-donut-svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+    .c-donut-ring { fill: transparent; stroke: #e2e8f0; stroke-width: 6; }
+    .c-donut-segment { fill: transparent; stroke-width: 6; stroke-dasharray: 0 100; stroke-dashoffset: 0; transition: stroke-dasharray 1s ease, stroke-dashoffset 1s ease; stroke-linecap: round;}
+    
+    .c-donut-center { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 50%; box-shadow: inset 0 0 20px rgba(2, 132, 199, 0.05); }
+    .c-donut-val { font-size: 32px; font-weight: 800; color: #0f172a; line-height: 1; }
+    .c-donut-lbl { font-size: 12px; color: #64748b; font-weight: 600; text-transform: uppercase; margin-top: 4px; }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-vis-box { padding: 15px; }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="polar-calc-wrapper">
+<div class="c-body">
+<div class="c-toggle" id="hemi-tabs">
+<button class="c-toggle-btn active" data-mode="north">Northern Hemisphere</button>
+<button class="c-toggle-btn" data-mode="south">Southern Hemisphere</button>
+</div>
+<div class="c-divider"><span class="icon">🌍</span>Geographical data</div>
+<div class="c-row" style="margin-bottom: 8px;">
+<div class="c-field" style="grid-column: 1 / -1;">
+<label class="c-label">Geographic latitude<span class="c-help-icon" id="openPolarInfo">?</span>
+</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="lat" placeholder="For example: 68.97" type="number"/>
+<span class="c-input-suffix">°</span>
+</div>
+<div id="quick-north" style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-val="68.97" type="button">Murmansk</button>
+<button class="c-quick-btn" data-val="69.33" type="button">Norilsk</button>
+<button class="c-quick-btn" data-val="78.22" type="button">Spitsbergen</button>
+<button class="c-quick-btn" data-val="59.93" type="button">Saint Petersburg</button>
+</div>
+<div class="is-hidden" id="quick-south" style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-val="78.46" type="button">Vostok station</button>
+<button class="c-quick-btn" data-val="64.23" type="button">Antarctic Peninsula</button>
+<button class="c-quick-btn" data-val="54.80" type="button">Ushuaia</button>
+</div>
+</div>
+</div>
+<div class="c-divider" style="margin-top: 30px;"><span class="icon">⚙️</span>Calculation accuracy</div>
+<label class="c-switch-wrap">
+<input checked="" id="refractionToggle" style="display:none" type="checkbox"/>
+<div class="c-switch-track"><div class="c-switch-thumb"></div></div>
+<span class="c-switch-label">Consider atmospheric refraction<span class="c-term">Precision Optics</span></span>
+</label>
+<label class="c-switch-wrap">
+<input checked="" id="twilightToggle" style="display:none" type="checkbox"/>
+<div class="c-switch-track"><div class="c-switch-thumb"></div></div>
+<span class="c-switch-label">Count white nights<span class="c-term">Civil twilight</span></span>
+</label>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-vis-box is-hidden" id="vis-box">
+<div class="c-vis-title"><span class="icon">☀️</span>Annual light cycle</div>
+<div class="c-donut-wrapper">
+<svg class="c-donut-svg" viewbox="0 0 42 42">
+<circle class="c-donut-ring" cx="21" cy="21" r="15.915494309"></circle>
+<circle class="c-donut-segment" cx="21" cy="21" id="seg-pd" r="15.915494309" stroke="#fcd34d"></circle>
+<circle class="c-donut-segment" cx="21" cy="21" id="seg-wn" r="15.915494309" stroke="#38bdf8"></circle>
+<circle class="c-donut-segment" cx="21" cy="21" id="seg-norm" r="15.915494309" stroke="#94a3b8"></circle>
+<circle class="c-donut-segment" cx="21" cy="21" id="seg-pn" r="15.915494309" stroke="#1e293b"></circle>
+</svg>
+<div class="c-donut-center">
+<div class="c-donut-val">365</div>
+<div class="c-donut-lbl">Days per year</div>
+</div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">📅</span>Analysis results</div>
+<div class="c-resline">
+<div class="c-resleft"><span class="c-dot c-dot-pd"></span>Polar day<span class="c-subtext">The sun doesn't set on the horizon</span></div>
+<div class="c-resval" id="resPd"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline" id="wrapWn">
+<div class="c-resleft"><span class="c-dot c-dot-wn"></span>White nights<span class="c-subtext">The sun drops no lower than -6°</span></div>
+<div class="c-resval" id="resWn"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft"><span class="c-dot c-dot-norm"></span>Standard day<span class="c-subtext">Classic day and night cycle</span></div>
+<div class="c-resval" id="resNorm"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline c-highlight-line" style="border-bottom: none;">
+<div class="c-resleft"><span class="c-dot c-dot-pn"></span>Polar night<span class="c-subtext">The sun doesn't rise above the horizon</span></div>
+<div class="c-resval" id="resPn" style="color: #1e293b;"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+<div class="c-modal-overlay" id="polarInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closePolarInfo">×</button>
+<div class="c-modal-title"><span class="icon">📖</span>Physics of phenomena</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">The phenomena are caused by the inclination of the Earth's rotation axis (23.44°) to the ecliptic plane.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>Atmospheric refraction:</b><br/>An optical phenomenon that “raises” the horizon by approximately 0.83°. Because of this, the polar day lasts longer than the polar night, and the phenomena begin slightly south of the Arctic Circle.</div>
+<div style="background: #eff6ff; padding: 12px; border-radius: 8px; border: 1px solid #bae6fd; font-size: 13px; color: #0284c7;">
+<b>White nights:</b><br/>The period when the sun drops below the horizon, but not deeply (up to -6°). There is enough natural light for reading without artificial light (civil twilight does not stop).</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let activeMode = 'north';
+  let isCalculated = false;
+
+  // Safe Math helpers to avoid < > <= >= && || !
+  const gt = (a, b) => Math.abs(Math.sign(a - b) === 1) === 1;
+  const lt = (a, b) => Math.abs(Math.sign(a - b) === -1) === 1;
+  const gte = (a, b) => Math.abs(Math.sign(a - b) === -1) === 0;
+  const isT = (v) => Math.abs(v === true) === 1;
+
+  // Modal logic
+  $('#openPolarInfo').addEventListener('click', () => { $('#polarInfoModal').classList.add('show'); });
+  $('#closePolarInfo').addEventListener('click', () => { $('#polarInfoModal').classList.remove('show'); });
+  $('#polarInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#polarInfoModal').classList.remove('show');
+  });
+
+  function updateModeUI() {
+      if (Math.abs(activeMode === 'north') === 1) {
+          $('#quick-north').classList.remove('is-hidden');
+          $('#quick-south').classList.add('is-hidden');
+      } else {
+          $('#quick-north').classList.add('is-hidden');
+          $('#quick-south').classList.remove('is-hidden');
+      }
+      $('#lat').value = '';
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  }
+
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeMode = btn.dataset.mode;
+        updateModeUI();
+    });
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          $('#lat').value = btn.dataset.val;
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let rawLat = parseFloat($('#lat').value);
+    let isNanLat = isNaN(rawLat);
+    if (Math.abs(isNanLat === true) === 1) rawLat = 0;
+    
+    let isErr = false;
+    let isPositive = false;
+    if (Math.abs(Math.sign(rawLat) === 1) === 1) isPositive = true;
+    if (Math.abs(Math.sign(rawLat) === 0) === 1) isPositive = true;
+    
+    if (Math.abs(isPositive === false) === 1) isErr = true;
+
+    if (Math.abs(isErr === true) === 1) {
+        $('#vis-box').classList.add('is-hidden');
+        $('#resultBox').classList.remove('show');
+        if (Math.abs(shouldScroll === true) === 1) {
+            $('#errorMsg').textContent = "Please enter a valid latitude from 0 to 90 degrees";             $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    let lat = rawLat;
+    if (gt(lat, 90)) lat = 90;
+    
+    let isSouth = isT(activeMode === 'south');
+    if (Math.abs(isSouth === true) === 1) lat = -lat;
+
+    let refraction = 0;
+    let isRefraction = isT($('#refractionToggle').checked);
+    if (Math.abs(isRefraction === true) === 1) refraction = 0.83;
+
+    let isWnOn = isT($('#twilightToggle').checked);
+
+    let pd = 0;
+    let pn = 0;
+    let wn = 0;
+    let norm = 0;
+
+    for (let d = 0; Math.abs(d === 365) === 0; d++) {
+        let decl = 23.44 * Math.sin((2 * Math.PI / 365) * (d - 81));
+        
+        let midday = 90 - Math.abs(lat - decl) + refraction;
+        
+        let signLat = 1;
+        if (lt(lat, 0)) signLat = -1;
+        
+        let midnight = Math.abs(lat) + decl * signLat - 90 + refraction;
+
+        if (gte(midnight, 0)) {
+            pd++;
+        } else if (lt(midday, 0)) {
+            pn++;
+        } else {
+            let wnActive = false;
+            if (Math.abs(isWnOn === true) === 1) {
+                if (gte(midnight, -6)) wnActive = true;
+            }
+            if (Math.abs(wnActive === true) === 1) {
+                wn++;
+            } else {
+                norm++;
+            }
+        }
+    }
+
+    $('#resPd').textContent = pd + " day";     $('#resPn').textContent = pn + " days";     $('#resWn').textContent = wn + " days";     $('#resNorm').textContent = norm + " days.";      if (Math.abs(isWnOn === true) === 1) {         $('#wrapWn').classList.remove('is-hidden');
+    } else {
+        $('#wrapWn').classList.add('is-hidden');
+    }
+
+    let pPd = (pd / 365) * 100;
+    let pWn = (wn / 365) * 100;
+    let pNorm = (norm / 365) * 100;
+    let pPn = (pn / 365) * 100;
+
+    let offPd = 25;
+    let offWn = offPd - pPd;
+    let offNorm = offWn - pWn;
+    let offPn = offNorm - pNorm;
+
+    const setSegment = (id, pct, offset) => {
+        let el = $('#' + id);
+        el.style.strokeDasharray = pct + " " + (100 - pct);
+        el.style.strokeDashoffset = offset;
+    };
+
+    setSegment('seg-pd', pPd, offPd);
+    setSegment('seg-wn', pWn, offWn);
+    setSegment('seg-norm', pNorm, offNorm);
+    setSegment('seg-pn', pPn, offPn);
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#vis-box').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    $('#lat').value = '';
+    $('#refractionToggle').checked = true;
+    $('#twilightToggle').checked = true;
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      let valClean = valRaw.replace('дн.', '').trim();
+      navigator.clipboard.writeText(valClean);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Polar day and polar night are unique astronomical phenomena characteristic of the high latitudes of the Earth. Their occurrence is due to the inclination of the axis of rotation of our planet relative to the ecliptic plane. This calculator allows you to instantly determine the annual light cycle for any point in the world using modern celestial mechanics algorithms.</p>
+<h2 class="wp-block-heading" id="klyuchevye-vozmozhnosti-kalkulyatora-2">Key features of the calculator</h2>
+<p>When calculating, parameters are used that make the results as close to reality as possible:</p>
+<ul class="wp-block-list">
+<li><strong>Geographic latitude:</strong> Enter coordinates in decimal format for perfect accuracy.</li>
+<li><strong>Hemisphere selection:</strong> Correct operation for both northern latitudes (Murmansk, Norilsk) and southern latitudes (Antarctic stations).</li>
+<li><strong>Accounting for atmospheric refraction:</strong> Amendment to <strong>0.83°</strong>, which “raises” the Sun above the horizon, increasing the actual length of the day.</li>
+<li><strong>Calculation of white nights:</strong> Determination of the period of civil twilight, when the Sun descends below the horizon by no more than <strong>-6°</strong>.</li>
+</ul>
+<h2 class="wp-block-heading" id="prodolzhitelnost-yavlenij-v-zavisimosti-ot-shiroty-2">Duration of events depending on latitude</h2>
+<p>Below is a reference table of average values ​​(taking into account refraction) for key parallels.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Latitude (degrees)</strong></td><td><strong>Polar day (day)</strong></td><td><strong>Polar night (days)</strong></td><td><strong>Features of the region</strong></td></tr></thead><tbody><tr><td><strong>66.5°</strong> (Arctic Circle)</td><td>1</td><td>0</td><td>Boundary of the beginning of phenomena</td></tr><tr><td><strong>70°</strong></td><td>65</td><td>55</td><td>North of Norway, Yakutia</td></tr><tr><td><strong>80°</strong></td><td>134</td><td>127</td><td>Spitsbergen, Franz Josef Land</td></tr><tr><td><strong>90°</strong> (Pole)</td><td>189</td><td>176</td><td>Maximum duration</td></tr></tbody></table></div></figure>
+<h3 class="wp-block-heading" id="matematicheskaya-model-rascheta-2">Mathematical calculation model</h3>
+<p>The calculator is based on calculating the declination of the Sun ( $\delta$ ) for each day of the year using the formula:</p>
+<p>$$\delta = 23.44^\circ \cdot \sin\left(\frac{2\pi}{365} \cdot (d — 81)\right)$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li><strong>$d$</strong> — serial number of the day in the year;</li>
+<li><strong>$23.44^\circ$</strong> - tilt of the earth's axis.</li>
+</ul>
+<p>After this, the algorithm determines the height of the sun at the moments of the upper and lower culmination. If the lower culmination taking into account refraction ( $+0.83^\circ$ ) remains above $0^\circ$ , it is fixed <strong>polar day</strong>. If the upper climax remains below $0^\circ$ - <strong>polar night</strong>.</p>
+<h2 class="wp-block-heading" id="pochemu-polyarnyj-den-dlinnee-polyarnoj-nochi-2">Why is the polar day longer than the polar night?</h2>
+<p>Many users notice that at the same latitude, the number of days of the polar day exceeds the number of days of the polar night. This is not a calculation error, but a consequence of two factors:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Atmospheric refraction:</strong> The air refracts the sun's rays, allowing us to see the disk of the Sun when it is actually already below the horizon.</li>
+<li><strong>Angular diameter of the Sun:</strong> We count the beginning of the day at the top edge of the disk, not at its center.</li>
+</ol>
+<h3 class="wp-block-heading" id="instruktsiya-po-ispolzovaniyu-2">Instructions for use</h3>
+<p>To obtain accurate data, follow these steps:</p>
+<ul class="wp-block-list">
+<li>Enter the latitude of the place you are interested in (for example, <strong>68.97</strong> for Murmansk).</li>
+<li>Select the desired hemisphere in the mode switch.</li>
+<li>Use the toggle switch <strong>"White Nights"</strong>, if you want to know the period when evening twilight turns into morning twilight without the onset of darkness.</li>
+<li>Click the button <strong>"Calculate"</strong> to construct a pie chart of the annual cycle.</li>
+</ul>
+<p>This tool will be useful for travelers, photographers planning to shoot during “off-peak hours,” as well as residents of northern regions to understand their light conditions.</p>
+</div>
+    </div>
+</body>
+</html>

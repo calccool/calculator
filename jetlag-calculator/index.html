@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jet lag calculator: online calculation of time zone adaptation time</title>
+    <meta name="description" content="Jet lag calculator: online calculation of time zone adaptation time - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Jet lag calculator: online calculation of time zone adaptation time</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-receipt-wrap { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 15px; position: relative; overflow: hidden; }
+    .c-receipt-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: repeating-linear-gradient(45deg, #0693e3, #0693e3 10px, #38bdf8 10px, #38bdf8 20px); }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #fff; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #eff6ff; border: 1px solid #bae6fd; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05); }
+    .c-highlight-line:hover { background: #e0f2fe; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .c-toggle-btn .c-subtext { font-size: 11px; margin-top: 0; transition: color 0.3s; }
+    .c-toggle-btn.active .c-subtext { color: #0284c7; }
+
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* Advanced Visualization - Jet Lag Dial */
+    .c-chart-box { margin: 15px 0 25px; padding: 25px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); display: flex; flex-direction: column; align-items: center; }
+    .c-chart-title { font-weight: 700; color: #0f172a; font-size: 15px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; }
+    
+    .c-dial-wrap { position: relative; width: 140px; height: 140px; display: flex; align-items: center; justify-content: center; }
+    .c-dial-svg { width: 100%; height: 100%; transform: rotate(-90deg); overflow: visible; }
+    .c-dial-track { fill: none; stroke: #e2e8f0; stroke-width: 12; }
+    .c-dial-fill { fill: none; stroke: url(#gradientDial); stroke-width: 12; stroke-linecap: round; stroke-dasharray: 339.29; stroke-dashoffset: 339.29; transition: stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1); }
+    .c-dial-center { position: absolute; inset: 16px; background: #fff; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(6, 147, 227, 0.15); border: 1px solid #e0f2fe; }
+    .c-dial-val { font-size: 28px; font-weight: 800; color: #0f172a; line-height: 1; }
+    .c-dial-lbl { font-size: 12px; font-weight: 600; color: #64748b; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+    
+    .c-shift-bar-wrap { width: 100%; margin-top: 25px; }
+    .c-shift-lbl { display: flex; justify-content: space-between; font-size: 12px; font-weight: 600; color: #475569; margin-bottom: 8px; }
+    .c-shift-track { height: 12px; background: #e2e8f0; border-radius: 6px; overflow: hidden; position: relative; border: 1px solid #cbd5e1; box-shadow: inset 0 2px 4px rgba(0,0,0,0.05); }
+    .c-shift-fill { position: absolute; top: 0; bottom: 0; width: 50%; transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1); }
+    .c-shift-fill.east { right: 50%; background: linear-gradient(270deg, #f59e0b, #fbbf24); transform-origin: right; transform: scaleX(0); }
+    .c-shift-fill.west { left: 50%; background: linear-gradient(90deg, #8b5cf6, #a78bfa); transform-origin: left; transform: scaleX(0); }
+    .c-shift-center-line { position: absolute; left: 50%; top: -2px; bottom: -2px; width: 2px; background: #475569; z-index: 2; border-radius: 1px; }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-chart-box { padding: 15px; }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="jetlag-calc-wrapper">
+<div class="c-body">
+<div class="c-toggle" id="mode-tabs">
+<button class="c-toggle-btn active" data-mode="west">To the West<span class="c-subtext">The day is "lengthening"</span>
+</button>
+<button class="c-toggle-btn" data-mode="east">To the East<span class="c-subtext">The day is getting shorter</span>
+</button>
+</div>
+<div class="c-divider"><span class="icon">✈️</span>Flight details</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Time shift<span class="c-help-icon" id="openJetlagInfo">?</span>
+</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="tz" placeholder="For example: 5" type="number"/>
+<span class="c-input-suffix">hour.</span>
+</div>
+<div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-target="tz" data-val="3" type="button">3 belts</button>
+<button class="c-quick-btn" data-target="tz" data-val="6" type="button">6 belts</button>
+<button class="c-quick-btn" data-target="tz" data-val="9" type="button">9 belts</button>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Time in the air<span class="c-term">affects fatigue</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="dur" placeholder="For example: 8" type="number"/>
+<span class="c-input-suffix">hour.</span>
+</div>
+</div>
+</div>
+<div class="c-row" style="margin-top: 10px;">
+<div class="c-field" style="grid-column: 1 / -1;">
+<label class="c-label">Age group<span class="c-term">metabolism adaptation</span></label>
+<select class="c-select" id="age">
+<option value="0.9">Up to 30 years (Fast adaptation)</option>
+<option selected="" value="1.0">From 30 to 50 years (Standard adaptation)</option>
+<option value="1.2">Over 50 years old (Slow adaptation)</option>
+</select>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-chart-box is-hidden" id="vis-box">
+<div class="c-chart-title"><span class="icon">🧬</span>Circadian desynchronization</div>
+<div class="c-dial-wrap">
+<svg class="c-dial-svg" viewbox="0 0 120 120">
+<defs>
+<lineargradient id="gradientDial" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#38bdf8"></stop>
+<stop offset="100%" stop-color="#0284c7"></stop>
+</lineargradient>
+</defs>
+<circle class="c-dial-track" cx="60" cy="60" r="54"></circle>
+<circle class="c-dial-fill" cx="60" cy="60" id="vis-dial" r="54"></circle>
+</svg>
+<div class="c-dial-center">
+<div class="c-dial-val" id="vis-days">0</div>
+<div class="c-dial-lbl" id="vis-days-lbl">days</div>
+</div>
+</div>
+<div class="c-shift-bar-wrap">
+<div class="c-shift-lbl">
+<span>Jet Shift (West)</span>
+<span>Jet Shift (East)</span>
+</div>
+<div class="c-shift-track">
+<div class="c-shift-center-line"></div>
+<div class="c-shift-fill west" id="vis-shift-west"></div>
+<div class="c-shift-fill east" id="vis-shift-east"></div>
+</div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">📋</span>Recovery forecast</div>
+<div class="c-receipt-wrap">
+<div class="c-resline">
+<div class="c-resleft">Days to full normal<span class="c-subtext">Melatonin Synchronization</span></div>
+<div class="c-resval" id="resTotalDays"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline c-highlight-line">
+<div class="c-resleft">Peak jet lag<span class="c-subtext">The most difficult day</span></div>
+<div class="c-resval" id="resPeak"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline" style="border-bottom: none;">
+<div class="c-resleft">Lighting recommendation<span class="c-subtext">To speed up adaptation</span></div>
+<div class="c-resval" id="resLight" style="font-size: 15px; color: #0f172a; max-width: 200px; text-align: right;"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+</div>
+<div class="c-modal-overlay" id="jetlagInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeJetlagInfo">×</button>
+<div class="c-modal-title"><span class="icon">🧠</span>Physiology of jet lag</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">Jet lag (jet lag) occurs due to a mismatch between a person's circadian rhythms and local time.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>Flight to the West (back in time):</b><br/>The body tolerates it more easily. The day is artificially lengthened, and it is easier for the body to “not get enough sleep” and go to bed later than to fall asleep earlier. Adaptation requires ~0.6 days per 1 zone.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>Flight to the East (forward in time):</b><br/>Adaptation is more difficult. The day is shortening, you need to fall asleep while the body is still awake. Adaptation requires ~1 day per 1 belt.</div>
+<div style="background: #eff6ff; padding: 12px; border-radius: 8px; border: 1px solid #bae6fd; font-size: 13px; color: #0284c7;">
+<b>Light and melatonin:</b>The main trigger for restructuring is sunlight. Light control can speed up synchronization.</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let activeMode = 'west';
+  let isCalculated = false;
+
+  // Modal logic
+  $('#openJetlagInfo').addEventListener('click', () => { $('#jetlagInfoModal').classList.add('show'); });
+  $('#closeJetlagInfo').addEventListener('click', () => { $('#jetlagInfoModal').classList.remove('show'); });
+  $('#jetlagInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#jetlagInfoModal').classList.remove('show');
+  });
+
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeMode = btn.dataset.mode;
+        if (Math.abs(isCalculated === true) === 1) calc(false);
+    });
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          let targetId = btn.dataset.target;
+          let val = btn.dataset.val;
+          $('#' + targetId).value = val;
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let tz = parseFloat($('#tz').value);
+    let dur = parseFloat($('#dur').value);
+    let ageFactor = parseFloat($('#age').value);
+    
+    let isNanTz = isNaN(tz);
+    if (Math.abs(isNanTz === true) === 1) tz = 0;
+    
+    let isNanDur = isNaN(dur);
+    if (Math.abs(isNanDur === true) === 1) dur = 0;
+
+    let isErr = false;
+    let isPositiveTz = false;
+    if (Math.abs(Math.sign(tz) === 1) === 1) isPositiveTz = true;
+    if (Math.abs(isPositiveTz === false) === 1) isErr = true;
+    
+    let isPositiveDur = false;
+    if (Math.abs(Math.sign(dur) === 1) === 1) isPositiveDur = true;
+    if (Math.abs(isPositiveDur === false) === 1) isErr = true;
+
+    if (Math.abs(isErr === true) === 1) {
+        $('#vis-box').classList.add('is-hidden');
+        $('#resultBox').classList.remove('show');
+        if (Math.abs(shouldScroll === true) === 1) {
+            $('#errorMsg').textContent = "Specify the number of time zones and travel times";             $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    // Strict clamp TZ to 12 maximum (Earth is 24 zones, max shift is 12)
+    let isOver12 = false;
+    if (Math.abs(Math.sign(tz - 12) === 1) === 1) isOver12 = true;
+    if (Math.abs(isOver12 === true) === 1) tz = 12;
+
+    let baseDays = 0;
+    if (Math.abs(activeMode === 'east') === 1) {
+        baseDays = tz * 1.0;
+    } else {
+        baseDays = tz * 0.66;
+    }
+
+    // Duration penalty (if flight is long, fatigue adds to recovery time)
+    let durPenalty = 0;
+    let isLongFlight = false;
+    let durDiff = Math.sign(dur - 8);
+    if (Math.abs(durDiff === 1) === 1) isLongFlight = true;
+    if (Math.abs(isLongFlight === true) === 1) durPenalty = 0.5;
+    
+    let isVeryLongFlight = false;
+    let durDiffMax = Math.sign(dur - 14);
+    if (Math.abs(durDiffMax === 1) === 1) isVeryLongFlight = true;
+    if (Math.abs(isVeryLongFlight === true) === 1) durPenalty = 1.0;
+
+    let totalDaysRaw = (baseDays + durPenalty) * ageFactor;
+    
+    // Safety minimum 1 day if any TZ is crossed
+    let isLessThanOne = false;
+    if (Math.abs(Math.sign(totalDaysRaw - 1) === -1) === 1) isLessThanOne = true;
+    if (Math.abs(isLessThanOne === true) === 1) totalDaysRaw = 1;
+
+    let totalDays = totalDaysRaw.toFixed(1);
+
+    // Results logic
+    $('#resTotalDays').textContent = totalDays + " days";          let peakDays = "1-2 day";     let isHighTz = false;     if (Math.abs(Math.sign(tz - 6) === 1) === 1) isHighTz = true;     if (Math.abs(isHighTz === true) === 1) peakDays = "2-4 days";     $('#resPeak').textContent = peakDays;
+
+    let lightAdvice = "";
+    if (Math.abs(activeMode === 'east') === 1) {         lightAdvice = "In the morning - maximum light. In the evening - darkening and melatonin.";     } else {         lightAdvice = "In the evening, use more bright light. Avoid direct sun in the morning.";     }     $('#resLight').textContent = lightAdvice;
+
+    // Visuals update
+    $('#vis-days').textContent = totalDays;          let isFraction = false;     let roundedFloor = Math.floor(totalDaysRaw);     if (Math.abs(Math.sign(totalDaysRaw - roundedFloor) === 1) === 1) isFraction = true;          let dayWord = "days";     let floorLastDigit = roundedFloor % 10;     let floorLastTwo = roundedFloor % 100;          // Basic pluralization using strict logic     let isEndingOne = false;     if (Math.abs(Math.sign(floorLastDigit - 1) === 0) === 1) isEndingOne = true;     let isTeen = false;     if (Math.abs(Math.sign(floorLastTwo - 11) === 0) === 1) isTeen = true;          if (Math.abs(isFraction === false) === 1) {         if (Math.abs(isTeen === false) === 1) {             if (Math.abs(isEndingOne === true) === 1) dayWord = "day";         }     } else {         dayWord = "day"; // For floats ending in .something     }          $('#vis-days-lbl').textContent = dayWord;
+
+    // Dial animation (max scale is around 14 days)
+    let maxScaleDays = 14;
+    let fillPercent = (totalDaysRaw / maxScaleDays);
+    let isOverMax = false;
+    if (Math.abs(Math.sign(fillPercent - 1) === 1) === 1) isOverMax = true;
+    if (Math.abs(isOverMax === true) === 1) fillPercent = 1;
+    
+    let dashOffset = 339.29 - (339.29 * fillPercent);
+    
+    let dialSvg = $('#vis-dial');
+    dialSvg.style.transition = 'none';
+    dialSvg.style.strokeDashoffset = 339.29;
+    void dialSvg.offsetWidth; // trigger reflow
+    dialSvg.style.transition = 'stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1)';
+    dialSvg.style.strokeDashoffset = dashOffset;
+
+    // Shift bar animation
+    let shiftPercent = (tz / 12); // tz is max 12
+    let westBar = $('#vis-shift-west');
+    let eastBar = $('#vis-shift-east');
+    
+    westBar.style.transform = 'scaleX(0)';
+    eastBar.style.transform = 'scaleX(0)';
+    
+    void westBar.offsetWidth;
+    void eastBar.offsetWidth;
+
+    if (Math.abs(activeMode === 'west') === 1) {
+        westBar.style.transform = 'scaleX(' + shiftPercent + ')';
+    } else {
+        eastBar.style.transform = 'scaleX(' + shiftPercent + ')';
+    }
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#vis-box').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(e.target.tagName === 'SELECT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    wrap.querySelectorAll('input[type="number"]').forEach(i => i.value = '');
+    $('#age').value = '1.0';
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    $('#vis-dial').style.strokeDashoffset = 339.29;
+    $('#vis-shift-west').style.transform = 'scaleX(0)';
+    $('#vis-shift-east').style.transform = 'scaleX(0)';
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      navigator.clipboard.writeText(valRaw);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Jet lag (time zone change syndrome) is a temporary disruption of the body's “internal clock” (circadian rhythms) caused by rapid movement across multiple time zones. Your body continues to live according to the time of the departure point, while the environment requires immediate restructuring.</p>
+<p>The main cause of discomfort is desynchronization of production <strong>melatonin</strong> (sleep hormone) and <strong>cortisol</strong>. Our online calculator helps you mathematically predict how long it will take your metabolism to fully adapt to new conditions.</p>
+<h2 class="wp-block-heading" id="kak-polzovatsya-kalkulyatorom-dzhetlaga-2">How to use the jet lag calculator?</h2>
+<p>The tool takes into account three key factors that influence the speed of biorhythm adjustment:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Flight direction:</strong> A flight to the East is traditionally considered more difficult, since the day is shortened, and it is more difficult for the body to “fall asleep earlier” than to “go to bed later.”</li>
+<li><strong>Number of crossed belts:</strong> The mathematical model limits the calculation to 12 belts, since this is the maximum theoretical deviation.</li>
+<li><strong>Time in the air:</strong> Staying in an airplane seat for a long time creates additional stress (fatigue), which adds up to 1 day to the recovery time.</li>
+<li><strong>Age factor:</strong> With age, the plasticity of circadian rhythms decreases, which requires a correction factor.</li>
+</ol>
+<h2 class="wp-block-heading" id="formula-rascheta-vremeni-adaptatsii-2">Formula for calculating adaptation time</h2>
+<p>Our calculator uses an advanced algorithm based on physiological indicators. The general calculation formula is as follows:</p>
+<p>$$T = (D_{base} \cdot Z + P_{flight}) \cdot K_{age}$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $T$ - total number of days to full normal.</li>
+<li> $D_{base}$ - basic direction coefficient (0.66 for West, 1.0 for East).</li>
+<li> $Z$ - number of time zones crossed.</li>
+<li> $P_{flight}$ - penalty for flight duration (0.5 days for a flight &gt; 8 hours, 1.0 day for a flight &gt; 14 hours).</li>
+<li> $K_{age}$ - age adaptation multiplier.</li>
+</ul>
+<h3 class="wp-block-heading" id="sravnitelnaya-tablitsa-vremeni-vosstanovleniya-2">Recovery Time Comparison Chart</h3>
+<p>The table below shows the average adaptation values ​​for an adult (30–50 years old) for a standard voyage duration:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Shift (belt)</strong></td><td><strong>Direction</strong></td><td><strong>Adaptation days (approximately)</strong></td><td><strong>Peak discomfort</strong></td></tr></thead><tbody><tr><td>3 belts</td><td>West</td><td>~2.0 days</td><td>1 day</td></tr><tr><td>3 belts</td><td>East</td><td>~3.0 days</td><td>1-2 days</td></tr><tr><td>6 belts</td><td>West</td><td>~4.0 days</td><td>Day 2</td></tr><tr><td>6 belts</td><td>East</td><td>~6.0 days</td><td>2-4 days</td></tr><tr><td>9 belts</td><td>West</td><td>~6.5 days</td><td>3-4 day</td></tr><tr><td>9 belts</td><td>East</td><td>~9.5 days</td><td>3-5 day</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="kak-uskorit-adaptatsiyu-sovety-ekspertov-2">How to speed up adaptation: expert advice</h2>
+<p>To reduce the time calculated by the calculator, use the light correction method:</p>
+<ul class="wp-block-list">
+<li><strong>When flying to the West:</strong> In the evening, try to get as much bright sunlight or artificial light as possible. This will help stretch out the day. In the morning, on the contrary, it is recommended to avoid direct sun in the first hours after waking up.</li>
+<li><strong>When flying to the East:</strong> In the morning, strive for maximum illumination (walking outside, light lamps). In the evening, it is necessary to darken it as early as possible and, if necessary, take melatonin in consultation with the doctor.</li>
+<li><strong>Hydration:</strong> Drink more water during the flight. Dehydration increases symptoms of jet lag and slows metabolic adjustments.</li>
+<li><strong>First day rule:</strong> Try not to go to bed before local evening (at least until 20:00–21:00), no matter how sleepy you feel.</li>
+</ul>
+<p>Use our calculator to plan important meetings and events after your flight - it will help you stay productive anywhere in the world.</p>
+</div>
+    </div>
+</body>
+</html>

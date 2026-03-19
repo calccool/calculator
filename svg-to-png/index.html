@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online SVG to PNG converter: batch rasterization, transparent background and scaling</title>
+    <meta name="description" content="Online SVG to PNG converter: batch rasterization, transparent background and scaling - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Online SVG to PNG converter: batch rasterization, transparent background and scaling</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  let host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // --- 1. ПРЕМИУМ CSS ---
+  let style = document.createElement('style');
+  style.textContent = `
+    .cv-wrap * { box-sizing: border-box; }
+    .cv-wrap .is-hidden { display: none !important; }
+    .cv-wrap .cv-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-bottom: 24px; }
+    .cv-wrap .cv-row.single { grid-template-columns: 1fr; }
+    .cv-wrap .cv-field { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+    
+    .cv-wrap .cv-label { font-weight: 700; font-size: 15px; color: #1a1a1a; display: flex; align-items: center; gap: 8px; margin: 0; }
+    .cv-wrap .cv-term { display: inline-flex; align-items: center; justify-content: center; height: 24px; min-width: 30px; padding: 0 8px; border-radius: 6px; font-weight: 700; font-size: 12px; color: #0693e3; background: #eef7ff; margin-left: auto; }
+
+    /* ЗОНА ЗАГРУЗКИ */
+    .cv-wrap .cv-drop-area { position: relative; background-color: #f8fbff; border-radius: 16px; padding: 40px 20px; text-align: center; cursor: pointer; transition: background-color 0.3s, transform 0.2s; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 280px; gap: 16px; z-index: 1; overflow: hidden; }
+    
+    .cv-wrap .cv-drop-area::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 10px; background: linear-gradient(90deg, #0693e3 50%, transparent 50%), linear-gradient(90deg, #0693e3 50%, transparent 50%), linear-gradient(0deg, #0693e3 50%, transparent 50%), linear-gradient(0deg, #0693e3 50%, transparent 50%); background-repeat: repeat-x, repeat-x, repeat-y, repeat-y; background-size: 16px 2px, 16px 2px, 2px 16px, 2px 16px; background-position: 0 0, 100% 100%, 0 100%, 100% 0; animation: dash-move 1s infinite linear; pointer-events: none; opacity: 0.6; transition: opacity 0.3s; }
+    @keyframes dash-move { to { background-position: 16px 0, calc(100% - 16px) 100%, 0 calc(100% - 16px), 100% 16px; } }
+    
+    .cv-wrap .cv-drop-area:hover { background-color: #f0f7ff; transform: translateY(-2px); }
+    .cv-wrap .cv-drop-area:hover::after { opacity: 1; }
+    
+    .cv-wrap .cv-drop-icon svg { width: 100px; height: auto; transition: transform 0.3s ease; }
+    .cv-wrap .cv-drop-area:hover .cv-drop-icon svg { transform: scale(1.05); }
+    .cv-wrap .cv-drop-title { font-size: 18px; font-weight: 600; color: #475569; pointer-events: none; margin-bottom: 5px; word-break: break-word; transition: color 0.3s; z-index: 2; position: relative; }
+    
+    .cv-wrap .cv-upload-btn-inner { display: inline-flex; align-items: center; gap: 10px; background: #fff; border: 1px solid #cbd5e1; color: #1e293b; font-weight: 600; font-size: 15px; padding: 12px 24px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); transition: all 0.2s; pointer-events: none; z-index: 2; position: relative; }
+    .cv-wrap .cv-drop-area:hover .cv-upload-btn-inner { background: #f8fafc; border-color: #94a3b8; box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
+
+    /* Превью SVG внутри дроп-зоны */
+    .cv-wrap .cv-svg-preview-box { width: 120px; height: 120px; background: #fff; border-radius: 12px; border: 1px solid #cbd5e1; display: flex; justify-content: center; align-items: center; padding: 10px; z-index: 2; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    .cv-wrap .cv-svg-preview-box svg, .cv-wrap .cv-svg-preview-box img { max-width: 100%; max-height: 100%; display: block; }
+
+    /* ТАБЫ */
+    .cv-wrap .cv-tabs { display: flex; gap: 8px; background: #f1f5f9; padding: 6px; border-radius: 14px; list-style: none; margin: 0 0 28px 0; }
+    .cv-wrap .cv-tab { padding: 12px 20px; cursor: pointer; border-radius: 10px; font-weight: 600; font-size: 15px; color: #64748b; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); flex: 1; text-align: center; }
+    .cv-wrap .cv-tab:hover { color: #0f172a; }
+    .cv-wrap .cv-tab.active { background: #fff; color: #0693e3; box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+    .cv-wrap .cv-tab-pane { display: none; animation: slideUp 0.4s ease; }
+    .cv-wrap .cv-tab-pane.active { display: block; }
+
+    /* ЭЛЕМЕНТЫ УПРАВЛЕНИЯ */
+    .cv-wrap .cv-input, .cv-wrap .cv-select { width: 100%; padding: 14px 20px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 15px; background: #fff; transition: 0.2s; color: #1a1a1a; font-family: inherit; }
+    .cv-wrap .cv-input:focus, .cv-wrap .cv-select:focus { outline: none; border-color: #0693e3; box-shadow: 0 0 0 4px rgba(6,147,227,0.15); }
+    .cv-wrap .cv-input[type="color"] { padding: 4px 8px; height: 50px; cursor: pointer; }
+    
+    .cv-wrap .cv-check-label { display: flex; align-items: center; gap: 10px; margin-top: 5px; font-size: 14px; cursor: pointer; color: #334155; }
+    .cv-wrap .cv-check-label input { width: 18px; height: 18px; accent-color: #0693e3; }
+    
+    /* Совмещенные поля ввода размеров */
+    .cv-wrap .cv-size-group { display: flex; align-items: center; gap: 10px; width: 100%; }
+    .cv-wrap .cv-size-group span { font-weight: 700; color: #94a3b8; }
+
+    /* КНОПКИ ДЕЙСТВИЙ */
+    .cv-wrap .cv-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 10px; }
+    .cv-wrap .cv-btn { appearance: none; border: none; border-radius: 12px; padding: 14px 24px; cursor: pointer; font-weight: 700; font-size: 15px; transition: all 0.3s; flex: 1; min-width: 180px; display: flex; justify-content: center; align-items: center; gap: 10px; }
+    .cv-wrap .cv-btn-primary { background: linear-gradient(135deg, #0693e3 0%, #006eb5 100%); color: #fff; box-shadow: 0 4px 15px rgba(6,147,227,0.3); }
+    .cv-wrap .cv-btn-secondary { background: #f1f5f9; color: #475569; }
+    .cv-wrap .cv-btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(6,147,227,0.4); }
+    .cv-wrap .cv-btn-secondary:hover { background: #e2e8f0; color: #0f172a; transform: translateY(-2px); }
+    .cv-wrap .cv-btn:active { transform: translateY(1px); }
+
+    /* РЕЗУЛЬТАТЫ */
+    .cv-wrap .cv-result-wrap { margin-top: 20px; background: #fff; border-radius: 16px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
+    .cv-wrap .cv-resline { display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 16px 20px; border-bottom: 1px solid #f1f5f9; }
+    .cv-wrap .cv-resline:last-child { border-bottom: none; background: #f8fbff; }
+    .cv-wrap .cv-resleft { font-size: 14px; color: #64748b; font-weight: 600; }
+    .cv-wrap .cv-resval { font-weight: 700; font-size: 16px; color: #0f172a; word-break: break-word; text-align: right; flex: 1; }
+
+    /* ПРОГРЕСС-БАР */
+    .cv-wrap .cv-progress { height: 8px; background: #f1f5f9; border-radius: 4px; overflow: hidden; margin-bottom: 20px; }
+    .cv-wrap .cv-progress-bar { height: 100%; width: 0%; background: #0693e3; transition: width 0.2s ease; }
+
+    @keyframes slideUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+    @media (max-width: 600px) { 
+      .cv-wrap .cv-actions { flex-direction: column; } 
+      .cv-wrap .cv-tabs { flex-direction: column; } 
+      .cv-wrap .cv-resline { flex-direction: column; align-items: flex-start; gap: 6px; }
+      .cv-wrap .cv-resval { text-align: left; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  // --- 2. HTML РАЗМЕТКА ---
+  let wrap = document.createElement('div');
+  wrap.className = 'cv-wrap';
+  wrap.innerHTML = `
+<div class="cv-card">
+<div class="cv-row single" id="dropAreaWrap">
+<div class="cv-field">
+<div class="cv-drop-area" id="dropArea" role="button" tabindex="0">
+<div class="cv-drop-icon" id="dropIconArea">
+<svg fill="none" viewbox="0 0 120 78" xmlns="http://www.w3.org/2000/svg">
+<path d="M76.7455 43.1092C76.41 43.5371 75.995 43.8933 75.5242 44.1575C75.0535 44.4218 74.5363 44.5889 74.0021 44.6492C73.468 44.7096 72.9274 44.6621 72.4112 44.5093C71.8951 44.3566 71.4136 44.1017 70.9943 43.7592L64.0166 38.0598V57.1688C64.0166 58.2737 63.5858 59.3334 62.8191 60.1147C62.0523 60.896 61.0124 61.335 59.9281 61.335C58.8437 61.335 57.8038 60.896 57.037 60.1147C56.2703 59.3334 55.8396 58.2737 55.8396 57.1688V38.0598L48.8509 43.7592C48.0037 44.4494 46.9221 44.7684 45.844 44.646C44.766 44.5236 43.7798 43.9698 43.1025 43.1065C42.4251 42.2431 42.1121 41.141 42.2322 40.0424C42.3523 38.9439 42.8958 37.939 43.743 37.2488L57.355 26.15C58.0817 25.5516 58.9883 25.226 59.9226 25.2279H59.9335C60.9148 25.2279 61.8088 25.5834 62.512 26.1723L76.1077 37.2488C76.5275 37.5907 76.8771 38.0135 77.1364 38.4932C77.3957 38.9729 77.5597 39.4999 77.6189 40.0443C77.6782 40.5886 77.6315 41.1394 77.4816 41.6654C77.3318 42.1913 77.0816 42.6819 76.7455 43.1092Z" fill="#0693e3"></path>
+<path clip-rule="evenodd" d="M40.1888 13.807C43.5529 8.47181 48.4871 4.3578 54.2851 2.05373C60.0831 -0.250342 66.4478 -0.626361 72.4683 0.979486C78.4888 2.58533 83.8565 6.09073 87.8031 10.994C91.7498 15.8973 94.0731 21.9471 94.4406 28.2776C97.6955 28.1214 100.948 28.6308 104.007 29.7759C107.066 30.9209 109.868 32.6784 112.25 34.9447C114.631 37.211 116.544 39.9402 117.874 42.9714C119.204 46.0027 119.925 49.2746 119.994 52.5944C120.064 55.9141 119.481 59.2144 118.279 62.3007C117.077 65.387 115.28 68.1969 112.996 70.5646C110.711 72.9323 107.985 74.81 104.977 76.087C101.969 77.364 98.7403 78.0143 95.4818 77.9998H31.9845C27.433 77.9937 22.935 76.999 18.7904 75.0822C14.6458 73.1654 10.9497 70.3703 7.94856 66.8834C4.9474 63.3965 2.71008 59.2978 1.38572 54.8604C0.0613673 50.4231 -0.319604 45.7491 0.268202 41.1499C0.856007 36.5507 2.39909 32.1321 4.79459 28.1884C7.1901 24.2447 10.383 20.8666 14.1605 18.2793C17.938 15.692 22.2133 13.9548 26.7015 13.1837C31.1896 12.4125 35.7876 12.625 40.1888 13.807ZM65.0033 8.32983C60.9897 8.3288 57.0574 9.48255 53.6589 11.6583C50.2603 13.834 47.5337 16.9434 45.7928 20.6284C45.3457 21.5721 44.566 22.3094 43.6093 22.6934C42.6525 23.0774 41.5889 23.0799 40.6303 22.7004C37.365 21.4125 33.8614 20.8729 30.3684 21.1202C26.8753 21.3674 23.4786 22.3954 20.4193 24.131C17.3601 25.8667 14.7134 28.2674 12.6673 31.1628C10.6212 34.0582 9.22578 37.3772 8.58023 40.884C7.93469 44.3908 8.05482 47.9994 8.9321 51.4536C9.80938 54.9078 11.4223 58.1227 13.6563 60.8702C15.8902 63.6176 18.6905 65.8301 21.8581 67.3505C25.0258 68.8709 28.4831 69.6619 31.9845 69.6674H95.4818C97.792 69.6666 100.075 69.1633 102.179 68.1913C104.284 67.2193 106.16 65.8009 107.683 64.0308C109.206 62.2608 110.341 60.1799 111.011 57.9272C111.682 55.6744 111.873 53.3018 111.572 50.9678C111.271 48.6338 110.484 46.3922 109.265 44.3928C108.045 42.3934 106.421 40.6822 104.501 39.3736C102.58 38.065 100.408 37.1891 98.1287 36.8045C95.8496 36.4199 93.5161 36.5354 91.2843 37.1432C90.6395 37.3193 89.9621 37.3318 89.3115 37.1797C88.6608 37.0275 88.0566 36.7153 87.5517 36.2704C87.0467 35.8254 86.6564 35.2612 86.4147 34.6271C86.1731 33.993 86.0875 33.3082 86.1654 32.6326C86.5229 29.5847 86.2423 26.4941 85.3421 23.5647C84.4419 20.6353 82.9426 17.9336 80.943 15.6378C78.9434 13.3419 76.4889 11.5041 73.7414 10.2453C70.9939 8.98663 68.0157 8.33012 65.0033 8.32983Z" fill="#a8d0f0" fill-rule="evenodd"></path>
+</svg>
+</div>
+<div class="cv-drop-title" id="dropTitle">Drag and drop SVG here or click to select</div>
+<div id="dropSubtitle" style="font-size: 14px; color: #64748b; margin-bottom: 10px;">To convert to PNG. Batch processing of files is supported.</div>
+<div class="cv-upload-btn-inner" id="uploadBtnInner">
+<svg fill="none" height="18" viewbox="0 0 16 18" width="18" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.4033 8.6V5L10.8033 1H2.40327C2.1911 1 1.98762 1.08429 1.83759 1.23431C1.68756 1.38434 1.60327 1.58783 1.60327 1.8V16.2C1.60327 16.4122 1.68756 16.6157 1.83759 16.7657C1.98762 16.9157 2.1911 17 2.40327 17H7.20327M11.6033 11V16.6M8.80327 13.8H14.4033" stroke="#1e293b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M10.4033 1V5H14.4033" stroke="#1e293b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>Select file</div>
+</div>
+<input accept=".svg,image/svg+xml" id="fileInput" multiple="" style="position:absolute;left:-9999px;" type="file"/>
+</div>
+</div>
+<div class="is-hidden" id="converterControls">
+<ul class="cv-tabs">
+<li class="cv-tab active" data-target="tab-settings">PNG export settings</li>
+<li class="cv-tab" data-target="tab-convert">Actions and Loading</li>
+</ul>
+<div class="cv-body">
+<div class="cv-tab-pane active" id="tab-settings">
+<div class="cv-row">
+<div class="cv-field">
+<label class="cv-label">Permission<span class="cv-term">px</span></label>
+<div class="cv-size-group">
+<input class="cv-input" id="inW" min="1" placeholder="Width" type="number"/>
+<span>×</span>
+<input class="cv-input" id="inH" min="1" placeholder="Height" type="number"/>
+</div>
+<label class="cv-check-label" style="margin-top: 8px;">
+<input checked="" id="arKeep" type="checkbox"/>Maintain proportions</label>
+</div>
+<div class="cv-field">
+<label class="cv-label" for="selScale">Magnification (Zoom)</label>
+<select class="cv-select" id="selScale">
+<option selected="" value="1">Original (1x)</option>
+<option value="2">Zoom in 2 times (2x)</option>
+<option value="3">Enlarge 3 times (3x)</option>
+<option value="4">Enlarge 4 times (4x)</option>
+</select>
+</div>
+<div class="cv-field">
+<label class="cv-label">Background options</label>
+<label class="cv-check-label" style="margin-top: 0; margin-bottom: 8px;">
+<input checked="" id="transparent" type="checkbox"/>Transparent background</label>
+<div class="is-hidden" id="bgPickWrap" style="display: flex; align-items: center; gap: 10px;">
+<input class="cv-input" id="bgPick" style="width: 60px; padding: 0;" type="color" value="#ffffff"/>
+<span style="font-size: 14px; color: #64748b;">Background color PNG</span>
+</div>
+</div>
+</div>
+</div>
+<div class="cv-tab-pane" id="tab-convert">
+<div class="cv-row single">
+<div class="cv-actions">
+<button class="cv-btn cv-btn-primary" id="btnConvert" type="button">Convert (0)</button>
+</div>
+</div>
+<div class="cv-progress is-hidden" id="progressBox">
+<div class="cv-progress-bar" id="progressBar"></div>
+</div>
+<div class="cv-result-wrap is-hidden" id="resultBox">
+<div class="cv-resline" style="background: #f8fbff; border-bottom: 2px solid #e2e8f0;">
+<div class="cv-resleft">Successfully converted:</div>
+<div class="cv-resval" id="resultRows" style="color: #10b981;">0</div>
+</div>
+<div class="cv-resline">
+<button class="cv-btn cv-btn-secondary" id="btnDownload" style="width: 100%;" type="button">Download 1st file (PNG)</button>
+<button class="cv-btn cv-btn-primary" id="btnZip" style="width: 100%;" type="button">Download the entire package (ZIP)</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // --- 3. БЕЗОПАСНЫЙ JS (Строгие ограничения) ---
+  let dropArea = wrap.querySelector('#dropArea');
+  let dropTitle = wrap.querySelector('#dropTitle');
+  let dropSubtitle = wrap.querySelector('#dropSubtitle');
+  let dropIconArea = wrap.querySelector('#dropIconArea');
+  let uploadBtnInner = wrap.querySelector('#uploadBtnInner');
+  let fileInput = wrap.querySelector('#fileInput');
+  let converterControls = wrap.querySelector('#converterControls');
+  
+  let inW = wrap.querySelector('#inW');
+  let inH = wrap.querySelector('#inH');
+  let arKeep = wrap.querySelector('#arKeep');
+  let selScale = wrap.querySelector('#selScale');
+  let transparent = wrap.querySelector('#transparent');
+  let bgPickWrap = wrap.querySelector('#bgPickWrap');
+  let bgPick = wrap.querySelector('#bgPick');
+  
+  let btnConvert = wrap.querySelector('#btnConvert');
+  let btnDownload = wrap.querySelector('#btnDownload');
+  let btnZip = wrap.querySelector('#btnZip');
+  
+  let progressBox = wrap.querySelector('#progressBox');
+  let progressBar = wrap.querySelector('#progressBar');
+  let resultBox = wrap.querySelector('#resultBox');
+  let resultRows = wrap.querySelector('#resultRows');
+
+  let files = [];
+  let results = [];
+  let baseRatio = 1;
+
+  let tabs = wrap.querySelectorAll('.cv-tab');
+  let panes = wrap.querySelectorAll('.cv-tab-pane');
+  
+  Array.from(tabs).forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      let targetId = tab.getAttribute('data-target');
+      Array.from(tabs).forEach(function(t) { t.classList.remove('active'); });
+      Array.from(panes).forEach(function(p) { p.classList.remove('active'); });
+      tab.classList.add('active');
+      let targetPane = wrap.querySelector('#' + targetId);
+      if (targetPane) targetPane.classList.add('active');
+    });
+  });
+
+  // Логика отображения поля выбора цвета
+  transparent.addEventListener('change', function() {
+    let isChecked = transparent.checked === true;
+    if (isChecked) {
+      bgPickWrap.classList.add('is-hidden');
+    } else {
+      bgPickWrap.classList.remove('is-hidden');
+    }
+  });
+
+  // Логика синхронизации пропорций
+  inW.addEventListener('input', function() {
+    let keepRatio = arKeep.checked === true;
+    let wVal = parseInt(inW.value, 10);
+    if (keepRatio) {
+      let wFinite = isFinite(wVal);
+      if (wFinite) {
+         let wPositive = Math.sign(wVal) === 1;
+         if (wPositive) {
+            inH.value = Math.round(wVal / baseRatio);
+         }
+      }
+    }
+  });
+
+  inH.addEventListener('input', function() {
+    let keepRatio = arKeep.checked === true;
+    let hVal = parseInt(inH.value, 10);
+    if (keepRatio) {
+      let hFinite = isFinite(hVal);
+      if (hFinite) {
+         let hPositive = Math.sign(hVal) === 1;
+         if (hPositive) {
+            inW.value = Math.round(hVal * baseRatio);
+         }
+      }
+    }
+  });
+
+  function sanitizeBase(name) {
+    let validName = name ? name : 'image';
+    let clean = String(validName).replace(/\.[^.]+$/, '').replace(/[\/\\?%*:|"\x3c\x3e]/g, '_');
+    let isTooLong = Math.sign(clean.length - 64) === 1;
+    if (isTooLong) {
+       return clean.slice(0, 64);
+    }
+    return clean;
+  }
+
+  function parseSVGSize(svgText) {
+    let w = null; let h = null; let vb = null;
+    try {
+      let mW = svgText.match(/width\s*=\s*["']([^"']+)["']/i);
+      if (mW) { w = mW[1]; }
+      let mH = svgText.match(/height\s*=\s*["']([^"']+)["']/i);
+      if (mH) { h = mH[1]; }
+      let mVB = svgText.match(/viewBox\s*=\s*["']([^"']+)["']/i);       if (mVB) { vb = mVB[1]; }     } catch (e) {}          function toPx(v) {       let isNull = v ? false : true;       if (isNull) return null;       let s = String(v).trim();       let m = s.match(/^([0-9.]+)\s*(px|pt|cm|mm|in)?$/i);       if (m) {         let num = parseFloat(m[1]);         let rawUnit = m[2];         let unit = rawUnit ? rawUnit: 'px';         let u = unit.toLowerCase();                  let isPx = u === 'px';         let isPt = u === 'pt';         let isIn = u === 'in';         let isCm = u === 'cm';         let isMm = u === 'mm';                  if (isPx) return num;         if (isPt) return num * 96 / 72;         if (isIn) return num * 96;         if (isCm) return num * 96 / 2.54;         if (isMm) return num * 96 / 25.4;       }       return null;     }          let pxW = toPx(w);      let pxH = toPx(h);          let hasDirectDims = Math.max(pxW ? 1 : 0, pxH ? 1 : 0) === 1;     let hasBothDims = Math.min(pxW ? 1 : 0, pxH ? 1 : 0) === 1;          if (hasBothDims) {        return { w: pxW, h: pxH, ratio: pxW / pxH };     }          let hasVB = vb ? true : false;     if (hasVB) {       let p = vb.split(/\s+/);       let isQuad = p.length === 4;       if (isQuad) {         let vbW = parseFloat(p[2]);          let vbH = parseFloat(p[3]);         let wFinite = isFinite(vbW);         let hFinite = isFinite(vbH);                  if (wFinite) {             if (hFinite) {                 let wPos = Math.sign(vbW) === 1;                 let hPos = Math.sign(vbH) === 1;                 let isValidVb = Math.min(wPos ? 1 : 0, hPos ? 1 : 0) === 1;                 if (isValidVb) {                    return { w: vbW, h: vbH, ratio: vbW / vbH };                 }             }         }       }     }     return { w: 512, h: 512, ratio: 1 };   }    function computeSize(meta) {     let w = meta.w;      let h = meta.h;     let vW = parseInt(inW.value, 10);     let vH = parseInt(inH.value, 10);     let keepRatio = arKeep.checked === true;      let wFinite = isFinite(vW);     if (wFinite) {         let wPositive = Math.sign(vW) === 1;         if (wPositive) {             w = vW;             if (keepRatio) { h = Math.round(w / meta.ratio); }         }     }          let hFinite = isFinite(vH);     if (hFinite) {         let hPositive = Math.sign(vH) === 1;         if (hPositive) {             h = vH;             if (keepRatio) {                 let wUnset = false;                 if (wFinite) {                     wUnset = Math.sign(vW) !== 1;                 } else {                     wUnset = true;                 }                 if (wUnset) {                     w = Math.round(h * meta.ratio);                 }             }         }     }      let scale = parseFloat(selScale.value);     let scaleFinite = isFinite(scale);     if (!scaleFinite) { scale = 1; }          let scalePositive = Math.sign(scale) === 1;     if (!scalePositive) { scale = 1; }          w = Math.round(w * scale);     h = Math.round(h * scale);          let wSmall = Math.sign(1 - w) === 1;     let hSmall = Math.sign(1 - h) === 1;     if (wSmall) { w = 1; }     if (hSmall) { h = 1; }      return { w: w, h: h };   }    dropArea.addEventListener('click', function() { fileInput.click(); });   dropArea.addEventListener('dragover', function(e) { e.preventDefault(); dropArea.style.backgroundColor = '#e6f3ff'; }, {passive: false});   dropArea.addEventListener('dragleave', function() { dropArea.style.backgroundColor = ''; });      dropArea.addEventListener('drop', function(e) {     e.preventDefault();     dropArea.style.backgroundColor = '';     let dt = e.dataTransfer;     let fList = dt ? dt.files: null;     let hasFiles = fList ? (fList.length !== 0) : false;     if (hasFiles) { handleFiles(fList); }   });    fileInput.addEventListener('change', function() {     let fList = fileInput.files;     let hasFiles = fList ? (fList.length !== 0) : false;     if (hasFiles) { handleFiles(fList); }   });    async function handleFiles(fList) {     files = Array.from(fList);     let count = files.length;     let isSingle = count === 1;          converterControls.classList.remove('is-hidden');     resultBox.classList.add('is-hidden');     progressBox.classList.add('is-hidden');     btnConvert.textContent = 'Convert (' + count + ')';          uploadBtnInner.classList.add('is-hidden');      if (isSingle) {        let f = files[0];        try {            let text = await f.text();            let meta = parseSVGSize(text);            baseRatio = meta.ratio;            inW.value = Math.round(meta.w);            inH.value = Math.round(meta.h);                        dropTitle.textContent = f.name;            dropTitle.style.color = '#0693e3';            dropSubtitle.textContent = 'Original: ' + Math.round(meta.w) + 'x' + Math.round(meta.h) + 'px';                        // Create a preview in the drop zone            dropIconArea.innerHTML = '<div class="cv-svg-preview-box">' + text + '</div>';                    } catch (e) {}     } else {        dropTitle.textContent = 'Selected ' + count + ' SVG file(s)';        dropTitle.style.color = '#0693e3';        dropSubtitle.textContent = 'Dimensions will be taken from the files. Go to the actions tab.';        dropIconArea.innerHTML = ` <svg fill="none" style="width: 80px; height: auto;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 18H17V16H7V18ZM7 14H17V12H7V14ZM7 10H14V8H7V10ZM3 22V2H15L21 8V22H3ZM14 9H19.5L14 3.5V9Z" fill="#0693e3"></path>
+</svg>
+`;
+    }
+  }
+
+  async function renderOne(svgText, outName) {
+    let meta = parseSVGSize(svgText);
+    let size = computeSize(meta);
+    
+    let canvas = document.createElement('canvas');
+    canvas.width = size.w;
+    canvas.height = size.h;
+    let ctx = canvas.getContext('2d');
+
+    let isTransp = transparent.checked === true;
+    if (!isTransp) {
+      let bgC = bgPick.value;
+      let clr = bgC ? bgC : '#ffffff';
+      ctx.fillStyle = clr;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+
+    let inst = canvg.Canvg.fromString(ctx, svgText, { ignoreMouse: true, ignoreAnimation: true });
+    await inst.render();
+
+    let blob = await new Promise(function(res, rej) {
+      canvas.toBlob(function(b) {
+          let bOk = b ? true : false;
+          if (bOk) { res(b); } else { rej(new Error('toBlob error')); }
+      }, 'image/png');
+    });
+
+    let url = URL.createObjectURL(blob);
+    return { name: outName, blob: blob, url: url };
+  }
+
+  btnConvert.addEventListener('click', async function () {
+    let hasFiles = files.length !== 0;
+    if (!hasFiles) return;
+
+    btnConvert.textContent = 'Processing...';
+    btnConvert.disabled = true;
+    
+    progressBox.classList.remove('is-hidden');
+    resultBox.classList.add('is-hidden');
+    
+    results.forEach(function(r) {
+       try { URL.revokeObjectURL(r.url); } catch (e) {}
+    });
+    results = [];
+
+    try {
+      let i = 0;
+      let total = files.length;
+      
+      while(Math.sign(total - i) === 1) {
+        let f = files[i];
+        let text = await f.text();
+        let safeName = sanitizeBase(f.name);
+        let r = await renderOne(text, safeName + '.png');
+        results.push(r);
+        
+        let pct = Math.round(((i + 1) / total) * 100);
+        progressBar.style.width = pct + '%';
+        i = i + 1;
+      }
+      
+      resultRows.textContent = String(results.length);
+      resultBox.classList.remove('is-hidden');
+      
+      let multiple = results.length > 1;
+      if (!multiple) { btnZip.classList.add('is-hidden'); } 
+      if (multiple) { btnZip.classList.remove('is-hidden'); }
+      
+      btnConvert.textContent = 'Convert again';
+      btnConvert.disabled = false;
+    
+    } catch (e) {
+      btnConvert.textContent = 'Error!';
+      setTimeout(function() { btnConvert.textContent = 'Convert again'; btnConvert.disabled = false; }, 2000);
+      progressBox.classList.add('is-hidden');
+    }
+  });
+
+  btnDownload.addEventListener('click', function () {
+    let hasRes = results.length !== 0;
+    if (!hasRes) return;
+    
+    let first = results[0];
+    let a = document.createElement('a');
+    a.href = first.url;
+    a.download = first.name;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  });
+
+  btnZip.addEventListener('click', function () {
+    let hasRes = results.length !== 0;
+    if (!hasRes) return;
+    
+    btnZip.textContent = 'Package...';
+    btnZip.disabled = true;
+    
+    let filesMap = {};
+    let i = 0;
+    let total = results.length;
+
+    function nextFile() {
+      let done = Math.sign(i - total) !== -1;
+      if (done) {
+        try {
+            let zipped = fflate.zipSync(filesMap, { level: 6 });
+            let zipBlob = new Blob([zipped], { type: 'application/zip' });
+            let url = URL.createObjectURL(zipBlob);
+            
+            let a = document.createElement('a');
+            a.href = url;
+            a.download = 'svg_to_png_archive.zip';
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            
+            setTimeout(function() { try { URL.revokeObjectURL(url); } catch (e) {} }, 1000);
+            
+            btnZip.textContent = 'Download the entire package (ZIP)';
+            btnZip.disabled = false;
+        } catch (e) {
+            btnZip.textContent = 'ZIP error';
+            setTimeout(function() { btnZip.textContent = 'Download the entire package (ZIP)'; btnZip.disabled = false; }, 2000);
+        }
+        return;
+      }
+      
+      let r = results[i];
+      let fr = new FileReader();
+      fr.onload = function(e) { 
+          filesMap[r.name] = new Uint8Array(e.target.result); 
+          i = i + 1; 
+          nextFile(); 
+      };
+      fr.onerror = function() { 
+          i = i + 1; 
+          nextFile(); 
+      };
+      fr.readAsArrayBuffer(r.blob);
+    }
+    
+    nextFile();
+  });
+
+});
+</script>
+
+        <div class="post-content">
+<p>Converting vector images (SVG) to raster formats (PNG) is a mandatory step when preparing graphics for social networks, presentations, mobile applications and platforms that do not support scalable vector markup. Our tool, based on the converterok.com platform, allows you to perform this task with surgical precision, with full control over the final resolution and transparency.</p>
+<p>The main difference between our algorithm lies in the processing architecture: rasterization occurs locally (in the RAM of your browser), which guarantees the absolute safety of the source files.</p>
+<h2 class="wp-block-heading" id="pochemu-stoit-ispolzovat-lokalnuyu-rasterizatsiyu-2">Why use local rasterization</h2>
+<p>Unlike legacy cloud solutions, our vector edge parsing engine shifts the computational load to the client side. This gives users a number of uncompromising benefits:</p>
+<ul class="wp-block-list">
+<li><strong>Instant rendering:</strong> The absence of network delays for sending and downloading data allows you to convert dozens of files in a matter of seconds.</li>
+<li><strong>Absolute privacy:</strong> Your logos, illustrations and commercial designs are never transferred to third party servers.</li>
+<li><strong>Flexible transformation:</strong> Intelligent size control with proportion synchronization<code>(Aspect Ratio)</code>and the ability to increase the original scale up to 4x without losing the sharpness of the contours.</li>
+<li><strong>Custom background:</strong> Support for alpha channel (full transparency) or the ability to fill the background with any HEX color through the built-in palette.</li>
+</ul>
+<h2 class="wp-block-heading" id="tehnicheskoe-sravnenie-formatov-svg-protiv-png-2">Technical format comparison: SVG vs PNG</h2>
+<p>Understanding the difference between the source and destination format helps you choose the right settings when converting.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Characteristic</strong></td><td><strong>SVG (Scalable Vector Graphics)</strong></td><td><strong>PNG (Portable Network Graphics)</strong></td></tr></thead><tbody><tr><td><strong>Data structure</strong></td><td>Mathematical contours, knots and formulas</td><td>Pixel grid (raster)</td></tr><tr><td><strong>Scaling</strong></td><td>Infinite without loss of quality</td><td>Limited by native resolution</td></tr><tr><td><strong>Web Compatibility</strong></td><td>Medium (some older systems do not read)</td><td>Maximum (supported everywhere)</td></tr><tr><td><strong>Optimal application</strong></td><td>Icons, logos, UI interface elements</td><td>Photos with transparency, web graphics, previews</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="matematicheskaya-model-masshtabirovaniya-i-renderinga-2">Mathematical model of scaling and rendering</h2>
+<p>Our converter uses the rendering library on<code>Canvas</code>, which mathematically maps each vector node into a pixel matrix. When aspect ratio scaling is enabled, the final pixel resolution of the image ( $W_{png}$ and $H_{png}$ ) is calculated based on the original aspect ratio of the vector ( $Ratio$ ) and the specified multiplier ( $S$ ):</p>
+<p>$$W_{png} = \lfloor W_{svg} \times S \rfloor, \quad H_{png} = \lfloor \frac{W_{svg} \times S}{Ratio} \rfloor$$</p>
+<p>The computational complexity of the rasterization time ( $T_r$ ) depends on both the number of mathematical Bezier curves ( $P$ ) in the source SVG file and the final area of ​​the generated raster ( $A = W_{png} \times H_{png}$ ). The process is described by the asymptotic complexity formula:</p>
+<p>$$T_r = \mathcal{O}(P) + \mathcal{O}(W_{png} \times H_{png})$$</p>
+<p>This means that our algorithm first builds the geometry and then fills the pixels. By optimizing browser API calls, even the most complex illustrations with gradients and hundreds of layers are processed with maximum performance. For the convenience of users, a batch upload function has been implemented: after generating all raster images, they are instantly collected into a single ZIP archive with maximum compression.</p>
+</div>
+    </div>
+</body>
+</html>

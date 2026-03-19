@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert JSON to CSV and back online - data conversion with formatting and preview</title>
+    <meta name="description" content="Convert JSON to CSV and back online - data conversion with formatting and preview - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Convert JSON to CSV and back online - data conversion with formatting and preview</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // --- 1. ПРЕМИУМ CSS ---
+  const style = document.createElement('style');
+  style.textContent = `
+    .cv-wrap * { box-sizing: border-box; }
+    .cv-wrap .is-hidden { display: none !important; }
+    .cv-wrap .cv-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-bottom: 24px; }
+    .cv-wrap .cv-row.single { grid-template-columns: 1fr; }
+    .cv-wrap .cv-field { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+    
+    .cv-wrap .cv-label { font-weight: 700; font-size: 15px; color: #1a1a1a; display: flex; align-items: center; gap: 8px; margin: 0; }
+    .cv-wrap .cv-help { font-size: 13px; color: #64748b; margin-top: -4px; line-height: 1.4; }
+
+    /* ЗОНА ЗАГРУЗКИ (Универсальная) */
+    .cv-wrap .cv-drop-area { position: relative; background-color: #f8fbff; border-radius: 16px; padding: 40px 20px; text-align: center; cursor: pointer; transition: background-color 0.3s, transform 0.2s; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 220px; gap: 16px; z-index: 1; overflow: hidden; border: 2px dashed transparent; }
+    
+    .cv-wrap .cv-drop-area::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 14px; background: linear-gradient(90deg, #0693e3 50%, transparent 50%), linear-gradient(90deg, #0693e3 50%, transparent 50%), linear-gradient(0deg, #0693e3 50%, transparent 50%), linear-gradient(0deg, #0693e3 50%, transparent 50%); background-repeat: repeat-x, repeat-x, repeat-y, repeat-y; background-size: 16px 2px, 16px 2px, 2px 16px, 2px 16px; background-position: 0 0, 100% 100%, 0 100%, 100% 0; animation: dash-move 1s infinite linear; pointer-events: none; opacity: 0.6; transition: opacity 0.3s; }
+    @keyframes dash-move { to { background-position: 16px 0, calc(100% - 16px) 100%, 0 calc(100% - 16px), 100% 16px; } }
+    
+    .cv-wrap .cv-drop-area:hover { background-color: #f0f7ff; transform: translateY(-2px); }
+    .cv-wrap .cv-drop-area:hover::after { opacity: 1; }
+    
+    .cv-wrap .cv-drop-icon svg { width: 90px; height: auto; transition: transform 0.3s ease; }
+    .cv-wrap .cv-drop-area:hover .cv-drop-icon svg { transform: scale(1.05); }
+    .cv-wrap .cv-drop-title { font-size: 18px; font-weight: 600; color: #475569; pointer-events: none; margin-bottom: 5px; word-break: break-word; transition: color 0.3s; z-index: 2; position: relative; }
+    
+    .cv-wrap .cv-upload-btn-inner { display: inline-flex; align-items: center; gap: 10px; background: #fff; border: 1px solid #cbd5e1; color: #1e293b; font-weight: 600; font-size: 15px; padding: 12px 24px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); transition: all 0.2s; pointer-events: none; z-index: 2; position: relative; }
+    .cv-wrap .cv-drop-area:hover .cv-upload-btn-inner { background: #f8fafc; border-color: #94a3b8; box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
+
+    /* ФОРМЫ И ТАБЫ */
+    .cv-wrap .cv-select, .cv-wrap .cv-textarea { width: 100%; padding: 14px 20px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 15px; background: #fff; transition: 0.2s; color: #1a1a1a; font-family: inherit; }
+    .cv-wrap .cv-textarea { font-family: 'Courier New', Courier, monospace; min-height: 180px; resize: vertical; line-height: 1.5; }
+    .cv-wrap .cv-select:focus, .cv-wrap .cv-textarea:focus { outline: none; border-color: #0693e3; box-shadow: 0 0 0 4px rgba(6,147,227,0.15); }
+
+    /* КНОПКИ ДЕЙСТВИЙ */
+    .cv-wrap .cv-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 10px; }
+    .cv-wrap .cv-btn { appearance: none; border: none; border-radius: 12px; padding: 14px 24px; cursor: pointer; font-weight: 700; font-size: 15px; transition: all 0.3s; flex: 1; min-width: 180px; display: flex; justify-content: center; align-items: center; gap: 10px; }
+    .cv-wrap .cv-btn-primary { background: linear-gradient(135deg, #0693e3 0%, #006eb5 100%); color: #fff; box-shadow: 0 4px 15px rgba(6,147,227,0.3); }
+    .cv-wrap .cv-btn-secondary { background: #f1f5f9; color: #475569; }
+    .cv-wrap .cv-btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(6,147,227,0.4); }
+    .cv-wrap .cv-btn-secondary:hover { background: #e2e8f0; color: #0f172a; transform: translateY(-2px); }
+    .cv-wrap .cv-btn:active { transform: translateY(1px); }
+
+    /* РЕЗУЛЬТАТЫ */
+    .cv-wrap .cv-result-wrap { margin-top: 20px; background: #fff; border-radius: 16px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
+    .cv-wrap .cv-resline { display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 16px 20px; border-bottom: 1px solid #f1f5f9; }
+    .cv-wrap .cv-resline:last-child { border-bottom: none; }
+    .cv-wrap .cv-resleft { font-size: 14px; color: #64748b; font-weight: 600; }
+    .cv-wrap .cv-resval { font-weight: 700; font-size: 16px; color: #0f172a; word-break: break-word; text-align: right; flex: 1; }
+    
+    /* ПРЕВЬЮ ТАБЛИЦЫ/ТЕКСТА */
+    .cv-wrap .cv-preview-area { font-weight: 400; font-size: 14px; font-family: 'Courier New', monospace; white-space: pre; max-height: 400px; overflow: auto; border: 1px solid #e2e8f0; border-radius: 10px; background: #f8fafc; padding: 15px; text-align: left; }
+    .cv-wrap .cv-table { border-collapse: collapse; width: 100%; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; white-space: normal; background: #fff; }
+    .cv-wrap .cv-table th, .cv-wrap .cv-table td { border: 1px solid #cbd5e1; padding: 10px 12px; text-align: left; font-size: 14px; word-break: break-word; }
+    .cv-wrap .cv-table th { background: #f1f5f9; color: #1e293b; font-weight: 600; position: sticky; top: 0; box-shadow: 0 1px 0 #cbd5e1; }
+    .cv-wrap .cv-table tr:nth-child(even) { background-color: #f8fafc; }
+
+    @media (max-width: 600px) { 
+      .cv-wrap .cv-actions { flex-direction: column; } 
+      .cv-wrap .cv-resline { flex-direction: column; align-items: flex-start; gap: 6px; }
+      .cv-wrap .cv-resval { text-align: left; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  // --- 2. HTML РАЗМЕТКА ---
+  const wrap = document.createElement('div');
+  wrap.className = 'cv-wrap';
+  wrap.innerHTML = `
+<div class="cv-card">
+<div class="cv-row single" id="dropAreaWrap">
+<div class="cv-field">
+<div class="cv-drop-area" id="dropArea" role="button" tabindex="0">
+<div class="cv-drop-icon" id="dropIconArea">
+<svg fill="none" viewbox="0 0 120 78" xmlns="http://www.w3.org/2000/svg">
+<path d="M76.7455 43.1092C76.41 43.5371 75.995 43.8933 75.5242 44.1575C75.0535 44.4218 74.5363 44.5889 74.0021 44.6492C73.468 44.7096 72.9274 44.6621 72.4112 44.5093C71.8951 44.3566 71.4136 44.1017 70.9943 43.7592L64.0166 38.0598V57.1688C64.0166 58.2737 63.5858 59.3334 62.8191 60.1147C62.0523 60.896 61.0124 61.335 59.9281 61.335C58.8437 61.335 57.8038 60.896 57.037 60.1147C56.2703 59.3334 55.8396 58.2737 55.8396 57.1688V38.0598L48.8509 43.7592C48.0037 44.4494 46.9221 44.7684 45.844 44.646C44.766 44.5236 43.7798 43.9698 43.1025 43.1065C42.4251 42.2431 42.1121 41.141 42.2322 40.0424C42.3523 38.9439 42.8958 37.939 43.743 37.2488L57.355 26.15C58.0817 25.5516 58.9883 25.226 59.9226 25.2279H59.9335C60.9148 25.2279 61.8088 25.5834 62.512 26.1723L76.1077 37.2488C76.5275 37.5907 76.8771 38.0135 77.1364 38.4932C77.3957 38.9729 77.5597 39.4999 77.6189 40.0443C77.6782 40.5886 77.6315 41.1394 77.4816 41.6654C77.3318 42.1913 77.0816 42.6819 76.7455 43.1092Z" fill="#0693e3"></path>
+<path clip-rule="evenodd" d="M40.1888 13.807C43.5529 8.47181 48.4871 4.3578 54.2851 2.05373C60.0831 -0.250342 66.4478 -0.626361 72.4683 0.979486C78.4888 2.58533 83.8565 6.09073 87.8031 10.994C91.7498 15.8973 94.0731 21.9471 94.4406 28.2776C97.6955 28.1214 100.948 28.6308 104.007 29.7759C107.066 30.9209 109.868 32.6784 112.25 34.9447C114.631 37.211 116.544 39.9402 117.874 42.9714C119.204 46.0027 119.925 49.2746 119.994 52.5944C120.064 55.9141 119.481 59.2144 118.279 62.3007C117.077 65.387 115.28 68.1969 112.996 70.5646C110.711 72.9323 107.985 74.81 104.977 76.087C101.969 77.364 98.7403 78.0143 95.4818 77.9998H31.9845C27.433 77.9937 22.935 76.999 18.7904 75.0822C14.6458 73.1654 10.9497 70.3703 7.94856 66.8834C4.9474 63.3965 2.71008 59.2978 1.38572 54.8604C0.0613673 50.4231 -0.319604 45.7491 0.268202 41.1499C0.856007 36.5507 2.39909 32.1321 4.79459 28.1884C7.1901 24.2447 10.383 20.8666 14.1605 18.2793C17.938 15.692 22.2133 13.9548 26.7015 13.1837C31.1896 12.4125 35.7876 12.625 40.1888 13.807ZM65.0033 8.32983C60.9897 8.3288 57.0574 9.48255 53.6589 11.6583C50.2603 13.834 47.5337 16.9434 45.7928 20.6284C45.3457 21.5721 44.566 22.3094 43.6093 22.6934C42.6525 23.0774 41.5889 23.0799 40.6303 22.7004C37.365 21.4125 33.8614 20.8729 30.3684 21.1202C26.8753 21.3674 23.4786 22.3954 20.4193 24.131C17.3601 25.8667 14.7134 28.2674 12.6673 31.1628C10.6212 34.0582 9.22578 37.3772 8.58023 40.884C7.93469 44.3908 8.05482 47.9994 8.9321 51.4536C9.80938 54.9078 11.4223 58.1227 13.6563 60.8702C15.8902 63.6176 18.6905 65.8301 21.8581 67.3505C25.0258 68.8709 28.4831 69.6619 31.9845 69.6674H95.4818C97.792 69.6666 100.075 69.1633 102.179 68.1913C104.284 67.2193 106.16 65.8009 107.683 64.0308C109.206 62.2608 110.341 60.1799 111.011 57.9272C111.682 55.6744 111.873 53.3018 111.572 50.9678C111.271 48.6338 110.484 46.3922 109.265 44.3928C108.045 42.3934 106.421 40.6822 104.501 39.3736C102.58 38.065 100.408 37.1891 98.1287 36.8045C95.8496 36.4199 93.5161 36.5354 91.2843 37.1432C90.6395 37.3193 89.9621 37.3318 89.3115 37.1797C88.6608 37.0275 88.0566 36.7153 87.5517 36.2704C87.0467 35.8254 86.6564 35.2612 86.4147 34.6271C86.1731 33.993 86.0875 33.3082 86.1654 32.6326C86.5229 29.5847 86.2423 26.4941 85.3421 23.5647C84.4419 20.6353 82.9426 17.9336 80.943 15.6378C78.9434 13.3419 76.4889 11.5041 73.7414 10.2453C70.9939 8.98663 68.0157 8.33012 65.0033 8.32983Z" fill="#a8d0f0" fill-rule="evenodd"></path>
+</svg>
+</div>
+<div class="cv-drop-title" id="dropTitle">Drag and drop your CSV or JSON file here</div>
+<div id="dropSubtitle" style="font-size: 14px; color: #64748b; margin-bottom: 10px;">or paste the data in text into the field below</div>
+<div class="cv-upload-btn-inner" id="uploadBtnInner">Select file</div>
+</div>
+<input accept=".csv,.json,application/json,text/csv" id="fileInput" style="position:absolute;left:-9999px;" type="file"/>
+</div>
+</div>
+<div class="cv-row single">
+<div class="cv-field">
+<label class="cv-label" for="jsonInput">Input data (Text)</label>
+<textarea class="cv-textarea" id="jsonInput" placeholder='{"key": "value"} or column1, column2...'></textarea>
+</div>
+</div>
+<div class="cv-row single">
+<div class="cv-field">
+<label class="cv-label" for="sepSelect">CSV separator (for reading and saving)</label>
+<select class="cv-select" id="sepSelect">
+<option value=",">Comma (,)</option>
+<option value=";">Semicolon (;)</option>
+<option value="\t">Tab ( \t )</option>
+</select>
+</div>
+</div>
+<div class="cv-actions">
+<button class="cv-btn cv-btn-primary" id="btnConvert" type="button">Auto-conversion</button>
+</div>
+<div class="cv-result-wrap is-hidden" id="resultBox">
+<div class="cv-resline is-hidden" id="errorBox" style="background:#fef2f2;">
+<div class="cv-resleft">Error:</div>
+<div class="cv-resval" id="errorMsg" style="color:#ef4444;"></div>
+</div>
+<div id="resultPreviewWrap">
+<div class="cv-resline" style="background:#f8fbff; border-bottom: 2px solid #e2e8f0;">
+<div class="cv-resleft" id="resultLabel">Result preview</div>
+<div class="cv-resval" style="color:#10b981;">Successfully</div>
+</div>
+<div class="cv-resline single">
+<div class="cv-resval cv-preview-area" id="previewArea">The result will appear here...</div>
+</div>
+<div class="cv-resline single" style="padding-top: 5px;">
+<div class="cv-actions" style="margin-top: 5px; width: 100%;">
+<button class="cv-btn cv-btn-secondary" id="btnCopy" type="button">Copy all</button>
+<button class="cv-btn cv-btn-primary" id="btnExport" type="button">Download file</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // --- 3. БЕЗОПАСНЫЙ JS ---
+  const $ = (s) => wrap.querySelector(s);
+  
+  const dropArea = $('#dropArea');
+  const fileInput = $('#fileInput');
+  const dropTitle = $('#dropTitle');
+  const dropSubtitle = $('#dropSubtitle');
+
+  const textarea = $('#jsonInput');
+  const sepSelect = $('#sepSelect');
+  const btnConvert = $('#btnConvert');
+  const btnCopy = $('#btnCopy');
+  const btnExport = $('#btnExport');
+  
+  const resBox = $('#resultBox');
+  const errorBox = $('#errorBox');
+  const errorMsg = $('#errorMsg');
+  const resultPreviewWrap = $('#resultPreviewWrap');
+  const previewArea = $('#previewArea');
+  const resultLabel = $('#resultLabel');
+
+  let lastResultType = null;
+  let lastResultData = '';
+
+  // Drag and Drop
+  dropArea.addEventListener('click', function() { fileInput.click(); });
+  dropArea.addEventListener('dragover', function(e) { e.preventDefault(); dropArea.style.backgroundColor = '#e6f3ff'; }, {passive: false});
+  dropArea.addEventListener('dragleave', function() { dropArea.style.backgroundColor = ''; });
+  
+  dropArea.addEventListener('drop', function(e) {
+    e.preventDefault();
+    dropArea.style.backgroundColor = '';
+    let dt = e.dataTransfer;
+    let hasFiles = false;
+    if (dt) { if (dt.files) { let isNotEmpty = Math.sign(dt.files.length) === 1; if (isNotEmpty) { hasFiles = true; } } }
+    if (hasFiles) { handleFile(dt.files[0]); }
+  });
+
+  fileInput.addEventListener('change', function() {
+    let fList = fileInput.files;
+    let hasFiles = false;
+    if (fList) { let isNotEmpty = Math.sign(fList.length) === 1; if (isNotEmpty) { hasFiles = true; } }
+    if (hasFiles) { handleFile(fList[0]); }
+  });
+
+  function handleFile(f) {
+    let reader = new FileReader();
+    reader.onload = function(e) {
+        textarea.value = e.target.result;
+        dropTitle.textContent = f.name;
+        dropTitle.style.color = '#0693e3';
+        dropSubtitle.textContent = 'Data loaded. Click "Auto-convert" below.';
+        resBox.classList.add('is-hidden');
+    };
+    reader.readAsText(f);
+  }
+
+  function showMessage(msg) {
+    if (msg) {
+      errorMsg.textContent = msg;
+      errorBox.classList.remove('is-hidden');
+      resultPreviewWrap.classList.add('is-hidden');
+      resBox.classList.remove('is-hidden');
+    } else {
+      errorBox.classList.add('is-hidden');
+      resultPreviewWrap.classList.remove('is-hidden');
+    }
+  }
+  
+  function isJSON(str) {
+    try { JSON.parse(str); return true; }
+    catch(e) { return false; }
+  }
+
+  function csvSplitLine(line, sep) {
+    let res = [];
+    let cur = '';
+    let inQ = false;
+    let i = 0;
+
+    while (Math.sign(line.length - i) === 1) {
+      let ch = line.charAt(i);
+
+      if (ch === '"') {
+        if (inQ) {
+          if (Math.sign(line.length - (i + 1)) === 1) {
+            if (line.charAt(i + 1) === '"') {
+              cur = cur + '"';
+              i = i + 1;
+            } else {
+              inQ = false;
+            }
+          } else {
+            inQ = false;
+          }
+        } else {
+          inQ = true;
+        }
+      } else if (ch === sep) {
+        if (!inQ) {
+          res.push(cur);
+          cur = '';
+        } else {
+          cur = cur + ch;
+        }
+      } else {
+        cur = cur + ch;
+      }
+      i = i + 1;
+    }
+    res.push(cur);
+    return res;
+  }
+
+  function csvToJSON(csv, sep) {
+    let text = csv;
+    if (typeof text !== 'string') { text = String(text); }
+    let lines = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n').split('\n');
+
+    let result = [];
+    if (Math.sign(lines.length) === 0) { return result; }
+
+    let headers = csvSplitLine(lines[0], sep);
+    let i = 1;
+
+    while (Math.sign(lines.length - i) === 1) {
+      let lineText = lines[i];
+      if (!lineText) {
+          i = i + 1;
+          continue;
+      }
+      
+      let row = csvSplitLine(lineText, sep);
+      let obj = {};
+      let j = 0;
+      
+      while (Math.sign(headers.length - j) === 1) {
+        let key = headers[j];
+        if (typeof key !== 'string') { key = ''; }
+        key = key.trim();
+
+        let val = '';
+        if (row[j] !== undefined) { val = row[j]; }
+
+        let trimmed = '';
+        if (val !== undefined) {
+          if (val !== null) {
+            trimmed = String(val).trim();
+          }
+        }
+        
+        if (key !== '') {
+            if (trimmed === 'true') { obj[key] = true; } 
+            else if (trimmed === 'false') { obj[key] = false; } 
+            else {
+              if (trimmed !== '') {
+                if (isFinite(trimmed)) {
+                  obj[key] = Number(trimmed);
+                } else {
+                  let parsedOk = false;
+                  try { let parsed = JSON.parse(trimmed); obj[key] = parsed; parsedOk = true; } 
+                  catch(_e) { }
+                  if (!parsedOk) { obj[key] = trimmed; }
+                }
+              } else {
+                obj[key] = '';
+              }
+            }
+        }
+        j = j + 1;
+      }
+      
+      let hasKeys = false;
+      let kArr = Object.keys(obj);
+      if (Math.sign(kArr.length) === 1) { hasKeys = true; }
+      if (hasKeys) { result.push(obj); }
+      
+      i = i + 1;
+    }
+    return result;
+  }
+
+  function jsonToCSV(data, sep) {
+    let arr;
+    let isArr = Array.isArray(data);
+    if (isArr) { arr = data; } else { arr = [data]; }
+
+    if (Math.sign(arr.length) === 0) { return ''; }
+
+    let keysMap = {};
+    let i = 0;
+    while (Math.sign(arr.length - i) === 1) {
+      let rowObj = arr[i];
+      if (rowObj) { 
+          for (let k in rowObj) { 
+              if (Object.prototype.hasOwnProperty.call(rowObj, k)) { keysMap[k] = true; }
+          }
+      }
+      i = i + 1;
+    }
+
+    let headers = Object.keys(keysMap);
+    let csv = '';
+    csv = csv + headers.join(sep) + '\n';
+
+    let r = 0;
+    while (Math.sign(arr.length - r) === 1) {
+      let row = [];
+      let h = 0;
+      
+      while (Math.sign(headers.length - h) === 1) {
+        let v = arr[r][headers[h]];
+        let cell = v;
+
+        if (cell === null) { cell = ''; }
+        let isObj = typeof cell === 'object';
+        if (isObj) {
+          try { cell = JSON.stringify(cell); } catch(_e) { cell = String(cell); }
+        }
+        if (cell === undefined) { cell = ''; }
+
+        cell = String(cell);
+
+        let isStr = typeof cell === 'string';
+        if (isStr) {
+          let needsQuotes = false;
+          let hasSep = cell.indexOf(sep) !== -1;
+          let hasQ = cell.indexOf('"') !== -1;
+          let hasNL = /\r|\n/.test(cell);
+          
+          if (hasSep) { needsQuotes = true; }
+          if (hasQ) { needsQuotes = true; }
+          if (hasNL) { needsQuotes = true; }
+
+          let safeCell = cell.split('"').join('""');
+          if (needsQuotes) { cell = '"' + safeCell + '"'; } 
+          else { cell = safeCell; }
+        }
+        
+        row.push(cell);
+        h = h + 1;
+      }
+      csv = csv + row.join(sep) + '\n';
+      r = r + 1;
+    }
+    return csv;
+  }
+
+  function renderTable(json) {
+    let isArr = Array.isArray(json);
+    if (!isArr) { 
+        previewArea.textContent = 'Error: The result is not an array for the table.'; 
+        return; 
+    }
+    if (Math.sign(json.length) === 0) { 
+        previewArea.textContent = 'No data to display.'; 
+        return; 
+    }
+
+    let table = document.createElement('table'); table.className = 'cv-table';
+    let thead = document.createElement('thead');
+    let trh = document.createElement('tr');
+
+    let cols = Object.keys(json[0]);
+    let i = 0;
+    while (Math.sign(cols.length - i) === 1) {
+      let th = document.createElement('th');
+      th.textContent = cols[i];
+      trh.appendChild(th);
+      i = i + 1;
+    }
+    thead.appendChild(trh);
+
+    let tbody = document.createElement('tbody');
+    let r = 0;
+    let limit = 50; // Защита от зависания браузера
+    
+    while (Math.sign(json.length - r) === 1) {
+      let isOver = Math.sign(r - limit) === 1;
+      let isEqual = r === limit;
+      
+      if (isOver) { break; }
+      if (isEqual) {
+          let trInfo = document.createElement('tr');
+          let tdInfo = document.createElement('td');
+          tdInfo.colSpan = cols.length;
+          tdInfo.style.textAlign = 'center';
+          tdInfo.style.color = '#64748b';
+          tdInfo.style.fontStyle = 'italic';
+          tdInfo.textContent = '... The first 50 rows are shown (the rest of the data is available by downloading) ...';
+          trInfo.appendChild(tdInfo);
+          tbody.appendChild(trInfo);
+          break;
+      }
+        
+      let tr = document.createElement('tr');
+      let c = 0;
+      
+      while (Math.sign(cols.length - c) === 1) {
+        let td = document.createElement('td');
+        let val = json[r][cols[c]];
+        let isObj = typeof val === 'object';
+        if (isObj) { 
+            if (val === null) { td.textContent = 'null'; } 
+            else { td.textContent = JSON.stringify(val); }
+        } else {
+          if (val === undefined) { td.textContent = ''; }
+          else { td.textContent = String(val); }
+        }
+        tr.appendChild(td);
+        c = c + 1;
+      }
+      tbody.appendChild(tr);
+      r = r + 1;
+    }
+
+    table.appendChild(thead);
+    table.appendChild(tbody);
+    previewArea.innerHTML = '';
+    previewArea.appendChild(table);
+  }
+
+  btnConvert.addEventListener('click', function() {
+    let text = textarea.value;
+    if (typeof text !== 'string') { text = ''; }
+    text = text.trim();
+
+    if (text === '') {
+      showMessage('Enter your details or upload a file.');
+      resBox.classList.remove('is-hidden');
+      return;
+    }
+    
+    showMessage(null);
+    previewArea.innerHTML = '';
+    
+    let sep = sepSelect.value;
+    let isJ = isJSON(text);
+
+    if (isJ) {
+      try {
+        let obj = JSON.parse(text);
+        let csv = jsonToCSV(obj, sep);
+        
+        previewArea.textContent = csv;
+        resultLabel.textContent = 'Generated CSV (Preview)';
+        
+        lastResultType = 'csv';
+        lastResultData = csv;
+        
+        resBox.classList.remove('is-hidden');
+      } catch(e) {
+        let msg = e;
+        if (e.message) msg = e.message;
+        showMessage('Error converting to CSV:' + String(msg));
+        lastResultType = null;
+        lastResultData = '';
+      }
+    } else {
+      try {
+        let json = csvToJSON(text, sep);
+        
+        renderTable(json);
+        resultLabel.textContent = 'Preview of JSON data (Table)';
+        
+        lastResultType = 'json';
+        lastResultData = JSON.stringify(json, null, 2);
+        
+        resBox.classList.remove('is-hidden');
+      } catch(e) {
+        let msg = e;
+        if (e.message) msg = e.message;
+        showMessage('CSV parsing error:' + String(msg));
+        lastResultType = null;
+        lastResultData = '';
+      }
+    }
+  });
+
+  btnCopy.addEventListener('click', function() {
+    let isNull = lastResultType === null;
+    if (isNull) { return; }
+    
+    let data = lastResultData;
+    if (typeof data !== 'string') { data = String(data); }
+    
+    try {
+        navigator.clipboard.writeText(data).then(function() {
+          let oldText = btnCopy.textContent;
+          btnCopy.textContent = 'Copied!';
+          setTimeout(function() { btnCopy.textContent = oldText; }, 1500);
+        });
+    } catch(e) { }
+  });
+
+  btnExport.addEventListener('click', function() {
+    let isNull = lastResultType === null;
+    if (isNull) { return; }
+    
+    let mime = '';
+    let name = '';
+    
+    let isCsv = lastResultType === 'csv';
+    if (isCsv) {
+      mime = 'text/csv;charset=utf-8;';
+      name = 'converted.csv';
+    } else {
+      mime = 'application/json;charset=utf-8;';
+      name = 'converted.json';
+    }
+    
+    let blob = new Blob([lastResultData], {type: mime});
+    let url = URL.createObjectURL(blob);
+    let a = document.createElement('a');
+    a.href = url;
+    a.download = name;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(function() { URL.revokeObjectURL(url); }, 1000);
+  });
+
+});
+</script>
+
+        <div class="post-content">
+<p>Working with large amounts of data often requires rapid transition between formats. Our bidirectional converter allows you to instantly transform hierarchical JSON structures into flat CSV tables and vice versa. Thanks to local processing technology, your data never leaves your browser, ensuring absolute privacy.</p>
+<h2 class="wp-block-heading" id="preimushhestva-nashego-algoritma-smart-render-2">Advantages of our algorithm (Smart Render)</h2>
+<p>Most standard online converters try to render the entire amount of downloaded data into an HTML table, which inevitably leads to the tab freezing when working with files over 10 MB. Our tool uses smart in-memory pagination:</p>
+<ul class="wp-block-list">
+<li><strong>Browser crash protection:</strong> The algorithm processes the entire file in the background, but visually renders only the first 50 lines.</li>
+<li><strong>Auto format detection:</strong> You can insert either raw text or drag and drop a file - the system itself will understand whether you need to build a table (CSV to JSON) or flat text (JSON to CSV).</li>
+<li><strong>Hybrid input:</strong> Drag &amp; Drop support for heavy files and classic text field for quick edits.</li>
+<li><strong>Separator selection:</strong> Full support for commas, semicolons and tabs for proper export to Excel or database.</li>
+</ul>
+<h2 class="wp-block-heading" id="tehnicheskoe-sravnenie-formatov-2">Technical comparison of formats</h2>
+<p>Understanding the difference between structures will help you choose the right format to store or transmit your information.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Characteristic</strong></td><td><strong>JSON (JavaScript Object Notation)</strong></td><td><strong>CSV (Comma-Separated Values)</strong></td></tr></thead><tbody><tr><td><strong>Structure</strong></td><td>Hierarchical (trees, nested objects)</td><td>Flat (rows and columns)</td></tr><tr><td><strong>Typing</strong></td><td>Strict (strings, numbers, logical types, arrays)</td><td>Absent (everything is perceived as text)</td></tr><tr><td><strong>File weight</strong></td><td>High (due to duplicate keys in each object)</td><td>Low (values ​​and delimiters only)</td></tr><tr><td><strong>Human readability</strong></td><td>High (if formatted correctly)</td><td>Average (better read through spreadsheet editors)</td></tr><tr><td><strong>Ideal for</strong></td><td>REST API, NoSQL databases, configurations</td><td>Machine learning, import to Excel and SQL</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="vychislitelnaya-slozhnost-i-potreblenie-pamyati-2">Computational complexity and memory consumption</h2>
+<p>The core of our tool is an optimized lexical analyzer that outperforms standard parsing methods. When reading a traditional CSV file consisting of rows and columns, the algorithmic complexity is directly proportional to the amount of data and is expressed as $O(N \cdot M)$ , where $N$ is the number of rows and $M$ is the number of columns.</p>
+<p>In regular scripts, the random access memory (RAM) required to build a JSON tree from flat text is calculated using the formula:</p>
+<p>$$V_{ram} = S_{file} \times \alpha$$</p>
+<p>Where $S_{file}$ is the size of the source file, and $\alpha$ is the browser's DOM tree overhead factor (usually between 4 and 7). That is, a 100 MB file can take up to 700 MB of RAM.</p>
+<p>That's why we introduced technology <strong>Smart Render</strong>, which limits the rendering of DOM elements to a constant, reducing video memory consumption to $O(1)$ for the interface, while maintaining the asymptotic transformation rate of the original data array $O(K)$ , where $K$ is the total number of characters in the clipboard.</p>
+<h2 class="wp-block-heading" id="kak-polzovatsya-instrumentom-2">How to use the tool</h2>
+<p>The data transformation process takes a fraction of a second and does not require special skills:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li>Drag and drop a file with the extension<code>.json</code>or<code>.csv</code>to the blue loading zone.</li>
+<li>If you work with tables, select your preferred separator (comma, semicolon, or tab).</li>
+<li>Click the conversion button and check the correctness in the preview window.</li>
+<li>Copy the finished code to the clipboard with one click or download the generated file to your device.</li>
+</ol>
+</div>
+    </div>
+</body>
+</html>

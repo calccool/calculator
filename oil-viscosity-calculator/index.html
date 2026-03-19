@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engine oil viscosity calculator based on regional temperature and mileage</title>
+    <meta name="description" content="Engine oil viscosity calculator based on regional temperature and mileage - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Engine oil viscosity calculator based on regional temperature and mileage</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #f8fafc; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #eff6ff; border: 1px solid #bae6fd; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05); }
+    .c-highlight-line:hover { background: #e0f2fe; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* Advanced Visualization */
+    .c-chart-box { margin: 15px 0 25px; padding: 25px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); display: flex; flex-direction: column; align-items: center;}
+    .c-chart-title { font-weight: 700; color: #0f172a; font-size: 15px; margin-bottom: 25px; display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; text-align: center; }
+    
+    .c-gauge-wrap { position: relative; width: 220px; height: 120px; overflow: hidden; display: flex; justify-content: center;}
+    .c-gauge-svg { width: 100%; height: 200%; transform: translateY(0); }
+    .c-gauge-bg { fill: none; stroke: #e2e8f0; stroke-width: 14; stroke-linecap: round; }
+    .c-gauge-fill { fill: none; stroke: url(#gaugeGrad); stroke-width: 14; stroke-linecap: round; stroke-dasharray: 125.6; stroke-dashoffset: 125.6; transition: stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1); }
+    
+    .c-gauge-val-center { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); text-align: center; }
+    .c-gauge-sae { font-size: 32px; font-weight: 800; color: #0693e3; line-height: 1; text-shadow: 0 2px 10px rgba(6, 147, 227, 0.2); }
+    .c-gauge-sub { font-size: 12px; color: #64748b; font-weight: 600; margin-top: 4px; text-transform: uppercase; letter-spacing: 1px;}
+    
+    .c-gauge-minmax { width: 100%; display: flex; justify-content: space-between; padding: 0 20px; margin-top: -10px; font-size: 13px; font-weight: 700; color: #475569; position: relative; z-index: 2;}
+    
+    .c-oil-anim-box { margin-top: 25px; display: flex; align-items: center; gap: 15px; background: #fff; padding: 12px 20px; border-radius: 12px; border: 1px solid #bae6fd; width: 100%; max-width: 320px; box-shadow: 0 4px 12px rgba(2, 132, 199, 0.05);}
+    .c-oil-drop { width: 24px; height: 24px; background: linear-gradient(135deg, #fbbf24, #d97706); border-radius: 50% 0 50% 50%; transform: rotate(-45deg); position: relative; flex-shrink: 0; box-shadow: inset -2px -2px 6px rgba(0,0,0,0.2), 0 4px 8px rgba(217, 119, 6, 0.3);}
+    .c-oil-drop::after { content:''; position: absolute; top: 4px; left: 4px; width: 6px; height: 6px; background: rgba(255,255,255,0.8); border-radius: 50%; }
+    .c-oil-drop.animating { animation: oil-pulse 2s infinite ease-in-out; }
+    @keyframes oil-pulse { 0%, 100% { transform: rotate(-45deg) scale(1); } 50% { transform: rotate(-45deg) scale(1.15); } }
+    .c-oil-desc { font-size: 13px; color: #333; line-height: 1.4; font-weight: 500;}
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-chart-box { padding: 20px 15px; }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="oil-calc-wrapper">
+<div class="c-body">
+<div class="c-toggle" id="mode-tabs">
+<button class="c-toggle-btn active" data-mode="climate">Selection by climate</button>
+<button class="c-toggle-btn" data-mode="decode">SAE transcript</button>
+</div>
+<div id="tab-climate">
+<div class="c-divider"><span class="icon">🌡️</span>Temperature regime of the region</div>
+<div class="c-row" style="margin-bottom: 8px;">
+<div class="c-field">
+<label class="c-label">Min. temperature in winter<span class="c-term">Cold start</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="min-temp" placeholder="-25" type="number"/>
+<span class="c-input-suffix">°C</span>
+</div>
+<div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-target="min-temp" data-val="-35" type="button">Harsh winter (-35°C)</button>
+<button class="c-quick-btn" data-target="min-temp" data-val="-25" type="button">Moderate (-25°C)</button>
+<button class="c-quick-btn" data-target="min-temp" data-val="-10" type="button">Soft (-10°C)</button>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Max. summer temperature</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="max-temp" placeholder="30" type="number"/>
+<span class="c-input-suffix">°C</span>
+</div>
+<div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-target="max-temp" data-val="25" type="button">Normal summer (25°C)</button>
+<button class="c-quick-btn" data-target="max-temp" data-val="35" type="button">Roast (35°C)</button>
+</div>
+</div>
+</div>
+<div class="c-divider" style="margin-top: 25px;"><span class="icon">⚙️</span>Engine condition</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Vehicle mileage<span class="c-help-icon" id="openOilInfo">?</span>
+</label>
+<select class="c-select" id="mileage">
+<option value="low">Up to 100,000 km (New)</option>
+<option selected="" value="mid">100,000 - 200,000 km (Average)</option>
+<option value="high">More than 200,000 km (Worn out)</option>
+</select>
+</div>
+</div>
+</div>
+<div class="is-hidden" id="tab-decode">
+<div class="c-divider"><span class="icon">🔍</span>SAE parameters</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Winter index<span class="c-term">W - Winter</span></label>
+<select class="c-select" id="sae-w">
+<option value="0">0W</option>
+<option selected="" value="5">5W</option>
+<option value="10">10W</option>
+<option value="15">15W</option>
+<option value="20">20W</option>
+</select>
+</div>
+<div class="c-field">
+<label class="c-label">Summer index<span class="c-term">High temperature</span></label>
+<select class="c-select" id="sae-s">
+<option value="20">20</option>
+<option value="30">30</option>
+<option selected="" value="40">40</option>
+<option value="50">50</option>
+<option value="60">60</option>
+</select>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-chart-box is-hidden" id="vis-box">
+<div class="c-chart-title"><span class="icon">🎯</span>Ideal temperature range</div>
+<div class="c-gauge-wrap">
+<svg class="c-gauge-svg" viewbox="0 0 100 50">
+<defs>
+<lineargradient id="gaugeGrad" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#0284c7"></stop>
+<stop offset="50%" stop-color="#10b981"></stop>
+<stop offset="100%" stop-color="#d32f2f"></stop>
+</lineargradient>
+</defs>
+<path class="c-gauge-bg" d="M 10 50 A 40 40 0 0 1 90 50"></path>
+<path class="c-gauge-fill" d="M 10 50 A 40 40 0 0 1 90 50" id="vis-gauge-bar"></path>
+</svg>
+<div class="c-gauge-val-center">
+<div class="c-gauge-sae" id="vis-sae-text">5W-30</div>
+<div class="c-gauge-sub">SAE Viscosity</div>
+</div>
+</div>
+<div class="c-gauge-minmax">
+<div id="vis-min-lbl">-30°C</div>
+<div id="vis-max-lbl">+30°C</div>
+</div>
+<div class="c-oil-anim-box">
+<div class="c-oil-drop" id="vis-oil-drop"></div>
+<div class="c-oil-desc" id="vis-oil-desc"></div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">📋</span>Oil characteristics</div>
+<div class="c-resline c-highlight-line">
+<div class="c-resleft">Recommended viscosity<span class="c-subtext">SAE J300 standard</span></div>
+<div class="c-resval" id="resSae"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Lower limit<span class="c-subtext">Guaranteed cold start</span></div>
+<div class="c-resval" id="resMin" style="color: #0284c7;"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Upper limit<span class="c-subtext">Preservation of protective film</span></div>
+<div class="c-resval" id="resMax" style="color: #d32f2f;"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+<div class="c-modal-overlay" id="oilInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeOilInfo">×</button>
+<div class="c-modal-title"><span class="icon">📖</span>Effect of mileage on oil</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">The viscosity of the engine oil directly affects the thickness of the oil film in the engine.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>Up to 100,000 km (New internal combustion engines):</b>Gaps in parts are minimal. Energy-saving, fluid oils (W-20, W-30) are recommended for easy running and fuel economy.</div>
+<div style="background: #fffbeb; padding: 12px; border-radius: 8px; border: 1px solid #fde68a; font-size: 13px; color: #92400e;">
+<b>Over 200,000 km (Wear):</b>The gaps between the piston and cylinder increase. To prevent oil burn and create a stable film, it is recommended to switch to more viscous oils (W-40, W-50).</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let activeMode = 'climate';
+  let isCalculated = false;
+
+  // Modal logic
+  $('#openOilInfo').addEventListener('click', () => { $('#oilInfoModal').classList.add('show'); });
+  $('#closeOilInfo').addEventListener('click', () => { $('#oilInfoModal').classList.remove('show'); });
+  $('#oilInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#oilInfoModal').classList.remove('show');
+  });
+
+  function updateModeUI() {
+      if (Math.abs(activeMode === 'climate') === 1) {
+          $('#tab-climate').classList.remove('is-hidden');
+          $('#tab-decode').classList.add('is-hidden');
+      } else {
+          $('#tab-climate').classList.add('is-hidden');
+          $('#tab-decode').classList.remove('is-hidden');
+      }
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+      else {
+          $('#resultBox').classList.remove('show');
+          $('#vis-box').classList.add('is-hidden');
+      }
+  }
+
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeMode = btn.dataset.mode;
+        updateModeUI();
+    });
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          let targetId = btn.dataset.target;
+          let val = btn.dataset.val;
+          $('#' + targetId).value = val;
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let wGrade = "";
+    let sGrade = "";
+    let minTVal = 0;
+    let maxTVal = 0;
+
+    if (Math.abs(activeMode === 'climate') === 1) {
+        let minT = parseFloat($('#min-temp').value);
+        let maxT = parseFloat($('#max-temp').value);
+        let mil = $('#mileage').value;
+        
+        let isNanMin = isNaN(minT);
+        let isNanMax = isNaN(maxT);
+        let isErr = false;
+        
+        if (Math.abs(isNanMin === true) === 1) isErr = true;
+        if (Math.abs(isNanMax === true) === 1) isErr = true;
+
+        if (Math.abs(isErr === true) === 1) {
+            $('#vis-box').classList.add('is-hidden');
+            $('#resultBox').classList.remove('show');
+            if (Math.abs(shouldScroll === true) === 1) {
+                $('#errorMsg').textContent = "Please enter correct temperatures.";
+                $('#errorMsg').classList.add('show');
+            }
+            return;
+        }
+
+        // Logic for W (Winter) without forbidden operators
+        let w = 15;
+        let isMinLt25 = Math.abs(Math.sign(minT - (-25)) + 1) === 0;
+        if (Math.abs(isMinLt25 === true) === 1) w = 10;
+        let isMinLt30 = Math.abs(Math.sign(minT - (-30)) + 1) === 0;
+        if (Math.abs(isMinLt30 === true) === 1) w = 5;
+        let isMinLt35 = Math.abs(Math.sign(minT - (-35)) + 1) === 0;
+        if (Math.abs(isMinLt35 === true) === 1) w = 0;
+
+        // Logic for Summer 
+        let s = 30;
+        let isMaxGt29 = Math.abs(Math.sign(maxT - 29) - 1) === 0;
+        if (Math.abs(isMaxGt29 === true) === 1) s = 40;
+        let isMaxGt39 = Math.abs(Math.sign(maxT - 39) - 1) === 0;
+        if (Math.abs(isMaxGt39 === true) === 1) s = 50;
+
+        // Mileage modifier
+        if (Math.abs(mil === 'high') === 1) {
+            let isS30 = Math.abs(s === 30) === 1;
+            if (Math.abs(isS30 === true) === 1) s = 40;
+            let isS40 = Math.abs(s === 40) === 1;
+            if (Math.abs(isS40 === true) === 1) s = 50;
+        }
+
+        wGrade = w + "W";
+        sGrade = s.toString();
+        
+        minTVal = w - 35; // Formula: W - 35 = min safe temp
+        maxTVal = s - 5;  // Approximate safe temp mapping
+        
+    } else {
+        wGrade = $('#sae-w').value + "W";
+        sGrade = $('#sae-s').value;
+        
+        minTVal = parseInt($('#sae-w').value) - 35;
+        maxTVal = parseInt(sGrade) - 5;
+    }
+
+    let fullSae = wGrade + "-" + sGrade;
+
+    // UI Results update
+    $('#resSae').textContent = fullSae;
+    $('#resMin').textContent = "to" + minTVal + "°C";
+    $('#resMax').textContent = "to +" + maxTVal + "°C";
+
+    // Visuals logic
+    $('#vis-sae-text').textContent = fullSae;
+    $('#vis-min-lbl').textContent = minTVal + "°C";
+    $('#vis-max-lbl').textContent = "+" + maxTVal + "°C";
+
+    // Calculate gauge fill (mapping temp range to the half-circle)
+    // Absolute min allowed = -40, max allowed = +55
+    let scaleMin = -40;
+    let scaleMax = 55;
+    let totalScale = scaleMax - scaleMin;
+    
+    let tempDiff = maxTVal - minTVal;
+    let percentFill = (tempDiff / totalScale) * 100;
+    
+    // Limits
+    let isFillGt100 = Math.abs(Math.sign(percentFill - 100) - 1) === 0;
+    if (Math.abs(isFillGt100 === true) === 1) percentFill = 100;
+    let isFillLt10 = Math.abs(Math.sign(percentFill - 10) + 1) === 0;
+    if (Math.abs(isFillLt10 === true) === 1) percentFill = 10;
+
+    let dashOffset = 125.6 - (125.6 * percentFill / 100);
+    
+    let gaugeBar = $('#vis-gauge-bar');
+    gaugeBar.style.strokeDashoffset = '125.6'; // reset for animation
+    void gaugeBar.offsetWidth; // trigger reflow
+    gaugeBar.style.strokeDashoffset = dashOffset;
+
+    // Oil drop animation and description
+    let isThin = Math.abs(sGrade === "20") === 1;
+    let isThick = false;
+    let sVal = parseInt(sGrade);
+    let isGt40 = Math.abs(Math.sign(sVal - 49) - 1) === 0;
+    if (Math.abs(isGt40 === true) === 1) isThick = true;
+
+    let drop = $('#vis-oil-drop');
+    drop.classList.remove('animating');
+    void drop.offsetWidth;
+
+    if (Math.abs(isThin === true) === 1) {
+        drop.style.animationDuration = '0.8s';
+        $('#vis-oil-desc').innerHTML = "<b>Fluid oil.</b> Easy starting, maximum fuel economy. Ideal for modern internal combustion engines with small clearances.";
+    } else if (Math.abs(isThick === true) === 1) {
+        drop.style.animationDuration = '3s';
+        $('#vis-oil-desc').innerHTML = "<b>Thick oil.</b> Creates a thick protective film. Excellent for hot climates, heavy loads and engines with wear.";
+    } else {
+        drop.style.animationDuration = '1.8s';
+        $('#vis-oil-desc').innerHTML = "<b>Balanced oil.</b> Optimal balance between fuel economy and protection of parts from wear.";
+    }
+    drop.classList.add('animating');
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#vis-box').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(e.target.tagName === 'SELECT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    wrap.querySelectorAll('input[type="number"]').forEach(i => i.value = '');
+    $('#mileage').value = 'mid';
+    $('#sae-w').value = '5';
+    $('#sae-s').value = '40';
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    $('#vis-oil-drop').classList.remove('animating');
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      navigator.clipboard.writeText(valRaw.trim());
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Choosing the viscosity of engine oil is a critically important stage in car maintenance, which determines engine life and ease of starting. The SAE J300 standard divides oils into classes that describe their fluidity at low and high temperatures. Our calculator allows you to instantly determine the optimal index based on the climatic conditions of your region and the degree of wear of the power unit.</p>
+<h2 class="wp-block-heading" id="rasshifrovka-indeksa-sae-zima-i-leto-2">Decoding the SAE index: Winter and Summer</h2>
+<p>Most modern oils are all-season and have double markings, for example, <strong>5W-30</strong>.</p>
+<ul class="wp-block-list">
+<li><strong>Index with the letter W (Winter):</strong> Indicates low temperature properties. The lower the number in front of W, the easier it will be for the starter to crank the engine in cold weather and the faster the oil pump will pump lubricant through the system.</li>
+<li><strong>Second index (summer):</strong> Indicates the kinematic viscosity at operating temperature ( $100°C$ ). The higher this number, the thicker and more stable the oil film under overheating conditions.</li>
+</ul>
+<h3 class="wp-block-heading" id="matematicheskaya-model-rascheta-2">Mathematical calculation model</h3>
+<p>To determine safe operating temperature limits, standard dependencies are used. Our calculator calculates the lower pumpability limit using the following formula:</p>
+<p>$$T_{min} = W — 35$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $T_{min}$ - minimum permissible ambient temperature (°C);</li>
+<li> $W$ - numerical index of the winter indicator (for example, 5 for 5W).</li>
+</ul>
+<p>For the summer indicator, an approximation of the preservation of protective properties depending on the shear viscosity is used:</p>
+<p>$$T_{max} \approx S — 5$$</p>
+<p>Where $S$ is the SAE superscript.</p>
+<h2 class="wp-block-heading" id="svodnaya-tablitsa-temperaturnyh-diapazonov-2">Summary table of temperature ranges</h2>
+<p>Below are the standard values ​​on which the selection algorithm is based:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>SAE index</strong></td><td><strong>Min. temperature (start)</strong></td><td><strong>Max. air temperature</strong></td><td><strong>Recommended engine type</strong></td></tr></thead><tbody><tr><td><strong>0W-20</strong></td><td>$-35°C$</td><td>$+25°C$</td><td>New Japanese and hybrid cars</td></tr><tr><td><strong>5W-30</strong></td><td>$-30°C$</td><td>$+35°C$</td><td>Modern internal combustion engines (universal)</td></tr><tr><td><strong>5W-40</strong></td><td>$-30°C$</td><td>$+40°C$</td><td>Turbocharged and highly loaded</td></tr><tr><td><strong>10W-40</strong></td><td>$-25°C$</td><td>$+40°C$</td><td>Engines with mileage &gt; 150k km</td></tr><tr><td><strong>15W-50</strong></td><td>$-20°C$</td><td>$+50°C$</td><td>Worn out internal combustion engines or hot climate</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="vliyanie-probega-na-vybor-vyazkosti-2">The influence of mileage on the choice of viscosity</h2>
+<p>During operation, engine parts are subject to natural wear, which leads to an increase in gaps in friction pairs (for example, between the piston ring and the cylinder wall).</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>New engine (up to 100,000 km):</strong> Has minimal gaps. It is recommended to use low-viscosity oils ( $W-20, W-30$ ) to reduce hydrodynamic drag and save fuel.</li>
+<li><strong>Average mileage (100,000 – 200,000 km):</strong> It is optimal to use the manufacturer's standard recommendations (most often $5W-30$ or $5W-40$ ).</li>
+<li><strong>High wear (more than 200,000 km):</strong> Thin oil may begin to “burn” and the pressure in the system may drop. Switching to a more viscous oil ( $40$ or $50$ instead of $30$ ) helps seal gaps, reduce operating noise and stabilize pressure.</li>
+</ol>
+<h3 class="wp-block-heading" id="pochemu-vazhno-ispolzovat-kalkulyator-2">Why is it important to use a calculator?</h3>
+<p>Using oil with the wrong viscosity can lead to disastrous consequences:</p>
+<ul class="wp-block-list">
+<li><strong>Too thick in winter:</strong> “Oil starvation” at startup, rapid wear of liners and camshafts.</li>
+<li><strong>Too runny in summer:</strong> Rupture of the oil film at high speeds, risk of engine seizure.</li>
+<li><strong>Mileage discrepancy:</strong> Increased oil consumption (zhor) and coking of piston rings.</li>
+</ul>
+<p>Use our interactive tool to get a personalized recommendation and visualization of the temperature range for your car right now.</p>
+</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Hour Calculator: Calculating the Ideal Time for Photography</title>
+    <meta name="description" content="Golden Hour Calculator: Calculating the Ideal Time for Photography - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Golden Hour Calculator: Calculating the Ideal Time for Photography</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; font-family: inherit; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-receipt-wrap { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 15px; position: relative; overflow: hidden; }
+    .c-receipt-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: repeating-linear-gradient(45deg, #f59e0b, #f59e0b 10px, #fbbf24 10px, #fbbf24 20px); }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #fff; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-gold { background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(245, 158, 11, 0.05); }
+    .c-highlight-gold:hover { background: #fef3c7; }
+    .c-highlight-gold .c-resval { color: #d97706; }
+
+    .c-highlight-blue { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(59, 130, 246, 0.05); }
+    .c-highlight-blue:hover { background: #dbeafe; }
+    .c-highlight-blue .c-resval { color: #2563eb; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* Advanced Visualization: Circular 24h Dial */
+    .c-chart-box { margin: 15px 0 25px; padding: 35px 20px; background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%); border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: inset 0 2px 10px rgba(255,255,255,0.8); display: flex; flex-direction: column; align-items: center; }
+    .c-chart-title { font-weight: 700; color: #0f172a; font-size: 16px; margin-bottom: 30px; display: flex; align-items: center; justify-content: center; gap: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+    
+    .c-dial-container { position: relative; width: 220px; height: 220px; border-radius: 50%; box-shadow: 0 10px 30px rgba(0,0,0,0.08), inset 0 0 0 8px #fff; background: #e2e8f0; }
+    .c-dial-gradient { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%; transition: background 1s ease; }
+    
+    .c-dial-inner { position: absolute; top: 25px; left: 25px; right: 25px; bottom: 25px; background: #fff; border-radius: 50%; box-shadow: inset 0 4px 10px rgba(0,0,0,0.05); display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 10; }
+    .c-dial-sun { font-size: 32px; animation: sun-pulse 3s infinite alternate ease-in-out; filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.4)); margin-bottom: 4px; }
+    .c-dial-label { font-size: 12px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 1px; }
+    
+    @keyframes sun-pulse { 0% { transform: scale(0.95); opacity: 0.8; } 100% { transform: scale(1.05); opacity: 1; } }
+
+    .c-dial-marker { position: absolute; width: 2px; height: 8px; background: #fff; top: 0; left: 50%; transform-origin: 50% 110px; z-index: 5; }
+    .c-dial-marker-12 { transform: translateX(-50%) rotate(0deg); }
+    .c-dial-marker-6 { transform: translateX(-50%) rotate(90deg); }
+    .c-dial-marker-18 { transform: translateX(-50%) rotate(270deg); }
+    .c-dial-marker-24 { transform: translateX(-50%) rotate(180deg); height: 12px; background: #94a3b8;}
+
+    .c-legend-wrap { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 30px; width: 100%; }
+    .c-legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #475569; }
+    .c-legend-dot { width: 12px; height: 12px; border-radius: 3px; }
+    .c-dot-night { background: #1e293b; }
+    .c-dot-blue { background: #3b82f6; }
+    .c-dot-gold { background: #f59e0b; }
+    .c-dot-day { background: #7dd3fc; }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-chart-box { padding: 25px 15px; }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="golden-calc-wrapper">
+<div class="c-body">
+<div class="c-toggle" id="mode-tabs">
+<button class="c-toggle-btn active" data-mode="manual">Exact time</button>
+<button class="c-toggle-btn" data-mode="presets">Seasonal examples</button>
+</div>
+<div class="c-divider"><span class="icon">⏱️</span>Sun parameters</div>
+<div class="c-row" style="margin-bottom: 8px;">
+<div class="c-field">
+<label class="c-label">Sunrise time<span class="c-term">Sunrise</span>
+</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="sr_time" type="time" value="06:00"/>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Sunset time<span class="c-term">Sunset</span>
+<span class="c-help-icon" id="openPhotoInfo">?</span>
+</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="ss_time" type="time" value="19:30"/>
+</div>
+</div>
+</div>
+<div class="is-hidden" id="presets-wrap" style="display:flex; gap:8px; margin-bottom: 20px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-sr="04:00" data-ss="21:15" type="button">Summer (June)</button>
+<button class="c-quick-btn" data-sr="07:30" data-ss="18:00" type="button">Autumn (October)</button>
+<button class="c-quick-btn" data-sr="08:45" data-ss="16:00" type="button">Winter (December)</button>
+<button class="c-quick-btn" data-sr="06:00" data-ss="18:00" type="button">Equator (All year round)</button>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-chart-box is-hidden" id="vis-box">
+<div class="c-chart-title"><span class="icon">🌍</span>Daily light cycle</div>
+<div class="c-dial-container">
+<div class="c-dial-gradient" id="dial-bg"></div>
+<div class="c-dial-marker c-dial-marker-12"></div>
+<div class="c-dial-marker c-dial-marker-6"></div>
+<div class="c-dial-marker c-dial-marker-18"></div>
+<div class="c-dial-marker c-dial-marker-24"></div>
+<div class="c-dial-inner">
+<div class="c-dial-sun">☀️</div>
+<div class="c-dial-label">24 Hours</div>
+</div>
+</div>
+<div class="c-legend-wrap">
+<div class="c-legend-item"><span class="c-legend-dot c-dot-night"></span>Night</div>
+<div class="c-legend-item"><span class="c-legend-dot c-dot-blue"></span>Blue hour</div>
+<div class="c-legend-item"><span class="c-legend-dot c-dot-gold"></span>Golden hour</div>
+<div class="c-legend-item"><span class="c-legend-dot c-dot-day"></span>Hard light</div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">📸</span>Filming schedule</div>
+<div class="c-receipt-wrap">
+<div class="c-resline c-highlight-blue">
+<div class="c-resleft">Morning "Blue Hour"<span class="c-subtext">Cold light before sunrise</span></div>
+<div class="c-resval" id="resMBlue"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline c-highlight-gold">
+<div class="c-resleft">Morning "Golden Hour"<span class="c-subtext">Soft warm light, long shadows</span></div>
+<div class="c-resval" id="resMGold"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline" style="background: #f8fafc;">
+<div class="c-resleft">Daytime<span class="c-subtext">High contrast, hard shadows</span></div>
+<div class="c-resval" id="resDay" style="color:#64748b;"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline c-highlight-gold">
+<div class="c-resleft">Evening Golden Hour<span class="c-subtext">Ideal for portraits and landscapes</span></div>
+<div class="c-resval" id="resEGold"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline c-highlight-blue" style="border-bottom: none;">
+<div class="c-resleft">Evening Blue Hour<span class="c-subtext">City lights against the sky</span></div>
+<div class="c-resval" id="resEBlue"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+</div>
+<div class="c-modal-overlay" id="photoInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closePhotoInfo">×</button>
+<div class="c-modal-title"><span class="icon">📖</span>Lighting phases</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">The lighting changes depending on the angle of the sun above the horizon. Photographers identify the best phases to shoot.</div>
+<div style="background: #fffbeb; padding: 12px; border-radius: 8px; border: 1px solid #fde68a; font-size: 13px; color: #92400e; margin-bottom: 10px;">
+<b>Golden Hour:</b><br/>About an hour after sunrise and an hour before sunset. The light is soft, diffused and warm. Ideally hides skin imperfections and adds volume to landscapes.</div>
+<div style="background: #eff6ff; padding: 12px; border-radius: 8px; border: 1px solid #bfdbfe; font-size: 13px; color: #1e3a8a;">
+<b>Blue Hour:</b><br/>Approximately 30 minutes before sunrise and 30 minutes after sunset. The sky turns a deep blue. Great time for architectural and night photography.</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let isCalculated = false;
+
+  // Modal logic
+  $('#openPhotoInfo').addEventListener('click', () => { $('#photoInfoModal').classList.add('show'); });
+  $('#closePhotoInfo').addEventListener('click', () => { $('#photoInfoModal').classList.remove('show'); });
+  $('#photoInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#photoInfoModal').classList.remove('show');
+  });
+
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        let mode = btn.dataset.mode;
+        if (Math.abs(mode === 'presets') === 1) {
+            $('#presets-wrap').classList.remove('is-hidden');
+        } else {
+            $('#presets-wrap').classList.add('is-hidden');
+        }
+    });
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          $('#sr_time').value = btn.dataset.sr;
+          $('#ss_time').value = btn.dataset.ss;
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  function parseMins(timeStr) {
+      if (Math.abs(timeStr === "") === 1) return -1;
+      let parts = timeStr.split(':');
+      let h = parseInt(parts[0]);
+      let m = parseInt(parts[1]);
+      let isNanH = isNaN(h);
+      let isNanM = isNaN(m);
+      if (Math.abs(isNanH === true) === 1) return -1;
+      if (Math.abs(isNanM === true) === 1) return -1;
+      return h * 60 + m;
+  }
+
+  function formatTime(mins) {
+      let m = mins;
+      
+      let isNeg = false;
+      if (Math.sign(m) === -1) isNeg = true;
+      if (Math.abs(isNeg === true) === 1) m = 1440 + m;
+      
+      let isOver = false;
+      let diffOver = Math.sign(m - 1440);
+      if (Math.abs(diffOver === 1) === 1) isOver = true;
+      if (Math.abs(diffOver === 0) === 1) isOver = true;
+      if (Math.abs(isOver === true) === 1) m = m - 1440;
+
+      let hh = Math.floor(m / 60);
+      let mm = m - (hh * 60);
+      
+      let hhStr = hh.toString();
+      let mmStr = mm.toString();
+      
+      let needZeroH = false;
+      let diffH = Math.sign(10 - hh);
+      if (Math.abs(diffH === 1) === 1) needZeroH = true;
+      if (Math.abs(needZeroH === true) === 1) hhStr = "0" + hhStr;
+      
+      let needZeroM = false;
+      let diffM = Math.sign(10 - mm);
+      if (Math.abs(diffM === 1) === 1) needZeroM = true;
+      if (Math.abs(needZeroM === true) === 1) mmStr = "0" + mmStr;
+      
+      return hhStr + ":" + mmStr;
+  }
+
+  function getPct(mins) {
+      return (mins / 1440) * 100;
+  }
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let srStr = $('#sr_time').value;
+    let ssStr = $('#ss_time').value;
+    
+    let srMin = parseMins(srStr);
+    let ssMin = parseMins(ssStr);
+
+    let isErr = false;
+    
+    let isSrInvalid = false;
+    if (Math.abs(Math.sign(srMin) === -1) === 1) isSrInvalid = true;
+    if (Math.abs(isSrInvalid === true) === 1) isErr = true;
+    
+    let isSsInvalid = false;
+    if (Math.abs(Math.sign(ssMin) === -1) === 1) isSsInvalid = true;
+    if (Math.abs(isSsInvalid === true) === 1) isErr = true;
+
+    // Strict validation: Sunset must be logically after sunrise
+    let isLogicErr = false;
+    let logicDiff = Math.sign(ssMin - srMin);
+    if (Math.abs(logicDiff === -1) === 1) isLogicErr = true;
+    if (Math.abs(logicDiff === 0) === 1) isLogicErr = true;
+    if (Math.abs(isLogicErr === true) === 1) isErr = true;
+
+    if (Math.abs(isErr === true) === 1) {
+        $('#vis-box').classList.add('is-hidden');
+        $('#resultBox').classList.remove('show');
+        if (Math.abs(shouldScroll === true) === 1) {
+            $('#errorMsg').textContent = "Enter the correct sunrise and sunset times";
+            $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    // Mathematical Phase Boundaries
+    let mBlueStart = srMin - 30;
+    let mBlueEnd = srMin;
+    let mGoldStart = srMin;
+    let mGoldEnd = srMin + 60;
+    
+    let eGoldStart = ssMin - 60;
+    let eGoldEnd = ssMin;
+    let eBlueStart = ssMin;
+    let eBlueEnd = ssMin + 30;
+
+    // UI Updates
+    $('#resMBlue').textContent = formatTime(mBlueStart) + " — " + formatTime(mBlueEnd);
+    $('#resMGold').textContent = formatTime(mGoldStart) + " — " + formatTime(mGoldEnd);
+    $('#resDay').textContent = formatTime(mGoldEnd) + " — " + formatTime(eGoldStart);
+    $('#resEGold').textContent = formatTime(eGoldStart) + " — " + formatTime(eGoldEnd);
+    $('#resEBlue').textContent = formatTime(eBlueStart) + " — " + formatTime(eBlueEnd);
+
+    // Dynamic Circular Dial (Conic Gradient Calculation)
+    let pMBlueStart = getPct(mBlueStart);
+    let pSunrise = getPct(srMin);
+    let pMGoldEnd = getPct(mGoldEnd);
+    let pEGoldStart = getPct(eGoldStart);
+    let pSunset = getPct(ssMin);
+    let pEBlueEnd = getPct(eBlueEnd);
+
+    let cNight = "#1e293b";
+    let cBlue = "#3b82f6";
+    let cGold = "#f59e0b";
+    let cDay = "#7dd3fc";
+
+    // Conic gradient strictly maps to the 24h clock: 0% is 00:00 (Top), 50% is 12:00 (Bottom)
+    // To make 00:00 at bottom and 12:00 at top, we rotate, or just map naturally.
+    // Naturally conic-gradient starts at 12 o'clock (top).
+    // Let's keep 00:00 at top for simplicity in mapping:
+    let gradString = "conic-gradient(" +
+        cNight + " 0% " + pMBlueStart + "%, " +
+        cBlue + " " + pMBlueStart + "% " + pSunrise + "%, " +
+        cGold + " " + pSunrise + "% " + pMGoldEnd + "%, " +
+        cDay + " " + pMGoldEnd + "% " + pEGoldStart + "%, " +
+        cGold + " " + pEGoldStart + "% " + pSunset + "%, " +
+        cBlue + " " + pSunset + "% " + pEBlueEnd + "%, " +
+        cNight + " " + pEBlueEnd + "% 100%)";
+
+    $('#dial-bg').style.background = gradString;
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#vis-box').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    $('#sr_time').value = '06:00';
+    $('#ss_time').value = '19:30';
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      navigator.clipboard.writeText(valRaw);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>In photography the term <strong>"Golden Hour"</strong> Golden Hour describes the short period of time just after sunrise or just before sunset. At this time, the sun is low above the horizon, which creates a specific lighting that cannot be simulated in the studio.</p>
+<p>The main advantages of this period:</p>
+<ul class="wp-block-list">
+<li><strong>Soft light:</strong> Direct sunlight passes through a thicker layer of the atmosphere, becoming scattered.</li>
+<li><strong>Warm shades:</strong> The light acquires a characteristic golden, amber or reddish tint.</li>
+<li><strong>Long shadows:</strong> The low position of the sun emphasizes the texture of objects and adds depth and dimension to photos.</li>
+</ul>
+<h2 class="wp-block-heading" id="osnovnye-fazy-osveshheniya-2">Main phases of lighting</h2>
+<p>For professional shooting planning, it is important to distinguish not only the Golden Hour, but also the phases accompanying it:</p>
+<h3 class="wp-block-heading" id="tablitsa-harakteristik-svetovyh-faz-2">Light phase characteristics table</h3>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Illumination phase</strong></td><td><strong>Start/end time</strong></td><td><strong>Peculiarities</strong></td><td><strong>Ideal for…</strong></td></tr></thead><tbody><tr><td><strong>Blue hour</strong></td><td>30 minutes before sunrise / after sunset</td><td>Deep blue background, cool tones</td><td>Architecture, city lights</td></tr><tr><td><strong>Golden hour</strong></td><td>1 hour after sunrise / before sunset</td><td>Warm, directional light</td><td>Portraits, landscapes, macro</td></tr><tr><td><strong>Daylight</strong></td><td>Between morning and evening Golden Hour</td><td>High contrast, hard shadows</td><td>Report, b/w shooting</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="kak-rabotaet-algoritm-rascheta-2">How the calculation algorithm works</h2>
+<p>Our calculator uses a mathematical model of light phase distribution based on the timing of astronomical sunrise and sunset. Time calculation for each phase is made using the following formulas:</p>
+<h3 class="wp-block-heading" id="formuly-rascheta-faz-2">Phase calculation formulas</h3>
+<p>Let $T_{sr}$ be the sunrise time, and $T_{ss}$ the sunset time in minutes from the beginning of the day.</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Morning Blue Hour:</strong> $$[T_{sr} — 30, T_{sr}]$$</li>
+<li><strong>Morning Golden Hour:</strong> $$[T_{sr}, T_{sr} + 60]$$</li>
+<li><strong>Evening Golden Hour:</strong> $$[T_{ss} — 60, T_{ss}]$$</li>
+<li><strong>Evening Blue Hour:</strong> $$[T_{ss}, T_{ss} + 30]$$</li>
+</ol>
+<p>These intervals are the generally accepted standard in professional settings, although the actual duration may vary slightly depending on latitude and time of year.</p>
+<h2 class="wp-block-heading" id="prakticheskie-sovety-dlya-uspeshnoj-semki-2">Practical tips for successful shooting</h2>
+<p>To get the most out of using the calculator, follow these guidelines:</p>
+<ul class="wp-block-list">
+<li><strong>Arrive early:</strong> The golden hour does not always last exactly 60 minutes. In northern latitudes it can stretch, and at the equator it can fly by in a matter of moments.</li>
+<li><strong>Watch for cloud cover:</strong> Thick clouds can completely block the gold, but light clouds act like a huge natural softbox.</li>
+<li><strong>Use Blue Hour for a city:</strong> This is the best time to photograph architecture, when the brightness of artificial lighting on buildings matches the brightness of the darkening sky.</li>
+<li><strong>Exposure:</strong> During Golden Hour it is easy to overexpose the highlights. Shoot in RAW with slight underexposure to preserve detail in the sky.</li>
+</ul>
+<h3 class="wp-block-heading" id="sezonnye-osobennosti-2">Seasonal features</h3>
+<p>The calculator provides presets for different seasons. This is necessary, since the angle of inclination of the earth’s axis affects the length of daylight hours:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Summer:</strong> The longest day, hard light at midday is longest.</li>
+<li><strong>Winter:</strong> The sun never rises high, making the shadows long even in the middle of the day.</li>
+<li><strong>Equator:</strong> The sun falls almost vertically below the horizon, making the transition from day to night rapid.</li>
+</ol>
+<p>Use our tool to plan your creative projects and catch that perfect light!</p>
+</div>
+    </div>
+</body>
+</html>

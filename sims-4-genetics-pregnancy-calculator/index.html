@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sims 4 Genetics and Twin Chance Calculator</title>
+    <meta name="description" content="The Sims 4 Genetics and Twin Chance Calculator - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>The Sims 4 Genetics and Twin Chance Calculator</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #f8fafc; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .c-switch-wrap { display: flex; align-items: center; gap: 12px; cursor: pointer; margin-bottom: 5px; padding: 14px 16px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 2px 6px rgba(0,0,0,0.02); transition: 0.3s; }
+    .c-switch-wrap:hover { border-color: #cbd5e1; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .c-switch-track { width: 44px; height: 24px; background: #cbd5e1; border-radius: 24px; position: relative; transition: 0.3s; flex-shrink: 0; }
+    .c-switch-thumb { width: 18px; height: 18px; background: #fff; border-radius: 50%; position: absolute; top: 3px; left: 3px; transition: 0.3s; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+    input:checked + .c-switch-track { background: #0693e3; }
+    input:checked + .c-switch-track .c-switch-thumb { left: 23px; }
+    .c-switch-label { font-weight: 600; font-size: 15px; color: #333; flex: 1; }
+
+    /* Advanced Visualization */
+    .c-chart-box { margin: 15px 0 25px; padding: 25px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); }
+    .c-chart-title { font-weight: 700; color: #0f172a; font-size: 15px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    
+    .c-progress-group { margin-bottom: 16px; }
+    .c-progress-header { display: flex; justify-content: space-between; font-size: 13px; font-weight: 600; margin-bottom: 6px; color: #475569; }
+    .c-progress-track { height: 20px; background: #e2e8f0; border-radius: 10px; overflow: hidden; position: relative; box-shadow: inset 0 2px 4px rgba(0,0,0,0.06); border: 1px solid #cbd5e1; }
+    .c-progress-fill { height: 100%; width: 0%; border-radius: 10px; transition: width 1s cubic-bezier(0.4, 0, 0.2, 1); display: flex; align-items: center; justify-content: flex-end; padding-right: 8px; color: #fff; font-size: 11px; font-weight: 700; position: relative; }
+    .c-fill-1 { background: linear-gradient(135deg, #64748b, #475569); }
+    .c-fill-2 { background: linear-gradient(135deg, #0ea5e9, #0284c7); }
+    .c-fill-3 { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
+    .c-progress-fill.animating::after { content: ''; position: absolute; top:0; left:-100%; width:50%; height:100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); animation: shine-bar 2s infinite linear; }
+    @keyframes shine-bar { 100% { left: 200%; } }
+
+    .c-pie-wrap { display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; gap: 30px; }
+    .c-pie-item { display: flex; flex-direction: column; align-items: center; gap: 15px; }
+    .c-pie { 
+        width: 140px; height: 140px; border-radius: 50%; position: relative;
+        background: conic-gradient(
+            var(--c1) 0% var(--p1), 
+            var(--c2) var(--p1) calc(var(--p1) + var(--p2)), 
+            var(--c3) calc(var(--p1) + var(--p2)) 100%
+        );
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1), inset 0 0 0 4px rgba(255,255,255,0.3);
+        transition: transform 0.3s;
+    }
+    .c-pie:hover { transform: scale(1.05); }
+    .c-pie::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px; background: #fff; border-radius: 50%; box-shadow: inset 0 2px 5px rgba(0,0,0,0.1); }
+    
+    .c-legend { display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: #475569; }
+    .c-leg-item { display: flex; align-items: center; gap: 6px; }
+    .c-dot { width: 12px; height: 12px; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-chart-box { padding: 15px; }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="sims-calc-wrapper">
+<div class="c-body">
+<div class="c-toggle" id="mode-tabs">
+<button class="c-toggle-btn active" data-mode="preg">Chance of multiple births</button>
+<button class="c-toggle-btn" data-mode="gen">Genetics of offspring</button>
+</div>
+<div id="preg-block">
+<div class="c-divider"><span class="icon">🍼</span>Pregnancy modifiers<span class="c-help-icon" id="openSimsInfo">?</span>
+</div>
+<label class="c-switch-wrap">
+<input class="is-hidden" id="fert1" type="checkbox"/>
+<div class="c-switch-track"><div class="c-switch-thumb"></div></div>
+<span class="c-switch-label">Fertility<span class="c-term">Parent 1</span></span>
+</label>
+<label class="c-switch-wrap">
+<input class="is-hidden" id="fert2" type="checkbox"/>
+<div class="c-switch-track"><div class="c-switch-thumb"></div></div>
+<span class="c-switch-label">Fertility<span class="c-term">Parent 2</span></span>
+</label>
+<label class="c-switch-wrap" style="margin-top: 15px;">
+<input class="is-hidden" id="leyline" type="checkbox"/>
+<div class="c-switch-track"><div class="c-switch-thumb"></div></div>
+<span class="c-switch-label">On the ley line<span class="c-term">Property of the plot</span></span>
+</label>
+<label class="c-switch-wrap">
+<input class="is-hidden" id="massage" type="checkbox"/>
+<div class="c-switch-track"><div class="c-switch-thumb"></div></div>
+<span class="c-switch-label">Fertility massage<span class="c-term">Spa day</span></span>
+</label>
+</div>
+<div class="is-hidden" id="gen-block">
+<div class="c-divider"><span class="icon">🧬</span>Hair color</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Parent 1</label>
+<select class="c-select" id="h1">
+<option value="black">Black</option>
+<option value="brown">Chestnut</option>
+<option value="blonde">Blonde</option>
+<option value="red">Redheads</option>
+<option value="custom">Colored (Non-standard)</option>
+</select>
+</div>
+<div class="c-field">
+<label class="c-label">Parent 2</label>
+<select class="c-select" id="h2">
+<option value="black">Black</option>
+<option selected="" value="brown">Chestnut</option>
+<option value="blonde">Blonde</option>
+<option value="red">Redheads</option>
+<option value="custom">Colored (Non-standard)</option>
+</select>
+</div>
+</div>
+<div class="c-divider"><span class="icon">👁️</span>Eye color</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Parent 1</label>
+<select class="c-select" id="e1">
+<option value="brown">Brown</option>
+<option value="blue">Blue</option>
+<option value="green">Greens</option>
+<option value="grey">Gray</option>
+<option value="vamp">Occult<span class="c-term">Vampire/Werewolf</span></option>
+</select>
+</div>
+<div class="c-field">
+<label class="c-label">Parent 2</label>
+<select class="c-select" id="e2">
+<option value="brown">Brown</option>
+<option selected="" value="blue">Blue</option>
+<option value="green">Greens</option>
+<option value="grey">Gray</option>
+<option value="vamp">Occult<span class="c-term">Vampire/Werewolf</span></option>
+</select>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-chart-box is-hidden" id="vis-preg">
+<div class="c-chart-title"><span class="icon">📊</span>Probability of birth</div>
+<div class="c-progress-group">
+<div class="c-progress-header"><span>One child</span><span id="vp1-lbl">0%</span></div>
+<div class="c-progress-track"><div class="c-progress-fill c-fill-1" id="vp1-bar"></div></div>
+</div>
+<div class="c-progress-group">
+<div class="c-progress-header"><span style="color:#0284c7;">Twins</span><span id="vp2-lbl" style="color:#0284c7;">0%</span></div>
+<div class="c-progress-track"><div class="c-progress-fill c-fill-2" id="vp2-bar"></div></div>
+</div>
+<div class="c-progress-group" style="margin-bottom:0;">
+<div class="c-progress-header"><span style="color:#6d28d9;">Triplets</span><span id="vp3-lbl" style="color:#6d28d9;">0%</span></div>
+<div class="c-progress-track"><div class="c-progress-fill c-fill-3" id="vp3-bar"></div></div>
+</div>
+</div>
+<div class="c-chart-box is-hidden" id="vis-gen">
+<div class="c-chart-title"><span class="icon">🧬</span>Inheritance matrix</div>
+<div class="c-pie-wrap">
+<div class="c-pie-item">
+<div style="font-size:13px; font-weight:700; color:#1e293b;">Hair</div>
+<div class="c-pie" id="pie-hair" style="--c1:#000; --c2:#fff; --c3:#888; --p1:0%; --p2:0%;"></div>
+<div class="c-legend" id="leg-hair"></div>
+</div>
+<div class="c-pie-item">
+<div style="font-size:13px; font-weight:700; color:#1e293b;">Eyes</div>
+<div class="c-pie" id="pie-eye" style="--c1:#000; --c2:#fff; --c3:#888; --p1:0%; --p2:0%;"></div>
+<div class="c-legend" id="leg-eye"></div>
+</div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">📑</span>Odds details</div>
+<div id="res-container"></div>
+</div>
+<div class="c-modal-overlay" id="simsInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeSimsInfo">×</button>
+<div class="c-modal-title"><span class="icon">📖</span>Mechanics of The Sims 4</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">The base chance in a game without mods is heavily skewed towards one child.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>Event weights (Base):</b><br/>One child: 89<br/>Twins: 10<br/>Triplets: 1</div>
+<div style="background: #eff6ff; padding: 12px; border-radius: 8px; border: 1px solid #bae6fd; font-size: 13px; color: #0284c7;">
+<b>Genetics:</b><br/>Typically, a child has a 50% chance of inheriting a trait from one of its parents. However, the game provides a hidden chance (about 10%) for a genetic mutation - a random standard color.</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let activeMode = 'preg';
+  let isCalculated = false;
+
+  const colorMap = {
+      'black': { n: 'Black', c: '#1e293b' },
+      'brown': { n: 'Chestnut/Brown', c: '#78350f' },
+      'blonde': { n: 'Blonde', c: '#fcd34d' },
+      'red': { n: 'Redheads', c: '#b91c1c' },
+      'custom': { n: 'Colored (Non-standard)', c: '#d946ef' },
+      'blue': { n: 'Blue', c: '#3b82f6' },
+      'green': { n: 'Greens', c: '#10b981' },
+      'grey': { n: 'Gray', c: '#94a3b8' },
+      'vamp': { n: 'Occult', c: '#dc2626' }
+  };
+
+  $('#openSimsInfo').addEventListener('click', () => { $('#simsInfoModal').classList.add('show'); });
+  $('#closeSimsInfo').addEventListener('click', () => { $('#simsInfoModal').classList.remove('show'); });
+  $('#simsInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#simsInfoModal').classList.remove('show');
+  });
+
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeMode = btn.dataset.mode;
+        
+        if (Math.abs(activeMode === 'preg') === 1) {
+            $('#preg-block').classList.remove('is-hidden');
+            $('#gen-block').classList.add('is-hidden');
+        } else {
+            $('#preg-block').classList.add('is-hidden');
+            $('#gen-block').classList.remove('is-hidden');
+        }
+        if (Math.abs(isCalculated === true) === 1) calc(false);
+    });
+  });
+
+  function buildResLine(label, sub, val, color) {
+      let colStyle = "";
+      let hasCol = false;
+      if (Math.abs(color !== '') === 1) hasCol = true;
+      if (Math.abs(hasCol === true) === 1) colStyle = `style="color:${color};"`;
+      
+      return `
+        <div class="c-resline">
+             <div class="c-resleft">${label}<span class="c-subtext">${sub}</span></div>
+             <div class="c-resval" ${colStyle}>${val}</div>
+             <button class="c-copy"></button>
+        </div>
+      `;
+  }
+
+  function calc(shouldScroll) {
+    if (Math.abs(activeMode === 'preg') === 1) {
+        // Pregnancy Math
+        let w1 = 890;
+        let w2 = 100;
+        let w3 = 10;
+
+        let fert1 = $('#fert1').checked;
+        if (Math.abs(fert1 === true) === 1) { w2 += 200; w3 += 50; }
+
+        let fert2 = $('#fert2').checked;
+        if (Math.abs(fert2 === true) === 1) { w2 += 200; w3 += 50; }
+
+        let leyline = $('#leyline').checked;
+        if (Math.abs(leyline === true) === 1) { w2 += 500; w3 += 150; }
+
+        let massage = $('#massage').checked;
+        if (Math.abs(massage === true) === 1) { w2 += 150; w3 += 25; }
+
+        let total = w1 + w2 + w3;
+        let p1 = (w1 / total) * 100;
+        let p2 = (w2 / total) * 100;
+        let p3 = (w3 / total) * 100;
+
+        $('#vp1-bar').style.width = p1 + '%';
+        $('#vp1-lbl').textContent = p1.toFixed(1) + '%';
+        
+        $('#vp2-bar').style.width = p2 + '%';
+        $('#vp2-lbl').textContent = p2.toFixed(1) + '%';
+        
+        $('#vp3-bar').style.width = p3 + '%';
+        $('#vp3-lbl').textContent = p3.toFixed(1) + '%';
+
+        wrap.querySelectorAll('.c-progress-fill').forEach(el => {
+            el.classList.remove('animating');
+            void el.offsetWidth;
+            el.classList.add('animating');
+        });
+
+        $('#res-container').innerHTML = 
+            buildResLine("One child", "Base outcome", p1.toFixed(1) + " %", "") +
+            buildResLine("Twins", "Rare event", p2.toFixed(1) + " %", "#0284c7") +
+            buildResLine("Triplets", "Extremely rare event", p3.toFixed(1) + " %", "#6d28d9");
+
+        $('#vis-preg').classList.remove('is-hidden');
+        $('#vis-gen').classList.add('is-hidden');
+    } else {
+        // Genetics Math
+        let h1 = $('#h1').value;
+        let h2 = $('#h2').value;
+        let e1 = $('#e1').value;
+        let e2 = $('#e2').value;
+
+        function applyGen(val1, val2, pieId, legId) {
+            let same = Math.abs(val1 === val2);
+            let p1 = 0, p2 = 0, mut = 10;
+            
+            if (Math.abs(same === 1) === 1) {
+                p1 = 90; p2 = 0;
+            } else {
+                p1 = 45; p2 = 45;
+            }
+
+            let c1 = colorMap[val1].c;
+            let c2 = colorMap[val2].c;
+            let cm = '#e2e8f0'; 
+            
+            let pie = $(pieId);
+            pie.style.setProperty('--c1', c1);
+            pie.style.setProperty('--c2', c2);
+            pie.style.setProperty('--c3', cm);
+            pie.style.setProperty('--p1', p1 + '%');
+            pie.style.setProperty('--p2', p2 + '%');
+
+            let legHtml = `<div class="c-leg-item"><div class="c-dot" style="background:${c1};"></div><span>${colorMap[val1].n} (${p1}%)</span></div>`;
+            if (Math.abs(same === 0) === 1) {
+                legHtml += `<div class="c-leg-item"><div class="c-dot" style="background:${c2};"></div><span>${colorMap[val2].n} (${p2}%)</span></div>`;
+            }
+            legHtml += `<div class="c-leg-item"><div class="c-dot" style="background:${cm};"></div><span>Мутация (10%)</span></div>`;
+            $(legId).innerHTML = legHtml;
+            
+            return { same: same, v1: colorMap[val1].n, v2: colorMap[val2].n };
+        }
+
+        let resH = applyGen(h1, h2, '#pie-hair', '#leg-hair');
+        let resE = applyGen(e1, e2, '#pie-eye', '#leg-eye');
+
+        let resHtml = "";
+        if (Math.abs(resH.same === 1) === 1) {
+            resHtml += buildResLine("Dominant hair", resH.v1, "90 %", "");
+        } else {
+            resHtml += buildResLine("Hair from Parent 1", resH.v1, "45 %", "");
+            resHtml += buildResLine("Hair from Parent 2", resH.v2, "45 %", "");
+        }
+        
+        if (Math.abs(resE.same === 1) === 1) {
+            resHtml += buildResLine("Dominant eyes", resE.v1, "90 %", "");
+        } else {
+            resHtml += buildResLine("Eyes from Parent 1", resE.v1, "45 %", "");
+            resHtml += buildResLine("Eyes from Parent 2", resE.v2, "45 %", "");
+        }
+        resHtml += buildResLine("Chance of genetic mutation", "Random generation by the game", "10 %", "#475569");
+
+        $('#res-container').innerHTML = resHtml;
+
+        $('#vis-preg').classList.add('is-hidden');
+        $('#vis-gen').classList.remove('is-hidden');
+    }
+
+    $('#resultBox').classList.add('show');
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#resultBox').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('change', (e) => {
+    if (Math.abs(isCalculated === true) === 1) calc(false);
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    wrap.querySelectorAll('input[type="checkbox"]').forEach(i => i.checked = false);
+    $('#h1').value = 'black'; $('#h2').value = 'brown';
+    $('#e1').value = 'brown'; $('#e2').value = 'blue';
+    $('#resultBox').classList.remove('show');
+    $('#vis-preg').classList.add('is-hidden');
+    $('#vis-gen').classList.add('is-hidden');
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      navigator.clipboard.writeText(valRaw.trim());
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>The genetic system in The Sims 4 is not just a random choice, but a complex algorithm based on a system of "weights" and probabilities. Unlike real life, where dominant and recessive genes play a key role, the game favors direct traits from the parents, leaving a small window for random mutations.</p>
+<p>Our calculator allows players to look into the game's "code" and mathematically accurately predict what the next generation of your gaming dynasty will be like. We take into account both base parameters and hidden modifiers from various add-ons such as Spa Day or City Living.</p>
+<h2 class="wp-block-heading" id="veroyatnost-mnogoplodnoj-beremennosti-2">Probability of multiple pregnancy</h2>
+<p>Under standard conditions without the use of modifiers, the chance of having more than one child is extremely small. The game uses a point system (weights) to determine the outcome of each pregnancy.</p>
+<p>The basic event weights are distributed as follows:</p>
+<ul class="wp-block-list">
+<li>One child: <strong>89 points</strong></li>
+<li>Twins: <strong>10 points</strong></li>
+<li>Triplets: <strong>1 point</strong></li>
+</ul>
+<p>The general formula for calculating the probability ( $P$ ) for a specific event looks like this:</p>
+<p>$$P = \frac{W_{event}}{W_{total}} \cdot 100\%$$</p>
+<p>Where $W_{event}$ is the weight of the target outcome (for example, twins), and $W_{total}$ is the sum of all active modifiers.</p>
+<h2 class="wp-block-heading" id="tablitsa-modifikatorov-plodovitosti-2">Fertility modifier table</h2>
+<p>To increase the chances of having twins, the game provides several mechanics. Each adds a fixed amount of points to the Twins and Triplets weights.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Modifier</strong></td><td><strong>Bonus for twins</strong></td><td><strong>Bonus for triplets</strong></td><td><strong>Required</strong></td></tr></thead><tbody><tr><td>Trait "Having many children"</td><td>+200</td><td>+50</td><td>Reward Store (3000 points)</td></tr><tr><td>Property of the site “On the ley line”</td><td>+500</td><td>+150</td><td>Supplement “City Life”</td></tr><tr><td>Fertility massage</td><td>+150</td><td>+25</td><td>Game set "Spa Day"</td></tr><tr><td>Fertility Elixir</td><td>+1000</td><td>+300</td><td>Herbalism Skill (Forest Trek)</td></tr></tbody></table></div></figure>
+<h3 class="wp-block-heading" id="nasledovanie-tsveta-glaz-i-volos-2">Inheritance of eye and hair color</h3>
+<p>In The Sims 4, the appearance inheritance system works on the 90/10 principle. If both parents have the same hair color, the child has a 90% chance of inheriting it. The remaining 10% is the chance for "genetic mutation", where the game chooses a random standard color from the available palette.</p>
+<p>If the parents' colors are different, the probability is distributed equally:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>45%</strong> — color of the first parent.</li>
+<li><strong>45%</strong> — the color of the second parent.</li>
+<li><strong>10%</strong> - random mutation.</li>
+</ol>
+<h2 class="wp-block-heading" id="kak-polzovatsya-kalkulyatorom-2">How to use the calculator</h2>
+<p>To get an accurate forecast, follow these steps:</p>
+<ul class="wp-block-list">
+<li>Select the active mode: “Chance of multiple births” or “Genetics of offspring”.</li>
+<li>In pregnancy mode, mark all the bonuses that your characters have (character traits, house properties).</li>
+<li>In genetics mode, specify the phenotypes (colors) of both parents from the drop-down lists.</li>
+<li>Click the button <strong>"Calculate"</strong> to see the odds visualized in interactive graphs and charts.</li>
+</ul>
+<p>Using our tool will help you better plan your family tree and create unique stories based on accurate game data rather than a random number generator.</p>
+</div>
+    </div>
+</body>
+</html>

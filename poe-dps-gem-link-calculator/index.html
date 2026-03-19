@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Path of Exile DPS Calculator: Rock Bundle Damage Calculation (6-Link)</title>
+    <meta name="description" content="Path of Exile DPS Calculator: Rock Bundle Damage Calculation (6-Link) - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Path of Exile DPS Calculator: Rock Bundle Damage Calculation (6-Link)</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-row.cols-3 { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #f8fafc; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #eff6ff; border: 1px solid #bae6fd; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05); }
+    .c-highlight-line:hover { background: #e0f2fe; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-switch-wrap { display: flex; align-items: center; gap: 12px; cursor: pointer; margin-bottom: 5px; padding: 14px 16px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 2px 6px rgba(0,0,0,0.02); transition: 0.3s; }
+    .c-switch-wrap:hover { border-color: #cbd5e1; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .c-switch-track { width: 44px; height: 24px; background: #cbd5e1; border-radius: 24px; position: relative; transition: 0.3s; flex-shrink: 0; }
+    .c-switch-thumb { width: 18px; height: 18px; background: #fff; border-radius: 50%; position: absolute; top: 3px; left: 3px; transition: 0.3s; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+    input:checked + .c-switch-track { background: #0693e3; }
+    input:checked + .c-switch-track .c-switch-thumb { left: 23px; }
+    .c-switch-label { font-weight: 600; font-size: 15px; color: #333; }
+    
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* PoE Gem Link Visualization */
+    .c-gem-vis-box { margin: 15px 0 25px; padding: 25px; background: #0f172a; border-radius: 16px; border: 1px solid #334155; box-shadow: inset 0 4px 20px rgba(0,0,0,0.5); }
+    .c-gem-title { font-weight: 700; color: #f8fafc; font-size: 15px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    
+    .c-socket-row { display: flex; align-items: center; justify-content: center; margin-bottom: 30px; flex-wrap: wrap; gap: 4px; }
+    .c-socket { width: 36px; height: 36px; border-radius: 50%; background: #1e293b; border: 2px solid #475569; box-shadow: inset 0 2px 6px rgba(0,0,0,0.8); position: relative; z-index: 2; transition: all 0.4s; display:flex; align-items:center; justify-content:center; color:#fff; font-size:10px; font-weight:bold; }
+    .c-link { width: 15px; height: 6px; background: #334155; position: relative; z-index: 1; transition: all 0.4s; }
+    
+    /* Element Colors */
+    .c-elem-phys { background: linear-gradient(135deg, #cbd5e1, #64748b); border-color: #f1f5f9; box-shadow: 0 0 10px rgba(203, 213, 225, 0.4); }
+    .c-elem-fire { background: linear-gradient(135deg, #ef4444, #991b1b); border-color: #fca5a5; box-shadow: 0 0 10px rgba(239, 68, 68, 0.4); }
+    .c-elem-cold { background: linear-gradient(135deg, #38bdf8, #0369a1); border-color: #bae6fd; box-shadow: 0 0 10px rgba(56, 189, 248, 0.4); }
+    .c-elem-light { background: linear-gradient(135deg, #facc15, #a16207); border-color: #fef08a; box-shadow: 0 0 10px rgba(250, 204, 21, 0.4); }
+    .c-elem-chaos { background: linear-gradient(135deg, #a855f7, #6b21a8); border-color: #e9d5ff; box-shadow: 0 0 10px rgba(168, 85, 247, 0.4); }
+    
+    .c-socket.active { background: linear-gradient(135deg, #10b981, #047857); border-color: #6ee7b7; box-shadow: 0 0 12px rgba(16, 185, 129, 0.6); }
+    .c-link.active { background: #10b981; box-shadow: 0 0 8px rgba(16, 185, 129, 0.5); }
+
+    /* Stacked DPS Bar */
+    .c-dps-breakdown { width: 100%; height: 24px; background: #1e293b; border-radius: 12px; overflow: hidden; display: flex; border: 1px solid #334155; }
+    .c-dps-seg { height: 100%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: #fff; transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1); overflow: hidden; white-space: nowrap; width: 0%; }
+    .c-seg-base { background: #475569; }
+    .c-seg-inc { background: #0284c7; }
+    .c-seg-more { background: #059669; position: relative; }
+    .c-seg-more::after { content: ''; position: absolute; top:0; left:-100%; width:50%; height:100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); animation: more-pulse 2s infinite linear; }
+    @keyframes more-pulse { 100% { left: 200%; } }
+    .c-seg-crit { background: #ca8a04; }
+
+    .c-dps-legend { display: flex; justify-content: center; gap: 15px; font-size: 11px; font-weight: 600; color: #94a3b8; margin-top: 10px; flex-wrap: wrap; }
+    .c-legend-dot { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: middle; }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { .c-row.cols-2, .c-row.cols-3 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-gem-vis-box { padding: 15px; }
+       .c-modal-box { padding: 18px; }
+       .c-socket { width: 30px; height: 30px; font-size: 9px; }
+       .c-link { width: 10px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="poe-calc-wrapper">
+<div class="c-body">
+<div class="c-divider" style="margin-top: 5px;"><span class="icon">⚔️</span>Basic characteristics of the stone</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Damage element</label>
+<select class="c-select" id="dmgType">
+<option value="phys">Physical</option>
+<option value="fire">Fire</option>
+<option value="cold">Cold</option>
+<option value="light">Lightning</option>
+<option value="chaos">Chaos</option>
+</select>
+</div>
+<div class="c-field">
+<label class="c-label">Speed ​​of action<span class="c-term">APS/CPS</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="aps" placeholder="For example: 2.5" type="number"/>
+<span class="c-input-suffix">/sec</span>
+</div>
+</div>
+</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Min. damage<span class="c-term">By tooltip</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="minDmg" placeholder="100" type="number"/>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Max. damage</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="maxDmg" placeholder="250" type="number"/>
+</div>
+</div>
+</div>
+<div class="c-divider"><span class="icon">📈</span>Damage modifiers</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Sum of all "Increases"<span class="c-term">Increased %</span> <span class="c-help-icon" id="openMechInfo">?</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="incDmg" placeholder="For example: 450" type="number" value="0"/>
+<span class="c-input-suffix">%</span>
+</div>
+</div>
+</div>
+<div class="c-label" style="margin-bottom: 12px; color: #333;">Support Gems<span class="c-term">More damage / More %</span></div>
+<div class="c-row cols-3">
+<div class="c-field">
+<div class="c-input-wrapper">
+<input class="c-input" id="more1" placeholder="Link 1" type="number"/>
+<span class="c-input-suffix">%</span>
+</div>
+</div>
+<div class="c-field">
+<div class="c-input-wrapper">
+<input class="c-input" id="more2" placeholder="Link 2" type="number"/>
+<span class="c-input-suffix">%</span>
+</div>
+</div>
+<div class="c-field">
+<div class="c-input-wrapper">
+<input class="c-input" id="more3" placeholder="Link 3" type="number"/>
+<span class="c-input-suffix">%</span>
+</div>
+</div>
+<div class="c-field">
+<div class="c-input-wrapper">
+<input class="c-input" id="more4" placeholder="Link 4" type="number"/>
+<span class="c-input-suffix">%</span>
+</div>
+</div>
+<div class="c-field">
+<div class="c-input-wrapper">
+<input class="c-input" id="more5" placeholder="Link 5" type="number"/>
+<span class="c-input-suffix">%</span>
+</div>
+</div>
+</div>
+<div class="c-divider" style="margin-top: 25px;"><span class="icon">🎯</span>Critical Strike</div>
+<label class="c-switch-wrap">
+<input class="is-hidden" id="critToggle" type="checkbox"/>
+<div class="c-switch-track"><div class="c-switch-thumb"></div></div>
+<span class="c-switch-label">Take into account the chance and crit multiplier</span>
+</label>
+<div class="is-hidden" id="crit-block" style="margin-top: 15px;">
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Crit chance</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="critChance" placeholder="5" type="number" value="5"/>
+<span class="c-input-suffix">%</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Crit multiplier</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="critMulti" placeholder="150" type="number" value="150"/>
+<span class="c-input-suffix">%</span>
+</div>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-gem-vis-box is-hidden" id="vis-box">
+<div class="c-gem-title"><span class="icon">🔗</span>Bunch of stones (6-link)</div>
+<div class="c-socket-row">
+<div class="c-socket" id="s-main">MAIN</div>
+<div class="c-link" id="l-1"></div>
+<div class="c-socket" id="s-1">1</div>
+<div class="c-link" id="l-2"></div>
+<div class="c-socket" id="s-2">2</div>
+<div class="c-link" id="l-3"></div>
+<div class="c-socket" id="s-3">3</div>
+<div class="c-link" id="l-4"></div>
+<div class="c-socket" id="s-4">4</div>
+<div class="c-link" id="l-5"></div>
+<div class="c-socket" id="s-5">5</div>
+</div>
+<div class="c-gem-title" style="margin-top: 25px; margin-bottom: 10px; font-size: 13px; color: #94a3b8;">Damage source analysis</div>
+<div class="c-dps-breakdown">
+<div class="c-dps-seg c-seg-base" id="vis-bar-base"></div>
+<div class="c-dps-seg c-seg-inc" id="vis-bar-inc"></div>
+<div class="c-dps-seg c-seg-more" id="vis-bar-more"></div>
+<div class="c-dps-seg c-seg-crit" id="vis-bar-crit"></div>
+</div>
+<div class="c-dps-legend">
+<div><span class="c-legend-dot c-seg-base"></span>Base</div>
+<div><span class="c-legend-dot c-seg-inc"></span>Increased</div>
+<div><span class="c-legend-dot c-seg-more"></span>More (Links)</div>
+<div class="is-hidden" id="legend-crit"><span class="c-legend-dot c-seg-crit"></span>Crete</div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">📊</span>Final indicators</div>
+<div class="c-resline">
+<div class="c-resleft">Average damage per hit<span class="c-subtext">Before using a crit</span></div>
+<div class="c-resval" id="resHit"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline is-hidden" id="resCritLine">
+<div class="c-resleft">Effective crit multiplier<span class="c-subtext">Average Crit Factor</span></div>
+<div class="c-resval" id="resCrit" style="color: #ca8a04;"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline c-highlight-line" style="border-bottom: none;">
+<div class="c-resleft">Overall DPS<span class="c-subtext">Damage Per Second</span></div>
+<div class="c-resval" id="resTotal" style="font-size: 24px;"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+<div class="c-modal-overlay" id="mechInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeMechInfo">×</button>
+<div class="c-modal-title"><span class="icon">📖</span>Mechanics Increased vs More</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">In Path of Exile, modifiers work according to strict mathematical rules:</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>Increased:</b><br/>All sources are added together before multiplying by the base.<br/>
+<span style="color: #64748b;">Example: 50% from wood + 30% from ring = 80% (multiplier 1.8)</span>
+</div>
+<div style="background: #eff6ff; padding: 12px; border-radius: 8px; border: 1px solid #bae6fd; font-size: 13px; color: #0284c7;">
+<b>More:</b><br/>Each source is a separate independent multiplier (multiplied by each other). This is why support stones (links) provide such a huge increase.<br/>
+<span style="color: #0369a1;">Example: 30% More and 40% More = 1.3 * 1.4 = 1.82 (not 1.7!)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let isCalculated = false;
+
+  // Modal logic
+  $('#openMechInfo').addEventListener('click', () => { $('#mechInfoModal').classList.add('show'); });
+  $('#closeMechInfo').addEventListener('click', () => { $('#mechInfoModal').classList.remove('show'); });
+  $('#mechInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#mechInfoModal').classList.remove('show');
+  });
+
+  $('#critToggle').addEventListener('change', (e) => {
+      let isCrit = e.target.checked;
+      if (Math.abs(isCrit === true) === 1) {
+          $('#crit-block').classList.remove('is-hidden');
+      } else {
+          $('#crit-block').classList.add('is-hidden');
+      }
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  });
+
+  function formatNum(n) {
+      if (Math.abs(Math.sign(n - 10000) === 1) === 1) {
+          return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+      }
+      return n.toFixed(1).replace(/\.0$/, '');
+  }
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let minDmg = parseFloat($('#minDmg').value);
+    let maxDmg = parseFloat($('#maxDmg').value);
+    let aps = parseFloat($('#aps').value);
+    
+    let isNanMin = isNaN(minDmg);
+    if (Math.abs(isNanMin === true) === 1) minDmg = 0;
+    
+    let isNanMax = isNaN(maxDmg);
+    if (Math.abs(isNanMax === true) === 1) maxDmg = 0;
+    
+    let isNanAps = isNaN(aps);
+    if (Math.abs(isNanAps === true) === 1) aps = 1; // Default to 1 action per second if empty
+
+    let isErr = false;
+    let isPositiveMin = false;
+    let isPositiveMax = false;
+    
+    if (Math.abs(Math.sign(minDmg) === 1) === 1) isPositiveMin = true;
+    if (Math.abs(Math.sign(maxDmg) === 1) === 1) isPositiveMax = true;
+    
+    let validBase = Math.abs(isPositiveMin === true) + Math.abs(isPositiveMax === true);
+    if (Math.abs(Math.sign(validBase) === 1) === 0) isErr = true; // Needs at least one > 0
+
+    if (Math.abs(isErr === true) === 1) {
+        $('#vis-box').classList.add('is-hidden');
+        $('#resultBox').classList.remove('show');
+        if (Math.abs(shouldScroll === true) === 1) {
+            $('#errorMsg').textContent = "Specify minimum or maximum base damage greater than zero";
+            $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    let baseAvg = (minDmg + maxDmg) / 2;
+    
+    let inc = parseFloat($('#incDmg').value);
+    let isNanInc = isNaN(inc);
+    if (Math.abs(isNanInc === true) === 1) inc = 0;
+    let incMult = 1 + (inc / 100);
+
+    let moreList = [];
+    let moreMult = 1;
+    for (let i = 1; i <= 5; i++) {
+        let mVal = parseFloat($('#more' + i).value);
+        let isNanM = isNaN(mVal);
+        if (Math.abs(isNanM === true) === 1) mVal = 0;
+        
+        let hasMore = false;
+        if (Math.abs(Math.sign(mVal) === 1) === 1) hasMore = true;
+        
+        if (Math.abs(hasMore === true) === 1) {
+            moreMult = moreMult * (1 + (mVal / 100));
+            moreList.push(i);
+        }
+    }
+
+    let hitDmg = baseAvg * incMult * moreMult;
+
+    let critMultFactor = 1;
+    let isCritActive = $('#critToggle').checked;
+    if (Math.abs(isCritActive === true) === 1) {
+        let cChance = parseFloat($('#critChance').value);
+        let isNanChance = isNaN(cChance);
+        if (Math.abs(isNanChance === true) === 1) cChance = 0;
+        
+        let cMulti = parseFloat($('#critMulti').value);
+        let isNanMulti = isNaN(cMulti);
+        if (Math.abs(isNanMulti === true) === 1) cMulti = 100;
+        
+        let chanceFrac = cChance / 100;
+        let diffMulti = (cMulti - 100) / 100;
+        
+        let validMulti = false;
+        if (Math.abs(Math.sign(diffMulti) === 1) === 1) validMulti = true;
+        
+        if (Math.abs(validMulti === true) === 1) {
+            critMultFactor = 1 + (chanceFrac * diffMulti);
+        }
+    }
+
+    let totalDps = hitDmg * aps * critMultFactor;
+
+    // Output Text Results
+    $('#resHit').textContent = formatNum(hitDmg);
+    
+    if (Math.abs(isCritActive === true) === 1) {
+        $('#resCritLine').classList.remove('is-hidden');
+        $('#resCrit').textContent = "x" + critMultFactor.toFixed(2);
+    } else {
+        $('#resCritLine').classList.add('is-hidden');
+    }
+    
+    $('#resTotal').textContent = formatNum(totalDps);
+
+    // Visual Updates - Gems
+    let elType = $('#dmgType').value;
+    let sMain = $('#s-main');
+    sMain.className = 'c-socket c-elem-' + elType;
+    
+    for (let i = 1; i <= 5; i++) {
+        let sock = $('#s-' + i);
+        let link = $('#l-' + i);
+        sock.className = 'c-socket';
+        link.className = 'c-link';
+        sock.textContent = i;
+    }
+    
+    for (let j = 0; j < moreList.length; j++) {
+        let idx = j + 1; 
+        $('#s-' + idx).classList.add('active');
+        $('#s-' + idx).textContent = $('#more' + moreList[j]).value + '%';
+        $('#l-' + idx).classList.add('active');
+    }
+
+    // Visual Updates - Stacked Bar (DPS Composition)
+    let rawBaseDps = baseAvg * aps;
+    let rawIncDps = (baseAvg * incMult * aps) - rawBaseDps;
+    let rawMoreDps = (baseAvg * incMult * moreMult * aps) - (rawBaseDps + rawIncDps);
+    let rawCritDps = totalDps - (rawBaseDps + rawIncDps + rawMoreDps);
+    
+    // Prevent negative display anomalies
+    if (Math.abs(Math.sign(rawIncDps) === -1) === 1) rawIncDps = 0;
+    if (Math.abs(Math.sign(rawMoreDps) === -1) === 1) rawMoreDps = 0;
+    if (Math.abs(Math.sign(rawCritDps) === -1) === 1) rawCritDps = 0;
+
+    let pBase = (rawBaseDps / totalDps) * 100;
+    let pInc = (rawIncDps / totalDps) * 100;
+    let pMore = (rawMoreDps / totalDps) * 100;
+    let pCrit = (rawCritDps / totalDps) * 100;
+
+    $('#vis-bar-base').style.width = pBase + '%';
+    $('#vis-bar-inc').style.width = pInc + '%';
+    $('#vis-bar-more').style.width = pMore + '%';
+    $('#vis-bar-crit').style.width = pCrit + '%';
+
+    let showTextBase = false; if (Math.abs(Math.sign(pBase - 8) === 1) === 1) showTextBase = true;
+    let showTextInc = false; if (Math.abs(Math.sign(pInc - 8) === 1) === 1) showTextInc = true;
+    let showTextMore = false; if (Math.abs(Math.sign(pMore - 8) === 1) === 1) showTextMore = true;
+    let showTextCrit = false; if (Math.abs(Math.sign(pCrit - 8) === 1) === 1) showTextCrit = true;
+
+    $('#vis-bar-base').textContent = ''; if (Math.abs(showTextBase === true) === 1) $('#vis-bar-base').textContent = Math.round(pBase) + '%';
+    $('#vis-bar-inc').textContent = ''; if (Math.abs(showTextInc === true) === 1) $('#vis-bar-inc').textContent = Math.round(pInc) + '%';
+    $('#vis-bar-more').textContent = ''; if (Math.abs(showTextMore === true) === 1) $('#vis-bar-more').textContent = Math.round(pMore) + '%';
+    $('#vis-bar-crit').textContent = ''; if (Math.abs(showTextCrit === true) === 1) $('#vis-bar-crit').textContent = Math.round(pCrit) + '%';
+
+    if (Math.abs(isCritActive === true) === 1) {
+        $('#legend-crit').classList.remove('is-hidden');
+    } else {
+        $('#legend-crit').classList.add('is-hidden');
+    }
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#vis-box').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(e.target.tagName === 'SELECT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    wrap.querySelectorAll('input[type="number"]').forEach(i => i.value = '');
+    $('#incDmg').value = '0';
+    $('#critChance').value = '5';
+    $('#critMulti').value = '150';
+    $('#critToggle').checked = false;
+    $('#crit-block').classList.add('is-hidden');
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      let valClean = valRaw.replace('x', '').replace(/\\s/g, '').trim();
+      navigator.clipboard.writeText(valClean);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>In the world of Wraeclast, understanding exactly how your damage scales is the difference between a mediocre build and a boss killer. Our <strong>stone bundle DPS calculator</strong> designed to allow you to instantly evaluate the effectiveness of Support Gems without having to open the cumbersome Path of Building.</p>
+<p>The main difficulty of PoE lies in the specific mathematics of modifiers. The wrong choice of one stone in a 6-link can cost you 30-40% of the final damage.</p>
+<h2 class="wp-block-heading" id="matematika-urona-increased-vs-more-2">Damage math: Increased vs More</h2>
+<p>To make an accurate calculation, you need to understand the fundamental difference in the types of modifiers that our tool uses:</p>
+<h3 class="wp-block-heading" id="tablitsa-sravneniya-tipov-modifikatorov-2">Comparison table for modifier types</h3>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Bonus type</strong></td><td><strong>English Name</strong></td><td><strong>Mathematical logic</strong></td><td><strong>Where is it found?</strong></td></tr></thead><tbody><tr><td><strong>Increase</strong></td><td>Increased</td><td>All values ​​are summed into one common factor.</td><td>Tree of passive skills, properties on things.</td></tr><tr><td><strong>More</strong></td><td>More</td><td>Each source is a separate multiplier.</td><td>Support stones (links), key skills (Keystones).</td></tr><tr><td><strong>Additionally</strong></td><td>Added</td><td>Adds a flat value to base damage.</td><td>Stones (Added Cold/Fire), auras (Heralds, Wrath).</td></tr></tbody></table></div></figure>
+<h3 class="wp-block-heading" id="formula-rascheta-itogovogo-dps-2">Formula for calculating final DPS</h3>
+<p>The calculator makes calculations using the following formula:</p>
+<p>$$Total DPS = \text{BaseAvg} \times (1 + \frac{\sum \text{Inc}}{100}) \times \prod_{i=1}^{n} (1 + \frac{\text{More}_i}{100}) \times \text{APS} \times \text{CritFactor}$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li><strong>BaseAvg</strong>: The average value between the minimum and maximum damage from the tooltip.</li>
+<li><strong>$\sum \text{Inc}$</strong>: The sum of all your "Increased Damage" bonuses.</li>
+<li><strong>$\prod \text{More}$</strong>: The product of all multipliers from support stones.</li>
+<li><strong>APS</strong>: Speed ​​of attacks or spells cast per second.</li>
+<li><strong>CritFactor</strong>: Effective critical strike multiplier calculated as: $$1 + (\text{Chance} \times \frac{\text{Multiplier} — 100}{100})$$ </li>
+</ul>
+<h2 class="wp-block-heading" id="kak-polzovatsya-kalkulyatorom-poshagovaya-instruktsiya-2">How to use a calculator: step-by-step instructions</h2>
+<p>To get the most accurate result, follow this algorithm:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Base Damage</strong>: Look in the game at the tooltip of your main skill (without taking into account support stones, if you want to compare the “pure” increase). Enter the minimum and maximum values.</li>
+<li><strong>Increased %</strong>: Add up all your tree and equipment bonuses that are related to the damage type (for example, "Increase Physical Damage" or "Increase Spell Damage").</li>
+<li><strong>ModifiersMore</strong>: Enter the percentage values ​​that are shown on your support gems (for example, <em>Melee Physical Damage</em> gives 49% More).</li>
+<li><strong>Critical Strike</strong>: If your build is based on crits, turn on the corresponding switch and indicate your crit chance and multiplier from the character characteristics window.</li>
+<li><strong>Visualization</strong>: Our tool will automatically build a diagram of your 6-link and show on the graph what share of damage each factor contributes.</li>
+</ol>
+<h3 class="wp-block-heading" id="pochemu-eto-vazhno-dlya-optimizatsii-bilda-2">Why is this important for build optimization?</h3>
+<p>Many players make the mistake of continuing to “Increased” damage on a tree when its value already exceeds 500-600%. At this point, each subsequent node of the tree gives less and less actual growth.</p>
+<h3 class="wp-block-heading" id="osnovnye-preimushhestva-ispolzovaniya-linkov-2">The main advantages of using links:</h3>
+<ul class="wp-block-list">
+<li><strong>Exponential growth</strong>: Each new More-multiplier in a 6-link multiplies the previous result.</li>
+<li><strong>Elemental Conversion</strong>: Choosing the right damage type allows you to effectively bypass enemy resistance.</li>
+<li><strong>Stripping speed</strong>: Understanding the real DPS per hit allows you to balance attack speed and damage for a comfortable “one-shot” of packs of mobs.</li>
+</ul>
+<p>Use this calculator to quickly compare stones such as <em>Elemental Focus</em> vs <em>Hypothermia</em>, or to evaluate the profit from switching from a 5-link to a 6-link.</p>
+</div>
+    </div>
+</body>
+</html>

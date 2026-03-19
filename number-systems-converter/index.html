@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number systems calculator: online conversion between Binary, Octal, Hex and Decimal</title>
+    <meta name="description" content="Number systems calculator: online conversion between Binary, Octal, Hex and Decimal - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Number systems calculator: online conversion between Binary, Octal, Hex and Decimal</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; font-family: monospace; font-size: 16px; font-weight: 500;}
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-receipt-wrap { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 15px; position: relative; overflow: hidden; }
+    .c-receipt-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: repeating-linear-gradient(45deg, #0693e3, #0693e3 10px, #38bdf8 10px, #38bdf8 20px); }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #fff; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-all; text-align: right; color:#0693e3; font-family: monospace; letter-spacing: 0.5px; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #eff6ff; border: 1px solid #bae6fd; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05); }
+    .c-highlight-line:hover { background: #e0f2fe; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* Advanced Visualization */
+    .c-chart-box { margin: 15px 0 25px; padding: 25px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); display: grid; grid-template-columns: auto 1fr; gap: 30px; align-items: center; }
+    
+    .c-ring-wrap { position: relative; width: 110px; height: 110px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: conic-gradient(#0693e3 0%, #0693e3 0%, #e2e8f0 0%, #e2e8f0 100%); transition: background 0.5s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: inset 0 2px 10px rgba(0,0,0,0.05), 0 4px 15px rgba(6,147,227,0.15); flex-shrink: 0;}
+    .c-ring-inner { width: 84px; height: 84px; background: #fff; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: inset 0 2px 5px rgba(0,0,0,0.05); z-index: 2; }
+    .c-ring-val { font-size: 16px; font-weight: 700; color: #0693e3; }
+    .c-ring-sub { font-size: 10px; color: #888; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px;}
+
+    .c-bit-container { display: flex; flex-direction: column; gap: 8px; }
+    .c-bit-header { font-size: 13px; font-weight: 700; color: #1e293b; display: flex; justify-content: space-between; align-items: center;}
+    .c-bit-grid { display: grid; grid-template-columns: repeat(8, 1fr); gap: 4px; }
+    .c-bit { aspect-ratio: 1; min-height: 24px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #fff; transition: 0.3s; background: #cbd5e1; box-shadow: inset 0 1px 3px rgba(0,0,0,0.1); font-family: monospace;}
+    .c-bit.on { background: linear-gradient(135deg, #0693e3, #0284c7); box-shadow: 0 2px 6px rgba(6,147,227,0.3); animation: bit-pop 0.3s ease-out; }
+    @keyframes bit-pop { 0% { transform: scale(0.8); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { 
+        .c-row.cols-2 { grid-template-columns: 1fr; } 
+        .c-chart-box { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+        .c-bit-header { justify-content: center; flex-direction: column; gap: 4px; }
+        .c-bit-grid { width: 100%; max-width: 240px; }
+    }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 18px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-chart-box { padding: 20px 15px; }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="sys-calc-wrapper">
+<div class="c-body">
+<div class="c-toggle" id="mode-tabs">
+<button class="c-toggle-btn active" data-mode="dec">Decimal <span class="c-term">Base 10</span></button>
+<button class="c-toggle-btn" data-mode="bin">Binary <span class="c-term">Base 2</span></button>
+<button class="c-toggle-btn" data-mode="hex">Hex <span class="c-term">Base 16</span></button>
+<button class="c-toggle-btn" data-mode="oct">Octal <span class="c-term">Base 8</span></button>
+</div>
+<div class="c-divider"><span class="icon">⌨️</span>Entering a value</div>
+<div class="c-row" style="margin-bottom: 8px;">
+<div class="c-field">
+<label class="c-label">Number to transfer<span class="c-help-icon" id="openSysInfo">?</span>
+</label>
+<div class="c-input-wrapper">
+<input autocomplete="off" class="c-input" id="numValue" placeholder="Enter number..." type="text"/>
+<span class="c-input-suffix" id="inputSuffix">DEC</span>
+</div>
+</div>
+</div>
+<div style="display:flex; gap:8px; margin-bottom: 20px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-val="255" type="button">MAX 8-bit</button>
+<button class="c-quick-btn" data-val="65535" type="button">MAX 16-bit</button>
+<button class="c-quick-btn" data-val="clear" style="color:#d32f2f;" type="button">Clear</button>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-chart-box is-hidden" id="vis-box">
+<div class="c-ring-wrap" id="visRing">
+<div class="c-ring-inner">
+<div class="c-ring-val" id="visRingPerc">0%</div>
+<div class="c-ring-sub">Capacity</div>
+</div>
+</div>
+<div class="c-bit-container">
+<div class="c-bit-header">
+<span id="visBitTitle">Memory allocation</span>
+<span class="c-term" id="visBitDepth">8-bit</span>
+</div>
+<div class="c-bit-grid" id="visBitGrid">
+</div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">🔄</span>Conversion results</div>
+<div class="c-receipt-wrap">
+<div class="c-resline" id="line-bin">
+<div class="c-resleft">Binary system<span class="c-subtext">Binary (Base 2)</span></div>
+<div class="c-resval" id="resBin"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline" id="line-oct">
+<div class="c-resleft">Octal system<span class="c-subtext">Octal (Base 8)</span></div>
+<div class="c-resval" id="resOct"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline" id="line-dec">
+<div class="c-resleft">Decimal system<span class="c-subtext">Decimal (Base 10)</span></div>
+<div class="c-resval" id="resDec"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline" id="line-hex" style="border-bottom: none;">
+<div class="c-resleft">Hexadecimal system<span class="c-subtext">Hexadecimal (Base 16)</span></div>
+<div class="c-resval" id="resHex"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+</div>
+<div class="c-modal-overlay" id="sysInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeSysInfo">×</button>
+<div class="c-modal-title"><span class="icon">📖</span>Number systems</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">The choice of number system determines which characters are allowed for input:</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>Decimal (DEC):</b>Numbers from 0 to 9. Standard mathematics.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>Binary (BIN):</b>Only 0 and 1. Language of processors and memory.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>Hexadecimal (HEX):</b>Numbers 0-9 and letters A-F. Used in colors (RGB) and memory addressing.</div>
+<div style="background: #eff6ff; padding: 12px; border-radius: 8px; border: 1px solid #bae6fd; font-size: 13px; color: #0284c7;">
+<b>Visualization:</b>The calculator automatically determines the bit depth (8-bit, 16-bit, 32-bit) and shows the percentage of memory capacity.</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let activeMode = 'dec';
+  let isCalculated = false;
+
+  $('#openSysInfo').addEventListener('click', () => { $('#sysInfoModal').classList.add('show'); });
+  $('#closeSysInfo').addEventListener('click', () => { $('#sysInfoModal').classList.remove('show'); });
+  $('#sysInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#sysInfoModal').classList.remove('show');
+  });
+
+  function updateModeUI() {
+      let suffix = 'DEC';
+      if (Math.abs(activeMode === 'bin') === 1) suffix = 'BIN';
+      if (Math.abs(activeMode === 'hex') === 1) suffix = 'HEX';
+      if (Math.abs(activeMode === 'oct') === 1) suffix = 'OCT';
+      $('#inputSuffix').textContent = suffix;
+      
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  }
+
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeMode = btn.dataset.mode;
+        
+        // Reset input logic when switching base to avoid validation errors
+        let currentVal = $('#numValue').value;
+        let isNotEmpty = false;
+        if (Math.abs(currentVal === '') === 0) isNotEmpty = true;
+        
+        if (Math.abs(isNotEmpty === true) === 1) {
+            // Auto convert if possible, but strict safe: just clear or try to convert.
+            // Let's clear for safety if switching mode to avoid confusion
+            $('#numValue').value = '';
+            $('#resultBox').classList.remove('show');
+            $('#vis-box').classList.add('is-hidden');
+            isCalculated = false;
+        }
+        
+        updateModeUI();
+    });
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          let val = btn.dataset.val;
+          if (Math.abs(val === 'clear') === 1) {
+              $('#numValue').value = '';
+          } else {
+              // Quick buttons inject decimal values. We need to convert them to active base.
+              let decVal = parseInt(val, 10);
+              let baseNum = 10;
+              if (Math.abs(activeMode === 'bin') === 1) baseNum = 2;
+              if (Math.abs(activeMode === 'oct') === 1) baseNum = 8;
+              if (Math.abs(activeMode === 'hex') === 1) baseNum = 16;
+              $('#numValue').value = decVal.toString(baseNum).toUpperCase();
+          }
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  function formatBinary(str) {
+      let padded = str;
+      let isOdd = Math.abs(str.length % 4 === 0); // 0 if false, 1 if true
+      if (Math.abs(isOdd === 0) === 1) {
+          let padLen = Math.ceil(str.length / 4) * 4;
+          padded = str.padStart(padLen, '0');
+      }
+      return padded.match(/.{1,4}/g).join(' ');
+  }
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let rawVal = $('#numValue').value.trim();
+    let isErr = false;
+    let isEmpty = false;
+    
+    if (Math.abs(rawVal === '') === 1) isEmpty = true;
+    if (Math.abs(isEmpty === true) === 1) isErr = true;
+
+    let regex;
+    let baseNum = 10;
+    if (Math.abs(activeMode === 'bin') === 1) { regex = /^[01]+$/; baseNum = 2; }
+    if (Math.abs(activeMode === 'oct') === 1) { regex = /^[0-7]+$/; baseNum = 8; }
+    if (Math.abs(activeMode === 'dec') === 1) { regex = /^[0-9]+$/; baseNum = 10; }
+    if (Math.abs(activeMode === 'hex') === 1) { regex = /^[0-9A-Fa-f]+$/; baseNum = 16; }
+
+    if (Math.abs(isEmpty === false) === 1) {
+        let isValid = regex.test(rawVal);
+        if (Math.abs(isValid === false) === 1) isErr = true;
+    }
+
+    if (Math.abs(isErr === true) === 1) {
+        $('#vis-box').classList.add('is-hidden');
+        $('#resultBox').classList.remove('show');
+        if (Math.abs(shouldScroll === true) === 1) {
+            $('#errorMsg').textContent = "Enter a valid value for the selected number system";             $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    // Parse to decimal safely
+    let decNum = parseInt(rawVal, baseNum);
+    
+    // Check if it exceeds safe integer / max 32bit visualization limit safely
+    let isOverLimit = false;
+    let limitDiff = Math.sign(4294967295 - decNum);
+    if (Math.abs(limitDiff === -1) === 1) isOverLimit = true; // if negative, it's over 32-bit max
+    
+    // Conversions
+    let strBin = decNum.toString(2);
+    let strOct = decNum.toString(8);
+    let strDec = decNum.toString(10);
+    let strHex = decNum.toString(16).toUpperCase();
+
+    $('#resBin').textContent = formatBinary(strBin);
+    $('#resOct').textContent = strOct;
+    $('#resDec').textContent = strDec;
+    $('#resHex').textContent = strHex;
+    
+    // Highlight active line
+    wrap.querySelectorAll('.c-resline').forEach(el => el.classList.remove('c-highlight-line'));
+    $('#line-' + activeMode).classList.add('c-highlight-line');
+
+    // Visualizations logic (Only if within 32-bit limit)
+    if (Math.abs(isOverLimit === false) === 1) {
+        let bitDepth = 32;
+        let is8 = false; let diff8 = Math.sign(255 - decNum);
+        if (Math.abs(diff8 === 1) === 1) is8 = true;
+        if (Math.abs(diff8 === 0) === 1) is8 = true;
+
+        let is16 = false; let diff16 = Math.sign(65535 - decNum);
+        if (Math.abs(diff16 === 1) === 1) is16 = true;
+        if (Math.abs(diff16 === 0) === 1) is16 = true;
+
+        if (Math.abs(is8 === true) === 1) { bitDepth = 8; } 
+        else {
+            if (Math.abs(is16 === true) === 1) { bitDepth = 16; }
+        }
+
+        let maxVal = 255;
+        if (Math.abs(bitDepth === 16) === 1) maxVal = 65535;
+        if (Math.abs(bitDepth === 32) === 1) maxVal = 4294967295;
+
+        // Ring progress
+        let percRaw = (decNum / maxVal) * 100;
+        let perc = Math.round(percRaw);
+        
+        $('#visRing').style.background = `conic-gradient(#0693e3 0%, #0693e3 ${perc}%, #e2e8f0 ${perc}%, #e2e8f0 100%)`;
+        $('#visRingPerc').textContent = perc + '%';
+
+        // Bit Grid
+        $('#visBitDepth').textContent = bitDepth + '-bit';
+        let paddedBin = strBin.padStart(bitDepth, '0');
+        
+        let gridHtml = '';
+        for(let i = 0; i < paddedBin.length; i++) {
+            let bitVal = paddedBin[i];
+            let activeCls = '';
+            if (Math.abs(bitVal === '1') === 1) activeCls = 'on';
+            gridHtml += `<div class="c-bit ${activeCls}">${bitVal}</div>`;
+        }
+        $('#visBitGrid').innerHTML = gridHtml;
+        $('#vis-box').classList.remove('is-hidden');
+    } else {
+        $('#vis-box').classList.add('is-hidden');
+    }
+
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#resultBox').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    $('#numValue').value = '';
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      let valClean = valRaw.replace(/\\s/g, '').trim(); // Remove spaces used in binary format
+      navigator.clipboard.writeText(valClean);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>In the world of programming and digital electronics, working with different number systems is a daily necessity. Our online tool is designed to quickly and accurately convert numbers, providing not only hard numbers, but also a clear visualization of how data is distributed in computer memory.</p>
+<h2 class="wp-block-heading" id="podderzhivaemye-standarty-i-rezhimy-2">Supported standards and modes</h2>
+<p>The calculator works with four key bases that underlie modern computing:</p>
+<ul class="wp-block-list">
+<li><strong>Binary (Binary, base 2):</strong> The fundamental language of processors, consisting of only 0s and 1s.</li>
+<li><strong>Octal (Octal, base 8):</strong> Often used in file system permissions (such as Linux) and older architectures.</li>
+<li><strong>Decimal (Decimal, base 10):</strong> The standard system, familiar to us since childhood.</li>
+<li><strong>Hexadecimal (Hexadecimal, base 16):</strong> Compact recording of binary data, used in color coding (HTML/CSS), memory addressing and software debugging.</li>
+</ul>
+<h2 class="wp-block-heading" id="tablitsa-sootvetstviya-populyarnyh-sistem-schisleniya-2">Correspondence table for popular number systems</h2>
+<p>To quickly understand the conversion logic, here is a table of the first 16 values:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Decimal (DEC)</strong></td><td><strong>Binary (BIN)</strong></td><td><strong>Hexadecimal (HEX)</strong></td><td><strong>Octal (OCT)</strong></td></tr></thead><tbody><tr><td>0</td><td>0000</td><td>0</td><td>0</td></tr><tr><td>5</td><td>0101</td><td>5</td><td>5</td></tr><tr><td>10</td><td>1010</td><td>A</td><td>12</td></tr><tr><td>12</td><td>1100</td><td>C</td><td>14</td></tr><tr><td>15</td><td>1111</td><td>F</td><td>17</td></tr></tbody></table></div></figure>
+<h3 class="wp-block-heading" id="matematicheskaya-osnova-perevoda-2">Mathematical basis of translation</h3>
+<p>Conversion from any system to decimal is carried out using the formula of the sum of the products of digits by the base of the system to the appropriate degree:</p>
+<p>$$N = \sum_{i=0}^{n} (d_i \cdot b^i)$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $N$ - final decimal number;</li>
+<li> $d_i$ - digit in place;</li>
+<li> $b$ - base of the original system (2, 8 or 16);</li>
+<li> $i$ - digit position (starting from 0 from right to left).</li>
+</ul>
+<p><strong>Example:</strong> Converting the number $1011$ from binary:</p>
+<p>$$1 \cdot 2^3 + 0 \cdot 2^2 + 1 \cdot 2^1 + 1 \cdot 2^0 = 8 + 0 + 2 + 1 = 11_{10}$$</p>
+<h2 class="wp-block-heading" id="unikalnye-funktsii-nashego-kalkulyatora-2">Unique features of our calculator</h2>
+<p>Unlike simple converters, this tool has advanced UI/UX functionality:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Intelligent 32-bit visualization:</strong> The system automatically determines the width of the entered number (8, 16 or 32 bits) and builds a distribution grid of active bits.</li>
+<li><strong>Capacity control:</strong> The “Ring Progress” indicator shows what percentage of the address space is occupied by a number relative to the selected bit depth.</li>
+<li><strong>Secure input:</strong> The calculator checks the correctness of symbols in real time. For example, you won't be able to enter "9" in binary mode or "G" in hexadecimal.</li>
+<li><strong>Quick presets:</strong> Instant maximum value buttons for 8-bit (255) and 16-bit (65535) systems allow testing of memory overflow limits.</li>
+<li><strong>Formatted output:</strong> The binary code is automatically divided into groups of 4 bits (nibbles) for ease of reading.</li>
+</ol>
+<h3 class="wp-block-heading" id="kak-polzovatsya-instrumentom-2">How to use the tool</h3>
+<p>To perform the conversion, select the original number system using the tabs at the top of the interface. Enter a number in the input field. The calculator will instantly calculate values ​​for all other systems. Use the "Copy" icon next to the result to save the data to the clipboard without unnecessary spaces.</p>
+</div>
+    </div>
+</body>
+</html>

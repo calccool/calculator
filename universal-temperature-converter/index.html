@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal temperature converter: convert degrees Celsius, Fahrenheit, Kelvin and 12 more scales online</title>
+    <meta name="description" content="Universal temperature converter: convert degrees Celsius, Fahrenheit, Kelvin and 12 more scales online - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Universal temperature converter: convert degrees Celsius, Fahrenheit, Kelvin and 12 more scales online</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function() {
+
+  // Ультимативный список температурных шкал
+  // Для температуры важен не только коэффициент (ratio), но и смещение (offset)
+  // Базовая единица (Base) — Кельвин (K)
+  var UNITS = [
+    { key:'c',     label:'Celsius (°C)',           short:'°C',     toK: function(v){ return v + 273.15; },  fromK: function(k){ return k - 273.15; }, group:'Basic' },
+    { key:'k',     label:'Kelvin (K)',            short:'K',      toK: function(v){ return v; },           fromK: function(k){ return k; },          group:'Basic' },
+    { key:'f',     label:'Fahrenheit (°F)',         short:'°F',     toK: function(v){ return (v - 32) * 5/9 + 273.15; }, fromK: function(k){ return (k - 273.15) * 9/5 + 32; }, group:'Basic' },
+    
+    { key:'ra',    label:'Rankin (°Ra)',           short:'°Ra',    toK: function(v){ return v * 5/9; },     fromK: function(k){ return k * 9/5; },    group:'Scientific' },
+    { key:'pl',    label:'Planck temp. (Tₚ)',  short:'Tₚ',     toK: function(v){ return v * 1.416784e32; }, fromK: function(k){ return k / 1.416784e32; }, group:'Scientific' },
+    
+    { key:'re',    label:'Réaumur (°Ré)',           short:'°Ré',    toK: function(v){ return v * 1.25 + 273.15; }, fromK: function(k){ return (k - 273.15) * 0.8; }, group:'Historical' },
+    { key:'ro',    label:'Rømer (°Rø)',            short:'°Rø',    toK: function(v){ return (v - 7.5) * 40/21 + 273.15; }, fromK: function(k){ return (k - 273.15) * 21/40 + 7.5; }, group:'Historical' },
+    { key:'de',    label:'Delisle (°D)',            short:'°D',     toK: function(v){ return 373.15 - v * 2/3; }, fromK: function(k){ return (373.15 - k) * 1.5; }, group:'Historical' },
+    { key:'n',     label:'Newton (°N)',            short:'°N',     toK: function(v){ return v * 100/33 + 273.15; }, fromK: function(k){ return (k - 273.15) * 33/100; }, group:'Historical' },
+    { key:'le',    label:'Leiden (°L)',            short:'°L',     toK: function(v){ return v + 253; }, fromK: function(k){ return k - 253; }, group:'Historical' },
+    
+    { key:'ga',    label:'Gassendi (°G)',          short:'°G',     toK: function(v){ return v * 1.5 + 273.15; }, fromK: function(k){ return (k - 273.15) / 1.5; }, group:'Rare/Exotic' },
+    { key:'da',    label:'Dalton (°Da)',          short:'°Da',    toK: function(v){ return 273.15 * Math.pow(373.15/273.15, v/100); }, fromK: function(k){ return 100 * (Math.log(k/273.15) / Math.log(373.15/273.15)); }, group:'Rare/Exotic' },
+    { key:'we',    label:'Wedgwood (°W)',           short:'°W',     toK: function(v){ return (v * 130 + 1077.5) + 273.15; }, fromK: function(k){ return (k - 273.15 - 1077.5) / 130; }, group:'Rare/Exotic' },
+    { key:'hk',    label:'Hooke (°H)',               short:'°H',     toK: function(v){ return v * 2.4 + 273.15; }, fromK: function(k){ return (k - 273.15) / 2.4; }, group:'Rare/Exotic' },
+    { key:'du',    label:'Duhamel (°Du)',          short:'°Du',    toK: function(v){ return v * 1.1 + 273.15; }, fromK: function(k){ return (k - 273.15) / 1.1; }, group:'Rare/Exotic' }
+  ];
+
+  var QUICK = [0, 10, 20, 36.6, 100, 273.15, 500, 1000];
+
+  document.getElementById('converter-block').innerHTML = '\
+<div class="uc">\
+  <div class="uc-units-row">\
+    <div class="uc-custom-dd" id="ddFromWrap">\
+      <div class="uc-dd-trigger" id="ddFromTrigger">\
+        <span class="uc-prefix-badge">Из</span>\
+        <span class="uc-dd-val" id="ddFromVal">Цельсий (°C)</span>\
+        <svg class="uc-dd-arr" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>\
+      </div>\
+      <div class="uc-dd-menu" id="ddFromMenu">\
+        <div class="uc-dd-search-wrap">\
+          <svg class="uc-search-icon" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.6"/><path d="M15 15l-3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>\
+          <input type="text" id="ucFromSearch" class="uc-dd-search" placeholder="Search for scale..." autocomplete="off" />\
+        </div>\
+        <div class="uc-dd-list" id="ddFromList"></div>\
+      </div>\
+      <input type="hidden" id="ucFrom" />\
+    </div>\
+    <button type="button" class="uc-swap" id="ucSwap" title="Swap">\
+      <img decoding="async" src="/wp-content/themes/adlera3/img/swap.png" alt="swap" />\
+    </button>\
+    <div class="uc-custom-dd" id="ddToWrap">\
+      <div class="uc-dd-trigger" id="ddToTrigger">\
+        <span class="uc-prefix-badge" style="background: #4a5565;">В</span>\
+        <span class="uc-dd-val" id="ddToVal">Фаренгейт (°F)</span>\
+        <svg class="uc-dd-arr" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>\
+      </div>\
+      <div class="uc-dd-menu" id="ddToMenu">\
+        <div class="uc-dd-search-wrap">\
+          <svg class="uc-search-icon" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.6"/><path d="M15 15l-3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>\
+          <input type="text" id="ucToSearch" class="uc-dd-search" placeholder="Search for scale..." autocomplete="off" />\
+        </div>\
+        <div class="uc-dd-list" id="ddToList"></div>\
+      </div>\
+      <input type="hidden" id="ucTo" />\
+    </div>\
+  </div>\
+  <div class="uc-calc-row">\
+    <div class="uc-field">\
+      <div class="uc-val-wrap">\
+        <span class="uc-val-lbl">Температура:</span>\
+        <input type="number" id="ucLeft" class="uc-input" placeholder="0" step="any" />\
+      </div>\
+    </div>\
+    <div class="uc-equals">=</div>\
+    <div class="uc-field">\
+      <div class="uc-val-wrap">\
+        <span class="uc-val-lbl">Результат:</span>\
+        <input type="number" id="ucRight" class="uc-input uc-result" placeholder="—" readonly />\
+        <button type="button" class="uc-copy" id="ucCopy" title="Copy">\
+          <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" stroke="currentColor" stroke-width="2"/></svg>\
+        </button>\
+      </div>\
+    </div>\
+  </div>\
+  <div class="uc-formula-row">\
+    <img decoding="async" src="/wp-content/themes/adlera3/img/formula.png" class="uc-f-ico" alt="" />\
+    <span id="ucFormula" class="uc-f-text">Выберите единицы</span>\
+    <button type="button" id="ucClear" class="uc-clear-btn">Очистить</button>\
+  </div>\
+  <div class="uc-chips-wrap">\
+    <span class="uc-chips-label">Быстрый ввод:</span>\
+    <div class="uc-chips" id="ucChips"></div>\
+  </div>\
+  <div class="uc-table-wrap">\
+    <div class="uc-table-head" id="ucTableHead">Таблица соответствия</div>\
+    <div class="uc-table-scroll">\
+      <div class="post-table"><table class="uc-table"><thead><tr><th id="ucTh1">—</th><th id="ucTh2">—</th></tr></thead><tbody id="ucTbody"></tbody></table></div>\
+    </div>\
+  </div>\
+</div>';
+
+  var fromInp = document.getElementById('ucFrom'), toInp = document.getElementById('ucTo');
+  var fromSrch = document.getElementById('ucFromSearch'), toSrch = document.getElementById('ucToSearch');
+  var leftInp = document.getElementById('ucLeft'), rightInp = document.getElementById('ucRight');
+  var swapBtn = document.getElementById('ucSwap'), copyBtn = document.getElementById('ucCopy'), clearBtn = document.getElementById('ucClear');
+  var formulaEl = document.getElementById('ucFormula'), chipsEl = document.getElementById('ucChips'), tbody = document.getElementById('ucTbody');
+  var fromList = document.getElementById('ddFromList'), toList = document.getElementById('ddToList');
+  var fromVal = document.getElementById('ddFromVal'), toVal = document.getElementById('ddToVal');
+  var fromTrig = document.getElementById('ddFromTrigger'), toTrig = document.getElementById('ddToTrigger');
+  var fromMenu = document.getElementById('ddFromMenu'), toMenu = document.getElementById('ddToMenu');
+
+  var params = new URLSearchParams(window.location.search);
+  var uFrom = params.get('from') || 'c';
+  var uTo = params.get('to') || 'f';
+  var uVal = params.get('val') || '';
+
+  function fmtNum(n) {
+    if (!isFinite(n)) return '';
+    var a = Math.abs(n);
+    if (a === 0) return '0';
+    if (a < 1e-6 || a > 1e12) return n.toExponential(5).replace(/\.?0+e/, 'e');
+    return parseFloat(n.toPrecision(10)).toString();
+  }
+
+  function getUnit(key) { return UNITS.find(function(u) { return u.key === key; }); }
+
+  function buildSel(listEl, q, hiddenInp, valEl) {
+    q = q ? q.toLowerCase().trim() : '';
+    listEl.innerHTML = '';
+    var groups = {};
+    UNITS.forEach(function(u) {
+      if (q && !u.label.toLowerCase().includes(q) && !u.short.toLowerCase().includes(q)) return;
+      if (!groups[u.group]) groups[u.group] = [];
+      groups[u.group].push(u);
+    });
+    Object.entries(groups).forEach(function(e) {
+      var og = document.createElement('div'); og.className = 'uc-dd-optgroup'; og.textContent = e[0];
+      listEl.appendChild(og);
+      e[1].forEach(function(u) {
+        var o = document.createElement('div'); o.className = 'uc-dd-option';
+        if(hiddenInp.value === u.key) o.classList.add('is-selected');
+        o.textContent = u.label;
+        o.addEventListener('click', function() {
+           hiddenInp.value = u.key; valEl.textContent = u.label; closeAllDD();
+           updateFormula(); updateTable(); updateChips(); convert();
+        });
+        listEl.appendChild(o);
+      });
+    });
+  }
+
+  function convert() {
+    var val = parseFloat(leftInp.value);
+    if (isNaN(val)) { rightInp.value = ''; updateFormula(); updateTable(); return; }     var from = getUnit(fromInp.value), to = getUnit(toInp.value);     if (!from || !to) return;          // Convert via Kelvin: From -> Kelvin -> To     var kelvin = from.toK(val);     rightInp.value = fmtNum(to.fromK(kelvin));          updateFormula(from, to);     updateTable(from, to);     window.history.replaceState({},'', '?from=' + from.key + '&to=' + to.key + '&val=' + val);
+  }
+
+  function updateFormula(from, to) {
+    from = from || getUnit(fromInp.value); to = to || getUnit(toInp.value);
+    if (!from || !to) return;
+    var baseVal = 1;
+    if (from.key === 'c') baseVal = 1; // Just for example 1 degree     var res = to.fromK(from.toK(baseVal));     formulaEl.innerHTML = baseVal +' ' + from.short + ' ≈ <strong>' + fmtNum(res) + '</strong> ' + to.short;
+  }
+
+  function updateTable(from, to) {
+    from = from || getUnit(fromInp.value); to = to || getUnit(toInp.value);
+    if (!from || !to) return;
+    document.getElementById('ucTh1').textContent = from.short;
+    document.getElementById('ucTh2').textContent = to.short;
+    tbody.innerHTML = '';
+    QUICK.forEach(function(v) {
+      var tr = document.createElement('tr');
+      var res = to.fromK(from.toK(v));
+      tr.innerHTML = '<td>' + v + '</td><td>' + fmtNum(res) + '</td>';
+      tbody.appendChild(tr);
+    });
+  }
+
+  function updateChips() {
+    chipsEl.innerHTML = '';
+    QUICK.forEach(function(v) {
+      var a = document.createElement('a'); a.className = 'uc-chip'; a.textContent = v;
+      a.addEventListener('click', function(e) { e.preventDefault(); leftInp.value = v; convert(); });
+      chipsEl.appendChild(a);
+    });
+  }
+
+  function closeAllDD() {
+    [fromMenu, toMenu].forEach(function(m) { m.classList.remove('is-open'); });
+    [fromTrig, toTrig].forEach(function(t) { t.classList.remove('is-active'); });
+  }
+
+  fromTrig.addEventListener('click', function(e) { 
+    e.stopPropagation(); closeAllDD(); fromMenu.classList.add('is-open'); fromTrig.classList.add('is-active'); fromSrch.focus(); 
+  });
+  toTrig.addEventListener('click', function(e) { 
+    e.stopPropagation(); closeAllDD(); toMenu.classList.add('is-open'); toTrig.classList.add('is-active'); toSrch.focus(); 
+  });
+  document.addEventListener('click', function() { closeAllDD(); });
+
+  fromSrch.addEventListener('input', function() { buildSel(fromList, fromSrch.value, fromInp, fromVal); });
+  toSrch.addEventListener('input', function() { buildSel(toList, toSrch.value, toInp, toVal); });
+  leftInp.addEventListener('input', convert);
+
+  swapBtn.addEventListener('click', function() {
+    var oldF = fromInp.value; fromInp.value = toInp.value; toInp.value = oldF;
+    fromVal.textContent = getUnit(fromInp.value).label;
+    toVal.textContent = getUnit(toInp.value).label;
+    convert();
+  });
+
+  copyBtn.addEventListener('click', function() {
+    if (!rightInp.value) return;
+    navigator.clipboard.writeText(rightInp.value);
+    copyBtn.classList.add('uc-copied'); setTimeout(function(){ copyBtn.classList.remove('uc-copied'); }, 1000);
+  });
+
+  clearBtn.addEventListener('click', function() { leftInp.value = ''; rightInp.value = ''; convert(); });
+
+  // Init
+  fromInp.value = uFrom; toInp.value = uTo;
+  fromVal.textContent = getUnit(uFrom).label; toVal.textContent = getUnit(uTo).label;
+  buildSel(fromList, '', fromInp, fromVal);
+  buildSel(toList, '', toInp, toVal);
+  updateChips();
+  if (uVal) { leftInp.value = uVal; convert(); } else { updateFormula(); updateTable(); }
+
+});
+</script>
+
+        <div class="post-content">
+<style>
+#converter-block *,
+#converter-block *::before,
+#converter-block *::after { box-sizing: border-box; }
+
+/* ── Wrapper ─────────────────────────────────── */
+.uc {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* ── Unit row ────────────────────────────────── */
+.uc-units-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  z-index: 2; /* Выше калькулятора, чтобы меню выпадало поверх */
+}
+
+/* ── Custom Dropdown (Вместо Select) ─────────── */
+.uc-custom-dd { position: relative; flex: 1; }
+
+.uc-dd-trigger {
+  width: 100%;
+  padding: 14px 34px 14px 50px; /* Место под бейдж слева и стрелку справа */
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #f8fafc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all .2s;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.01);
+}
+.uc-dd-trigger.is-active {
+  border-color: #0693e3;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(6,147,227,.15);
+}
+
+.uc-prefix-badge {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, #0693e3, #006eb5);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  pointer-events: none;
+}
+
+.uc-dd-val {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 6px;
+}
+
+.uc-dd-arr {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 8px;
+  color: #475569;
+  transition: transform .2s;
+}
+.uc-dd-trigger.is-active .uc-dd-arr { transform: translateY(-50%) rotate(180deg); color: #0693e3; }
+
+/* Dropdown Menu */
+.uc-dd-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  z-index: 100;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 380px;
+}
+.uc-dd-menu.is-open { display: flex; }
+
+.uc-dd-search-wrap {
+  padding: 12px;
+  border-bottom: 1px solid #f1f5f9;
+  position: relative;
+  background: #f8fafc;
+}
+.uc-search-icon {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  color: #94a3b8;
+  pointer-events: none;
+}
+.uc-dd-search {
+  width: 100%;
+  padding: 10px 14px 10px 36px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #111;
+  background: #fff;
+  outline: none;
+  transition: border-color .15s;
+}
+.uc-dd-search:focus { border-color: #0693e3; }
+
+.uc-dd-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 6px 0;
+}
+.uc-dd-list::-webkit-scrollbar { width: 6px; }
+.uc-dd-list::-webkit-scrollbar-track { background: #f8fafc; }
+.uc-dd-list::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+
+.uc-dd-optgroup {
+  padding: 10px 16px 4px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #94a3b8;
+  letter-spacing: 0.5px;
+}
+.uc-dd-option {
+  padding: 8px 16px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #334155;
+  cursor: pointer;
+  transition: background .15s, color .15s;
+}
+.uc-dd-option:hover { background: #f1f5f9; color: #111; }
+.uc-dd-option.is-selected {
+  background: linear-gradient(135deg, rgba(6,147,227,0.1), rgba(0,110,181,0.1));
+  color: #0693e3;
+  font-weight: 600;
+  border-left: 3px solid #0693e3;
+}
+
+/* Swap Button */
+.uc-swap {
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  border: 1px solid #e2e8f0 !important;
+  background: #fff !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  transition: all .3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,.04) !important;
+  outline: none !important;
+}
+.uc-swap img { 
+  width: 20px !important; 
+  height: 20px !important; 
+  transition: all .2s !important; 
+  display: block !important;
+}
+.uc-swap:hover {
+  border-color: #0693e3 !important;
+  background: linear-gradient(135deg, #0693e3, #006eb5) !important;
+  transform: rotate(180deg) scale(1.05) !important;
+  box-shadow: 0 6px 14px rgba(6,147,227,0.3) !important;
+}
+.uc-swap:hover img { filter: brightness(0) invert(1) !important; opacity: 1 !important; }
+
+/* ── Calc row (Ввод и Результат) ──────────────── */
+.uc-calc-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+}
+.uc-field { flex: 1; }
+
+.uc-equals {
+  font-size: 24px;
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
+.uc-val-wrap { position: relative; }
+.uc-val-lbl {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+  pointer-events: none;
+}
+
+.uc-input {
+  width: 100%;
+  padding: 16px 16px 16px 105px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: right;
+  color: #111;
+  background: #fff;
+  outline: none;
+  transition: all .2s;
+  -moz-appearance: textfield;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+}
+.uc-input::-webkit-outer-spin-button,
+.uc-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+.uc-input:focus {
+  border-color: #0693e3;
+  box-shadow: 0 0 0 4px rgba(6,147,227,.15);
+}
+
+.uc-result {
+  background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%);
+  color: #0693e3;
+  cursor: default;
+  padding-right: 50px;
+  border-color: #bae6fd;
+}
+.uc-result:focus { border-color: #7dd3fc; box-shadow: none; }
+
+.uc-copy {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  color: #64748b;
+  padding: 6px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  transition: all .2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.uc-copy:hover { color: #0693e3; border-color: #0693e3; box-shadow: 0 2px 6px rgba(6,147,227,0.2); }
+.uc-copy.uc-copied { color: #fff; background: #22c55e; border-color: #22c55e; }
+
+/* ── Formula row ─────────────────────────────── */
+.uc-formula-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+}
+.uc-f-ico { width: 22px; height: 22px; flex-shrink: 0;  }
+.uc-f-text {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  color: #475569;
+  min-width: 0;
+  overflow-wrap: break-word;
+  line-height: 1.5;
+}
+.uc-f-text strong { color: #111; font-weight: 700; font-size: 15px; }
+
+.uc-clear-btn {
+  flex-shrink: 0;
+  padding: 8px 18px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fff;
+  color: #4a5565;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all .2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.uc-clear-btn:hover { border-color: #94a3b8; color: #111; background: #f1f5f9; }
+
+/* ── Chips ───────────────────────────────────── */
+.uc-chips-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.uc-chips-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #888;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.uc-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.uc-chip {
+  padding: 6px 16px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  text-decoration: none;
+  background: #f1f5f9;
+  transition: all .2s;
+  display: inline-block;
+}
+.uc-chip:hover {
+  color: #fff;
+  background: linear-gradient(135deg, #0693e3, #006eb5);
+  box-shadow: 0 4px 10px rgba(6,147,227,.25);
+  transform: translateY(-2px);
+}
+
+/* ── Table ───────────────────────────────────── */
+.uc-table-wrap { display: flex; flex-direction: column; gap: 12px; margin-top: 6px; }
+.uc-table-head {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #111;
+}
+.uc-table-scroll {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+.uc-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.uc-table thead tr { background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); }
+.uc-table th {
+  text-align: left;
+  padding: 14px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+  border-bottom: 2px solid #e2e8f0;
+}
+.uc-table td {
+  padding: 12px 18px;
+  font-size: 14px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #111;
+  font-weight: 500;
+}
+.uc-table td span { color: #888; font-size: 12px; margin-left: 6px; font-weight: 400; }
+.uc-table tr:last-child td { border-bottom: none; }
+.uc-table tbody tr:hover { background: #f8fafc; }
+.uc-table td:last-child { color: #0693e3; font-weight: 700; }
+.uc-table td:last-child span { color: #7dd3fc; }
+
+/* ── Mobile ──────────────────────────────────── */
+@media (max-width: 650px) {
+  .uc-units-row { flex-direction: column; gap: 12px; align-items: stretch; }
+  .uc-swap { 
+    align-self: center !important; 
+    margin: 4px auto !important; 
+    transform: rotate(90deg) !important; 
+  }
+  .uc-swap:hover { transform: rotate(90deg) scale(1.05) !important; }
+  
+  .uc-calc-row { flex-direction: column; gap: 16px; align-items: stretch; }
+  .uc-equals { display: none; }
+  
+  .uc-val-lbl { font-size: 13px; left: 14px; }
+  .uc-input { padding: 16px 14px 16px 95px; font-size: 20px; }
+  .uc-result { padding-right: 46px; }
+  
+  .uc-formula-row { flex-wrap: wrap; }
+}
+</style>
+<p>Temperature measurement plays a key role in science, meteorology, cooking and industry. The world has historically had many ways to measure thermal energy, and our universal temperature converter allows for highly accurate conversion between 15 different scales in real time.</p>
+<p>The algorithm is based on bringing any entered value to the absolute thermodynamic scale - Kelvin, after which it is recalculated into the target unit. This guarantees mathematical impeccability of the results, regardless of the exotic nature of the selected value.</p>
+<h2 class="wp-block-heading" id="podderzhivaemye-temperaturnye-shkaly-2">Supported temperature scales</h2>
+<p>Our tool covers both generally accepted standards and highly specialized scientific or historical systems. For convenience, they are divided into semantic groups:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Category</strong></td><td><strong>Scale name</strong></td><td><strong>Designation</strong></td><td><strong>Scope of application</strong></td></tr></thead><tbody><tr><td><strong>Basic</strong></td><td>Degree Celsius</td><td>°C</td><td>Everyday use, metric system</td></tr><tr><td><strong>Basic</strong></td><td>Kelvin</td><td>K</td><td>SI base unit, thermodynamics</td></tr><tr><td><strong>Basic</strong></td><td>Fahrenheit</td><td>°F</td><td>Household use in the US and select countries</td></tr><tr><td><strong>Scientific</strong></td><td>Rankin degree</td><td>°Ra</td><td>Engineering thermodynamic calculations</td></tr><tr><td><strong>Scientific</strong></td><td>Planck temperature</td><td>Tₚ</td><td>Quantum mechanics, cosmology</td></tr><tr><td><strong>Historical</strong></td><td>Degree Reaumur</td><td>°Ré</td><td>Historical documents, old production</td></tr><tr><td><strong>Historical</strong></td><td>Roemer's degree</td><td>°Rø</td><td>Early meteorology</td></tr><tr><td><strong>Historical</strong></td><td>Degree of Delisle</td><td>°D</td><td>Historical Research (scale reversed)</td></tr><tr><td><strong>Historical</strong></td><td>Degree Newton</td><td>°N</td><td>Classical physics (early stage)</td></tr><tr><td><strong>Historical</strong></td><td>Leiden degree</td><td>°L</td><td>Cryogenics (obsolete standard)</td></tr><tr><td><strong>Exotic</strong></td><td>Gassendi, Dalton, Wedgwood, Hooke, Duhamel</td><td>°G, °Da, °W, °H, °Du</td><td>Highly specialized historical measurements</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="matematicheskie-formuly-perevoda-temperatur-2">Mathematical formulas for converting temperatures</h2>
+<p>To understand the physics of processes, it is useful to know how exactly the relationships between basic quantities are calculated. The calculations take into account not only the degree scaling factor, but also the zero point offset (offset).</p>
+<p><strong>Conversion from degrees Celsius to Kelvin:</strong></p>
+<p>Absolute zero is $-273.15^\circ C$ , so the formula is linear:</p>
+<p>$$K = ^\circ C + 273.15$$</p>
+<p><strong>Conversion from Fahrenheit to Celsius:</strong></p>
+<p>Scales have different reference points and different division values. Conversion formula:</p>
+<p>$$^\circ C = (^\circ F — 32) \times \frac{5}{9}$$</p>
+<p><strong>Conversion from Celsius to Fahrenheit:</strong></p>
+<p>Back calculation often needed for weather reports:</p>
+<p>$$^\circ F = \left(^\circ C \times \frac{9}{5}\right) + 32$$</p>
+<p><strong>Translation into Réaumur's historical scale:</strong></p>
+<p>This scale divides the interval between freezing and boiling of water into 80 parts:</p>
+<p>$$^\circ R\acute{e} = ^\circ C \times 0.8$$</p>
+<h3 class="wp-block-heading" id="prodvinutye-vozmozhnosti-nashego-kalkulyatora-2">Advanced features of our calculator</h3>
+<p>The converter interface is designed to provide maximum user experience (UX) and speed:</p>
+<ul class="wp-block-list">
+<li><strong>Dynamic search:</strong> The intelligent search bar allows you to quickly find the scale you need among 15 available options.</li>
+<li><strong>Quick Chips function:</strong> Preset values ​​(for example, $0$ , $36.6$ , $100$ ) allow one-click translation without using the keyboard.</li>
+<li><strong>Seamless conversion:</strong> When entering data, the result is generated instantly thanks to the optimized JS algorithm without reloading the page.</li>
+<li><strong>URL generation:</strong> Your calculations are saved in the address bar. You can copy the link with the finished calculation and send it to a colleague.</li>
+</ul>
+<h2 class="wp-block-heading" id="tablitsa-sootvetstviya-populyarnyh-temperaturnyh-znachenij-2">Correspondence table for popular temperature values</h2>
+<p>To visually assess the difference between coordinate systems, we have prepared a summary table of control points for the most popular standards:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Environment state</strong></td><td><strong>Degrees Celsius (°C)</strong></td><td><strong>Degrees Fahrenheit (°F)</strong></td><td><strong>Kelvin (K)</strong></td></tr></thead><tbody><tr><td>Absolute zero</td><td>-273.15</td><td>-459.67</td><td>0</td></tr><tr><td>Freezing water</td><td>0</td><td>32</td><td>273.15</td></tr><tr><td>Normal temp. human body</td><td>36.6</td><td>97.88</td><td>309.75</td></tr><tr><td>Boiling water</td><td>100</td><td>212</td><td>373.15</td></tr><tr><td>Melting point of lead</td><td>327.46</td><td>621.43</td><td>600.61</td></tr></tbody></table></div></figure>
+<p>Use this tool to complete physics homework, prepare engineering documents, or adapt foreign culinary recipes. If you need to carry out calculations regularly, bookmark this page in your browser.</p>
+</div>
+    </div>
+</body>
+</html>

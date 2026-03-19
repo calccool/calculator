@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyperfocal distance calculator: calculating depth of field for ideal landscapes</title>
+    <meta name="description" content="Hyperfocal distance calculator: calculating depth of field for ideal landscapes - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Hyperfocal distance calculator: calculating depth of field for ideal landscapes</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-res-wrap { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 15px; position: relative; overflow: hidden; }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #fff; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #eff6ff; border: 1px solid #bae6fd; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05); }
+    .c-highlight-line:hover { background: #e0f2fe; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* Advanced Depth of Field Visualization */
+    .c-vis-container { margin: 15px 0 25px; padding: 30px 20px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); }
+    .c-vis-title { font-weight: 700; color: #0f172a; font-size: 15px; margin-bottom: 30px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    
+    .c-scene-wrap { position: relative; width: 100%; height: 60px; display: flex; align-items: center; }
+    .c-axis { position: absolute; left: 30px; right: 20px; height: 4px; background: #cbd5e1; border-radius: 2px; }
+    
+    .c-cam-icon { position: absolute; left: 0; width: 30px; height: 30px; background: #0f172a; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 16px; z-index: 5; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+    .c-cam-icon::after { content: ''; position: absolute; right: -6px; width: 8px; height: 14px; background: #475569; border-radius: 0 4px 4px 0; }
+    
+    .c-dof-zone { position: absolute; height: 24px; top: 50%; transform: translateY(-50%); background: linear-gradient(90deg, rgba(16, 185, 129, 0.2), rgba(52, 211, 153, 0.6), rgba(16, 185, 129, 0.2)); border: 1px solid #10b981; border-radius: 4px; box-shadow: 0 0 15px rgba(16, 185, 129, 0.3); transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); opacity: 0; }
+    .c-dof-zone.animating { opacity: 1; }
+    
+    .c-marker { position: absolute; top: 50%; transform: translate(-50%, -50%); width: 2px; height: 34px; background: #0f172a; z-index: 4; transition: left 0.6s; opacity: 0; }
+    .c-marker.animating { opacity: 1; }
+    .c-marker-lbl { position: absolute; top: 20px; left: 50%; transform: translateX(-50%); font-size: 11px; font-weight: 700; color: #333; white-space: nowrap; background: rgba(255,255,255,0.8); padding: 2px 4px; border-radius: 4px;}
+    .c-marker-val { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); font-size: 11px; font-weight: 600; color: #0284c7; white-space: nowrap; background: rgba(255,255,255,0.8); padding: 2px 4px; border-radius: 4px;}
+    
+    .c-marker-inf { background: transparent; width: auto; font-size: 20px; color: #0f172a; }
+    .c-marker-inf .c-marker-val { bottom: 15px; color: #10b981; }
+    
+    .c-marker-hyper { height: 44px; background: #0693e3; width: 3px; z-index: 3; }
+    .c-marker-hyper .c-marker-lbl { color: #0693e3; top: 25px; }
+    
+    .c-vis-legend { display: flex; justify-content: center; gap: 20px; font-size: 12px; font-weight: 600; color: #64748b; margin-top: 30px; flex-wrap: wrap; }
+    .c-vis-dot { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: middle; }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-vis-container { padding: 20px 10px; }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="hf-calc-wrapper">
+<div class="c-body">
+<div class="c-toggle" id="mode-tabs">
+<button class="c-toggle-btn active" data-mode="hyper">Hyperfocal</button>
+<button class="c-toggle-btn" data-mode="dof">DOF<span class="c-term">with object</span></button>
+</div>
+<div class="c-divider"><span class="icon">📷</span>Optics parameters</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Matrix size<span class="c-help-icon" id="openHfInfo">?</span>
+</label>
+<select class="c-select" id="sensor">
+<option selected="" value="0.03">Full Frame (35mm)</option>
+<option value="0.02">APS-C (1.5x Crop)</option>
+<option value="0.018">Canon APS-C (1.6x Crop)</option>
+<option value="0.015">Micro 4/3</option>
+<option value="0.011">1" Sensor (Compact/Drone)</option>
+<option value="0.045">Medium Format</option>
+</select>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Focal length</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="focal" placeholder="For example: 24" type="number" value="24"/>
+<span class="c-input-suffix">mm</span>
+</div>
+<div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-target="focal" data-val="14" type="button">14 mm</button>
+<button class="c-quick-btn" data-target="focal" data-val="24" type="button">24 mm</button>
+<button class="c-quick-btn" data-target="focal" data-val="35" type="button">35 mm</button>
+<button class="c-quick-btn" data-target="focal" data-val="50" type="button">50 mm</button>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Diaphragm<span class="c-term">f/</span></label>
+<select class="c-select" id="aperture">
+<option value="1.4">f/1.4</option>
+<option value="2">f/2</option>
+<option value="2.8">f/2.8</option>
+<option value="4">f/4</option>
+<option value="5.6">f/5.6</option>
+<option selected="" value="8">f/8</option>
+<option value="11">f/11</option>
+<option value="16">f/16</option>
+<option value="22">f/22</option>
+</select>
+</div>
+</div>
+<div class="c-row is-hidden" id="distance-wrap" style="margin-top: 15px;">
+<div class="c-field" style="grid-column: 1 / -1;">
+<label class="c-label">Distance to focus subject</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="distance" placeholder="For example: 5" type="number"/>
+<span class="c-input-suffix">m</span>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-vis-container is-hidden" id="vis-box">
+<div class="c-vis-title"><span class="icon">📐</span>Visualization of the field of focus</div>
+<div class="c-scene-wrap">
+<div class="c-cam-icon">📷</div>
+<div class="c-axis"></div>
+<div class="c-dof-zone" id="vis-dof"></div>
+<div class="c-marker" id="vis-dn">
+<div class="c-marker-lbl">Start of depth of field</div>
+<div class="c-marker-val" id="lbl-dn">0 m</div>
+</div>
+<div class="c-marker" id="vis-df">
+<div class="c-marker-lbl">End of depth of field</div>
+<div class="c-marker-val" id="lbl-df">0 m</div>
+</div>
+<div class="c-marker c-marker-inf is-hidden" id="vis-inf">
+<div class="c-marker-lbl">∞</div>
+<div class="c-marker-val">Besk.</div>
+</div>
+<div class="c-marker c-marker-hyper" id="vis-hf">
+<div class="c-marker-lbl" style="background:#e0f2fe;">Focus point</div>
+<div class="c-marker-val" id="lbl-hf" style="color:#0693e3; background:#e0f2fe;">0 m</div>
+</div>
+</div>
+<div class="c-vis-legend">
+<div><span class="c-vis-dot" style="background: linear-gradient(90deg, rgba(16, 185, 129, 0.4), rgba(52, 211, 153, 0.8)); border: 1px solid #10b981;"></span>Zone of sharpness (DOF)</div>
+<div><span class="c-vis-dot" style="background:#0693e3;"></span>Hyperfocal</div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">🎯</span>Calculation results</div>
+<div class="c-res-wrap">
+<div class="c-resline c-highlight-line" id="resLineHf">
+<div class="c-resleft">Hyperfocal distance<span class="c-subtext">Focus here for max. DOF</span></div>
+<div class="c-resval" id="resHf"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Near sharpness limit<span class="c-subtext">Getting closer will be blurry</span></div>
+<div class="c-resval" id="resDn"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Far limit of sharpness<span class="c-subtext">Everything will be blurry</span></div>
+<div class="c-resval" id="resDf"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline" id="resLineTotal" style="border-bottom: none;">
+<div class="c-resleft">Overall depth of field<span class="c-subtext">Length of zone in focus</span></div>
+<div class="c-resval" id="resTotal" style="color: #10b981;"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+</div>
+<div class="c-modal-overlay" id="hfInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeHfInfo">×</button>
+<div class="c-modal-title"><span class="icon">📖</span>What is Hyperfocal?</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">
+<b>Hyperfocal distance</b>- this is the focusing distance at which the entire space from half of this distance to infinity is in the sharpness zone.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">Ideal for<b>landscape photography</b>when you need to sharpen both the foreground (flowers, stones) and the background (mountains, sky).</div>
+<div style="background: #eff6ff; padding: 12px; border-radius: 8px; border: 1px solid #bae6fd; font-size: 13px; color: #0284c7;">
+<b>Circle of Confusion (CoC)</b>depends on the matrix size. The calculator automatically takes into account the crop factor of your camera for the most accurate calculation.</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let activeMode = 'hyper';
+  let isCalculated = false;
+
+  $('#openHfInfo').addEventListener('click', () => { $('#hfInfoModal').classList.add('show'); });
+  $('#closeHfInfo').addEventListener('click', () => { $('#hfInfoModal').classList.remove('show'); });
+  $('#hfInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#hfInfoModal').classList.remove('show');
+  });
+
+  function updateModeUI() {
+      if (Math.abs(activeMode === 'dof') === 1) {
+          $('#distance-wrap').classList.remove('is-hidden');
+          $('#resLineHf').classList.remove('c-highlight-line');
+      } else {
+          $('#distance-wrap').classList.add('is-hidden');
+          $('#distance').value = '';
+          $('#resLineHf').classList.add('c-highlight-line');
+      }
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  }
+
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeMode = btn.dataset.mode;
+        updateModeUI();
+    });
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          let targetId = btn.dataset.target;
+          let val = btn.dataset.val;
+          $('#' + targetId).value = val;
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  function formatDist(m) {
+      if (Math.abs(Math.sign(m - 1000) === 1) === 1) return "∞";
+      return m.toFixed(2) + " м";
+  }
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let c = parseFloat($('#sensor').value);
+    let f = parseFloat($('#focal').value);
+    let N = parseFloat($('#aperture').value);
+    let s = parseFloat($('#distance').value);
+    
+    let isNanF = isNaN(f);
+    if (Math.abs(isNanF === true) === 1) f = 0;
+    
+    let isNanS = isNaN(s);
+    if (Math.abs(isNanS === true) === 1) s = 0;
+
+    let isErr = false;
+    let isPositiveF = false;
+    if (Math.abs(Math.sign(f) === 1) === 1) isPositiveF = true;
+    if (Math.abs(isPositiveF === false) === 1) isErr = true;
+    
+    if (Math.abs(activeMode === 'dof') === 1) {
+        let isPositiveS = false;
+        if (Math.abs(Math.sign(s) === 1) === 1) isPositiveS = true;
+        if (Math.abs(isPositiveS === false) === 1) isErr = true;
+    }
+
+    if (Math.abs(isErr === true) === 1) {
+        $('#vis-box').classList.add('is-hidden');
+        $('#resultBox').classList.remove('show');
+        if (Math.abs(shouldScroll === true) === 1) {
+            $('#errorMsg').textContent = "Укажите корректные параметры объектива";
+            $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    // Math: Hyperfocal
+    let H_mm = (f * f) / (N * c) + f;
+    let H = H_mm / 1000;
+
+    let Dn = 0;
+    let Df = 0;
+    let isInfinity = false;
+    let focusDist = 0;
+
+    if (Math.abs(activeMode === 'hyper') === 1) {
+        Dn = H / 2;
+        isInfinity = true;
+        focusDist = H;
+    } else {
+        focusDist = s;
+        let s_mm = s * 1000;
+        let dn_mm = (s_mm * (H_mm - f)) / (H_mm + s_mm - 2 * f);
+        Dn = dn_mm / 1000;
+        
+        let denom = H_mm - s_mm;
+        let isDenomPos = false;
+        if (Math.abs(Math.sign(denom) === 1) === 1) isDenomPos = true;
+        
+        if (Math.abs(isDenomPos === true) === 1) {
+            let df_mm = (s_mm * (H_mm - f)) / denom;
+            Df = df_mm / 1000;
+        } else {
+            isInfinity = true;
+        }
+    }
+
+    // Results UI
+    $('#resHf').textContent = formatDist(H);
+    $('#resDn').textContent = formatDist(Dn);
+    
+    if (Math.abs(isInfinity === true) === 1) {
+        $('#resDf').textContent = "Бесконечность";
+        $('#resTotal').textContent = "Бесконечность";
+    } else {
+        $('#resDf').textContent = formatDist(Df);
+        $('#resTotal').textContent = formatDist(Df - Dn);
+    }
+
+    // Visual UI Logic
+    let maxVisualRange = focusDist * 2;
+    let diffRange = Math.sign(H * 1.5 - maxVisualRange);
+    if (Math.abs(diffRange === 1) === 1) maxVisualRange = H * 1.5;
+    
+    if (Math.abs(isInfinity === false) === 1) {
+        let diffDf = Math.sign(Df * 1.2 - maxVisualRange);
+        if (Math.abs(diffDf === 1) === 1) maxVisualRange = Df * 1.2;
+    }
+
+    let leftOffset = 30; // padding left of track
+    let trackWidth = 100; // in percent conceptual
+    
+    function getPerc(val) {
+        let p = (val / maxVisualRange) * 100;
+        let pSign = Math.sign(p - 100);
+        if (Math.abs(pSign === 1) === 1) p = 100;
+        return p;
+    }
+
+    let pDn = getPerc(Dn);
+    let pFocus = getPerc(focusDist);
+    let pDf = 100;
+    if (Math.abs(isInfinity === false) === 1) pDf = getPerc(Df);
+
+    // Reset animations
+    let els = ['vis-dof', 'vis-dn', 'vis-df', 'vis-hf'];
+    els.forEach(id => { $('#'+id).classList.remove('animating'); void $('#'+id).offsetWidth; });
+
+    // Apply positions
+    $('#vis-dof').style.left = `calc(30px + \${pDn}% - 30px * (\${pDn} / 100))`;
+    $('#vis-dof').style.width = `calc(\${pDf - pDn}% - 30px * (\${pDf - pDn} / 100))`;
+    
+    $('#vis-dn').style.left = `calc(30px + \${pDn}% - 30px * (\${pDn} / 100))`;
+    $('#lbl-dn').textContent = formatDist(Dn);
+    
+    $('#vis-hf').style.left = `calc(30px + \${pFocus}% - 30px * (\${pFocus} / 100))`;
+    $('#lbl-hf').textContent = formatDist(focusDist);
+
+    if (Math.abs(isInfinity === true) === 1) {
+        $('#vis-df').classList.add('is-hidden');
+        $('#vis-inf').classList.remove('is-hidden');
+        $('#vis-inf').style.left = `calc(100% - 10px)`;
+    } else {
+        $('#vis-inf').classList.add('is-hidden');
+        $('#vis-df').classList.remove('is-hidden');
+        $('#vis-df').style.left = `calc(30px + \${pDf}% - 30px * (\${pDf} / 100))`;
+        $('#lbl-df').textContent = formatDist(Df);
+    }
+
+    els.forEach(id => { $('#'+id).classList.add('animating'); });
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#vis-box').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(e.target.tagName === 'SELECT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    $('#focal').value = '24';
+    $('#distance').value = '';
+    $('#aperture').value = '8';
+    $('#sensor').value = '0.03';
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      let valClean = valRaw.trim();
+      navigator.clipboard.writeText(valClean);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>For a landscape photographer, there is nothing more frustrating than coming home and discovering that the beautiful flowers in the foreground are harsh and the mountains in the background are soapy, or vice versa. <strong>Hyperfocal distance</strong> is a focal point that solves this problem.</p>
+<p>If you focus the lens at the hyperfocal distance, then the zone of sharpness (DOF) will extend from <strong>half this distance to infinity</strong>. This allows you to achieve maximum detail across the entire frame, which is critical for panoramic and landscape photography.</p>
+<p><strong>Benefits of using hyperfocal</strong></p>
+<ul class="wp-block-list">
+<li><strong>Maximum depth of field:</strong> You use the capabilities of your optics 100%.</li>
+<li><strong>Confidence in the result:</strong> You don't have to guess by eye whether a closed aperture is enough.</li>
+<li><strong>Time saving:</strong> One precise metering replaces a series of frames for focus stacking in simple conditions.</li>
+</ul>
+<h2 class="wp-block-heading" id="kak-polzovatsya-kalkulyatorom-2">How to use the calculator</h2>
+<p>Our calculator works in two modes to give you complete control over the situation.</p>
+<h3 class="wp-block-heading" id="rezhim-giperfokal-2">Hyperfocal mode</h3>
+<p>This mode is used when your main goal is to capture infinity in the area of ​​focus.</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li>Select <strong>matrix size</strong> your camera.</li>
+<li>Specify <strong>focal length</strong> lens (real, not equivalent).</li>
+<li>Select value <strong>aperture</strong>.</li>
+<li>Click "Calculate" and you will get the distance to focus on.</li>
+</ol>
+<h3 class="wp-block-heading" id="rezhim-grip-s-obektom-2">“DOF with object” mode</h3>
+<p>Use it if you have a specific subject in the foreground and you want to know the exact margins of sharpness around it. In this mode, the calculator will show the near and far boundaries, as well as the total length of the focus area.</p>
+<h2 class="wp-block-heading" id="formuly-i-matematika-rezkosti-2">Formulas and mathematics of sharpness</h2>
+<p>The calculation is based on optical laws and the concept of “Circle of Confusion”. The smaller the matrix, the smaller the circle of dispersion must be for the image to appear clear to us.</p>
+<p>The basic formula for the $H$ hyperfocal distance is as follows:</p>
+<p>$$H = \frac{f^2}{N \cdot c} + f$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $f$ — lens focal length (in mm);</li>
+<li> $N$ - aperture value (f-number);</li>
+<li> $c$ - circle limit (depending on the sensor).</li>
+</ul>
+<p>Knowing $H$ , you can easily calculate the near limit of sharpness $D_n$ for any focusing distance $s$ :</p>
+<p>$$D_n = \frac{s \cdot (H — f)}{H + s — 2f}$$</p>
+<h2 class="wp-block-heading" id="parametry-sensorov-i-kruzhok-rasseyaniya-2">Sensor parameters and scattering circle</h2>
+<p>The table below shows the standard Circle of Concussion (CoC) values ​​that our calculator uses for calculations depending on the type of camera you have:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Sensor type</strong></td><td><strong>Crop factor</strong></td><td><strong>Dispersion circle (mm)</strong></td></tr></thead><tbody><tr><td><strong>Full Frame</strong></td><td>1.0x</td><td>0.030</td></tr><tr><td><strong>APS-C (Nikon/Sony/Fuji)</strong></td><td>1.5x</td><td>0.020</td></tr><tr><td><strong>APS-C (Canon)</strong></td><td>1.6x</td><td>0.018</td></tr><tr><td><strong>Micro 4/3</strong></td><td>2.0x</td><td>0.015</td></tr><tr><td><strong>1″ Sensor (Drones/Compacts)</strong></td><td>2.7x</td><td>0.011</td></tr><tr><td><strong>Medium format</strong></td><td>0.79x</td><td>0.045</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="prakticheskie-sovety-dlya-rezkih-snimkov-2">Practical tips for sharp photos</h2>
+<p>To ensure your photos are technically flawless, follow these guidelines:</p>
+<ul class="wp-block-list">
+<li><strong>Don't close your aperture all the way down.</strong> At values ​​ $f/16$ or $f/22$ , a diffraction effect occurs, which makes the picture less clear. It is optimal to use $f/8$ or $f/11$ .</li>
+<li><strong>Focus a little further.</strong> If you make a mistake and focus closer than the hyperfocal distance, infinity will “fly out” of sharpness. It is better to focus 10-20 cm further than the calculated point.</li>
+<li><strong>Consider the crop factor.</strong> The physical focal length written on the lens barrel is always substituted into the formula. Our calculator will automatically adjust the calculations based on the selected matrix.</li>
+<li><strong>Use a tripod.</strong> Hyperfocal calculations often require closed apertures, which leads to long shutter speeds.</li>
+</ul>
+<p>This tool replaces the bulky charts that photographers used to carry in their bags. Now you just need to enter the parameters and get the exact result in a second.</p>
+</div>
+    </div>
+</body>
+</html>

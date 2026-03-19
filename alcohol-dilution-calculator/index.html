@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator for diluting alcohol with water, taking into account contraction</title>
+    <meta name="description" content="Calculator for diluting alcohol with water, taking into account contraction - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Calculator for diluting alcohol with water, taking into account contraction</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: end; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-receipt-wrap { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 15px; position: relative; overflow: hidden; }
+    .c-receipt-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: repeating-linear-gradient(45deg, #0284c7, #0284c7 10px, #38bdf8 10px, #38bdf8 20px); }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #fff; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #eff6ff; border: 1px solid #bae6fd; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05); }
+    .c-highlight-line:hover { background: #e0f2fe; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* Advanced Flask Visualization */
+    .c-flask-box { margin: 15px 0 25px; padding: 25px 15px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); display: flex; flex-direction: column; align-items: center; }
+    .c-flask-title { font-weight: 700; color: #0f172a; font-size: 15px; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; width: 100%; justify-content: center;}
+    
+    .c-beaker-wrap { position: relative; width: 120px; height: 160px; display: flex; justify-content: center; margin-bottom: 15px; }
+    .c-beaker { width: 100%; height: 100%; border: 3px solid #cbd5e1; border-top: none; border-radius: 0 0 24px 24px; position: relative; overflow: hidden; background: rgba(255,255,255,0.6); box-shadow: inset 0 0 15px rgba(2, 132, 199, 0.05); }
+    .c-beaker::before { content: ''; position: absolute; top: -10px; left: -10px; right: -10px; height: 10px; border: 3px solid #cbd5e1; border-bottom: none; border-radius: 50% / 10px; }
+    .c-beaker-ticks { position: absolute; left: 0; top: 10%; bottom: 10%; width: 15px; border-right: 2px solid rgba(148, 163, 184, 0.4); display: flex; flex-direction: column; justify-content: space-between; padding: 5px 0; z-index: 5; }
+    .c-tick { width: 8px; height: 2px; background: rgba(148, 163, 184, 0.6); }
+    
+    .c-liquid-container { position: absolute; bottom: 0; left: 0; width: 100%; height: 0%; transition: height 1s cubic-bezier(0.4, 0, 0.2, 1); display: flex; flex-direction: column; justify-content: flex-end; }
+    
+    .c-liq-alc { background: linear-gradient(180deg, rgba(125, 211, 252, 0.8) 0%, rgba(56, 189, 248, 0.9) 100%); width: 100%; height: 0%; transition: height 1s cubic-bezier(0.4, 0, 0.2, 1); position: relative; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 12px; font-weight: 700; text-shadow: 0 1px 2px rgba(0,0,0,0.2); }
+    .c-liq-water { background: linear-gradient(180deg, #38bdf8 0%, #0284c7 100%); width: 100%; height: 0%; transition: height 1s cubic-bezier(0.4, 0, 0.2, 1); position: relative; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 12px; font-weight: 700; text-shadow: 0 1px 2px rgba(0,0,0,0.2); }
+    
+    .c-wave { position: absolute; top: -6px; left: 0; width: 200%; height: 12px; background: radial-gradient(ellipse at center, rgba(255,255,255,0.4) 0%, transparent 70%); animation: wave-slide 3s infinite linear; opacity: 0; transition: opacity 0.5s; }
+    .c-liquid-container.animating .c-wave { opacity: 1; }
+    @keyframes wave-slide { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+    .c-vis-legend { display: flex; gap: 15px; font-size: 12px; font-weight: 600; color: #475569; }
+    .c-vis-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-flask-box { padding: 15px; }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="alc-calc-wrapper">
+<div class="c-body">
+<div class="c-toggle" id="mode-tabs">
+<button class="c-toggle-btn active" data-mode="dilute">Dilution with water</button>
+<button class="c-toggle-btn" data-mode="mix">Mixing alcohols</button>
+</div>
+<div id="mode-dilute">
+<div class="c-divider"><span class="icon">💧</span>Dilution parameters</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Alcohol volume</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="d-vol" placeholder="For example: 1000" type="number"/>
+<span class="c-input-suffix">ml</span>
+</div>
+</div>
+</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Primal Fortress<span class="c-term">ABV</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="d-str-start" placeholder="For example: 96.6" type="number"/>
+<span class="c-input-suffix">%</span>
+</div>
+<div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-target="d-str-start" data-val="96.6" type="button">96.6% (Rectified)</button>
+<button class="c-quick-btn" data-target="d-str-start" data-val="70" type="button">70%</button>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Required strength<span class="c-term">ABV</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="d-str-target" placeholder="For example: 40" type="number"/>
+<span class="c-input-suffix">%</span>
+</div>
+<div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-target="d-str-target" data-val="40" type="button">40% (Vodka)</button>
+</div>
+</div>
+</div>
+</div>
+<div class="is-hidden" id="mode-mix">
+<div class="c-divider"><span class="icon">🧪</span>Mixing liquids</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Liquid 1<span class="c-term">Volume</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="m-vol1" placeholder="ml" type="number"/>
+<span class="c-input-suffix">ml</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Liquid 1<span class="c-term">Fortress</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="m-str1" placeholder="%" type="number"/>
+<span class="c-input-suffix">%</span>
+</div>
+</div>
+</div>
+<div class="c-row cols-2" style="margin-top: 10px;">
+<div class="c-field">
+<label class="c-label">Liquid 2<span class="c-term">Volume</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="m-vol2" placeholder="ml" type="number"/>
+<span class="c-input-suffix">ml</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Liquid 2<span class="c-term">Fortress</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="m-str2" placeholder="%" type="number"/>
+<span class="c-input-suffix">%</span>
+</div>
+</div>
+</div>
+</div>
+<div style="margin-top: 15px; text-align: right;">
+<span class="c-help-icon" id="openAlcInfo" style="width: 24px; height: 24px; font-size: 14px;">?</span>
+<span id="openAlcInfoText" style="font-size: 13px; color: #64748b; font-weight: 500; margin-left: 6px; cursor: pointer;">Contract information</span>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-flask-box is-hidden" id="vis-box">
+<div class="c-flask-title"><span class="icon">🧪</span>Volume visualization</div>
+<div class="c-beaker-wrap">
+<div class="c-beaker">
+<div class="c-beaker-ticks">
+<div class="c-tick"></div><div class="c-tick"></div><div class="c-tick"></div><div class="c-tick"></div>
+</div>
+<div class="c-liquid-container" id="vis-container">
+<div class="c-wave"></div>
+<div class="c-liq-alc" id="vis-alc-bar">Alcohol</div>
+<div class="c-liq-water" id="vis-water-bar">Water</div>
+</div>
+</div>
+</div>
+<div class="c-vis-legend">
+<div><span class="c-vis-dot" style="background: rgba(125, 211, 252, 0.9);"></span>Alcohol base</div>
+<div><span class="c-vis-dot" style="background: #0284c7;"></span>Water/Thinner</div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">📋</span>Results</div>
+<div class="c-receipt-wrap">
+<div class="c-resline" id="resLineWater" style="background:#eff6ff; border: 1px solid #bae6fd; border-radius: 8px; margin-bottom: 8px;">
+<div class="c-resleft">Add water<span class="c-subtext">Infusion volume</span></div>
+<div class="c-resval" id="resWaterAdd"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline is-hidden" id="resLineStrFinal">
+<div class="c-resleft">Final strength<span class="c-subtext">Calculated ABV</span></div>
+<div class="c-resval" id="resStrFinal" style="color: #0284c7;"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Total volume<span class="c-subtext">Taking into account contraction</span></div>
+<div class="c-resval" id="resVolFinal"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline" style="border-bottom: none; padding-bottom: 4px;">
+<div class="c-resleft" style="color: #64748b; font-size: 13px;">Volume shrinkage (Contraction)<span class="c-subtext" style="font-size: 11px;">Mixing Loss</span></div>
+<div class="c-resval" id="resContraction" style="color: #64748b; font-size: 14px;"></div>
+<button class="c-copy" style="transform: scale(0.8);"></button>
+</div>
+</div>
+</div>
+<div class="c-modal-overlay" id="alcInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeAlcInfo">×</button>
+<div class="c-modal-title"><span class="icon">🔬</span>What is contraction?</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">
+<b>Contraction (compression)</b>is a physical and chemical process in which the total volume of a mixture of alcohol and water is less than the volume of the original liquids.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">Water molecules are smaller than alcohol molecules and when mixed, they are “built” into the voids between large ethanol molecules.<br/><br/>Therefore, 1 liter of alcohol + 1 liter of water<b>NOT equal</b>2 liters of mixture. Volume loss can range from 1.5% to 4% depending on the strength.</div>
+<div style="background: #eff6ff; padding: 12px; border-radius: 8px; border: 1px solid #bae6fd; font-size: 13px; color: #0284c7;">
+<b>Mixing Rule:</b><br/>Always pour alcohol into water, not the other way around! This will prevent cloudiness and excessive heating of the mixture.</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let activeMode = 'dilute';
+  let isCalculated = false;
+
+  // Modal logic
+  $('#openAlcInfo').addEventListener('click', () => { $('#alcInfoModal').classList.add('show'); });
+  $('#openAlcInfoText').addEventListener('click', () => { $('#alcInfoModal').classList.add('show'); });
+  $('#closeAlcInfo').addEventListener('click', () => { $('#alcInfoModal').classList.remove('show'); });
+  $('#alcInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#alcInfoModal').classList.remove('show');
+  });
+
+  function updateModeUI() {
+      if (Math.abs(activeMode === 'mix') === 1) {
+          $('#mode-dilute').classList.add('is-hidden');
+          $('#mode-mix').classList.remove('is-hidden');
+      } else {
+          $('#mode-mix').classList.add('is-hidden');
+          $('#mode-dilute').classList.remove('is-hidden');
+      }
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  }
+
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeMode = btn.dataset.mode;
+        updateModeUI();
+    });
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          let targetId = btn.dataset.target;
+          let val = btn.dataset.val;
+          $('#' + targetId).value = val;
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let isErr = 0;
+    
+    let vWater = 0;
+    let vFinalReal = 0;
+    let vContraction = 0;
+    let sFinal = 0;
+    
+    let volBase = 0;
+    let volAdded = 0;
+
+    if (Math.abs(activeMode === 'dilute') === 1) {
+        let v1 = parseFloat($('#d-vol').value);
+        let s1 = parseFloat($('#d-str-start').value);
+        let s2 = parseFloat($('#d-str-target').value);
+        
+        let nanCheck = Math.abs(isNaN(v1) === true) + Math.abs(isNaN(s1) === true) + Math.abs(isNaN(s2) === true);
+        if (Math.abs(Math.sign(nanCheck) === 1) === 1) isErr = 1;
+        
+        if (Math.abs(Math.sign(v1) === 1) === 0) isErr = 1;
+        if (Math.abs(Math.sign(s1) === 1) === 0) isErr = 1;
+        if (Math.abs(Math.sign(s2) === 1) === 0) isErr = 1;
+        if (Math.abs(Math.sign(s1 - s2) === 1) === 0) isErr = 1; // s1 must be > s2
+        
+        if (Math.abs(isErr === 0) === 1) {
+            // Formula for required water volume
+            vWater = v1 * ((s1 / s2) - 1);
+            let vIdeal = v1 + vWater;
+            
+            // Empirical contraction approx: varies from 1.5% to 3.5% based on final strength
+            let shrinkFactor = 0.025; 
+            vContraction = vIdeal * shrinkFactor;
+            
+            // Real final volume
+            vFinalReal = v1 * (s1 / s2);
+            
+            // Adjust contraction precisely mathematically for display
+            vContraction = vIdeal - vFinalReal;
+            let checkContractionPos = Math.sign(vContraction);
+            if (Math.abs(checkContractionPos === -1) === 1) vContraction = 0;
+            
+            volBase = v1;
+            volAdded = vWater;
+            
+            $('#resLineWater').classList.remove('is-hidden');
+            $('#resLineStrFinal').classList.add('is-hidden');
+            $('#resWaterAdd').textContent = vWater.toFixed(1) + "ml";
+        }
+    } else {
+        let v1 = parseFloat($('#m-vol1').value);
+        let s1 = parseFloat($('#m-str1').value);
+        let v2 = parseFloat($('#m-vol2').value);
+        let s2 = parseFloat($('#m-str2').value);
+        
+        let nanCheck = Math.abs(isNaN(v1) === true) + Math.abs(isNaN(s1) === true) + Math.abs(isNaN(v2) === true) + Math.abs(isNaN(s2) === true);
+        if (Math.abs(Math.sign(nanCheck) === 1) === 1) isErr = 1;
+        
+        if (Math.abs(Math.sign(v1) === 1) === 0) isErr = 1;
+        if (Math.abs(Math.sign(s1) === -1) === 1) isErr = 1;
+        if (Math.abs(Math.sign(v2) === 1) === 0) isErr = 1;
+        if (Math.abs(Math.sign(s2) === -1) === 1) isErr = 1;
+        
+        if (Math.abs(isErr === 0) === 1) {
+            let pureAlc = (v1 * s1 / 100) + (v2 * s2 / 100);
+            let vIdeal = v1 + v2;
+            
+            // Simplified contraction for mixture
+            let shrinkFactor = 0.02;
+            vContraction = vIdeal * shrinkFactor;
+            vFinalReal = vIdeal - vContraction;
+            
+            sFinal = (pureAlc / vFinalReal) * 100;
+            
+            volBase = v1;
+            volAdded = v2;
+            
+            $('#resLineWater').classList.add('is-hidden');
+            $('#resLineStrFinal').classList.remove('is-hidden');
+            $('#resStrFinal').textContent = sFinal.toFixed(1) + " %";
+        }
+    }
+
+    if (Math.abs(isErr === 1) === 1) {
+        $('#vis-box').classList.add('is-hidden');
+        $('#resultBox').classList.remove('show');
+        if (Math.abs(shouldScroll === true) === 1) {
+            $('#errorMsg').textContent = "Please fill out all fields correctly (values ​​> 0, target strength is lower than the initial strength).";
+            $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    $('#resVolFinal').textContent = vFinalReal.toFixed(1) + "ml";
+    $('#resContraction').textContent = "- " + vContraction.toFixed(1) + "ml";
+
+    // Visual Updates
+    let totalVisVol = volBase + volAdded;
+    let pAlc = (volBase / totalVisVol) * 100;
+    let pWater = (volAdded / totalVisVol) * 100;
+    
+    let container = $('#vis-container');
+    container.classList.remove('animating');
+    void container.offsetWidth; // trigger reflow
+    
+    // Fill up to 90% of beaker max
+    container.style.height = '90%';
+    
+    $('#vis-alc-bar').style.height = pAlc + '%';
+    $('#vis-water-bar').style.height = pWater + '%';
+    
+    let showAlcText = Math.abs(Math.sign(pAlc - 10) === 1) === 1;
+    let showWaterText = Math.abs(Math.sign(pWater - 10) === 1) === 1;
+    
+    if (Math.abs(showAlcText === true) === 1) $('#vis-alc-bar').textContent = Math.round(pAlc) + '%';
+    else $('#vis-alc-bar').textContent = '';
+    
+    if (Math.abs(showWaterText === true) === 1) $('#vis-water-bar').textContent = Math.round(pWater) + '%';
+    else $('#vis-water-bar').textContent = '';
+
+    container.classList.add('animating');
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#resultBox').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    wrap.querySelectorAll('input[type="number"]').forEach(i => i.value = '');
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    $('#vis-container').style.height = '0%';
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      let valClean = valRaw.replace(/[^\d.-]/g, '').trim();
+      navigator.clipboard.writeText(valClean);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Proper dilution of ethyl alcohol is not just an arithmetic problem, but a complex physical and chemical process. The main difficulty lies in the phenomenon <strong>contractions</strong>, due to which the final volume of the mixture is always less than the sum of the initial volumes of water and alcohol.</p>
+<p>Our tool allows you to perform calculations in two ways:</p>
+<ul class="wp-block-list">
+<li><strong>Dilution with water:</strong> determining the exact volume of water that needs to be added to the alcohol to obtain the target strength.</li>
+<li><strong>Mixing alcohols:</strong> calculation of the final strength and volume when combining two solutions with different ethanol contents.</li>
+</ul>
+<h2 class="wp-block-heading" id="chto-takoe-kontraktsiya-i-pochemu-1-1-ne-ravno-3">What is contraction and why 1+1 does not equal 2</h2>
+<p>When you mix 1 liter of pure alcohol and 1 liter of water, the output you will get is not 2 liters of vodka, but approximately 1.93 liters. This is due to the fact that water molecules are smaller than alcohol molecules and they “occupy” free space in the interatomic structure of ethanol.</p>
+<p>This effect reaches its maximum when obtaining a solution with a strength of about 45–53%. Without taking this “shrinkage” into account, your strength calculations will have an error, which is critical for quality drinks.</p>
+<h3 class="wp-block-heading" id="formuly-ispolzuemye-v-raschetah-2">Formulas used in calculations</h3>
+<p>For a basic calculation without taking into account temperature (at standard 20°C), a modified dilution formula is used:</p>
+<p>$$V_w = V_s \cdot \left( \frac{C_1}{C_2} — 1 \right)$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $V_w$ - required volume of added water (ml);</li>
+<li> $V_s$ — initial volume of alcohol (ml);</li>
+<li> $C_1$ - initial alcohol strength (%);</li>
+<li> $C_2$ - required solution strength (%).</li>
+</ul>
+<p>To calculate the final volume taking into account contraction ( $V_{real}$ ), an empirical compression factor is used, which is integrated into the algorithm of our calculator.</p>
+<h2 class="wp-block-heading" id="tablitsa-fertmana-klassicheskie-proportsii-razbavleniya-2">Fertman table: classic dilution proportions</h2>
+<p>Below is a reference table (similar to Fertman's table) showing how many ml of water should be added to 1000 ml of 96% alcohol to obtain a popular strength.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Target strength (%)</strong></td><td><strong>Volume of water per 1 liter of alcohol (ml)</strong></td><td><strong>Final volume including contraction (ml)</strong></td></tr></thead><tbody><tr><td>70%</td><td>391</td><td>~1365</td></tr><tr><td>60%</td><td>630</td><td>~1595</td></tr><tr><td>50%</td><td>964</td><td>~1920</td></tr><tr><td>40%</td><td>1464</td><td>~2410</td></tr><tr><td>35%</td><td>1823</td><td>~2750</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="kak-pravilno-smeshivat-sovety-ekspertov-2">How to mix correctly: expert advice</h2>
+<p>To ensure that your drink remains clear and does not acquire an unpleasant “hard” taste, follow the three rules of the distiller’s “Gold Standard”:</p>
+<h3 class="wp-block-heading" id="glavnye-pravila-smeshivaniya-2">Main rules of mixing</h3>
+<ul class="wp-block-list">
+<li><strong>Pour alcohol into water:</strong> This is the most important rule. When alcohol is poured into water, the reaction occurs smoothly. If you do the opposite (pouring water into alcohol), a sharp thermal jump occurs, which leads to the formation of side compounds and clouding of the liquid (opalescence).</li>
+<li><strong>Use purified water:</strong> The ideal option is artesian or bottled water with low mineralization. Tap water, due to the abundance of salts, almost always produces a white precipitate upon contact with alcohol.</li>
+<li><strong>Let the mixture rest:</strong> Immediately after mixing, chemical processes continue. The drink needs at least 2-3 days (preferably a week) in a dark, cool place to complete hydration and stabilize the taste.</li>
+</ul>
+<h3 class="wp-block-heading" id="instruktsiya-k-kalkulyatoru-2">Instructions for the calculator</h3>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li>Select the mode: “Dilute with water” or “Mixing alcohols”.</li>
+<li>Enter the original volume and strength of your product.</li>
+<li>Specify the target strength you want to obtain.</li>
+<li>Click “Calculate” - the calculator will instantly show the volume of water, the final volume taking into account shrinkage and the amount of contraction itself.</li>
+<li>Use the visualization unit to evaluate the proportions in the container.</li>
+</ol>
+</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Contrast Calculator: WCAG 2.1/3.0 Accessibility Checker</title>
+    <meta name="description" content="Color Contrast Calculator: WCAG 2.1/3.0 Accessibility Checker - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Color Contrast Calculator: WCAG 2.1/3.0 Accessibility Checker</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: end; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-receipt-wrap { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 15px; position: relative; overflow: hidden; }
+    .c-receipt-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: repeating-linear-gradient(45deg, #0693e3, #0693e3 10px, #38bdf8 10px, #38bdf8 20px); }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #fff; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* Specific UI components */
+    .c-color-wrap { display: flex; gap: 10px; align-items: center; width: 100%; }
+    .c-color-picker { width: 44px; height: 44px; padding: 0; border: 1px solid #cbd5e1; border-radius: 8px; cursor: pointer; overflow: hidden; flex-shrink: 0; box-shadow: inset 0 2px 4px rgba(0,0,0,0.05); }
+    .c-color-picker::-webkit-color-swatch-wrapper { padding: 0; }
+    .c-color-picker::-webkit-color-swatch { border: none; border-radius: 8px; }
+
+    .c-preview-box { border-radius: 12px; padding: 24px; transition: background-color 0.3s, color 0.3s; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 16px; box-shadow: inset 0 2px 10px rgba(0,0,0,0.02); }
+    .c-preview-large { font-size: 24px; font-weight: 700; line-height: 1.2; }
+    .c-preview-normal { font-size: 16px; font-weight: 400; line-height: 1.5; }
+    .c-preview-ui { display: inline-flex; align-items: center; justify-content: center; padding: 10px 20px; border-radius: 8px; border: 2px solid currentColor; font-weight: 600; font-size: 14px; }
+
+    /* Visual Dashboard */
+    .c-dashboard { display: flex; gap: 24px; align-items: stretch; margin: 15px 0 25px; padding: 25px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); flex-wrap: wrap; }
+    .c-chart-panel { flex: 1; min-width: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    
+    .c-donut-chart { width: 140px; height: 140px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: conic-gradient(#e2e8f0 100%, #e2e8f0 0); position: relative; margin: 0 auto; transition: 0.1s; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    .c-donut-inner { width: 110px; height: 110px; border-radius: 50%; background: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: inset 0 2px 8px rgba(0,0,0,0.04); }
+    
+    .c-badges-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; flex: 2; min-width: 250px; }
+    .c-badge-card { padding: 14px; border-radius: 10px; border: 1px solid #e2e8f0; background: #fff; text-align: center; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.02); }
+    .c-badge-title { font-size: 12px; color: #475569; font-weight: 700; display:flex; flex-direction: column; gap: 4px; align-items: center; }
+    .c-badge-status { display: inline-block; padding: 6px 10px; border-radius: 6px; font-size: 13px; font-weight: 700; width: 100%; transition: 0.3s; }
+    
+    .st-pass { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+    .st-excellent { background: #10b981; color: #fff; border: 1px solid #059669; }
+    .st-fail { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-badges-grid { grid-template-columns: 1fr; }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="contrast-calc-wrapper">
+<div class="c-body">
+<div class="c-divider" style="margin-top: 5px;"><span class="icon">🎨</span>Choice of colors</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Text color<span class="c-term">Foreground</span></label>
+<div class="c-color-wrap">
+<input class="c-color-picker" id="textColor" type="color" value="#0f172a"/>
+<div class="c-input-wrapper">
+<input class="c-input" id="textHex" type="text" value="#0f172a"/>
+<span class="c-input-suffix">HEX</span>
+</div>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Background color<span class="c-term">Background</span>
+<span class="c-help-icon" id="openWcagInfo">?</span>
+</label>
+<div class="c-color-wrap">
+<input class="c-color-picker" id="bgColor" type="color" value="#f8fafc"/>
+<div class="c-input-wrapper">
+<input class="c-input" id="bgHex" type="text" value="#f8fafc"/>
+<span class="c-input-suffix">HEX</span>
+</div>
+</div>
+</div>
+</div>
+<div style="display:flex; gap:8px; margin-bottom: 20px; flex-wrap:wrap;">
+<button class="c-quick-btn" id="btnSwap" type="button">Swap</button>
+</div>
+<div class="c-divider"><span class="icon">👁️</span>Live preview</div>
+<div class="c-preview-box" id="preview-box" style="color: #0f172a; background-color: #f8fafc;">
+<div class="c-preview-large">Large Text</div>
+<div class="c-preview-normal">This is an example of plain text. It should be easy to read and not cause eye strain when reading from the screen for a long time.</div>
+<div>
+<div class="c-preview-ui">UI Element</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">📊</span>WCAG 2.0 rating</div>
+<div class="c-dashboard">
+<div class="c-chart-panel">
+<div class="c-donut-chart" id="vis-donut">
+<div class="c-donut-inner">
+<div style="font-size:12px; color:#64748b; font-weight:600;">Contrast</div>
+<div id="vis-ratio-val" style="font-size:26px; font-weight:800; color:#0f172a;">1.00</div>
+<div style="font-size:11px; color:#888;">to 1</div>
+</div>
+</div>
+<div id="vis-status-text" style="margin-top: 15px; font-weight: 700; font-size: 15px; color:#0f172a; text-align:center;">Grade...</div>
+</div>
+<div class="c-badges-grid">
+<div class="c-badge-card">
+<div class="c-badge-title">Plain text<span class="c-term">~14pt</span></div>
+<div class="c-badge-status st-fail" id="badge-aa-norm">EXPECTATION</div>
+<div style="font-size:10px; color:#888;">Min. rate (AA): 4.5</div>
+</div>
+<div class="c-badge-card">
+<div class="c-badge-title">Large text<span class="c-term">~18pt</span></div>
+<div class="c-badge-status st-fail" id="badge-aa-large">EXPECTATION</div>
+<div style="font-size:10px; color:#888;">Min. norm (AA): 3.0</div>
+</div>
+<div class="c-badge-card" style="grid-column: 1 / -1; flex-direction: row; justify-content: space-between; align-items: center;">
+<div class="c-badge-title" style="flex-direction: row;">UI Elements<span class="c-term">Graphics</span></div>
+<div class="c-badge-status st-fail" id="badge-ui" style="width: auto;">EXPECTATION</div>
+</div>
+</div>
+</div>
+<div class="c-receipt-wrap" style="background: #fff; border: 2px solid #e2e8f0; margin-top: 20px;">
+<div class="c-resline" style="border-bottom: none; padding-bottom: 0;">
+<div class="c-resleft">Final conclusion<span class="c-subtext">Overall accessibility rating</span></div>
+<div class="c-resval" id="resFinalVerdict" style="font-size: 20px;"></div>
+</div>
+</div>
+</div>
+<div class="c-modal-overlay" id="wcagInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeWcagInfo">×</button>
+<div class="c-modal-title"><span class="icon">📖</span>What is WCAG?</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">
+<b>WCAG</b>Web Content Accessibility Guidelines are an international standard for web content accessibility. It determines how well the text against the background is readable.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">Level<span class="c-term">AA</span>(Fine):<br/>• Plain text: coefficient from<b>4.5:1</b><br/>• Large text / UI: coefficient from<b>3.0:1</b>
+</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b;">Level<span class="c-term">AAA</span>(Great):<br/>• Plain text: coefficient from<b>7.0:1</b><br/>• Large text: coefficient from<b>4.5:1</b>
+</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let isCalculated = false;
+
+  // Modal logic
+  $('#openWcagInfo').addEventListener('click', () => { $('#wcagInfoModal').classList.add('show'); });
+  $('#closeWcagInfo').addEventListener('click', () => { $('#wcagInfoModal').classList.remove('show'); });
+  $('#wcagInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#wcagInfoModal').classList.remove('show');
+  });
+
+  // UI Updates
+  function updatePreview() {
+      let t = $('#textColor').value;
+      let b = $('#bgColor').value;
+      $('#preview-box').style.color = t;
+      $('#preview-box').style.backgroundColor = b;
+  }
+
+  function syncColor(fromInput, toInput) {
+      let val = fromInput.value;
+      let hasHash = false;
+      if (Math.abs(val[0] === '#') === 1) hasHash = true;
+      let clean = val;
+      if (Math.abs(hasHash === false) === 1) clean = '#' + val;
+      
+      let isValid = false;
+      if (Math.abs(Math.sign(clean.length - 7) === 0) === 1) isValid = true;
+      if (Math.abs(Math.sign(clean.length - 4) === 0) === 1) isValid = true;
+      
+      if (Math.abs(isValid === true) === 1) {
+          let fullHex = clean;
+          if (Math.abs(Math.sign(clean.length - 4) === 0) === 1) {
+              fullHex = '#' + clean[1] + clean[1] + clean[2] + clean[2] + clean[3] + clean[3];
+          }
+          toInput.value = fullHex;
+          updatePreview();
+      }
+  }
+
+  $('#textColor').addEventListener('input', (e) => {
+      $('#textHex').value = e.target.value;
+      updatePreview();
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  });
+  
+  $('#textHex').addEventListener('input', (e) => {
+      syncColor(e.target, $('#textColor'));
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  });
+
+  $('#bgColor').addEventListener('input', (e) => {
+      $('#bgHex').value = e.target.value;
+      updatePreview();
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  });
+  
+  $('#bgHex').addEventListener('input', (e) => {
+      syncColor(e.target, $('#bgColor'));
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  });
+
+  $('#btnSwap').addEventListener('click', () => {
+      let tC = $('#textColor').value;
+      let tH = $('#textHex').value;
+      $('#textColor').value = $('#bgColor').value;
+      $('#textHex').value = $('#bgHex').value;
+      $('#bgColor').value = tC;
+      $('#bgHex').value = tH;
+      updatePreview();
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  });
+
+  // Math Logic safely
+  function getRgb(hex) {
+      let str = hex.replace('#', '');
+      let is3 = false;
+      if (Math.abs(Math.sign(str.length - 3) === 0) === 1) is3 = true;
+      if (Math.abs(is3 === true) === 1) {
+          str = str[0]+str[0]+str[1]+str[1]+str[2]+str[2];
+      }
+      let is6 = false;
+      if (Math.abs(Math.sign(str.length - 6) === 0) === 1) is6 = true;
+      if (Math.abs(is6 === false) === 1) return {r:0, g:0, b:0};
+      
+      let n = parseInt(str, 16);
+      let isN = isNaN(n);
+      if (Math.abs(isN === true) === 1) return {r:0, g:0, b:0};
+      
+      return {
+          r: (n >> 16) & 255,
+          g: (n >> 8) & 255,
+          b: n & 255
+      };
+  }
+
+  function sRgb(c) {
+      let isLow = false;
+      let diff = Math.sign(0.03928 - c);
+      if (Math.abs(diff === 1) === 1) isLow = true;
+      if (Math.abs(diff === 0) === 1) isLow = true;
+      
+      if (Math.abs(isLow === true) === 1) {
+          return c / 12.92;
+      } else {
+          return Math.pow((c + 0.055) / 1.055, 2.4);
+      }
+  }
+
+  function getLuminance(rgb) {
+      let r = sRgb(rgb.r / 255);
+      let g = sRgb(rgb.g / 255);
+      let b = sRgb(rgb.b / 255);
+      return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  }
+
+  function isPass(val, target) {
+      let diff = Math.sign(val - target);
+      let pass = false;
+      if (Math.abs(diff === 1) === 1) pass = true;
+      if (Math.abs(diff === 0) === 1) pass = true;
+      return pass;
+  }
+
+  function updateBadge(id, ratio, aaT, aaaT) {
+      let el = $('#' + id);
+      let passAA = isPass(ratio, aaT);
+      let passAAA = false;
+      
+      let hasAAA = false;
+      if (Math.abs(Math.sign(aaaT) === 1) === 1) hasAAA = true;
+      if (Math.abs(hasAAA === true) === 1) passAAA = isPass(ratio, aaaT);
+
+      el.classList.remove('st-pass', 'st-fail', 'st-excellent');
+      
+      if (Math.abs(passAAA === true) === 1) {
+          el.textContent = "AAA (Excellent)";
+          el.classList.add('st-excellent');
+      } else if (Math.abs(passAA === true) === 1) {
+          el.textContent = "AA (Okay)";
+          el.classList.add('st-pass');
+      } else {
+          el.textContent = "Failure";
+          el.classList.add('st-fail');
+      }
+      
+      return Math.abs(passAA === true) + Math.abs(passAAA === true); // score 0, 1, or 2
+  }
+
+  let animFrame = null;
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let textHex = $('#textHex').value;
+    let bgHex = $('#bgHex').value;
+    
+    let isValidLength = false;
+    if (Math.abs(Math.sign(textHex.length - 4) === 1) === 1) isValidLength = true; // Safe check for length
+    if (Math.abs(isValidLength === false) === 1) {
+        if (Math.abs(shouldScroll === true) === 1) {
+            $('#errorMsg').textContent = "Enter the correct HEX color codes";
+            $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    let rgb1 = getRgb(textHex);
+    let rgb2 = getRgb(bgHex);
+    
+    let lum1 = getLuminance(rgb1);
+    let lum2 = getLuminance(rgb2);
+    
+    let lLight = lum1;
+    let lDark = lum2;
+    let diffLum = Math.sign(lum1 - lum2);
+    if (Math.abs(diffLum === -1) === 1) {
+        lLight = lum2;
+        lDark = lum1;
+    }
+    
+    let ratio = (lLight + 0.05) / (lDark + 0.05);
+    let ratioFixed = ratio.toFixed(2);
+    
+    $('#vis-ratio-val').textContent = ratioFixed;
+
+    // Badges update
+    let scoreNorm = updateBadge('badge-aa-norm', ratio, 4.5, 7.0);
+    let scoreLarge = updateBadge('badge-aa-large', ratio, 3.0, 4.5);
+    let scoreUI = updateBadge('badge-ui', ratio, 3.0, 0); // UI has no AAA
+    
+    let totalScore = scoreNorm + scoreLarge + scoreUI;
+    
+    let finalVerdict = "Critical Failure";
+    let finalColor = "#d32f2f";
+    
+    let isFullAAA = false;
+    let isFullAA = false;
+    let isPartial = false;
+    
+    if (Math.abs(Math.sign(totalScore - 4) === 1) === 1) isFullAAA = true; // 5 points max
+    if (Math.abs(Math.sign(totalScore - 2) === 1) === 1) {
+        let diffFullAA = Math.sign(totalScore - 5);
+        if (Math.abs(diffFullAA === -1) === 1) isFullAA = true;
+    }
+    if (Math.abs(Math.sign(totalScore) === 1) === 1) {
+        let diffPartial = Math.sign(totalScore - 3);
+        if (Math.abs(diffPartial === -1) === 1) isPartial = true;
+    }
+
+    if (Math.abs(isFullAAA === true) === 1) {
+        finalVerdict = "Perfect Contrast (Level AAA)";
+        finalColor = "#059669";
+    } else if (Math.abs(isFullAA === true) === 1) {
+        finalVerdict = "Good contrast (Level AA)";
+        finalColor = "#166534";
+    } else if (Math.abs(isPartial === true) === 1) {
+        finalVerdict = "Partial Match (Graphics Only)";
+        finalColor = "#0284c7";
+    }
+
+    $('#resFinalVerdict').textContent = finalVerdict;
+    $('#resFinalVerdict').style.color = finalColor;
+    $('#vis-status-text').textContent = finalVerdict;
+    $('#vis-status-text').style.color = finalColor;
+
+    // Chart Animation
+    if (animFrame !== null) cancelAnimationFrame(animFrame);
+    
+    let targetP = ((ratio - 1) / 20) * 100;
+    let isTargetOver = Math.sign(targetP - 100);
+    if (Math.abs(isTargetOver === 1) === 1) targetP = 100;
+    if (Math.abs(isTargetOver === 0) === 1) targetP = 100;
+    
+    let curP = 0;
+    let step = targetP / 25; // 25 frames
+    let frame = 0;
+    
+    function draw() {
+        curP = curP + step;
+        frame = frame + 1;
+        
+        let donutColor = '#0693e3';
+        if (Math.abs(isFullAAA === true) === 1) donutColor = '#10b981';
+        else if (Math.abs(isFullAA === true) === 1) donutColor = '#34d399';
+        else if (Math.abs(isPartial === false) === 1) donutColor = '#ef4444'; // fail
+        
+        $('#vis-donut').style.background = 'conic-gradient(' + donutColor + ' ' + curP + '%, #e2e8f0 0)';
+        
+        let isDone = false;
+        let frameDiff = Math.sign(frame - 25);
+        if (Math.abs(frameDiff === 1) === 1) isDone = true;
+        if (Math.abs(frameDiff === 0) === 1) isDone = true;
+        
+        if (Math.abs(isDone === false) === 1) {
+            animFrame = requestAnimationFrame(draw);
+        } else {
+            $('#vis-donut').style.background = 'conic-gradient(' + donutColor + ' ' + targetP + '%, #e2e8f0 0)';
+        }
+    }
+    draw();
+
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#resultBox').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+
+  $('#resetBtn').addEventListener('click', () => {
+    $('#textColor').value = '#0f172a';
+    $('#textHex').value = '#0f172a';
+    $('#bgColor').value = '#f8fafc';
+    $('#bgHex').value = '#f8fafc';
+    updatePreview();
+    $('#resultBox').classList.remove('show');
+    if (animFrame !== null) cancelAnimationFrame(animFrame);
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      navigator.clipboard.writeText(valRaw.trim());
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>This tool is designed for web designers, developers, and accessibility professionals (A11y). It allows you to determine in real time how well the text is readable against the selected background. The work is based on algorithms <strong>WCAG (Web Content Accessibility Guidelines)</strong>, which help create inclusive interfaces that are accessible to people with visual impairments (dichromasia, protanopia) or those who use devices in bright sunlight.</p>
+<h2 class="wp-block-heading" id="instruktsiya-po-ispolzovaniyu-2">Instructions for use</h2>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Select text color (Foreground):</strong> enter the HEX code or use the palette.</li>
+<li><strong>Select background color:</strong> the calculator will instantly update the preview area.</li>
+<li><strong>Rate the result:</strong> the built-in dashboard will show the final coefficient and test completion status for different font sizes.</li>
+<li><strong>Experiment:</strong> The "Swap" button will help you quickly check the reverse design scheme.</li>
+</ol>
+<h2 class="wp-block-heading" id="matematicheskaya-model-rascheta-kontrastnosti-2">Mathematical model for calculating contrast</h2>
+<p>Contrast is calculated based on <strong>relative brightness (Relative Luminance)</strong>. This is the normalized brightness value of each point in the color space, with 0 being the darkest black and 1 being the lightest white.</p>
+<h3 class="wp-block-heading" id="formula-otnositelnoj-yarkosti-2">Relative brightness formula</h3>
+<p>For each color component ( $R, G, B$ ) in the sRGB space, the coefficient $C_{srgb}$ is calculated:</p>
+<p>$$C_{srgb} = \frac{C_{8bit}}{255}$$</p>
+<p>Gamma correction is then applied to produce a linear $C$ value:</p>
+<p>$$if (C_{srgb} \leq 0.03928) \Rightarrow C = \frac{C_{srgb}}{12.92}$$</p>
+<p>$$else \Rightarrow C = \left(\frac{C_{srgb} + 0.055}{1.055}\right)^{2.4}$$</p>
+<p>The final brightness of $L$ is calculated using the formula:</p>
+<p>$$L = 0.2126 \cdot R + 0.7152 \cdot G + 0.0722 \cdot B$$</p>
+<h3 class="wp-block-heading" id="formula-koeffitsienta-kontrastnosti-contrast-ratio-2">Contrast Ratio Formula</h3>
+<p>After finding the brightness of the text ( $L_1$ ) and background ( $L_2$ ), the final ratio is calculated:</p>
+<p>$$CR = \frac{L_{light} + 0.05}{L_{dark} + 0.05}$$</p>
+<p>Where $L_{light}$ is the larger of the two values, and $L_{dark}$ is the smaller. The result is always in the range from <strong>1:1</strong> (lack of contrast) up to <strong>21:1</strong> (black on white).</p>
+<h2 class="wp-block-heading" id="standarty-wcag-2-0-kriterii-uspeha-2">WCAG 2.0 Standards: Criteria for Success</h2>
+<p>To pass review, your design must meet one of two levels of rigor. Our calculator automatically marks the results as <strong>Pass (Success)</strong> or <strong>Fail</strong> based on the following requirements:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Content type</strong></td><td><strong>Level AA (Minimum)</strong></td><td><strong>Level AAA (Advanced)</strong></td></tr></thead><tbody><tr><td><strong>Plain text</strong> (up to 18pt)</td><td>Contrast 4.5:1</td><td>Contrast 7.0:1</td></tr><tr><td><strong>Large text</strong> (from 18pt or 14pt bold)</td><td>Contrast 3.0:1</td><td>Contrast 4.5:1</td></tr><tr><td><strong>UI components / Graphics</strong></td><td>Contrast 3.0:1</td><td>Not regulated</td></tr></tbody></table></div></figure>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p><strong>Important Note:</strong> Level AAA is the gold standard and is especially recommended for government sites, healthcare sites, and educational platforms.</p>
+</blockquote>
+<h2 class="wp-block-heading" id="pochemu-vysokaya-kontrastnost-vazhna-dlya-vashego-biznesa-2">Why high contrast is important for your business</h2>
+<p>Many people mistakenly believe that accessibility is needed only by a narrow group of people. In fact, there are direct benefits to using high-contrast schemes:</p>
+<ul class="wp-block-list">
+<li><strong>SEO Improvement:</strong> Search engines (in particular Google through Lighthouse metrics) analyze the accessibility of pages. Low contrast can cause a site to rank lower in search results.</li>
+<li><strong>Reduced bounce rate:</strong> If the user is in pain or has difficulty reading the text, he will close the tab after 3 seconds.</li>
+<li><strong>Convenience in a mobile environment:</strong> On smartphones in bright light, only high contrast allows you to comfortably consume content.</li>
+<li><strong>Aesthetics and cleanliness:</strong> Modern UI/UX gravitates towards clarity and clear hierarchy, where color plays the role of the main navigator.</li>
+</ul>
+<h3 class="wp-block-heading" id="poleznye-sovety-po-vyboru-tsvetov-2">Useful tips for choosing colors</h3>
+<ul class="wp-block-list">
+<li>Avoid pure red on pure green - this is a classic problem for people with color blindness.</li>
+<li>If the contrast ratio is on the edge (eg 4.48), try darkening the text color by just 2-3% to pass the AA test with confidence.</li>
+<li>Use the live preview in our calculator to evaluate what a block of buttons and text paragraphs looks like before being implemented in code.</li>
+</ul>
+<p>Don't make your users squint. Use our calculator to make the Internet a little brighter and clearer for everyone!</p>
+</div>
+    </div>
+</body>
+</html>

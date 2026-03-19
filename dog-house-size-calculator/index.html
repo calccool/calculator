@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog house size calculator: online calculation by breed and size</title>
+    <meta name="description" content="Dog house size calculator: online calculation by breed and size - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Dog house size calculator: online calculation by breed and size</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-row.cols-3 { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+    
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-receipt-wrap { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 15px; position: relative; overflow: hidden; }
+    .c-receipt-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: repeating-linear-gradient(45deg, #0693e3, #0693e3 10px, #38bdf8 10px, #38bdf8 20px); }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #fff; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #eff6ff; border: 1px solid #bae6fd; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05); }
+    .c-highlight-line:hover { background: #e0f2fe; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* Visual Charts & Blueprints */
+    .c-chart-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 15px 0 25px; align-items: center; }
+    
+    .c-pie-box { padding: 20px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+    .c-pie-chart { width: 120px; height: 120px; border-radius: 50%; background: #e2e8f0; position: relative; box-shadow: 0 4px 15px rgba(0,0,0,0.05), inset 0 0 0 4px #fff; transition: background 1s ease; }
+    .c-pie-chart::after { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background: #fff; border-radius: 50%; box-shadow: inset 0 2px 5px rgba(0,0,0,0.05); }
+    .c-pie-legend { margin-top: 15px; font-size: 12px; font-weight: 600; color: #475569; display: flex; flex-direction: column; gap: 6px; text-align: left; width: 100%; }
+    .c-legend-item { display: flex; align-items: center; gap: 8px; justify-content: space-between; }
+    .c-legend-dot { width: 10px; height: 10px; border-radius: 3px; }
+
+    .c-blueprint-box { padding: 20px; background: #1e293b; border-radius: 16px; border: 1px solid #0f172a; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; min-height: 220px; }
+    .c-blueprint-box::before { content:''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 15px 15px; pointer-events: none; }
+    
+    .c-bp-house { position: relative; width: 100px; height: 100px; margin-top: 30px; }
+    .c-bp-roof { position: absolute; top: -45px; left: -10px; right: -10px; height: 50px; background: rgba(56, 189, 248, 0.2); border: 2px solid #38bdf8; clip-path: polygon(50% 0%, 0% 100%, 100% 100%); transition: 0.3s; }
+    .c-bp-wall { position: absolute; inset: 0; background: rgba(56, 189, 248, 0.1); border: 2px solid #38bdf8; border-top: none; display: flex; justify-content: center; align-items: flex-end; }
+    .c-bp-door { width: 40px; height: 60px; background: #1e293b; border: 2px solid #38bdf8; border-bottom: none; border-radius: 20px 20px 0 0; }
+    
+    .c-bp-label { position: absolute; color: #bae6fd; font-size: 11px; font-weight: 700; white-space: nowrap; font-family: monospace; }
+    .c-bp-h { right: -35px; top: 10px; }
+    .c-bp-w { bottom: -25px; left: 50%; transform: translateX(-50%); }
+    .c-bp-dh { left: 50%; top: 15px; transform: translateX(-50%); font-size: 9px; color: #7dd3fc; }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { 
+        .c-row.cols-2, .c-row.cols-3 { grid-template-columns: 1fr; } 
+        .c-chart-container { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="doghouse-calc-wrapper">
+<div class="c-body">
+<div class="c-toggle" id="mode-tabs">
+<button class="c-toggle-btn active" data-mode="manual">Entering dog dimensions</button>
+<button class="c-toggle-btn" data-mode="breed">Select by breed</button>
+</div>
+<div class="c-divider"><span class="icon">📏</span>Pet parameters</div>
+<div id="manual-wrap">
+<div class="c-row cols-3">
+<div class="c-field">
+<label class="c-label">Length<span class="c-term">L</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="dog-l" placeholder="From nose to tail" type="number"/>
+<span class="c-input-suffix">cm</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Height<span class="c-term">H</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="dog-h" placeholder="Up to the top of your head" type="number"/>
+<span class="c-input-suffix">cm</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Width<span class="c-term">W</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="dog-w" placeholder="Rib cage" type="number"/>
+<span class="c-input-suffix">cm</span>
+</div>
+</div>
+</div>
+<div style="font-size: 12px; color: #64748b; margin-top: -5px; margin-bottom: 15px; display: flex; align-items: center; gap: 6px;">
+<span class="c-help-icon" id="openDogInfo">?</span>How to measure a dog correctly</div>
+</div>
+<div class="is-hidden" id="breed-wrap">
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Dog breed</label>
+<select class="c-select" id="dog-breed">
+<option disabled="" selected="" value="">Select from the list...</option>
+<option value="60,45,20">Dachshund / Corgi (Small)</option>
+<option value="80,60,25">Spaniel/Beagle (Medium)</option>
+<option value="100,75,30">Shepherd / Labrador (Large)</option>
+<option value="120,90,40">Alabai / Mastiff (Giants)</option>
+</select>
+</div>
+</div>
+</div>
+<div class="c-divider" style="margin-top: 25px;"><span class="icon">🧱</span>Booth design</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Wall insulation thickness<span class="c-term">mm</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="insulation" placeholder="For example: 50" type="number" value="0"/>
+<span class="c-input-suffix">mm</span>
+</div>
+<div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-val="0" type="button">Without insulation</button>
+<button class="c-quick-btn" data-val="50" type="button">50 mm (Winter)</button>
+<button class="c-quick-btn" data-val="100" type="button">100 mm (North)</button>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-chart-container is-hidden" id="vis-box">
+<div class="c-pie-box">
+<div style="font-weight: 700; color: #0f172a; font-size: 14px; margin-bottom: 15px;">Material consumption</div>
+<div class="c-pie-chart" id="pieChart"></div>
+<div class="c-pie-legend">
+<div class="c-legend-item"><span style="display:flex; align-items:center; gap:6px;"><span class="c-legend-dot" style="background:#0693e3;"></span>Walls</span><span id="leg-wall">0 m²</span></div>
+<div class="c-legend-item"><span style="display:flex; align-items:center; gap:6px;"><span class="c-legend-dot" style="background:#f59e0b;"></span>Floor</span><span id="leg-floor">0 m²</span></div>
+<div class="c-legend-item"><span style="display:flex; align-items:center; gap:6px;"><span class="c-legend-dot" style="background:#10b981;"></span>Roof</span><span id="leg-roof">0 m²</span></div>
+</div>
+</div>
+<div class="c-blueprint-box">
+<div style="position: absolute; top: 12px; left: 15px; color: #bae6fd; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Facade drawing</div>
+<div class="c-bp-house">
+<div class="c-bp-roof" id="bpRoof"></div>
+<div class="c-bp-wall" id="bpWall">
+<div class="c-bp-door" id="bpDoor">
+<div class="c-bp-label c-bp-dh" id="lbl-dh">0 cm</div>
+</div>
+</div>
+<div class="c-bp-label c-bp-h" id="lbl-h">0 cm</div>
+<div class="c-bp-label c-bp-w" id="lbl-w">0 cm</div>
+</div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">📐</span>Optimal internal dimensions</div>
+<div class="c-receipt-wrap">
+<div class="c-resline">
+<div class="c-resleft">Booth depth<span class="c-subtext">Place for stretching paws</span></div>
+<div class="c-resval" id="resD"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Booth width<span class="c-subtext">Comfortable turn</span></div>
+<div class="c-resval" id="resW"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline c-highlight-line">
+<div class="c-resleft">Ceiling height<span class="c-subtext">Internal minimum</span></div>
+<div class="c-resval" id="resH"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+<div class="c-result-title" style="margin-top: 25px;"><span class="icon">🚪</span>Manhole (entrance) dimensions</div>
+<div class="c-receipt-wrap" style="background: #fff; border: 2px solid #e2e8f0;">
+<div class="c-resline">
+<div class="c-resleft">Manhole width<span class="c-subtext">Free chest passage</span></div>
+<div class="c-resval" id="resEntW"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline" style="border-bottom: none;">
+<div class="c-resleft">Manhole height<span class="c-subtext">From floor to top arc</span></div>
+<div class="c-resval" id="resEntH"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+<div class="c-resline" style="background: #f8fafc; border-radius: 8px; margin-top: 15px;">
+<div class="c-resleft">External dimensions (including insulation)<span class="c-subtext" id="resExtSub">Wall thickness: 0 mm</span></div>
+<div class="c-resval" id="resExt" style="font-size: 16px; color: #4a5565;"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+<div class="c-modal-overlay" id="dogInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeDogInfo">×</button>
+<div class="c-modal-title"><span class="icon">🐕</span>Correct measurements</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">For the ideal kennel, the dog must be measured in a standing position. The dog should not be too spacious (otherwise it will be cold in winter).</div>
+<ul style="font-size: 13px; color: #1e293b; padding-left: 20px; margin-bottom: 10px; display: flex; flex-direction: column; gap: 8px;">
+<li><b>Length(L):</b>Measured from the tip of the nose to the base of the tail. Determines the depth of the booth.</li>
+<li><b>Height (H):</b>Measured from the floor to the highest point of the head (including erect ears). Determines the height of the ceiling.</li>
+<li><b>Width (W):</b>Width of the chest at its widest point. Determines the width of the opening.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let activeMode = 'manual';
+  let isCalculated = false;
+
+  // Modal logic
+  $('#openDogInfo').addEventListener('click', () => { $('#dogInfoModal').classList.add('show'); });
+  $('#closeDogInfo').addEventListener('click', () => { $('#dogInfoModal').classList.remove('show'); });
+  $('#dogInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#dogInfoModal').classList.remove('show');
+  });
+
+  function updateModeUI() {
+      if (Math.abs(activeMode === 'breed') === 1) {
+          $('#breed-wrap').classList.remove('is-hidden');
+          $('#manual-wrap').classList.add('is-hidden');
+      } else {
+          $('#breed-wrap').classList.add('is-hidden');
+          $('#manual-wrap').classList.remove('is-hidden');
+      }
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  }
+
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeMode = btn.dataset.mode;
+        updateModeUI();
+    });
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          let val = btn.dataset.val;
+          $('#insulation').value = val;
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let L = 0, H = 0, W = 0;
+    let isErr = false;
+
+    if (Math.abs(activeMode === 'manual') === 1) {
+        L = parseFloat($('#dog-l').value);
+        H = parseFloat($('#dog-h').value);
+        W = parseFloat($('#dog-w').value);
+
+        let isNanL = isNaN(L);
+        if (Math.abs(isNanL === true) === 1) L = 0;
+        let isNanH = isNaN(H);
+        if (Math.abs(isNanH === true) === 1) H = 0;
+        let isNanW = isNaN(W);
+        if (Math.abs(isNanW === true) === 1) W = 0;
+
+        let isPosL = false; if (Math.abs(Math.sign(L) === 1) === 1) isPosL = true;
+        let isPosH = false; if (Math.abs(Math.sign(H) === 1) === 1) isPosH = true;
+        let isPosW = false; if (Math.abs(Math.sign(W) === 1) === 1) isPosW = true;
+
+        let totalValid = Math.abs(isPosL === true) + Math.abs(isPosH === true) + Math.abs(isPosW === true);
+        if (Math.abs(totalValid - 3) !== 0) isErr = true;
+    } else {
+        let breedVal = $('#dog-breed').value;
+        if (Math.abs(breedVal === "") === 1) isErr = true;
+        else {
+            let parts = breedVal.split(',');
+            L = parseFloat(parts[0]);
+            H = parseFloat(parts[1]);
+            W = parseFloat(parts[2]);
+        }
+    }
+
+    if (Math.abs(isErr === true) === 1) {
+        $('#vis-box').classList.add('is-hidden');
+        $('#resultBox').classList.remove('show');
+        if (Math.abs(shouldScroll === true) === 1) {
+            $('#errorMsg').textContent = "Please fill in all the dog's dimensions correctly or select a breed.";
+            $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    let insul = parseFloat($('#insulation').value);
+    let isNanInsul = isNaN(insul);
+    if (Math.abs(isNanInsul === true) === 1) insul = 0;
+    let isNegInsul = false;
+    if (Math.abs(Math.sign(insul) === -1) === 1) isNegInsul = true;
+    if (Math.abs(isNegInsul === true) === 1) insul = 0;
+
+    // Formulas for internal dimensions (in cm)
+    let dDepth = L + 15;
+    let dWidth = Math.round(L * 0.8 + 10);
+    let dHeight = H + 10;
+    
+    // Entrance
+    let entW = W + 10;
+    let entH = Math.round(H * 0.8);
+
+    // Update Text Results
+    $('#resD').textContent = dDepth + "cm";
+    $('#resW').textContent = dWidth + "cm";
+    $('#resH').textContent = dHeight + "cm";
+    $('#resEntW').textContent = entW + "cm";
+    $('#resEntH').textContent = entH + "cm";
+
+    // External calculations (insulation is in mm, convert to cm)
+    let insulCm = insul / 10;
+    let extW = dWidth + (insulCm * 2);
+    let extD = dDepth + (insulCm * 2);
+    let extH = dHeight + (insulCm * 2) + 10; // 10cm extra for base/roof thickness
+
+    $('#resExtSub').textContent = "Insulation thickness:" + insul + "mm";
+    $('#resExt').textContent = extW + " × " + extD + " × " + extH + "cm";
+
+    // Material Area Calculations (m²)
+    let mW = dWidth / 100;
+    let mD = dDepth / 100;
+    let mH = dHeight / 100;
+    let mEntW = entW / 100;
+    let mEntH = entH / 100;
+
+    let areaFloor = mW * mD;
+    let areaRoof = mW * mD * 1.3; // 30% larger for overhangs
+    let areaWalls = (mW * mH * 2) + (mD * mH * 2) - (mEntW * mEntH);
+
+    let totalArea = areaFloor + areaRoof + areaWalls;
+    
+    let pctWall = (areaWalls / totalArea) * 100;
+    let pctFloor = (areaFloor / totalArea) * 100;
+    
+    let deg1 = pctWall;
+    let deg2 = pctWall + pctFloor;
+
+    // Apply Pie Chart
+    let pie = $('#pieChart');
+    pie.style.background = 'conic-gradient(#0693e3 0% ' + deg1 + '%, #f59e0b ' + deg1 + '% ' + deg2 + '%, #10b981 ' + deg2 + '% 100%)';
+
+    $('#leg-wall').textContent = areaWalls.toFixed(2) + "m²";
+    $('#leg-floor').textContent = areaFloor.toFixed(2) + "m²";
+    $('#leg-roof').textContent = areaRoof.toFixed(2) + "m²";
+
+    // Apply Blueprint visual dynamics
+    $('#lbl-w').textContent = dWidth + "cm";
+    $('#lbl-h').textContent = dHeight + "cm";
+    $('#lbl-dh').textContent = entH + "cm";
+
+    // Dynamic sizing of the CSS drawing
+    // Base size is 100x100. Let's scale width based on proportions.
+    let ratioW = dWidth / dHeight;
+    let bpW = 100 * ratioW;
+    let bpMaxW = 140;
+    let isOverMax = false;
+    if (Math.abs(Math.sign(bpW - bpMaxW) === 1) === 1) isOverMax = true;
+    if (Math.abs(isOverMax === true) === 1) bpW = bpMaxW;
+    
+    let ratioEnt = entW / dWidth;
+    let bpDoorW = bpW * ratioEnt;
+    let ratioEntH = entH / dHeight;
+    let bpDoorH = 100 * ratioEntH;
+
+    $('#bpWall').style.width = bpW + 'px';
+    $('#bpRoof').style.width = (bpW + 20) + 'px'; // overhang
+    $('#bpDoor').style.width = bpDoorW + 'px';
+    $('#bpDoor').style.height = bpDoorH + 'px';
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#vis-box').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(e.target.tagName === 'SELECT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    wrap.querySelectorAll('input[type="number"]').forEach(i => i.value = '');
+    $('#dog-breed').value = '';
+    $('#insulation').value = '0';
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      let valClean = valRaw.replace('см', '').trim();
+      navigator.clipboard.writeText(valClean);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Comfortable housing for a dog is not a “palace” for growth, but a functional space where the animal can warm itself with its own warmth. A booth that is too spacious will make you feel cold in the winter, and a booth that is too cramped will lead to joint diseases.</p>
+<p>Our calculator uses <strong>gold standard of canine calculations</strong> to determine the parameters based on the actual size of your pet or its membership in a specific breed group.</p>
+<h2 class="wp-block-heading" id="kak-pravilno-izmerit-sobaku-dlya-raschetov-2">How to measure a dog correctly for calculations</h2>
+<p>To get an accurate result, you will need three key measurements. Carry them out when the dog is standing in a calm state:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Length(L):</strong> Distance from the tip of the nose to the base of the tail. This is the basis for determining the depth and width of the sleeping area.</li>
+<li><strong>Height (H):</strong> From the floor to the tips of the ears (or the top of the head if the ears are drooping). This parameter determines the height of the ceiling so that the dog can stand inside without crouching.</li>
+<li><strong>Chest Width (W):</strong> The widest part is at the front. Necessary for calculating the comfortable width of the entrance (manhole).</li>
+</ol>
+<h2 class="wp-block-heading" id="formuly-rascheta-razmerov-2">Sizing formulas</h2>
+<p>The calculator makes calculations based on algorithms that take into account allowances for free movement and turning of the animal indoors.</p>
+<h3 class="wp-block-heading" id="vnutrennie-parametry-2">Internal parameters</h3>
+<p>In order for the dog to comfortably stretch out and curl up, the following dependencies are used:</p>
+<ul class="wp-block-list">
+<li><strong>Booth depth ( $D$ ):</strong> $$D = L + 15\text{ см}$$ </li>
+<li><strong>Booth width ( $W_{int}$ ):</strong> $$W_{int} = L \times 0.8 + 10\text{ см}$$ </li>
+<li><strong>Ceiling height ( $H_{int}$ ):</strong> $$H_{int} = H + 10\text{ см}$$ </li>
+</ul>
+<h3 class="wp-block-heading" id="parametry-vhoda-laza-2">Entrance parameters</h3>
+<p>The opening should be loose enough for the dog to enter without effort, but not too large so as not to let out heat:</p>
+<ul class="wp-block-list">
+<li><strong>Manhole width:</strong> $$W_{ent} = W + 10\text{ см}$$ </li>
+<li><strong>Manhole height:</strong> $$H_{ent} = H \times 0.8$$</li>
+</ul>
+<h2 class="wp-block-heading" id="orientirovochnye-razmery-po-porodam-2">Approximate sizes by breed</h2>
+<p>If you do not yet have the opportunity to measure your pet (for example, you are just planning to buy a puppy), you can use the average data for breed categories:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Breed category</strong></td><td><strong>Approximate breeds</strong></td><td><strong>Dimensions (L × H × W), cm</strong></td></tr></thead><tbody><tr><td><strong>Small</strong></td><td>Dachshund, Corgi, Jack Russell</td><td>60 × 45 × 20</td></tr><tr><td><strong>Average</strong></td><td>Spaniel, Beagle, Basset Hound</td><td>80 × 60 × 25</td></tr><tr><td><strong>Large</strong></td><td>Shepherd, Labrador, Husky</td><td>100 × 75 × 30</td></tr><tr><td><strong>Giants</strong></td><td>Alabai, Mastiff, Great Dane</td><td>120 × 90 × 40</td></tr></tbody></table></div></figure>
+<h3 class="wp-block-heading" id="uchet-utepleniya-i-materialov-2">Accounting for insulation and materials</h3>
+<p>An important feature of our calculator is that it takes into account <strong>wall thickness</strong>. If you are building a “winter” version using foam plastic or mineral wool, the external dimensions of the structure will increase significantly.</p>
+<p>The calculator automatically adds the insulation thickness to the internal dimensions, giving you the final external dimensions for purchasing lumber. The system also calculates the approximate surface area:</p>
+<ul class="wp-block-list">
+<li><strong>Floor area:</strong> $$S_{floor} = W_{int} \times D$$</li>
+<li><strong>Roof area:</strong> The overhang (overhang) for protection from precipitation is taken into account (approximately $+30\%$ to the floor area).</li>
+<li><strong>Wall area:</strong> The sum of the areas of all four sides minus the hole for the manhole.</li>
+</ul>
+<h3 class="wp-block-heading" id="pochemu-stoit-ispolzovat-etot-kalkulyator-2">Why use this calculator</h3>
+<p><strong>Millimeter precision</strong></p>
+<p>Unlike simple tables, we allow you to customize the calculation. You see a visual drawing of the facade and a diagram of material consumption, which helps to estimate the construction budget in advance.</p>
+<p><strong>Taking care of your health</strong></p>
+<p>Correctly calculated ceiling height and opening width prevent drafts and ensure proper air circulation. We recommend making a hole not in the center of the facade, but offset to the side - this will create a “blind” warm corner inside, protected from direct wind.</p>
+<p><strong>Practicality</strong></p>
+<p>The one-click copying function will allow you to send the dimensions to the master or save them in your phone notes right before going to the hardware store.</p>
+</div>
+    </div>
+</body>
+</html>

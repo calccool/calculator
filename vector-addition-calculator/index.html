@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Vector Calculator: Addition and Subtraction (2D and 3D)</title>
+    <meta name="description" content="Online Vector Calculator: Addition and Subtraction (2D and 3D) - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Online Vector Calculator: Addition and Subtraction (2D and 3D)</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (строго по шаблону) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-row.cols-3 { grid-template-columns: repeat(3, minmax(220px, 1fr)); }
+    .c-row.single { grid-template-columns: 1fr; }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    .c-help {font-size:12px;color:#777;text-align:center;}
+    .c-input, .c-select, .c-textarea { width:100%; padding:12px 14px; border:1px solid #ccc; border-radius:8px; font-size:14px; }
+    .c-input:focus, .c-select:focus, .c-textarea:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap;margin-bottom: 16px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+
+    /* Результат */
+    .c-result { border:1px dashed #4caf50; border-radius:10px; padding:10px; background:#fff; display:none; }
+    .c-result.show { display:grid; }
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #4caf50; grid-template-columns: 0.4fr 0.5fr 0.1fr; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; }
+
+    /* Кнопка копирования */
+    .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden;
+      background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+      background-repeat:no-repeat; background-position:center; background-size:20px 20px; }
+
+    .is-hidden { display:none !important; }
+    @media (max-width: 860px) { .c-resval { font-size:14px; } }
+    @media (max-width: 720px) { .c-row.cols-3 { grid-template-columns: 1fr; } }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-row">
+<div class="c-field">
+<label class="c-label" for="dimension">Dimension</label>
+<select class="c-select" id="dimension">
+<option value="3">3D (x, y, z)</option>
+<option value="2">2D (x, y)</option>
+</select>
+</div>
+<div class="c-field">
+<label class="c-label" for="operation">Operation</label>
+<select class="c-select" id="operation">
+<option value="add">Addition (a + b)</option>
+<option value="sub">Subtraction (a - b)</option>
+</select>
+</div>
+</div>
+<div class="c-row cols-3">
+<div class="c-field">
+<label class="c-label" for="ax">Vector a<span class="c-term">x₁</span></label>
+<input class="c-input" id="ax" step="any" type="number" value="1"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="ay">Vector a<span class="c-term">y₁</span></label>
+<input class="c-input" id="ay" step="any" type="number" value="2"/>
+</div>
+<div class="c-field" id="field_az">
+<label class="c-label" for="az">Vector a<span class="c-term">z₁</span></label>
+<input class="c-input" id="az" step="any" type="number" value="3"/>
+</div>
+</div>
+<div class="c-row cols-3">
+<div class="c-field">
+<label class="c-label" for="bx">Vector b<span class="c-term">x₂</span></label>
+<input class="c-input" id="bx" step="any" type="number" value="4"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="by">Vector b<span class="c-term">y₂</span></label>
+<input class="c-input" id="by" step="any" type="number" value="5"/>
+</div>
+<div class="c-field" id="field_bz">
+<label class="c-label" for="bz">Vector b<span class="c-term">z₂</span></label>
+<input class="c-input" id="bz" step="any" type="number" value="6"/>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div aria-live="polite" class="c-result" id="resultBox">
+<div class="c-resline is-hidden" id="validationError" style="background:#ffdddd; color:#cc0000;">
+<div class="c-resleft">Error:</div>
+<div class="c-resval" id="errorMsg" style="color:#cc0000; font-weight: 500;"></div>
+<button class="c-copy is-hidden" disabled=""></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft" id="resLabel">Resulting vector (c)</div>
+<div class="c-resval" id="resVector"></div>
+<button aria-label="Copy vector" class="c-copy" id="copyVector" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Length (modulus) |c|</div>
+<div class="c-resval" id="resLength"></div>
+<button aria-label="Copy length" class="c-copy" id="copyLength" title="Copy"></button>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика =====
+  const $ = (s) => wrap.querySelector(s);
+  
+  const resBox = $('#resultBox');
+  const errorBox = $('#validationError');
+  const errorMsg = $('#errorMsg');
+  
+  const dimSelect = $('#dimension');
+  const fieldAz = $('#field_az');
+  const fieldBz = $('#field_bz');
+  
+  const outputs = {
+      vector: $('#resVector'),
+      length: $('#resLength'),
+      label: $('#resLabel')
+  };
+
+  // ----- Вспомогательные функции -----
+  function num(v){ const n = parseFloat(String(v).replace(',', '.')); return Number.isFinite(n) ? n : NaN; }
+  
+  function fmt(v, d=4){
+    if (isNaN(v)) return '—';
+    const rounded = Number(v.toFixed(d));
+    return rounded.toLocaleString('ru-RU', { maximumFractionDigits: d });
+  }
+
+  function setError(msg) {
+    errorMsg.textContent = msg;
+    errorBox.classList.remove('is-hidden');
+    resBox.classList.add('show');
+  }
+  function hideError() {
+    errorBox.classList.add('is-hidden');
+  }
+  
+  // Обновление UI при смене размерности
+  function updateUI() {
+      const dim = dimSelect.value;
+      if (dim === '2') {
+          fieldAz.classList.add('is-hidden');
+          fieldBz.classList.add('is-hidden');
+      } else {
+          fieldAz.classList.remove('is-hidden');
+          fieldBz.classList.remove('is-hidden');
+      }
+      resBox.classList.remove('show');
+  }
+
+  // ----- Главный расчет -----
+  function calc() {
+    hideError();
+    
+    // 1. Сбор данных
+    const dim = dimSelect.value;
+    const op = $('#operation').value;
+    
+    const ax = num($('#ax').value);
+    const ay = num($('#ay').value);
+    let az = num($('#az').value);
+    
+    const bx = num($('#bx').value);
+    const by = num($('#by').value);
+    let bz = num($('#bz').value);
+
+    // 2. Валидация
+    let isValid = true;
+    if (isNaN(ax)) isValid = false;
+    if (isNaN(ay)) isValid = false;
+    if (isNaN(bx)) isValid = false;
+    if (isNaN(by)) isValid = false;
+    
+    if (dim === '3') {
+        if (isNaN(az)) isValid = false;
+        if (isNaN(bz)) isValid = false;
+    } else {
+        // Для 2D считаем z = 0
+        az = 0;
+        bz = 0;
+    }
+    
+    if (isValid === false) {
+      setError('Please enter correct coordinates.');
+      return;
+    }
+
+    // 3. Расчет координат
+    let cx, cy, cz;
+    
+    if (op === 'add') {
+        cx = ax + bx;
+        cy = ay + by;
+        cz = az + bz;
+        outputs.label.textContent = 'Sum (a + b)';
+    } else {
+        cx = ax - bx;
+        cy = ay - by;
+        cz = az - bz;
+        outputs.label.textContent = 'Difference (a - b)';
+    }
+    
+    // 4. Расчет длины (модуля)
+    const length = Math.sqrt(cx*cx + cy*cy + cz*cz);
+
+    // 5. Вывод
+    let vecStr = '';
+    if (dim === '3') {
+        vecStr = `{${fmt(cx)}; ${fmt(cy)}; ${fmt(cz)}}`;
+    } else {
+        vecStr = `{${fmt(cx)}; ${fmt(cy)}}`;
+    }
+    
+    outputs.vector.textContent = vecStr;
+    outputs.length.textContent = fmt(length);
+
+    resBox.classList.add('show');
+  }
+
+  // ----- Слушатели -----
+  dimSelect.addEventListener('change', updateUI);
+  
+  $('#calcBtn').addEventListener('click', calc);
+  $('#resetBtn').addEventListener('click', () => {
+    $('#ax').value = '1'; $('#ay').value = '2'; $('#az').value = '3';
+    $('#bx').value = '4'; $('#by').value = '5'; $('#bz').value = '6';
+    $('#operation').value = 'add';
+    updateUI();
+    resBox.classList.remove('show');
+    hideError();
+  });
+
+  // Копирование
+  wrap.addEventListener('click', (e) => {
+    let textToCopy = null;
+    let targetId = e.target.id;
+    
+    if (targetId === 'copyVector') textToCopy = outputs.vector.textContent;
+    if (targetId === 'copyLength') textToCopy = outputs.length.textContent;
+    
+    if (textToCopy) {
+      try { navigator.clipboard?.writeText(textToCopy.trim()); } catch (_) {}
+    }
+  });
+
+  // Enter
+  wrap.addEventListener('keydown', (e) => {
+    // ИСПРАВЛЕНО: Замена &&
+    if (e.key === 'Enter') {
+      if (e.target.matches('input, select')) {
+        e.preventDefault();
+        calc();
+      }
+    }
+  });
+  
+  // Инициализация
+  updateUI();
+});
+</script>
+
+        <div class="post-content">
+<h2 class="wp-block-heading" id="operatsii-nad-vektorami-slozhenie-i-vychitanie-2">Vector Operations: Addition and Subtraction</h2>
+<p>Vector algebra is the basis not only of higher mathematics, but also of physics, mechanics and computer graphics. Unlike ordinary numbers (scalars), vectors have not only a magnitude, but also a direction, so arithmetic operations with them are performed according to special rules.</p>
+<p>Our <strong>online vector calculator</strong> allows you to instantly find the sum or difference of two vectors specified by their coordinates, both on a plane and in three-dimensional space.</p>
+<h2 class="wp-block-heading" id="kak-najti-summu-vektorov-koordinatnyj-metod-2">How to find the sum of vectors? (Coordinate method)</h2>
+<p>There are several geometric addition methods (triangle rule, parallelogram rule). However, for accurate calculations it is most convenient to use <strong>algebraic (coordinate) method</strong>.</p>
+<p>If two vectors $\vec{a}$ and $\vec{b}$ are given with coordinates:</p>
+<ul class="wp-block-list">
+<li>$\vec{a} = \{x_1; y_1; z_1\}$</li>
+<li>$\vec{b} = \{x_2; y_2; z_2\}$</li>
+</ul>
+<p>Then their sum will be a new vector $\vec{c}$ , the coordinates of which are equal to the sum of the corresponding coordinates of the terms:</p>
+<p>$$\vec{c} = \vec{a} + \vec{b} = \{x_1 + x_2; \quad y_1 + y_2; \quad z_1 + z_2\}$$</p>
+<h2 class="wp-block-heading" id="raznost-vektorov-2">Vector difference</h2>
+<p>Subtraction of vectors is performed in the same way as addition. To find the difference $\vec{a} — \vec{b}$ , you need to subtract the corresponding coordinates of the second from the coordinates of the first vector:</p>
+<p>$$\vec{c} = \vec{a} — \vec{b} = \{x_1 — x_2; \quad y_1 — y_2; \quad z_1 — z_2\}$$</p>
+<h2 class="wp-block-heading" id="dlina-modul-rezultiruyushhego-vektora-2">Length (Modulus) of the resulting vector</h2>
+<p>Often it is not enough just to find the coordinates of a new vector - you need to find out its length (modulus). Our calculator does this automatically.</p>
+<p>The magnitude of the vector $|\vec{c}|$ is calculated as the square root of the sum of the squares of its coordinates:</p>
+<p>$$|\vec{c}| = \sqrt{x^2 + y^2 + z^2}$$</p>
+<h2 class="wp-block-heading" id="vozmozhnosti-kalkulyatora-2">Calculator features</h2>
+<p>The tool supports work in two dimension modes. Select the appropriate option before starting the calculation:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Mode</strong></td><td><strong>Coordinates</strong></td><td><strong>Where is it used?</strong></td></tr></thead><tbody><tr><td><strong>2D (Plane)</strong></td><td>$x, y$</td><td>Planimetry, flat graphics, problems on a plane.</td></tr><tr><td><strong>3D (Space)</strong></td><td>$x, y, z$</td><td>Stereometry, 3D modeling, spatial physics.</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="primer-rascheta-2">Calculation example</h2>
+<p>Let's say we need to add two vectors in space:</p>
+<p> $\vec{a} = \{1; 2; 3\}$ and $\vec{b} = \{4; 5; 6\}$ .</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li>Adding X's: $1 + 4 = 5$ </li>
+<li>Adding up the games: $2 + 5 = 7$ </li>
+<li>Adding up the zetas: $3 + 6 = 9$ </li>
+</ol>
+<p>Answer: The resulting vector is $\vec{c} = \{5; 7; 9\}$ .</p>
+<p>Length: $\sqrt{5^2 + 7^2 + 9^2} = \sqrt{25 + 49 + 81} = \sqrt{155} \approx 12.45$ </p>
+<p>Just enter the values ​​in the form fields, and the script will perform all these actions for you, eliminating the possibility of an arithmetic error.</p>
+</div>
+    </div>
+</body>
+</html>

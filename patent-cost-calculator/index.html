@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patent cost calculator for foreign citizens</title>
+    <meta name="description" content="Patent cost calculator for foreign citizens - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Patent cost calculator for foreign citizens</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: end; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-receipt-wrap { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 15px; position: relative; overflow: hidden; }
+    .c-receipt-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: repeating-linear-gradient(45deg, #0693e3, #0693e3 10px, #38bdf8 10px, #38bdf8 20px); }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #fff; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #eff6ff; border: 1px solid #bae6fd; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05); }
+    .c-highlight-line:hover { background: #e0f2fe; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .c-switch-wrap { display: flex; align-items: center; gap: 12px; cursor: pointer; margin-bottom: 5px; padding: 14px 16px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 2px 6px rgba(0,0,0,0.02); transition: 0.3s; }
+    .c-switch-wrap:hover { border-color: #cbd5e1; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .c-switch-track { width: 44px; height: 24px; background: #cbd5e1; border-radius: 24px; position: relative; transition: 0.3s; flex-shrink: 0; }
+    .c-switch-thumb { width: 18px; height: 18px; background: #fff; border-radius: 50%; position: absolute; top: 3px; left: 3px; transition: 0.3s; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+    input:checked + .c-switch-track { background: #0693e3; }
+    input:checked + .c-switch-track .c-switch-thumb { left: 23px; }
+    .c-switch-label { font-weight: 600; font-size: 15px; color: #333; }
+    
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* Custom Visualization */
+    .c-vis-box { margin: 15px 0 25px; padding: 25px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); }
+    .c-vis-title { font-weight: 700; color: #0f172a; font-size: 15px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    
+    .c-months-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin-bottom: 15px; }
+    .c-month-box { height: 36px; background: #e2e8f0; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: #94a3b8; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: inset 0 2px 4px rgba(0,0,0,0.05); border: 1px solid #cbd5e1; position: relative; overflow: hidden; }
+    .c-month-box.active { background: linear-gradient(135deg, #0693e3, #0284c7); color: #fff; box-shadow: 0 4px 10px rgba(6, 147, 227, 0.3); border-color: #0284c7; transform: translateY(-2px); }
+    .c-month-box.active::after { content: ''; position: absolute; top:0; left:-100%; width:50%; height:100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); animation: shine-box 2s infinite linear; }
+    @keyframes shine-box { 100% { left: 200%; } }
+
+    .c-ndfl-bar-wrap { height: 16px; background: #e2e8f0; border-radius: 8px; overflow: hidden; position: relative; box-shadow: inset 0 2px 4px rgba(0,0,0,0.06); border: 1px solid #cbd5e1; margin-top: 5px; }
+    .c-ndfl-fill { height: 100%; width: 0%; border-radius: 8px; transition: width 1s cubic-bezier(0.4, 0, 0.2, 1); background: linear-gradient(135deg, #10b981, #059669); position: relative; }
+    .c-ndfl-fill::after { content: ''; position: absolute; top:0; left:-100%; width:50%; height:100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); animation: shine-bar 2.5s infinite linear; }
+    @keyframes shine-bar { 100% { left: 200%; } }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-vis-box { padding: 15px; }
+       .c-months-grid { grid-template-columns: repeat(4, 1fr); }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="patent-calc-wrapper">
+<div class="c-body">
+<div class="c-toggle" id="mode-tabs">
+<button class="c-toggle-btn active" data-mode="cost">Cost calculation</button>
+<button class="c-toggle-btn" data-mode="ndfl">Reimbursement from personal income tax</button>
+</div>
+<div class="c-divider"><span class="icon">📍</span>Patent parameters</div>
+<div class="c-row" style="margin-bottom: 8px;">
+<div class="c-field">
+<label class="c-label">Region of work<span class="c-help-icon" id="openPatentInfo">?</span>
+</label>
+<select class="c-select" id="region">
+<option selected="" value="7500">Moscow and Moscow region (7,500 $)</option>
+<option value="4600">St. Petersburg and Leningrad Region (4,600 $)</option>
+<option value="6500">Krasnodar region (6,500 $)</option>
+<option value="9000">Republic of Sakha (Yakutia) (9,000 $)</option>
+<option value="custom">Specify manually...</option>
+</select>
+</div>
+<div class="c-field">
+<label class="c-label">Paid period</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="months" placeholder="1" type="number" value="1"/>
+<span class="c-input-suffix">months</span>
+</div>
+</div>
+</div>
+<div class="c-row is-hidden" id="custom-rate-wrap">
+<div class="c-field" style="grid-column: 1 / -1;">
+<label class="c-label">Monthly payment<span class="c-term">For your region</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="custom-rate" placeholder="For example: 5500" type="number"/>
+<span class="c-input-suffix">$</span>
+</div>
+</div>
+</div>
+<div class="is-hidden" id="ndfl-block">
+<div class="c-divider" style="margin-top: 30px;"><span class="icon">💼</span>Employer details</div>
+<div class="c-row">
+<div class="c-field" style="grid-column: 1 / -1;">
+<label class="c-label">Employee salary<span class="c-term">before taxes</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="salary" placeholder="Official salary" type="number"/>
+<span class="c-input-suffix">$/month</span>
+</div>
+<span class="c-subtext">An employer can reduce a foreigner’s personal income tax by the amount of the patent paid.</span>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-vis-box is-hidden" id="vis-box">
+<div class="c-vis-title"><span class="icon">🗓️</span>Patent duration</div>
+<div class="c-months-grid" id="vis-calendar">
+<div class="c-month-box" id="m-1">1</div><div class="c-month-box" id="m-2">2</div>
+<div class="c-month-box" id="m-3">3</div><div class="c-month-box" id="m-4">4</div>
+<div class="c-month-box" id="m-5">5</div><div class="c-month-box" id="m-6">6</div>
+<div class="c-month-box" id="m-7">7</div><div class="c-month-box" id="m-8">8</div>
+<div class="c-month-box" id="m-9">9</div><div class="c-month-box" id="m-10">10</div>
+<div class="c-month-box" id="m-11">11</div><div class="c-month-box" id="m-12">12</div>
+</div>
+<div class="is-hidden" id="vis-ndfl-wrap" style="margin-top: 25px; padding-top: 20px; border-top: 1px dashed #bae6fd;">
+<div style="display:flex; justify-content:space-between; font-size:13px; font-weight:600; color:#475569;">
+<span>Personal income tax coverage with advance payment</span>
+<span id="vis-ndfl-lbl" style="color:#059669;">0%</span>
+</div>
+<div class="c-ndfl-bar-wrap">
+<div class="c-ndfl-fill" id="vis-ndfl-bar"></div>
+</div>
+<div style="font-size:12px; color:#64748b; margin-top:8px; text-align:left;">
+<span id="vis-ndfl-desc">If the line is not completely filled, the remaining tax is withheld from the salary.</span>
+</div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">🧾</span>Calculation results</div>
+<div class="c-receipt-wrap">
+<div class="c-resline">
+<div class="c-resleft">Cost for 1 month<span class="c-subtext">Regional tariff</span></div>
+<div class="c-resval" id="resMonthly"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline c-highlight-line">
+<div class="c-resleft">Total payable<span class="c-subtext" id="resTotalSub">For the selected period</span></div>
+<div class="c-resval" id="resTotal" style="font-size: 22px;"></div>
+<button class="c-copy"></button>
+</div>
+<div class="is-hidden" id="res-ndfl-lines">
+<div class="c-resline" style="border-top: 1px dashed #cbd5e1; margin-top: 5px;">
+<div class="c-resleft">Calculated personal income tax<span class="c-subtext">13% of salary for the period</span></div>
+<div class="c-resval" id="resNdflCalc"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline" style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; margin: 8px 0;">
+<div class="c-resleft">Amount to be deducted<span class="c-subtext">Reduces employee tax</span></div>
+<div class="c-resval" id="resNdflDeduct" style="color: #10b981;"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline" style="border-bottom: none;">
+<div class="c-resleft">Balance of personal income tax to be withheld<span class="c-subtext">Need to pay extra into the budget</span></div>
+<div class="c-resval" id="resNdflRemain" style="color: #d32f2f;"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+</div>
+</div>
+<div class="c-modal-overlay" id="patentInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closePatentInfo">×</button>
+<div class="c-modal-title"><span class="icon">📖</span>How is the price determined?</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">The cost of a patent is a fixed advance payment for personal income tax. It is not taken out of thin air, but is calculated according to the formula of the Tax Code of the Russian Federation.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>Formula:</b><br/>Base rate × Deflator coefficient × Regional coefficient</div>
+<ul style="font-size: 13px; color: #475569; padding-left: 20px; margin-bottom: 15px;">
+<li><b>Base rate:</b>1,200 $ (fixed by law).</li>
+<li><b>Deflator:</b>Set by the Ministry of Economic Development for the whole year.</li>
+<li><b>Regional coefficient:</b>It is established by the authorities of each constituent entity of the Russian Federation, so the price in Moscow and St. Petersburg is different.</li>
+</ul>
+<div style="background: #eff6ff; padding: 12px; border-radius: 8px; border: 1px solid #bae6fd; font-size: 13px; color: #0284c7;">
+<b>Attention:</b>Payment must be made in advance. If you are late by at least 1 day, the patent will be revoked!</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let activeMode = 'cost';
+  let isCalculated = false;
+
+  // Modal logic
+  $('#openPatentInfo').addEventListener('click', () => { $('#patentInfoModal').classList.add('show'); });
+  $('#closePatentInfo').addEventListener('click', () => { $('#patentInfoModal').classList.remove('show'); });
+  $('#patentInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#patentInfoModal').classList.remove('show');
+  });
+
+  function updateModeUI() {
+      if (Math.abs(activeMode === 'ndfl') === 1) {
+          $('#ndfl-block').classList.remove('is-hidden');
+          if (Math.abs(isCalculated === true) === 1) $('#res-ndfl-lines').classList.remove('is-hidden');
+      } else {
+          $('#ndfl-block').classList.add('is-hidden');
+          $('#res-ndfl-lines').classList.add('is-hidden');
+      }
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  }
+
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeMode = btn.dataset.mode;
+        updateModeUI();
+    });
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          let val = btn.dataset.val;
+          $('#months').value = val;
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  $('#region').addEventListener('change', (e) => {
+      let val = e.target.value;
+      if (Math.abs(val === 'custom') === 1) {
+          $('#custom-rate-wrap').classList.remove('is-hidden');
+      } else {
+          $('#custom-rate-wrap').classList.add('is-hidden');
+      }
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  });
+
+  function formatMoney(n) {
+      let parts = n.toFixed(0).split(".");
+      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+      return parts[0];
+  }
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let rateType = $('#region').value;
+    let rate = 0;
+    let isErr = false;
+
+    if (Math.abs(rateType === 'custom') === 1) {
+        rate = parseFloat($('#custom-rate').value);
+        let isNanRate = isNaN(rate);
+        if (Math.abs(isNanRate === true) === 1) rate = 0;
+        
+        let isPosRate = false;
+        if (Math.abs(Math.sign(rate) === 1) === 1) isPosRate = true;
+        if (Math.abs(isPosRate === false) === 1) isErr = true;
+    } else {
+        rate = parseFloat(rateType);
+    }
+
+    let m = parseInt($('#months').value, 10);
+    let isNanM = isNaN(m);
+    if (Math.abs(isNanM === true) === 1) m = 1;
+
+    // Strict validation for months (1 to 12) without < or >
+    let isLess1 = Math.sign(m - 1); 
+    if (Math.abs(isLess1 === -1) === 1) m = 1;
+    
+    let isMore12 = Math.sign(m - 12);
+    if (Math.abs(isMore12 === 1) === 1) m = 12;
+
+    $('#months').value = m; // update UI cleanly
+
+    let salary = parseFloat($('#salary').value);
+    let isNanSalary = isNaN(salary);
+    if (Math.abs(isNanSalary === true) === 1) salary = 0;
+
+    if (Math.abs(activeMode === 'ndfl') === 1) {
+        let isPosSal = false;
+        if (Math.abs(Math.sign(salary) === 1) === 1) isPosSal = true;
+        if (Math.abs(isPosSal === false) === 1) isErr = true;
+    }
+
+    if (Math.abs(isErr === true) === 1) {
+        $('#vis-box').classList.add('is-hidden');
+        $('#resultBox').classList.remove('show');
+        if (Math.abs(shouldScroll === true) === 1) {
+            $('#errorMsg').textContent = "Please provide correct data for calculation";
+            $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    let total = rate * m;
+    
+    $('#resMonthly').textContent = formatMoney(rate) + " $";
+    $('#resTotal').textContent = formatMoney(total) + " $";
+    $('#resTotalSub').textContent = "For" + m + "months";
+
+    // NDFL Logic
+    if (Math.abs(activeMode === 'ndfl') === 1) {
+        $('#res-ndfl-lines').classList.remove('is-hidden');
+        $('#vis-ndfl-wrap').classList.remove('is-hidden');
+
+        let totalNdfl = salary * 0.13 * m;
+        
+        let diff = totalNdfl - total;
+        let isNegDiff = false;
+        if (Math.abs(Math.sign(diff) === -1) === 1) isNegDiff = true;
+        
+        let deductAmount = total;
+        if (Math.abs(isNegDiff === true) === 1) deductAmount = totalNdfl;
+        
+        let remainNdfl = totalNdfl - deductAmount;
+
+        $('#resNdflCalc').textContent = formatMoney(totalNdfl) + " $";
+        $('#resNdflDeduct').textContent = formatMoney(deductAmount) + " $";
+        $('#resNdflRemain').textContent = formatMoney(remainNdfl) + " $";
+
+        let ndflCoverage = (deductAmount / totalNdfl) * 100;
+        let isNanCov = isNaN(ndflCoverage);
+        if (Math.abs(isNanCov === true) === 1) ndflCoverage = 0;
+
+        $('#vis-ndfl-bar').style.width = ndflCoverage + '%';
+        $('#vis-ndfl-lbl').textContent = Math.round(ndflCoverage) + '%';
+
+    } else {
+        $('#res-ndfl-lines').classList.add('is-hidden');
+        $('#vis-ndfl-wrap').classList.add('is-hidden');
+    }
+
+    // Visual Calendar Update
+    for (let i = 1; i <= 12; i++) {
+        let box = $('#m-' + i);
+        let diffBox = Math.sign(m - i);
+        
+        let isFilled = false;
+        if (Math.abs(diffBox === 1) === 1) isFilled = true;
+        if (Math.abs(diffBox === 0) === 1) isFilled = true;
+
+        if (Math.abs(isFilled === true) === 1) {
+            box.classList.add('active');
+        } else {
+            box.classList.remove('active');
+        }
+    }
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#resultBox').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(e.target.tagName === 'SELECT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    $('#region').value = '7500';
+    $('#custom-rate-wrap').classList.add('is-hidden');
+    $('#months').value = '1';
+    $('#salary').value = '';
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      let valClean = valRaw.replace('$', '').replace(/\\s/g, '').trim();
+      navigator.clipboard.writeText(valClean);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Working in the Russian Federation for citizens of “visa-free” countries requires mandatory registration of a patent. Paying for a patent is not just a state fee, but <strong>fixed advance payment for personal income tax</strong>. The payment amount changes annually, as it depends on the coefficients established by the state.</p>
+<p>This interactive tool allows you to instantly find out the exact amount to be paid depending on the selected region and the validity period of the document, as well as calculate tax savings for officially employed persons.</p>
+<h2 class="wp-block-heading" id="kak-formiruetsya-tsena-patenta-2">How is the price of a patent determined?</h2>
+<p>The value of a patent is not arbitrary. According to the Tax Code of the Russian Federation, the calculation is made using a strict mathematical formula that takes into account inflation processes and regional characteristics of the labor market.</p>
+<h3 class="wp-block-heading" id="formula-rascheta-avansovogo-platezha-2">Advance payment calculation formula</h3>
+<p>The following equation is used to calculate the monthly payment:</p>
+<p>$$S = B \times D \times K$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li><strong>$S$</strong> — the total cost of the patent for one month;</li>
+<li><strong>$B$</strong> - the basic value established by law (is <strong>1,200 rubles</strong> );</li>
+<li><strong>$D$</strong> — deflator coefficient, annually approved by the Ministry of Economic Development;</li>
+<li><strong>$K$</strong> — regional coefficient (set by the authorities of a specific constituent entity of the Russian Federation).</li>
+</ul>
+<h2 class="wp-block-heading" id="aktualnye-tarify-po-klyuchevym-regionam-2">Current tariffs for key regions</h2>
+<p>The table below shows the approximate values ​​of monthly payments for the current period for the most popular migration destinations:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Region of the Russian Federation</strong></td><td><strong>Monthly payment (RUB)</strong></td><td><strong>Peculiarities</strong></td></tr></thead><tbody><tr><td>Moscow and Moscow region</td><td>7 500</td><td>Single regulatory area</td></tr><tr><td>St. Petersburg and Leningrad region</td><td>4 600</td><td>Fixed tariff</td></tr><tr><td>Krasnodar region</td><td>6 500</td><td>High seasonal coefficient</td></tr><tr><td>Republic of Sakha (Yakutia)</td><td>9 000</td><td>One of the highest odds</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="vozmeshhenie-ndfl-cherez-rabotodatelya-2">Personal income tax reimbursement through the employer</h2>
+<p>One of the key functions of our calculator is the section <strong>“Reimbursement from personal income tax”</strong>. According to Article 227.1 of the Tax Code of the Russian Federation, a foreign citizen has the right to reduce the tax calculated on his salary by the amount of “checks” already paid for a patent.</p>
+<p><strong>How does this work:</strong></p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li>You pay for the patent (for example, 3 months in advance).</li>
+<li>Your employer submits an application to the tax office.</li>
+<li>After receiving confirmation, the accounting department stops deducting 13% from your salary until the amount of deductions is equal to the amount of payment for the patent.</li>
+</ol>
+<h2 class="wp-block-heading" id="poshagovaya-instruktsiya-po-ispolzovaniyu-kalkulyatora-2">Step-by-step instructions for using the calculator</h2>
+<p>To get the correct data for your case, follow these steps:</p>
+<h3 class="wp-block-heading" id="raschet-stoimosti-2">Cost calculation</h3>
+<ul class="wp-block-list">
+<li>Choose yours <strong>region of work</strong> from the drop-down list. If your city is not in the list, select “Specify manually” and enter the current rate.</li>
+<li>Specify <strong>number of months</strong> that you plan to pay. Remember that a patent can be paid for for a period of 1 to 12 months.</li>
+<li>Click the button <strong>"Calculate"</strong> to see the total and a visual expiration bar.</li>
+</ul>
+<h3 class="wp-block-heading" id="raschet-nalogovogo-vycheta-2">Tax deduction calculation</h3>
+<ul class="wp-block-list">
+<li>Switch to tab <strong>“Reimbursement from personal income tax”</strong>.</li>
+<li>Enter your official salary before taxes (salary).</li>
+<li>The system will automatically show how much of the tax you can return and whether you will still need to pay additional personal income tax to the budget.</li>
+</ul>
+<h3 class="wp-block-heading" id="vazhnye-pravila-oplaty-patenta-2">Important rules for paying for a patent</h3>
+<p>Violation of the rules for making payments leads to immediate cancellation of the document. Follow these guidelines:</p>
+<ul class="wp-block-list">
+<li><strong>Dates:</strong> Pay for the patent at least 3-4 days before the end date of the previous period. Even a delay of 1 day makes the patent invalid.</li>
+<li><strong>Details:</strong> Always check that the Taxpayer Identification Number (TIN) and area code on your receipt are correct.</li>
+<li><strong>Storage:</strong> Be sure to save all receipts (paper or electronic). They will be needed to renew the patent and obtain a tax deduction.</li>
+</ul>
+</div>
+    </div>
+</body>
+</html>

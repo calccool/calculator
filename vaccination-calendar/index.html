@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccination calendar: Vaccination schedule calculator by date of birth</title>
+    <meta name="description" content="Vaccination calendar: Vaccination schedule calculator by date of birth - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Vaccination calendar: Vaccination schedule calculator by date of birth</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (Золотой стандарт + Timeline Visuals) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; position: relative; }
+    
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; margin-bottom: 4px;}
+    
+    /* Font size 14px enforced */
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; background:#fff; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 10px; } 
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 10px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; font-size: 16px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+
+    .c-result { border:1px dashed #0693e3; border-radius:12px; padding:10px; background:#fff; margin-top: 20px; display:none; }
+    .c-result.show { display:grid; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 10px; border-radius: 8px; margin-bottom: 10px; display: none; font-size: 14px; }
+    .c-error.show { display: block; }
+
+    .c-visual-box { text-align: center; margin-bottom: 20px; padding: 20px; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0; display:flex; flex-direction:column; align-items:center; }
+    
+    /* Timeline Styles */
+    .c-timeline { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
+    .c-event { 
+        display: flex; gap: 15px; padding: 15px; border-radius: 10px; border-left: 4px solid #ddd; background: #f9f9f9; 
+        transition: transform 0.2s;
+    }
+    .c-event:hover { transform: translateX(5px); }
+    
+    .c-event.past { border-left-color: #4caf50; background: #e8f5e9; opacity: 0.7; }
+    .c-event.current { border-left-color: #0693e3; background: #e3f2fd; box-shadow: 0 4px 12px rgba(6,147,227,0.15); border: 1px solid #bbdefb; border-left-width: 4px; }
+    .c-event.future { border-left-color: #9e9e9e; }
+
+    .c-date-badge { 
+        min-width: 80px; text-align: center; display: flex; flex-direction: column; justify-content: center;
+        font-weight: bold; color: #555; font-size: 13px;
+    }
+    .c-event-content { flex: 1; }
+    .c-event-title { font-weight: bold; color: #333; margin-bottom: 4px; font-size: 15px; }
+    .c-event-vacs { font-size: 13px; color: #666; line-height: 1.4; }
+    
+    .c-progress-wrap { width: 100%; height: 8px; background: #e0e0e0; border-radius: 4px; margin-top: 10px; overflow: hidden; }
+    .c-progress-bar { height: 100%; background: linear-gradient(90deg, #4caf50, #81c784); width: 0%; transition: width 1s ease-in-out; }
+    .c-progress-label { font-size: 12px; color: #666; margin-top: 5px; text-align: right; }
+
+    @media (max-width: 600px) {
+        .c-event { flex-direction: column; gap: 8px; }
+        .c-date-badge { flex-direction: row; justify-content: flex-start; gap: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px; margin-bottom: 5px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-body">
+<div class="c-visual-box">
+<svg fill="none" height="60" stroke="#0693e3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="60">
+<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+<path d="M12 8v4"></path>
+<path d="M12 16h.01"></path>
+</svg>
+<div style="font-size:14px; font-weight:bold; margin-top:10px; color:#333;">Immunization calendar</div>
+<div style="font-size:11px; color:#666;">National calendar of preventive vaccinations</div>
+<div style="width:100%; margin-top:15px;">
+<div class="c-progress-wrap">
+<div class="c-progress-bar" id="progBar"></div>
+</div>
+<div class="c-progress-label" id="progText">Enter date of birth</div>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Child's date of birth</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="inDate" type="date"/>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Show graph</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-result" id="resBox">
+<div style="text-align:right; margin-bottom:10px;">
+<button class="c-btn c-btn-secondary" id="printBtn" style="min-width:auto; padding:5px 10px; font-size:12px;">🖨️ Print</button>
+</div>
+<div class="c-timeline" id="timelineContainer"></div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (id) => wrap.querySelector('#'+id);
+  const errorEl = $('errorMsg');
+  
+  // Set default date to today
+  const today = new Date();
+  $('inDate').valueAsDate = today;
+
+  // Vaccine Schedule (Standard approximation)
+  // offsetType: 'h' (hours), 'd' (days), 'm' (months), 'y' (years)
+  const schedule = [
+      { t: 0, type: 'h', title: 'В роддоме (0-24ч)', vacs: 'Гепатит B (1-я доза)' },
+      { t: 3, type: 'd', title: 'В роддоме (3-7 дней)', vacs: 'БЦЖ / БЦЖ-М (Туберкулез)' },
+      { t: 1, type: 'm', title: '1 месяц', vacs: 'Гепатит B (2-я доза)' },
+      { t: 2, type: 'm', title: '2 месяца', vacs: 'Пневмококковая инфекция (1-я доза)' },
+      { t: 3, type: 'm', title: '3 месяца', vacs: 'АКДС (1-я), Полиомиелит (1-я), Гемофильная (1-я)' },
+      { t: 4.5, type: 'm', title: '4.5 месяца', vacs: 'АКДС (2-я), Полиомиелит (2-я), Гемофильная (2-я), Пневмококк (2-я)' },
+      { t: 6, type: 'm', title: '6 месяцев', vacs: 'АКДС (3-я), Полиомиелит (3-я), Гемофильная (3-я), Гепатит B (3-я)' },
+      { t: 12, type: 'm', title: '12 месяцев', vacs: 'Корь, Краснуха, Паротит (1-я доза)' },
+      { t: 15, type: 'm', title: '15 месяцев', vacs: 'Пневмококковая инфекция (Ревакцинация)' },
+      { t: 18, type: 'm', title: '18 месяцев', vacs: 'АКДС (Ревакцинация 1), Полиомиелит (Р1), Гемофильная (Р1)' },
+      { t: 20, type: 'm', title: '20 месяцев', vacs: 'Полиомиелит (Ревакцинация 2)' },
+      { t: 6, type: 'y', title: '6 лет', vacs: 'Корь, Краснуха, Паротит (Ревакцинация)' },
+      { t: 6, type: 'y', title: '6-7 лет', vacs: 'АДС-М (Дифтерия, Столбняк - Р2), Туберкулез (Р)' },
+      { t: 14, type: 'y', title: '14 лет', vacs: 'АДС-М (Дифтерия, Столбняк - Р3), Полиомиелит (Р3)' }
+  ];
+
+  function calculate() {
+      errorEl.classList.remove('show');
+      const dateStr = $('inDate').value;              if (!dateStr) {           errorEl.textContent = "Select your date of birth.";           errorEl.classList.add('show'); return;
+      }
+      
+      const birthDate = new Date(dateStr);
+      const now = new Date();
+      // Reset time for accurate date comparison
+      now.setHours(0,0,0,0);
+      
+      const timeline = $('timelineContainer');
+      timeline.innerHTML = '';
+      
+      let completedCount = 0;
+      let totalCount = schedule.length;
+      let nextFound = false;
+      
+      // Iterate safe loop
+      for (let i = 0; i !== schedule.length; i++) {
+          const item = schedule[i];
+          
+          // Calculate Target Date
+          const targetDate = new Date(birthDate);
+          
+          if (item.type === 'h') {
+              // Same day roughly
+          } else if (item.type === 'd') {
+              targetDate.setDate(targetDate.getDate() + item.t);
+          } else if (item.type === 'm') {
+              // Add months carefully (handling days overflow is complex, simple approach here)
+              // Logic: 4.5 months = 4 months + 15 days approx
+              const months = Math.floor(item.t);
+              const daysAdd = (item.t - months) * 30;
+              targetDate.setMonth(targetDate.getMonth() + months);
+              targetDate.setDate(targetDate.getDate() + daysAdd);
+          } else if (item.type === 'y') {
+              targetDate.setFullYear(targetDate.getFullYear() + item.t);
+          }
+          
+          // Determine Status
+          let statusClass = 'future';
+          let dateText = targetDate.toLocaleDateString('ru-RU');
+          
+          // Compare dates
+          // if targetDate < now -> past
+          if (Math.sign(now.getTime() - targetDate.getTime()) === 1) {
+              statusClass = 'past';
+              completedCount++;
+          } else {
+              // Future
+              // Check if it's the *next* immediate one
+              if (nextFound === false) {
+                  statusClass = 'current';
+                  nextFound = true;
+                  dateText += '(Soon)';
+              }
+          }
+          
+          // Create Element
+          const el = document.createElement('div');
+          el.className = `c-event ${statusClass}`;
+          el.innerHTML = `
+<div class="c-date-badge">
+<span>${dateText}</span>
+<span style="font-weight:normal; font-size:11px; margin-top:2px;">${item.title}</span>
+</div>
+<div class="c-event-content">
+<div class="c-event-title">${statusClass === 'past' ? '✅' : (statusClass === 'current' ? '🔹' : '○')}${item.title}</div>
+<div class="c-event-vacs">${item.vacs}</div>
+</div>
+`;
+          
+          timeline.appendChild(el);
+      }
+      
+      // Progress Bar Update
+      const percent = (completedCount / totalCount) * 100;
+      $('progBar').style.width = percent + "%";
+      $('progText').textContent = `Пройдено этапов: ${completedCount} из ${totalCount} (${Math.round(percent)}%)`;
+
+      $('resBox').classList.add('show');
+      $('resBox').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  $('calcBtn').addEventListener('click', calculate);
+  
+  $('resetBtn').addEventListener('click', () => {
+      $('inDate').valueAsDate = new Date();
+      $('resBox').classList.remove('show');
+      $('progBar').style.width = "0%";
+      $('progText').textContent = "Enter date of birth";
+      errorEl.classList.remove('show');
+  });
+  
+$('printBtn').addEventListener('click', () => {
+      const container = document.getElementById('timelineContainer');
+      const content = container.innerHTML;
+      
+      // Проверка: если график пустой, не открываем окно
+      // (используем безопасное сравнение без forbidden operators)
+      if (content.length < 10) {
+          alert("First click the 'Show graph' button");
+          return;
+      }
+
+      const printWindow = window.open('', '', 'height=600,width=800');
+      
+      // Формируем HTML для печати в одной переменной
+      const htmlToPrint = `
+        <html>
+        <head>
+            <title>Календарь прививок</title>
+            <style>
+                body { font-family: sans-serif; padding: 20px; color: #333; }
+                h2 { text-align: center; color: #0693e3; }
+                .meta { margin-bottom: 20px; font-weight: bold; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+                
+                /* Стили для элементов графика при печати */
+                .c-event { 
+                    display: flex; 
+                    margin-bottom: 15px; 
+                    border-bottom: 1px solid #ddd; 
+                    padding-bottom: 10px; 
+                    page-break-inside: avoid; /* Не разрывать блок при печати */
+                }
+                .c-date-badge { 
+                    width: 120px; 
+                    font-weight: bold; 
+                    font-size: 14px;
+                }
+                .c-event-content { flex: 1; }
+                .c-event-title { font-weight: bold; margin-bottom: 5px; }
+                .c-event-vacs { font-size: 13px; color: #555; }
+            </style>
+        </head>
+        <body>
+            
+
+<h2 id="individualnyj-plan-vaktsinatsii-2" >Индивидуальный план вакцинации</h2>
+            <div class="meta">Дата рождения ребенка: ${$('inDate').value}</div>
+            <div>
+                ${content}
+            </div>
+        </body>
+        </html>
+      `;
+
+      printWindow.document.write(htmlToPrint);
+      printWindow.document.close(); // Обязательно закрыть поток для рендеринга
+      printWindow.focus();
+      
+      // Небольшая задержка, чтобы стили успели примениться перед диалогом печати
+      setTimeout(() => {
+          printWindow.print();
+          printWindow.close();
+      }, 500);
+  });
+
+});
+</script>
+
+        <div class="post-content">
+<p>Timely vaccination is the foundation of a child’s health and the only reliable way to protect against dangerous infectious diseases. However, it is extremely difficult to keep in mind complex drug administration regimens, revaccinations and intervals between doses.</p>
+<p>Our <strong>interactive vaccination calculator</strong> developed on the basis of the approved National Preventive Vaccination Calendar. It automatically generates a personalized immunization schedule, counting the required intervals from your baby's date of birth.</p>
+<h2 class="wp-block-heading" id="kak-polzovatsya-kalkulyatorom-2">How to use the calculator</h2>
+<p>The tool takes into account standard medical protocols for healthy children. To get the graph:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li>Please indicate the exact <strong>child's date of birth</strong> in the appropriate field.</li>
+<li>Click the button <strong>"Show graph"</strong>.</li>
+<li>The system will instantly build a timeline with past and upcoming vaccinations.</li>
+<li>Use the print feature to take the plan with you to your pediatrician appointment.</li>
+</ol>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p><strong>Important:</strong> This calculation is for reference only and assumes that the child has no medical exemptions. The individual schedule can be adjusted by your attending physician depending on the baby’s health condition, the presence of allergic reactions or past illnesses.</p>
+</blockquote>
+<h2 class="wp-block-heading" id="tablitsa-natsionalnogo-kalendarya-privivok-2">Table of the national vaccination calendar</h2>
+<p>Below is a reference list of vaccines included in the calculation algorithm. These data correspond to immunoprophylaxis standards.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Child's age</strong></td><td><strong>Vaccine (Disease)</strong></td><td><strong>Type of vaccination</strong></td></tr></thead><tbody><tr><td><strong>0-24 hours</strong></td><td>Hepatitis B</td><td>First vaccination</td></tr><tr><td><strong>3-7 days</strong></td><td>BCG / BCG-M (Tuberculosis)</td><td>First vaccination</td></tr><tr><td><strong>1 month</strong></td><td>Hepatitis B</td><td>Second vaccination</td></tr><tr><td><strong>2 months</strong></td><td>Pneumococcal infection</td><td>First vaccination</td></tr><tr><td><strong>3 months</strong></td><td>DTP (Whooping cough, Diphtheria, Tetanus), Poliomyelitis, Haemophilus influenzae infection</td><td>First vaccination</td></tr><tr><td><strong>4.5 months</strong></td><td>DPT, Poliomyelitis, Haemophilus influenzae, Pneumococcus</td><td>Second vaccination</td></tr><tr><td><strong>6 months</strong></td><td>DTP, Poliomyelitis, Haemophilus influenzae, Hepatitis B</td><td>Third vaccination</td></tr><tr><td><strong>12 months</strong></td><td>MMR (Measles, Rubella, Mumps)</td><td>First vaccination</td></tr><tr><td><strong>18 months</strong></td><td>DTP, Poliomyelitis, Haemophilus influenzae</td><td>First revaccination</td></tr><tr><td><strong>6-7 years</strong></td><td>ADS-M (Diphtheria, Tetanus), Tuberculosis</td><td>Second revaccination</td></tr><tr><td><strong>14 years old</strong></td><td>ADS-M, Poliomyelitis</td><td>Third revaccination</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="printsip-rascheta-srokov-immunizatsii-2">The principle of calculating the timing of immunization</h2>
+<p>The calculator is based on a mathematical model of adding regulated time intervals to the date of birth ( $D_{birth}$ ).</p>
+<p>The formula for calculating the date of a specific vaccination ( $D_{vac}$ ) is as follows:</p>
+<p>$$D_{vac} = D_{birth} + \Delta t$$</p>
+<p>Where $\Delta t$ is the recommended vaccination age. Depending on the type of vaccine, $\Delta t$ can be measured in hours, days, months or years.</p>
+<h3 class="wp-block-heading" id="primery-rascheta-intervalov-2">Examples of calculating intervals</h3>
+<ul class="wp-block-list">
+<li><strong>For BCG:</strong> $\Delta t = 3 \dots 7$ days. Vaccination is carried out in the maternity hospital before discharge.</li>
+<li><strong>For the first DPT:</strong> $\Delta t = 3$ of the month. If the child was born on January 1, the planned vaccination date is April 1.</li>
+<li><strong>For measles booster vaccination:</strong> $\Delta t = 6$ years. This is an important stage before entering school.</li>
+</ul>
+<h2 class="wp-block-heading" id="rasshifrovka-osnovnyh-vaktsin-2">Decoding the main vaccines</h2>
+<p>For parents who are encountering abbreviations in a vaccination certificate for the first time, we have prepared a brief reference:</p>
+<ul class="wp-block-list">
+<li><strong>BCG</strong> - protects against tuberculosis. Leaves a characteristic scar on the shoulder.</li>
+<li><strong>DTP (DTP)</strong> - a combined vaccine against whooping cough, diphtheria and tetanus. Often causes fever, which is a normal immune reaction. Modern analogues (for example, Pentaxim or Infanrix) may be easier to tolerate.</li>
+<li><strong>PDA (MMR)</strong> — comprehensive protection against measles, mumps (“mumps”) and rubella.</li>
+<li><strong>Hepatitis B (HepB)</strong> - a viral disease that affects the liver. The course consists of three doses to form lasting immunity.</li>
+</ul>
+<h2 class="wp-block-heading" id="pochemu-nelzya-propuskat-sroki-2">Why can't you miss deadlines?</h2>
+<p>Keeping a calendar is critical to building <strong>herd immunity</strong> and personal protection.</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Immune window:</strong> Vaccines are administered precisely at the age when the child’s body is most vulnerable to specific infections, but is already able to produce antibodies.</li>
+<li><strong>Efficiency of revaccination:</strong> Violation of the intervals between doses (for example, with DTP or Hepatitis B) can lead to the fact that immunity is not fully formed, and the course will have to be started again or adjusted.</li>
+</ol>
+<p>Use our calculator as a guide for planning visits to the clinic, but always confirm the final dates with your pediatrician, especially if the child had an acute respiratory viral infection or had a medical emergency.</p>
+</div>
+    </div>
+</body>
+</html>

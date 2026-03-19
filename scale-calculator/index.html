@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online scale calculator - calculation of actual dimensions and drawings</title>
+    <meta name="description" content="Online scale calculator - calculation of actual dimensions and drawings - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Online scale calculator - calculation of actual dimensions and drawings</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: end; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-receipt-wrap { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 15px; position: relative; overflow: hidden; }
+    .c-receipt-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: repeating-linear-gradient(45deg, #0693e3, #0693e3 10px, #38bdf8 10px, #38bdf8 20px); }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #fff; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #eff6ff; border: 1px solid #bae6fd; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05); }
+    .c-highlight-line:hover { background: #e0f2fe; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .c-switch-wrap { display: flex; align-items: center; gap: 12px; cursor: pointer; margin-bottom: 5px; padding: 14px 16px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 2px 6px rgba(0,0,0,0.02); transition: 0.3s; }
+    .c-switch-wrap:hover { border-color: #cbd5e1; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .c-switch-track { width: 44px; height: 24px; background: #cbd5e1; border-radius: 24px; position: relative; transition: 0.3s; flex-shrink: 0; }
+    .c-switch-thumb { width: 18px; height: 18px; background: #fff; border-radius: 50%; position: absolute; top: 3px; left: 3px; transition: 0.3s; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+    input:checked + .c-switch-track { background: #0693e3; }
+    input:checked + .c-switch-track .c-switch-thumb { left: 23px; }
+    .c-switch-label { font-weight: 600; font-size: 15px; color: #333; }
+    
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* Advanced Visualization */
+    .c-vis-box { margin: 15px 0 25px; padding: 25px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); overflow: hidden; position: relative; }
+    .c-vis-title { font-weight: 700; color: #0f172a; font-size: 15px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 8px; position: relative; z-index: 2; }
+    
+    .c-blueprint-bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: linear-gradient(rgba(6, 147, 227, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(6, 147, 227, 0.1) 1px, transparent 1px); background-size: 20px 20px; opacity: 0; transition: opacity 0.5s, transform 2s cubic-bezier(0.2, 0.8, 0.2, 1); z-index: 0; transform-origin: center center; }
+    .c-blueprint-bg.animating { opacity: 1; transform: scale(1.5); }
+    
+    .c-scale-display { display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 2; background: rgba(255,255,255,0.9); padding: 15px; border-radius: 12px; border: 1px solid #bae6fd; box-shadow: 0 4px 12px rgba(2, 132, 199, 0.08); margin-top: 10px; }
+    .c-scale-item { display: flex; flex-direction: column; align-items: center; gap: 8px; flex: 1; }
+    .c-scale-icon { width: 48px; height: 48px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 24px; background: #f1f5f9; border: 2px dashed #94a3b8; color: #64748b; transition: 0.3s; }
+    .c-scale-icon.active { background: #e0f2fe; border: 2px solid #0284c7; color: #0284c7; box-shadow: 0 0 15px rgba(2, 132, 199, 0.2); transform: scale(1.05); }
+    .c-scale-val { font-size: 15px; font-weight: 700; color: #333; text-align: center; }
+    .c-scale-sub { font-size: 12px; color: #64748b; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
+    
+    .c-scale-bridge { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 15px; color: #0693e3; font-weight: 800; font-size: 18px; }
+    .c-scale-bridge::before { content: ''; width: 40px; height: 2px; background: #0693e3; margin-bottom: 4px; }
+    .c-scale-bridge::after { content: ''; width: 40px; height: 2px; background: #0693e3; margin-top: 4px; }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-vis-box { padding: 15px; }
+       .c-modal-box { padding: 18px; }
+       .c-scale-display { flex-direction: column; gap: 15px; }
+       .c-scale-bridge { display: none; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="scale-calc-wrapper">
+<div class="c-body">
+<div class="c-toggle" id="mode-tabs">
+<button class="c-toggle-btn active" data-mode="find_real">Actual size</button>
+<button class="c-toggle-btn" data-mode="find_map">Size in drawing</button>
+<button class="c-toggle-btn" data-mode="find_scale">Find scale</button>
+</div>
+<div class="c-divider"><span class="icon">📐</span>Initial data</div>
+<div class="c-row" id="wrap-scale" style="align-items: flex-end;">
+<div class="c-field" style="grid-column: 1 / -1;">
+<label class="c-label">Scale<span class="c-term">Attitude</span>
+<span class="c-help-icon" id="openScaleInfo">?</span>
+</label>
+<div style="display:flex; align-items:center; gap:12px; width: 100%; max-width: 400px;">
+<input class="c-input" id="scale-left" placeholder="1" style="text-align:center; font-weight:700;" type="number" value="1"/>
+<span style="font-size:20px; font-weight:700; color:#475569;">:</span>
+<input class="c-input" id="scale-right" placeholder="100" style="text-align:center; font-weight:700;" type="number"/>
+</div>
+<div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn scale-qbtn" data-l="1" data-r="100" type="button">1:100 (Plan)</button>
+<button class="c-quick-btn scale-qbtn" data-l="1" data-r="500" type="button">1:500 (General plan)</button>
+<button class="c-quick-btn scale-qbtn" data-l="1" data-r="50000" type="button">1:50,000 (Map)</button>
+</div>
+</div>
+</div>
+<div class="c-row" id="wrap-map">
+<div class="c-field" style="grid-column: 1 / -1;">
+<label class="c-label">Size on drawing/map<span class="c-term" id="lbl-map-req">What you are looking for</span></label>
+<div class="c-row cols-2" style="gap:10px; margin-bottom:0;">
+<input class="c-input" id="map-val" placeholder="Meaning" type="number"/>
+<select class="c-select" id="map-unit">
+<option value="0.1">Millimeters (mm)</option>
+<option selected="" value="1">Centimeters (cm)</option>
+<option value="2.54">Inches (in)</option>
+</select>
+</div>
+</div>
+</div>
+<div class="c-row is-hidden" id="wrap-real">
+<div class="c-field" style="grid-column: 1 / -1;">
+<label class="c-label">Actual size<span class="c-term" id="lbl-real-req">What you are looking for</span></label>
+<div class="c-row cols-2" style="gap:10px; margin-bottom:0;">
+<input class="c-input" id="real-val" placeholder="Meaning" type="number"/>
+<select class="c-select" id="real-unit">
+<option value="1">Centimeters (cm)</option>
+<option selected="" value="100">Meters (m)</option>
+<option value="100000">Kilometers (km)</option>
+<option value="160934">Miles (mi)</option>
+</select>
+</div>
+</div>
+</div>
+<div class="c-divider" style="margin-top: 30px;"><span class="icon">⚙️</span>Additionally</div>
+<label class="c-switch-wrap">
+<input class="is-hidden" id="areaToggle" type="checkbox"/>
+<div class="c-switch-track"><div class="c-switch-thumb"></div></div>
+<span class="c-switch-label">Area calculation<span class="c-term">Square values</span></span>
+</label>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-vis-box is-hidden" id="vis-box">
+<div class="c-blueprint-bg" id="vis-bg"></div>
+<div class="c-vis-title"><span class="icon">🔍</span>Projection visualization</div>
+<div class="c-scale-display">
+<div class="c-scale-item">
+<div class="c-scale-sub">Drawing/Map</div>
+<div class="c-scale-icon" id="icon-map">📄</div>
+<div class="c-scale-val" id="vis-map-val">0</div>
+</div>
+<div class="c-scale-bridge" id="vis-bridge-val">1:1</div>
+<div class="c-scale-item">
+<div class="c-scale-sub">Object in reality</div>
+<div class="c-scale-icon" id="icon-real">🏢</div>
+<div class="c-scale-val" id="vis-real-val">0</div>
+</div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">📐</span>Calculation result</div>
+<div class="c-receipt-wrap">
+<div class="c-resline c-highlight-line" style="border-bottom: none;">
+<div class="c-resleft" id="resTitleMain">Search value<span class="c-subtext" id="resSubMain">In selected units</span></div>
+<div class="c-resval" id="resValMain" style="font-size: 24px;"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+<div class="c-receipt-wrap" style="background:#fff; border-color:#e2e8f0; margin-top:10px;">
+<div class="c-resline" style="border-bottom:none; padding-bottom:0;">
+<div class="c-resleft">Alternative format<span class="c-subtext" id="resSubAlt">Additional conversion</span></div>
+<div class="c-resval" id="resValAlt" style="color:#4a5565;"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+</div>
+<div class="c-modal-overlay" id="scaleInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeScaleInfo">×</button>
+<div class="c-modal-title"><span class="icon">📖</span>How scale works</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">The scale shows how many times the distance on the plan or map is less than the actual distance.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>For example, scale 1:100</b><br/>This means that 1 unit in the drawing is equal to 100 of the same units in reality.<br/>
+<i>1 cm on paper = 100 cm (or 1 meter) in reality.</i>
+</div>
+<div style="background: #eff6ff; padding: 12px; border-radius: 8px; border: 1px solid #bae6fd; font-size: 13px; color: #0284c7;">
+<b>Area calculation:</b><br/>When calculating areas, the scale is squared. If the linear scale is 1:100, then the area scale will be 1:10,000 (1 cm² on the map = 10,000 cm² or 1 m² in reality).</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let activeMode = 'find_real';
+  let isCalculated = false;
+
+  // Modal logic
+  $('#openScaleInfo').addEventListener('click', () => { $('#scaleInfoModal').classList.add('show'); });
+  $('#closeScaleInfo').addEventListener('click', () => { $('#scaleInfoModal').classList.remove('show'); });
+  $('#scaleInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#scaleInfoModal').classList.remove('show');
+  });
+
+  function updateModeUI() {
+      // Reset hints
+      $('#lbl-map-req').style.display = 'none';
+      $('#lbl-real-req').style.display = 'none';
+
+      if (Math.abs(activeMode === 'find_real') === 1) {
+          $('#wrap-scale').classList.remove('is-hidden');
+          $('#wrap-map').classList.remove('is-hidden');
+          $('#wrap-real').classList.remove('is-hidden');
+          $('#real-val').disabled = true;
+          $('#map-val').disabled = false;
+          $('#real-val').value = '';
+          $('#lbl-real-req').style.display = 'inline-flex';
+          
+          $('#icon-real').classList.add('active');
+          $('#icon-map').classList.remove('active');
+      } 
+      else if (Math.abs(activeMode === 'find_map') === 1) {
+          $('#wrap-scale').classList.remove('is-hidden');
+          $('#wrap-map').classList.remove('is-hidden');
+          $('#wrap-real').classList.remove('is-hidden');
+          $('#map-val').disabled = true;
+          $('#real-val').disabled = false;
+          $('#map-val').value = '';
+          $('#lbl-map-req').style.display = 'inline-flex';
+          
+          $('#icon-map').classList.add('active');
+          $('#icon-real').classList.remove('active');
+      }
+      else if (Math.abs(activeMode === 'find_scale') === 1) {
+          $('#wrap-scale').classList.add('is-hidden');
+          $('#wrap-map').classList.remove('is-hidden');
+          $('#wrap-real').classList.remove('is-hidden');
+          $('#map-val').disabled = false;
+          $('#real-val').disabled = false;
+          
+          $('#icon-map').classList.remove('active');
+          $('#icon-real').classList.remove('active');
+      }
+      
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  }
+
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeMode = btn.dataset.mode;
+        updateModeUI();
+    });
+  });
+
+  wrap.querySelectorAll('.scale-qbtn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          $('#scale-left').value = btn.dataset.l;
+          $('#scale-right').value = btn.dataset.r;
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  $('#areaToggle').addEventListener('change', () => {
+      let isArea = $('#areaToggle').checked;
+      let mapOpts = $('#map-unit').options;
+      let realOpts = $('#real-unit').options;
+      
+      if (Math.abs(isArea === true) === 1) {
+          mapOpts[0].text = "Sq. millimeters (mm²)";
+          mapOpts[1].text = "Sq. centimeters (cm²)";
+          mapOpts[2].text = "Sq. inches (in²)";
+          
+          realOpts[0].text = "Sq. centimeters (cm²)";
+          realOpts[1].text = "Sq. meters (m²)";
+          realOpts[2].text = "Sq. kilometers (km²)";
+          realOpts[3].text = "Sq. miles (mi²)";
+      } else {
+          mapOpts[0].text = "Millimeters (mm)";
+          mapOpts[1].text = "Centimeters (cm)";
+          mapOpts[2].text = "Inches (in)";
+          
+          realOpts[0].text = "Centimeters (cm)";
+          realOpts[1].text = "Meters (m)";
+          realOpts[2].text = "Kilometers (km)";
+          realOpts[3].text = "Miles (mi)";
+      }
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  });
+
+  function formatNum(n) {
+      if (Math.abs(Math.sign(n) === 0) === 1) return "0";
+      // To avoid e-notation for small numbers and long decimals
+      let s = n.toLocaleString('en-US', { maximumFractionDigits: 6, useGrouping: false });
+      return s.replace('.', ',');
+  }
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let isArea = $('#areaToggle').checked;
+    
+    let scaleL = parseFloat($('#scale-left').value);
+    let scaleR = parseFloat($('#scale-right').value);
+    let mapVal = parseFloat($('#map-val').value);
+    let realVal = parseFloat($('#real-val').value);
+    
+    let mapUnitMult = parseFloat($('#map-unit').value); // relative to cm
+    let realUnitMult = parseFloat($('#real-unit').value); // relative to cm
+    
+    // Square multipliers if area mode
+    if (Math.abs(isArea === true) === 1) {
+        mapUnitMult = mapUnitMult * mapUnitMult;
+        realUnitMult = realUnitMult * realUnitMult;
+    }
+
+    let isErr = false;
+    
+    let isPosL = false;
+    if (Math.abs(Math.sign(scaleL) === 1) === 1) isPosL = true;
+    let isPosR = false;
+    if (Math.abs(Math.sign(scaleR) === 1) === 1) isPosR = true;
+    
+    if (Math.abs(activeMode !== 'find_scale') === 1) {
+        let scaleCond = Math.abs(isPosL === true) + Math.abs(isPosR === true);
+        if (Math.abs(scaleCond === 2) === 0) isErr = true;
+    }
+
+    if (Math.abs(activeMode === 'find_real') === 1) {
+        let isPosMap = false;
+        if (Math.abs(Math.sign(mapVal) === 1) === 1) isPosMap = true;
+        if (Math.abs(isPosMap === true) === 0) isErr = true;
+    } else if (Math.abs(activeMode === 'find_map') === 1) {
+        let isPosReal = false;
+        if (Math.abs(Math.sign(realVal) === 1) === 1) isPosReal = true;
+        if (Math.abs(isPosReal === true) === 0) isErr = true;
+    } else if (Math.abs(activeMode === 'find_scale') === 1) {
+        let isPosMap = false;
+        if (Math.abs(Math.sign(mapVal) === 1) === 1) isPosMap = true;
+        let isPosReal = false;
+        if (Math.abs(Math.sign(realVal) === 1) === 1) isPosReal = true;
+        
+        let bothCond = Math.abs(isPosMap === true) + Math.abs(isPosReal === true);
+        if (Math.abs(bothCond === 2) === 0) isErr = true;
+    }
+
+    if (Math.abs(isErr === true) === 1) {
+        $('#vis-box').classList.add('is-hidden');
+        $('#resultBox').classList.remove('show');
+        if (Math.abs(shouldScroll === true) === 1) {
+            $('#errorMsg').textContent = "Please provide valid positive values.";
+            $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    let scaleFactor = scaleR / scaleL;
+    if (Math.abs(isArea === true) === 1) {
+        scaleFactor = scaleFactor * scaleFactor;
+    }
+
+    let resMainStr = "";
+    let resAltStr = "";
+    let titleMain = "";
+    let mapUnitName = $('#map-unit').options[$('#map-unit').selectedIndex].text.split('(')[1].replace(')', '');
+    let realUnitName = $('#real-unit').options[$('#real-unit').selectedIndex].text.split('(')[1].replace(')', '');
+
+    let visScaleStr = scaleL + ":" + scaleR;
+
+    if (Math.abs(activeMode === 'find_real') === 1) {
+        let mapCm = mapVal * mapUnitMult;
+        let realCm = mapCm * scaleFactor;
+        let finalReal = realCm / realUnitMult;
+        
+        $('#real-val').value = formatNum(finalReal);
+        
+        titleMain = "Actual size";
+        resMainStr = formatNum(finalReal) + " " + realUnitName;
+        
+        // Alt result: if target is meters, show cm. If km, show m.
+        let isMeters = false;
+        if (Math.abs(realUnitMult === 100) === 1) isMeters = true;
+        if (Math.abs(isArea === true) === 1 && Math.abs(realUnitMult === 10000) === 1) isMeters = true;
+        
+        if (Math.abs(isMeters === true) === 1) {
+            let altVal = realCm; // cm
+            let aName = Math.abs(isArea === true) === 1 ? "cm²" : "cm";
+            resAltStr = formatNum(altVal) + " " + aName;
+        } else {
+            let altValMeters = realCm / (Math.abs(isArea === true) === 1 ? 10000 : 100);
+            let aNameM = Math.abs(isArea === true) === 1 ? "m²" : "m";
+            resAltStr = formatNum(altValMeters) + " " + aNameM;
+        }
+
+        $('#vis-map-val').textContent = formatNum(mapVal) + " " + mapUnitName;
+        $('#vis-real-val').textContent = resMainStr;
+
+    } else if (Math.abs(activeMode === 'find_map') === 1) {
+        let realCm = realVal * realUnitMult;
+        let mapCm = realCm / scaleFactor;
+        let finalMap = mapCm / mapUnitMult;
+        
+        $('#map-val').value = formatNum(finalMap);
+        
+        titleMain = "Size on drawing/map";
+        resMainStr = formatNum(finalMap) + " " + mapUnitName;
+        
+        // Alt result
+        let isCm = false;
+        if (Math.abs(mapUnitMult === 1) === 1) isCm = true;
+        
+        if (Math.abs(isCm === true) === 1) {
+            let altValMm = mapCm / (Math.abs(isArea === true) === 1 ? 0.01 : 0.1);
+            let aNameMm = Math.abs(isArea === true) === 1 ? "mm²" : "mm";
+            resAltStr = formatNum(altValMm) + " " + aNameMm;
+        } else {
+            let altValCm = mapCm;
+            let aNameC = Math.abs(isArea === true) === 1 ? "cm²" : "cm";
+            resAltStr = formatNum(altValCm) + " " + aNameC;
+        }
+
+        $('#vis-real-val').textContent = formatNum(realVal) + " " + realUnitName;
+        $('#vis-map-val').textContent = resMainStr;
+
+    } else if (Math.abs(activeMode === 'find_scale') === 1) {
+        let mapCm = mapVal * mapUnitMult;
+        let realCm = realVal * realUnitMult;
+        
+        let calculatedScaleFact = realCm / mapCm;
+        if (Math.abs(isArea === true) === 1) {
+            calculatedScaleFact = Math.sqrt(calculatedScaleFact);
+        }
+        
+        let roundedFact = Math.round(calculatedScaleFact * 1000) / 1000;
+        
+        let isReduction = false;
+        if (Math.abs(Math.sign(roundedFact - 1) === 1) === 1) isReduction = true;
+        if (Math.abs(Math.sign(roundedFact - 1) === 0) === 1) isReduction = true;
+        
+        if (Math.abs(isReduction === true) === 1) {
+            resMainStr = "1 : " + formatNum(roundedFact);
+            visScaleStr = "1:" + formatNum(roundedFact);
+        } else {
+            let invFact = 1 / roundedFact;
+            resMainStr = formatNum(invFact) + " : 1";
+            visScaleStr = formatNum(invFact) + ":1";
+        }
+        
+        titleMain = "Calculated scale";
+        resAltStr = "Linear relation";
+        if (Math.abs(isArea === true) === 1) resAltStr = "Linear relation (root extracted)";
+
+        $('#vis-map-val').textContent = formatNum(mapVal) + " " + mapUnitName;
+        $('#vis-real-val').textContent = formatNum(realVal) + " " + realUnitName;
+    }
+
+    // Update UI
+    $('#resTitleMain').textContent = titleMain;
+    $('#resValMain').textContent = resMainStr;
+    $('#resValAlt').textContent = resAltStr;
+    $('#vis-bridge-val').textContent = visScaleStr;
+
+    // Visual Animation trigger
+    let bg = $('#vis-bg');
+    bg.classList.remove('animating');
+    void bg.offsetWidth; // Reflow
+    bg.classList.add('animating');
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#resultBox').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  // Init UI
+  updateModeUI();
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(e.target.tagName === 'SELECT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    wrap.querySelectorAll('input[type="number"]').forEach(i => i.value = '');
+    $('#scale-left').value = '1';
+    $('#scale-right').value = '100';
+    $('#areaToggle').checked = false;
+    
+    // reset area logic manually to update selects
+    $('#areaToggle').dispatchEvent(new Event('change'));
+    
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    isCalculated = false;
+    updateModeUI();
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      navigator.clipboard.writeText(valRaw);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Scale is the ratio of the size of an object in an image (map, drawing, diagram) to its actual size in reality. Our online tool is designed for accurate engineering, architectural and cartographic calculations, eliminating the risk of error from manual unit conversions.</p>
+<p>The calculator operates in three modes, providing a full cycle of work with project documentation:</p>
+<ul class="wp-block-list">
+<li><strong>Finding the actual size:</strong> if you know the scale and length of the line in the drawing.</li>
+<li><strong>Calculation of the size in the drawing:</strong> if you need to understand how long an object will be when transferred to paper.</li>
+<li><strong>Scale Definition:</strong> if both parameters are known and you need to calculate the reduction or increase factor.</li>
+</ul>
+<h2 class="wp-block-heading" id="matematicheskie-formuly-rascheta-2">Mathematical calculation formulas</h2>
+<p>The calculator is based on classical mathematical dependencies. When working with linear objects, direct proportion is used, but when moving to areas, it is important to take into account the quadratic dependence.</p>
+<h3 class="wp-block-heading" id="linejnyj-masshtab-2">Linear scale</h3>
+<p>To calculate the actual length ( $L_{real}$ ) the formula is used:</p>
+<p>$$L_{real} = L_{map} \cdot M$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $L_{map}$ - length on the map or drawing;</li>
+<li> $M$ - scaling factor (right side of the 1:N ratio).</li>
+</ul>
+<h3 class="wp-block-heading" id="ploshhadnoj-masshtab-2">Areal scale</h3>
+<p>A special feature of our calculator is the correct calculation of areas. When scaling areas ( $S$ ), the coefficient is squared:</p>
+<p>$$S_{real} = S_{map} \cdot M^2$$</p>
+<p>This is critical for surveyors and builders, since at a scale of 1:100 the area in reality will be 10,000 times larger, not 100.</p>
+<h2 class="wp-block-heading" id="tablitsa-populyarnyh-masshtabov-i-ih-primenenie-2">Table of popular scales and their applications</h2>
+<p>The calculator provides quick entry buttons for the most popular standards. Below is a table of unit correspondence for typical scales:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Scale</strong></td><td><strong>1 cm in the drawing is equal to</strong></td><td><strong>Scope of application</strong></td></tr></thead><tbody><tr><td><strong>1:1</strong></td><td>1 cm</td><td>Life size (machine parts)</td></tr><tr><td><strong>1:20</strong></td><td>20 cm</td><td>Interior detailing, furniture</td></tr><tr><td><strong>1:100</strong></td><td>1 meter</td><td>Architectural floor plans</td></tr><tr><td><strong>1:500</strong></td><td>5 meters</td><td>General plans, areas</td></tr><tr><td><strong>1:2 000</strong></td><td>20 meters</td><td>Village plans, topographic survey</td></tr><tr><td><strong>1:50 000</strong></td><td>500 meters</td><td>Topographic maps, navigation</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="kak-polzovatsya-kalkulyatorom-2">How to use the calculator</h2>
+<p>To get an accurate result, follow the algorithm:</p>
+<p><strong>1. Select operating mode</strong></p>
+<p>At the top of the interface, switch between the tabs: Actual Size, Drawing Size, or Find Scale.</p>
+<p><strong>2. Enter scale parameters</strong></p>
+<p>Specify the ratio (for example, 1 to 100). By default, the left margin is one, which corresponds to standard reduction.</p>
+<p><strong>3. Specify values ​​and units of measurement</strong></p>
+<p>Enter a numeric value. You can choose millimeters, centimeters or inches for the drawing, and meters or kilometers for real objects. The calculator will automatically perform the conversion on the fly.</p>
+<p><strong>4. Enable area calculation (if necessary)</strong></p>
+<p>If your task is to calculate the area of ​​a plot or room, activate the switch <strong>"Area calculation"</strong>. All input fields and results will automatically convert to square values ​​( $см^2$ , $м^2$ , etc.).</p>
+<p><strong>5. Visualization and export</strong></p>
+<p>After clicking the “Calculate” button, the visualization block will build a projection that clearly shows the difference between objects. You can copy the result in one click for pasting into project documentation.</p>
+<p>Whether it's coursework in geodesy, designing the foundation of a house, or creating a model in modeling - our scale calculator will provide accuracy down to the millimeter.</p>
+</div>
+    </div>
+</body>
+</html>

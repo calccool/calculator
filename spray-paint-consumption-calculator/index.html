@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint consumption calculator for spray gun (viscosity by viscometer)</title>
+    <meta name="description" content="Paint consumption calculator for spray gun (viscosity by viscometer) - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Paint consumption calculator for spray gun (viscosity by viscometer)</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-receipt-wrap { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 15px; position: relative; overflow: hidden; }
+    .c-receipt-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: repeating-linear-gradient(45deg, #0693e3, #0693e3 10px, #38bdf8 10px, #38bdf8 20px); }
+    .c-receipt-wrap.adv-theme::before { background: repeating-linear-gradient(45deg, #8b5cf6, #8b5cf6 10px, #a78bfa 10px, #a78bfa 20px); }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #fff; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-resval.val-adv { color: #8b5cf6; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #eff6ff; border: 1px solid #bae6fd; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05); }
+    .c-highlight-line:hover { background: #e0f2fe; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .c-switch-wrap { display: flex; align-items: center; gap: 12px; cursor: pointer; margin-bottom: 5px; padding: 14px 16px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 2px 6px rgba(0,0,0,0.02); transition: 0.3s; }
+    .c-switch-wrap:hover { border-color: #cbd5e1; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .c-switch-track { width: 44px; height: 24px; background: #cbd5e1; border-radius: 24px; position: relative; transition: 0.3s; flex-shrink: 0; }
+    .c-switch-thumb { width: 18px; height: 18px; background: #fff; border-radius: 50%; position: absolute; top: 3px; left: 3px; transition: 0.3s; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+    input:checked + .c-switch-track { background: #0693e3; }
+    input:checked + .c-switch-track .c-switch-thumb { left: 23px; }
+    .c-switch-label { font-weight: 600; font-size: 15px; color: #333; }
+    
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* Advanced Visualization */
+    .c-chart-box { margin: 15px 0 25px; padding: 25px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); }
+    .c-chart-title { font-weight: 700; color: #0f172a; font-size: 15px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    
+    .c-graphics-row { display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 20px; }
+    
+    .c-donut-wrap { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+    .c-donut { width: 110px; height: 110px; border-radius: 50%; background: conic-gradient(#0693e3 0%, #e2e8f0 0%); display: flex; align-items: center; justify-content: center; position: relative; transition: background 1s ease-out; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    .c-donut::before { content: ''; width: 75px; height: 75px; background: #f8fafc; border-radius: 50%; position: absolute; box-shadow: inset 0 2px 5px rgba(0,0,0,0.05); }
+    .c-donut-val { position: relative; z-index: 1; font-weight: 800; font-size: 18px; color: #0f172a; display: flex; flex-direction: column; align-items: center; line-height: 1; }
+    .c-donut-sub { font-size: 10px; color: #64748b; font-weight: 500; margin-top: 4px; }
+    .c-legend { display: flex; gap: 15px; font-size: 12px; font-weight: 600; color: #475569; }
+    .c-legend-item { display: flex; align-items: center; gap: 6px; }
+    .c-dot { width: 10px; height: 10px; border-radius: 3px; }
+    
+    .c-visco-wrap { display: flex; flex-direction: column; align-items: center; padding: 15px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 10px rgba(139, 92, 246, 0.05); min-width: 140px; }
+    .c-visco-cup { width: 50px; height: 45px; border: 2px solid #94a3b8; border-top: none; border-radius: 0 0 25px 25px; position: relative; background: linear-gradient(180deg, transparent 20%, #ddd6fe 20%, #8b5cf6 100%); margin-bottom: 5px; }
+    .c-visco-cup::before { content: ''; position: absolute; top: -2px; left: -4px; right: -4px; height: 4px; background: #94a3b8; border-radius: 2px; }
+    .c-visco-drop { width: 6px; height: 12px; background: #8b5cf6; border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; opacity: 0; margin: 0 auto; box-shadow: 0 2px 4px rgba(139, 92, 246, 0.4); }
+    .c-visco-drop.animating { animation: drip 1s infinite cubic-bezier(0.4, 0, 0.2, 1); }
+    @keyframes drip { 0% { transform: translateY(-5px) scale(0.5); opacity: 0; } 30% { transform: translateY(5px) scale(1); opacity: 1; } 100% { transform: translateY(30px) scale(0.3); opacity: 0; } }
+    .c-visco-lbl { font-size: 12px; font-weight: 700; color: #475569; text-align: center; margin-top: 10px; }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-chart-box { padding: 15px; }
+       .c-modal-box { padding: 18px; }
+       .c-graphics-row { flex-direction: column; gap: 30px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="paint-calc-wrapper">
+<div class="c-body">
+<div class="c-toggle" id="surf-tabs">
+<button class="c-toggle-btn active" data-surf="1">Smooth surface</button>
+<button class="c-toggle-btn" data-surf="1.15">Average<span class="c-term">Plaster</span></button>
+<button class="c-toggle-btn" data-surf="1.3">Porous<span class="c-term">Wood/Concrete</span></button>
+</div>
+<div class="c-divider"><span class="icon">📏</span>Basic painting parameters</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Painting area</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="area" placeholder="For example: 25" type="number"/>
+<span class="c-input-suffix">m²</span>
+</div>
+<div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-val="10" type="button">+ 10 m²</button>
+<button class="c-quick-btn" data-val="20" type="button">+ 20 m²</button>
+<button class="c-quick-btn" data-val="50" type="button">+ 50 m²</button>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Layers<span class="c-term">Usually 2-3</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="layers" placeholder="2" type="number" value="2"/>
+<span class="c-input-suffix">pcs</span>
+</div>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Paint type<span class="c-term">Base consumption</span></label>
+<select class="c-select" id="paintType">
+<option selected="" value="0.12">Acrylic / Water-based (~120 ml/m²)</option>
+<option value="0.10">Enamel / Base (~100 ml/m²)</option>
+<option value="0.15">Primer filler (~150 ml/m²)</option>
+<option value="0.08">Transparent varnish (~80 ml/m²)</option>
+</select>
+</div>
+<div class="c-field">
+<label class="c-label">Spray gun technology<span class="c-help-icon" id="openGunInfo">?</span>
+</label>
+<select class="c-select" id="gunType">
+<option selected="" value="0.65">HVLP (Transfer ~65%)</option>
+<option value="0.75">LVLP/RP (Carryover ~75%)</option>
+<option value="0.45">HP Conventional (Carryover ~45%)</option>
+<option value="0.85">Airless (Transfer ~85%)</option>
+</select>
+</div>
+</div>
+<div class="c-divider" style="margin-top: 30px;"><span class="icon">💧</span>Viscosity laboratory</div>
+<label class="c-switch-wrap">
+<input class="is-hidden" id="advModeToggle" type="checkbox"/>
+<div class="c-switch-track"><div class="c-switch-thumb"></div></div>
+<span class="c-switch-label">Calculation of diluent using a viscometer (DIN-4)</span>
+</label>
+<div class="c-adv-app is-hidden" id="adv-block" style="margin-top: 15px;">
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Current viscosity<span class="c-term">From a can</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="viscoCur" placeholder="For example: 40" type="number"/>
+<span class="c-input-suffix">sec</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Target viscosity<span class="c-term">By passport</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="viscoTarget" placeholder="Typically: 20" type="number"/>
+<span class="c-input-suffix">sec</span>
+</div>
+</div>
+</div>
+<span class="c-subtext">Approximate calculation: a reduction of 1 second according to DIN-4 requires the addition of ~2% of the diluent from the base volume.</span>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-chart-box is-hidden" id="vis-box">
+<div class="c-chart-title"><span class="icon">📊</span>Efficiency and Physics of the Process</div>
+<div class="c-graphics-row">
+<div class="c-donut-wrap">
+<div class="c-donut" id="efficiencyDonut">
+<div class="c-donut-val"><span id="effVal">0</span>%<span class="c-donut-sub">Efficiency</span></div>
+</div>
+<div class="c-legend">
+<div class="c-legend-item"><span class="c-dot" style="background:#0693e3;"></span>On details</div>
+<div class="c-legend-item"><span class="c-dot" style="background:#e2e8f0;"></span>Into the fog</div>
+</div>
+</div>
+<div class="c-visco-wrap is-hidden" id="viscoAnimationBox">
+<div class="c-visco-cup"></div>
+<div class="c-visco-drop" id="viscoDrop"></div>
+<div class="c-visco-lbl">Drop rhythm:<br/><span id="viscoTempo" style="color:#8b5cf6;">0 sec</span></div>
+</div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">🎨</span>Total volume of materials</div>
+<div class="c-receipt-wrap">
+<div class="c-resline">
+<div class="c-resleft">Required volume of paint<span class="c-subtext">Taking into account spray losses (Overspray)</span></div>
+<div class="c-resval" id="resBasePaint"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Useful volume<span class="c-subtext">Will remain directly on the surface</span></div>
+<div class="c-resval" id="resWallPaint" style="color: #475569;"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+<div class="c-receipt-wrap adv-theme is-hidden" id="resViscoWrap">
+<div class="c-resline">
+<div class="c-resleft">Add thinner<span class="c-subtext">To achieve target viscosity</span></div>
+<div class="c-resval val-adv" id="resThinner"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline c-highlight-line" style="border-bottom: none; background: #f5f3ff; border-color: #ddd6fe;">
+<div class="c-resleft">Total finished mixture<span class="c-subtext">Paint + Thinner</span></div>
+<div class="c-resval val-adv" id="resTotalMix" style="font-size: 22px;"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+</div>
+<div class="c-modal-overlay" id="gunInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeGunInfo">×</button>
+<div class="c-modal-title"><span class="icon">🔫</span>Spray technologies</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">The choice of gun critically influences material overuse (formation of paint mist).</div>
+<ul style="font-size: 13px; color: #1e293b; padding-left: 20px; margin-bottom: 10px;">
+<li style="margin-bottom: 8px;"><b>HVLP (High Volume Low Pressure):</b>High volume, low pressure. Transfer up to 65-70%. Excellent base quality, low fog, but requires a powerful compressor.</li>
+<li style="margin-bottom: 8px;"><b>LVLP / RP:</b>Optimal balance. Transfer up to 75%. Operates at low pressure and low air flow. Ideal for varnishes and acrylics.</li>
+<li style="margin-bottom: 8px;"><b>HP (High Pressure):</b>Old school. The transfer is only 40-45%. There is a huge waste of paint (more than half flies into the air), but it paints very quickly.</li>
+<li><b>Airless:</b>The paint is supplied under enormous pressure without the participation of air. Transfer up to 85%. For large industrial volumes.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let activeSurf = 1;
+  let isCalculated = false;
+
+  // Modal logic
+  $('#openGunInfo').addEventListener('click', () => { $('#gunInfoModal').classList.add('show'); });
+  $('#closeGunInfo').addEventListener('click', () => { $('#gunInfoModal').classList.remove('show'); });
+  $('#gunInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#gunInfoModal').classList.remove('show');
+  });
+
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeSurf = parseFloat(btn.dataset.surf);
+        if (Math.abs(isCalculated === true) === 1) calc(false);
+    });
+  });
+
+  $('#advModeToggle').addEventListener('change', (e) => {
+      let isAdv = e.target.checked;
+      if (Math.abs(isAdv === true) === 1) {
+          $('#adv-block').classList.remove('is-hidden');
+      } else {
+          $('#adv-block').classList.add('is-hidden');
+          $('#viscoCur').value = '';
+          $('#viscoTarget').value = '';
+      }
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+      else $('#resultBox').classList.remove('show');
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          let val = parseFloat(btn.dataset.val);
+          let currentArea = parseFloat($('#area').value);
+          let isValid = false;
+          if (Math.abs(Math.sign(currentArea) === 1) === 1) isValid = true;
+          if (Math.abs(isValid === false) === 1) currentArea = 0;
+          $('#area').value = currentArea + val;
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let area = parseFloat($('#area').value);
+    let layers = parseFloat($('#layers').value);
+    
+    let isNanArea = isNaN(area);
+    if (Math.abs(isNanArea === true) === 1) area = 0;
+    
+    let isNanLayers = isNaN(layers);
+    if (Math.abs(isNanLayers === true) === 1) layers = 0;
+
+    let isErr = false;
+    let isPosArea = false;
+    if (Math.abs(Math.sign(area) === 1) === 1) isPosArea = true;
+    if (Math.abs(isPosArea === false) === 1) isErr = true;
+    
+    let isPosLayers = false;
+    if (Math.abs(Math.sign(layers) === 1) === 1) isPosLayers = true;
+    if (Math.abs(isPosLayers === false) === 1) isErr = true;
+
+    if (Math.abs(isErr === true) === 1) {
+        $('#vis-box').classList.add('is-hidden');
+        $('#resultBox').classList.remove('show');
+        if (Math.abs(shouldScroll === true) === 1) {
+            $('#errorMsg').textContent = "Specify the area and number of layers greater than zero";
+            $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    let paintConsump = parseFloat($('#paintType').value); // L/m2
+    let transferEff = parseFloat($('#gunType').value); // 0.45 - 0.85
+    
+    // Core Math
+    // Pure volume needed on the wall
+    let pureVolume = area * layers * paintConsump * activeSurf;
+    // Real volume to pour into gun (accounting for overspray)
+    let totalBaseVolume = pureVolume / transferEff;
+    
+    $('#resBasePaint').textContent = totalBaseVolume.toFixed(2) + "l";
+    $('#resWallPaint').textContent = pureVolume.toFixed(2) + "l";
+
+    // Visuals: Donut Chart update
+    let effPercent = Math.round(transferEff * 100);
+    $('#effVal').textContent = effPercent;
+    let donutGrad = `conic-gradient(#0693e3 0% ${effPercent}%, #e2e8f0 ${effPercent}% 100%)`;
+    $('#efficiencyDonut').style.background = donutGrad;
+
+    // Advanced Viscosity Math
+    let isAdvMode = $('#advModeToggle').checked;
+    
+    if (Math.abs(isAdvMode === true) === 1) {
+        let vCur = parseFloat($('#viscoCur').value);
+        let vTarget = parseFloat($('#viscoTarget').value);
+        
+        let validVisco = false;
+        let cPos = Math.sign(vCur);
+        let tPos = Math.sign(vTarget);
+        let condVisco = Math.abs(cPos === 1) + Math.abs(tPos === 1);
+        if (Math.abs(condVisco === 2) === 1) validVisco = true;
+
+        if (Math.abs(validVisco === true) === 1) {
+            $('#resViscoWrap').classList.remove('is-hidden');
+            $('#viscoAnimationBox').classList.remove('is-hidden');
+            
+            let diff = vCur - vTarget;
+            let thinnerVol = 0;
+            
+            let isDiffPos = false;
+            if (Math.abs(Math.sign(diff) === 1) === 1) isDiffPos = true;
+            
+            if (Math.abs(isDiffPos === true) === 1) {
+                // ~2% thinner per 1 sec DIN-4 drop
+                let thinnerPercent = diff * 0.02; 
+                thinnerVol = totalBaseVolume * thinnerPercent;
+            }
+
+            let finalMix = totalBaseVolume + thinnerVol;
+            
+            $('#resThinner').textContent = thinnerVol.toFixed(3) + "l";
+            $('#resTotalMix').textContent = finalMix.toFixed(2) + "l";
+
+            // Viscometer Animation Math (faster drop = lower viscosity)
+            let drop = $('#viscoDrop');
+            drop.classList.remove('animating');
+            void drop.offsetWidth; // trigger reflow
+            
+            // Map 10-60 seconds viscosity to 0.2s - 1.5s animation duration
+            let animDur = vTarget * 0.025; 
+            let minDurCheck = Math.sign(animDur - 0.2);
+            if (Math.abs(minDurCheck === -1) === 1) animDur = 0.2;
+            
+            drop.style.animationDuration = animDur + 's';
+            drop.classList.add('animating');
+            $('#viscoTempo').textContent = vTarget + "(target)";
+
+        } else {
+            $('#resViscoWrap').classList.add('is-hidden');
+            $('#viscoAnimationBox').classList.add('is-hidden');
+        }
+    } else {
+        $('#resViscoWrap').classList.add('is-hidden');
+        $('#viscoAnimationBox').classList.add('is-hidden');
+    }
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#resultBox').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(e.target.tagName === 'SELECT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    wrap.querySelectorAll('input[type="number"]').forEach(i => i.value = '');
+    $('#layers').value = '2';
+    $('#paintType').value = '0.12';
+    $('#gunType').value = '0.65';
+    $('#advModeToggle').checked = false;
+    $('#adv-block').classList.add('is-hidden');
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+    wrap.querySelector('.c-toggle-btn[data-surf="1"]').classList.add('active');
+    activeSurf = 1;
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      let valClean = valRaw.replace('l', '').trim();
+      navigator.clipboard.writeText(valClean);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Correct calculation of paints and varnishes is not only budget savings, but also a guarantee of compliance with painting technology. An excessive amount of material leads to the formation of smudges and shagreen, and an insufficient amount leads to a “dry” torch and loss of shine.</p>
+<h2 class="wp-block-heading" id="klyuchevye-faktory-rashoda-pri-rabote-s-kraskopultom-2">Key consumption factors when working with a spray gun</h2>
+<p>When using a spray gun, the actual consumption is always higher than the theoretical consumption indicated on the can. This is due to the phenomenon <strong>Overspray</strong> (paint mist) and the type of spray technology used.</p>
+<h3 class="wp-block-heading" id="sravnenie-tehnologij-raspyleniya-lkm-2">Comparison of paint spraying technologies</h3>
+<p>Below is a table of material transfer efficiency depending on the type of equipment:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Technology</strong></td><td><strong>Transfer coefficient (Ktransfer​)</strong></td><td><strong>Advantages</strong></td><td><strong>Peculiarities</strong></td></tr></thead><tbody><tr><td><strong>HVLP</strong></td><td>65% – 70%</td><td>Low fog, high saving</td><td>Requires a powerful compressor</td></tr><tr><td><strong>LVLP / RP</strong></td><td>70% – 75%</td><td>Perfect quality, low air consumption</td><td>Optimal for varnishes</td></tr><tr><td><strong>HP (Conventional)</strong></td><td>40% – 45%</td><td>High speed</td><td>Huge waste (up to 60% into the air)</td></tr><tr><td><strong>Airless</strong></td><td>80% – 90%</td><td>Maximum performance</td><td>For large areas and thick compounds</td></tr></tbody></table></div></figure>
+<h3 class="wp-block-heading" id="matematicheskaya-model-rascheta-2">Mathematical calculation model</h3>
+<p>To calculate the final paint volume ( $V_{total}$ ), we use a formula that takes into account the total area, substrate absorption and spray losses:</p>
+<p>$$V_{total} = \frac{S \cdot n \cdot C_{base} \cdot K_{surf}}{K_{transfer}}$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $S$ - surface area ( $м^2$ );</li>
+<li> $n$ - number of applied layers;</li>
+<li> $C_{base}$ —basic paint consumption (l/ $м^2$ );</li>
+<li> $K_{surf}$ - surface porosity coefficient (from 1.0 to 1.3);</li>
+<li> $K_{transfer}$ - spray gun efficiency coefficient.</li>
+</ul>
+<h2 class="wp-block-heading" id="rol-vyazkosti-i-viskozimetra-din-5">The role of viscosity and the DIN-4 viscometer</h2>
+<p>Viscosity is the internal resistance of a fluid to flow. For a spray gun, it is critical: too thick paint will not break into small drops, creating an “orange peel”, and too liquid paint will cause smudges.</p>
+<p>Standard <strong>DIN-4</strong> determines the flow time of the composition through a nozzle with a diameter of 4 mm. If the current viscosity is higher than the specification, it is necessary to add a thinner. Our calculator uses a rule of thumb:</p>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>Each decrease in viscosity by 1 second on a DIN-4 viscometer requires the addition of approximately <strong>2%</strong> of the corresponding diluent from the total volume of the base.</p>
+</blockquote>
+<h3 class="wp-block-heading" id="formula-obema-razbavitelya-2">Diluent volume formula</h3>
+<p>If the “Viscosity Laboratory” mode is enabled, the additive volume ( $V_{thinner}$ ) is calculated using the formula:</p>
+<p>$$V_{thinner} = V_{total} \cdot ((T_{cur} — T_{target}) \cdot 0.02)$$</p>
+<p>Where $T_{cur}$ is the current viscosity, and $T_{target}$ is the target value according to the technical data sheet (TDS) of the product.</p>
+<h2 class="wp-block-heading" id="professionalnye-sovety-po-malyarnym-rabotam-2">Professional painting advice</h2>
+<ul class="wp-block-list">
+<li><strong>Torch Setting:</strong> Always do a test color on a test card or cardboard. The shape of the torch should be a clear elongated oval without “breaks” in the middle.</li>
+<li><strong>Temperature:</strong> All viscosity calculations are valid at temperature <strong>20°C</strong>. As the temperature increases, the viscosity decreases, and as the temperature decreases, it increases.</li>
+<li><strong>Air pressure:</strong> For HVLP systems, the gun inlet usually requires <strong>2.0–2.5 bar</strong>, in order to obtain the required output <strong>0.7 bar</strong>.</li>
+</ul>
+<p>Use our calculator to determine the exact mix volume for your project. This will allow you not to overpay for extra liters and avoid work stoppages due to lack of material.</p>
+</div>
+    </div>
+</body>
+</html>

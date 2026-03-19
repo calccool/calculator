@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe shutter speed calculator for handheld shooting</title>
+    <meta name="description" content="Safe shutter speed calculator for handheld shooting - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Safe shutter speed calculator for handheld shooting</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    
+    /* Строго по шаблону: */
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #f8fafc; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #eff6ff; border: 1px solid #bae6fd; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05); }
+    .c-highlight-line:hover { background: #e0f2fe; }
+    .c-highlight-line .c-resval { font-size: 22px; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .c-switch-wrap { display: flex; align-items: center; gap: 12px; cursor: pointer; margin-bottom: 5px; padding: 14px 16px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 2px 6px rgba(0,0,0,0.02); transition: 0.3s; }
+    .c-switch-wrap:hover { border-color: #cbd5e1; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .c-switch-track { width: 44px; height: 24px; background: #cbd5e1; border-radius: 24px; position: relative; transition: 0.3s; flex-shrink: 0; }
+    .c-switch-thumb { width: 18px; height: 18px; background: #fff; border-radius: 50%; position: absolute; top: 3px; left: 3px; transition: 0.3s; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+    input:checked + .c-switch-track { background: #0693e3; }
+    input:checked + .c-switch-track .c-switch-thumb { left: 23px; }
+    .c-switch-label { font-weight: 600; font-size: 15px; color: #333; }
+    
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* Advanced Visualization: Circular Shutter Gauge */
+    .c-chart-box { margin: 15px 0 25px; padding: 25px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); display: flex; flex-direction: column; align-items: center; transition: box-shadow 0.3s; }
+    .c-chart-box.danger { box-shadow: inset 0 0 20px rgba(211, 47, 47, 0.15); border-color: #fca5a5; }
+    
+    .c-chart-title { font-weight: 700; color: #0f172a; font-size: 15px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; text-align: center; }
+    
+    .c-gauge-container { position: relative; width: 160px; height: 160px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
+    .c-gauge-svg { width: 100%; height: 100%; transform: rotate(-90deg); filter: drop-shadow(0 4px 6px rgba(2, 132, 199, 0.2)); }
+    .c-gauge-bg { fill: none; stroke: #e2e8f0; stroke-width: 8; }
+    .c-gauge-ring { fill: none; stroke: url(#gaugeGradient); stroke-width: 8; stroke-dasharray: 251.2; stroke-dashoffset: 251.2; stroke-linecap: round; transition: stroke-dashoffset 1s cubic-bezier(0.4, 0, 0.2, 1); }
+    
+    .c-gauge-center { position: absolute; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+    .c-gauge-val { font-size: 24px; font-weight: 800; color: #0f172a; line-height: 1.1; }
+    .c-gauge-sub { font-size: 11px; color: #64748b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+    
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-chart-box { padding: 15px; }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="shutter-calc-wrapper">
+<div class="c-body">
+<div class="c-toggle" id="mode-tabs">
+<button class="c-toggle-btn active" data-mode="photo">Photo (hand-held)</button>
+<button class="c-toggle-btn" data-mode="video">Video (180 degrees)</button>
+</div>
+<div class="c-divider"><span class="icon">📷</span>Basic parameters</div>
+<div id="photo-fields">
+<div class="c-row" style="margin-bottom: 8px;">
+<div class="c-field">
+<label class="c-label">Focal length</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="focal" placeholder="For example: 50" type="number"/>
+<span class="c-input-suffix">mm</span>
+</div>
+<div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-target="focal" data-val="35" type="button">35</button>
+<button class="c-quick-btn" data-target="focal" data-val="50" type="button">50</button>
+<button class="c-quick-btn" data-target="focal" data-val="85" type="button">85</button>
+<button class="c-quick-btn" data-target="focal" data-val="200" type="button">200</button>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Matrix size<span class="c-help-icon" id="openSensorInfo">?</span>
+</label>
+<select class="c-select" id="crop">
+<option selected="" value="1">Full Frame (1.0x)</option>
+<option value="1.5">APS-C Sony/Fuji/Nikon (1.5x)</option>
+<option value="1.6">APS-C Canon (1.6x)</option>
+<option value="2">Micro 4/3 (2.0x)</option>
+<option value="2.7">Smartphone 1" (2.7x)</option>
+<option value="0.8">Medium Format (0.8x)</option>
+</select>
+</div>
+</div>
+<div class="c-divider" style="margin-top: 30px;"><span class="icon">⚙️</span>Stabilization and detail</div>
+<label class="c-switch-wrap">
+<input class="is-hidden" id="advModeToggle" type="checkbox"/>
+<div class="c-switch-track"><div class="c-switch-thumb"></div></div>
+<span class="c-switch-label">Accounting for stabilizer (IS/IBIS) and megapixels</span>
+</label>
+<div class="c-adv-app is-hidden" id="adv-block" style="margin-top: 15px;">
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Stub efficiency<span class="c-term">steps</span></label>
+<select class="c-select" id="is-stops">
+<option selected="" value="0">No (0 stops)</option>
+<option value="1">1 stop</option>
+<option value="2">2 feet</option>
+<option value="3">3 stops (Light IBIS)</option>
+<option value="4">4 stops (Standard)</option>
+<option value="5">5 stops (Good IBIS)</option>
+<option value="6">6 stops</option>
+<option value="7">7+ stops (Powerful IBIS)</option>
+</select>
+</div>
+<div class="c-field">
+<label class="c-label">Camera resolution</label>
+<select class="c-select" id="mp-factor">
+<option selected="" value="1">Standard (up to 30 MP)</option>
+<option value="1.5">High (30-50 MP)</option>
+<option value="2">Ultra Fine (50+ MP)</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<div class="is-hidden" id="video-fields">
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Frame rate<span class="c-term">FPS</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="fps" placeholder="For example: 24" type="number"/>
+<span class="c-input-suffix">short-form</span>
+</div>
+<div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-target="fps" data-val="24" type="button">24 (Movie)</button>
+<button class="c-quick-btn" data-target="fps" data-val="30" type="button">30</button>
+<button class="c-quick-btn" data-target="fps" data-val="60" type="button">60</button>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Shutter angle</label>
+<select class="c-select" id="angle">
+<option selected="" value="180">180° (Classic)</option>
+<option value="90">90° (Sudden movements)</option>
+<option value="45">45° (Strobe effect)</option>
+<option value="360">360° (Blurry but light)</option>
+</select>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-chart-box is-hidden" id="vis-box">
+<div class="c-chart-title"><span class="icon">⏱️</span>Safe exposure scale</div>
+<div class="c-gauge-container">
+<svg class="c-gauge-svg" viewbox="0 0 100 100">
+<defs>
+<lineargradient id="gaugeGradient" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#38bdf8"></stop>
+<stop offset="100%" stop-color="#0284c7"></stop>
+</lineargradient>
+<lineargradient id="gaugeDanger" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#ef4444"></stop>
+<stop offset="100%" stop-color="#b91c1c"></stop>
+</lineargradient>
+</defs>
+<circle class="c-gauge-bg" cx="50" cy="50" r="40"></circle>
+<circle class="c-gauge-ring" cx="50" cy="50" id="vis-gauge-ring" r="40"></circle>
+</svg>
+<div class="c-gauge-center">
+<div class="c-gauge-val" id="vis-shutter">1/125</div>
+<div class="c-gauge-sub">sec</div>
+</div>
+</div>
+<div id="vis-advice" style="font-size: 13px; color: #475569; font-weight: 500; text-align: center; max-width: 80%;">This is the optimal value for getting sharp shots.</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">📊</span>Calculation results</div>
+<div class="c-resline c-highlight-line">
+<div class="c-resleft">Nearest standard<span class="c-subtext">Install on camera</span></div>
+<div class="c-resval" id="resStd"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Exact calculated value<span class="c-subtext">According to the mathematical formula</span></div>
+<div class="c-resval" id="resExact"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline" id="resEflLine">
+<div class="c-resleft">Equivalent Focal<span class="c-subtext">Taking into account the crop factor (EGF)</span></div>
+<div class="c-resval" id="resEfl"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+<div class="c-modal-overlay" id="sensorInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeSensorInfo">×</button>
+<div class="c-modal-title"><span class="icon">📖</span>What is crop factor?</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">Matrixes in cameras come in different sizes. The standard is considered to be Full Frame.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">If the matrix is ​​smaller than the full frame, it “crops” the image. Because of this, a 50mm lens on a 1.5x crop gives the same picture and the same<b>hand trembling</b>, like 75mm at full frame.</div>
+<div style="background: #eff6ff; padding: 12px; border-radius: 8px; border: 1px solid #bae6fd; font-size: 13px; color: #0284c7;"> <b>Exposure rule:</b>Safe shutter speed is calculated based on the equivalent focal length (EFL).</div> </div> </div> </div> </div> `;   host.appendChild(wrap);    const $ = (s) => wrap.querySelector(s);   let activeMode = 'photo';   let isCalculated = false;    // Модальное окно   $ ('#openSensorInfo').addEventListener('click', () => { $('#sensorInfoModal').classList.add('show'); });   $ ('#closeSensorInfo').addEventListener('click', () => { $('#sensorInfoModal').classList.remove('show'); });   $ ('#sensorInfoModal').addEventListener('click', (e) => {       let isBox = false;       if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;       if (Math.abs(isBox === false) === 1) $('#sensorInfoModal').classList.remove('show');   });    function updateModeUI() {       if (Math.abs(activeMode === 'photo') === 1) {           $ ('#photo-fields').classList.remove('is-hidden'); $('#video-fields').classList.add('is-hidden');           $ ('#resEflLine').classList.remove('is-hidden');       } else { $('#photo-fields').classList.add('is-hidden');           $ ('#video-fields').classList.remove('is-hidden'); $('#resEflLine').classList.add('is-hidden');       }       if (Math.abs(isCalculated === true) === 1) calc(false);   }    wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {     btn.addEventListener('click', () => {         wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));         btn.classList.add('active');         activeMode = btn.dataset.mode;         updateModeUI();     });   });    wrap.querySelectorAll('.c-quick-btn').forEach(btn => {       btn.addEventListener('click', () => {           let targetId = btn.dataset.target;           let val = btn.dataset.val;           $ ('#' + targetId).value = val;           if (Math.abs(isCalculated === true) === 1) calc(false);       });   }); $('#advModeToggle').addEventListener('change', (e) => {       let isAdv = e.target.checked;       if (Math.abs(isAdv === true) === 1) {           $ ('#adv-block').classList.remove('is-hidden');       } else { $('#adv-block').classList.add('is-hidden');           $ ('#is-stops').value = '0'; $('#mp-factor').value = '1';       }       if (Math.abs(isCalculated === true) === 1) calc(false);       else $ ('#resultBox').classList.remove('show');   });    // Standard series of denominator excerpts   const stdSpeeds = [       { d: 8000, l:"1/8000" }, { d: 4000, l: "1/4000" },
+      { d: 2000, l: "1/2000" }, { d: 1000, l: "1/1000" },
+      { d: 500, l: "1/500" }, { d: 250, l: "1/250" },
+      { d: 125, l: "1/125" }, { d: 60, l: "1/60" },
+      { d: 30, l: "1/30" }, { d: 15, l: "1/15" },
+      { d: 8, l: "1/8" }, { d: 4, l: "1/4" },
+      { d: 2, l: "1/2" }, { d: 1, l: "1\"" },
+      { d: 0.5, l: "2\"" }, { d: 0.25, l: "4\"" },
+      { d: 0.125, l: "8\"" }
+  ];
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let isPhoto = false;
+    if (Math.abs(activeMode === 'photo') === 1) isPhoto = true;
+
+    let hasErr = false;
+    let targetDenom = 1;
+    let exactLabel = "";
+    let eflStr = "";
+
+    if (Math.abs(isPhoto === true) === 1) {
+        let focal = parseFloat($('#focal').value);
+        let isNanFocal = isNaN(focal);
+        if (Math.abs(isNanFocal === true) === 1) focal = 0;
+        
+        let isPosFocal = false;
+        if (Math.abs(Math.sign(focal) === 1) === 1) isPosFocal = true;
+        if (Math.abs(isPosFocal === false) === 1) hasErr = true;
+
+        if (Math.abs(hasErr === false) === 1) {
+            let crop = parseFloat($('#crop').value);
+            let efl = focal * crop;
+            eflStr = Math.round(efl) + "mm";
+
+            let mpFactor = parseFloat($('#mp-factor').value);
+            let baseRule = efl * mpFactor;
+
+            let stops = parseFloat($('#is-stops').value);
+            let isMulti = Math.pow(2, stops);
+            
+            targetDenom = baseRule / isMulti;
+        }
+    } else {
+        let fps = parseFloat($('#fps').value);
+        let isNanFps = isNaN(fps);
+        if (Math.abs(isNanFps === true) === 1) fps = 0;
+        
+        let isPosFps = false;
+        if (Math.abs(Math.sign(fps) === 1) === 1) isPosFps = true;
+        if (Math.abs(isPosFps === false) === 1) hasErr = true;
+
+        if (Math.abs(hasErr === false) === 1) {
+            let angle = parseFloat($('#angle').value);
+            targetDenom = fps * (360 / angle);
+        }
+    }
+
+    if (Math.abs(hasErr === true) === 1) {
+        $('#vis-box').classList.add('is-hidden');
+        $('#resultBox').classList.remove('show');
+        if (Math.abs(shouldScroll === true) === 1) {
+            let msg = "Specify a focal length greater than zero";
+            if (Math.abs(isPhoto === false) === 1) msg = "Specify FPS greater than zero";
+            $('#errorMsg').textContent = msg;
+            $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    let isSubSec = false;
+    if (Math.abs(Math.sign(targetDenom - 1) === 1) === 1) isSubSec = true;
+    
+    if (Math.abs(isSubSec === true) === 1) {
+        exactLabel = "1/" + Math.round(targetDenom);
+    } else {
+        let exactSec = 1 / targetDenom;
+        exactLabel = exactSec.toFixed(1) + "\"";
+    }
+
+    let bestLabel = stdSpeeds[0].l;
+    
+    // Ищем самую длинную выдержку, которая безопасна (т.е. её знаменатель >= targetDenom)
+    // Массив идёт по убыванию знаменателей
+    stdSpeeds.forEach((s) => {
+        let isSafe = Math.sign(s.d - targetDenom); // 1 if s.d > targetDenom, 0 if equal
+        let isValid = 0;
+        if (Math.abs(isSafe === 1) === 1) isValid = 1;
+        if (Math.abs(isSafe === 0) === 1) isValid = 1;
+
+        if (Math.abs(isValid === 1) === 1) {
+             bestLabel = s.l;
+        }
+    });
+
+    // UI Updates - Text
+    $('#resStd').textContent = bestLabel;
+    $('#resExact').textContent = exactLabel;
+    if (Math.abs(isPhoto === true) === 1) {
+        $('#resEfl').textContent = eflStr;
+    }
+
+    // UI Updates - Visual Gauge
+    $('#vis-shutter').textContent = bestLabel;
+    
+    let isDanger = false;
+    let isSlow = Math.sign(30 - targetDenom); // 1 if targetDenom < 30
+    if (Math.abs(isSlow === 1) === 1) isDanger = true;
+    
+    if (Math.abs(isDanger === true) === 1) {
+        $('#vis-box').classList.add('danger');
+        $('#vis-gauge-ring').style.stroke = "url(#gaugeDanger)";
+        $('#vis-advice').textContent = "Attention: the shutter speed is long! Blurring is possible when shooting handheld, use a stop or tripod.";
+        $('#vis-advice').style.color = "#d32f2f";
+    } else {
+        $('#vis-box').classList.remove('danger');
+        $('#vis-gauge-ring').style.stroke = "url(#gaugeGradient)";
+        $('#vis-advice').textContent = "The speed is safe. This is the optimal value for getting sharp handheld shots.";
+        $('#vis-advice').style.color = "#475569";
+    }
+
+    // Анимация кольца (Log шкала от 0.125 до 8000)
+    let logVal = Math.log2(targetDenom); // от -3 до 13 = диапазон 16
+    let perc = (logVal + 3) / 16;
+    
+    let isNegPerc = Math.sign(perc);
+    if (Math.abs(isNegPerc === -1) === 1) perc = 0;
+    
+    let isOverPerc = Math.sign(perc - 1);
+    if (Math.abs(isOverPerc === 1) === 1) perc = 1;
+
+    let offset = 251.2 * (1 - perc);
+    
+    $('#vis-gauge-ring').classList.remove('animating');
+    void $('#vis-gauge-ring').offsetWidth; 
+    $('#vis-gauge-ring').style.strokeDashoffset = offset;
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#vis-box').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(e.target.tagName === 'SELECT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    wrap.querySelectorAll('input[type="number"]').forEach(i => i.value = '');
+    $('#crop').value = '1';
+    $('#is-stops').value = '0';
+    $('#mp-factor').value = '1';
+    $('#angle').value = '180';
+    $('#advModeToggle').checked = false;
+    $('#adv-block').classList.add('is-hidden');
+    
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    $('#vis-gauge-ring').style.strokeDashoffset = 251.2;
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      navigator.clipboard.writeText(valRaw);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Every photographer has encountered a situation where the frame appears clear on the camera display, but when viewed on the monitor, micro-smears are detected. This phenomenon is called “shaking” - the result of shaking hands at the time of exposure.</p>
+<p>Our advanced calculator allows you to instantly calculate the critical shutter speed threshold, taking into account not only the classic “reciprocal rule”, but also modern technologies: matrix pixel density and optical stabilizer efficiency.</p>
+<h2 class="wp-block-heading" id="osnovnye-pravila-rascheta-vyderzhki-2">Basic rules for calculating shutter speed</h2>
+<p>It is traditionally believed that in order to get a sharp photo, the denominator of the shutter speed must be no less than the focal length of the lens. However, with the advent of multi-megapixel cameras and different sensor formats, this formula has become more complicated.</p>
+<p><strong>Mathematical calculation model:</strong></p>
+<p>To calculate the exact value, use the following formula:</p>
+<p>$$T_{safe} = \frac{1}{F \cdot K \cdot R \cdot 2^{-S}}$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li><strong>$F$</strong> — lens focal length (mm);</li>
+<li><strong>$K$</strong> — sensor crop factor (ESF);</li>
+<li><strong>$R$</strong> — resolution coefficient (depending on megapixels);</li>
+<li><strong>$S$</strong> — number of stabilization stages (Stops).</li>
+</ul>
+<h3 class="wp-block-heading" id="pochemu-fokusnoe-rasstoyanie-vliyaet-na-rezkost-2">Why does focal length affect sharpness?</h3>
+<p>The larger the focal length (zoom), the more not only the object in the frame increases, but also the amplitude of the slightest trembling of your hands. At a wide angle (e.g. 16mm), a little wobble is almost unnoticeable, but at a telephoto lens (200mm) it will turn the photo into an abstraction.</p>
+<h2 class="wp-block-heading" id="tablitsa-sootvetstviya-fokusnoe-rasstoyanie-i-vyderzhka-2">Correspondence table: focal length and shutter speed</h2>
+<p>The table shows approximate values ​​for full-frame cameras without taking into account stabilization.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Focal Length (mm)</strong></td><td><strong>Safe shutter speed (sec)</strong></td><td><strong>Recommendation for 40+ MP</strong></td></tr></thead><tbody><tr><td>24 mm</td><td>1/30</td><td>1/60</td></tr><tr><td>35 mm</td><td>1/40</td><td>1/80</td></tr><tr><td>50 mm</td><td>1/60</td><td>1/125</td></tr><tr><td>85 mm</td><td>1/100</td><td>1/200</td></tr><tr><td>200 mm</td><td>1/250</td><td>1/500</td></tr></tbody></table></div></figure>
+<h3 class="wp-block-heading" id="uchet-krop-faktora-i-vysokogo-razresheniya-2">Taking into account crop factor and high resolution</h3>
+<p>If you use a camera with a smaller sensor (APS-C or Micro 4/3), the effective focal length increases. For example, a 50mm lens on a Sony camera with a 1.5x crop gives the same angle of view as a 75mm full frame. At the same time, hand trembling also “increases” by 1.5 times.</p>
+<p>Modern sensors with a resolution of 45-60 megapixels require even faster shutter speeds, since the slightest shift in light is recorded on neighboring pixels due to their high density. Our calculator takes this factor into account through the “Camera Resolution” parameter.</p>
+<h3 class="wp-block-heading" id="videosemka-i-pravilo-180-gradusov-2">Video shooting and the 180 degree rule</h3>
+<p>For videographers, the calculation is structured differently. In order for movement in a frame to look natural to the human eye (cinematic), the shutter speed must be tied to the frame rate (FPS).</p>
+<p><strong>Shutter angle formula:</strong></p>
+<p>$$Shutter = \frac{1}{FPS \cdot (\frac{360}{Angle})}$$</p>
+<p>The optimal angle is 180°, at which the shutter speed is half the frame rate. If you're shooting at 24 fps, the ideal shutter speed is 1/48 (or the closest 1/50).</p>
+<h2 class="wp-block-heading" id="5-sovetov-dlya-maksimalnoj-rezkosti-pri-semke-s-ruk-2">5 Tips for Maximum Sharpness When Shooting Handheld</h2>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Correct grip:</strong> Press your elbows toward your body, creating a “tripod” out of your own body.</li>
+<li><strong>Breathing technique:</strong> Press the release button while half-exhaling, smoothly, without jerking.</li>
+<li><strong>Using Burst Shooting:</strong> In a series of 3-5 frames, the middle shots are usually sharper than the first and last ones due to the lack of moment when pressing/releasing the button.</li>
+<li><strong>Fulcrum:</strong> If the shutter speed is critically slow, lean your shoulder against a tree or wall.</li>
+<li><strong>Trust the stub, but check:</strong> The effectiveness of the stabilizer (IBIS) decreases with increasing focal length. What works at 35mm may not work at 300mm.</li>
+</ol>
+<p>Use our calculator to pre-set your camera to suit your shooting conditions and ensure you get high-quality results without having to reshoot takes.</p>
+</div>
+    </div>
+</body>
+</html>

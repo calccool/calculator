@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online calculator for dividing a segment in a given ratio: Internal and External division</title>
+    <meta name="description" content="Online calculator for dividing a segment in a given ratio: Internal and External division - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Online calculator for dividing a segment in a given ratio: Internal and External division</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (Золотой стандарт) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(220px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    
+    /* Label + Term */
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    /* Input + Suffix (Corrected Position) */
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-input-wrapper { position: relative; width: 100%; }
+    
+    /* Паддинг справа маленький для стрелок браузера */
+    .c-input-wrapper .c-input { padding-right: 10px; } 
+    
+    /* Суффикс левее стрелок */
+    .c-input-suffix {
+        position: absolute; right: 32px; top: 50%; transform: translateY(-50%);
+        color: #888; font-size: 14px; pointer-events: none; font-weight: 500;
+    }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 10px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+    
+    .c-divider { 
+        display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; 
+        font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; }
+
+    /* Result Box */
+    .c-result { border:1px dashed #0693e3; border-radius:10px; padding:10px; background:#fff; display:none; scroll-margin-top: 20px; }
+    .c-result.show { display:grid; }
+    
+    .c-result-title {
+        margin: 0 0 10px 0; padding: 0 12px;
+        font-size: 18px; font-weight: 700; color: #333;
+        display: flex; align-items: center; gap: 8px;
+    }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #0693e3; grid-template-columns: 1fr auto 30px; }
+    .c-resline:last-child { border-bottom:none; }
+    
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 4px; }
+    
+    .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden; padding: 3px;
+      background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+      background-repeat:no-repeat; background-position:center; background-size:20px 20px; opacity: 0.6;}
+    .c-copy:hover { opacity: 1; }
+
+    .c-error { color: #d32f2f; background: #ffebee; padding: 10px; border-radius: 8px; margin-bottom: 10px; display: none; font-size: 14px; }
+    .c-error.show { display: block; }
+    .is-hidden { display:none !important; }
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    
+    /* Mobile Result Optimization */
+    @media (max-width: 480px) {
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 4px; padding: 12px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 19px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 24px; }
+    }
+    
+    .c-diagram-box { text-align: center; margin-bottom: 20px; padding: 10px; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0; height: 220px; position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center;}
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-diagram-box" id="graphContainer">
+<svg preserveaspectratio="xMidYMid meet" style="width:100%; height:100%;" viewbox="0 0 300 200">
+<rect fill="#fff" height="200" width="300"></rect>
+<line stroke="#eee" stroke-width="1" x1="0" x2="300" y1="100" y2="100"></line>
+<line stroke="#eee" stroke-width="1" x1="150" x2="150" y1="0" y2="200"></line>
+<line id="svgLine" stroke="#bbb" stroke-dasharray="4" stroke-width="2" x1="0" x2="0" y1="0" y2="0"></line>
+<circle cx="0" cy="0" fill="#0693e3" id="ptA" r="4"></circle>
+<circle cx="0" cy="0" fill="#0693e3" id="ptB" r="4"></circle>
+<circle cx="0" cy="0" fill="#e53935" id="ptP" r="5" stroke="#fff" stroke-width="2"></circle>
+<text fill="#0693e3" font-size="11" font-weight="bold" id="txtA" x="0" y="0">A</text>
+<text fill="#0693e3" font-size="11" font-weight="bold" id="txtB" x="0" y="0">B</text>
+<text fill="#e53935" font-size="12" font-weight="bold" id="txtP" x="0" y="0">P</text>
+</svg>
+</div>
+<div class="c-divider"><span class="icon">📍</span>Point coordinates</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Point A<span class="c-term">x₁</span></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="x1" step="any" type="number" value="0"/>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Point A<span class="c-term">y₁</span></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="y1" step="any" type="number" value="0"/>
+</div>
+</div>
+</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Point B<span class="c-term">x₂</span></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="x2" step="any" type="number" value="4"/>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Point B<span class="c-term">y₂</span></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="y2" step="any" type="number" value="4"/>
+</div>
+</div>
+</div>
+<div class="c-divider"><span class="icon">➗</span>Division options</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Share<span class="c-term">m</span></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="ratioM" min="0" step="any" type="number" value="1"/>
+<span class="c-input-suffix">parts</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Share<span class="c-term">n</span></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="ratioN" min="0" step="any" type="number" value="1"/>
+<span class="c-input-suffix">parts</span>
+</div>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Type of division<span class="c-term">Mode</span></label>
+<select class="c-select" id="divType">
+<option value="int">Internal (Point between A and B)</option>
+<option value="ext">External (Point outside)</option>
+</select>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div aria-live="polite" class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">🎯</span>Result</div>
+<div class="c-resline">
+<div class="c-resleft">Point P coordinates<span class="c-subtext">Search point (x, y)</span>
+</div>
+<div class="c-resval" id="resCoords" style="font-family:monospace; font-size:18px;"></div>
+<button class="c-copy" id="copyCoords"></button>
+</div>
+<div class="c-resline" style="background:#f1f8e9;">
+<div class="c-resleft">Factor k<span class="c-subtext">Ratio λ = m/n</span>
+</div>
+<div class="c-resval" id="resLambda"></div>
+<button class="c-copy" id="copyLambda"></button>
+</div>
+<div class="c-divider" style="margin-top:20px; margin-bottom:5px; font-size:12px;">Checking lengths</div>
+<div class="c-resline">
+<div class="c-resleft">Length AB<span class="c-subtext">Total segment</span>
+</div>
+<div class="c-resval" id="distAB" style="font-weight:normal;"></div>
+</div>
+<div class="c-resline">
+<div class="c-resleft">AP Length<span class="c-subtext">From start to point</span>
+</div>
+<div class="c-resval" id="distAP" style="font-weight:normal;"></div>
+</div>
+<div class="c-resline">
+<div class="c-resleft">PB length<span class="c-subtext">From point to end</span>
+</div>
+<div class="c-resval" id="distPB" style="font-weight:normal;"></div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика =====
+  const $ = (s) => wrap.querySelector(s);
+  const $$ = (s) => wrap.querySelectorAll(s);
+  const resBox = $('#resultBox');
+  const errorEl = $('#errorMsg');
+  
+  // Graph Elements
+  const svgLine = $('#svgLine');
+  const ptA = $('#ptA'); const txtA = $('#txtA');
+  const ptB = $('#ptB'); const txtB = $('#txtB');
+  const ptP = $('#ptP'); const txtP = $('#txtP');
+  
+  const inp = {
+      x1: $('#x1'), y1: $('#y1'),
+      x2: $('#x2'), y2: $('#y2'),
+      m: $('#ratioM'), n: $('#ratioN'),
+      type: $('#divType')
+  };
+  
+  const out = {
+      p: $('#resCoords'),
+      k: $('#resLambda'),
+      dab: $('#distAB'),
+      dap: $('#distAP'),
+      dpb: $('#distPB')
+  };
+
+  function num(el){ const n = parseFloat(el.value); return isNaN(n) ? 0 : n; }
+  
+  // Подсветка
+  $$('.param-inp').forEach(i => {
+      i.addEventListener('input', () => {
+          if (i.value) i.classList.add('filled');
+          else i.classList.remove('filled');
+      });
+  });
+
+  function getDistance(x1, y1, x2, y2) {
+      const dx = x2 - x1;
+      const dy = y2 - y1;
+      return Math.sqrt(dx*dx + dy*dy);
+  }
+
+  function updateGraph(A, B, P) {
+      // Find bounds to scale graph
+      const xs = [A.x, B.x, P.x];
+      const ys = [A.y, B.y, P.y];
+      
+      let minX = Math.min(...xs);
+      let maxX = Math.max(...xs);
+      let minY = Math.min(...ys);
+      let maxY = Math.max(...ys);
+      
+      let w = maxX - minX;
+      let h = maxY - minY;
+      
+      // Prevent zero size
+      if (Math.sign(w) === 0) w = 10;
+      if (Math.sign(h) === 0) h = 10;
+      
+      // Add padding (20%)
+      const padX = w * 0.2 + 20; 
+      const padY = h * 0.2 + 20;
+      
+      minX -= padX; maxX += padX;
+      minY -= padY; maxY += padY;
+      
+      w = maxX - minX;
+      h = maxY - minY;
+      
+      const svgW = 300;
+      const svgH = 200;
+      
+      const scaleX = svgW / w;
+      const scaleY = svgH / h;
+      
+      // Map function
+      const mapX = (x) => (x - minX) * scaleX;
+      const mapY = (y) => svgH - (y - minY) * scaleY; // Invert Y
+      
+      const setPt = (el, txt, pt) => {
+          const px = mapX(pt.x);
+          const py = mapY(pt.y);
+          el.setAttribute('cx', px);
+          el.setAttribute('cy', py);
+          txt.setAttribute('x', px + 6);
+          txt.setAttribute('y', py - 6);
+      };
+      
+      // Draw Line Segment AB
+      svgLine.setAttribute('x1', mapX(A.x));
+      svgLine.setAttribute('y1', mapY(A.y));
+      svgLine.setAttribute('x2', mapX(B.x));
+      svgLine.setAttribute('y2', mapY(B.y));
+      
+      setPt(ptA, txtA, A);
+      setPt(ptB, txtB, B);
+      setPt(ptP, txtP, P);
+  }
+
+  function calc() {
+      errorEl.classList.remove('show');
+      
+      const x1 = num(inp.x1); const y1 = num(inp.y1);
+      const x2 = num(inp.x2); const y2 = num(inp.y2);
+      const m = num(inp.m);
+      const n = num(inp.n);
+      const type = inp.type.value;
+      
+      // Validation
+      if (Math.sign(m) !== 1 || Math.sign(n) !== 1) {
+          errorEl.textContent = "The ratio values ​​m and n must be positive.";
+          errorEl.classList.add('show'); resBox.classList.remove('show'); return;
+      }
+      
+      if (type === 'ext' && m === n) {
+          errorEl.textContent = "In external division, m cannot be equal to n (parallel lines).";
+          errorEl.classList.add('show'); resBox.classList.remove('show'); return;
+      }
+
+      let px, py;
+      
+      if (type === 'int') {
+          // Internal: (mx2 + nx1)/(m+n)
+          const sum = m + n;
+          px = (m * x2 + n * x1) / sum;
+          py = (m * y2 + n * y1) / sum;
+      } else {
+          // External: (mx2 - nx1)/(m-n)
+          const diff = m - n;
+          px = (m * x2 - n * x1) / diff;
+          py = (m * y2 - n * y1) / diff;
+      }
+      
+      const P = {x: px, y: py};
+      const A = {x: x1, y: y1};
+      const B = {x: x2, y: y2};
+      
+      // Distances
+      const dAB = getDistance(x1, y1, x2, y2);
+      const dAP = getDistance(x1, y1, px, py);
+      const dPB = getDistance(px, py, x2, y2);
+      
+      // Output
+      out.p.textContent = `(${parseFloat(px.toFixed(3))}; ${parseFloat(py.toFixed(3))})`;
+      out.k.textContent = parseFloat((m/n).toFixed(3));
+      
+      out.dab.textContent = parseFloat(dAB.toFixed(3));
+      out.dap.textContent = parseFloat(dAP.toFixed(3));
+      out.dpb.textContent = parseFloat(dPB.toFixed(3));
+      
+      updateGraph(A, B, P);
+
+      resBox.classList.add('show');
+      resBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  // Слушатели
+  $('#calcBtn').addEventListener('click', calc);
+  $('#resetBtn').addEventListener('click', () => {
+    $$('.param-inp').forEach(inp => {
+        inp.value = '';
+        inp.classList.remove('filled');
+    });
+    // Defaults
+    inp.x1.value=0; inp.y1.value=0;
+    inp.x2.value=4; inp.y2.value=4;
+    inp.m.value=1; inp.n.value=1;
+    
+    resBox.classList.remove('show');
+    errorEl.classList.remove('show');
+  });
+
+  // Копирование
+  wrap.addEventListener('click', (e) => {
+    if (e.target.classList.contains('c-copy')) {
+      const parent = e.target.parentElement;
+      const val = parent.querySelector('.c-resval').textContent;
+      if (val) navigator.clipboard.writeText(val);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>This tool is designed to quickly solve one of the classic problems of analytical geometry - finding the coordinates of a point that divides a segment connecting two given points in a certain proportion. Whether you're solving a school problem or performing an engineering calculation, our calculator will provide accuracy and clarity.</p>
+<h2 class="wp-block-heading" id="kak-rabotaet-kalkulyator-2">How does the calculator work?</h2>
+<p>The problem of dividing a segment in this regard is formulated as follows: two points $A(x_1, y_1)$ and $B(x_2, y_2)$ are given on the plane. It is necessary to find the coordinates of the third point $P(x, y)$ , which lies on the line passing through $A$ and $B$ , and divides the segment $AB$ so that the ratio of the lengths of $AP$ to $PB$ is equal to the given number $\lambda$ (or the ratio $m/n$ ).</p>
+<p>Our algorithm takes into account two possible scenarios:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Internal division:</strong> Point $P$ lies <em>between</em> points $A$ and $B$ .</li>
+<li><strong>External division:</strong> Point $P$ lies on the continuation of the straight line, <em>outside</em> segment $AB$ .</li>
+</ol>
+<h2 class="wp-block-heading" id="osnovnye-formuly-2">Basic formulas</h2>
+<p>The following mathematical formulas are used to calculate the coordinates of point $P(x, y)$ . Let the relation be $AP : PB = m : n$ . Then the division coefficient is $\lambda = \frac{m}{n}$ .</p>
+<p><strong>For internal division:</strong></p>
+<p>The coordinates of the point $P$ are found as the weighted average of the coordinates of the ends of the segment:</p>
+<p>$$x = \frac{m x_2 + n x_1}{m + n}, \quad y = \frac{m y_2 + n y_1}{m + n}$$</p>
+<p><strong>For outer division:</strong></p>
+<p>If point $P$ divides the segment externally, the formulas change sign (this is equivalent to using a negative ratio):</p>
+<p>$$x = \frac{m x_2 — n x_1}{m — n}, \quad y = \frac{m y_2 — n y_1}{m — n}$$</p>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p><strong>Important:</strong> With external division, the ratio $m$ cannot be equal to $n$ , since this would result in division by zero (parallel lines never intersect).</p>
+</blockquote>
+<h2 class="wp-block-heading" id="sravnenie-tipov-deleniya-2">Comparison of division types</h2>
+<p>To better understand the differences between the calculator modes, use the table below:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Characteristic</strong></td><td><strong>Internal division</strong></td><td><strong>External division</strong></td></tr></thead><tbody><tr><td><strong>P point location</strong></td><td>Located strictly inside the segment $AB$ .</td><td>Located on the straight line $AB$ , but outside the segment.</td></tr><tr><td><strong>Sign in the formula</strong></td><td>Plus ( $+$ ) in the numerator and denominator.</td><td>Minus ( $-$ ) in the numerator and denominator.</td></tr><tr><td><strong>Relationship $\lambda$ </strong></td><td>Always a positive number.</td><td>Can be seen as negative.</td></tr><tr><td><strong>Geometric meaning</strong></td><td>Point $P$ “pulls” $A$ and $B$ towards itself.</td><td>Point $P$ is removed from $A$ or $B$ depending on $m$ and $n$ .</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="prakticheskoe-primenenie-2">Practical Application</h2>
+<p>Dividing a segment in a given ratio is often used in:</p>
+<ul class="wp-block-list">
+<li><strong>Cartography and navigation:</strong> To interpolate coordinates between two waypoints.</li>
+<li><strong>Computer graphics:</strong> In algorithms for rasterizing lines and constructing Bezier curves.</li>
+<li><strong>Physics:</strong> To find the center of mass of a system of material points.</li>
+<li><strong>Construction:</strong> When marking foundations and load-bearing structures according to drawings.</li>
+</ul>
+<p>Use our calculator to test your decisions or get instant results visualized on a graph.</p>
+</div>
+    </div>
+</body>
+</html>

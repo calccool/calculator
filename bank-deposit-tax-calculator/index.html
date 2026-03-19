@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit tax calculator: calculation of personal income tax and tax-free base at the Central Bank rate</title>
+    <meta name="description" content="Deposit tax calculator: calculation of personal income tax and tax-free base at the Central Bank rate - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Deposit tax calculator: calculation of personal income tax and tax-free base at the Central Bank rate</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-receipt-wrap { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 15px; position: relative; overflow: hidden; }
+    .c-receipt-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: repeating-linear-gradient(45deg, #0693e3, #0693e3 10px, #38bdf8 10px, #38bdf8 20px); }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #fff; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #fff1f2; border: 1px solid #fecdd3; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(244, 63, 94, 0.05); }
+    .c-highlight-line:hover { background: #ffe4e6; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .c-switch-wrap { display: flex; align-items: center; gap: 12px; cursor: pointer; margin-bottom: 5px; padding: 14px 16px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 2px 6px rgba(0,0,0,0.02); transition: 0.3s; }
+    .c-switch-wrap:hover { border-color: #cbd5e1; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .c-switch-track { width: 44px; height: 24px; background: #cbd5e1; border-radius: 24px; position: relative; transition: 0.3s; flex-shrink: 0; }
+    .c-switch-thumb { width: 18px; height: 18px; background: #fff; border-radius: 50%; position: absolute; top: 3px; left: 3px; transition: 0.3s; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+    input:checked + .c-switch-track { background: #0693e3; }
+    input:checked + .c-switch-track .c-switch-thumb { left: 23px; }
+    .c-switch-label { font-weight: 600; font-size: 15px; color: #333; }
+    
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* Advanced Donut Chart Visualization */
+    .c-chart-box { margin: 15px 0 25px; padding: 25px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); }
+    .c-chart-title { font-weight: 700; color: #0f172a; font-size: 15px; margin-bottom: 25px; display: flex; align-items: center; justify-content: center; gap: 8px; text-align: center;}
+    
+    .c-pie-wrap { display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
+    .c-donut-container { position: relative; width: 160px; height: 160px; display: flex; align-items: center; justify-content: center; }
+    .c-donut { width: 100%; height: 100%; border-radius: 50%; background: #e2e8f0; box-shadow: 0 8px 20px rgba(0,0,0,0.08), inset 0 0 0 1px rgba(0,0,0,0.05); transition: background 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+    .c-donut-inner { position: absolute; width: 110px; height: 110px; background: #fff; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: inset 0 4px 10px rgba(0,0,0,0.05), 0 0 0 4px rgba(255,255,255,0.5); text-align: center; }
+    .c-donut-val { font-size: 16px; font-weight: 800; color: #f43f5e; line-height: 1.2; }
+    .c-donut-lbl { font-size: 11px; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; }
+    
+    .c-legend { display: flex; flex-direction: column; gap: 12px; min-width: 180px; }
+    .c-leg-item { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 600; color: #475569; padding: 8px 12px; background: #fff; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: 0.2s; }
+    .c-leg-item:hover { transform: translateX(4px); border-color: #cbd5e1; }
+    .c-leg-color { width: 14px; height: 14px; border-radius: 4px; flex-shrink: 0; }
+    .c-leg-val { margin-left: auto; font-weight: 700; color: #0f172a; }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-chart-box { padding: 15px; }
+       .c-pie-wrap { gap: 25px; flex-direction: column; }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="tax-deposit-wrapper">
+<div class="c-body">
+<div class="c-toggle" id="mode-tabs">
+<button class="c-toggle-btn active" data-mode="params">By deposit parameters</button>
+<button class="c-toggle-btn" data-mode="ready">By income received</button>
+</div>
+<div class="c-divider"><span class="icon">🏦</span>Income data</div>
+<div id="mode-params-wrap">
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Deposit amount</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="depositSum" placeholder="For example: 1500000" type="number"/>
+<span class="c-input-suffix">$</span>
+</div>
+<div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-target="depositSum" data-val="1000000" type="button">1 million</button>
+<button class="c-quick-btn" data-target="depositSum" data-val="2000000" type="button">2 million</button>
+<button class="c-quick-btn" data-target="depositSum" data-val="5000000" type="button">5 million</button>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Deposit term</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="depositTerm" placeholder="Specify in months" type="number"/>
+<span class="c-input-suffix">months</span>
+</div>
+</div>
+</div>
+<div class="c-row" style="margin-bottom: 25px;">
+<div class="c-field">
+<label class="c-label">Interest rate</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="depositRate" placeholder="Annual rate" type="number"/>
+<span class="c-input-suffix">%</span>
+</div>
+</div>
+</div>
+</div>
+<div class="is-hidden" id="mode-ready-wrap" style="margin-bottom: 25px;">
+<div class="c-row">
+<div class="c-field" style="grid-column: 1 / -1;">
+<label class="c-label">Amount of interest received<span class="c-term">Actual income from all deposits</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="readyInterest" placeholder="How much interest did you receive?" type="number"/>
+<span class="c-input-suffix">$</span>
+</div>
+</div>
+</div>
+</div>
+<div class="c-divider"><span class="icon">⚙️</span>Tax calculation options</div>
+<div class="c-row" style="margin-bottom: 10px;">
+<div class="c-field" style="grid-column: 1 / -1;">
+<label class="c-label">Maximum key rate of the Central Bank<span class="c-term">For the year of income</span>
+<span class="c-help-icon" id="openCBRInfo">?</span>
+</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="cbRate" placeholder="For example: 16" type="number" value="16"/>
+<span class="c-input-suffix">%</span>
+</div>
+<div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-target="cbRate" data-val="15" type="button">15%</button>
+<button class="c-quick-btn" data-target="cbRate" data-val="16" type="button">16%</button>
+<button class="c-quick-btn" data-target="cbRate" data-val="18" type="button">18%</button>
+<button class="c-quick-btn" data-target="cbRate" data-val="19" type="button">19%</button>
+<button class="c-quick-btn" data-target="cbRate" data-val="21" type="button">21%</button>
+</div>
+</div>
+</div>
+<label class="c-switch-wrap" style="margin-top: 15px;">
+<input class="is-hidden" id="richToggle" type="checkbox"/>
+<div class="c-switch-track"><div class="c-switch-thumb"></div></div>
+<span class="c-switch-label">Total annual income over 5 million rubles<span class="c-term">Rate 15%</span></span>
+</label>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-chart-box is-hidden" id="vis-box">
+<div class="c-chart-title"><span class="icon">🍩</span>Structure of interest received</div>
+<div class="c-pie-wrap">
+<div class="c-donut-container">
+<div class="c-donut" id="vis-donut"></div>
+<div class="c-donut-inner">
+<span class="c-donut-lbl">Tax amount</span>
+<span class="c-donut-val" id="vis-donut-tax">0 $</span>
+</div>
+</div>
+<div class="c-legend">
+<div class="c-leg-item">
+<div class="c-leg-color" style="background: #10b981;"></div>
+<span>Non-taxable base</span>
+<span class="c-leg-val" id="leg-free">0%</span>
+</div>
+<div class="c-leg-item">
+<div class="c-leg-color" style="background: #0693e3;"></div>
+<span>Net income</span>
+<span class="c-leg-val" id="leg-net">0%</span>
+</div>
+<div class="c-leg-item" style="border-left: 3px solid #f43f5e;">
+<div class="c-leg-color" style="background: #f43f5e;"></div>
+<span>Tax to the Federal Tax Service</span>
+<span class="c-leg-val" id="leg-tax">0%</span>
+</div>
+</div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">🧾</span>Final calculation</div>
+<div class="c-receipt-wrap">
+<div class="c-resline">
+<div class="c-resleft">Total interest<span class="c-subtext">All income received</span></div>
+<div class="c-resval" id="resTotalInt"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Non-taxable limit<span class="c-subtext" id="resLimitSub">Calculated at the Central Bank rate</span></div>
+<div class="c-resval" id="resLimit" style="color: #10b981;"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Tax base<span class="c-subtext">Exceeded limit amount</span></div>
+<div class="c-resval" id="resBase" style="color: #475569;"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline c-highlight-line">
+<div class="c-resleft">Amount of tax to be paid<span class="c-subtext" id="resTaxSub">Rate 13%</span></div>
+<div class="c-resval" id="resTax" style="color: #f43f5e; font-size: 20px;"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline" style="border-bottom: none; border-top: 1px solid #cbd5e1; padding-top: 16px; margin-top: 8px;">
+<div class="c-resleft">Real net income<span class="c-subtext">After tax</span></div>
+<div class="c-resval" id="resNet" style="font-size: 22px;"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+</div>
+<div class="c-modal-overlay" id="cbrInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeCBRInfo">×</button>
+<div class="c-modal-title"><span class="icon">📖</span>Non-taxable limit</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">From 2023, deposit tax is paid not on the entire amount of income, but only on excess of the “tax-free limit.”</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>Limit formula:</b><br/>1,000,000 $ × Max. Central Bank rate for the year = Tax-free amount</div>
+<div style="background: #eff6ff; padding: 12px; border-radius: 8px; border: 1px solid #bae6fd; font-size: 13px; color: #0284c7;">For example, if the maximum key rate of the Central Bank in the year was 16%, then the limit will be:<b>1 000 000 × 16% = 160 000 $</b>.<br/><br/>The tax is taken only from that part of the interest that exceeds 160,000 rubles.</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let activeMode = 'params';
+  let isCalculated = false;
+
+  // Modal logic
+  $('#openCBRInfo').addEventListener('click', () => { $('#cbrInfoModal').classList.add('show'); });
+  $('#closeCBRInfo').addEventListener('click', () => { $('#cbrInfoModal').classList.remove('show'); });
+  $('#cbrInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#cbrInfoModal').classList.remove('show');
+  });
+
+  function updateModeUI() {
+      if (Math.abs(activeMode === 'params') === 1) {
+          $('#mode-params-wrap').classList.remove('is-hidden');
+          $('#mode-ready-wrap').classList.add('is-hidden');
+      } else {
+          $('#mode-params-wrap').classList.add('is-hidden');
+          $('#mode-ready-wrap').classList.remove('is-hidden');
+      }
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  }
+
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeMode = btn.dataset.mode;
+        updateModeUI();
+    });
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          let targetId = btn.dataset.target;
+          let val = btn.dataset.val;
+          $('#' + targetId).value = val;
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  $('#richToggle').addEventListener('change', () => {
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  });
+
+  function formatMoney(n) {
+      let parts = n.toFixed(2).split(".");
+      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+      return parts.join(".");
+  }
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let isErr = false;
+    let interest = 0;
+    
+    if (Math.abs(activeMode === 'params') === 1) {
+        let sum = parseFloat($('#depositSum').value);
+        let term = parseFloat($('#depositTerm').value);
+        let rate = parseFloat($('#depositRate').value);
+        
+        let isNanSum = isNaN(sum); if (Math.abs(isNanSum === true) === 1) sum = 0;
+        let isNanTerm = isNaN(term); if (Math.abs(isNanTerm === true) === 1) term = 0;
+        let isNanRate = isNaN(rate); if (Math.abs(isNanRate === true) === 1) rate = 0;
+        
+        let hasPosSum = false; if (Math.abs(Math.sign(sum) === 1) === 1) hasPosSum = true;
+        let hasPosTerm = false; if (Math.abs(Math.sign(term) === 1) === 1) hasPosTerm = true;
+        let hasPosRate = false; if (Math.abs(Math.sign(rate) === 1) === 1) hasPosRate = true;
+        
+        let validParams = Math.abs(hasPosSum === true) + Math.abs(hasPosTerm === true) + Math.abs(hasPosRate === true);
+        if (Math.abs(validParams === 3) === 0) isErr = true;
+        
+        interest = sum * (rate / 100) * (term / 12);
+    } else {
+        let ready = parseFloat($('#readyInterest').value);
+        let isNanReady = isNaN(ready); if (Math.abs(isNanReady === true) === 1) ready = 0;
+        let hasPosReady = false; if (Math.abs(Math.sign(ready) === 1) === 1) hasPosReady = true;
+        if (Math.abs(hasPosReady === false) === 1) isErr = true;
+        
+        interest = ready;
+    }
+    
+    let cbRate = parseFloat($('#cbRate').value);
+    let isNanCB = isNaN(cbRate); if (Math.abs(isNanCB === true) === 1) cbRate = 0;
+    let hasPosCB = false; if (Math.abs(Math.sign(cbRate) === 1) === 1) hasPosCB = true;
+    if (Math.abs(hasPosCB === false) === 1) isErr = true;
+
+    if (Math.abs(isErr === true) === 1) {
+        $('#vis-box').classList.add('is-hidden');
+        $('#resultBox').classList.remove('show');
+        if (Math.abs(shouldScroll === true) === 1) {
+            $('#errorMsg').textContent = "Please fill all parameters with positive numbers";
+            $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    // Logic
+    let limit = 1000000 * (cbRate / 100);
+    
+    let taxableBase = interest - limit;
+    let isTaxablePos = false;
+    if (Math.abs(Math.sign(taxableBase) === 1) === 1) isTaxablePos = true;
+    if (Math.abs(isTaxablePos === false) === 1) taxableBase = 0;
+    
+    let isRich = $('#richToggle').checked;
+    let taxRateMulti = 0.13;
+    let taxLabel = "13%";
+    if (Math.abs(isRich === true) === 1) {
+        taxRateMulti = 0.15;
+        taxLabel = "15%";
+    }
+    
+    let tax = taxableBase * taxRateMulti;
+    let netInterest = interest - tax;
+
+    // UI Texts
+    $('#resTotalInt').textContent = formatMoney(interest) + " $";
+    $('#resLimit').textContent = formatMoney(limit) + " $";
+    $('#resLimitSub').textContent = "1 million ×" + cbRate + "%";
+    $('#resBase').textContent = formatMoney(taxableBase) + " $";
+    $('#resTax').textContent = formatMoney(tax) + " $";
+    $('#resTaxSub').textContent = "Bid" + taxLabel;
+    $('#resNet').textContent = formatMoney(netInterest) + " $";
+
+    // CSS Donut logic
+    let pGreen = (limit / interest) * 100;
+    let isGreenOver = false;
+    if (Math.abs(Math.sign(pGreen - 100) === 1) === 1) isGreenOver = true;
+    if (Math.abs(isGreenOver === true) === 1) pGreen = 100;
+
+    let pBlue = 0;
+    let pRed = 0;
+
+    if (Math.abs(isTaxablePos === true) === 1) {
+        pBlue = ((taxableBase - tax) / interest) * 100;
+        pRed = (tax / interest) * 100;
+    }
+
+    let endGreen = pGreen;
+    let endBlue = pGreen + pBlue;
+
+    // conic-gradient logic
+    let grad = "conic-gradient(#10b981 0% " + endGreen + "%, #0693e3 " + endGreen + "% " + endBlue + "%, #f43f5e " + endBlue + "% 100%)";
+    $('#vis-donut').style.background = grad;
+
+    $('#vis-donut-tax').textContent = formatMoney(tax) + " $";
+    $('#leg-free').textContent = pGreen.toFixed(1) + "%";
+    $('#leg-net').textContent = pBlue.toFixed(1) + "%";
+    $('#leg-tax').textContent = pRed.toFixed(1) + "%";
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#vis-box').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    wrap.querySelectorAll('input[type="number"]').forEach(i => i.value = '');
+    $('#cbRate').value = '16';
+    $('#richToggle').checked = false;
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      let valClean = valRaw.replace('$', '').replace(/\\s/g, '').trim();
+      navigator.clipboard.writeText(valClean);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>According to current legislation, not the entire deposit amount and not even all interest received are subject to tax. Only the total interest income from all your accounts and deposits in Russian banks for the calendar year, which exceeds the “tax-free minimum” established by law, is taken into account.</p>
+<p>Our calculator takes into account the key parameter - <strong>maximum key rate of the Central Bank</strong> for the reporting year. This allows you to get the most accurate result that corresponds to the Federal Tax Service methodology.</p>
+<h2 class="wp-block-heading" id="formula-rascheta-neoblagaemogo-limita-2">Formula for calculating the tax-free limit</h2>
+<p>The tax-free base (limit) is calculated according to a single standard for all citizens, regardless of the amount of their savings.</p>
+<p>$$L = 1\,000\,000 \times R_{max}$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $L$ - tax-free amount of income (in rubles);</li>
+<li> $1\,000\,000$ - fixed base of one million rubles;</li>
+<li> $R_{max}$ is the maximum value of the Bank of Russia key rate that was in effect on the 1st day of each month during the tax period.</li>
+</ul>
+<h3 class="wp-block-heading" id="raschet-summy-naloga-k-uplate-2">Calculation of the amount of tax to be paid</h3>
+<p>If your annual income on all deposits is above the $L$ limit, then the $T$ tax is calculated as follows:</p>
+<p>$$T = (I_{total} — L) \times Rate_{tax}$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $I_{total}$ - your total income on all deposits for the year;</li>
+<li> $Rate_{tax}$ - personal income tax rate (13% in the base case or 15% with total annual income over 5 million rubles).</li>
+</ul>
+<h2 class="wp-block-heading" id="sravnenie-neoblagaemoj-bazy-pri-raznoj-stavke-tsb-2">Comparison of the tax-free base at different Central Bank rates</h2>
+<p>The amount of tax directly depends on the policy of the Central Bank. The table below provides examples of how the “protected” amount of income changes depending on the key rate:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Max. Central Bank rate for the year</strong></td><td><strong>Non-taxable limit (income)</strong></td><td><strong>Tax on $200,000 income</strong></td></tr></thead><tbody><tr><td>15%</td><td>150 000 $</td><td>6 500 $</td></tr><tr><td>16%</td><td>160 000 $</td><td>5 200 $</td></tr><tr><td>18%</td><td>180 000 $</td><td>2 600 $</td></tr><tr><td>20%</td><td>200 000 $</td><td>0 $</td></tr><tr><td>21%</td><td>210 000 $</td><td>0 $</td></tr></tbody></table></div></figure>
+<h3 class="wp-block-heading" id="vazhnye-nyuansy-nalogooblozheniya-2">Important nuances of taxation</h3>
+<ul class="wp-block-list">
+<li><strong>Currency deposits:</strong> Income on them is recalculated into rubles at the Central Bank exchange rate on the date of actual receipt of interest.</li>
+<li><strong>Exception accounts:</strong> Tax is not paid on income from escrow accounts and ruble accounts, the rate on which throughout the year did not exceed 1% per annum.</li>
+<li><strong>Cashback:</strong> Bonuses and cashback from banks are generally not considered interest income and are not subject to this tax.</li>
+<li><strong>Increased rate 15%:</strong> If the sum of all your income (salary, dividends, interest on deposits, etc.) for the year exceeds 5 million rubles, a 15% rate is applied to the excess amount.</li>
+</ul>
+<h2 class="wp-block-heading" id="kak-polzovatsya-kalkulyatorom-2">How to use the calculator</h2>
+<p>For your convenience, we have implemented two operating modes:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>According to the deposit parameters:</strong> Enter the amount, term and rate of your deposit. The system itself will calculate the expected profit and compare it with the limit.</li>
+<li><strong>By income received:</strong> If you already know the exact amount of interest paid by the bank, simply enter it for instant personal income tax calculation.</li>
+</ol>
+<p>Visualization in the form of a “doughnut” will clearly show the structure of your income: which part you take in full, and which part will go to the budget as a tax.</p>
+<h3 class="wp-block-heading" id="sroki-oplaty-naloga-v-2025-godu-2">Tax payment deadlines in 2025</h3>
+<ul class="wp-block-list">
+<li><strong>Until February 1:</strong> Banks transmit information about your income to the Federal Tax Service.</li>
+<li><strong>Autumn:</strong> The tax service sends a notification to the taxpayer’s personal account (or by mail).</li>
+<li><strong>Until December 1:</strong> Deadline for paying taxes for the previous year.</li>
+</ul>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p><strong>Expert advice:</strong> There is no need to submit a 3-NDFL declaration on income from deposits yourself - the tax office will calculate everything automatically based on data from banks. Our calculator will help you plan your budget in advance and avoid surprises at the end of the year.</p>
+</blockquote>
+</div>
+    </div>
+</body>
+</html>

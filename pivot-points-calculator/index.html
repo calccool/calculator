@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pivot Points Calculator: Classic, Fibonacci, Camarilla and Woody</title>
+    <meta name="description" content="Pivot Points Calculator: Classic, Fibonacci, Camarilla and Woody - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Pivot Points Calculator: Classic, Fibonacci, Camarilla and Woody</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (Золотой стандарт) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(220px, 1fr)); }
+    .c-row.cols-3 { grid-template-columns: repeat(3, minmax(220px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    
+    /* Label + Term */
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    /* Input + Suffix (Correct position) */
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 10px; } 
+    .c-input-suffix {
+        position: absolute; right: 32px; top: 50%; transform: translateY(-50%);
+        color: #888; font-size: 14px; pointer-events: none; font-weight: 500;
+    }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 10px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+    
+    .c-divider { 
+        display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; 
+        font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; }
+
+    /* Result Box */
+    .c-result { border:1px dashed #0693e3; border-radius:10px; padding:10px; background:#fff; display:none; scroll-margin-top: 20px; }
+    .c-result.show { display:grid; }
+    
+    .c-result-title {
+        margin: 0 0 10px 0; padding: 0 12px;
+        font-size: 18px; font-weight: 700; color: #333;
+        display: flex; align-items: center; gap: 8px;
+    }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #0693e3; grid-template-columns: 1fr auto 30px; }
+    .c-resline:last-child { border-bottom:none; }
+    
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 4px; }
+    
+    .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden; padding: 3px;
+      background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+      background-repeat:no-repeat; background-position:center; background-size:20px 20px; opacity: 0.6;}
+    .c-copy:hover { opacity: 1; }
+
+    .c-error { color: #d32f2f; background: #ffebee; padding: 10px; border-radius: 8px; margin-bottom: 10px; display: none; font-size: 14px; }
+    .c-error.show { display: block; }
+    .is-hidden { display:none !important; }
+    
+    /* Graph */
+    .c-levels-box { text-align: center; margin-bottom: 20px; padding: 15px; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0; height: 300px; display:flex; justify-content:center; align-items:center; }
+    
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } .c-row.cols-3 { grid-template-columns: 1fr; } }
+    
+    /* Mobile Result Optimization */
+    @media (max-width: 480px) {
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 4px; padding: 12px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 19px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 24px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-levels-box" id="chartBox">
+<svg preserveaspectratio="none" style="width:100%; height:100%;" viewbox="0 0 300 280">
+<text fill="#999" font-size="12" text-anchor="middle" x="150" y="140">Enter data for the graph</text>
+</svg>
+</div>
+<div class="c-divider"><span class="icon">📈</span>Market Data</div>
+<div class="c-row cols-3">
+<div class="c-field">
+<label class="c-label">High <span class="c-term">H</span></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="high" placeholder="Max" step="any" type="number"/>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Low <span class="c-term">L</span></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="low" placeholder="Min" step="any" type="number"/>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Close <span class="c-term">C</span></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="close" placeholder="End" step="any" type="number"/>
+</div>
+</div>
+</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Open <span class="c-term">O</span></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="open" placeholder="Start (Optional)" step="any" type="number"/>
+</div>
+<small style="font-size:11px; color:#888;">Only needed for DeMark</small>
+</div>
+<div class="c-field">
+<label class="c-label">Calculation method<span class="c-term">Type</span></label>
+<select class="c-select" id="method">
+<option value="classic">Classic (Standard)</option>
+<option value="fibonacci">Fibonacci</option>
+<option value="woodie">Woodie</option>
+<option value="camarilla">Camarilla</option>
+<option value="demark">DeMark</option>
+</select>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div aria-live="polite" class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">📊</span>Pivot Levels</div>
+<div class="c-resline" style="background:#fff3e0; border-bottom:2px solid #ff9800;">
+<div class="c-resleft">Pivot Point (PP)
+                  <span class="c-subtext">Pivot point</span>
+</div>
+<div class="c-resval" id="resPP" style="font-size:20px; color:#ef6c00;"></div>
+<button class="c-copy" id="copyPP"></button>
+</div>
+<div class="c-divider" style="margin-top:20px; margin-bottom:5px; font-size:12px; color:#d32f2f;">Resistance</div>
+<div class="c-resline">
+<div class="c-resleft">R3</div>
+<div class="c-resval" id="resR3"></div>
+<button class="c-copy" id="copyR3"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">R2</div>
+<div class="c-resval" id="resR2"></div>
+<button class="c-copy" id="copyR2"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">R1</div>
+<div class="c-resval" id="resR1"></div>
+<button class="c-copy" id="copyR1"></button>
+</div>
+<div class="c-divider" style="margin-top:20px; margin-bottom:5px; font-size:12px; color:#2e7d32;">Support</div>
+<div class="c-resline">
+<div class="c-resleft">S1</div>
+<div class="c-resval" id="resS1"></div>
+<button class="c-copy" id="copyS1"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">S2</div>
+<div class="c-resval" id="resS2"></div>
+<button class="c-copy" id="copyS2"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">S3</div>
+<div class="c-resval" id="resS3"></div>
+<button class="c-copy" id="copyS3"></button>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика =====
+  const $ = (s) => wrap.querySelector(s);
+  const $$ = (s) => wrap.querySelectorAll(s);
+  const resBox = $('#resultBox');
+  const errorEl = $('#errorMsg');
+  const svgBox = $('#chartBox svg');
+  
+  const inpH = $('#high');
+  const inpL = $('#low');
+  const inpC = $('#close');
+  const inpO = $('#open');
+  const selM = $('#method');
+  
+  const out = {
+      pp: $('#resPP'),
+      r1: $('#resR1'), r2: $('#resR2'), r3: $('#resR3'),
+      s1: $('#resS1'), s2: $('#resS2'), s3: $('#resS3')
+  };
+
+  function num(el){ const n = parseFloat(el.value); return isNaN(n) ? 0 : n; }
+
+  // Подсветка
+  $$('.param-inp').forEach(inp => {
+      inp.addEventListener('input', () => {
+          if (inp.value) inp.classList.add('filled');
+          else inp.classList.remove('filled');
+      });
+  });
+  
+  function drawChart(levels) {
+      svgBox.innerHTML = '';
+      
+      // Find min/max for scaling
+      const vals = [levels.pp, levels.r1, levels.r2, levels.r3, levels.s1, levels.s2, levels.s3].filter(v => v);
+      let minVal = Math.min(...vals);
+      let maxVal = Math.max(...vals);
+      
+      // Add padding
+      const range = maxVal - minVal;
+      minVal -= range * 0.1;
+      maxVal += range * 0.1;
+      
+      const h = 280;
+      const w = 300;
+      
+      const mapY = (val) => h - ((val - minVal) / (maxVal - minVal)) * h;
+      
+      const createLine = (val, color, label, dash) => {
+          if (!val) return;
+          const y = mapY(val);
+          
+          const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+          line.setAttribute("x1", 40); line.setAttribute("x2", 290);
+          line.setAttribute("y1", y); line.setAttribute("y2", y);
+          line.setAttribute("stroke", color);
+          line.setAttribute("stroke-width", 2);
+          if (dash) line.setAttribute("stroke-dasharray", "5,5");
+          
+          const txt = document.createElementNS("http://www.w3.org/2000/svg", "text");
+          txt.setAttribute("x", 10); txt.setAttribute("y", y + 4);
+          txt.setAttribute("font-size", "11");
+          txt.setAttribute("fill", "#555");
+          txt.textContent = label;
+          
+          svgBox.appendChild(line);
+          svgBox.appendChild(txt);
+      };
+      
+      createLine(levels.r3, "#d32f2f", "R3");
+      createLine(levels.r2, "#e57373", "R2");
+      createLine(levels.r1, "#ffcdd2", "R1");
+      
+      createLine(levels.pp, "#ff9800", "PP", true);
+      
+      createLine(levels.s1, "#c8e6c9", "S1");
+      createLine(levels.s2, "#81c784", "S2");
+      createLine(levels.s3, "#388e3c", "S3");
+  }
+
+  function calc() {
+      errorEl.classList.remove('show');
+      
+      const H = num(inpH);
+      const L = num(inpL);
+      const C = num(inpC);
+      const O = num(inpO);
+      const method = selM.value;
+      
+      // Validation
+      if (Math.sign(H) !== 1 || Math.sign(L) !== 1 || Math.sign(C) !== 1) {
+          errorEl.textContent = "Prices must be positive.";
+          errorEl.classList.add('show'); resBox.classList.remove('show'); return;
+      }
+      
+      if (Math.sign(H - L) === -1) {
+           errorEl.textContent = "High cannot be less than Low.";
+           errorEl.classList.add('show'); resBox.classList.remove('show'); return;
+      }
+      
+      let PP=0, R1=0, R2=0, R3=0, S1=0, S2=0, S3=0;
+      
+      if (method === 'classic') {
+          PP = (H + L + C) / 3;
+          R1 = (2 * PP) - L;
+          S1 = (2 * PP) - H;
+          R2 = PP + (H - L);
+          S2 = PP - (H - L);
+          R3 = H + 2 * (PP - L);
+          S3 = L - 2 * (H - PP);
+      } 
+      else if (method === 'fibonacci') {
+          PP = (H + L + C) / 3;
+          const diff = H - L;
+          R1 = PP + (diff * 0.382);
+          S1 = PP - (diff * 0.382);
+          R2 = PP + (diff * 0.618);
+          S2 = PP - (diff * 0.618);
+          R3 = PP + diff;
+          S3 = PP - diff;
+      }
+      else if (method === 'woodie') {
+          // Woodie использует open следующего дня, но часто берут current Open
+          // Формула: PP = (H + L + 2*C) / 4
+          PP = (H + L + 2 * C) / 4;
+          R1 = (2 * PP) - L;
+          S1 = (2 * PP) - H;
+          R2 = PP + H - L;
+          S2 = PP - H + L;
+      }
+      else if (method === 'camarilla') {
+          PP = (H + L + C) / 3;
+          const diff = H - L;
+          R3 = C + (diff * 1.1 / 4); // Formula varies, this is standard
+          S3 = C - (diff * 1.1 / 4);
+          // Standard Camarilla often defines R3/R4/S3/S4 as main
+          // Here mapping R1-R3 to common
+          R1 = C + (diff * 1.1 / 12);
+          S1 = C - (diff * 1.1 / 12);
+          R2 = C + (diff * 1.1 / 6);
+          S2 = C - (diff * 1.1 / 6);
+          R3 = C + (diff * 1.1 / 4);
+          S3 = C - (diff * 1.1 / 4);
+      }
+      else if (method === 'demark') {
+          let X = 0;
+          if (Math.sign(C - O) === -1) { // Close < Open
+              X = H + (2 * L) + C;
+          } else if (Math.sign(C - O) === 1) { // Close > Open
+              X = (2 * H) + L + C;
+          } else { // Close == Open
+              X = H + L + (2 * C);
+          }
+          
+          PP = X / 4;
+          R1 = X / 2 - L;
+          S1 = X / 2 - H;
+          // DeMark обычно не имеет R2/S2
+      }
+
+      const fmt = (n) => n ? n.toFixed(4) : "—";
+      
+      out.pp.textContent = fmt(PP);
+      out.r1.textContent = fmt(R1); out.r2.textContent = fmt(R2); out.r3.textContent = fmt(R3);
+      out.s1.textContent = fmt(S1); out.s2.textContent = fmt(S2); out.s3.textContent = fmt(S3);
+      
+      drawChart({pp: PP, r1: R1, r2: R2, r3: R3, s1: S1, s2: S2, s3: S3});
+
+      resBox.classList.add('show');
+      resBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  // Слушатели
+  $('#calcBtn').addEventListener('click', calc);
+  $('#resetBtn').addEventListener('click', () => {
+    $$('.param-inp').forEach(inp => {
+        inp.value = '';
+        inp.classList.remove('filled');
+    });
+    resBox.classList.remove('show');
+    errorEl.classList.remove('show');
+  });
+
+  // Копирование
+  wrap.addEventListener('click', (e) => {
+    if (e.target.classList.contains('c-copy')) {
+      const parent = e.target.parentElement;
+      const val = parent.querySelector('.c-resval').textContent;
+      if (val) navigator.clipboard.writeText(val);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>In technical analysis <strong>Pivot Points</strong> is one of the most objective tools for determining market sentiment. Unlike indicators, which lag, Pivot levels are calculated based on the prices of the previous period and serve as a ready-made “road map” for the trader for the next session.</p>
+<p>Our calculator allows you to instantly determine potential reversal zones (Pivot), profit-taking levels (Resistance) and buy zones (Support), using the five most popular calculation methods.</p>
+<h2 class="wp-block-heading" id="zachem-ispolzovat-kalkulyator-opornyh-tochek-2">Why use a reference point calculator?</h2>
+<p>Traders use these levels to:</p>
+<ul class="wp-block-list">
+<li><strong>Trend Definitions:</strong> If the price is above the PP (Pivot Point) the mood is “bullish”, if below it is “bearish”.</li>
+<li><strong>Stop Loss and Take Profit settings:</strong> Levels S1, S2, R1, R2 serve as ideal price magnets.</li>
+<li><strong>Trading for a breakout or rebound:</strong> The price reaction to these lines is often sniping.</li>
+</ul>
+<h2 class="wp-block-heading" id="metody-rascheta-i-formuly-2">Calculation Methods and Formulas</h2>
+<p>Our tool supports 5 algorithms. Choose the one that suits your trading strategy.</p>
+<p><strong>Legend:</strong></p>
+<ul class="wp-block-list">
+<li> $H$ (High) — High of the previous day.</li>
+<li> $L$ (Low) — Low of the previous day.</li>
+<li> $C$ (Close) — Closing price.</li>
+<li> $O$ (Open) — Opening price (important only for the DeMark method).</li>
+<li> $PP$ - Main pivot point.</li>
+</ul>
+<h3 class="wp-block-heading" id="1-klassicheskij-classic-2">1. Classic</h3>
+<p>The most common method. Equally takes into account the high, low and close.</p>
+<p>$$PP = \frac{H + L + C}{3}$$</p>
+<p>$$R1 = (2 \times PP) — L$$</p>
+<p>$$S1 = (2 \times PP) — H$$</p>
+<h3 class="wp-block-heading" id="2-fibonachchi-fibonacci-2">2. Fibonacci</h3>
+<p>Combines the theory of Pivots with the “golden ratio”. Ideal for corrective movements.</p>
+<p>$$PP = \frac{H + L + C}{3}$$</p>
+<p>$$R1 = PP + (H — L) \times 0.382$$</p>
+<p>$$S1 = PP — (H — L) \times 0.382$$</p>
+<h3 class="wp-block-heading" id="3-vudi-woodie-2">3. Woodie</h3>
+<p>Gives more weight to the closing price ( $2 \times C$ ), since the closing of the session is considered the most important emotional outcome of the day.</p>
+<p>$$PP = \frac{H + L + 2 \times C}{4}$$</p>
+<p>$$R1 = (2 \times PP) — L$$</p>
+<p>$$S1 = (2 \times PP) — H$$</p>
+<h3 class="wp-block-heading" id="4-kamarilya-camarilla-2">4. Camarilla</h3>
+<p>Created for intraday trading (scalping) in the flat. Generates 8 levels (4 support and resistance each), which are located very close to the closing price.</p>
+<p>$$PP = \frac{H + L + C}{3}$$</p>
+<p>$$R3 = C + \frac{(H — L) \times 1.1}{4}$$</p>
+<p>$$S3 = C — \frac{(H — L) \times 1.1}{4}$$</p>
+<h3 class="wp-block-heading" id="5-demark-demark-2">5. DeMark</h3>
+<p>A unique method that takes into account the ratio of Opening and Closing prices. This is not really a “pivot point”, but rather a forecast of the high and low of the next candle.</p>
+<p> $X$ base calculation:</p>
+<ul class="wp-block-list">
+<li>If $C &lt; O$ : $X = H + (2 \times L) + C$ </li>
+<li>If $C &gt; O$ : $X = (2 \times H) + L + C$ </li>
+<li>If $C = O$ : $X = H + L + (2 \times C)$ </li>
+</ul>
+<p>$$PP = \frac{X}{4}$$</p>
+<h2 class="wp-block-heading" id="sravnitelnaya-tablitsa-metodov-2">Comparison table of methods</h2>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Method</strong></td><td><strong>Trading style</strong></td><td><strong>Peculiarity</strong></td></tr></thead><tbody><tr><td><strong>Classic</strong></td><td>Universal</td><td>Basic calculation used by banks and hedge funds.</td></tr><tr><td><strong>Fibonacci</strong></td><td>Trending</td><td>Works great on volatile markets (Cryptocurrencies, Indices).</td></tr><tr><td><strong>Woodie</strong></td><td>Long term</td><td>Focus on closing price, smoothes out intraday noise.</td></tr><tr><td><strong>Camarilla</strong></td><td>Scalping</td><td>The levels are located close to the price. Ideal for channel trading.</td></tr><tr><td><strong>DeMark</strong></td><td>Forecast</td><td>Predicts the next day's range rather than static levels.</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="kak-polzovatsya-kalkulyatorom-2">How to use the calculator</h2>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li>Open the chart of your asset (D1 is the daily time frame most often).</li>
+<li>Write down the values <strong>High</strong>, <strong>Low</strong> And <strong>Close</strong> the previous completed candle.</li>
+<li>Enter the data in the appropriate fields of the form.</li>
+<li>Select <strong>Calculation method</strong> (default is Classic).</li>
+<li>Click <strong>"Calculate levels"</strong>.</li>
+<li>Use the obtained values ​​of $S1-S3$ and $R1-R3$ to place pending orders.</li>
+</ol>
+</div>
+    </div>
+</body>
+</html>

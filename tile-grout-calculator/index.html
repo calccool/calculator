@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tile Grouting Calculator: Exact Consumption per 1 m²</title>
+    <meta name="description" content="Tile Grouting Calculator: Exact Consumption per 1 m² - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Tile Grouting Calculator: Exact Consumption per 1 m²</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (строго по шаблону) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-row.cols-3 { grid-template-columns: repeat(3, minmax(220px, 1fr)); }
+    .c-row.single { grid-template-columns: 1fr; }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    .c-help {font-size:12px;color:#777;text-align:center;}
+    .c-input, .c-select, .c-textarea { width:100%; padding:12px 14px; border:1px solid #ccc; border-radius:8px; font-size:14px; }
+    .c-input:focus, .c-select:focus, .c-textarea:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap;margin-bottom: 16px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+
+    /* Результат */
+    .c-result { border:1px dashed #4caf50; border-radius:10px; padding:10px; background:#fff; display:none; }
+    .c-result.show { display:grid; }
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #4caf50; grid-template-columns: 0.4fr 0.5fr 0.1fr; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; }
+
+    /* Кнопка копирования */
+    .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden;
+      background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+      background-repeat:no-repeat; background-position:center; background-size:20px 20px; }
+
+    .is-hidden { display:none !important; }
+    @media (max-width: 860px) { .c-resval { font-size:14px; } }
+    @media (max-width: 720px) { .c-row.cols-3 { grid-template-columns: 1fr; } }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-row">
+<div class="c-field">
+<label class="c-label" for="groutType">Grout type</label>
+<select class="c-select" id="groutType">
+<option selected="" value="1.8">Cement (Standard) - 1.8 kg/dm³</option>
+<option value="1.6">Cement (Fine fraction) - 1.6 kg/dm³</option>
+<option value="1.5">Epoxy - 1.5 kg/dm³</option>
+<option value="1.7">Polyurethane - 1.7 kg/dm³</option>
+<option value="custom">Its density...</option>
+</select>
+</div>
+<div class="c-field is-hidden" id="customDensityField">
+<label class="c-label" for="customDensity">Density<span class="c-term">kg/dm³</span></label>
+<input class="c-input" id="customDensity" min="0.1" step="0.1" type="number" value="1.8"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="presetSize">Tile size (quick selection)</label>
+<select class="c-select" id="presetSize">
+<option selected="" value="custom">Your size</option>
+<option value="20x20x4">Mosaic (20x20x4)</option>
+<option value="100x100x6">100 x 100 mm</option>
+<option value="200x300x8">200 x 300 mm</option>
+<option value="300x300x8">300 x 300 mm</option>
+<option value="600x600x10">600 x 600 mm (Porcelain stoneware)</option>
+</select>
+</div>
+</div>
+<div class="c-row cols-3">
+<div class="c-field">
+<label class="c-label" for="tileL">Tile length<span class="c-term">mm</span></label>
+<input class="c-input" id="tileL" min="1" type="number" value="300"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="tileW">Tile width<span class="c-term">mm</span></label>
+<input class="c-input" id="tileW" min="1" type="number" value="300"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="tileH">Tile thickness<span class="c-term">mm</span></label>
+<input class="c-input" id="tileH" min="1" type="number" value="8"/>
+</div>
+</div>
+<div class="c-row cols-3">
+<div class="c-field">
+<label class="c-label" for="jointW">Seam width<span class="c-term">mm</span></label>
+<input class="c-input" id="jointW" min="0.5" step="0.5" type="number" value="3"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="area">Square<span class="c-term">m²</span></label>
+<input class="c-input" id="area" min="0" step="0.1" type="number" value="10"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="reserve">Stock<span class="c-term">%</span></label>
+<select class="c-select" id="reserve">
+<option value="0">No stock</option>
+<option value="5">5%</option>
+<option selected="" value="10">10%</option>
+<option value="15">15%</option>
+</select>
+</div>
+</div>
+<div class="c-row single">
+<div class="c-field">
+<label class="c-label" for="bagWeight">Package weight<span class="c-term">kg</span></label>
+<select class="c-select" id="bagWeight">
+<option value="1">1 kg</option>
+<option selected="" value="2">2 kg</option>
+<option value="5">5 kg</option>
+<option value="10">10 kg</option>
+<option value="25">25 kg</option>
+</select>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div aria-live="polite" class="c-result" id="resultBox">
+<div class="c-resline is-hidden" id="validationError" style="background:#ffdddd; color:#cc0000;">
+<div class="c-resleft">Error:</div>
+<div class="c-resval" id="errorMsg" style="color:#cc0000; font-weight: 500;"></div>
+<button class="c-copy is-hidden" disabled=""></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Consumption per 1 m²</div>
+<div class="c-resval" id="resPerMeter"></div>
+<button aria-label="Copy ud. consumption" class="c-copy" id="copyPerMeter" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Total grout weight</div>
+<div class="c-resval" id="resTotalWeight"></div>
+<button aria-label="Copy total weight" class="c-copy" id="copyTotalWeight" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Number of packages</div>
+<div class="c-resval" id="resBags"></div>
+<button aria-label="Copy packaging" class="c-copy" id="copyBags" title="Copy"></button>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика =====
+  const $ = (s) => wrap.querySelector(s);
+  
+  const resBox = $('#resultBox');
+  const errorBox = $('#validationError');
+  const errorMsg = $('#errorMsg');
+  
+  const groutType = $('#groutType');
+  const customDensityField = $('#customDensityField');
+  const customDensityInput = $('#customDensity');
+  const presetSize = $('#presetSize');
+  
+  const outputs = {
+      perMeter: $('#resPerMeter'),
+      totalWeight: $('#resTotalWeight'),
+      bags: $('#resBags')
+  };
+
+  // ----- Вспомогательные функции -----
+  function num(v){ const n = parseFloat(String(v).replace(',', '.')); return Number.isFinite(n) ? n : NaN; }
+  
+  function fmt(v, d=3){
+    if (isNaN(v)) return '—';
+    return v.toLocaleString('ru-RU', { maximumFractionDigits: d });
+  }
+
+  // ИСПРАВЛЕНО: Функция isZero
+  function isZero(val) {
+    const tolerance = 1e-9;
+    const check = Math.sign(tolerance - Math.abs(val));
+    if (check === -1) return false;
+    return true;
+  }
+  
+  function setError(msg) {
+    errorMsg.textContent = msg;
+    errorBox.classList.remove('is-hidden');
+    resBox.classList.add('show');
+  }
+  function hideError() {
+    errorBox.classList.add('is-hidden');
+  }
+  
+  // Обновление UI
+  function updateUI() {
+      if (groutType.value === 'custom') {
+          customDensityField.classList.remove('is-hidden');
+      } else {
+          customDensityField.classList.add('is-hidden');
+      }
+  }
+  
+  function applyPreset() {
+      const val = presetSize.value;
+      if (val === 'custom') return;
+      
+      const parts = val.split('x');
+      if (parts.length === 3) {
+          $('#tileL').value = parts[0];
+          $('#tileW').value = parts[1];
+          $('#tileH').value = parts[2];
+      }
+  }
+
+  // ----- Главный расчет -----
+  function calc() {
+    hideError();
+    
+    // 1. Сбор данных
+    const L = num($('#tileL').value); // mm
+    const W = num($('#tileW').value); // mm
+    const H = num($('#tileH').value); // mm
+    const J = num($('#jointW').value); // mm
+    const S = num($('#area').value); // m2
+    const reserve = num($('#reserve').value); // %
+    const bagW = num($('#bagWeight').value); // kg
+    
+    let density = num(groutType.value);
+    if (isNaN(density)) { // custom
+        density = num(customDensityInput.value);
+    }
+
+    // 2. Валидация
+    if (isNaN(L) || isNaN(W) || isNaN(H) || isNaN(J) || isNaN(S) || isNaN(density)) {
+      setError('Please enter valid numeric values.');
+      return;
+    }
+    // ИСПРАВЛЕНО: <= 0
+    if (Math.sign(L) !== 1 || Math.sign(W) !== 1 || Math.sign(H) !== 1) {
+      setError('Tile sizes must be greater than 0.');
+      return;
+    }
+    if (Math.sign(density) !== 1) {
+      setError('Density must be greater than 0.');
+      return;
+    }
+
+    // 3. Расчет
+    // Формула: ((L + W) / (L * W)) * H * J * Density
+    // L, W, H, J - в мм. Density - кг/дм3 (г/см3)
+    // Если подставить мм, получим результат.
+    // Пример: (300+300)/(300*300) = 600/90000 = 0.00666
+    // * H(8) * J(3) * D(1.6) = 0.00666 * 8 * 3 * 1.6 = 0.256 кг/м2
+    
+    const consumption = ((L + W) / (L * W)) * H * J * density;
+    
+    // Общий вес
+    let totalWeight = consumption * S;
+    
+    // Запас
+    totalWeight = totalWeight * (1 + reserve / 100);
+    
+    // Мешки
+    const bags = Math.ceil(totalWeight / bagW);
+
+    // 4. Вывод
+    outputs.perMeter.textContent = `${fmt(consumption, 3)} кг/м²`;
+    outputs.totalWeight.textContent = `${fmt(totalWeight, 2)} кг`;
+    outputs.bags.textContent = `${bags} шт. (по ${bagW} кг)`;
+
+    resBox.classList.add('show');
+  }
+
+  // ----- Слушатели -----
+  groutType.addEventListener('change', updateUI);
+  presetSize.addEventListener('change', applyPreset);
+  
+  $('#calcBtn').addEventListener('click', calc);
+  $('#resetBtn').addEventListener('click', () => {
+    $('#tileL').value = '300';
+    $('#tileW').value = '300';
+    $('#tileH').value = '8';
+    $('#jointW').value = '3';
+    $('#area').value = '10';
+    $('#groutType').value = '1.8';
+    $('#reserve').value = '10';
+    $('#presetSize').value = 'custom';
+    updateUI();
+    resBox.classList.remove('show');
+    hideError();
+  });
+
+  // Копирование
+  wrap.addEventListener('click', (e) => {
+    let textToCopy = null;
+    let targetId = e.target.id;
+    
+    if (targetId === 'copyPerMeter') textToCopy = outputs.perMeter.textContent.split(' ')[0];
+    if (targetId === 'copyTotalWeight') textToCopy = outputs.totalWeight.textContent.split(' ')[0];
+    if (targetId === 'copyBags') textToCopy = outputs.bags.textContent.split(' ')[0];
+    
+    if (textToCopy) {
+      try { navigator.clipboard?.writeText(textToCopy.trim()); } catch (_) {}
+    }
+  });
+
+  // Enter
+  wrap.addEventListener('keydown', (e) => {
+    // ИСПРАВЛЕНО: Замена &&
+    if (e.key === 'Enter') {
+      if (e.target.matches('input, select')) {
+        e.preventDefault();
+        calc();
+      }
+    }
+  });
+  
+  updateUI();
+});
+</script>
+
+        <div class="post-content">
+<h2 class="wp-block-heading" id="kak-rasschitat-skolko-nuzhno-zatirki-dlya-plitki-2">How to calculate how much grout is needed for tiles?</h2>
+<p>The final stage of laying tiles is jointing (grouting). An error in calculations here is costly: buy little - you will have to look for the same batch number (tone) so that the color does not differ; buy a lot - you will be left with unnecessary bags that have an expiration date.</p>
+<p>Our <strong>online grout calculator</strong> allows you to determine the exact weight of the required material in seconds, taking into account the geometry of your cladding and the density of the specific mixture.</p>
+<h2 class="wp-block-heading" id="ot-chego-zavisit-rashod-materiala-2">What determines material consumption?</h2>
+<p>Fugue consumption is not constant (like paint consumption, for example). It directly depends on four parameters:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Tile dimensions (Length × Width × Thickness):</strong> The smaller the tile (for example, mosaic), the more joints per 1 m², and the higher the consumption. Conversely, for large-format porcelain tiles (600×600 mm) the consumption will be minimal. The thickness of the tile determines the depth of the joint.</li>
+<li><strong>Seam width:</strong> A narrow seam (1-1.5 mm) requires several times less material than a designer wide seam (5-10 mm).</li>
+<li><strong>Laying area:</strong> The total footage of walls or floors.</li>
+<li><strong>Mix density:</strong> Different types of grout have different specific gravity.</li>
+</ol>
+<h2 class="wp-block-heading" id="formula-rascheta-rashoda-2">Flow calculation formula</h2>
+<p>The calculator uses the classic construction formula to calculate the mass of grout ( $M$ ) per 1 square meter:</p>
+<p>$$Consumption (kg/m^2) = \frac{L + W}{L \times W} \times H \times S \times D$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li><strong>L</strong> — Tile length (mm)</li>
+<li><strong>W</strong> — Tile width (mm)</li>
+<li><strong>H</strong> — Tile thickness (mm)</li>
+<li><strong>S</strong> — Seam width (mm)</li>
+<li><strong>D</strong> — Mixture density (kg/dm³)</li>
+</ul>
+<h2 class="wp-block-heading" id="plotnost-zatirki-tsementnaya-vs-epoksidnaya-2">Grout density: Cement vs Epoxy</h2>
+<p>One of the unique features of our tool is the material type accounting. Depending on the composition, the density (specific gravity) changes:</p>
+<ul class="wp-block-list">
+<li><strong>Cement mixtures (standard):</strong> Density approx. <strong>1.8 kg/dm³</strong>. The most popular and budget option.</li>
+<li><strong>Light cement / Epoxy:</strong> Density approx. <strong>1.6 kg/dm³</strong>. Epoxy grout (“two-component”) is lighter, but durable and resistant to chemicals.</li>
+<li><strong>Polyurethane / Finished:</strong> Density approx. <strong>1.5 – 1.7 kg/dm³</strong>.</li>
+</ul>
+<h2 class="wp-block-heading" id="tablitsa-primernogo-rashoda-na-1-m-2">Table of approximate consumption (per 1 m²)</h2>
+<p>For a quick assessment, you can use average data (for standard cement grout with a tile thickness of 8 mm):</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Tile size (mm)</strong></td><td><strong>Seam 2 mm</strong></td><td><strong>Seam 3 mm</strong></td><td><strong>Seam 5 mm</strong></td></tr></thead><tbody><tr><td><strong>Mosaic (20×20)</strong></td><td>~ 1.2 kg</td><td>~ 1.8 kg</td><td>~ 3.0 kg</td></tr><tr><td><strong>100 x 100</strong></td><td>0.45 kg</td><td>0.70 kg</td><td>1.15 kg</td></tr><tr><td><strong>300 x 300</strong></td><td>0.15 kg</td><td>0.25 kg</td><td>0.40 kg</td></tr><tr><td><strong>600 x 600</strong></td><td>0.08 kg</td><td>0.12 kg</td><td>0.20 kg</td></tr></tbody></table></div></figure>
+<h3 class="wp-block-heading" id="zachem-nuzhen-zapas-10-1">Why do you need a 10% reserve?</h3>
+<p>We recommend that you always use the field <strong>"Stock"</strong> in the calculator. There are several reasons for material loss:</p>
+<ul class="wp-block-list">
+<li>The grout remains on the walls of the bucket and on the tool (trowel).</li>
+<li>When washing (cleaning tiles), some of the material is washed out of the seams.</li>
+<li>Irregularities in the ends of the tiles or the “walking” thickness of the seam increase the actual volume.</li>
+<li>Human factor (material fell on the floor).</li>
+</ul>
+<p>Enough reserve for large tiles <strong>5-10%</strong>, for small mosaics it is better to lay <strong>10-15%</strong>.</p>
+</div>
+    </div>
+</body>
+</html>

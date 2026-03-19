@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online HTML to Markdown converter - convert web code into pure Markdown text</title>
+    <meta name="description" content="Online HTML to Markdown converter - convert web code into pure Markdown text - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Online HTML to Markdown converter - convert web code into pure Markdown text</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  let host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // --- 1. ПРЕМИУМ CSS ---
+  let style = document.createElement('style');
+  style.textContent = `
+    .cv-wrap * { box-sizing: border-box; }
+    .cv-wrap .is-hidden { display: none !important; }
+    .cv-wrap .cv-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-bottom: 24px; }
+    .cv-wrap .cv-row.single { grid-template-columns: 1fr; }
+    .cv-wrap .cv-field { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+    
+    .cv-wrap .cv-label { font-weight: 700; font-size: 15px; color: #1a1a1a; display: flex; align-items: center; gap: 8px; margin: 0; }
+    
+    /* ЗОНА ЗАГРУЗКИ (С УНИВЕРСАЛЬНОЙ ИКОНКОЙ) */
+    .cv-wrap .cv-drop-area { position: relative; background-color: #f8fbff; border-radius: 16px; padding: 40px 20px; text-align: center; cursor: pointer; transition: background-color 0.3s, transform 0.2s; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 220px; gap: 16px; z-index: 1; overflow: hidden; border: 2px dashed transparent; }
+    
+    .cv-wrap .cv-drop-area::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 14px; background: linear-gradient(90deg, #0693e3 50%, transparent 50%), linear-gradient(90deg, #0693e3 50%, transparent 50%), linear-gradient(0deg, #0693e3 50%, transparent 50%), linear-gradient(0deg, #0693e3 50%, transparent 50%); background-repeat: repeat-x, repeat-x, repeat-y, repeat-y; background-size: 16px 2px, 16px 2px, 2px 16px, 2px 16px; background-position: 0 0, 100% 100%, 0 100%, 100% 0; animation: dash-move 1s infinite linear; pointer-events: none; opacity: 0.6; transition: opacity 0.3s; }
+    @keyframes dash-move { to { background-position: 16px 0, calc(100% - 16px) 100%, 0 calc(100% - 16px), 100% 16px; } }
+    
+    .cv-wrap .cv-drop-area:hover { background-color: #f0f7ff; transform: translateY(-2px); }
+    .cv-wrap .cv-drop-area:hover::after { opacity: 1; }
+    
+    .cv-wrap .cv-drop-icon svg { width: 90px; height: auto; transition: transform 0.3s ease; }
+    .cv-wrap .cv-drop-area:hover .cv-drop-icon svg { transform: scale(1.05); }
+    .cv-wrap .cv-drop-title { font-size: 18px; font-weight: 600; color: #475569; pointer-events: none; margin-bottom: 5px; word-break: break-word; transition: color 0.3s; z-index: 2; position: relative; }
+    
+    .cv-wrap .cv-upload-btn-inner { display: inline-flex; align-items: center; gap: 10px; background: #fff; border: 1px solid #cbd5e1; color: #1e293b; font-weight: 600; font-size: 15px; padding: 12px 24px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); transition: all 0.2s; pointer-events: none; z-index: 2; position: relative; }
+    .cv-wrap .cv-drop-area:hover .cv-upload-btn-inner { background: #f8fafc; border-color: #94a3b8; box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
+
+    /* ТАБЫ */
+    .cv-wrap .cv-tabs { display: flex; gap: 8px; background: #f1f5f9; padding: 6px; border-radius: 14px; list-style: none; margin: 0 0 20px 0; flex-wrap: wrap; }
+    .cv-wrap .cv-tab { padding: 12px 20px; cursor: pointer; border-radius: 10px; font-weight: 600; font-size: 15px; color: #64748b; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); flex: 1; text-align: center; min-width: 140px; }
+    .cv-wrap .cv-tab:hover { color: #0f172a; }
+    .cv-wrap .cv-tab.active { background: #fff; color: #0693e3; box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+
+    /* ПОЛЯ ВВОДА */
+    .cv-wrap .cv-textarea { width: 100%; padding: 14px 20px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 14px; background: #fff; transition: 0.2s; color: #1a1a1a; font-family: 'Courier New', Courier, monospace; resize: vertical; min-height: 200px; line-height: 1.5; }
+    .cv-wrap .cv-textarea:focus { outline: none; border-color: #0693e3; box-shadow: 0 0 0 4px rgba(6,147,227,0.15); }
+
+    /* КНОПКИ ДЕЙСТВИЙ */
+    .cv-wrap .cv-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 10px; }
+    .cv-wrap .cv-btn { appearance: none; border: none; border-radius: 12px; padding: 14px 24px; cursor: pointer; font-weight: 700; font-size: 15px; transition: all 0.3s; flex: 1; min-width: 160px; display: flex; justify-content: center; align-items: center; gap: 10px; }
+    .cv-wrap .cv-btn-primary { background: linear-gradient(135deg, #0693e3 0%, #006eb5 100%); color: #fff; box-shadow: 0 4px 15px rgba(6,147,227,0.3); }
+    .cv-wrap .cv-btn-secondary { background: #f1f5f9; color: #475569; }
+    .cv-wrap .cv-btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(6,147,227,0.4); }
+    .cv-wrap .cv-btn-secondary:hover { background: #e2e8f0; color: #0f172a; transform: translateY(-2px); }
+    .cv-wrap .cv-btn:active { transform: translateY(1px); }
+
+    /* РЕЗУЛЬТАТЫ */
+    .cv-wrap .cv-result-wrap { margin-top: 20px; background: #fff; border-radius: 16px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
+    .cv-wrap .cv-resline { display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 16px 20px; border-bottom: 1px solid #f1f5f9; }
+    .cv-wrap .cv-resline:last-child { border-bottom: none; background: #f8fbff; }
+    .cv-wrap .cv-resleft { font-size: 14px; color: #64748b; font-weight: 600; }
+    
+    .cv-wrap .cv-visual-preview { padding: 20px; background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; min-height: 100px; color: #334155;
+ overflow: auto; max-height: 400px; }
+    .cv-wrap .cv-visual-preview h1, .cv-wrap .cv-visual-preview h2, .cv-wrap .cv-visual-preview h3 { margin-top: 0; color: #0f172a; }
+    .cv-wrap .cv-visual-preview a { color: #0693e3; }
+    .cv-wrap .cv-visual-preview blockquote { border-left: 4px solid #cbd5e1; padding-left: 10px; color: #64748b; margin-left: 0; }
+    .cv-wrap .cv-visual-preview pre { background: #f1f5f9; padding: 10px; border-radius: 6px; overflow-x: auto; }
+
+    @media (max-width: 600px) { 
+      .cv-wrap .cv-actions { flex-direction: column; } 
+      .cv-wrap .cv-tabs { flex-direction: column; } 
+    }
+  `;
+  document.head.appendChild(style);
+
+  // --- 2. HTML РАЗМЕТКА ---
+  let wrap = document.createElement('div');
+  wrap.className = 'cv-wrap';
+  wrap.innerHTML = `
+<div class="cv-card">
+<div class="cv-row single" id="dropAreaWrap">
+<div class="cv-field">
+<div class="cv-drop-area" id="dropArea" role="button" tabindex="0">
+<div class="cv-drop-icon" id="dropIconArea">
+<svg fill="none" viewbox="0 0 120 78" xmlns="http://www.w3.org/2000/svg">
+<path d="M76.7455 43.1092C76.41 43.5371 75.995 43.8933 75.5242 44.1575C75.0535 44.4218 74.5363 44.5889 74.0021 44.6492C73.468 44.7096 72.9274 44.6621 72.4112 44.5093C71.8951 44.3566 71.4136 44.1017 70.9943 43.7592L64.0166 38.0598V57.1688C64.0166 58.2737 63.5858 59.3334 62.8191 60.1147C62.0523 60.896 61.0124 61.335 59.9281 61.335C58.8437 61.335 57.8038 60.896 57.037 60.1147C56.2703 59.3334 55.8396 58.2737 55.8396 57.1688V38.0598L48.8509 43.7592C48.0037 44.4494 46.9221 44.7684 45.844 44.646C44.766 44.5236 43.7798 43.9698 43.1025 43.1065C42.4251 42.2431 42.1121 41.141 42.2322 40.0424C42.3523 38.9439 42.8958 37.939 43.743 37.2488L57.355 26.15C58.0817 25.5516 58.9883 25.226 59.9226 25.2279H59.9335C60.9148 25.2279 61.8088 25.5834 62.512 26.1723L76.1077 37.2488C76.5275 37.5907 76.8771 38.0135 77.1364 38.4932C77.3957 38.9729 77.5597 39.4999 77.6189 40.0443C77.6782 40.5886 77.6315 41.1394 77.4816 41.6654C77.3318 42.1913 77.0816 42.6819 76.7455 43.1092Z" fill="#0693e3"></path>
+<path clip-rule="evenodd" d="M40.1888 13.807C43.5529 8.47181 48.4871 4.3578 54.2851 2.05373C60.0831 -0.250342 66.4478 -0.626361 72.4683 0.979486C78.4888 2.58533 83.8565 6.09073 87.8031 10.994C91.7498 15.8973 94.0731 21.9471 94.4406 28.2776C97.6955 28.1214 100.948 28.6308 104.007 29.7759C107.066 30.9209 109.868 32.6784 112.25 34.9447C114.631 37.211 116.544 39.9402 117.874 42.9714C119.204 46.0027 119.925 49.2746 119.994 52.5944C120.064 55.9141 119.481 59.2144 118.279 62.3007C117.077 65.387 115.28 68.1969 112.996 70.5646C110.711 72.9323 107.985 74.81 104.977 76.087C101.969 77.364 98.7403 78.0143 95.4818 77.9998H31.9845C27.433 77.9937 22.935 76.999 18.7904 75.0822C14.6458 73.1654 10.9497 70.3703 7.94856 66.8834C4.9474 63.3965 2.71008 59.2978 1.38572 54.8604C0.0613673 50.4231 -0.319604 45.7491 0.268202 41.1499C0.856007 36.5507 2.39909 32.1321 4.79459 28.1884C7.1901 24.2447 10.383 20.8666 14.1605 18.2793C17.938 15.692 22.2133 13.9548 26.7015 13.1837C31.1896 12.4125 35.7876 12.625 40.1888 13.807ZM65.0033 8.32983C60.9897 8.3288 57.0574 9.48255 53.6589 11.6583C50.2603 13.834 47.5337 16.9434 45.7928 20.6284C45.3457 21.5721 44.566 22.3094 43.6093 22.6934C42.6525 23.0774 41.5889 23.0799 40.6303 22.7004C37.365 21.4125 33.8614 20.8729 30.3684 21.1202C26.8753 21.3674 23.4786 22.3954 20.4193 24.131C17.3601 25.8667 14.7134 28.2674 12.6673 31.1628C10.6212 34.0582 9.22578 37.3772 8.58023 40.884C7.93469 44.3908 8.05482 47.9994 8.9321 51.4536C9.80938 54.9078 11.4223 58.1227 13.6563 60.8702C15.8902 63.6176 18.6905 65.8301 21.8581 67.3505C25.0258 68.8709 28.4831 69.6619 31.9845 69.6674H95.4818C97.792 69.6666 100.075 69.1633 102.179 68.1913C104.284 67.2193 106.16 65.8009 107.683 64.0308C109.206 62.2608 110.341 60.1799 111.011 57.9272C111.682 55.6744 111.873 53.3018 111.572 50.9678C111.271 48.6338 110.484 46.3922 109.265 44.3928C108.045 42.3934 106.421 40.6822 104.501 39.3736C102.58 38.065 100.408 37.1891 98.1287 36.8045C95.8496 36.4199 93.5161 36.5354 91.2843 37.1432C90.6395 37.3193 89.9621 37.3318 89.3115 37.1797C88.6608 37.0275 88.0566 36.7153 87.5517 36.2704C87.0467 35.8254 86.6564 35.2612 86.4147 34.6271C86.1731 33.993 86.0875 33.3082 86.1654 32.6326C86.5229 29.5847 86.2423 26.4941 85.3421 23.5647C84.4419 20.6353 82.9426 17.9336 80.943 15.6378C78.9434 13.3419 76.4889 11.5041 73.7414 10.2453C70.9939 8.98663 68.0157 8.33012 65.0033 8.32983Z" fill="#a8d0f0" fill-rule="evenodd"></path>
+</svg>
+</div>
+<div class="cv-drop-title" id="dropTitle">Drag and drop your HTML or MD file here</div>
+<div id="dropSubtitle" style="font-size: 14px; color: #64748b; margin-bottom: 10px;">The script will detect the format and switch the tab</div>
+<div class="cv-upload-btn-inner" id="uploadBtnInner">Select file</div>
+</div>
+<input accept=".html,.htm,.md,.markdown,text/html,text/markdown" id="fileInput" style="position:absolute;left:-9999px;" type="file"/>
+</div>
+</div>
+<div id="converterControls">
+<ul class="cv-tabs">
+<li class="cv-tab active" data-mode="html2md" id="tabModeHtmlMd">HTML → Markdown</li>
+<li class="cv-tab" data-mode="md2html" id="tabModeMdHtml">Markdown → HTML</li>
+</ul>
+<div class="cv-body">
+<div class="cv-row single">
+<div class="cv-field">
+<label class="cv-label" id="inputLabel">Source code (HTML)</label>
+<textarea class="cv-textarea" id="textInput" placeholder="&lt;h1&gt;Hello!&lt;/h1&gt; &lt;p&gt;Insert HTML code here...&lt;/p&gt;"></textarea>
+</div>
+</div>
+<div class="cv-actions">
+<button class="cv-btn cv-btn-primary" id="btnConvert" type="button">Generate</button>
+<button class="cv-btn cv-btn-secondary" id="btnClear" type="button">Clear</button>
+</div>
+<div class="cv-result-wrap is-hidden" id="resultBox">
+<div class="cv-resline is-hidden" id="errorBox" style="background:#fef2f2;">
+<div class="cv-resleft">Attention:</div>
+<div class="cv-resval" id="errorMsg" style="color:#ef4444; font-weight: 500;"></div>
+</div>
+<div id="resultContentWrap">
+<div class="cv-resline" style="background: #f8fbff; border-bottom: 2px solid #e2e8f0;">
+<div class="cv-resleft" id="outputLabel">Ready code:</div>
+<div class="cv-resval" style="color: #10b981;">Successfully generated</div>
+</div>
+<div class="cv-resline single">
+<textarea class="cv-textarea" id="resOutput" readonly="" style="min-height: 150px;"></textarea>
+</div>
+<div class="cv-resline single is-hidden" id="visualPreviewWrap" style="padding-top: 0;">
+<label class="cv-label" style="margin-top: 10px;">Visual preview of the result:</label>
+<div class="cv-visual-preview" id="visualPreviewArea"></div>
+</div>
+<div class="cv-resline single" style="padding-top: 5px;">
+<div class="cv-actions" style="margin-top: 5px; width: 100%;">
+<button class="cv-btn cv-btn-secondary" id="btnCopy" type="button">Copy code</button>
+<button class="cv-btn cv-btn-primary" id="btnExport" type="button">Download file</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // --- 3. БЕЗОПАСНЫЙ JS ---
+  const $ = (s) => wrap.querySelector(s);
+  
+  const dropArea = $('#dropArea');
+  const fileInput = $('#fileInput');
+  const dropTitle = $('#dropTitle');
+  
+  const textInput = $('#textInput');
+  const inputLabel = $('#inputLabel');
+  
+  const btnConvert = $('#btnConvert');
+  const btnClear = $('#btnClear');
+  const btnCopy = $('#btnCopy');
+  const btnExport = $('#btnExport');
+  
+  const resultBox = $('#resultBox');
+  const resultContentWrap = $('#resultContentWrap');
+  const errorBox = $('#errorBox');
+  const errorMsg = $('#errorMsg');
+  
+  const resOutput = $('#resOutput');
+  const outputLabel = $('#outputLabel');
+  const visualPreviewWrap = $('#visualPreviewWrap');
+  const visualPreviewArea = $('#visualPreviewArea');
+
+  let currentMode = 'html2md'; // html2md | md2html
+  
+  // Инициализация сервисов (безопасно)
+  let turndownInst = null;
+  let showdownInst = null;
+  
+  try {
+      if (typeof TurndownService !== 'undefined') {
+          turndownInst = new TurndownService({ headingStyle: 'atx', codeBlockStyle: 'fenced' });
+      }
+      if (typeof showdown !== 'undefined') {
+          showdownInst = new showdown.Converter();
+      }
+  } catch(e) {}
+
+  // Tabs Logic
+  let tabs = wrap.querySelectorAll('.cv-tab');
+  let tabModeHtmlMd = wrap.querySelector('#tabModeHtmlMd');
+  let tabModeMdHtml = wrap.querySelector('#tabModeMdHtml');
+  
+  function switchMode(modeTarget) {
+      if (modeTarget === 'html2md') {
+          currentMode = 'html2md';
+          inputLabel.textContent = 'Source code (HTML)';
+          textInput.placeholder = '<h1>Hello!</h1> \n<p>Insert HTML code here...</p>';
+          tabModeMdHtml.classList.remove('active');
+          tabModeHtmlMd.classList.add('active');
+      } else if (modeTarget === 'md2html') {
+          currentMode = 'md2html';
+          inputLabel.textContent = 'Text in Markdown format';
+          textInput.placeholder = '# Hello! \nInsert Markdown text here...';
+          tabModeHtmlMd.classList.remove('active');
+          tabModeMdHtml.classList.add('active');
+      }
+      resultBox.classList.add('is-hidden');
+  }
+
+  Array.from(tabs).forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      let mode = tab.getAttribute('data-mode');
+      if (mode) { switchMode(mode); }
+    });
+  });
+
+  // Drag & Drop
+  dropArea.addEventListener('click', function() { fileInput.click(); });
+  dropArea.addEventListener('dragover', function(e) { e.preventDefault(); dropArea.style.backgroundColor = '#e6f3ff'; }, {passive: false});
+  dropArea.addEventListener('dragleave', function() { dropArea.style.backgroundColor = ''; });
+  
+  dropArea.addEventListener('drop', function(e) {
+    e.preventDefault();
+    dropArea.style.backgroundColor = '';
+    let dt = e.dataTransfer;
+    let hasFiles = false;
+    if (dt) { if (dt.files) { let isNotEmpty = Math.sign(dt.files.length) === 1; if (isNotEmpty) { hasFiles = true; } } }
+    if (hasFiles) { handleFile(dt.files[0]); }
+  });
+
+  fileInput.addEventListener('change', function() {
+    let fList = fileInput.files;
+    let hasFiles = false;
+    if (fList) { let isNotEmpty = Math.sign(fList.length) === 1; if (isNotEmpty) { hasFiles = true; } }
+    if (hasFiles) { handleFile(fList[0]); }
+  });
+
+  function handleFile(f) {
+    let fName = String(f.name).toLowerCase();
+    
+    let isHtml = fName.indexOf('.html') !== -1;
+    let isHtm = fName.indexOf('.htm') !== -1;
+    let isMd = fName.indexOf('.md') !== -1;
+    let isMarkdown = fName.indexOf('.markdown') !== -1;
+    
+    if (isHtml) { switchMode('html2md'); } 
+    else if (isHtm) { switchMode('html2md'); } 
+    else if (isMd) { switchMode('md2html'); } 
+    else if (isMarkdown) { switchMode('md2html'); }
+
+    let reader = new FileReader();
+    reader.onload = function(e) {
+        textInput.value = e.target.result;
+        dropTitle.textContent = f.name;
+        dropTitle.style.color = '#0693e3';
+        resultBox.classList.add('is-hidden');
+    };
+    reader.readAsText(f);
+  }
+
+  function showError(msg) {
+    errorMsg.textContent = msg;
+    errorBox.classList.remove('is-hidden');
+    resultContentWrap.classList.add('is-hidden');
+    resultBox.classList.remove('is-hidden');
+  }
+
+  btnConvert.addEventListener('click', function() {
+    let text = textInput.value;
+    if (typeof text !== 'string') { text = ''; }
+    
+    let trimmed = text.trim();
+    let hasText = Math.sign(trimmed.length) === 1;
+    
+    if (!hasText) { 
+      showError('Enter text to convert.'); 
+      return; 
+    }
+    
+    errorBox.classList.add('is-hidden');
+    resultContentWrap.classList.remove('is-hidden');
+    
+    if (currentMode === 'html2md') {
+        if (!turndownInst) { showError('The Turndown library is not loaded.'); return; }
+        
+        let cleanText = text.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '').replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '');
+        let markdown = turndownInst.turndown(cleanText);
+        
+        outputLabel.textContent = 'Ready Markdown:';
+        resOutput.value = markdown;
+        visualPreviewWrap.classList.add('is-hidden');
+        
+    } else {
+        if (!showdownInst) { showError('The Showdown library is not loaded.'); return; }
+        
+        let htmlStr = showdownInst.makeHtml(text);
+        
+        outputLabel.textContent = 'Ready HTML:';
+        resOutput.value = htmlStr;
+        
+        visualPreviewArea.innerHTML = htmlStr;
+        visualPreviewWrap.classList.remove('is-hidden');
+    }
+    
+    resultBox.classList.remove('is-hidden');
+  });
+
+  btnClear.addEventListener('click', function() {
+      textInput.value = '';
+      resOutput.value = '';
+      visualPreviewArea.innerHTML = '';
+      resultBox.classList.add('is-hidden');
+      
+      dropTitle.textContent = 'Drag and drop your HTML or MD file here';
+      dropTitle.style.color = '#475569';
+  });
+
+  btnCopy.addEventListener('click', function() {
+    let text = resOutput.value;
+    if (typeof text !== 'string') { text = ''; }
+    let hasText = Math.sign(text.length) === 1;
+    if (!hasText) { return; }
+    
+    if (navigator.clipboard) {
+       if (navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(function () {
+              let oldText = btnCopy.textContent;
+              btnCopy.textContent = 'Copied!';
+              setTimeout(function(){ btnCopy.textContent = oldText; }, 1500);
+          });
+       }
+    }
+  });
+
+  btnExport.addEventListener('click', function() {
+    let text = resOutput.value;
+    if (typeof text !== 'string') { text = ''; }
+    let hasText = Math.sign(text.length) === 1;
+    if (!hasText) { return; }
+    
+    let isHtmlToMd = currentMode === 'html2md';
+    let ext = '.html';
+    let mime = 'text/html';
+    
+    if (isHtmlToMd) {
+        ext = '.md';
+        mime = 'text/markdown';
+    }
+    
+    let blob = new Blob([text], { type: mime });
+    let url = URL.createObjectURL(blob);
+    let a = document.createElement('a');
+    a.href = url;
+    a.download = 'converted' + ext;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(function(){ URL.revokeObjectURL(url); }, 1000);
+  });
+
+});
+</script>
+
+        <div class="post-content">
+<p>Working with content for websites, blogs, and GitHub documentation requires constant switching between hypertext markup and lightweight formats. Our tool combines two powerful engines - Turndown and Showdown - allowing you to instantly translate complex HTML code into human-readable Markdown and generate valid HTML from MD files.</p>
+<p>The process happens locally in your browser. You can upload files of any size through the Drag &amp; Drop zone or paste copied data directly into the editor, getting results in milliseconds.</p>
+<h2 class="wp-block-heading" id="algoritmicheskaya-effektivnost-i-ekonomiya-vesa-2">Algorithmic efficiency and weight savings</h2>
+<p>Using Markdown instead of raw HTML can significantly reduce the amount of text transmitted and stored, ridding the database of redundant tags. The compression ratio of a text load can be expressed by the following formula:</p>
+<p>$$C_R = \left( 1 — \frac{S_{md}}{S_{html}} \right) \times 100\%$$</p>
+<p>Where $S_{md}$ is the size of the generated Markdown text (in bytes), and $S_{html}$ is the original size of the HTML code. On average, for a typical article with lists and formatting, $C_R$ 's space savings range from $25\%$ to $40\%$ , which has a positive impact on project database optimization.</p>
+<h2 class="wp-block-heading" id="sravnenie-sintaksisa-html-protiv-markdown-2">Syntax Comparison: HTML vs Markdown</h2>
+<p>For clarity, we have collected the main conversion patterns that our algorithm processes automatically, maintaining a strict document hierarchy.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Formatting element</strong></td><td><strong>HTML Source Code</strong></td><td><strong>Result in Markdown</strong></td></tr></thead><tbody><tr><td>Level 1 header</td><td><code>&lt;h1&gt;Текст&lt;/h1&gt;</code></td><td><code># Текст</code></td></tr><tr><td>Bold type</td><td><code>&lt;strong&gt;Важно&lt;/strong&gt;</code></td><td><code>**Важно**</code></td></tr><tr><td>Italic (Emphasis)</td><td><code>&lt;em&gt;Акцент&lt;/em&gt;</code></td><td><code>*Акцент*</code></td></tr><tr><td>Hyperlink</td><td><code>&lt;a href="url"&gt;Линк&lt;/a&gt;</code></td><td><code>[Линк](url)</code></td></tr><tr><td>Image</td><td><code>&lt;img src="img.jpg" alt="alt"&gt;</code></td><td><code>![alt](img.jpg)</code></td></tr><tr><td>Bulleted list</td><td><code>&lt;ul&gt;&lt;li&gt;Пункт&lt;/li&gt;&lt;/ul&gt;</code></td><td><code>- Пункт</code></td></tr><tr><td>Code block (Preformatted)</td><td><code>&lt;pre&gt;&lt;code&gt;Код&lt;/code&gt;&lt;/pre&gt;</code></td><td><code>```Код```</code></td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="klyuchevye-preimushhestva-nashego-dvizhka-2">Key advantages of our engine</h2>
+<p>We designed this converter with a focus on productivity and user data security.</p>
+<ul class="wp-block-list">
+<li><strong>Zero-RAM architecture:</strong> Files are not uploaded to remote servers. All transformation (building the AST tree and parsing) is performed by your device, ensuring 100% privacy.</li>
+<li><strong>Automatic format detection:</strong> Just drag and drop the file<code>.md</code>or<code>.html</code>to the loading zone, and the script itself will switch the conversion direction.</li>
+<li><strong>Visual rendering (Live Preview):</strong> When translating from Markdown to HTML, you get not only the raw code, but also a block with a rendered page so you can immediately check the style of headings, quotes and tables.</li>
+<li><strong>Ignoring junk code:</strong> When processing HTML, the algorithm automatically strips out inline tags<code>&lt;script&gt;</code>And<code>&lt;style&gt;</code>, leaving only a clean content frame.</li>
+</ul>
+</div>
+    </div>
+</body>
+</html>

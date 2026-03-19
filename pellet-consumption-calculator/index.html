@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pellet consumption calculator for home heating: calculation by area and price</title>
+    <meta name="description" content="Pellet consumption calculator for home heating: calculation by area and price - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Pellet consumption calculator for home heating: calculation by area and price</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; background: transparent; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #f97316; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #f97316; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-receipt-wrap { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 15px; position: relative; overflow: hidden; }
+    .c-receipt-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: repeating-linear-gradient(45deg, #f97316, #f97316 10px, #fb923c 10px, #fb923c 20px); }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #fff; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#f97316; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #fff7ed; border: 1px solid #fed7aa; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(249, 115, 22, 0.05); }
+    .c-highlight-line:hover { background: #ffedd5; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #f97316; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .c-switch-wrap { display: flex; align-items: center; gap: 12px; cursor: pointer; margin-bottom: 5px; padding: 14px 16px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 2px 6px rgba(0,0,0,0.02); transition: 0.3s; }
+    .c-switch-wrap:hover { border-color: #cbd5e1; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .c-switch-track { width: 44px; height: 24px; background: #cbd5e1; border-radius: 24px; position: relative; transition: 0.3s; flex-shrink: 0; }
+    .c-switch-thumb { width: 18px; height: 18px; background: #fff; border-radius: 50%; position: absolute; top: 3px; left: 3px; transition: 0.3s; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+    input:checked + .c-switch-track { background: #f97316; }
+    input:checked + .c-switch-track .c-switch-thumb { left: 23px; }
+    .c-switch-label { font-weight: 600; font-size: 15px; color: #333; }
+    
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* Visual Graphics */
+    .c-vis-box { margin: 15px 0 25px; padding: 25px; background: linear-gradient(180deg, #fffbeb 0%, #fff7ed 100%); border-radius: 16px; border: 1px solid #ffedd5; box-shadow: inset 0 2px 10px rgba(255,255,255,0.6); display: flex; flex-direction: column; align-items: center; }
+    .c-vis-title { font-weight: 700; color: #0f172a; font-size: 16px; margin-bottom: 25px; display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; text-align: center; }
+    
+    .c-chart-wrapper { position: relative; width: 180px; height: 180px; }
+    .c-circular-chart { display: block; margin: 0 auto; max-width: 100%; max-height: 100%; filter: drop-shadow(0 4px 12px rgba(249, 115, 22, 0.2)); }
+    .c-circle-bg { fill: none; stroke: #fed7aa; stroke-width: 3; }
+    .c-circle-heat { fill: none; stroke-width: 3.5; stroke-linecap: round; transition: stroke-dasharray 1.2s cubic-bezier(0.4, 0, 0.2, 1); stroke: #f97316; stroke-dasharray: 0, 100; }
+    .c-circle-gvs { fill: none; stroke-width: 3.5; stroke-linecap: round; transition: stroke-dasharray 1.2s cubic-bezier(0.4, 0, 0.2, 1); stroke: #0284c7; stroke-dasharray: 0, 100; }
+    
+    .c-chart-inner { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .c-chart-icon { font-size: 32px; animation: float-flame 3s ease-in-out infinite; margin-bottom: 4px; }
+    .c-chart-val { font-weight: 800; font-size: 20px; color: #1e293b; line-height: 1; }
+    .c-chart-lbl { font-size: 12px; font-weight: 600; color: #64748b; margin-top: 2px; }
+    
+    @keyframes float-flame { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-4px) scale(1.05); } }
+
+    .c-legend-box { display: flex; justify-content: center; gap: 20px; margin-top: 20px; width: 100%; }
+    .c-legend-item { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #475569; }
+    .c-legend-dot { width: 12px; height: 12px; border-radius: 4px; }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-vis-box { padding: 15px; }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="pellet-calc-wrapper">
+<div class="c-body">
+<div class="c-toggle" id="mode-tabs">
+<button class="c-toggle-btn active" data-mode="heat">Heating only</button>
+<button class="c-toggle-btn" data-mode="gvs">Heating + hot water</button>
+</div>
+<div class="c-divider"><span class="icon">🔥</span>Basic building parameters</div>
+<div class="c-row" style="margin-bottom: 8px;">
+<div class="c-field">
+<label class="c-label">House area</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="area" placeholder="For example: 120" type="number"/>
+<span class="c-input-suffix">m²</span>
+</div>
+<div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-target="area" data-val="80" type="button">80 m²</button>
+<button class="c-quick-btn" data-target="area" data-val="120" type="button">120 m²</button>
+<button class="c-quick-btn" data-target="area" data-val="200" type="button">200 m²</button>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Insulation of the house<span class="c-help-icon" id="openInsulationInfo">?</span>
+</label>
+<select class="c-select" id="insulation">
+<option value="50">Excellent (Modern house)</option>
+<option selected="" value="100">Normal (Standard)</option>
+<option value="150">Bad (Old Fund)</option>
+</select>
+</div>
+</div>
+<div class="c-row is-hidden" id="gvs-wrap" style="margin-top: 15px;">
+<div class="c-field">
+<label class="c-label">Number of residents<span class="c-term">For hot water</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="people" placeholder="For example: 3" type="number" value="3"/>
+<span class="c-input-suffix">people</span>
+</div>
+</div>
+</div>
+<div class="c-divider" style="margin-top: 30px;"><span class="icon">⚙️</span>Equipment and cost</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Pellet price<span class="c-term">For 1 ton</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="price" placeholder="For example: 12000" type="number" value="12000"/>
+<span class="c-input-suffix">$</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Boiler efficiency</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="efficiency" placeholder="85" type="number" value="85"/>
+<span class="c-input-suffix">%</span>
+</div>
+</div>
+</div>
+<label class="c-switch-wrap" style="margin-top: 15px;">
+<input class="is-hidden" id="advModeToggle" type="checkbox"/>
+<div class="c-switch-track"><div class="c-switch-thumb"></div></div>
+<span class="c-switch-label">Season Tweaks</span>
+</label>
+<div class="c-adv-app is-hidden" id="adv-block" style="margin-top: 15px;">
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Season duration</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="season" placeholder="180" type="number" value="180"/>
+<span class="c-input-suffix">days</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Calorific value of pellets</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="calorific" placeholder="4.8" step="0.1" type="number" value="4.8"/>
+<span class="c-input-suffix">kWh/kg</span>
+</div>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-vis-box is-hidden" id="vis-box">
+<div class="c-vis-title">Fuel requirements for the whole season</div>
+<div class="c-chart-wrapper">
+<svg class="c-circular-chart" viewbox="0 0 36 36">
+<path class="c-circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+<path class="c-circle-heat" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" id="svg-heat"></path>
+<path class="c-circle-gvs" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" id="svg-gvs"></path>
+</svg>
+<div class="c-chart-inner">
+<div class="c-chart-icon">🪵</div>
+<div class="c-chart-val" id="vis-total-tons">0</div>
+<div class="c-chart-lbl">tons</div>
+</div>
+</div>
+<div class="c-legend-box">
+<div class="c-legend-item"><div class="c-legend-dot" style="background: #f97316;"></div>Heating</div>
+<div class="c-legend-item is-hidden" id="legend-gvs"><div class="c-legend-dot" style="background: #0284c7;"></div>Water heating</div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">📋</span>Detailed consumption</div>
+<div class="c-receipt-wrap">
+<div class="c-resline">
+<div class="c-resleft">Daily consumption<span class="c-subtext">Average during the heating season</span></div>
+<div class="c-resval" id="resDay"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Expense per month<span class="c-subtext">Estimated consumption</span></div>
+<div class="c-resval" id="resMonth"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline c-highlight-line" style="border-bottom: none;">
+<div class="c-resleft">Consumption per season<span class="c-subtext" id="resSeasonSub">In 180 days</span></div>
+<div class="c-resval" id="resSeason"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+<div class="c-receipt-wrap" style="background: #fff; border: 2px solid #e2e8f0; margin-top: 15px;">
+<div class="c-resline" style="border-bottom: none; padding-bottom: 0;">
+<div class="c-resleft">Budget for the season<span class="c-subtext">Total fuel cost</span></div>
+<div class="c-resval" id="resCost" style="font-size: 22px; color: #1e293b;"></div>
+<button class="c-copy" style="margin-top: -10px;"></button>
+</div>
+</div>
+</div>
+<div class="c-modal-overlay" id="insulationInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeInsulationInfo">×</button>
+<div class="c-modal-title"><span class="icon">🏡</span>Home insulation assessment</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">The level of thermal insulation directly affects heat loss and, accordingly, the consumption of pellets.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>Excellent (50 W/m²):</b><br/>Modern houses (SIP panels, highly energy efficient frame houses, thick layer of insulation, energy-saving windows).</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>Normal (100 W/m²):</b><br/>Standard construction (foam block/brick with basic insulation, standard double-glazed windows). Most houses.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b;">
+<b>Poor (150 W/m²):</b><br/>Old houses, thin walls without external insulation, cracks in the windows, uninsulated roof.</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let activeMode = 'heat';
+  let isCalculated = false;
+
+  // Modal logic
+  $('#openInsulationInfo').addEventListener('click', () => { $('#insulationInfoModal').classList.add('show'); });
+  $('#closeInsulationInfo').addEventListener('click', () => { $('#insulationInfoModal').classList.remove('show'); });
+  $('#insulationInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#insulationInfoModal').classList.remove('show');
+  });
+
+  function updateModeUI() {
+      if (Math.abs(activeMode === 'gvs') === 1) {
+          $('#gvs-wrap').classList.remove('is-hidden');
+      } else {
+          $('#gvs-wrap').classList.add('is-hidden');
+      }
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  }
+
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeMode = btn.dataset.mode;
+        updateModeUI();
+    });
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          let targetId = btn.dataset.target;
+          let val = btn.dataset.val;
+          $('#' + targetId).value = val;
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  $('#advModeToggle').addEventListener('change', (e) => {
+      let isAdv = e.target.checked;
+      if (Math.abs(isAdv === true) === 1) {
+          $('#adv-block').classList.remove('is-hidden');
+      } else {
+          $('#adv-block').classList.add('is-hidden');
+          $('#season').value = '180';
+          $('#calorific').value = '4.8';
+      }
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  });
+
+  function formatMoney(n) {
+      let parts = n.toFixed(0).split(".");
+      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+      return parts[0];
+  }
+  
+  function formatW(n) {
+      return n.toFixed(1).replace(/\.0$/, '');
+  }
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let area = parseFloat($('#area').value);
+    let price = parseFloat($('#price').value);
+    let efficiency = parseFloat($('#efficiency').value);
+    
+    let isNanArea = isNaN(area);
+    if (Math.abs(isNanArea === true) === 1) area = 0;
+    
+    let isNanPrice = isNaN(price);
+    if (Math.abs(isNanPrice === true) === 1) price = 0;
+
+    let isNanEff = isNaN(efficiency);
+    if (Math.abs(isNanEff === true) === 1) efficiency = 85;
+
+    let isErr = false;
+    let isPosArea = false;
+    if (Math.abs(Math.sign(area) === 1) === 1) isPosArea = true;
+    if (Math.abs(isPosArea === false) === 1) isErr = true;
+    
+    let isPosPrice = false;
+    if (Math.abs(Math.sign(price) === 1) === 1) isPosPrice = true;
+    if (Math.abs(isPosPrice === false) === 1) isErr = true;
+
+    if (Math.abs(isErr === true) === 1) {
+        $('#vis-box').classList.add('is-hidden');
+        $('#resultBox').classList.remove('show');
+        if (Math.abs(shouldScroll === true) === 1) {
+            $('#errorMsg').textContent = "Specify the area and price of pellets greater than zero";
+            $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    let insulationLoss = parseFloat($('#insulation').value);
+    
+    // GVS settings
+    let people = 0;
+    let isGvsMode = false;
+    if (Math.abs(activeMode === 'gvs') === 1) isGvsMode = true;
+    
+    if (Math.abs(isGvsMode === true) === 1) {
+        people = parseFloat($('#people').value);
+        let isNanP = isNaN(people);
+        if (Math.abs(isNanP === true) === 1) people = 0;
+        let isPosP = false;
+        if (Math.abs(Math.sign(people) === 1) === 1) isPosP = true;
+        if (Math.abs(isPosP === false) === 1) people = 0;
+    }
+
+    // Adv settings
+    let seasonDays = parseFloat($('#season').value);
+    let isNanSD = isNaN(seasonDays);
+    if (Math.abs(isNanSD === true) === 1) seasonDays = 180;
+    
+    let calorific = parseFloat($('#calorific').value);
+    let isNanC = isNaN(calorific);
+    if (Math.abs(isNanC === true) === 1) calorific = 4.8;
+
+    // Calculations (Energy)
+    let maxHeatPowerKw = (area * insulationLoss) / 1000;
+    let avgHeatPowerKw = maxHeatPowerKw / 2; // Average load is roughly 50% of max
+    let heatEnergyDaily = avgHeatPowerKw * 24; // kWh
+    
+    // GVS Energy (roughly 1.5 - 2 kWh per person per day)
+    let gvsEnergyDaily = people * 1.5; 
+    
+    let totalEnergyDaily = heatEnergyDaily + gvsEnergyDaily;
+    
+    let effFactor = efficiency / 100;
+    let actualCalorific = calorific * effFactor; // Useful energy per kg
+    
+    let pelletDailyHeat = heatEnergyDaily / actualCalorific;
+    let pelletDailyGvs = gvsEnergyDaily / actualCalorific;
+    let pelletDailyTotal = pelletDailyHeat + pelletDailyGvs;
+    
+    let pelletSeasonHeat = pelletDailyHeat * seasonDays;
+    let pelletSeasonGvs = pelletDailyGvs * seasonDays;
+    let pelletSeasonTotal = pelletSeasonHeat + pelletSeasonGvs;
+    
+    let pelletMonthTotal = pelletDailyTotal * 30;
+    
+    // Cost
+    let totalTons = pelletSeasonTotal / 1000;
+    let seasonCost = totalTons * price;
+
+    // UI Result Update
+    $('#resDay').textContent = formatW(pelletDailyTotal) + "kg";
+    $('#resMonth').textContent = formatW(pelletMonthTotal) + "kg";
+    $('#resSeason').textContent = formatW(pelletSeasonTotal) + "kg";
+    $('#resSeasonSub').textContent = "For" + seasonDays + "days";
+    $('#resCost').textContent = formatMoney(seasonCost) + " $";
+
+    // Visual Chart Update
+    let heatPercent = (pelletSeasonHeat / pelletSeasonTotal) * 100;
+    let gvsPercent = (pelletSeasonGvs / pelletSeasonTotal) * 100;
+    
+    $('#vis-total-tons').textContent = formatW(totalTons);
+
+    if (Math.abs(isGvsMode === true) === 1) {
+        $('#legend-gvs').classList.remove('is-hidden');
+        $('#svg-heat').style.strokeDasharray = heatPercent + ", 100";
+        $('#svg-gvs').style.strokeDasharray = gvsPercent + ", 100";
+        $('#svg-gvs').style.strokeDashoffset = "-" + heatPercent;
+    } else {
+        $('#legend-gvs').classList.add('is-hidden');
+        $('#svg-heat').style.strokeDasharray = "100, 100";
+        $('#svg-gvs').style.strokeDasharray = "0, 100";
+        $('#svg-gvs').style.strokeDashoffset = "0";
+    }
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#vis-box').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(e.target.tagName === 'SELECT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    $('#area').value = '';
+    $('#insulation').value = '100';
+    $('#people').value = '3';
+    $('#price').value = '12000';
+    $('#efficiency').value = '85';
+    $('#season').value = '180';
+    $('#calorific').value = '4.8';
+    
+    $('#advModeToggle').checked = false;
+    $('#adv-block').classList.add('is-hidden');
+    
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      let valClean = valRaw.replace('$', '').replace('kg', '').replace(/\\s/g, '').trim();
+      navigator.clipboard.writeText(valClean);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Heating using wood pellets (pellets) is an environmentally friendly and automated heating method, which is often cheaper than electricity and liquefied gas. However, to plan your budget, it is important to understand in advance how much fuel you will need for the winter.</p>
+<p>Our online calculator allows you to perform a professional calculation of fuel consumption based on the thermal parameters of your building and equipment characteristics.</p>
+<h2 class="wp-block-heading" id="osnovnye-parametry-dlya-rascheta-2">Basic parameters for calculation</h2>
+<p>To obtain the most accurate result, several factors must be taken into account:</p>
+<ul class="wp-block-list">
+<li><strong>Room area:</strong> The total area of ​​all heated rooms.</li>
+<li><strong>Heat loss level:</strong> Depends on the quality of insulation of the walls, roof and type of double-glazed windows.</li>
+<li><strong>Boiler efficiency:</strong> Modern pellet boilers are efficient <strong>85–95%</strong>.</li>
+<li><strong>Fuel energy efficiency:</strong> The calorific value of quality wood pellets is approx. <strong>4.8 kWh/kg</strong>.</li>
+<li><strong>Availability of hot water supply:</strong> Additional energy consumption for heating hot water for domestic needs.</li>
+</ul>
+<h3 class="wp-block-heading" id="sravnitelnaya-tablitsa-teplotvornoj-sposobnosti-topliva-2">Comparison table of fuel calorific value</h3>
+<p>To understand the effectiveness of pellets, we suggest comparing them with other popular types of fuel:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Fuel type</strong></td><td><strong>Calorific value (average)</strong></td><td><strong>Equipment efficiency</strong></td></tr></thead><tbody><tr><td>Wood pellets (white/gray)</td><td><strong>4.7 – 5.0 kWh/kg</strong></td><td><strong>85-95%</strong></td></tr><tr><td>Firewood (humidity 20%)</td><td>3.9 – 4.2 kWh/kg</td><td>60-75%</td></tr><tr><td>Natural gas</td><td>9.3 kWh/m³</td><td>90-92%</td></tr><tr><td>Coal</td><td>5.5 – 6.5 kWh/kg</td><td>70-80%</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="metodika-i-formuly-rascheta-2">Calculation methods and formulas</h2>
+<p>The calculator is based on classic heat engineering formulas. The calculation is divided into several stages.</p>
+<p><strong>1. Determination of maximum thermal power ( $P_{max}$ ):</strong></p>
+<p>$$P_{max} = \frac{S \cdot q}{1000}$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $S$ - house area ( $м^2$ );</li>
+<li> $q$ - specific heat loss ( $Вт/м^2$ ).</li>
+</ul>
+<p><strong>2. Calculation of daily energy consumption ( $E_{day}$ ):</strong></p>
+<p>It is assumed that the average load on the boiler per season is approximately <strong>50%</strong> from maximum power:</p>
+<p>$$E_{day} = \frac{P_{max}}{2} \cdot 24$$</p>
+<p><strong>3. Calculation of fuel mass ( $M$ ):</strong></p>
+<p>To calculate the required mass of pellets, the useful energy released during combustion is taken into account, taking into account the efficiency:</p>
+<p>$$M = \frac{E_{day} + E_{gvs}}{C \cdot \eta}$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $E_{gvs}$ - DHW energy (approx. <strong>1.5 kWh</strong> per person);</li>
+<li> $C$ - specific heat of combustion of pellets;</li>
+<li> $\eta$ - boiler efficiency (in decimal form).</li>
+</ul>
+<h3 class="wp-block-heading" id="kak-snizit-rashod-pellet-sovety-ekspertov-2">How to reduce pellet consumption: expert advice</h3>
+<p>If the calculated values ​​seem high to you, consider the following optimization methods:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Pellet quality:</strong> Use standard granules <strong>EN plus A1</strong>. Cheap pellets with high ash content (agropellet) have a lower calorific value and require more frequent cleaning of the boiler.</li>
+<li><strong>Burner maintenance:</strong> Carbon deposits on the heat exchanger with a thickness of only 1 mm reduce the boiler efficiency by <strong>5–7%</strong>. Regular cleaning is required.</li>
+<li><strong>Installation of heat accumulator:</strong> Allows the boiler to operate in optimal mode with maximum efficiency, accumulating excess heat.</li>
+<li><strong>Weather automatic:</strong> Reduces coolant temperature during warming periods, preventing excessive fuel consumption.</li>
+</ol>
+<p>Use our calculator to purchase the required amount of fuel in advance at favorable summer prices and avoid unnecessary expenses during the heating season.</p>
+</div>
+    </div>
+</body>
+</html>

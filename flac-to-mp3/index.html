@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLAC to MP3 converter online: encoding up to 320 kbps, trimming and normalization</title>
+    <meta name="description" content="FLAC to MP3 converter online: encoding up to 320 kbps, trimming and normalization - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>FLAC to MP3 converter online: encoding up to 320 kbps, trimming and normalization</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  let host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // --- 1. ПРЕМИУМ CSS ---
+  let style = document.createElement('style');
+  style.textContent = `
+    .cv-wrap * { box-sizing: border-box; }
+    .cv-wrap .is-hidden { display: none !important; }
+    .cv-wrap .cv-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-bottom: 24px; }
+    .cv-wrap .cv-row.single { grid-template-columns: 1fr; }
+    .cv-wrap .cv-field { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+    
+    .cv-wrap .cv-label { font-weight: 700; font-size: 15px; color: #1a1a1a; display: flex; align-items: center; gap: 8px; margin: 0; }
+    .cv-wrap .cv-term { display: inline-flex; align-items: center; justify-content: center; height: 24px; min-width: 30px; padding: 0 8px; border-radius: 6px; font-weight: 700; font-size: 12px; color: #0693e3; background: #eef7ff; margin-left: auto; }
+
+    /* ЗОНА ЗАГРУЗКИ */
+    .cv-wrap .cv-drop-area { position: relative; background-color: #f8fbff; border-radius: 16px; padding: 40px 20px; text-align: center; cursor: pointer; transition: background-color 0.3s, transform 0.2s; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 280px; gap: 16px; z-index: 1; overflow: hidden; }
+    
+    .cv-wrap .cv-drop-area::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 10px; background: linear-gradient(90deg, #0693e3 50%, transparent 50%), linear-gradient(90deg, #0693e3 50%, transparent 50%), linear-gradient(0deg, #0693e3 50%, transparent 50%), linear-gradient(0deg, #0693e3 50%, transparent 50%); background-repeat: repeat-x, repeat-x, repeat-y, repeat-y; background-size: 16px 2px, 16px 2px, 2px 16px, 2px 16px; background-position: 0 0, 100% 100%, 0 100%, 100% 0; animation: dash-move 1s infinite linear; pointer-events: none; opacity: 0.6; transition: opacity 0.3s; }
+    @keyframes dash-move { to { background-position: 16px 0, calc(100% - 16px) 100%, 0 calc(100% - 16px), 100% 16px; } }
+    
+    .cv-wrap .cv-drop-area:hover { background-color: #f0f7ff; transform: translateY(-2px); }
+    .cv-wrap .cv-drop-area:hover::after { opacity: 1; }
+    
+    .cv-wrap .cv-drop-icon svg { width: 100px; height: auto; transition: transform 0.3s ease; }
+    .cv-wrap .cv-drop-area:hover .cv-drop-icon svg { transform: scale(1.05); }
+    .cv-wrap .cv-drop-title { font-size: 18px; font-weight: 600; color: #475569; pointer-events: none; margin-bottom: 5px; word-break: break-word; transition: color 0.3s; z-index: 2; position: relative; }
+    
+    .cv-wrap .cv-upload-btn-inner { display: inline-flex; align-items: center; gap: 10px; background: #fff; border: 1px solid #cbd5e1; color: #1e293b; font-weight: 600; font-size: 15px; padding: 12px 24px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); transition: all 0.2s; pointer-events: none; z-index: 2; position: relative; }
+    .cv-wrap .cv-drop-area:hover .cv-upload-btn-inner { background: #f8fafc; border-color: #94a3b8; box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
+
+    /* Аудио плеер внутри дроп-зоны */
+    .cv-wrap .cv-audio-preview { z-index: 3; position: relative; width: 100%; max-width: 320px; margin-top: 10px; border-radius: 50px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); height: 40px;}
+    .cv-wrap .cv-audio-preview audio { width: 100%; height: 40px; outline: none; }
+
+    /* ТАБЫ */
+    .cv-wrap .cv-tabs { display: flex; gap: 8px; background: #f1f5f9; padding: 6px; border-radius: 14px; list-style: none; margin: 0 0 28px 0; }
+    .cv-wrap .cv-tab { padding: 12px 20px; cursor: pointer; border-radius: 10px; font-weight: 600; font-size: 15px; color: #64748b; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); flex: 1; text-align: center; }
+    .cv-wrap .cv-tab:hover { color: #0f172a; }
+    .cv-wrap .cv-tab.active { background: #fff; color: #0693e3; box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+    .cv-wrap .cv-tab-pane { display: none; animation: slideUp 0.4s ease; }
+    .cv-wrap .cv-tab-pane.active { display: block; }
+
+    /* ЭЛЕМЕНТЫ УПРАВЛЕНИЯ */
+    .cv-wrap .cv-input, .cv-wrap .cv-select { width: 100%; padding: 14px 20px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 15px; background: #fff; transition: 0.2s; color: #1a1a1a; font-family: inherit; }
+    .cv-wrap .cv-input:focus, .cv-wrap .cv-select:focus { outline: none; border-color: #0693e3; box-shadow: 0 0 0 4px rgba(6,147,227,0.15); }
+    
+    .cv-wrap .cv-check-label { display: flex; align-items: center; gap: 10px; margin-top: 5px; font-size: 14px; cursor: pointer; color: #334155; }
+    .cv-wrap .cv-check-label input { width: 18px; height: 18px; accent-color: #0693e3; }
+    
+    .cv-wrap .cv-time-group { display: flex; align-items: center; gap: 10px; width: 100%; }
+    .cv-wrap .cv-time-group span { font-weight: 700; color: #94a3b8; }
+
+    /* КНОПКИ ДЕЙСТВИЙ */
+    .cv-wrap .cv-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 10px; }
+    .cv-wrap .cv-btn { appearance: none; border: none; border-radius: 12px; padding: 14px 24px; cursor: pointer; font-weight: 700; font-size: 15px; transition: all 0.3s; flex: 1; min-width: 180px; display: flex; justify-content: center; align-items: center; gap: 10px; }
+    .cv-wrap .cv-btn-primary { background: linear-gradient(135deg, #0693e3 0%, #006eb5 100%); color: #fff; box-shadow: 0 4px 15px rgba(6,147,227,0.3); }
+    .cv-wrap .cv-btn-secondary { background: #f1f5f9; color: #475569; }
+    .cv-wrap .cv-btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(6,147,227,0.4); }
+    .cv-wrap .cv-btn-secondary:hover { background: #e2e8f0; color: #0f172a; transform: translateY(-2px); }
+    .cv-wrap .cv-btn:active { transform: translateY(1px); }
+
+    /* РЕЗУЛЬТАТЫ */
+    .cv-wrap .cv-result-wrap { margin-top: 20px; background: #fff; border-radius: 16px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
+    .cv-wrap .cv-resline { display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 16px 20px; border-bottom: 1px solid #f1f5f9; }
+    .cv-wrap .cv-resline:last-child { border-bottom: none; background: #f8fbff; }
+    .cv-wrap .cv-resleft { font-size: 14px; color: #64748b; font-weight: 600; }
+    .cv-wrap .cv-resval { font-weight: 700; font-size: 16px; color: #0f172a; word-break: break-word; text-align: right; flex: 1; }
+
+    /* ПРОГРЕСС-БАР */
+    .cv-wrap .cv-progress { height: 8px; background: #f1f5f9; border-radius: 4px; overflow: hidden; margin-bottom: 20px; }
+    .cv-wrap .cv-progress-bar { height: 100%; width: 0%; background: #0693e3; transition: width 0.2s ease; }
+
+    @keyframes slideUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+    @media (max-width: 600px) { 
+      .cv-wrap .cv-actions { flex-direction: column; } 
+      .cv-wrap .cv-tabs { flex-direction: column; } 
+      .cv-wrap .cv-resline { flex-direction: column; align-items: flex-start; gap: 6px; }
+      .cv-wrap .cv-resval { text-align: left; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  // --- 2. HTML РАЗМЕТКА ---
+  let wrap = document.createElement('div');
+  wrap.className = 'cv-wrap';
+  wrap.innerHTML = `
+<div class="cv-card">
+<div class="cv-row single" id="dropAreaWrap">
+<div class="cv-field">
+<div class="cv-drop-area" id="dropArea" role="button" tabindex="0">
+<div class="cv-drop-icon" id="dropIconArea">
+<svg fill="none" viewbox="0 0 120 78" xmlns="http://www.w3.org/2000/svg">
+<path d="M76.7455 43.1092C76.41 43.5371 75.995 43.8933 75.5242 44.1575C75.0535 44.4218 74.5363 44.5889 74.0021 44.6492C73.468 44.7096 72.9274 44.6621 72.4112 44.5093C71.8951 44.3566 71.4136 44.1017 70.9943 43.7592L64.0166 38.0598V57.1688C64.0166 58.2737 63.5858 59.3334 62.8191 60.1147C62.0523 60.896 61.0124 61.335 59.9281 61.335C58.8437 61.335 57.8038 60.896 57.037 60.1147C56.2703 59.3334 55.8396 58.2737 55.8396 57.1688V38.0598L48.8509 43.7592C48.0037 44.4494 46.9221 44.7684 45.844 44.646C44.766 44.5236 43.7798 43.9698 43.1025 43.1065C42.4251 42.2431 42.1121 41.141 42.2322 40.0424C42.3523 38.9439 42.8958 37.939 43.743 37.2488L57.355 26.15C58.0817 25.5516 58.9883 25.226 59.9226 25.2279H59.9335C60.9148 25.2279 61.8088 25.5834 62.512 26.1723L76.1077 37.2488C76.5275 37.5907 76.8771 38.0135 77.1364 38.4932C77.3957 38.9729 77.5597 39.4999 77.6189 40.0443C77.6782 40.5886 77.6315 41.1394 77.4816 41.6654C77.3318 42.1913 77.0816 42.6819 76.7455 43.1092Z" fill="#0693e3"></path>
+<path clip-rule="evenodd" d="M40.1888 13.807C43.5529 8.47181 48.4871 4.3578 54.2851 2.05373C60.0831 -0.250342 66.4478 -0.626361 72.4683 0.979486C78.4888 2.58533 83.8565 6.09073 87.8031 10.994C91.7498 15.8973 94.0731 21.9471 94.4406 28.2776C97.6955 28.1214 100.948 28.6308 104.007 29.7759C107.066 30.9209 109.868 32.6784 112.25 34.9447C114.631 37.211 116.544 39.9402 117.874 42.9714C119.204 46.0027 119.925 49.2746 119.994 52.5944C120.064 55.9141 119.481 59.2144 118.279 62.3007C117.077 65.387 115.28 68.1969 112.996 70.5646C110.711 72.9323 107.985 74.81 104.977 76.087C101.969 77.364 98.7403 78.0143 95.4818 77.9998H31.9845C27.433 77.9937 22.935 76.999 18.7904 75.0822C14.6458 73.1654 10.9497 70.3703 7.94856 66.8834C4.9474 63.3965 2.71008 59.2978 1.38572 54.8604C0.0613673 50.4231 -0.319604 45.7491 0.268202 41.1499C0.856007 36.5507 2.39909 32.1321 4.79459 28.1884C7.1901 24.2447 10.383 20.8666 14.1605 18.2793C17.938 15.692 22.2133 13.9548 26.7015 13.1837C31.1896 12.4125 35.7876 12.625 40.1888 13.807ZM65.0033 8.32983C60.9897 8.3288 57.0574 9.48255 53.6589 11.6583C50.2603 13.834 47.5337 16.9434 45.7928 20.6284C45.3457 21.5721 44.566 22.3094 43.6093 22.6934C42.6525 23.0774 41.5889 23.0799 40.6303 22.7004C37.365 21.4125 33.8614 20.8729 30.3684 21.1202C26.8753 21.3674 23.4786 22.3954 20.4193 24.131C17.3601 25.8667 14.7134 28.2674 12.6673 31.1628C10.6212 34.0582 9.22578 37.3772 8.58023 40.884C7.93469 44.3908 8.05482 47.9994 8.9321 51.4536C9.80938 54.9078 11.4223 58.1227 13.6563 60.8702C15.8902 63.6176 18.6905 65.8301 21.8581 67.3505C25.0258 68.8709 28.4831 69.6619 31.9845 69.6674H95.4818C97.792 69.6666 100.075 69.1633 102.179 68.1913C104.284 67.2193 106.16 65.8009 107.683 64.0308C109.206 62.2608 110.341 60.1799 111.011 57.9272C111.682 55.6744 111.873 53.3018 111.572 50.9678C111.271 48.6338 110.484 46.3922 109.265 44.3928C108.045 42.3934 106.421 40.6822 104.501 39.3736C102.58 38.065 100.408 37.1891 98.1287 36.8045C95.8496 36.4199 93.5161 36.5354 91.2843 37.1432C90.6395 37.3193 89.9621 37.3318 89.3115 37.1797C88.6608 37.0275 88.0566 36.7153 87.5517 36.2704C87.0467 35.8254 86.6564 35.2612 86.4147 34.6271C86.1731 33.993 86.0875 33.3082 86.1654 32.6326C86.5229 29.5847 86.2423 26.4941 85.3421 23.5647C84.4419 20.6353 82.9426 17.9336 80.943 15.6378C78.9434 13.3419 76.4889 11.5041 73.7414 10.2453C70.9939 8.98663 68.0157 8.33012 65.0033 8.32983Z" fill="#a8d0f0" fill-rule="evenodd"></path>
+</svg>
+</div>
+<div class="cv-drop-title" id="dropTitle">Drag FLAC here or click to select</div>
+<div id="dropSubtitle" style="font-size: 14px; color: #64748b; margin-bottom: 10px;">To convert to MP3 without losing quality</div>
+<div class="cv-upload-btn-inner" id="uploadBtnInner">
+<svg fill="none" height="18" viewbox="0 0 16 18" width="18" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.4033 8.6V5L10.8033 1H2.40327C2.1911 1 1.98762 1.08429 1.83759 1.23431C1.68756 1.38434 1.60327 1.58783 1.60327 1.8V16.2C1.60327 16.4122 1.68756 16.6157 1.83759 16.7657C1.98762 16.9157 2.1911 17 2.40327 17H7.20327M11.6033 11V16.6M8.80327 13.8H14.4033" stroke="#1e293b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M10.4033 1V5H14.4033" stroke="#1e293b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>Select file</div>
+<div class="cv-audio-preview is-hidden" id="previewPlayerWrap">
+<audio controls="" id="previewAudio"></audio>
+</div>
+</div>
+<input accept=".flac,audio/flac" id="fileInput" style="position:absolute;left:-9999px;" type="file"/>
+</div>
+</div>
+<div class="is-hidden" id="converterControls">
+<ul class="cv-tabs">
+<li class="cv-tab active" data-target="tab-settings">MP3 encoding</li>
+<li class="cv-tab" data-target="tab-edit">Processing and trimming</li>
+<li class="cv-tab" data-target="tab-convert">Ready file</li>
+</ul>
+<div class="cv-body">
+<div class="cv-tab-pane active" id="tab-settings">
+<div class="cv-row">
+<div class="cv-field">
+<label class="cv-label" for="selBit">MP3 bitrate</label>
+<select class="cv-select" id="selBit">
+<option value="128">128 kbps (Smaller size)</option>
+<option selected="" value="192">192 kbps (Optimal)</option>
+<option value="256">256 kbps (High quality)</option>
+<option value="320">320 kbps (Maximum)</option>
+</select>
+</div>
+<div class="cv-field">
+<label class="cv-label" for="selRate">Sampling frequency</label>
+<select class="cv-select" id="selRate">
+<option selected="" value="">Same as original (FLAC)</option>
+<option value="44100">44 100 Hz (CD Audio)</option>
+<option value="48000">48,000 Hz (DVD Audio)</option>
+<option value="32000">32,000 Hz (Radio)</option>
+</select>
+</div>
+<div class="cv-field">
+<label class="cv-label" for="selCh">Audio channels</label>
+<select class="cv-select" id="selCh">
+<option selected="" value="">Same as original</option>
+<option value="2">Stereo (2 channels)</option>
+<option value="1">Mono (1 channel)</option>
+</select>
+</div>
+</div>
+</div>
+<div class="cv-tab-pane" id="tab-edit">
+<div class="cv-row">
+<div class="cv-field">
+<label class="cv-label">Trimming a track (Timecodes)</label>
+<div class="cv-time-group">
+<input class="cv-input" id="tStart" placeholder="Start (00:00)" type="text"/>
+<span>—</span>
+<input class="cv-input" id="tEnd" placeholder="End (MM:SS)" type="text"/>
+</div>
+</div>
+<div class="cv-field">
+<label class="cv-label">Sound improvement</label>
+<label class="cv-check-label" style="margin-top: 10px;">
+<input id="norm" type="checkbox"/>Volume Normalization (Peak −1 dB)</label>
+</div>
+</div>
+</div>
+<div class="cv-tab-pane" id="tab-convert">
+<div class="cv-row single">
+<div class="cv-actions">
+<button class="cv-btn cv-btn-primary" id="btnConvert" type="button">Start conversion</button>
+</div>
+</div>
+<div class="cv-progress is-hidden" id="progressBox">
+<div class="cv-progress-bar" id="progressBar"></div>
+</div>
+<div class="cv-result-wrap is-hidden" id="resultBox">
+<div class="cv-resline" style="background: #f8fbff;">
+<div class="cv-resleft">Result:</div>
+<div class="cv-resval" style="color: #10b981;">Successfully generated</div>
+</div>
+<div class="cv-resline" style="flex-direction: column; align-items: center; gap: 15px;">
+<audio controls="" id="resultAudio" style="width: 100%; max-width: 400px; outline: none;"></audio>
+<button class="cv-btn cv-btn-primary" id="btnDownload" style="width: 100%;" type="button">Download file (MP3)</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // --- 3. БЕЗОПАСНЫЙ JS (Строгие ограничения) ---
+  let dropArea = wrap.querySelector('#dropArea');
+  let dropTitle = wrap.querySelector('#dropTitle');
+  let dropSubtitle = wrap.querySelector('#dropSubtitle');
+  let dropIconArea = wrap.querySelector('#dropIconArea');
+  let uploadBtnInner = wrap.querySelector('#uploadBtnInner');
+  let fileInput = wrap.querySelector('#fileInput');
+  let converterControls = wrap.querySelector('#converterControls');
+  
+  let previewPlayerWrap = wrap.querySelector('#previewPlayerWrap');
+  let previewAudio = wrap.querySelector('#previewAudio');
+  
+  let selBit = wrap.querySelector('#selBit');
+  let selRate = wrap.querySelector('#selRate');
+  let selCh = wrap.querySelector('#selCh');
+  let tStart = wrap.querySelector('#tStart');
+  let tEnd = wrap.querySelector('#tEnd');
+  let norm = wrap.querySelector('#norm');
+  
+  let btnConvert = wrap.querySelector('#btnConvert');
+  let btnDownload = wrap.querySelector('#btnDownload');
+  
+  let progressBox = wrap.querySelector('#progressBox');
+  let progressBar = wrap.querySelector('#progressBar');
+  let resultBox = wrap.querySelector('#resultBox');
+  let resultAudio = wrap.querySelector('#resultAudio');
+
+  let currentFile = null;
+  let mp3Blob = null;
+  let mp3Url = null;
+  let originalUrl = null;
+
+  let tabs = wrap.querySelectorAll('.cv-tab');
+  let panes = wrap.querySelectorAll('.cv-tab-pane');
+  
+  Array.from(tabs).forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      let targetId = tab.getAttribute('data-target');
+      Array.from(tabs).forEach(function(t) { t.classList.remove('active'); });
+      Array.from(panes).forEach(function(p) { p.classList.remove('active'); });
+      tab.classList.add('active');
+      let targetPane = wrap.querySelector('#' + targetId);
+      if (targetPane) targetPane.classList.add('active');
+    });
+  });
+
+  function parseTime(str) {
+    let isNull = str ? false : true;
+    if (isNull) return null;
+    let s = String(str).trim();
+    let isEmpty = s.length === 0;
+    if (isEmpty) return null;
+    
+    let p = s.split(':');
+    let h = 0; let m = 0; let sec = 0;
+    
+    let isSec = p.length === 1;
+    let isMin = p.length === 2;
+    let isHr = p.length === 3;
+    
+    if (isSec) { sec = Number(p[0]); }
+    else if (isMin) { m = Number(p[0]); sec = Number(p[1]); }
+    else if (isHr) { h = Number(p[0]); m = Number(p[1]); sec = Number(p[2]); }
+    else { return null; }
+    
+    if (isNaN(h)) { h = 0; }
+    if (isNaN(m)) { m = 0; }
+    if (isNaN(sec)) { sec = 0; }
+    
+    return h * 3600 + m * 60 + sec;
+  }
+
+  function f32toI16(fa) {
+    let len = fa.length;
+    let out = new Int16Array(len);
+    let i = 0;
+    while (Math.sign(len - i) === 1) {
+      let s = fa[i];
+      let over = Math.sign(s - 1) === 1;
+      let under = Math.sign(-1 - s) === 1;
+      
+      if (over) { s = 1; }
+      if (under) { s = -1; }
+      
+      let isNeg = Math.sign(s) === -1;
+      if (isNeg) {
+        out[i] = Math.round(s * 32768);
+      } else {
+        out[i] = Math.round(s * 32767);
+      }
+      i = i + 1;
+    }
+    return out;
+  }
+
+  function sanitizeBase(name) {
+    let validName = name ? name : 'audio';
+    return String(validName).replace(/\.[^.]+$/, '').replace(/[\/\\?%*:|"\x3c\x3e]/g, '_');   }    dropArea.addEventListener('click', function(e) {        let isAudioClick = e.target.closest('#previewPlayerWrap') ? true : false;       if (!isAudioClick) { fileInput.click(); }   });   dropArea.addEventListener('dragover', function(e) { e.preventDefault(); dropArea.style.backgroundColor = '#e6f3ff'; }, {passive: false});   dropArea.addEventListener('dragleave', function() { dropArea.style.backgroundColor = ''; });      dropArea.addEventListener('drop', function(e) {     e.preventDefault();     dropArea.style.backgroundColor = '';     let dt = e.dataTransfer;     let fList = dt ? dt.files : null;     let hasFiles = fList ? (fList.length !== 0) : false;     if (hasFiles) { handleFile(fList[0]); }   });    fileInput.addEventListener('change', function() {     let fList = fileInput.files;     let hasFiles = fList ? (fList.length !== 0) : false;     if (hasFiles) { handleFile(fList[0]); }   });    function handleFile(f) {     currentFile = f;          // Сброс старых данных     if (originalUrl) { try { URL.revokeObjectURL(originalUrl); } catch(e){} }     if (mp3Url) { try { URL.revokeObjectURL(mp3Url); } catch(e){} }     resultBox.classList.add('is-hidden');     progressBox.classList.add('is-hidden');     btnConvert.textContent = 'Начать конвертацию';     btnConvert.disabled = false;          // Предпрослушивание     originalUrl = URL.createObjectURL(f);     previewAudio.src = originalUrl;          uploadBtnInner.classList.add('is-hidden');     dropIconArea.classList.add('is-hidden');     previewPlayerWrap.classList.remove('is-hidden');          dropTitle.textContent = f.name;     dropTitle.style.color = '#0693e3';     dropSubtitle.textContent = 'Готов к конвертации. Настройте параметры ниже.';          converterControls.classList.remove('is-hidden');   }    btnConvert.addEventListener('click', async function () {     let hasFile = currentFile ? true : false;     if (!hasFile) return;      btnConvert.textContent = 'Чтение FLAC...';     btnConvert.disabled = true;          progressBox.classList.remove('is-hidden');     resultBox.classList.add('is-hidden');     progressBar.style.width = '10%';      try {       let arrayBuf = await currentFile.arrayBuffer();              let AC = window.AudioContext ? window.AudioContext : window.webkitAudioContext;       let hasAC = AC ? true : false;       if (!hasAC) throw new Error('AudioContext не поддерживается');              let ctx = new AC();       let decoded = await ctx.decodeAudioData(arrayBuf);        btnConvert.textContent = 'Обработка звука...';       progressBar.style.width = '20%';        let startSec = parseTime(tStart.value);       let sNull = startSec === null;       if (sNull) { startSec = 0; }              let endSec = parseTime(tEnd.value);       let eNull = endSec === null;       if (eNull) { endSec = decoded.duration; }        let sNeg = Math.sign(startSec) === -1;       if (sNeg) { startSec = 0; }              let eBig = Math.sign(endSec - decoded.duration) === 1;       if (eBig) { endSec = decoded.duration; }              let sBig = Math.sign(startSec - endSec) === 1;       if (sBig) { endSec = startSec; }              let trimLen = endSec - startSec;        let targetRate = decoded.sampleRate;       let selR = selRate.value;       let hasSelR = selR.length !== 0;       if (hasSelR) { targetRate = Number(selR); }              let targetCh = decoded.numberOfChannels;       let selC = selCh.value;       let hasSelC = selC.length !== 0;       if (hasSelC) { targetCh = Number(selC); }              let cSmall = Math.sign(1 - targetCh) === 1;       let cBig = Math.sign(targetCh - 2) === 1;       if (cSmall) { targetCh = 1; }       if (cBig) { targetCh = 2; }        progressBar.style.width = '30%';              let OfflineAC = window.OfflineAudioContext ? window.OfflineAudioContext : window.webkitOfflineAudioContext;       let off = new OfflineAC(targetCh, Math.ceil(trimLen * targetRate), targetRate);       let src = off.createBufferSource();       src.buffer = decoded;       src.connect(off.destination);       src.start(0, startSec, trimLen);              let rendered = await off.startRendering();        let isNorm = norm.checked === true;       if (isNorm) {         let peak = 0;         let ch = 0;         let tCh = rendered.numberOfChannels;         while (Math.sign(tCh - ch) === 1) {           let data = rendered.getChannelData(ch);           let i = 0;           let dLen = data.length;           while (Math.sign(dLen - i) === 1) {             let v = data[i];             let vNeg = Math.sign(v) === -1;             if (vNeg) { v = -v; }             let isPeak = Math.sign(v - peak) === 1;             if (isPeak) { peak = v; }             i = i + 1;           }           ch = ch + 1;         }          let hasPeak = Math.sign(peak) === 1;         if (hasPeak) {           let target = Math.pow(10, -1 / 20); // −1 dBFS           let mul = target / peak;           ch = 0;           while (Math.sign(tCh - ch) === 1) {             let d2 = rendered.getChannelData(ch);             let j = 0;             let d2Len = d2.length;             while (Math.sign(d2Len - j) === 1) {               d2[j] = d2[j] * mul;               j = j + 1;             }             ch = ch + 1;           }         }       }        let leftF32 = rendered.getChannelData(0);       let rightF32 = null;       let isStereo = targetCh === 2;       if (isStereo) {         rightF32 = rendered.getChannelData(1);       }        btnConvert.textContent = 'Кодирование MP3...';       progressBar.style.width = '50%';        let kbps = parseInt(selBit.value, 10);       let kNaN = isNaN(kbps);       if (kNaN) { kbps = 192; }              let encoder = new lamejs.Mp3Encoder(targetCh, rendered.sampleRate, kbps);       let block = 1152;       let mp3Chunks = [];       let total = leftF32.length;       let pos = 0;        while (Math.sign(total - pos) === 1) {         let end = pos + block;         let over = Math.sign(end - total) === 1;         if (over) { end = total; }                  let leftI16 = f32toI16(leftF32.subarray(pos, end));         let mp3buf = null;          if (isStereo) {           let rightI16 = f32toI16(rightF32.subarray(pos, end));           mp3buf = encoder.encodeBuffer(leftI16, rightI16);         } else {           mp3buf = encoder.encodeBuffer(leftI16);         }          let bufOk = mp3buf ? true : false;         if (bufOk) {           let hasBuf = Math.sign(mp3buf.length) === 1;           if (hasBuf) {             mp3Chunks.push(new Int8Array(mp3buf));           }         }          pos = end;         let pct = Math.round(50 + (pos / total) * 45);         progressBar.style.width = String(pct) + '%';       }        let last = encoder.flush();       let lastOk = last ? true : false;       if (lastOk) {         let hasLast = Math.sign(last.length) === 1;         if (hasLast) {           mp3Chunks.push(new Int8Array(last));         }       }        let size = 0;       let k = 0;       let chunkCount = mp3Chunks.length;       while(Math.sign(chunkCount - k) === 1) {           size = size + mp3Chunks[k].length;           k = k + 1;        }              let bytes = new Uint8Array(size);       let offst = 0;       let q = 0;       while(Math.sign(chunkCount - q) === 1) {           bytes.set(mp3Chunks[q], offst);           offst = offst + mp3Chunks[q].length;           q = q + 1;        }        mp3Blob = new Blob([bytes], { type: 'audio/mpeg' });       if (mp3Url) { try { URL.revokeObjectURL(mp3Url); } catch(e){} }       mp3Url = URL.createObjectURL(mp3Blob);              resultAudio.src = mp3Url;       progressBar.style.width = '100%';              resultBox.classList.remove('is-hidden');       btnConvert.textContent = 'Конвертировать заново';       btnConvert.disabled = false;              // Автоматически переключаем таб на "Готовый файл"
+      let tabConvert = wrap.querySelector('.cv-tab[data-target="tab-convert"]');
+      if (tabConvert) { tabConvert.click(); }
+      
+    } catch (err) {
+      btnConvert.textContent = 'Ошибка обработки!';
+      setTimeout(function() { btnConvert.textContent = 'Начать конвертацию'; btnConvert.disabled = false; }, 2000);
+      progressBox.classList.add('is-hidden');
+    }
+  });
+
+  btnDownload.addEventListener('click', function () {
+    let hasBlob = mp3Blob ? true : false;
+    if (!hasBlob) return;
+    
+    let a = document.createElement('a');
+    a.href = mp3Url;
+    let baseName = currentFile ? sanitizeBase(currentFile.name) : 'converted';
+    a.download = baseName + '.mp3';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  });
+
+});
+</script>
+
+        <div class="post-content">
+<p>The FLAC (Free Lossless Audio Codec) format is the gold standard for music archiving due to its lossless compression. However, its large size and lack of support on some older or portable devices make the MP3 format preferable for everyday listening.</p>
+<p>Our online converter solves this problem using advanced browser technologies. Unlike most competitors, we don't require you to upload your heavy audio files to remote servers. All processing, including decoding, trimming and compression, occurs in your device's RAM thanks to the Web Audio API and LAME encoder algorithms. This guarantees the absence of queues, file size limits and absolute data confidentiality.</p>
+<h2 class="wp-block-heading" id="sravnenie-parametrov-audioformatov-2">Comparison of audio format parameters</h2>
+<p>Choosing the right conversion settings directly affects the final result. Below is a comparison of the original FLAC and possible MP3 encoding options:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Characteristic</strong></td><td><strong>Original (FLAC)</strong></td><td><strong>MP3 (320 kbps)</strong></td><td><strong>MP3 (192 kbps)</strong></td><td><strong>MP3 (128 kbps)</strong></td></tr></thead><tbody><tr><td><strong>Compression type</strong></td><td>Lossless</td><td>Lossy</td><td>Lossy</td><td>Lossy</td></tr><tr><td><strong>Average bitrate</strong></td><td>~800 — 1400 kbps</td><td>Constant 320 kbps</td><td>Constant 192 kbps</td><td>Constant 128 kbps</td></tr><tr><td><strong>3 minute track size</strong></td><td>~25 - 35 MB</td><td>~7 MB</td><td>~4 MB</td><td>~2.8 MB</td></tr><tr><td><strong>Usage scenario</strong></td><td>Studio work, archives</td><td>Hi-Fi players, high-quality acoustics</td><td>Smartphones, car radios</td><td>Podcasts, audiobooks</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="matematika-szhatiya-i-normalizatsii-zvuka-2">The Mathematics of Audio Compression and Normalization</h2>
+<p>Before encoding to MP3, you can calculate the approximate size of the resulting file. In digital audio, file size directly depends on the bitrate (the number of bits transmitted per second) and the duration of the track. The formula for calculating the $S$ file size (in megabytes) is:</p>
+<p>$$S = \frac{B \times T}{8388608}$$</p>
+<p>Where $B$ is the selected bitrate (for example, $320000$ bps), and $T$ is the audio duration in seconds. The $8388608$ divider is used to convert bits to megabytes.</p>
+<h2 class="wp-block-heading" id="prodvinutaya-obrabotka-normalizatsiya-pika-2">Advanced Processing: Peak Normalization</h2>
+<p>Often original FLAC files (especially old vinyl digitizations) have too quiet sound. Our converter has a function to normalize the peak to a safe limit $-1 \text{ dBFS}$ (decibel full scale). This prevents distortion (clipping) when played back on digital devices.</p>
+<p>The algorithm scans all audio samples to find the maximum absolute peak $P_{max}$ . The $M$ gain multiplier is calculated using the following formula:</p>
+<p>$$M = \frac{10^{-1/20}}{|P_{max}|}$$</p>
+<p>Each sample is then multiplied by a factor of $M$ , making the track as loud as possible, but technically clear and safe for speakers.</p>
+<h2 class="wp-block-heading" id="klyuchevye-vozmozhnosti-instrumenta-2">Key features of the tool</h2>
+<p><strong>Preview of the original:</strong> The built-in browser player allows you to listen to the FLAC file before converting.</p>
+<p><strong>High Quality LAME Encoder:</strong> Supports constant bit rate (CBR) up to 320 kbps to maintain maximum audio detail.</p>
+<p><strong>Sampling rate selection:</strong> Ability to downsample to 44.1 kHz or 48 kHz for compatibility with any devices.</p>
+<p><strong>Trimming by timecodes:</strong> The built-in trimmer allows you to cut the desired fragment from a long mix without the need to use heavy audio editors. Specify the start and end times, and the encoder will process only the selected segment.</p>
+</div>
+    </div>
+</body>
+</html>

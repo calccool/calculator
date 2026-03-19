@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car age calculator by production date: calculation up to the day</title>
+    <meta name="description" content="Car age calculator by production date: calculation up to the day - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Car age calculator by production date: calculation up to the day</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-receipt-wrap { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 15px; position: relative; overflow: hidden; }
+    .c-receipt-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: repeating-linear-gradient(45deg, #0693e3, #0693e3 10px, #38bdf8 10px, #38bdf8 20px); }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #fff; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #eff6ff; border: 1px solid #bae6fd; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05); }
+    .c-highlight-line:hover { background: #e0f2fe; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-switch-wrap { display: flex; align-items: center; gap: 12px; cursor: pointer; margin-bottom: 5px; padding: 14px 16px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 2px 6px rgba(0,0,0,0.02); transition: 0.3s; }
+    .c-switch-wrap:hover { border-color: #cbd5e1; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .c-switch-track { width: 44px; height: 24px; background: #cbd5e1; border-radius: 24px; position: relative; transition: 0.3s; flex-shrink: 0; }
+    .c-switch-thumb { width: 18px; height: 18px; background: #fff; border-radius: 50%; position: absolute; top: 3px; left: 3px; transition: 0.3s; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+    input:checked + .c-switch-track { background: #0693e3; }
+    input:checked + .c-switch-track .c-switch-thumb { left: 23px; }
+    .c-switch-label { font-weight: 600; font-size: 15px; color: #333; }
+    
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* Advanced Visualization - Circular & Timeline */
+    .c-vis-box { margin: 15px 0 25px; padding: 25px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); display: flex; flex-direction: column; gap: 20px; }
+    
+    .c-charts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 20px; justify-items: center; }
+    
+    .c-circle-wrap { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+    .c-circle-title { font-size: 13px; font-weight: 600; color: #475569; text-align: center; }
+    
+    .c-circle-chart { 
+        width: 120px; height: 120px; border-radius: 50%; 
+        background: conic-gradient(#0693e3 var(--p, 0%), #e2e8f0 0); 
+        display: flex; align-items: center; justify-content: center; 
+        position: relative; box-shadow: 0 4px 15px rgba(6, 147, 227, 0.15);
+        transition: --p 1s ease-in-out;
+    }
+    .c-circle-chart.warranty { background: conic-gradient(#10b981 var(--p, 0%), #e2e8f0 0); box-shadow: 0 4px 15px rgba(16, 185, 129, 0.15); }
+    .c-circle-chart.classic { background: conic-gradient(#f59e0b var(--p, 0%), #e2e8f0 0); box-shadow: 0 4px 15px rgba(245, 158, 11, 0.15); }
+    
+    .c-circle-inner { 
+        width: 96px; height: 96px; background: #fff; border-radius: 50%; 
+        display: flex; flex-direction: column; align-items: center; justify-content: center; 
+        box-shadow: inset 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .c-circle-val { font-size: 20px; font-weight: 700; color: #0f172a; line-height: 1; }
+    .c-circle-sub { font-size: 11px; color: #64748b; margin-top: 4px; font-weight: 500;}
+
+    /* Modern Timeline */
+    .c-timeline-wrap { width: 100%; margin-top: 10px; }
+    .c-timeline-label { font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 8px; display: flex; justify-content: space-between; }
+    .c-timeline-track { height: 12px; background: #e2e8f0; border-radius: 6px; position: relative; border: 1px solid #cbd5e1; box-shadow: inset 0 2px 4px rgba(0,0,0,0.05); }
+    .c-timeline-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #38bdf8, #0693e3); border-radius: 6px; transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1); }
+    .c-timeline-car { 
+        position: absolute; top: -14px; left: 0%; transform: translateX(-50%); 
+        font-size: 24px; transition: left 1.5s cubic-bezier(0.4, 0, 0.2, 1); 
+        filter: drop-shadow(0 4px 4px rgba(0,0,0,0.1));
+    }
+    .c-timeline-markers { display: flex; justify-content: space-between; margin-top: 6px; font-size: 11px; color: #94a3b8; font-weight: 600; }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @property --p { syntax: '<percentage>'; inherits: false; initial-value: 0%; }
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-vis-box { padding: 15px; }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="car-age-calc-wrapper">
+<div class="c-body">
+<div class="c-divider"><span class="icon">📅</span>Production and settlement dates</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Coming off the assembly line<span class="c-term">Release date</span>
+<span class="c-help-icon" id="openAgeInfo">?</span>
+</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="date-mfg" type="date"/>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Calculate age at<span class="c-term">Default today</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="date-target" type="date"/>
+</div>
+</div>
+</div>
+<div class="c-divider" style="margin-top: 25px;"><span class="icon">⚙️</span>Operational Analysis</div>
+<label class="c-switch-wrap">
+<input id="mileageToggle" style="display:none" type="checkbox"/>
+<div class="c-switch-track"><div class="c-switch-thumb"></div></div>
+<span class="c-switch-label">Indicate current mileage</span>
+</label>
+<div class="is-hidden" id="mileage-wrap" style="margin-top: 15px;">
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Odometer<span class="c-term">Mileage km</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="mileage" placeholder="For example: 120000" type="number"/>
+<span class="c-input-suffix">km</span>
+</div>
+<div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-val="50000" type="button">50 thousand</button>
+<button class="c-quick-btn" data-val="100000" type="button">100 thousand</button>
+<button class="c-quick-btn" data-val="150000" type="button">150 thousand</button>
+</div>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-vis-box is-hidden" id="vis-box">
+<div class="c-charts-grid">
+<div class="c-circle-wrap">
+<div class="c-circle-title">General age</div>
+<div class="c-circle-chart" id="chart-age">
+<div class="c-circle-inner">
+<span class="c-circle-val" id="vis-age-val">0</span>
+<span class="c-circle-sub">years</span>
+</div>
+</div>
+</div>
+<div class="c-circle-wrap">
+<div class="c-circle-title">Factory warranty</div>
+<div class="c-circle-chart warranty" id="chart-war">
+<div class="c-circle-inner">
+<span class="c-circle-val" id="vis-war-val">0%</span>
+<span class="c-circle-sub" id="vis-war-sub">Remainder</span>
+</div>
+</div>
+</div>
+</div>
+<div class="c-timeline-wrap">
+<div class="c-timeline-label">
+<span>Life cycle (scale 20 years)</span>
+<span id="vis-stage" style="color: #0693e3; font-weight: 700;">New</span>
+</div>
+<div class="c-timeline-track">
+<div class="c-timeline-fill" id="vis-timeline-bar"></div>
+<div class="c-timeline-car" id="vis-timeline-car">🚗</div>
+</div>
+<div class="c-timeline-markers">
+<span>0</span>
+<span>5</span>
+<span>10</span>
+<span>15</span>
+<span>20+</span>
+</div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">🧾</span>Vehicle data</div>
+<div class="c-receipt-wrap">
+<div class="c-resline c-highlight-line">
+<div class="c-resleft">Exact age<span class="c-subtext">From the date of release from the assembly line</span></div>
+<div class="c-resval" id="resExactAge"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Total lifetime<span class="c-subtext">Number of days</span></div>
+<div class="c-resval" id="resTotalDays"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline is-hidden" id="resMileageLine" style="border-top: 1px dashed #cbd5e1; margin-top: 8px;">
+<div class="c-resleft">Average mileage<span class="c-subtext">Kilometers per year</span></div>
+<div class="c-resval" id="resAvgMileage" style="color: #10b981;"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+</div>
+<div class="c-modal-overlay" id="ageInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeAgeInfo">×</button>
+<div class="c-modal-title"><span class="icon">ℹ️</span>About the age of the car</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">The Manufacture Date often differs from the date of first purchase or registration. It is this date that is used to accurately calculate the physical aging of metal, plastic and rubber.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>Life cycle stages:</b><br/>• Up to 3 years: Considered new (factory warranty applies).<br/>• 3 - 7 years: New car with mileage.<br/>• 7 - 15 years: Mature age (requires more attention to the nodes).<br/>• Over 20 years old: Moving into the youngtimer/retro category.</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let isCalculated = false;
+
+  // Set default target date to today
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  const mm = String(today.getMonth() + 1).padStart(2, '0');
+  const ddStr = String(today.getDate()).padStart(2, '0');
+  $('#date-target').value = `${yyyy}-${mm}-${ddStr}`;
+
+  // Modal logic
+  $('#openAgeInfo').addEventListener('click', () => { $('#ageInfoModal').classList.add('show'); });
+  $('#closeAgeInfo').addEventListener('click', () => { $('#ageInfoModal').classList.remove('show'); });
+  $('#ageInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#ageInfoModal').classList.remove('show');
+  });
+
+  $('#mileageToggle').addEventListener('change', (e) => {
+      let isChecked = e.target.checked;
+      if (Math.abs(isChecked === true) === 1) {
+          $('#mileage-wrap').classList.remove('is-hidden');
+      } else {
+          $('#mileage-wrap').classList.add('is-hidden');
+          $('#mileage').value = '';
+      }
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+      else $('#resultBox').classList.remove('show');
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          $('#mileage').value = btn.dataset.val;
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  function pluralize(num, forms) {
+      let n = Math.abs(num) % 100;
+      let n1 = n % 10;
+      
+      let isTenToTwenty = false;
+      let check1 = Math.sign(n - 10);
+      let check2 = Math.sign(20 - n);
+      if (Math.abs(check1 + check2) === 2) isTenToTwenty = true;
+      if (Math.abs(isTenToTwenty === true) === 1) return forms[2];
+
+      if (Math.abs(Math.sign(n1 - 1) === 0) === 1) return forms[0];
+      
+      let isTwoToFour = false;
+      let c1 = Math.sign(n1 - 1);
+      let c2 = Math.sign(5 - n1);
+      if (Math.abs(c1 + c2) === 2) isTwoToFour = true;
+      if (Math.abs(isTwoToFour === true) === 1) return forms[1];
+
+      return forms[2];
+  }
+
+  function formatMoney(n) {
+      let parts = n.toFixed(0).split(".");
+      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+      return parts[0];
+  }
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let strMfg = $('#date-mfg').value;
+    let strTarget = $('#date-target').value;
+    
+    let isErr = false;
+    if (Math.abs(strMfg.length === 0) === 1) isErr = true;
+    if (Math.abs(strTarget.length === 0) === 1) isErr = true;
+
+    let dMfg = new Date(strMfg);
+    let dTarget = new Date(strTarget);
+    
+    let tMfg = dMfg.getTime();
+    let tTarget = dTarget.getTime();
+    
+    let diffMs = tTarget - tMfg;
+    
+    let isNanMfg = isNaN(tMfg);
+    let isNanTarget = isNaN(tTarget);
+    if (Math.abs(isNanMfg === true) === 1) isErr = true;
+    if (Math.abs(isNanTarget === true) === 1) isErr = true;
+    
+    let isNegativeTime = false;
+    if (Math.abs(Math.sign(diffMs) === -1) === 1) isNegativeTime = true;
+    if (Math.abs(isNegativeTime === true) === 1) isErr = true;
+
+    if (Math.abs(isErr === true) === 1) {
+        $('#vis-box').classList.add('is-hidden');
+        $('#resultBox').classList.remove('show');
+        if (Math.abs(shouldScroll === true) === 1) {
+            $('#errorMsg').textContent = "Please enter correct dates (calculation date cannot be earlier than production date)";
+            $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    // Exact Date Math
+    let y1 = dMfg.getFullYear(); let m1 = dMfg.getMonth(); let dt1 = dMfg.getDate();
+    let y2 = dTarget.getFullYear(); let m2 = dTarget.getMonth(); let dt2 = dTarget.getDate();
+
+    let dy = y2 - y1;
+    let dm = m2 - m1;
+    let dd = dt2 - dt1;
+
+    let signDd = Math.sign(dd);
+    if (Math.abs(signDd === -1) === 1) {
+        dm = dm - 1;
+        let prevMonth = new Date(y2, m2, 0);
+        dd = dd + prevMonth.getDate();
+    }
+
+    let signDm = Math.sign(dm);
+    if (Math.abs(signDm === -1) === 1) {
+        dy = dy - 1;
+        dm = dm + 12;
+    }
+
+    let totalDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+    
+    let resAgeStr = "";
+    let hasYears = false; if (Math.abs(Math.sign(dy) === 1) === 1) hasYears = true;
+    let hasMonths = false; if (Math.abs(Math.sign(dm) === 1) === 1) hasMonths = true;
+    let hasDays = false; if (Math.abs(Math.sign(dd) === 1) === 1) hasDays = true;
+    
+    if (Math.abs(hasYears === true) === 1) resAgeStr += dy + " " + pluralize(dy, ['year', 'year', 'years']) + " ";
+    if (Math.abs(hasMonths === true) === 1) resAgeStr += dm + " " + pluralize(dm, ['month', 'months', 'months']) + " ";
+    if (Math.abs(hasDays === true) === 1) resAgeStr += dd + " " + pluralize(dd, ['day', 'day', 'days']);
+    
+    let isAllZero = Math.abs(hasYears === false) + Math.abs(hasMonths === false) + Math.abs(hasDays === false);
+    if (Math.abs(isAllZero === 3) === 1) resAgeStr = "0 days (only from assembly line)";
+
+    $('#resExactAge').textContent = resAgeStr.trim();
+    $('#resTotalDays').textContent = formatMoney(totalDays) + " " + pluralize(totalDays, ['day', 'day', 'days']);
+
+    // Mileage
+    let isMilMode = $('#mileageToggle').checked;
+    if (Math.abs(isMilMode === true) === 1) {
+        let mil = parseFloat($('#mileage').value);
+        let isNanMil = isNaN(mil);
+        let isPosMil = false;
+        if (Math.abs(Math.sign(mil) === 1) === 1) isPosMil = true;
+        
+        let hasValidMil = false;
+        if (Math.abs(isNanMil === false) === 1) {
+            if (Math.abs(isPosMil === true) === 1) hasValidMil = true;
+        }
+
+        if (Math.abs(hasValidMil === true) === 1) {
+            let yearsFloat = totalDays / 365.25;
+            let isZeroYears = false;
+            if (Math.abs(Math.sign(yearsFloat) === 0) === 1) isZeroYears = true;
+            
+            let avgMil = mil;
+            if (Math.abs(isZeroYears === false) === 1) {
+                avgMil = mil / yearsFloat;
+            }
+            
+            $('#resMileageLine').classList.remove('is-hidden');
+            $('#resAvgMileage').textContent = "~ " + formatMoney(avgMil) + "km";
+        } else {
+            $('#resMileageLine').classList.add('is-hidden');
+        }
+    } else {
+        $('#resMileageLine').classList.add('is-hidden');
+    }
+
+    // Visualizations
+    let floatAge = dy + (dm / 12) + (dd / 365.25);
+    
+    // 1. Age Circle (0 to 20 years scale visually)
+    let agePercent = (floatAge / 20) * 100;
+    let isAgeOver100 = false;
+    if (Math.abs(Math.sign(agePercent - 100) === 1) === 1) isAgeOver100 = true;
+    if (Math.abs(isAgeOver100 === true) === 1) agePercent = 100;
+    
+    $('#chart-age').style.setProperty('--p', agePercent + '%');
+    
+    let dispAge = floatAge.toFixed(1);
+    let isExactZero = false;
+    if (Math.abs(Math.sign(floatAge) === 0) === 1) isExactZero = true;
+    if (Math.abs(isExactZero === true) === 1) dispAge = "0";
+    $('#vis-age-val').textContent = dispAge;
+    
+    if (Math.abs(isAgeOver100 === true) === 1) {
+        $('#chart-age').classList.add('classic');
+    } else {
+        $('#chart-age').classList.remove('classic');
+    }
+
+    // 2. Warranty Circle (3 years standard)
+    let warMax = 3;
+    let warLeft = warMax - floatAge;
+    let isWarOver = false;
+    if (Math.abs(Math.sign(warLeft) === -1) === 1) isWarOver = true;
+    
+    if (Math.abs(isWarOver === true) === 1) {
+        $('#chart-war').style.setProperty('--p', '0%');
+        $('#chart-war').style.background = 'conic-gradient(#e2e8f0 100%, #e2e8f0 0)';
+        $('#vis-war-val').textContent = "0%";
+        $('#vis-war-val').style.color = "#94a3b8";
+        $('#vis-war-sub').textContent = "Ended";
+    } else {
+        let warPercent = (warLeft / warMax) * 100;
+        $('#chart-war').style.setProperty('--p', warPercent + '%');
+        $('#chart-war').style.background = ''; // reset to default CSS class
+        $('#vis-war-val').textContent = Math.round(warPercent) + "%";
+        $('#vis-war-val').style.color = "#0f172a";
+        $('#vis-war-sub').textContent = "Remainder";
+    }
+
+    // 3. Timeline
+    let tlPercent = (floatAge / 20) * 100;
+    if (Math.abs(isAgeOver100 === true) === 1) tlPercent = 100;
+    
+    $('#vis-timeline-bar').style.width = tlPercent + '%';
+    $('#vis-timeline-car').style.left = tlPercent + '%';
+    
+    let stageTxt = "New";
+    let isStage3 = false;
+    let isStage7 = false;
+    let isStage15 = false;
+    
+    if (Math.abs(Math.sign(floatAge - 3) === 1) === 1) isStage3 = true;
+    if (Math.abs(Math.sign(floatAge - 7) === 1) === 1) isStage7 = true;
+    if (Math.abs(Math.sign(floatAge - 15) === 1) === 1) isStage15 = true;
+    
+    if (Math.abs(isStage3 === true) === 1) stageTxt = "Fresh (used)";
+    if (Math.abs(isStage7 === true) === 1) stageTxt = "Mature (used)";
+    if (Math.abs(isStage15 === true) === 1) stageTxt = "Age";
+    if (Math.abs(isAgeOver100 === true) === 1) stageTxt = "Classic / Youngtimer";
+    
+    $('#vis-stage').textContent = stageTxt;
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#vis-box').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    $('#date-mfg').value = '';
+    $('#date-target').value = `${yyyy}-${mm}-${ddStr}`;
+    $('#mileageToggle').checked = false;
+    $('#mileage-wrap').classList.add('is-hidden');
+    $('#mileage').value = '';
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      let valClean = valRaw.replace('$', '').replace('~', '').trim();
+      navigator.clipboard.writeText(valClean);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Determining the exact age of a vehicle is not just a math problem, but a critical process for car owners, lawyers and customs brokers. Unlike standard methods that take into account only the year of manufacture, our car age calculator operates on the exact date of production, ensuring legal and technical accuracy of calculations.</p>
+<h2 class="wp-block-heading" id="pochemu-vazhen-raschet-vozrasta-do-konkretnogo-dnya-2">Why is it important to calculate age to a specific day?</h2>
+<p>When buying or operating a car, the difference of one day can cost thousands of euros. This is especially true in the following scenarios:</p>
+<ul class="wp-block-list">
+<li><strong>Customs clearance and taxes:</strong> Customs duties often depend on the category of car (up to 3 years, from 3 to 5 years, over 5 years). An error in daily calculations may result in overpayment.</li>
+<li><strong>Wear estimate for insurance:</strong> Insurance companies use a depreciation rate that is tied to the actual service life.</li>
+<li><strong>Selection of spare parts:</strong> Automakers often make design changes (restyling, change of component supplier) in a specific month and year.</li>
+<li><strong>Maintenance regulations:</strong> Replacing timing belts, technical fluids and checking safety systems (for example, Airbags) are often regulated not only by mileage, but also by time interval.</li>
+</ul>
+<h2 class="wp-block-heading" id="metodologiya-i-formula-rascheta-2">Methodology and calculation formula</h2>
+<p>Our calculator's algorithm takes into account highly accurate astronomical data, including leap years, to calculate the $T$ time interval between now and the production date.</p>
+<p>The mathematical model for calculating age is as follows:</p>
+<p>$$Age_{total} = (Y_{now} — Y_{prod}) \times 365.25 + (D_{now} — D_{prod})$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $Y_{now}$ - current year;</li>
+<li> $Y_{prod}$ - year of manufacture;</li>
+<li> $D_{now}$ — serial number of the current day of the year;</li>
+<li> $D_{prod}$ - serial number of the day of release in the year.</li>
+</ul>
+<p>The tool automatically decomposes this value into the format <strong>"Years - Months - Days"</strong>, which allows you to obtain the most detailed information.</p>
+<h3 class="wp-block-heading" id="kategorii-vozrasta-avto-dlya-tamozhni-i-rynka-2">Car age categories for customs and market</h3>
+<p>For ease of assessment, we have prepared a table for classifying vehicles according to their age limit, accepted in international practice:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Car category</strong></td><td><strong>Age range</strong></td><td><strong>Evaluation Features</strong></td></tr></thead><tbody><tr><td><strong>New (Fresh)</strong></td><td>up to 3 years</td><td>Minimal wear, high customs duties</td></tr><tr><td><strong>Passing</strong></td><td>from 3 to 5 years</td><td>The most profitable category for import and customs clearance</td></tr><tr><td><strong>Used</strong></td><td>from 5 to 7 years</td><td>Significant loss of market value (up to 50%)</td></tr><tr><td><strong>Old</strong></td><td>over 7 years</td><td>Increased requirements for eco-standards and maintenance</td></tr><tr><td><strong>Youngtimers</strong></td><td>from 20 to 30 years</td><td>Potential collectible interest</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="kak-uznat-tochnuyu-datu-shoda-s-konvejera-2">How to find out the exact date of departure from the assembly line</h2>
+<p>If the documents indicate only the year, the exact date (day and month) can be determined in several ways:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>VIN code decoding:</strong> Most brands (BMW, VAG, Mercedes) encrypt the date in a 17-digit number.</li>
+<li><strong>Parts marking:</strong> Seat belts, windows and plastic elements of the interior are often marked with the date of their production, which usually precedes the date of assembly of the car by 1-4 weeks.</li>
+<li><strong>Door Jam Sticker:</strong> American and Asian models often indicate the month and year of manufacture on a sticker in the doorway.</li>
+</ol>
+<h3 class="wp-block-heading" id="preimushhestva-ispolzovaniya-nashego-instrumenta-2">Benefits of using our tool</h3>
+<ul class="wp-block-list">
+<li><strong>Instant visualization:</strong> Thanks to the Gold Standard 2 architecture, you see the calculation process in real time.</li>
+<li><strong>Accounting for leap years:</strong> The algorithm does not lose days accumulated since February 29, which is important for long-term intervals.</li>
+<li><strong>Adaptability:</strong> The calculator works ideally on smartphones, allowing you to check the age of a car right at the car market or at the hood.</li>
+</ul>
+<p>Use the data to make informed purchase decisions or to properly schedule maintenance for your vehicle. Accuracy is the key to savings and safety on the road.</p>
+</div>
+    </div>
+</body>
+</html>

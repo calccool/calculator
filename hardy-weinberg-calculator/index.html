@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardy-Weinberg Equilibrium Calculator: Calculation of Frequencies and Chi-Square</title>
+    <meta name="description" content="Hardy-Weinberg Equilibrium Calculator: Calculation of Frequencies and Chi-Square - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Hardy-Weinberg Equilibrium Calculator: Calculation of Frequencies and Chi-Square</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (строго по шаблону) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-row.cols-3 { grid-template-columns: repeat(3, minmax(220px, 1fr)); }
+    .c-row.single { grid-template-columns: 1fr; }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    .c-help {font-size:12px;color:#777;text-align:center;}
+    .c-input, .c-select, .c-textarea { width:100%; padding:12px 14px; border:1px solid #ccc; border-radius:8px; font-size:14px; }
+    .c-input:focus, .c-select:focus, .c-textarea:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap;margin-bottom: 16px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+
+    /* Результат */
+    .c-result { border:1px dashed #0693e3; border-radius:10px; padding:10px; background:#fff; display:none; }
+    .c-result.show { display:grid; }
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #0693e3; grid-template-columns: 0.4fr 0.5fr 0.1fr; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; }
+    
+    /* Статусы */
+    .c-resval.ok { color: #2e7d32; }
+    .c-resval.bad { color: #d32f2f; }
+
+    /* Кнопка копирования */
+    .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden;
+      background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+      background-repeat:no-repeat; background-position:center; background-size:20px 20px; }
+
+    .is-hidden { display:none !important; }
+    @media (max-width: 860px) { .c-resval { font-size:14px; } }
+    @media (max-width: 720px) { .c-row.cols-3 { grid-template-columns: 1fr; } }
+@media (max-width: 480px) {
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 4px; padding: 12px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 19px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 24px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-row single">
+<div class="c-field">
+<label class="c-label" for="calcMode">Data type</label>
+<select class="c-select" id="calcMode">
+<option selected="" value="count">Number of individuals (AA, Aa, aa)</option>
+<option value="freq">Allele frequency (p, q)</option>
+</select>
+</div>
+</div>
+<div id="blockCount">
+<div class="c-row cols-3">
+<div class="c-field">
+<label class="c-label" for="obsAA">Dominant<span class="c-term">AA</span></label>
+<input class="c-input" id="obsAA" min="0" step="1" type="number" value="50"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="obsAa">Heterozygote<span class="c-term">Aa</span></label>
+<input class="c-input" id="obsAa" min="0" step="1" type="number" value="30"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="obs_aa">Recessive<span class="c-term">aa</span></label>
+<input class="c-input" id="obs_aa" min="0" step="1" type="number" value="20"/>
+</div>
+</div>
+</div>
+<div class="is-hidden" id="blockFreq">
+<div class="c-row single">
+<div class="c-field">
+<label class="c-label" for="freqP">Allele frequency p (A)</label>
+<input class="c-input" id="freqP" max="1" min="0" step="0.01" type="number" value="0.6"/>
+<div class="c-help">The frequency q will be calculated automatically (1 - p).</div>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div aria-live="polite" class="c-result" id="resultBox">
+<div class="c-resline is-hidden" id="validationError" style="background:#ffdddd; color:#cc0000;">
+<div class="c-resleft">Error:</div>
+<div class="c-resval" id="errorMsg" style="color:#cc0000; font-weight: 500;"></div>
+<button class="c-copy is-hidden" disabled=""></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Alleles (p/q)</div>
+<div class="c-resval" id="resAlleles"></div>
+<button aria-label="Copy alleles" class="c-copy" id="copyAlleles" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Expected frequencies (AA/Aa/aa)</div>
+<div class="c-resval" id="resFreqs"></div>
+<button aria-label="Copy frequencies" class="c-copy" id="copyFreqs" title="Copy"></button>
+</div>
+<div class="c-resline is-hidden" id="resChiRow">
+<div class="c-resleft">Chi-square (χ²)</div>
+<div class="c-resval" id="resChi"></div>
+<button aria-label="Copy Hee" class="c-copy" id="copyChi" title="Copy"></button>
+</div>
+<div class="c-resline single is-hidden" id="resStatusRow">
+<div class="c-resleft">Conclusion (at p=0.05)</div>
+<div class="c-resval" id="resStatus"></div>
+<button class="c-copy is-hidden" disabled=""></button>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика =====
+  const $ = (s) => wrap.querySelector(s);
+  
+  const resBox = $('#resultBox');
+  const errorBox = $('#validationError');
+  const errorMsg = $('#errorMsg');
+  
+  const calcMode = $('#calcMode');
+  const blockCount = $('#blockCount');
+  const blockFreq = $('#blockFreq');
+  
+  const outputs = {
+      alleles: $('#resAlleles'),
+      freqs: $('#resFreqs'),
+      chi: $('#resChi'),
+      status: $('#resStatus'),
+      chiRow: $('#resChiRow'),
+      statusRow: $('#resStatusRow')
+  };
+
+  // ----- Вспомогательные функции -----
+  function num(v){ const n = parseFloat(String(v).replace(',', '.')); return Number.isFinite(n) ? n : NaN; }
+  
+  function fmt(v, d=3){
+    if (isNaN(v)) return '—';
+    return v.toLocaleString('ru-RU', { maximumFractionDigits: d });
+  }
+
+  // ИСПРАВЛЕНО: Функция isZero
+  function isZero(val) {
+    const tolerance = 1e-9;
+    const check = Math.sign(tolerance - Math.abs(val));
+    if (check === -1) return false;
+    return true;
+  }
+  
+  function setError(msg) {
+    errorMsg.textContent = msg;
+    errorBox.classList.remove('is-hidden');
+    resBox.classList.add('show');
+  }
+  function hideError() {
+    errorBox.classList.add('is-hidden');
+  }
+  
+  // Переключение режимов
+  function updateUI() {
+      const mode = calcMode.value;
+      if (mode === 'count') {
+          blockCount.classList.remove('is-hidden');
+          blockFreq.classList.add('is-hidden');
+      } else {
+          blockCount.classList.add('is-hidden');
+          blockFreq.classList.remove('is-hidden');
+      }
+      resBox.classList.remove('show');
+  }
+
+  // ----- Главный расчет -----
+  function calc() {
+    hideError();
+    
+    const mode = calcMode.value;
+    
+    let p = 0, q = 0;
+    let AA_obs = 0, Aa_obs = 0, aa_obs = 0;
+    let Total = 0;
+    let calcChi = false;
+
+    // 1. Сбор данных
+    if (mode === 'count') {
+        AA_obs = num($('#obsAA').value);
+        Aa_obs = num($('#obsAa').value);
+        aa_obs = num($('#obs_aa').value);
+        
+        if (isNaN(AA_obs) || isNaN(Aa_obs) || isNaN(aa_obs)) {
+             setError('Please enter valid numbers.');
+             return;
+        }
+        
+        Total = AA_obs + Aa_obs + aa_obs;
+        if (isZero(Total)) {
+             setError('The total number of individuals must be greater than 0.');
+             return;
+        }
+        
+        // Расчет частот аллелей из наблюдений
+        // p = (2*AA + Aa) / (2*N)
+        p = (2 * AA_obs + Aa_obs) / (2 * Total);
+        q = 1 - p;
+        
+        calcChi = true; // Будем считать Хи-квадрат
+        
+    } else { // freq
+        p = num($('#freqP').value);
+        
+        if (isNaN(p)) { setError('Enter frequency p.'); return; }
+        // ИСПРАВЛЕНО: p < 0 или p > 1
+        if (Math.sign(p) === -1 || Math.sign(p - 1) === 1) {
+             setError('The frequency must be between 0 and 1.');
+             return;
+        }
+        q = 1 - p;
+        
+        calcChi = false; // Нет наблюдаемых данных для теста
+    }
+    
+    // 2. Ожидаемые частоты (Харди-Вайнберг)
+    // p^2 + 2pq + q^2 = 1
+    const AA_exp_freq = p * p;
+    const Aa_exp_freq = 2 * p * q;
+    const aa_exp_freq = q * q;
+
+    // 3. Хи-квадрат (только для mode=count)
+    if (calcChi) {
+        // Ожидаемые количества
+        const AA_exp = AA_exp_freq * Total;
+        const Aa_exp = Aa_exp_freq * Total;
+        const aa_exp = aa_exp_freq * Total;
+        
+        // Chi2 = Sum ( (Obs - Exp)^2 / Exp )
+        let chi2 = 0;
+        
+        // Избегаем деления на 0
+        if (isZero(AA_exp) === false) chi2 += Math.pow(AA_obs - AA_exp, 2) / AA_exp;
+        if (isZero(Aa_exp) === false) chi2 += Math.pow(Aa_obs - Aa_exp, 2) / Aa_exp;
+        if (isZero(aa_exp) === false) chi2 += Math.pow(aa_obs - aa_exp, 2) / aa_exp;
+        
+        outputs.chi.textContent = fmt(chi2, 4);
+        
+        // Критическое значение для 1 степени свободы (df = 3 генотипа - 2 аллеля = 1)
+        // при p=0.05 равно 3.841
+        const criticalVal = 3.841;
+        
+        let statusText = '';
+        let statusClass = '';
+        
+        // ИСПРАВЛЕНО: chi2 > critical
+        if (Math.sign(chi2 - criticalVal) === 1) {
+            statusText = 'The population is NOT in equilibrium (the differences are significant)';
+            statusClass = 'bad';
+        } else {
+            statusText = 'Population in equilibrium (differences are random)';
+            statusClass = 'ok';
+        }
+        
+        outputs.status.textContent = statusText;
+        outputs.status.className = `c-resval ${statusClass}`;
+        
+        outputs.chiRow.classList.remove('is-hidden');
+        outputs.statusRow.classList.remove('is-hidden');
+        
+    } else {
+        outputs.chiRow.classList.add('is-hidden');
+        outputs.statusRow.classList.add('is-hidden');
+    }
+
+    // 4. Вывод
+    outputs.alleles.textContent = `p=${fmt(p)}, q=${fmt(q)}`;
+    outputs.freqs.textContent = `${fmt(AA_exp_freq)} / ${fmt(Aa_exp_freq)} / ${fmt(aa_exp_freq)}`;
+
+    resBox.classList.add('show');
+  }
+
+  // ----- Слушатели -----
+  calcMode.addEventListener('change', updateUI);
+  $('#calcBtn').addEventListener('click', calc);
+  $('#resetBtn').addEventListener('click', () => {
+    $('#obsAA').value = '50';
+    $('#obsAa').value = '30';
+    $('#obs_aa').value = '20';
+    $('#freqP').value = '0.6';
+    $('#calcMode').value = 'count';
+    updateUI();
+    resBox.classList.remove('show');
+    hideError();
+  });
+
+  // Копирование
+  wrap.addEventListener('click', (e) => {
+    let textToCopy = null;
+    let targetId = e.target.id;
+    
+    if (targetId === 'copyAlleles') textToCopy = outputs.alleles.textContent;
+    if (targetId === 'copyFreqs') textToCopy = outputs.freqs.textContent;
+    if (targetId === 'copyChi') textToCopy = outputs.chi.textContent;
+    
+    if (textToCopy) {
+      try { navigator.clipboard?.writeText(textToCopy); } catch (_) {}
+    }
+  });
+
+  // Enter
+  wrap.addEventListener('keydown', (e) => {
+    // ИСПРАВЛЕНО: Замена &&
+    if (e.key === 'Enter') {
+      if (e.target.matches('input, select')) {
+        e.preventDefault();
+        calc();
+      }
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<h2 class="wp-block-heading" id="analiz-populyatsionnoj-genetiki-onlajn-2">Population genetics analysis online</h2>
+<p>The Hardy-Weinberg law is the foundation of population genetics. He states that in the absence of disturbances, allele and genotype frequencies in a population remain constant from generation to generation.</p>
+<p>Our calculator is a professional tool that allows you not only to find allele frequencies, but also to statistically check whether the population under study is in a state of genetic equilibrium.</p>
+<h2 class="wp-block-heading" id="osnovnye-formuly-the-equations-2">Basic formulas (The Equations)</h2>
+<p>For a locus with two alleles (usually referred to as $A$ and $a$ ), two basic equations are used.</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Allele frequency:</strong> $$p + q = 1$$
+<ul class="wp-block-list">
+<li><strong>$p$</strong> — frequency of the dominant allele ( $A$ ).</li>
+<li><strong>$q$</strong> — frequency of the recessive allele ( $a$ ).</li>
+</ul>
+</li>
+<li><strong>Genotype frequency:</strong> $$p^2 + 2pq + q^2 = 1$$
+<ul class="wp-block-list">
+<li><strong>$p^2$</strong> — frequency of homozygous dominant individuals ( $AA$ ).</li>
+<li><strong>$2pq$</strong> — frequency of heterozygotes ( $Aa$ ).</li>
+<li><strong>$q^2$</strong> — frequency of homozygous recessive individuals ( $aa$ ).</li>
+</ul>
+</li>
+</ol>
+<h2 class="wp-block-heading" id="vozmozhnosti-kalkulyatora-2">Calculator features</h2>
+<p>Unlike simple school calculators, our tool works in two modes and performs statistical analysis:</p>
+<h3 class="wp-block-heading" id="1-rezhim-kolichestvo-osobej-2">1. “Number of individuals” mode</h3>
+<p>Ideal for processing experimental data. You enter the observed number of individuals of each genotype ( $AA, Aa, aa$ ), and the program:</p>
+<ul class="wp-block-list">
+<li>Calculates the frequencies $p$ and $q$ .</li>
+<li>Calculates <strong>expected</strong> number of individuals (if the population were in perfect equilibrium).</li>
+<li>Conducts a test <strong>Pearson chi-square ( $\chi^2$ )</strong> to check the statistical significance of deviations.</li>
+</ul>
+<h3 class="wp-block-heading" id="2-rezhim-chastota-allelej-2">2. “Allele frequency” mode</h3>
+<p>Useful for theoretical modeling. You specify a known frequency (for example, $p = 0.6$ ), and the calculator instantly builds the distribution of genotypes in the population.</p>
+<h2 class="wp-block-heading" id="interpretatsiya-testa-hi-kvadrat-chi-3">Interpretation of the Chi-square test ( $\chi^2$ )</h2>
+<p>This is the most important part of analyzing real populations. The calculator compares Observed with Expected.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>χ2 value</strong></td><td><strong>Conclusion (at p=0.05, df=1)</strong></td><td><strong>What does it mean?</strong></td></tr></thead><tbody><tr><td><strong>&lt; 3.841</strong></td><td><strong>In balance</strong></td><td>The differences between observed and expected data are small and random. The Hardy-Weinberg law is observed.</td></tr><tr><td><strong>&gt; 3.841</strong></td><td><strong>NOT in balance</strong></td><td>The differences are statistically significant. The population is influenced by evolutionary factors or the sampling is not random.</td></tr></tbody></table></div></figure>
+<h3 class="wp-block-heading" id="usloviya-soblyudeniya-ravnovesiya-2">Conditions for maintaining equilibrium</h3>
+<p>If the calculator shows that the population <strong>not located</strong> in equilibrium (high Chi-square), this means that one of the 5 key conditions of the Hardy-Weinberg law is violated:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>No mutations:</strong> No new alleles arise.</li>
+<li><strong>No migration (gene flow):</strong> Individuals do not leave the population and do not enter it from the outside.</li>
+<li><strong>Random crossing (panmixia):</strong> Individuals choose partners without genotypic preferences.</li>
+<li><strong>No natural selection:</strong> All genotypes have an equal chance of survival and reproduction.</li>
+<li><strong>Infinitely large population:</strong> To exclude the influence of genetic drift.</li>
+</ol>
+</div>
+    </div>
+</body>
+</html>

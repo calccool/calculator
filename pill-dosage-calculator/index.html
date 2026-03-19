@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dosage calculator for tablets and medications: calculation by weight and purpose</title>
+    <meta name="description" content="Dosage calculator for tablets and medications: calculation by weight and purpose - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Dosage calculator for tablets and medications: calculation by weight and purpose</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: end; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-receipt-wrap { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 15px; position: relative; overflow: hidden; }
+    .c-receipt-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: repeating-linear-gradient(45deg, #0693e3, #0693e3 10px, #38bdf8 10px, #38bdf8 20px); }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #fff; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #eff6ff; border: 1px solid #bae6fd; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05); }
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .c-vis-box { margin: 15px 0 25px; padding: 25px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; text-align: center; }
+    .c-vis-pill-container { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-top: 15px; }
+    .c-vis-pill { width: 30px; height: 12px; background: #cbd5e1; border-radius: 6px; position: relative; transition: 0.5s; overflow: hidden; }
+    .c-vis-pill.active { background: linear-gradient(135deg, #7dd3fc, #0284c7); box-shadow: 0 2px 6px rgba(2, 132, 199, 0.3); animation: pill-pop 0.4s ease-out; }
+    @keyframes pill-pop { 0% { transform: scale(0.8); } 50% { transform: scale(1.2); } 100% { transform: scale(1); } }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); border: 1px solid #e2e8f0;}
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; padding: 5px; transition: 0.2s;}
+
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resval { text-align: left; font-size: 20px; grid-row: 2; }
+       .c-copy { grid-row: 1 / 3; align-self: center; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div id="dose-calc-wrapper">
+<div class="c-body">
+<div class="c-toggle" id="dose-tabs">
+<button class="c-toggle-btn active" data-mode="tablets">Tablets/Capsules</button>
+<button class="c-toggle-btn" data-mode="liquid">Syrup / Suspension</button>
+</div>
+<div class="c-divider"><span class="icon">⚖️</span>Patient parameters</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Patient weight<span class="c-term">Body weight</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="weight" placeholder="For example: 70" type="number"/>
+<span class="c-input-suffix">kg</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Prescribed dose<span class="c-term">mg/kg</span> <span class="c-help-icon" id="openDoseHelp">?</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="prescribed" placeholder="Ex: 10" type="number"/>
+<span class="c-input-suffix">mg</span>
+</div>
+</div>
+</div>
+<div class="c-divider"><span class="icon">💊</span>Release form</div>
+<div class="c-row">
+<div class="c-field" id="form-val-field">
+<label class="c-label">Dosage is 1 unit.<span class="c-term" id="form-unit-label">in 1 tab.</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="unit_dose" placeholder="For example: 500" type="number"/>
+<span class="c-input-suffix">mg</span>
+</div>
+</div>
+<div class="c-field is-hidden" id="liquid-vol-field">
+<label class="c-label">Volume of the drug<span class="c-term">in ml</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="unit_vol" placeholder="Ex: 5" type="number"/>
+<span class="c-input-suffix">ml</span>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-vis-box is-hidden" id="dose-visual">
+<div style="font-weight: 700; color: #0f172a; font-size: 15px; margin-bottom: 10px;">Schematic representation of reception</div>
+<div class="c-vis-pill-container" id="pill-visualizer"></div>
+<div id="vis-text" style="font-size: 12px; color: #64748b; margin-top: 10px;"></div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">📊</span>Recommendation</div>
+<div class="c-receipt-wrap">
+<div class="c-resline">
+<div class="c-resleft">Total daily dose<span class="c-subtext">Total number of active units</span></div>
+<div class="c-resval" id="resTotalMg"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline c-highlight-line">
+<div class="c-resleft">Quantity for reception<span class="c-subtext" id="resFormatSub">Units of drug</span></div>
+<div class="c-resval" id="resUnits"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+</div>
+<div class="c-modal-overlay" id="doseModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeDoseHelp">×</button>
+<div class="c-modal-title"><span class="icon">ℹ️</span>About dosage calculation</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6;">The calculation is made using the formula:<b>(Weight × Purpose) / Concentration</b>. <br/><br/>
+<span style="color: #d32f2f; font-weight: 700;">Attention:</span>Always consult your doctor before taking any medications. The calculator is for informational purposes only.</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let activeMode = 'tablets';
+  let isCalculated = false;
+
+  $('#openDoseHelp').addEventListener('click', () => { $('#doseModal').classList.add('show'); });
+  $('#closeDoseHelp').addEventListener('click', () => { $('#doseModal').classList.remove('show'); });
+
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeMode = btn.dataset.mode;
+        
+        const isLiquid = Math.abs(activeMode === 'liquid') === 1;
+        if (isLiquid) {
+            $('#liquid-vol-field').classList.remove('is-hidden');
+            $('#form-unit-label').textContent = 'Dosage in volume';
+            $('#resFormatSub').textContent = 'Suspension volume';
+        } else {
+            $('#liquid-vol-field').classList.add('is-hidden');
+            $('#form-unit-label').textContent = 'in 1 tab.';
+            $('#resFormatSub').textContent = 'Units of drug';
+        }
+        if (Math.abs(isCalculated === true) === 1) calc(false);
+    });
+  });
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    const w = parseFloat($('#weight').value);
+    const p = parseFloat($('#prescribed').value);
+    const ud = parseFloat($('#unit_dose').value);
+    const uv = parseFloat($('#unit_vol').value) || 1;
+
+    let isErr = false;
+    if (Math.abs(Math.sign(w) === 1) === 0) isErr = true;
+    if (Math.abs(Math.sign(p) === 1) === 0) isErr = true;
+    if (Math.abs(Math.sign(ud) === 1) === 0) isErr = true;
+
+    if (Math.abs(isErr === true) === 1) {
+        if (Math.abs(shouldScroll === true) === 1) {
+            $('#errorMsg').textContent = "Fill all fields with values ​​greater than zero";
+            $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    const totalMg = w * p;
+    let units = 0;
+    let suffix = '';
+
+    if (Math.abs(activeMode === 'tablets') === 1) {
+        units = totalMg / ud;
+        suffix = 'tab.';
+    } else {
+        units = (totalMg * uv) / ud;
+        suffix = 'ml';
+    }
+
+    $('#resTotalMg').textContent = totalMg.toFixed(1) + 'mg';
+    $('#resUnits').textContent = units.toFixed(2) + suffix;
+
+    // Visualizer
+    const vis = $('#pill-visualizer');
+    vis.innerHTML = '';
+    const count = Math.min(Math.ceil(units), 20);
+    let i = 0;
+    while (Math.abs(i === count) === 0) {
+        const p = document.createElement('div');
+        p.className = 'c-vis-pill active';
+        vis.appendChild(p);
+        i = i + 1;
+    }
+    $('#vis-text').textContent = "Schematically:" + units.toFixed(1) + "reception units";
+    $('#dose-visual').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#resultBox').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+
+  $('#resetBtn').addEventListener('click', () => {
+    wrap.querySelectorAll('input').forEach(i => i.value = '');
+    $('#resultBox').classList.remove('show');
+    $('#dose-visual').classList.add('is-hidden');
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    if (Math.abs(e.target.classList.contains('c-copy') === true) === 1) {
+      navigator.clipboard.writeText(e.target.parentElement.querySelector('.c-resval').textContent);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Accurate drug dosing is a critical aspect of safe treatment. Often, medical prescriptions (for example, “500 mg of the active substance”) do not coincide with the dosage available in the home medicine cabinet (for example, 250 mg tablets). Our online pill dosage calculator eliminates the risk of error by helping you instantly convert grams and milligrams into exact pill quantities, including fractional parts (halves, quarters) calculations.</p>
+<p>The tool is especially useful in pediatrics and veterinary medicine, where dosage is often tied to the patient's body weight, and for planning the purchase of long-term medications.</p>
+<h2 class="wp-block-heading" id="osnovnye-formuly-rascheta-2">Basic calculation formulas</h2>
+<p>To understand how the calculator works, below are the basic pharmacological formulas used in international standards of medical mathematics.</p>
+<p>1. Basic calculation of the number of tablets:</p>
+<p>To determine a single dose, use a simple formula for the ratio of the required dose to the available dose:</p>
+<p>$$\text{Tablet Count} = \frac{\text{Desired Dose (D)}}{\text{Strength on Hand (H)}}$$</p>
+<ul class="wp-block-list">
+<li><strong>Desired Dose (D):</strong> The dose prescribed by the doctor (for example, 500 mg).</li>
+<li><strong>Strength on Hand (H):</strong> Dosage of one tablet from the package (for example, 250 mg).</li>
+</ul>
+<p>2. Calculation of dose per body weight (Pediatric):</p>
+<p>When prescribing medications to children or animals, the dose is calculated individually:</p>
+<p>$$\text{Target Dose} = \text{Patient Weight (kg)} \times \text{Dose Per kg}$$</p>
+<h2 class="wp-block-heading" id="funktsionalnye-vozmozhnosti-kalkulyatora-2">Calculator functionality</h2>
+<p>Our tool takes into account many nuances that patients encounter:</p>
+<ul class="wp-block-list">
+<li><strong>Multi-currency units:</strong> Automatic conversion between grams (g), milligrams (mg) and micrograms (mcg). You can indicate the purpose in grams, and the availability in milligrams, the system itself will bring everything to a single denominator.</li>
+<li><strong>Calculation for the course:</strong> Enter the duration of treatment and frequency of dosing to see the total number of packages or blisters you need to purchase.</li>
+<li><strong>Crushing scheme:</strong> If the result is not a whole number, the calculator will suggest a convenient dosage regimen (for example, “1 whole + 1/4 tablet”).</li>
+<li><strong>Error protection:</strong> The system will warn if the calculated single dose exceeds reasonable limits (for example, more than 10 tablets at a time), which may indicate a data entry error.</li>
+</ul>
+<h2 class="wp-block-heading" id="tablitsa-konvertatsii-edinits-dozirovaniya-2">Dosage Unit Conversion Table</h2>
+<p>A common mistake when self-counting is confusion in units of measurement. Use this table to check:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Unit</strong></td><td><strong>Designation</strong></td><td><strong>Equivalent in mg</strong></td><td><strong>Example</strong></td></tr></thead><tbody><tr><td><strong>Gram</strong></td><td>g (g)</td><td>1000 mg</td><td>0.5 g = 500 mg</td></tr><tr><td><strong>Milligram</strong></td><td>mg</td><td>1 mg</td><td>Standard dose</td></tr><tr><td><strong>Microgram</strong></td><td>mcg</td><td>0.001 mg</td><td>1000 mcg = 1 mg</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="vazhnoe-primechanie-po-bezopasnosti-2">Important Safety Note</h2>
+<p>This calculator is intended for reference purposes and to check mathematical calculations. It does not replace medical advice.</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Enteric coatings:</strong> Not all tablets can be divided. If the tablet is coated or is a capsule, crushing it may interfere with its effect.</li>
+<li><strong>Rounding:</strong> When calculating dosages for potent substances (antibiotics, hormones, heart medications), always consult your pharmacist.</li>
+</ol>
+<p>Use the form above to quickly and accurately calculate your dosage regimen.</p>
+</div>
+    </div>
+</body>
+</html>

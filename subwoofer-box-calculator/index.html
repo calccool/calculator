@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subwoofer box volume calculator: calculating GV and FI online</title>
+    <meta name="description" content="Subwoofer box volume calculator: calculating GV and FI online - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Subwoofer box volume calculator: calculating GV and FI online</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+
+    .c-toggle { display:flex; background:#f1f5f9; border-radius:12px; padding:6px; margin-bottom:25px; border:1px solid #e2e8f0; }
+    .c-toggle-btn { flex:1; border:none; background:none; padding:12px; font-weight:600; font-size:14px; color:#64748b; cursor:pointer; border-radius:8px; transition:0.3s; }
+    .c-toggle-btn.active { background:#fff; color:#0693e3; box-shadow:0 2px 8px rgba(0,0,0,0.08); }
+
+    .c-divider { display:flex; align-items:center; gap:10px; margin:25px 0 15px; font-weight:700; color:#444; font-size:14px; text-transform:uppercase; letter-spacing:0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color:#0693e3; font-size:16px; }
+
+    .c-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; margin-bottom:16px; align-items:start; }
+    .c-row.cols-2 { grid-template-columns:repeat(2,minmax(80px,1fr)); }
+    .c-field { display:flex; flex-direction:column; gap:8px; min-width:0; }
+    .c-label { font-weight:600; font-size:14px; color:#111; display:flex; align-items:center; flex-wrap:wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    .c-help-icon { display:inline-flex; align-items:center; justify-content:center; width:18px; height:18px; border-radius:50%; background:#e0f2fe; color:#0284c7; font-size:12px; font-weight:800; cursor:pointer; transition:0.2s; box-shadow:0 2px 4px rgba(2,132,199,0.15); }
+    .c-help-icon:hover { background:#0284c7; color:#fff; transform:scale(1.1); }
+
+    .c-input-wrapper { position:relative; width:100%; }
+    .c-input { width:100%; padding:12px 12px 12px 16px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition:0.2s; background:#fff; color:#333; }
+    .c-input:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-suffix { position:absolute; right:34px; top:50%; transform:translateY(-50%); color:#888; font-size:13px; pointer-events:none; font-weight:600; }
+
+    .c-switch-wrap { display:flex; align-items:center; gap:12px; cursor:pointer; margin-bottom:5px; padding:14px 16px; background:#fff; border-radius:12px; border:1px solid #e2e8f0; box-shadow:0 2px 6px rgba(0,0,0,0.02); transition:0.3s; }
+    .c-switch-wrap:hover { border-color:#cbd5e1; box-shadow:0 4px 10px rgba(0,0,0,0.05); }
+    .c-switch-track { width:44px; height:24px; background:#cbd5e1; border-radius:24px; position:relative; transition:0.3s; flex-shrink:0; }
+    .c-switch-thumb { width:18px; height:18px; background:#fff; border-radius:50%; position:absolute; top:3px; left:3px; transition:0.3s; box-shadow:0 1px 3px rgba(0,0,0,0.2); }
+    input:checked + .c-switch-track { background:#0693e3; }
+    input:checked + .c-switch-track .c-switch-thumb { left:23px; }
+    .c-switch-label { font-weight:600; font-size:15px; color:#333; }
+
+    .c-quick-btn { background:#fff; border:1px solid #cbd5e1; border-radius:6px; padding:6px 10px; font-size:12px; font-weight:600; color:#475569; cursor:pointer; transition:0.2s; }
+    .c-quick-btn:hover { background:#e2e8f0; }
+    .c-quick-btn.active { background:#0693e3; color:#fff; border-color:#006eb5; }
+
+    .c-actions { display:flex; gap:16px; flex-wrap:wrap; margin:20px 0 16px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:13px 20px; cursor:pointer; font-weight:700; transition:all 0.3s ease; flex:1; min-width:160px; font-size:15px; }
+    .c-btn-primary { background:linear-gradient(135deg,#0693e3,#006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow:0 6px 15px rgba(6,147,227,0.35); transform:translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow:0 4px 10px rgba(74,85,101,0.2); }
+
+    .c-error { color:#d32f2f; background:#ffebee; padding:12px 16px; border-radius:10px; margin-bottom:15px; display:none; font-size:14px; font-weight:500; border-left:4px solid #d32f2f; }
+    .c-error.show { display:block; }
+    .is-hidden { display:none !important; }
+
+    /* ── RESULTS ── */
+    .c-result { border:1.5px dashed #0693e3; border-radius:16px; padding:16px; background:#fff; box-shadow:0 8px 24px rgba(0,0,0,0.04); display:none; scroll-margin-top:30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin:0 0 14px; padding:0 4px; font-size:18px; font-weight:700; color:#333; display:flex; align-items:center; gap:8px; }
+
+    .c-rec { display:flex; align-items:center; gap:10px; padding:10px 14px; border-radius:10px; margin-bottom:14px; font-size:13px; font-weight:600; border:1px solid; }
+    .c-rec.good { background:#f0fdf4; border-color:#86efac; color:#15803d; }
+    .c-rec.warn { background:#fefce8; border-color:#fde047; color:#854d0e; }
+    .c-rec.bad  { background:#fef2f2; border-color:#fca5a5; color:#991b1b; }
+    .c-rec-icon { font-size:18px; flex-shrink:0; }
+
+    .c-metrics { display:grid; grid-template-columns:repeat(auto-fit,minmax(110px,1fr)); gap:10px; margin-bottom:14px; }
+    .c-metric { background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:12px 14px; }
+    .c-metric.primary { background:#eff6ff; border-color:#bae6fd; }
+    .c-metric-label { font-size:11px; font-weight:600; color:#94a3b8; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:4px; display:flex; align-items:center; gap:4px; }
+    .c-metric-val { font-size:22px; font-weight:800; color:#0693e3; line-height:1.1; }
+    .c-metric.primary .c-metric-val { color:#0284c7; }
+    .c-metric-unit { font-size:13px; font-weight:600; color:#94a3b8; margin-left:2px; }
+    .c-metric-copy { float:right; border:none; background:none; color:#cbd5e1; font-size:16px; cursor:pointer; padding:0; transition:0.2s; line-height:1; }
+    .c-metric-copy:hover { color:#0693e3; }
+
+    /* ── BOX SECTION ── */
+    .c-section { background:#f8fafc; border:1px solid #e2e8f0; border-radius:14px; padding:16px; margin-top:14px; }
+    .c-section-title { font-size:12px; font-weight:700; color:#64748b; text-transform:uppercase; letter-spacing:0.6px; margin-bottom:14px; display:flex; align-items:center; gap:6px; }
+
+    .c-preset-row { display:flex; gap:8px; margin-bottom:14px; }
+    .c-preset-btn { flex:1; background:#fff; border:1.5px solid #e2e8f0; border-radius:10px; padding:9px 6px 8px; font-size:11px; font-weight:700; color:#64748b; cursor:pointer; transition:0.2s; text-align:center; line-height:1.4; }
+    .c-preset-btn:hover { border-color:#93c5fd; color:#0693e3; }
+    .c-preset-btn.active { background:#eff6ff; border-color:#0693e3; color:#0693e3; box-shadow:0 2px 8px rgba(6,147,227,0.12); }
+    .c-preset-icon { display:block; font-size:20px; margin-bottom:3px; }
+    .c-preset-desc { display:block; font-size:10px; color:#94a3b8; font-weight:500; margin-top:1px; }
+
+    .c-wall-row { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+    .c-wall-lbl { font-size:12px; font-weight:600; color:#475569; white-space:nowrap; }
+    .c-wall-sel { padding:7px 10px; border:1.5px solid #e2e8f0; border-radius:8px; font-size:12px; font-weight:600; color:#475569; background:#fff; cursor:pointer; flex:1; }
+    .c-wall-sel:focus { outline:none; border-color:#0693e3; }
+
+    .c-box-layout { display:grid; grid-template-columns:1fr 1fr; gap:14px; align-items:center; }
+    .c-box-3d { display:flex; align-items:center; justify-content:center; }
+
+    .c-dim-table { width:100%; border-collapse:collapse; }
+    .c-dim-table th { font-size:11px; font-weight:700; color:#94a3b8; text-transform:uppercase; padding:3px 8px 8px; text-align:left; }
+    .c-dim-table td { padding:6px 8px; font-size:14px; font-weight:700; color:#1e293b; border-bottom:1px solid #f1f5f9; }
+    .c-dim-table td:first-child { font-size:11px; color:#94a3b8; font-weight:600; text-transform:uppercase; }
+    .c-dim-note { font-size:11px; color:#94a3b8; margin-top:10px; line-height:1.6; }
+
+    .c-f3db-pill { display:inline-flex; align-items:center; gap:5px; background:#fef2f2; border:1px solid #fca5a5; border-radius:20px; padding:3px 10px; font-size:12px; font-weight:700; color:#dc2626; margin-left:8px; }
+
+    /* ── FREQUENCY CHART ── */
+    .c-freq-canvas { display:block; width:100%; border-radius:8px; background:#f8fafc; }
+
+    /* ── SPEAKER ANIMATION ── */
+    .c-vis-box { margin:14px 0; padding:24px; background:linear-gradient(135deg,#1e293b,#0f172a); border-radius:14px; border:2px solid #334155; box-shadow:inset 0 10px 30px rgba(0,0,0,0.8); display:flex; align-items:center; justify-content:center; gap:30px; position:relative; }
+    .c-speaker { width:110px; height:110px; border-radius:50%; background:radial-gradient(circle,#334155 0%,#1e293b 70%,#020617 100%); border:5px solid #475569; display:flex; align-items:center; justify-content:center; box-shadow:0 15px 25px rgba(0,0,0,0.8),inset 0 8px 20px rgba(0,0,0,0.9); }
+    .c-dust-cap { width:38px; height:38px; border-radius:50%; background:radial-gradient(circle,#64748b 0%,#334155 100%); }
+    .c-port-hole { width:50px; height:50px; border-radius:50%; background:#000; box-shadow:inset 0 10px 20px rgba(0,0,0,1); border:2px solid #334155; transition:0.3s; opacity:0; transform:scale(0.5); }
+    .c-port-hole.show { opacity:1; transform:scale(1); }
+    .c-vis-label { position:absolute; bottom:10px; right:14px; color:#64748b; font-size:11px; font-weight:700; letter-spacing:1px; text-transform:uppercase; }
+    .anim-pump { animation:spk-pump 0.08s infinite alternate cubic-bezier(0.4,0,0.2,1); }
+    @keyframes spk-pump { from { transform:scale(0.97); } to { transform:scale(1.06); } }
+
+    /* ── MODAL ── */
+    .c-modal-overlay { position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(15,23,42,0.45); backdrop-filter:blur(4px); z-index:9999; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:0.3s; }
+    .c-modal-overlay.show { opacity:1; pointer-events:auto; }
+    .c-modal-box { background:#fff; border-radius:16px; padding:24px; max-width:480px; width:90%; box-shadow:0 20px 40px rgba(0,0,0,0.15); transform:translateY(20px); transition:0.3s; border:1px solid #e2e8f0; }
+    .c-modal-overlay.show .c-modal-box { transform:translateY(0); }
+    .c-modal-close { float:right; cursor:pointer; color:#94a3b8; border:none; background:none; font-size:24px; line-height:1; margin-top:-5px; padding:5px; }
+    .c-modal-close:hover { color:#d32f2f; }
+    .c-modal-title { font-size:18px; font-weight:700; color:#0f172a; margin:0 0 15px; display:flex; align-items:center; gap:8px; }
+    .c-modal-item { background:#f8fafc; padding:12px; border-radius:8px; border:1px solid #e2e8f0; font-size:13px; color:#1e293b; margin-bottom:10px; line-height:1.6; }
+
+    @media (max-width:580px) {
+      .c-row.cols-2 { grid-template-columns:1fr; }
+      .c-box-layout { grid-template-columns:1fr; }
+      .c-box-3d { order:-1; }
+      .c-metrics { grid-template-columns:repeat(2,1fr); }
+      .c-preset-row { flex-wrap:wrap; }
+      .c-preset-btn { min-width:calc(50% - 4px); }
+      .c-toggle { flex-direction:column; gap:6px; background:transparent; border:none; padding:0; }
+      .c-toggle-btn { background:#f1f5f9; border:1px solid #e2e8f0; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  /* ═══════════════════════════════════════════════════════
+     HTML TEMPLATE
+  ═══════════════════════════════════════════════════════ */
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-body">
+<div class="c-toggle">
+<button class="c-toggle-btn active" data-mode="sealed">Closed box<span class="c-term">ZY</span></button>
+<button class="c-toggle-btn" data-mode="ported">Bass reflex<span class="c-term">FI</span></button>
+</div>
+<div class="c-divider"><span class="icon">🔊</span>Thiel-Small parameters</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Resonance frequency<span class="c-term">Fs</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="inp-fs" placeholder="For example: 32" type="number"/>
+<span class="c-input-suffix">Hz</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Equivalent volume<span class="c-term">Vas</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="inp-vas" placeholder="For example: 45" type="number"/>
+<span class="c-input-suffix">l</span>
+</div>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Full quality factor<span class="c-term">Qts</span>
+<span class="c-help-icon" id="btn-help">?</span>
+</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="inp-qts" placeholder="For example: 0.45" step="0.01" type="number"/>
+<span class="c-input-suffix">—</span>
+</div>
+</div>
+</div>
+<div class="c-divider" style="margin-top:26px;"><span class="icon">⚙️</span>Fine tuning</div>
+<label class="c-switch-wrap">
+<input class="is-hidden" id="adv-toggle" type="checkbox"/>
+<div class="c-switch-track"><div class="c-switch-thumb"></div></div>
+<span class="c-switch-label">Specify the purpose of the system</span>
+</label>
+<div class="is-hidden" id="adv-block" style="margin-top:14px;">
+<div class="c-row" id="adv-sealed">
+<div class="c-field">
+<label class="c-label">Desired quality factor of the box<span class="c-term">Qtc</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="inp-qtc" placeholder="Default: 0.707" step="0.001" type="number"/>
+<span class="c-input-suffix">—</span>
+</div>
+<div style="display:flex;gap:8px;margin-top:6px;flex-wrap:wrap;">
+<button class="c-quick-btn" data-t="inp-qtc" data-v="0.5" type="button">0.5 Audiophile</button>
+<button class="c-quick-btn" data-t="inp-qtc" data-v="0.707" type="button">0.707 Flat frequency response</button>
+<button class="c-quick-btn" data-t="inp-qtc" data-v="1.0" type="button">1.0 Punch</button>
+</div>
+</div>
+</div>
+<div class="c-row is-hidden" id="adv-ported">
+<div class="c-field">
+<label class="c-label">Port pipe diameter<span class="c-term">D</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="inp-portd" placeholder="To calculate the length" type="number"/>
+<span class="c-input-suffix">mm</span>
+</div>
+<div style="display:flex;gap:8px;margin-top:6px;flex-wrap:wrap;">
+<button class="c-quick-btn" data-t="inp-portd" data-v="110" type="button">110 mm</button>
+<button class="c-quick-btn" data-t="inp-portd" data-v="160" type="button">160 mm</button>
+</div>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="btn-calc" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="btn-reset" type="button">Reset</button>
+</div>
+<div class="c-error" id="err-msg"></div>
+<div class="c-vis-box is-hidden" id="vis-box">
+<div class="c-speaker" id="vis-spk"><div class="c-dust-cap"></div></div>
+<div class="c-port-hole" id="vis-port"></div>
+<div class="c-vis-label" id="vis-lbl">ZY</div>
+</div>
+<div class="c-result" id="result-box">
+<div class="c-result-title">📐 Acoustic calculation</div>
+<div id="rec-badge"></div>
+<div class="c-metrics" id="metrics-row"></div>
+<div id="extras-section"></div>
+</div>
+<div class="c-modal-overlay" id="modal-help">
+<div class="c-modal-box">
+<button class="c-modal-close" id="btn-modal-close">×</button>
+<div class="c-modal-title">📖 Thiel-Small parameters</div>
+<p style="font-size:14px;color:#475569;line-height:1.6;margin:0 0 14px;">Describe the physical properties of the speaker. Indicated in the passport or on the manufacturer’s website.</p>
+<div class="c-modal-item"><span class="c-term">Fs</span> <b>Resonance frequency</b><br/>Self-resonance frequency in free air.</div>
+<div class="c-modal-item"><span class="c-term">Vas</span> <b>Equivalent volume</b><br/>A volume of air with the same elasticity as the speaker surround.</div>
+<div class="c-modal-item" style="margin-bottom:0;"><span class="c-term">Qts</span> <b>Full quality factor</b><br/>Qts &lt; 0.4 → bass reflex · 0.4–0.5 → both types · &gt; 0.5 → closed box.</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  /* ═══════════════════════════════════════════════════════
+     STATE
+  ═══════════════════════════════════════════════════════ */
+  const $ = s => wrap.querySelector(s);
+  let activeMode = 'sealed';
+  let calculated = false;
+  let curPreset = 'wide';
+  let wallMm = 18;
+
+  const BOX_PRESETS = [
+    { id: 'wide',   label: 'Wide',   icon: '📦', desc: 'auto',   wk: 2.4,  hk: 1.0, dk: 0.65 },
+    { id: 'square', label: 'Square',   icon: '🎲', desc: 'supermarket',wk: 1.1,  hk: 1.0, dk: 1.0  },
+    { id: 'tall',   label: 'High',   icon: '🗄️',  desc: 'Hi-Fi',  wk: 0.75, hk: 1.6, dk: 0.85 },
+  ];
+
+  let lastCalc = { vb:0, mode:'sealed', fc:0, qtc:0.707, fb:0, qts:0.5, portL:0 };
+
+  /* ═══════════════════════════════════════════════════════
+     UI EVENTS
+  ═══════════════════════════════════════════════════════ */
+  $('#btn-help').addEventListener('click', () => $('#modal-help').classList.add('show'));
+  $('#btn-modal-close').addEventListener('click', () => $('#modal-help').classList.remove('show'));
+  $('#modal-help').addEventListener('click', e => { if (!e.target.closest('.c-modal-box')) $('#modal-help').classList.remove('show'); });
+
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => btn.addEventListener('click', () => {
+    wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeMode = btn.dataset.mode;
+    updateAdvUI();
+    if (calculated) doCalc(false);
+  }));
+
+  $('#adv-toggle').addEventListener('change', e => {
+    $('#adv-block').classList.toggle('is-hidden', !e.target.checked);
+    if (!e.target.checked) { $('#inp-qtc').value = ''; $('#inp-portd').value = ''; }
+    if (calculated) doCalc(false);
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => btn.addEventListener('click', () => {
+    $('#' + btn.dataset.t).value = btn.dataset.v;
+    if (calculated) doCalc(false);
+  }));
+
+  wrap.addEventListener('input', e => {
+    if (calculated) { if (e.target.tagName === 'INPUT') doCalc(false); }
+  });
+
+  $('#btn-calc').addEventListener('click', () => { calculated = true; doCalc(true); });
+
+  $('#btn-reset').addEventListener('click', () => {
+    wrap.querySelectorAll('input[type=number]').forEach(i => i.value = '');
+    $('#adv-toggle').checked = false;
+    $('#adv-block').classList.add('is-hidden');
+    $('#result-box').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    $('#vis-spk').classList.remove('anim-pump');
+    $('#extras-section').innerHTML = '';
+    $('#rec-badge').innerHTML = '';
+    $('#metrics-row').innerHTML = '';
+    calculated = false;
+  });
+
+  function updateAdvUI() {
+    $('#adv-sealed').classList.toggle('is-hidden', activeMode !== 'sealed');
+    $('#adv-ported').classList.toggle('is-hidden', activeMode !== 'ported');
+  }
+
+  /* ═══════════════════════════════════════════════════════
+     CALCULATION
+  ═══════════════════════════════════════════════════════ */
+  function doCalc(scroll) {
+    $('#err-msg').classList.remove('show');
+
+    const fs  = parseFloat($('#inp-fs').value);
+    const qts = parseFloat($('#inp-qts').value);
+    const vas = parseFloat($('#inp-vas').value);
+
+    if (!(fs > 0) || !(qts > 0) || !(vas > 0)) {
+      $('#vis-box').classList.add('is-hidden');
+      $('#result-box').classList.remove('show');
+      if (scroll) { $('#err-msg').textContent = 'Enter the correct speaker parameters (Fs, Qts, Vas)'; $('#err-msg').classList.add('show'); }
+      return;
+    }
+
+    let vb, fc, fb, showPortLine = false, portL = 0, usedQtc = 0.707;
+    let mathErr = '';
+
+    if (activeMode === 'sealed') {
+      let qtc = parseFloat($('#inp-qtc').value);
+      if (!(qtc > 0)) qtc = 0.707;
+      usedQtc = qtc;
+
+      if (qtc <= qts) {
+        mathErr = `Невозможно достичь Qtc = ${qtc} при Qts = ${qts}. Qtc должен быть больше Qts.`;
+      } else {
+        const r = qtc / qts;
+        vb = vas / (r * r - 1);
+        fc = fs * r;
+      }
+    } else {
+      vb = 15 * vas * Math.pow(qts, 2.87);
+      fb = 0.42 * fs / Math.pow(qts, 0.9);
+      fc = fb;
+
+      const portD = parseFloat($('#inp-portd').value);
+      if (portD > 0) {
+        const dCm = portD / 10;
+        const lCm = (23562.5 * dCm * dCm) / (fb * fb * vb) - 0.823 * dCm;
+        if (lCm > 0) { showPortLine = true; portL = lCm * 10; }
+        else mathErr = 'The pipe diameter is too large for this volume. Reduce the diameter.';
+      }
+    }
+
+    if (mathErr) {
+      $('#vis-box').classList.add('is-hidden');
+      $('#result-box').classList.remove('show');
+      $('#err-msg').textContent = mathErr;
+      $('#err-msg').classList.add('show');
+      return;
+    }
+
+    lastCalc = { vb, mode: activeMode, fc, qtc: usedQtc, fb: activeMode === 'ported' ? fb : 0, qts, portL };
+
+    // ── Speaker animation ──
+    const spk = $('#vis-spk');
+    spk.classList.remove('anim-pump');
+    void spk.offsetWidth;
+    spk.style.animationDuration = (1 / fc) + 's';
+    spk.classList.add('anim-pump');
+    $('#vis-port').classList.toggle('show', activeMode === 'ported');
+    $('#vis-lbl').textContent = activeMode === 'ported' ? 'FI' : 'ZY';
+    $('#vis-box').classList.remove('is-hidden');
+
+    // ── Metrics ──
+    renderMetrics(vb, fc, usedQtc, activeMode, fb, showPortLine, portL);
+
+    // ── Extras: box + chart ──
+    renderExtras(vb, activeMode, fc, usedQtc, fb, qts);
+
+    $('#result-box').classList.add('show');
+    if (scroll) $('#result-box').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  /* ═══════════════════════════════════════════════════════
+     METRICS ROW
+  ═══════════════════════════════════════════════════════ */
+  function renderMetrics(vb, fc, qtc, mode, fb, showPort, portL) {
+    const isPorted = mode === 'ported';
+    const f3db = find3dbFreq(mode, fc, qtc, isPorted ? fb : 0);
+
+    const items = [
+      { label: 'Volume Vb', val: vb.toFixed(1), unit: 'l', primary: true },
+      { label: isPorted ? 'Setting up Facebook' : 'Frequency Fc', val: fc.toFixed(1), unit: 'Hz', primary: false },
+      { label: '−3 dB', val: f3db.toFixed(0), unit: 'Hz', primary: false, red: true },
+    ];
+    if (showPort) items.push({ label: 'Port length', val: portL.toFixed(0), unit: 'mm', primary: false });
+
+    // Recommendation badge
+    let rClass = 'good', rIcon = '✅', rText = '';
+    if (mode === 'sealed') {
+      if (lastCalc.qts >= 0.5) { rClass = 'good'; rIcon = '✅'; rText = `Qts ${lastCalc.qts.toFixed(2)} — отличный выбор для ЗЯ`; }
+      else if (lastCalc.qts >= 0.35) { rClass = 'warn'; rIcon = '⚡'; rText = `Qts ${lastCalc.qts.toFixed(2)} — подходит для ЗЯ, но рассмотрите ФИ`; }
+      else { rClass = 'bad'; rIcon = '⚠️'; rText = `Qts ${lastCalc.qts.toFixed(2)} — рекомендуется фазоинвертор`; }
+    } else {
+      if (lastCalc.qts <= 0.4) { rClass = 'good'; rIcon = '✅'; rText = `Qts ${lastCalc.qts.toFixed(2)} — отличный выбор для ФИ`; }
+      else if (lastCalc.qts <= 0.55) { rClass = 'warn'; rIcon = '⚡'; rText = `Qts ${lastCalc.qts.toFixed(2)} — пограничное значение, рассмотрите ЗЯ`; }
+      else { rClass = 'bad'; rIcon = '⚠️'; rText = `Qts ${lastCalc.qts.toFixed(2)} — рекомендуется закрытый ящик`; }
+    }
+    $('#rec-badge').innerHTML = `<div class="c-rec${rClass}"><span class="c-rec-icon">${rIcon}</span><span>${rText}</span></div>`;
+
+    $('#metrics-row').innerHTML = items.map(it => `
+      <div class="c-metric${it.primary ? ' primary' : ''}">
+        <div class="c-metric-label">${it.label}</div>
+        <div class="c-metric-val" style="${it.red ? 'color:#dc2626' : ''}">${it.val}<span class="c-metric-unit">${it.unit}</span></div>
+      </div>
+    `).join('');
+  }
+
+  /* ═══════════════════════════════════════════════════════
+     EXTRAS: BOX DIMENSIONS + FREQUENCY RESPONSE
+  ═══════════════════════════════════════════════════════ */
+  function renderExtras(vb, mode, fc, qtc, fb, qts) {
+    const cont = $('#extras-section');
+    cont.innerHTML = '';
+
+    // ── BOX SECTION ──────────────────────────────────────
+    const boxSec = document.createElement('div');
+    boxSec.className = 'c-section';
+    boxSec.innerHTML = `
+<div class="c-section-title">📦 Box size options</div>
+<div class="c-preset-row">
+        ${BOX_PRESETS.map(p =&gt; </div>`
+          <button class="c-preset-btn${p.id === curPreset ? ' active' : ''}" data-pid="${p.id}">
+            <span class="c-preset-icon">${p.icon}</span>${p.label}<span class="c-preset-desc">${p.desc}</span>
+          </button>`).join('')}
+      </div>
+      <div class="c-wall-row">
+        <span class="c-wall-lbl">Толщина стенок (МДФ):</span>
+        <select class="c-wall-sel" id="wall-sel">
+          <option value="16" ${wallMm===16?'selected':''}>16 мм — тонкая</option>
+          <option value="18" ${wallMm===18?'selected':''}>18 мм — стандарт</option>
+          <option value="21" ${wallMm===21?'selected':''}>21 мм</option>
+          <option value="25" ${wallMm===25?'selected':''}>25 мм — толстая</option>
+        </select>
+      </div>
+      <div class="c-box-layout">
+        <div id="box-dim-info"></div>
+        <div class="c-box-3d" id="box-3d-wrap"></div>
+      </div>
+    `;
+    cont.appendChild(boxSec);
+
+    function refreshBox() {
+      const preset = BOX_PRESETS.find(p => p.id === curPreset);
+      const vcm3 = vb * 1000;
+      const h = Math.cbrt(vcm3 / (preset.wk * preset.dk));
+      const w = preset.wk * h, d = preset.dk * h;
+      const wt = wallMm / 10;
+
+      boxSec.querySelector('#box-dim-info').innerHTML = `
+<div class="post-table"><table class="c-dim-table">
+<tr><th></th><th>Width</th><th>Height</th><th>Depth</th></tr>
+<tr>
+<td>Int.</td>
+<td>${Math.round(w)}cm</td><td>${Math.round(h)}cm</td><td>${Math.round(d)}cm</td>
+</tr>
+<tr>
+<td>Ext.</td>
+<td>${Math.round(w + 2*wt)}cm</td><td>${Math.round(h + 2*wt)}cm</td><td>${Math.round(d + 2*wt)}cm</td>
+</tr>
+</table></div>
+<div class="c-dim-note">Internal volume ≈<b>${(w*h*d/1000).toFixed(1)}l</b>Walls${wallMm}mm MDF<br/>External dimensions take into account walls on four sides</div>
+`;
+
+      const wrap3d = boxSec.querySelector('#box-3d-wrap');
+      wrap3d.innerHTML = '';
+      wrap3d.appendChild(createBoxSVG(w, h, d, mode === 'ported'));
+    }
+
+    refreshBox();
+
+    boxSec.querySelectorAll('.c-preset-btn').forEach(btn => btn.addEventListener('click', () => {
+      curPreset = btn.dataset.pid;
+      boxSec.querySelectorAll('.c-preset-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      refreshBox();
+    }));
+
+    boxSec.querySelector('#wall-sel').addEventListener('change', e => {
+      wallMm = parseInt(e.target.value);
+      refreshBox();
+    });
+
+    // ── FREQUENCY RESPONSE ────────────────────────────────
+    const freqSec = document.createElement('div');
+    freqSec.className = 'c-section';
+    const f3db = find3dbFreq(mode, fc, qtc, fb);
+    freqSec.innerHTML = `
+<div class="c-section-title">📊 Frequency response<span class="c-f3db-pill">−3 dB:${f3db.toFixed(0)}Hz</span>
+</div>
+<canvas class="c-freq-canvas" height="160" id="freq-canvas"></canvas>
+`;
+    cont.appendChild(freqSec);
+
+    requestAnimationFrame(() => {
+      const cv = cont.querySelector('#freq-canvas');
+      if (!cv) return;
+      const dpr = window.devicePixelRatio || 1;
+      const w = cv.getBoundingClientRect().width || 500;
+      cv.width = w * dpr;
+      cv.height = 160 * dpr;
+      const ctx = cv.getContext('2d');
+      ctx.scale(dpr, dpr);
+      drawFreqChart(ctx, w, 160, mode, fc, qtc, fb, f3db);
+    });
+  }
+
+  /* ═══════════════════════════════════════════════════════
+     FREQUENCY MATH
+  ═══════════════════════════════════════════════════════ */
+  function getDB(f, mode, fc, qtc, fb) {
+    if (mode === 'sealed') {
+      const w = f / fc, w2 = w * w;
+      const re = 1 - w2, im = w / qtc;
+      const den = re * re + im * im;
+      return den < 1e-30 ? -80 : 10 * Math.log10(w2 * w2 / den);
+    } else {
+      const w = f / fb, w2 = w * w, w4 = w2 * w2;
+      const a3 = 2.613, a2 = 3.414, a1 = 2.613;
+      const re = w4 - a2 * w2 + 1;
+      const im = w * (a1 - a3 * w2);
+      const den = re * re + im * im;
+      return den < 1e-30 ? -80 : 10 * Math.log10(w4 * w4 / den);
+    }
+  }
+
+  function find3dbFreq(mode, fc, qtc, fb) {
+    let lo = 5, hi = (mode === 'sealed' ? fc : fb) * 4;
+    for (let i = 0; i < 60; i++) {
+      const mid = (lo + hi) / 2;
+      if (getDB(mid, mode, fc, qtc, fb) < -3) lo = mid; else hi = mid;
+    }
+    return (lo + hi) / 2;
+  }
+
+  /* ═══════════════════════════════════════════════════════
+     FREQUENCY CHART DRAWING
+  ═══════════════════════════════════════════════════════ */
+  function drawFreqChart(ctx, cW, cH, mode, fc, qtc, fb, f3db) {
+    const P = { t: 20, r: 16, b: 32, l: 38 };
+    const W = cW - P.l - P.r, H = cH - P.t - P.b;
+    const fMin = 15, fMax = 320, dbMin = -42, dbMax = 9;
+
+    const fX = f => P.l + Math.log10(f / fMin) / Math.log10(fMax / fMin) * W;
+    const dY = db => P.t + (1 - (db - dbMin) / (dbMax - dbMin)) * H;
+
+    // BG
+    ctx.fillStyle = '#f8fafc';
+    ctx.fillRect(0, 0, cW, cH);
+
+    // Grid
+    [20, 30, 40, 50, 63, 80, 100, 125, 160, 200, 250, 300].forEach(f => {
+      ctx.strokeStyle = '#e8edf2';
+      ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(fX(f), P.t); ctx.lineTo(fX(f), P.t + H); ctx.stroke();
+    });
+    [-40, -30, -20, -10, -3, 0].forEach(db => {
+      ctx.strokeStyle = db === 0 ? '#cbd5e1' : '#e8edf2';
+      ctx.lineWidth = db === 0 ? 1.5 : 1;
+      ctx.beginPath(); ctx.moveTo(P.l, dY(db)); ctx.lineTo(P.l + W, dY(db)); ctx.stroke();
+    });
+
+    // Axis labels
+    ctx.font = '10px system-ui';
+    ctx.fillStyle = '#94a3b8';
+    ctx.textAlign = 'center';
+    [20, 50, 100, 200].forEach(f => ctx.fillText(f, fX(f), P.t + H + 20));
+    ctx.fillText('Hz', P.l + W, P.t + H + 20);
+
+    ctx.textAlign = 'right';
+    [-40, -20, -10, -3, 0].forEach(db => {
+      ctx.fillStyle = db === -3 ? '#f87171' : '#94a3b8';
+      ctx.fillText(db + '', P.l - 5, dY(db) + 3.5);
+    });
+
+    // -3dB dashed line
+    ctx.setLineDash([4, 3]);
+    ctx.strokeStyle = '#fca5a5';
+    ctx.lineWidth = 1;
+    const y3 = dY(-3);
+    ctx.beginPath(); ctx.moveTo(P.l, y3); ctx.lineTo(P.l + W, y3); ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Fc/Fb marker line
+    const mFreq = mode === 'sealed' ? fc : fb;
+    const mX = fX(mFreq);
+    ctx.setLineDash([3, 3]);
+    ctx.strokeStyle = '#93c5fd';
+    ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(mX, P.t); ctx.lineTo(mX, P.t + H); ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Filled area
+    const STEPS = 350;
+    ctx.beginPath();
+    ctx.moveTo(fX(fMin), dY(dbMin));
+    for (let i = 0; i <= STEPS; i++) {
+      const f = fMin * Math.pow(fMax / fMin, i / STEPS);
+      const db = Math.max(dbMin, getDB(f, mode, fc, qtc, fb));
+      ctx.lineTo(fX(f), dY(db));
+    }
+    ctx.lineTo(fX(fMax), dY(dbMin));
+    ctx.closePath();
+    const grad = ctx.createLinearGradient(0, P.t, 0, P.t + H);
+    grad.addColorStop(0, 'rgba(6,147,227,0.22)');
+    grad.addColorStop(1, 'rgba(6,147,227,0.02)');
+    ctx.fillStyle = grad;
+    ctx.fill();
+
+    // Curve line
+    ctx.beginPath();
+    let started = false;
+    for (let i = 0; i <= STEPS; i++) {
+      const f = fMin * Math.pow(fMax / fMin, i / STEPS);
+      const db = getDB(f, mode, fc, qtc, fb);
+      const x = fX(f), y = dY(Math.max(dbMin - 5, db));
+      if (y < P.t - 4 || y > P.t + H + 4) { started = false; continue; }
+      if (!started) { ctx.moveTo(x, y); started = true; } else ctx.lineTo(x, y);
+    }
+    ctx.strokeStyle = '#0693e3';
+    ctx.lineWidth = 2.5;
+    ctx.lineJoin = 'round';
+    ctx.stroke();
+
+    // Fc/Fb label
+    ctx.fillStyle = '#0693e3';
+    ctx.font = 'bold 10px system-ui';
+    const labelLeft = mX < cW * 0.55;
+    ctx.textAlign = labelLeft ? 'left' : 'right';
+    ctx.fillText((mode === 'sealed' ? 'Fc ' : 'Fb ') + mFreq.toFixed(0) + 'Hz', mX + (labelLeft ? 5 : -5), P.t + 13);
+
+    // -3dB crossing dot
+    if (f3db > fMin) { if (f3db < fMax) {
+      const x3 = fX(f3db);
+      ctx.beginPath();
+      ctx.arc(x3, y3, 5, 0, Math.PI * 2);
+      ctx.fillStyle = '#ef4444';
+      ctx.fill();
+      ctx.strokeStyle = '#fff';
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+    } }
+
+    // Chart border
+    ctx.strokeStyle = '#e2e8f0';
+    ctx.lineWidth = 1;
+    ctx.strokeRect(P.l, P.t, W, H);
+  }
+
+  /* ═══════════════════════════════════════════════════════
+     3D ISOMETRIC BOX SVG
+  ═══════════════════════════════════════════════════════ */
+  function createBoxSVG(wCm, hCm, dCm, isPorted) {
+    const SVG_W = 230, SVG_H = 190, PAD = 26;
+
+    // Isometric bounding box
+    const isoW = (wCm + dCm) * 0.866;
+    const isoH = hCm + (wCm + dCm) * 0.5;
+    const scale = Math.min((SVG_W - PAD * 2) / isoW, (SVG_H - PAD * 2) / isoH) * 0.9;
+
+    // Origin: position so box fits centered
+    const ox = SVG_W / 2 + (dCm - wCm) * 0.866 * scale / 2;
+    const oy = SVG_H - PAD - (wCm + dCm) * 0.5 * scale;
+
+    // Isometric projection: x=width, y=height, z=depth
+    function iso(x, y, z) {
+      return [
+        ox + (x - z) * 0.866 * scale,
+        oy - y * scale + (x + z) * 0.5 * scale
+      ];
+    }
+    function pt(x, y, z) { return iso(x, y, z).join(','); }
+
+    const ns = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(ns, 'svg');
+    svg.setAttribute('viewBox', `0 0 ${SVG_W} ${SVG_H}`);
+    svg.setAttribute('width', SVG_W);
+    svg.setAttribute('height', SVG_H);
+    svg.style.display = 'block';
+    svg.style.maxWidth = '100%';
+
+    function mkPoly(pts, fill, stroke) {
+      const el = document.createElementNS(ns, 'polygon');
+      el.setAttribute('points', pts.join(' '));
+      el.setAttribute('fill', fill);
+      el.setAttribute('stroke', stroke || '#7dd3fc');
+      el.setAttribute('stroke-width', '1.5');
+      el.setAttribute('stroke-linejoin', 'round');
+      return el;
+    }
+
+    function mkLine(x1, y1, x2, y2, color) {
+      const el = document.createElementNS(ns, 'line');
+      el.setAttribute('x1',x1);el.setAttribute('y1',y1);el.setAttribute('x2',x2);el.setAttribute('y2',y2);
+      el.setAttribute('stroke', color || '#94a3b8');
+      el.setAttribute('stroke-width', '1');
+      el.setAttribute('stroke-dasharray', '3,2');
+      return el;
+    }
+
+    function mkText(txt, x, y, anchor, color, size, bold) {
+      const el = document.createElementNS(ns, 'text');
+      el.setAttribute('x', x); el.setAttribute('y', y);
+      el.setAttribute('fill', color || '#475569');
+      el.setAttribute('font-size', size || 10);
+      el.setAttribute('font-weight', bold ? '700' : '500');
+      el.setAttribute('text-anchor', anchor || 'middle');
+      el.setAttribute('font-family', 'system-ui,sans-serif');
+      el.textContent = txt;
+      return el;
+    }
+
+    // ── Defs: gradients ──
+    const defs = document.createElementNS(ns, 'defs');
+    // slight shadow under box
+    const filter = document.createElementNS(ns, 'filter');
+    filter.setAttribute('id', 'boxShadow');
+    filter.setAttribute('x', '-20%'); filter.setAttribute('y', '-20%');
+    filter.setAttribute('width', '140%'); filter.setAttribute('height', '140%');
+    const feDropShadow = document.createElementNS(ns, 'feDropShadow');
+    feDropShadow.setAttribute('dx', '2'); feDropShadow.setAttribute('dy', '4');
+    feDropShadow.setAttribute('stdDeviation', '3');
+    feDropShadow.setAttribute('flood-color', 'rgba(0,0,0,0.15)');
+    filter.appendChild(feDropShadow);
+    defs.appendChild(filter);
+    svg.appendChild(defs);
+
+    // ── Faces ──
+    // Top face (lightest)
+    svg.appendChild(mkPoly([
+      pt(0, hCm, 0), pt(wCm, hCm, 0), pt(wCm, hCm, dCm), pt(0, hCm, dCm)
+    ], '#dbeafe', '#93c5fd'));
+
+    // Right/side face (medium)
+    svg.appendChild(mkPoly([
+      pt(wCm, 0, 0), pt(wCm, hCm, 0), pt(wCm, hCm, dCm), pt(wCm, 0, dCm)
+    ], '#93c5fd', '#60a5fa'));
+
+    // Front face (main visible face)
+    svg.appendChild(mkPoly([
+      pt(0, 0, 0), pt(wCm, 0, 0), pt(wCm, hCm, 0), pt(0, hCm, 0)
+    ], '#bfdbfe', '#7dd3fc'));
+
+    // ── Speaker + port using isometric transform ──
+    // Transform maps local (x_loc=width, y_loc=height) front face to SVG iso coords:
+    // SVG_x = 0.866*scale * x_loc + ox
+    // SVG_y = 0.5*scale * x_loc - scale * y_loc + oy
+    // => matrix(a, b, c, d, e, f): a=0.866s, b=0.5s, c=0, d=-s, e=ox, f=oy
+    const s = scale;
+    const g = document.createElementNS(ns, 'g');
+    g.setAttribute('transform', `matrix(${0.866*s},${0.5*s},0,${-s},${ox},${oy})`);
+
+    const spkR  = Math.min(wCm, hCm) * 0.29;
+    const spkX  = isPorted ? wCm * 0.36 : wCm / 2;
+    const spkY  = hCm / 2;
+    const strokeW = 1.5 / s;
+
+    function mkCircle(cx, cy, r, fill, stroke, sw) {
+      const el = document.createElementNS(ns, 'circle');
+      el.setAttribute('cx', cx); el.setAttribute('cy', cy); el.setAttribute('r', r);
+      el.setAttribute('fill', fill);
+      if (stroke) { el.setAttribute('stroke', stroke); el.setAttribute('stroke-width', sw || strokeW); }
+      return el;
+    }
+
+    // Speaker layers
+    g.appendChild(mkCircle(spkX, spkY, spkR, '#1e3a8a', '#93c5fd', 1.8/s));
+    g.appendChild(mkCircle(spkX, spkY, spkR * 0.86, '#1e40af'));
+    g.appendChild(mkCircle(spkX, spkY, spkR * 0.70, '#1d4ed8'));
+    g.appendChild(mkCircle(spkX, spkY, spkR * 0.52, '#2563eb'));
+    g.appendChild(mkCircle(spkX, spkY, spkR * 0.24, '#60a5fa'));
+
+    // Mounting screws
+    [45, 135, 225, 315].forEach(ang => {
+      const r = ang * Math.PI / 180;
+      g.appendChild(mkCircle(
+        spkX + Math.cos(r) * spkR * 0.95,
+        spkY + Math.sin(r) * spkR * 0.95,
+        spkR * 0.06, '#bfdbfe'
+      ));
+    });
+
+    // Port if ported
+    if (isPorted) {
+      const portX = wCm * 0.73;
+      const portY = hCm / 2;
+      const portR = Math.min(wCm * 0.11, hCm * 0.22, spkR * 0.55);
+      if (portX + portR < wCm - 0.3) { if (portY + portR < hCm - 0.3) { if (portY - portR > 0.3) {
+        g.appendChild(mkCircle(portX, portY, portR, '#0f172a', '#60a5fa', 1.5/s));
+        g.appendChild(mkCircle(portX, portY, portR * 0.78, '#020617'));
+        // Port tube rim highlight
+        const arc = document.createElementNS(ns, 'path');
+        const rad = portR;
+        arc.setAttribute('d', `M ${portX - rad * 0.6} ${portY - rad * 0.7} A ${rad} ${rad} 0 0 1 ${portX + rad * 0.3} ${portY - rad * 0.8}`);
+        arc.setAttribute('stroke', 'rgba(148,197,253,0.4)');
+        arc.setAttribute('stroke-width', 1.5/s);
+        arc.setAttribute('fill', 'none');
+        g.appendChild(arc);
+      } } }
+    }
+
+    svg.appendChild(g);
+
+    // ── Dimension labels ──
+    // Width (below front bottom edge)
+    const wL = iso(0, 0, 0), wR = iso(wCm, 0, 0);
+    const wMX = (wL[0]+wR[0])/2, wMY = (wL[1]+wR[1])/2 + 13;
+    svg.appendChild(mkLine(wL[0], wL[1]+2, wR[0], wR[1]+2));
+    svg.appendChild(mkText(Math.round(wCm) + 'cm', wMX, wMY, 'middle', '#475569', 10, true));
+
+    // Height (right side of front face)
+    const hB = iso(wCm, 0, 0), hT = iso(wCm, hCm, 0);
+    const hMX = (hB[0]+hT[0])/2 + 13, hMY = (hB[1]+hT[1])/2 + 4;
+    svg.appendChild(mkLine(hB[0]+2, hB[1], hT[0]+2, hT[1]));
+    svg.appendChild(mkText(Math.round(hCm) + 'cm', hMX, hMY, 'start', '#475569', 10, true));
+
+    // Depth (along top right edge)
+    const dF = iso(wCm, hCm, 0), dBk = iso(wCm, hCm, dCm);
+    const dMX = (dF[0]+dBk[0])/2 + 6, dMY = (dF[1]+dBk[1])/2 - 7;
+    svg.appendChild(mkLine(dF[0], dF[1]-2, dBk[0], dBk[1]-2));
+    svg.appendChild(mkText(Math.round(dCm) + 'cm', dMX, dMY, 'start', '#475569', 10, true));
+
+    return svg;
+  }
+
+  /* ═══════════════════════════════════════════════════════
+     COPY BUTTON (click delegation on metrics)
+  ═══════════════════════════════════════════════════════ */
+  wrap.addEventListener('click', e => {
+    if (e.target.classList.contains('c-metric-copy')) {
+      const val = e.target.closest('.c-metric').querySelector('.c-metric-val').textContent
+        .replace(/[^\d.,]/g, '').trim();
+      navigator.clipboard.writeText(val).catch(() => {});
+      e.target.textContent = '✓';
+      setTimeout(() => e.target.textContent = '⎘', 800);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Creating high-quality bass in a car does not start with buying an expensive amplifier, but with proper cabinet design. Even a budget speaker in a perfectly designed box will sound better than a top-of-the-line driver in a “random” box. Our calculator allows you to perform accurate engineering calculations of the two most popular types of design: <strong>Closed Box (CL)</strong> And <strong>Bass reflex (FI)</strong>.</p>
+<p>To get an accurate result, you will need the Thiel-Small parameters, which are usually indicated in the technical data sheet (Manual) of your speaker.</p>
+<h2 class="wp-block-heading" id="parametry-tilya-smolla-fundament-rascheta-2">Thiel-Small parameters: foundation of calculation</h2>
+<p>Before you start calculating, you need to prepare three key indicators:</p>
+<ul class="wp-block-list">
+<li><strong>Fs (Resonant Frequency):</strong> The natural resonance frequency of the speaker in free space. The lower it is, the deeper bass the subwoofer can reproduce.</li>
+<li><strong>Vas (Equivalent Volume):</strong> A volume of air whose elasticity is comparable to the elasticity of the speaker suspension.</li>
+<li><strong>Qts (Total Q-factor):</strong> The total quality factor of the speaker, which determines its ability to effectively “brake” at the resonant frequency.</li>
+</ul>
+<h2 class="wp-block-heading" id="vybor-tipa-oformleniya-zya-ili-fi-2">Choosing the type of registration: ZY or FI?</h2>
+<p>The choice between a closed box and a bass reflex depends on your musical preferences and the available space in the trunk.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Characteristic</strong></td><td><strong>Closed Box (CL)</strong></td><td><strong>Bass reflex (FI)</strong></td></tr></thead><tbody><tr><td><strong>Sound quality</strong></td><td>Maximum accuracy and speed</td><td>High pressure, meaty bass</td></tr><tr><td><strong>Dimensions</strong></td><td>Compact size</td><td>Requires 1.5–2 times more volume</td></tr><tr><td><strong>Assembly complexity</strong></td><td>Easy to make</td><td>Requires precise port configuration</td></tr><tr><td><strong>Efficiency (Loudness)</strong></td><td>Short</td><td>High (+3–4 dB)</td></tr><tr><td><strong>Speaker protection</strong></td><td>High (air cushion)</td><td>Risk of overstroke below setting</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="matematicheskie-formuly-rascheta-2">Mathematical calculation formulas</h2>
+<p>Our calculator uses classical electroacoustics algorithms to approximate the ideal frequency response.</p>
+<h3 class="wp-block-heading" id="raschet-zakrytogo-yashhika-sealed-box-2">Sealed Box Calculation</h3>
+<p>For the SG, the main criterion is the final quality factor of the system ( $Qtc$ ). The optimal value is considered to be $Qtc = 0.707$ (Butterworth curve), which provides the best balance between bass depth and transient response.</p>
+<p>Net volume formula ( $Vb$ ):</p>
+<p>$$Vb = \frac{Vas}{(Qtc / Qts)^2 — 1}$$</p>
+<p>Resonant frequency in box ( $Fc$ ):</p>
+<p>$$Fc = Fs \cdot \frac{Qtc}{Qts}$$</p>
+<h3 class="wp-block-heading" id="raschet-fazoinvertora-vented-box-2">Calculation of the Bass Reflex (Vented Box)</h3>
+<p>For FI, the calculation is more complicated, since the system strives for the most flat frequency response (Alignments). The optimal volume and tuning frequency ( $Fb$ ) are calculated using the formulas:</p>
+<p>$$Vb = 15 \cdot Vas \cdot Qts^{2.87}$$</p>
+<p>$$Fb = 0.42 \cdot Fs \cdot Qts^{-0.9}$$</p>
+<h2 class="wp-block-heading" id="nastrojka-porta-fazoinvertora-2">Setting up the bass reflex port</h2>
+<p>If you choose FI, it is critical to correctly calculate the length of the pipe. Incorrect length will result in "buzz" or lack of bass. The length of the port ( $L$ ) depends on its cross-sectional area and the volume of the box:</p>
+<p>$$L = \frac{23562.5 \cdot D^2}{Fb^2 \cdot Vb} — (0.823 \cdot D)$$</p>
+<p><em>(Where $D$ is the pipe diameter in cm, $Vb$ is the volume in liters, $L$ is the length in cm)</em></p>
+<h3 class="wp-block-heading" id="kak-polzovatsya-kalkulyatorom-2">How to use the calculator</h3>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Select mode:</strong> Switch the tab to "ZY" for emphasis on quality or "FI" for maximum volume.</li>
+<li><strong>Enter parameters:</strong> Specify the values ​​ $Fs$ , $Vas$ and $Qts$ from your subwoofer datasheet.</li>
+<li><strong>Fine tuning:</strong> * In GY mode, you can change the target quality factor ( $Qtc$ ). Use the $0.5$ for audiophile dry bass or the $1.0$ for punchy punch.<ul class="wp-block-list">
+<li>In FI mode, enter the pipe diameter (usually 110 mm or 160 mm) to find out the required length.</li>
+</ul>
+</li>
+<li><strong>Result:</strong> The calculator will instantly give you the net internal volume. Remember that the volume displaced by the speaker itself and the port walls must be added to this value when designing the drawing.</li>
+</ol>
+</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree age calculator based on trunk girth</title>
+    <meta name="description" content="Tree age calculator based on trunk girth - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Tree age calculator based on trunk girth</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #f8fafc; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(22, 163, 74, 0.05); }
+    .c-highlight-line:hover { background: #dcfce7; }
+    .c-highlight-line .c-resval { color: #16a34a; font-size: 22px; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .c-switch-wrap { display: flex; align-items: center; gap: 12px; cursor: pointer; margin-bottom: 5px; padding: 14px 16px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 2px 6px rgba(0,0,0,0.02); transition: 0.3s; }
+    .c-switch-wrap:hover { border-color: #cbd5e1; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .c-switch-track { width: 44px; height: 24px; background: #cbd5e1; border-radius: 24px; position: relative; transition: 0.3s; flex-shrink: 0; }
+    .c-switch-thumb { width: 18px; height: 18px; background: #fff; border-radius: 50%; position: absolute; top: 3px; left: 3px; transition: 0.3s; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+    input:checked + .c-switch-track { background: #10b981; }
+    input:checked + .c-switch-track .c-switch-thumb { left: 23px; }
+    .c-switch-label { font-weight: 600; font-size: 15px; color: #333; }
+    
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* Advanced Graphics */
+    .c-graphics-box { margin: 15px 0 25px; padding: 25px; background: linear-gradient(180deg, #f8fafc 0%, #f0fdf4 100%); border-radius: 16px; border: 1px solid #dcfce7; box-shadow: inset 0 2px 10px rgba(255,255,255,0.8); display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center; }
+    
+    .c-tree-ring-wrap { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+    .c-tree-rings { width: 120px; height: 120px; border-radius: 50%; background: #e6ccb2; box-shadow: inset 0 0 15px rgba(0,0,0,0.3), 0 6px 15px rgba(0,0,0,0.1); border: 5px solid #7f5539; position: relative; overflow: hidden; transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1); }
+    .c-tree-rings::before { content: ''; position: absolute; top: 50%; left: 50%; width: 200%; height: 200%; transform: translate(-50%, -50%); background: repeating-radial-gradient(circle, transparent, transparent 4px, rgba(127, 85, 57, 0.4) 5px, transparent 6px); opacity: 0; transition: opacity 0.5s; }
+    .c-tree-rings.animating::before { opacity: 1; }
+    .c-tree-rings.animating { transform: scale(1.05); }
+    
+    .c-chart-wrap { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+    .c-conic-chart { width: 110px; height: 110px; border-radius: 50%; background: conic-gradient(#16a34a var(--p, 0%), #e2e8f0 0); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: --p 1s ease-out; position: relative; }
+    .c-conic-inner { width: 84px; height: 84px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-direction: column; box-shadow: inset 0 2px 5px rgba(0,0,0,0.05); z-index: 2; }
+    .c-conic-val { font-size: 20px; font-weight: 800; color: #16a34a; line-height: 1; }
+    .c-conic-lbl { font-size: 10px; color: #64748b; font-weight: 600; text-transform: uppercase; margin-top: 4px; }
+    
+    .c-graph-title { font-size: 13px; font-weight: 600; color: #475569; text-align: center; }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @property --p { syntax: '<percentage>'; inherits: false; initial-value: 0%; }
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-graphics-box { grid-template-columns: 1fr; padding: 20px; gap: 25px; }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="tree-age-calc-wrapper">
+<div class="c-body">
+<div class="c-toggle" id="mode-tabs">
+<button class="c-toggle-btn active" data-mode="circ">By girth (circumference)</button>
+<button class="c-toggle-btn" data-mode="diam">By trunk diameter</button>
+</div>
+<div class="c-divider"><span class="icon">🌲</span>Tree biometrics</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Wood species<span class="c-term">View</span></label>
+<select class="c-select" id="species">
+<option selected="" value="oak">Oak (slow growing)</option>
+<option value="pine">Pine (medium height)</option>
+<option value="birch">Birch (fast growth)</option>
+<option value="maple">Maple</option>
+<option value="apple">Apple</option>
+<option value="spruce">Spruce</option>
+<option value="linden">Linden</option>
+</select>
+</div>
+<div class="c-field">
+<label class="c-label" id="measure-lbl">Barrel girth<span class="c-help-icon" id="openTreeInfo">?</span>
+</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="measure" placeholder="For example: 120" type="number"/>
+<span class="c-input-suffix">cm</span>
+</div>
+<div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-val="50" type="button">50 cm</button>
+<button class="c-quick-btn" data-val="100" type="button">100 cm</button>
+<button class="c-quick-btn" data-val="200" type="button">200 cm</button>
+</div>
+</div>
+</div>
+<div class="c-divider" style="margin-top: 30px;"><span class="icon">🌤️</span>Growing conditions</div>
+<label class="c-switch-wrap">
+<input class="is-hidden" id="envToggle" type="checkbox"/>
+<div class="c-switch-track"><div class="c-switch-thumb"></div></div>
+<span class="c-switch-label">Grows in a dense forest<span class="c-term">In the shadows</span></span>
+</label>
+<span class="c-subtext" style="padding-left: 16px; margin-top: -5px; margin-bottom: 20px;">In the forest, trees grow more slowly, stretching upward due to lack of light. In the field the trunk thickens faster.</span>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-graphics-box is-hidden" id="vis-box">
+<div class="c-tree-ring-wrap">
+<div class="c-graph-title">Trunk cut (Annual rings)</div>
+<div class="c-tree-rings" id="vis-rings"></div>
+</div>
+<div class="c-chart-wrap">
+<div class="c-graph-title">Life cycle</div>
+<div class="c-conic-chart" id="vis-chart" style="--p: 0%;">
+<div class="c-conic-inner">
+<span class="c-conic-val" id="vis-stage-perc">0%</span>
+<span class="c-conic-lbl">From maximum</span>
+</div>
+</div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">🌿</span>Dendrochronology results</div>
+<div class="c-resline">
+<div class="c-resleft">Barrel diameter<span class="c-subtext">Calculated</span></div>
+<div class="c-resval" id="resDiam"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Life stage<span class="c-subtext">Biological stage</span></div>
+<div class="c-resval" id="resStage" style="color: #4a5565;"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline c-highlight-line">
+<div class="c-resleft">Approximate age<span class="c-subtext">Taking into account the error ±10%</span></div>
+<div class="c-resval" id="resAge"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+<div class="c-modal-overlay" id="treeInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeTreeInfo">×</button>
+<div class="c-modal-title"><span class="icon">📏</span>How to measure correctly?</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">To calculate age as accurately as possible, measurements must be carried out according to strict dendrological rules.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>Height measurement:</b><br/>Wrap the tape measure around the trunk at height<b>1.3 meters</b>from ground level (chest level of an adult).</div>
+<div style="background: #f0fdf4; padding: 12px; border-radius: 8px; border: 1px solid #bbf7d0; font-size: 13px; color: #166534;">
+<b>How does the formula work?</b><br/>Knowing the girth, the diameter is calculated. The diameter is then multiplied by<i>growth rate</i>(each breed has its own). Trees in open areas grow faster in thickness, and in dense forests - slower.</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let activeMode = 'circ';
+  let isCalculated = false;
+
+  const speciesData = {
+      'oak': { factor: 2.0, maxAge: 400 },
+      'pine': { factor: 1.5, maxAge: 200 },
+      'birch': { factor: 1.2, maxAge: 120 },
+      'maple': { factor: 1.5, maxAge: 250 },
+      'apple': { factor: 1.3, maxAge: 80 },
+      'spruce': { factor: 1.1, maxAge: 300 },
+      'linden': { factor: 1.3, maxAge: 350 }
+  };
+
+  // Modal logic
+  $('#openTreeInfo').addEventListener('click', () => { $('#treeInfoModal').classList.add('show'); });
+  $('#closeTreeInfo').addEventListener('click', () => { $('#treeInfoModal').classList.remove('show'); });
+  $('#treeInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#treeInfoModal').classList.remove('show');
+  });
+
+  function updateModeUI() {
+      if (Math.abs(activeMode === 'circ') === 1) {
+          $('#measure-lbl').innerHTML = 'Trunk circumference <span class="c-help-icon" id="openTreeInfo">?</span>';
+          wrap.querySelectorAll('.c-quick-btn').forEach(b => {
+             let v = b.dataset.val;
+             b.textContent = v + 'cm';
+          });
+      } else {
+          $('#measure-lbl').innerHTML = 'Barrel diameter <span class="c-help-icon" id="openTreeInfo">?</span>';
+          wrap.querySelectorAll('.c-quick-btn').forEach(b => {
+             let v = Math.round(b.dataset.val / Math.PI);
+             b.textContent = v + 'cm';
+          });
+      }
+      
+      $('#openTreeInfo').addEventListener('click', () => { $('#treeInfoModal').classList.add('show'); });
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  }
+
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeMode = btn.dataset.mode;
+        updateModeUI();
+    });
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          let val = btn.dataset.val;
+          if (Math.abs(activeMode === 'diam') === 1) {
+              val = Math.round(val / Math.PI);
+          }
+          $('#measure').value = val;
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  $('#species').addEventListener('change', () => {
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  });
+  
+  $('#envToggle').addEventListener('change', () => {
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  });
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let measure = parseFloat($('#measure').value);
+    
+    let isNanMeasure = isNaN(measure);
+    if (Math.abs(isNanMeasure === true) === 1) measure = 0;
+
+    let isErr = false;
+    let isPositive = false;
+    if (Math.abs(Math.sign(measure) === 1) === 1) isPositive = true;
+    if (Math.abs(isPositive === false) === 1) isErr = true;
+
+    if (Math.abs(isErr === true) === 1) {
+        $('#vis-box').classList.add('is-hidden');
+        $('#resultBox').classList.remove('show');
+        $('#vis-rings').classList.remove('animating');
+        if (Math.abs(shouldScroll === true) === 1) {
+            $('#errorMsg').textContent = "Enter a girth or diameter value greater than zero";
+            $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    let diam = measure;
+    if (Math.abs(activeMode === 'circ') === 1) {
+        diam = measure / Math.PI;
+    }
+
+    let speciesKey = $('#species').value;
+    let sData = speciesData[speciesKey];
+    let factor = sData.factor;
+    let maxAge = sData.maxAge;
+
+    let isForest = $('#envToggle').checked;
+    let envMultiplier = 0.8; 
+    if (Math.abs(isForest === true) === 1) envMultiplier = 1.2;
+
+    let ageRaw = diam * factor * envMultiplier;
+    let age = Math.round(ageRaw);
+    
+    let isZeroAge = false;
+    if (Math.abs(Math.sign(age) === 0) === 1) isZeroAge = true;
+    if (Math.abs(isZeroAge === true) === 1) age = 1;
+
+    // Stage logic (without <, >)
+    let percentOfLife = (age / maxAge) * 100;
+    let stageStr = "young tree";
+    
+    let isMature = false;
+    let isOld = false;
+    
+    if (Math.abs(Math.sign(percentOfLife - 25) === 1) === 1) isMature = true;
+    if (Math.abs(Math.sign(percentOfLife - 75) === 1) === 1) isOld = true;
+    
+    if (Math.abs(isMature === true) === 1) stageStr = "Mature tree";
+    if (Math.abs(isOld === true) === 1) stageStr = "Old Tree (Veteran)";
+
+    $('#resDiam').textContent = diam.toFixed(1) + "cm";
+    $('#resStage').textContent = stageStr;
+    
+    let ageText = age + "years";
+    
+    let ageMod = age % 10;
+    let ageMod100 = age % 100;
+    
+    let isEndOne = false;
+    if (Math.abs(ageMod === 1) === 1) isEndOne = true;
+    if (Math.abs(ageMod100 === 11) === 1) isEndOne = false;
+    if (Math.abs(isEndOne === true) === 1) ageText = age + "year";
+    
+    let isEndTwoFour = false;
+    let diffTwo = Math.sign(ageMod - 1);
+    let diffFive = Math.sign(ageMod - 5);
+    let condTf = Math.abs(diffTwo === 1) + Math.abs(diffFive === -1);
+    if (Math.abs(condTf === 2) === 1) isEndTwoFour = true;
+    let isTeens = false;
+    let diffTen = Math.sign(ageMod100 - 10);
+    let diffTwenty = Math.sign(ageMod100 - 20);
+    let condTeens = Math.abs(diffTen === 1) + Math.abs(diffTwenty === -1);
+    if (Math.abs(condTeens === 2) === 1) isTeens = true;
+    if (Math.abs(isTeens === true) === 1) isEndTwoFour = false;
+    
+    if (Math.abs(isEndTwoFour === true) === 1) ageText = age + "year";
+
+    $('#resAge').textContent = "≈ " + ageText;
+
+    // Visuals
+    let visPerc = percentOfLife;
+    let isOver = false;
+    if (Math.abs(Math.sign(visPerc - 100) === 1) === 1) isOver = true;
+    if (Math.abs(isOver === true) === 1) visPerc = 100;
+    
+    let chart = $('#vis-chart');
+    chart.style.setProperty('--p', visPerc + '%');
+    $('#vis-stage-perc').textContent = Math.round(visPerc) + '%';
+    
+    let rings = $('#vis-rings');
+    rings.classList.remove('animating');
+    void rings.offsetWidth; // trigger reflow
+    rings.classList.add('animating');
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#vis-box').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(e.target.tagName === 'SELECT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    wrap.querySelectorAll('input[type="number"]').forEach(i => i.value = '');
+    $('#envToggle').checked = false;
+    $('#species').value = 'oak';
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    $('#vis-rings').classList.remove('animating');
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      let valClean = valRaw.replace('≈', '').replace('cm', '').replace('years', '').replace('year', '').replace('year', '').trim();
+      navigator.clipboard.writeText(valClean);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Determining the age of a tree is not only a scientific interest for dendrologists, but also an important task for landscape designers, ecologists and owners of suburban areas. The traditional method of counting tree rings requires cutting or using an age borer, which can be harmful to the living organism.</p>
+<p>Our calculator uses a non-invasive method based on the mathematical relationship between trunk diameter and breed-specific annual growth rate.</p>
+<h2 class="wp-block-heading" id="instruktsiya-po-tochnomu-izmereniyu-2">Accurate Measurement Instructions</h2>
+<p>To get the most reliable result, follow the rules of forest taxation:</p>
+<ul class="wp-block-list">
+<li><strong>Measurement height:</strong> Measure the girth at the level <strong>1.3 meters</strong> from the ground. This is the “chest height” standard adopted in world forestry practice.</li>
+<li><strong>Tool:</strong> Use a soft measuring tape (tape measure). It should fit snugly against the bark, but not squeeze it.</li>
+<li><strong>Obstacles:</strong> If there is a large branch or growth at the 1.3 m level, take the measurement a little lower, in the place where the trunk has the most regular shape.</li>
+</ul>
+<h3 class="wp-block-heading" id="uchet-uslovij-proizrastaniya-2">Taking into account growing conditions</h3>
+<p>The calculator algorithm includes an important modifier: habitat.</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>In a dense forest:</strong> Trees compete for light by stretching upward. The trunk thickens more slowly in such conditions, so a tree of the same diameter in the forest will be older.</li>
+<li><strong>In open space (field, garden):</strong> The abundance of light stimulates rapid radial growth. The trunk becomes thick much faster.</li>
+</ol>
+<h2 class="wp-block-heading" id="matematicheskaya-model-rascheta-2">Mathematical calculation model</h2>
+<p>The instrument is based on a formula that connects the circumference with biological age through the $\pi$ number and the species coefficient.</p>
+<h3 class="wp-block-heading" id="formuly-rascheta-2">Calculation formulas</h3>
+<p>First, the barrel diameter ( $D$ ) is calculated:</p>
+<p>$$D = \frac{L}{\pi}$$</p>
+<p>Where $L$ is the girth (circumference) of the trunk.</p>
+<p>The final age is then determined ( $A$ ):</p>
+<p>$$A = D \times K \times M$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $K$ - species growth rate (individual for each breed).</li>
+<li> $M$ - environment coefficient (0.8 for open areas or 1.2 for forests).</li>
+</ul>
+<h2 class="wp-block-heading" id="koeffitsienty-i-harakteristiki-populyarnyh-derevev-2">Coefficients and characteristics of popular trees</h2>
+<p>Below is a table of data that is used in our calculator to ensure accuracy.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Wood species</strong></td><td><strong>Average coefficient (K)</strong></td><td><strong>Maximum age (years)</strong></td><td><strong>Growth rate</strong></td></tr></thead><tbody><tr><td><strong>Oak</strong></td><td>2.0</td><td>400 — 1000</td><td>Slow</td></tr><tr><td><strong>Pine</strong></td><td>1.5</td><td>200 — 300</td><td>Average</td></tr><tr><td><strong>Birch</strong></td><td>1.2</td><td>100 — 150</td><td>Fast</td></tr><tr><td><strong>Maple</strong></td><td>1.5</td><td>200 — 250</td><td>Average</td></tr><tr><td><strong>Spruce</strong></td><td>1.1</td><td>300 — 400</td><td>Slow</td></tr><tr><td><strong>Linden</strong></td><td>1.3</td><td>350 — 500</td><td>Average</td></tr><tr><td><strong>Apple</strong></td><td>1.3</td><td>80 — 100</td><td>Fast</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="pochemu-nash-kalkulyator-tochnee-drugih-2">Why is our calculator more accurate than others?</h2>
+<p>Unlike simple formulas, our tool takes into account the life cycle of a tree. The code implements the logic of dividing into three stages:</p>
+<ul class="wp-block-list">
+<li><strong>Young tree:</strong> Active set of biomass.</li>
+<li><strong>Mature tree:</strong> Period of stable functioning.</li>
+<li><strong>Old Tree (Veteran):</strong> Slowing down processes, achieving maximum dimensions.</li>
+</ul>
+<p>The calculator automatically visualizes the percentage of life cycle completion based on the biological limit of each specific breed. This allows you to not only find out the number, but also understand what phase the plant is in.</p>
+<h3 class="wp-block-heading" id="tochnost-i-pogreshnost-2">Accuracy and error</h3>
+<p>It is important to understand that any calculation without counting rings has an error of about <strong>±10%</strong>. It arises due to unique microconditions: soil composition, groundwater levels and climatic anomalies in specific years. However, for everyday and assessment needs, this method is the “gold standard” of dendrochronology.</p>
+<p>Do you want to know more about the condition of your garden or forest? Try entering data from different trees and compare their biological ages!</p>
+</div>
+    </div>
+</body>
+</html>

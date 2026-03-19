@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percent reduction calculator: Subtract percentage and calculate discount</title>
+    <meta name="description" content="Percent reduction calculator: Subtract percentage and calculate discount - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Percent reduction calculator: Subtract percentage and calculate discount</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (строго по шаблону) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-row.cols-3 { grid-template-columns: repeat(3, minmax(220px, 1fr)); }
+    .c-row.single { grid-template-columns: 1fr; }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    .c-help {font-size:12px;color:#777;text-align:center;}
+    .c-input, .c-select, .c-textarea { width:100%; padding:12px 14px; border:1px solid #ccc; border-radius:8px; font-size:14px; }
+    .c-input:focus, .c-select:focus, .c-textarea:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap;margin-bottom: 16px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+
+    /* Результат */
+    .c-result { border:1px dashed #4caf50; border-radius:10px; padding:10px; background:#fff; display:none; }
+    .c-result.show { display:grid; }
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #4caf50; grid-template-columns: 0.4fr 0.5fr 0.1fr; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; }
+    
+    /* Статусы */
+    .c-resval.decrease { color: #008000; } /* Снижение - это часто хорошо (цена) или плохо (доход), но выделим зеленым как "successful reduction calculation" */
+    .c-resval.increase { color: #d32f2f; }
+
+    /* Кнопка копирования */
+    .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden;
+      background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+      background-repeat:no-repeat; background-position:center; background-size:20px 20px; }
+
+    .is-hidden { display:none !important; }
+    @media (max-width: 860px) { .c-resval { font-size:14px; } }
+    @media (max-width: 720px) { .c-row.cols-3 { grid-template-columns: 1fr; } }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-row single">
+<div class="c-field">
+<label class="c-label" for="calcMode">What needs to be calculated?</label>
+<select class="c-select" id="calcMode">
+<option selected="" value="percentDiff">By what % did the number decrease?</option>
+<option value="subtractPercent">Subtract % from number (Discount)</option>
+<option value="findOriginal">Find the original number (before reduction)</option>
+</select>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label" for="val1" id="lbl1">Seed number</label>
+<input class="c-input" id="val1" step="any" type="number" value="100"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="val2" id="lbl2">Final number</label>
+<input class="c-input" id="val2" step="any" type="number" value="75"/>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div aria-live="polite" class="c-result" id="resultBox">
+<div class="c-resline is-hidden" id="validationError" style="background:#ffdddd; color:#cc0000;">
+<div class="c-resleft">Error:</div>
+<div class="c-resval" id="errorMsg" style="color:#cc0000; font-weight: 500;"></div>
+<button class="c-copy is-hidden" disabled=""></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft" id="resLabelMain">Reduction percentage</div>
+<div class="c-resval" id="resMain"></div>
+<button aria-label="Copy result" class="c-copy" id="copyMain" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Difference (in units)</div>
+<div class="c-resval" id="resDiff"></div>
+<button aria-label="Copy difference" class="c-copy" id="copyDiff" title="Copy"></button>
+</div>
+<div class="c-resline single">
+<div class="c-resleft">Explanation</div>
+<div class="c-resval" id="resText" style="font-weight:400; font-size:13px;"></div>
+<button class="c-copy is-hidden" disabled=""></button>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика =====
+  const $ = (s) => wrap.querySelector(s);
+  
+  const resBox = $('#resultBox');
+  const errorBox = $('#validationError');
+  const errorMsg = $('#errorMsg');
+  
+  const modeSelect = $('#calcMode');
+  const lbl1 = $('#lbl1');
+  const lbl2 = $('#lbl2');
+  
+  const outputs = {
+      main: $('#resMain'),
+      mainLabel: $('#resLabelMain'),
+      diff: $('#resDiff'),
+      text: $('#resText')
+  };
+
+  // ----- Вспомогательные функции -----
+  function num(v){ const n = parseFloat(String(v).replace(',', '.')); return Number.isFinite(n) ? n : NaN; }
+  
+  function fmt(v, d=2){
+    if (isNaN(v)) return '—';
+    // Если целое, убираем .00
+    if (isZero(v % 1)) return v.toLocaleString('ru-RU');
+    return v.toLocaleString('ru-RU', { maximumFractionDigits: d });
+  }
+
+  // ИСПРАВЛЕНО: Функция isZero
+  function isZero(val) {
+    const tolerance = 1e-9;
+    const check = Math.sign(tolerance - Math.abs(val));
+    if (check === -1) return false;
+    return true;
+  }
+  
+  function setError(msg) {
+    errorMsg.textContent = msg;
+    errorBox.classList.remove('is-hidden');
+    resBox.classList.add('show');
+  }
+  function hideError() {
+    errorBox.classList.add('is-hidden');
+  }
+  
+  // Обновление интерфейса
+  function updateUI() {
+      const mode = modeSelect.value;
+      
+      if (mode === 'percentDiff') {
+          lbl1.textContent = 'Seed number';
+          lbl2.textContent = 'Final number';
+          outputs.mainLabel.textContent = 'Decrease by';
+      } else if (mode === 'subtractPercent') {
+          lbl1.textContent = 'Number';
+          lbl2.innerHTML = 'Reduction percentage <span class="c-term">%</span>';
+          outputs.mainLabel.textContent = 'Total number';
+      } else { // findOriginal
+          lbl1.textContent = 'Final number';
+          lbl2.innerHTML = 'By what percentage did <span class="c-term">%</span> fall?';
+          outputs.mainLabel.textContent = 'Original number';
+      }
+      resBox.classList.remove('show');
+  }
+
+  // ----- Главный расчет -----
+  function calc() {
+    hideError();
+    
+    // 1. Сбор данных
+    const mode = modeSelect.value;
+    const v1 = num($('#val1').value);
+    const v2 = num($('#val2').value);
+
+    // 2. Валидация
+    if (isNaN(v1) || isNaN(v2)) {
+      setError('Please enter valid numbers.');
+      return;
+    }
+
+    let resultMain = 0;
+    let resultDiff = 0;
+    let explanation = '';
+    let classStatus = 'decrease';
+
+    // 3. Расчет
+    if (mode === 'percentDiff') {
+        // Найти процент снижения: (Start - End) / Start * 100
+        if (isZero(v1)) {
+            setError('The starting number cannot be 0.');
+            return;
+        }
+        
+        const diff = v1 - v2;
+        const percent = (diff / v1) * 100;
+        
+        resultMain = percent;
+        resultDiff = diff;
+        
+        // Анализ
+        // ИСПРАВЛЕНО: v2 > v1 (diff < 0)
+        if (Math.sign(diff) === -1) {
+            explanation = `Число <b>увеличилось</b>, а не уменьшилось (отрицательное уменьшение).`;
+            classStatus = 'increase';
+        } else {
+            explanation = `${fmt(v1)} стало ${fmt(v2)}. Уменьшение составило ${fmt(percent)}%.`;
+        }
+        
+        outputs.main.textContent = `${fmt(resultMain)}%`;
+        
+    } else if (mode === 'subtractPercent') {
+        // Вычесть процент: Start * (1 - p/100)
+        const start = v1;
+        const percent = v2;
+        
+        const amount = start * (percent / 100);
+        const end = start - amount;
+        
+        resultMain = end;
+        resultDiff = amount;
+        
+        explanation = `${fmt(start)} минус ${fmt(percent)}% (${fmt(amount)}) = ${fmt(end)}`;
+        outputs.main.textContent = fmt(resultMain);
+        
+    } else { // findOriginal
+        // Найти исходное: End / (1 - p/100)
+        const end = v1;
+        const percent = v2;
+        
+        if (isZero(100 - percent)) {
+            setError('The reduction percentage cannot be 100% (divided by zero).');
+            return;
+        }
+        
+        const start = end / (1 - (percent / 100));
+        const amount = start - end;
+        
+        resultMain = start;
+        resultDiff = amount;
+        
+        explanation = `Если после снижения на ${fmt(percent)}% число стало ${fmt(end)}, то изначально было ${fmt(start)}.`;
+        outputs.main.textContent = fmt(resultMain);
+    }
+
+    // 4. Вывод
+    outputs.main.className = `c-resval ${classStatus}`;
+    outputs.diff.textContent = fmt(resultDiff);
+    outputs.text.innerHTML = explanation;
+
+    resBox.classList.add('show');
+  }
+
+  // ----- Слушатели -----
+  modeSelect.addEventListener('change', updateUI);
+  $('#calcBtn').addEventListener('click', calc);
+  $('#resetBtn').addEventListener('click', () => {
+    $('#val1').value = '100';
+    $('#val2').value = '75';
+    $('#calcMode').value = 'percentDiff';
+    updateUI();
+    resBox.classList.remove('show');
+    hideError();
+  });
+
+  // Копирование
+  wrap.addEventListener('click', (e) => {
+    let textToCopy = null;
+    let targetId = e.target.id;
+    
+    // Чистим от знаков % и +
+    if (targetId === 'copyMain') textToCopy = outputs.main.textContent.replace(/[^\d.,-]/g, '');
+    if (targetId === 'copyDiff') textToCopy = outputs.diff.textContent.replace(/[^\d.,-]/g, '');
+    
+    if (textToCopy) {
+      try { navigator.clipboard?.writeText(textToCopy.trim()); } catch (_) {}
+    }
+  });
+
+  // Enter
+  wrap.addEventListener('keydown', (e) => {
+    // ИСПРАВЛЕНО: Замена &&
+    if (e.key === 'Enter') {
+      if (e.target.matches('input, select')) {
+        e.preventDefault();
+        calc();
+      }
+    }
+  });
+  
+  updateUI();
+});
+</script>
+
+        <div class="post-content">
+<h2 class="wp-block-heading" id="raschet-snizheniya-protsentov-onlajn-2">Calculate interest reduction online</h2>
+<p>Interest is all around us: from seasonal sales in stores to falling stock indices and weight loss. However, it can be difficult to calculate in your head exactly how much a “15% discount” from 1,450 rubles will be or by how much percent the profit has fallen compared to last month.</p>
+<p>Our universal calculator solves any problem related to reducing numbers. The tool operates in three modes, covering all possible scenarios.</p>
+<h2 class="wp-block-heading" id="vozmozhnosti-kalkulyatora-2">Calculator features</h2>
+<h3 class="wp-block-heading" id="1-najti-protsent-izmeneniya-snizheniya-2">1. Find the percentage of change (decrease)</h3>
+<p>This mode answers the question: “What percentage is number A less than number B?”</p>
+<p>Ideal for analytics. For example, if yesterday the stock price was 100 $, а сегодня 75$ , the calculator will show that the drop was 25%.</p>
+<p><strong>Formula:</strong></p>
+<p>$$Decrease \% = \frac{|Start\_Value — End\_Value|}{Start\_Value} \times 100$$</p>
+<h3 class="wp-block-heading" id="2-vychest-protsent-iz-chisla-raschet-skidki-2">2. Subtract the percentage from the number (Discount calculation)</h3>
+<p>The most popular mode for buyers. Answers the question: “How much will I pay if 30% is subtracted from 5000?”</p>
+<p>The tool will show not only the total amount, but also the amount of savings in monetary terms.</p>
+<p><strong>Formula:</strong></p>
+<p>$$Result = Start\_Value \times (1 — \frac{Percent}{100})$$</p>
+<h3 class="wp-block-heading" id="3-najti-ishodnoe-chislo-obratnyj-raschet-2">3. Find the original number (Reverse calculation)</h3>
+<p>A complex mathematical problem that the calculator solves instantly. Answers the question: “The product costs 850 rubles already with a 15% discount. How much did it cost before the sale?</p>
+<p>This is useful for checking the fairness of price tags in stores.</p>
+<p><strong>Formula:</strong></p>
+<p>$$Original\_Value = \frac{Current\_Value}{1 — \frac{Percent}{100}}$$</p>
+<h2 class="wp-block-heading" id="tablitsa-populyarnyh-skidok-2">Table of popular discounts</h2>
+<p>To quickly assess the benefits, you can use our cheat sheet. Example calculation for a base amount of 1000 units:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Discount (%)</strong></td><td><strong>Discount amount</strong></td><td><strong>Total price (from 1000)</strong></td></tr></thead><tbody><tr><td><strong>5%</strong></td><td>50</td><td>950</td></tr><tr><td><strong>10%</strong></td><td>100</td><td>900</td></tr><tr><td><strong>15%</strong></td><td>150</td><td>850</td></tr><tr><td><strong>20%</strong></td><td>200</td><td>800</td></tr><tr><td><strong>25%</strong></td><td>250</td><td>750</td></tr><tr><td><strong>30%</strong></td><td>300</td><td>700</td></tr><tr><td><strong>50%</strong></td><td>500</td><td>500</td></tr></tbody></table></div></figure>
+<h3 class="wp-block-heading" id="chastye-oshibki-pri-raschetah-2">Frequent errors in calculations</h3>
+<p>It is important to remember that percentages do not add up linearly.</p>
+<ul class="wp-block-list">
+<li><strong>Error:</strong> If the price was reduced by 20%, and then by another 20%, this <strong>not equal</strong> 40% discount<ul class="wp-block-list">
+<li><em>Calculation:</em> $100 — 20\% = 80$ . Then $80 — 20\% = 64$ .</li>
+<li><em>Result:</em> The overall decline was 36% rather than 40%.</li>
+</ul>
+</li>
+</ul>
+<p>Our calculator allows you to avoid such mistakes by providing accurate numbers and a clear explanation of the solution.</p>
+</div>
+    </div>
+</body>
+</html>

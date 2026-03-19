@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix squaring calculator online</title>
+    <meta name="description" content="Matrix squaring calculator online - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Matrix squaring calculator online</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (Эталонный шаблон + Матричная сетка) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(220px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 10px; } 
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 10px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+
+    .c-divider { 
+        display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; 
+        font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; }
+
+    /* === Result Box Styling === */
+    .c-result { border:1px dashed #0693e3; border-radius:10px; padding:10px; background:#fff; display:none; scroll-margin-top: 20px; }
+    .c-result.show { display:grid; }
+    
+    .c-result-title {
+        margin: 0 0 10px 0; padding: 0 12px;
+        font-size: 18px; font-weight: 700; color: #333;
+        display: flex; align-items: center; gap: 8px;
+    }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #0693e3; grid-template-columns: 1fr auto 30px; }
+    .c-resline:last-child { border-bottom:none; }
+    
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; text-align: right; color:#0693e3; }
+    
+    /* Matrix Grid Styles */
+    .c-matrix-wrap { display: flex; justify-content: center; margin: 10px 0; }
+    .c-matrix { 
+        display: grid; 
+        gap: 10px; 
+        padding: 15px; 
+        background: #f8f9fa; 
+        border: 1px solid #eee; 
+        border-radius: 12px;
+        position: relative;
+    }
+    /* Скобки матрицы (декорация) */
+    .c-matrix::before, .c-matrix::after {
+        content: ''; position: absolute; top: 10px; bottom: 10px; width: 10px;
+        border: 2px solid #ccc;
+    }
+    .c-matrix::before { left: 5px; border-right: none; border-radius: 8px 0 0 8px; }
+    .c-matrix::after { right: 5px; border-left: none; border-radius: 0 8px 8px 0; }
+
+    .c-matrix.size-2 { grid-template-columns: repeat(2, 1fr); }
+    .c-matrix.size-3 { grid-template-columns: repeat(3, 1fr); }
+    
+    .c-matrix-cell input { text-align: center; padding: 10px 5px; font-weight: 600; }
+    
+    /* Result Matrix */
+    .c-res-matrix { display: grid; gap: 5px; justify-content: center; justify-items: center; }
+    .c-res-matrix.size-2 { grid-template-columns: repeat(2, auto); }
+    .c-res-matrix.size-3 { grid-template-columns: repeat(3, auto); }
+    .c-res-val-cell { 
+        padding: 8px 12px; background: #e3f2fd; border-radius: 6px; 
+        font-weight: bold; color: #1565c0; min-width: 50px; text-align: center; 
+    }
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 4px; padding: 12px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 19px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 24px; }
+       
+       .c-matrix { padding: 10px; gap: 5px; }
+       .c-matrix-cell input { padding: 8px 2px; font-size: 14px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-divider"><span class="icon">⚙️</span>Options</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Matrix size</label>
+<select class="c-select" id="sizeSelect">
+<option value="2">2 × 2</option>
+<option selected="" value="3">3 × 3</option>
+</select>
+</div>
+</div>
+<div class="c-divider"><span class="icon">🔢</span>Data entry</div>
+<div class="c-matrix-wrap">
+<div class="c-matrix size-3" id="matrixInput">
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div aria-live="polite" class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">📊</span>Result (A²)</div>
+<div class="c-resline" style="border-bottom:none; display:flex; justify-content:center; background:#f9f9f9; padding: 20px 10px;">
+<div class="c-res-matrix size-3" id="resMatrix"></div>
+</div>
+<div class="c-resline" style="background:#fff;">
+<div class="c-resleft" style="font-size:12px; color:#888;">Operation: Multiplying matrix A by itself (A × A)</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика =====
+  const $ = (s) => wrap.querySelector(s);
+  const sizeSel = $('#sizeSelect');
+  const matrixBox = $('#matrixInput');
+  const resMatrixBox = $('#resMatrix');
+  const resBox = $('#resultBox');
+  const errorEl = $('#errorMsg');
+
+  // Генерация инпутов
+  function renderInputs(size) {
+      matrixBox.innerHTML = '';
+      matrixBox.className = 'c-matrix size-' + size;
+      
+      const count = size * size;
+      for (let i = 0; Math.sign(count - i) === 1; i++) {
+          const r = Math.floor(i / size) + 1;
+          const c = (i % size) + 1;
+          
+          const div = document.createElement('div');
+          div.className = 'c-matrix-cell';
+          div.innerHTML = `<input class="c-input param-inp" id="m${r}${c}" placeholder="a${r}${c}" step="any" type="number"/>`;
+          matrixBox.appendChild(div);
+      }
+      
+      // Re-attach listeners
+      matrixBox.querySelectorAll('.param-inp').forEach(inp => {
+          inp.addEventListener('input', () => {
+             if (inp.value) inp.classList.add('filled');
+             else inp.classList.remove('filled');
+          });
+      });
+  }
+
+  // Инициализация
+  renderInputs(3);
+  
+  sizeSel.addEventListener('change', () => {
+      renderInputs(parseInt(sizeSel.value));
+      resBox.classList.remove('show');
+  });
+
+  function num(id) { 
+      const el = document.getElementById(id);
+      const v = parseFloat(el ? el.value : 0); 
+      return isNaN(v) ? 0 : v; 
+  }
+
+  function multiply(size) {
+      // Считывание
+      let A = [];
+      for(let r=1; Math.sign((size+1)-r) === 1; r++){
+          let row = [];
+          for(let c=1; Math.sign((size+1)-c) === 1; c++){
+              row.push(num(`m${r}${c}`));
+          }
+          A.push(row);
+      }
+
+      // Умножение A * A
+      // C[i][j] = sum(A[i][k] * A[k][j])
+      let C = [];
+      for(let i=0; Math.sign(size-i) === 1; i++){
+          let row = [];
+          for(let j=0; Math.sign(size-j) === 1; j++){
+              let sum = 0;
+              for(let k=0; Math.sign(size-k) === 1; k++){
+                  sum += A[i][k] * A[k][j];
+              }
+              row.push(sum);
+          }
+          C.push(row);
+      }
+      return C;
+  }
+
+  function calc() {
+    errorEl.classList.remove('show');
+    
+    const size = parseInt(sizeSel.value);
+    const resultM = multiply(size);
+    
+    // Рендер результата
+    resMatrixBox.innerHTML = '';
+    resMatrixBox.className = 'c-res-matrix size-' + size;
+    
+    resultM.forEach(row => {
+        row.forEach(val => {
+            const div = document.createElement('div');
+            div.className = 'c-res-val-cell';
+            // Округляем до 4 знаков, если не целое
+            div.textContent = Number.isInteger(val) ? val : val.toFixed(4);
+            resMatrixBox.appendChild(div);
+        });
+    });
+
+    resBox.classList.add('show');
+    resBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  // Слушатели
+  $('#calcBtn').addEventListener('click', calc);
+  $('#resetBtn').addEventListener('click', () => {
+      renderInputs(parseInt(sizeSel.value)); // Пересоздать чистые
+      resBox.classList.remove('show');
+      errorEl.classList.remove('show');
+  });
+
+});
+</script>
+
+        <div class="post-content">
+<p>The operation of squaring a matrix is ​​a special case of matrix multiplication and is often found in linear algebra, graph theory (searching for paths of length 2) and in solving systems of differential equations. Our online calculator allows you to instantly get results for matrices of dimensions 2x2 and 3x3.</p>
+<h2 class="wp-block-heading" id="teoriya-chto-znachit-vozvesti-matritsu-v-kvadrat-2">Theory: What does it mean to square a matrix?</h2>
+<p>Square the number is simple: $5^2 = 5 \times 5 = 25$ . The principle is similar with matrices, but the process is more complicated. Squaring the $A$ matrix means multiplying this matrix by itself:</p>
+<p>$$A^2 = A \times A$$</p>
+<p><strong>Important condition:</strong> You can raise it to a power <strong>only square matrices</strong> (where the number of rows is equal to the number of columns). For rectangular matrices this operation is not defined.</p>
+<h2 class="wp-block-heading" id="algoritm-umnozheniya-stroka-na-stolbets-2">Multiplication algorithm (row by column)</h2>
+<p>To obtain element $c_{ij}$ of the resulting matrix $C = A^2$ , you need to scalarly multiply the $i$ th row of the first matrix by the $j$ th column of the second matrix (in this case, the same one).</p>
+<p>The general formula for an element of the resulting matrix is:</p>
+<p>$$c_{ij} = \sum_{k=1}^{n} a_{ik} \cdot a_{kj}$$</p>
+<h3 class="wp-block-heading" id="formuly-dlya-matritsy-2-3">Formulas for a 2x2 matrix</h3>
+<p>Let the matrix $A$ be given:</p>
+<p>$$A = \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}$$</p>
+<p>Then $A^2$ is calculated like this:</p>
+<p>$$A^2 = \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix} \times \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix} = \begin{pmatrix} a^2 + bc &amp; ab + bd \\ ac + cd &amp; bc + d^2 \end{pmatrix}$$</p>
+<h3 class="wp-block-heading" id="formuly-dlya-matritsy-3-4">Formulas for a 3x3 matrix</h3>
+<p>For a third-order matrix, the number of calculations increases. Each of the 9 elements of the new matrix is ​​the sum of three products.</p>
+<p>$$A = \begin{pmatrix} a_{11} &amp; a_{12} &amp; a_{13} \\ a_{21} &amp; a_{22} &amp; a_{23} \\ a_{31} &amp; a_{32} &amp; a_{33} \end{pmatrix}$$</p>
+<p>An example of calculating the first element ( $c_{11}$ ) of a squared matrix:</p>
+<p>$$c_{11} = a_{11} \cdot a_{11} + a_{12} \cdot a_{21} + a_{13} \cdot a_{31}$$</p>
+<h2 class="wp-block-heading" id="svojstva-kvadrata-matritsy-2">Properties of a squared matrix</h2>
+<p>When working with matrix powers, it is useful to remember the following properties:</p>
+<ul class="wp-block-list">
+<li><strong>Null matrix:</strong> The square of the zero matrix is ​​always equal to the zero matrix ( $O^2 = O$ ).</li>
+<li><strong>Identity matrix:</strong> The square of the identity matrix is ​​equal to itself ( $I^2 = I$ ).</li>
+<li><strong>Diagonal matrix:</strong> To square a diagonal matrix, it is sufficient to square each element on the main diagonal.</li>
+<li><strong>Idempotency:</strong> If $A^2 = A$ , such a matrix is ​​called idempotent (for example, projection matrices).</li>
+<li><strong>Nilpotency:</strong> If $A^k = O$ is for some $k$ , the matrix is ​​called nilpotent. There are non-zero matrices whose square is zero.</li>
+</ul>
+<h2 class="wp-block-heading" id="prakticheskoe-primenenie-2">Practical Application</h2>
+<p>Where is this operation used?</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Markov chains:</strong> The square of the transition matrix shows the transition probabilities of the system in 2 steps.</li>
+<li><strong>Graph theory:</strong> If $A$ is the adjacency matrix of the graph, then the elements of the matrix $A^2$ show the number of paths of length 2 between the vertices.</li>
+<li><strong>Fibonacci numbers:</strong> By raising a special $Q$ matrix to a power, you can quickly find the $n$ th Fibonacci number.</li>
+</ol>
+<h3 class="wp-block-heading" id="primer-rascheta-2">Calculation example</h3>
+<p>Consider the $A$ matrix:</p>
+<p>$$A = \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}$$</p>
+<p>Let's calculate $A^2$ :</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Element (1,1):</strong> $1\cdot1 + 2\cdot3 = 1 + 6 = 7$</li>
+<li><strong>Element (1,2):</strong> $1\cdot2 + 2\cdot4 = 2 + 8 = 10$</li>
+<li><strong>Element (2,1):</strong> $3\cdot1 + 4\cdot3 = 3 + 12 = 15$</li>
+<li><strong>Element (2,2):</strong> $3\cdot2 + 4\cdot4 = 6 + 16 = 22$</li>
+</ol>
+<p>Answer:</p>
+<p>$$A^2 = \begin{pmatrix} 7 &amp; 10 \\ 15 &amp; 22 \end{pmatrix}$$</p>
+<p>Our calculator performs all these operations automatically in a fraction of a second, eliminating arithmetic errors.</p>
+</div>
+    </div>
+</body>
+</html>

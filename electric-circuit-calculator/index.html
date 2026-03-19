@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrical Circuit Calculator: Ohm's Law, Power Calculation and Cable Selection</title>
+    <meta name="description" content="Electrical Circuit Calculator: Ohm's Law, Power Calculation and Cable Selection - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Electrical Circuit Calculator: Ohm's Law, Power Calculation and Cable Selection</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (Body Shape Template + Mobile Tweaks) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(220px, 1fr)); }
+    .c-row.cols-3 { grid-template-columns: repeat(3, minmax(220px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 10px; } 
+    .c-input-suffix {
+        position: absolute; right: 32px; top: 50%; transform: translateY(-50%);
+        color: #888; font-size: 14px; pointer-events: none; font-weight: 500;
+    }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 10px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+
+    .c-divider { 
+        display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; 
+        font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; }
+
+    /* === Result Box Styling === */
+    .c-result { border:1px dashed #0693e3; border-radius:10px; padding:10px; background:#fff; display:none; scroll-margin-top: 20px; }
+    .c-result.show { display:grid; }
+    
+    .c-result-title {
+        margin: 0 0 10px 0; padding: 0 12px;
+        font-size: 18px; font-weight: 700; color: #333;
+        display: flex; align-items: center; gap: 8px;
+    }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #0693e3; grid-template-columns: 1fr auto 30px; }
+    .c-resline:last-child { border-bottom:none; }
+    
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 4px; }
+    
+    .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden; padding: 3px;
+      background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+      background-repeat:no-repeat; background-position:center; background-size:20px 20px; opacity: 0.6;}
+    .c-copy:hover { opacity: 1; }
+
+    .c-error { color: #d32f2f; background: #ffebee; padding: 10px; border-radius: 8px; margin-bottom: 10px; display: none; font-size: 14px; }
+    .c-error.show { display: block; }
+    .is-hidden { display:none !important; }
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 600px) { .c-row.cols-3 { grid-template-columns: 1fr; } }
+
+    /* Mobile Result Optimization */
+    @media (max-width: 480px) {
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 4px; padding: 12px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 19px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 24px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-divider"><span class="icon">⚡</span>Circuit Parameters (Fill in any 2)</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Voltage<span class="c-term">U</span></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="volts" placeholder="Volt" step="any" type="number"/>
+<span class="c-input-suffix">IN</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Current strength<span class="c-term">I</span></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="amps" placeholder="Ampere" step="any" type="number"/>
+<span class="c-input-suffix">A</span>
+</div>
+</div>
+</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Resistance<span class="c-term">R</span></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="ohms" placeholder="Ohm" step="any" type="number"/>
+<span class="c-input-suffix">Ω</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Power<span class="c-term">P</span></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="watts" placeholder="Watt" step="any" type="number"/>
+<span class="c-input-suffix">W</span>
+</div>
+</div>
+</div>
+<div class="c-divider"><span class="icon">💰</span>Cost calculation (Optional)</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Opening hours</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="time" step="0.5" type="number" value="24"/>
+<span class="c-input-suffix">h</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Rate</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="rate" step="0.01" type="number" value="5.50"/>
+<span class="c-input-suffix">$/kWh</span>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div aria-live="polite" class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">📊</span>Your result</div>
+<div class="c-resline" style="border-bottom:none;">
+<div class="c-resleft">Voltage (U)</div>
+<div class="c-resval" id="resU"></div>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Current (I)</div>
+<div class="c-resval" id="resI"></div>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Resistance (R)</div>
+<div class="c-resval" id="resR"></div>
+</div>
+<div class="c-resline" style="background:#e3f2fd;">
+<div class="c-resleft">Power (P)</div>
+<div class="c-resval" id="resP" style="font-weight:bold;"></div>
+<button class="c-copy" id="copyP"></button>
+</div>
+<div class="c-resline" style="margin-top:10px;">
+<div class="c-resleft">Cable recommendation<span class="c-subtext">Copper, household wiring</span>
+</div>
+<div class="c-resval" id="resWire" style="font-size:14px; font-weight:normal;"></div>
+</div>
+<div class="c-resline" style="background:#fff8e1;">
+<div class="c-resleft">Energy cost<span class="c-subtext" id="costLabel">in 24 hours</span>
+</div>
+<div class="c-resval" id="resCost" style="color:#f57f17;"></div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика =====
+  const $ = (s) => wrap.querySelector(s);
+  const $$ = (s) => wrap.querySelectorAll(s);
+  const resBox = $('#resultBox');
+  const errorEl = $('#errorMsg');
+  
+  const inP = {
+      u: $('#volts'),
+      i: $('#amps'),
+      r: $('#ohms'),
+      p: $('#watts')
+  };
+  
+  const inCost = {
+      t: $('#time'),
+      rate: $('#rate')
+  };
+  
+  const out = {
+      u: $('#resU'),
+      i: $('#resI'),
+      r: $('#resR'),
+      p: $('#resP'),
+      wire: $('#resWire'),
+      cost: $('#resCost'),
+      costLbl: $('#costLabel')
+  };
+
+  function num(el){ const n = parseFloat(el.value); return isNaN(n) ? 0 : n; }
+  
+  // Подсветка заполненных полей
+  $$('.param-inp').forEach(inp => {
+      inp.addEventListener('input', () => {
+          if (inp.value) inp.classList.add('filled');
+          else inp.classList.remove('filled');
+      });
+  });
+
+  function getWireSize(amps) {
+      if (Math.sign(amps) === -1) return "—";
+      // Примерные токи для меди
+      if (Math.sign(10 - amps) !== -1) return "0.75 - 1.5 mm²"; // <= 10
+      if (Math.sign(16 - amps) !== -1) return "1.5 - 2.5 mm²"; // <= 16
+      if (Math.sign(25 - amps) !== -1) return "2.5 - 4.0 mm²"; // <= 25
+      if (Math.sign(32 - amps) !== -1) return "4.0 - 6.0 mm²"; // <= 32
+      if (Math.sign(40 - amps) !== -1) return "6.0 - 10.0 mm²"; 
+      return "More than 10 mm² (Special project)";
+  }
+
+  function calc() {
+    errorEl.classList.remove('show');
+    
+    // Считываем значения. 0 считается как "not entered" для логики
+    const U = num(inP.u);
+    const I = num(inP.i);
+    const R = num(inP.r);
+    const P = num(inP.p);
+    
+    let u_res = 0, i_res = 0, r_res = 0, p_res = 0;
+    let valid = false;
+
+    // Логика "Magic circle"
+    // Проверяем пары. Используем Math.sign для проверки > 0
+    
+    if (Math.sign(U) === 1) {
+        if (Math.sign(I) === 1) { // Есть U и I
+             u_res = U; i_res = I;
+             r_res = U / I;
+             p_res = U * I;
+             valid = true;
+        } else if (Math.sign(R) === 1) { // Есть U и R
+             u_res = U; r_res = R;
+             i_res = U / R;
+             p_res = (U * U) / R;
+             valid = true;
+        } else if (Math.sign(P) === 1) { // Есть U и P
+             u_res = U; p_res = P;
+             i_res = P / U;
+             r_res = (U * U) / P;
+             valid = true;
+        }
+    } else if (Math.sign(I) === 1) {
+        if (Math.sign(R) === 1) { // Есть I и R
+             i_res = I; r_res = R;
+             u_res = I * R;
+             p_res = (I * I) * R;
+             valid = true;
+        } else if (Math.sign(P) === 1) { // Есть I и P
+             i_res = I; p_res = P;
+             u_res = P / I;
+             r_res = P / (I * I);
+             valid = true;
+        }
+    } else if (Math.sign(R) === 1 && Math.sign(P) === 1) { // Есть R и P
+        r_res = R; p_res = P;
+        u_res = Math.sqrt(P * R);
+        i_res = Math.sqrt(P / R);
+        valid = true;
+    }
+
+    if (!valid) {
+        errorEl.textContent = "Please fill in any two circuit parameters (values ​​> 0)"; 
+        errorEl.classList.add('show'); resBox.classList.remove('show'); return;
+    }
+
+    // Вывод основных
+    out.u.textContent = u_res.toFixed(2) + "IN";
+    out.i.textContent = i_res.toFixed(2) + "A";
+    out.r.textContent = r_res.toFixed(2) + "Ohm";
+    out.p.textContent = p_res.toFixed(2) + "W";
+    
+    // Кабель
+    out.wire.textContent = getWireSize(i_res);
+    
+    // Стоимость
+    const Time = num(inCost.t);
+    const Rate = num(inCost.rate);
+    
+    if (Math.sign(Time) === 1 && Math.sign(Rate) === 1) {
+        // P (Вт) * t (ч) / 1000 = кВт*ч
+        const kwh = (p_res * Time) / 1000;
+        const cost = kwh * Rate;
+        out.cost.textContent = cost.toFixed(2) + " $";
+        out.costLbl.textContent = "for" + Time + "h";
+    } else {
+        out.cost.textContent = "—";
+    }
+
+    resBox.classList.add('show');
+    
+    // Автоматический скролл к результату
+    resBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  // Слушатели
+  $('#calcBtn').addEventListener('click', calc);
+  $('#resetBtn').addEventListener('click', () => {
+    $$('.param-inp').forEach(inp => {
+        inp.value = '';
+        inp.classList.remove('filled');
+    });
+    // Defaults
+    inCost.t.value = '24';
+    inCost.rate.value = '5.50';
+    
+    resBox.classList.remove('show');
+    errorEl.classList.remove('show');
+  });
+
+  // Копирование
+  wrap.addEventListener('click', (e) => {
+    if (e.target.classList.contains('c-copy')) {
+      const parent = e.target.parentElement;
+      const val = parent.querySelector('.c-resval').textContent;
+      if (val) navigator.clipboard.writeText(val);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>This tool is a universal assistant for engineers, electricians, students and DIYers. Our <strong>electrical circuit calculator</strong> allows you to find any unknown parameters knowing only two quantities. The work is based on fundamental physical laws: Ohm's Law and the formula for electrical power.</p>
+<h2 class="wp-block-heading" id="zachem-nuzhen-etot-kalkulyator-2">Why is this calculator needed?</h2>
+<p>When designing wiring, repairing electronics, or installing new equipment, it often becomes necessary to recalculate network parameters.</p>
+<ul class="wp-block-list">
+<li><strong>For repair:</strong> Find out how much current the device consumes if only the power is known.</li>
+<li><strong>For installation:</strong> Select the correct cable cross-section to avoid overheating and fire.</li>
+<li><strong>To save:</strong> Calculate how much money a heater or computer “eats” per day of operation.</li>
+</ul>
+<h2 class="wp-block-heading" id="zakon-oma-osnovy-i-formuly-2">Ohm's Law: Basics and Formulas</h2>
+<p>Ohm's law establishes the relationship between three key parameters in an electrical circuit. For convenience, we have summarized their designations in a table:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Parameter</strong></td><td><strong>Designation</strong></td><td><strong>Unit of measurement</strong></td><td><strong>Description</strong></td></tr></thead><tbody><tr><td><strong>Voltage</strong></td><td><strong>U</strong> (or V)</td><td>Volt (V/V)</td><td>Potential difference pushing electrons.</td></tr><tr><td><strong>Current strength</strong></td><td><strong>I</strong></td><td>Ampere (A/A)</td><td>The amount of charge flowing through a conductor.</td></tr><tr><td><strong>Resistance</strong></td><td><strong>R</strong></td><td>Ohm (Ω/Ω)</td><td>A force that prevents the passage of current.</td></tr></tbody></table></div></figure>
+<p>Basic formulas for a DC circuit (Direct Current):</p>
+<ul class="wp-block-list">
+<li>To find Voltage: <strong>U = I × R</strong></li>
+<li>To find the Current: <strong>I = U / R</strong></li>
+<li>To find Resistance: <strong>R = U / I</strong></li>
+</ul>
+<h2 class="wp-block-heading" id="raschet-elektricheskoj-moshhnosti-p-2">Calculation of electrical power (P)</h2>
+<p>Power is the rate at which electrical energy is transmitted or converted. It is in Watts that the consumption of household appliances (iron, kettle, lamp) is indicated.</p>
+<p>Power formulas:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li>Through current and voltage: <strong>P = U × I</strong></li>
+<li>Through current and resistance: <strong>P = I² × R</strong></li>
+<li>Through voltage and resistance: <strong>P = U² / R</strong></li>
+</ol>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p><strong>Important:</strong> Our calculator automatically detects what data you have entered and selects the correct formula to calculate the missing values.</p>
+</blockquote>
+<h2 class="wp-block-heading" id="kak-podobrat-sechenie-provoda-2">How to choose the wire cross-section?</h2>
+<p>One of the unique features of our tool is cable selection recommendation. This is critical for safety. If you pass a large current through a thin wire, it will begin to heat up, melt the insulation and can lead to a short circuit.</p>
+<p>We use standard recommendations for copper conductors in household wiring:</p>
+<ul class="wp-block-list">
+<li>For lighting (current up to 10A) it is usually sufficient <strong>1.5 mm²</strong>.</li>
+<li>For socket groups (current up to 16A) used <strong>2.5 mm²</strong>.</li>
+<li>For powerful consumers (stoves, instantaneous heaters) it is required <strong>4.0 mm²</strong> and higher.</li>
+</ul>
+<h2 class="wp-block-heading" id="primer-rascheta-2">Calculation example</h2>
+<p>Let's say you want to connect an LED strip with power <strong>100 W</strong> (P) to the power supply on <strong>12 Volt</strong> (U).</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li>Enter "12" in the field <strong>Voltage</strong>.</li>
+<li>Enter "100" in the field <strong>Power</strong>.</li>
+<li>Click "Calculate".</li>
+</ol>
+<p>The calculator will instantly show:</p>
+<ul class="wp-block-list">
+<li>Current strength ( <strong>I</strong> ) = <strong>8.33 A</strong></li>
+<li>Tape resistance ( <strong>R</strong> ) = <strong>1.44 Ohm</strong></li>
+<li>Recommended Wire: <strong>0.75 – 1.5 mm²</strong> (because the current is less than 10A).</li>
+</ul>
+<p>Use the electrical circuit calculator for accurate calculations and safe installation of electrical equipment.</p>
+</div>
+    </div>
+</body>
+</html>

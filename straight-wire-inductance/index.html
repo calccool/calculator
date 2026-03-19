@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Straight Wire Inductance Calculator + Reactance Calculator</title>
+    <meta name="description" content="Straight Wire Inductance Calculator + Reactance Calculator - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Straight Wire Inductance Calculator + Reactance Calculator</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (Золотой стандарт) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(220px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; background:#fff; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 10px; } 
+    .c-input-suffix {
+        position: absolute; right: 32px; top: 50%; transform: translateY(-50%);
+        color: #888; font-size: 14px; pointer-events: none; font-weight: 500;
+    }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 10px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+    
+    .c-divider { 
+        display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; 
+        font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; }
+
+    .c-result { border:1px dashed #0693e3; border-radius:10px; padding:10px; background:#fff; display:none; scroll-margin-top: 20px; }
+    .c-result.show { display:grid; }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #0693e3; grid-template-columns: 1fr auto 30px; }
+    .c-resline:last-child { border-bottom:none; }
+    
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 4px; }
+    
+    .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden; padding: 3px;
+      background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+      background-repeat:no-repeat; background-position:center; background-size:20px 20px; opacity: 0.6;}
+    .c-copy:hover { opacity: 1; }
+
+    .c-error { color: #d32f2f; background: #ffebee; padding: 10px; border-radius: 8px; margin-bottom: 10px; display: none; font-size: 14px; }
+    .c-error.show { display: block; }
+    
+    /* Visualization */
+    .c-visual-box { text-align: center; margin-bottom: 20px; padding: 20px; background: #263238; border-radius: 12px; border: 1px solid #37474f; height: 160px; display:flex; align-items:center; justify-content:center; }
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-visual-box" id="visualBox">
+<svg style="width:100%; height:100%; max-width:400px;" viewbox="0 0 300 120">
+<rect fill="#ffb74d" height="10" rx="2" stroke="#f57c00" stroke-width="2" width="200" x="50" y="55"></rect>
+<line marker-end="url(#arrow)" marker-start="url(#arrowRev)" stroke="#cfd8dc" stroke-width="1" x1="50" x2="250" y1="40" y2="40"></line>
+<text fill="#cfd8dc" font-size="12" text-anchor="middle" x="150" y="30">Length (l)</text>
+<line stroke="#cfd8dc" stroke-width="1" x1="30" x2="30" y1="55" y2="65"></line>
+<text dominant-baseline="middle" fill="#cfd8dc" font-size="12" text-anchor="end" x="25" y="65">D</text>
+<defs>
+<marker id="arrow" markerheight="6" markerwidth="6" orient="auto" refx="5" refy="3"><path d="M0,0 L6,3 L0,6 L1,3" fill="#cfd8dc"></path></marker>
+<marker id="arrowRev" markerheight="6" markerwidth="6" orient="auto" refx="1" refy="3"><path d="M6,0 L0,3 L6,6 L5,3" fill="#cfd8dc"></path></marker>
+</defs>
+</svg>
+</div>
+<div class="c-divider"><span class="icon">📏</span>Conductor geometry</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Length<span class="c-term">l</span></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="inLen" min="1" type="number" value="100"/>
+<span class="c-input-suffix">mm</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Diameter<span class="c-term">D</span></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="inDia" min="0.01" step="0.01" type="number" value="1"/>
+<span class="c-input-suffix">mm</span>
+</div>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Material</label>
+<select class="c-select" id="selMat">
+<option value="1">Copper / Aluminum (μ≈1)</option>
+<option value="100">Steel/Iron (μ≈100)</option>
+</select>
+</div>
+</div>
+<div class="c-divider"><span class="icon">⚡</span>Current parameters (optional)</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Frequency<span class="c-term">f</span></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="inFreq" min="0" type="number" value="1"/>
+<span class="c-input-suffix">MHz</span>
+</div>
+<small style="font-size:11px; color:#888;">To calculate reactance</small>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">🔌</span>Results</div>
+<div class="c-resline" style="background:#e3f2fd;">
+<div class="c-resleft">Inductance (L)<span class="c-subtext">Low Frequency</span>
+</div>
+<div class="c-resval" id="resL"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Reactance (X<sub>L</sub>)
+                  <span class="c-subtext">Impedance at frequency f</span>
+</div>
+<div class="c-resval" id="resXl"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Microhenry<span class="c-subtext">Alternative unit</span>
+</div>
+<div class="c-resval" id="resLuH" style="font-weight:400; font-size:14px;"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика =====
+  const $ = (s) => wrap.querySelector(s);
+  const $$ = (s) => wrap.querySelectorAll(s);
+  
+  const resBox = $('#resultBox');
+  const errorEl = $('#errorMsg');
+  
+  const inLen = $('#inLen');
+  const inDia = $('#inDia');
+  const inFreq = $('#inFreq');
+  const selMat = $('#selMat');
+
+  function calculate() {
+      errorEl.classList.remove('show');
+      
+      const len_mm = parseFloat(inLen.value);
+      const dia_mm = parseFloat(inDia.value);
+      const freq_mhz = parseFloat(inFreq.value);
+      const mu = parseFloat(selMat.value);
+
+      if ([len_mm, dia_mm].some(x => isNaN(x) || Math.sign(x) !== 1)) {
+           errorEl.textContent = "Enter positive length and diameter.";
+           errorEl.classList.add('show');
+           resBox.classList.remove('show');
+           return;
+      }
+
+      // Convert to cm for standard formula L (nH)
+      const l = len_mm / 10;
+      const d = dia_mm / 10;
+      const r = d / 2;
+      
+      // Formula for straight wire inductance (low freq approximation)
+      // L (nH) = 2 * l * (ln(2*l/r) - 0.75)
+      // Note: magnetic permeability affects the internal inductance.
+      // Full approx: L = 2l * (ln(2l/r) - 1 + mu/4)
+      // For Copper (mu=1): ... - 0.75
+      
+      const term1 = Math.log((2 * l) / r);
+      const term2 = 1;
+      const term3 = mu / 4;
+      
+      const L_nH = 2 * l * (term1 - term2 + term3);
+      
+      // Reactance X_L = 2 * pi * f * L
+      // f in MHz (1e6), L in nH (1e-9) -> result in Ohm * 1e-3 (mOhm)
+      // X (Ohm) = 2 * pi * (f_MHz * 1e6) * (L_nH * 1e-9)
+      //         = 2 * pi * f_MHz * L_nH * 1e-3
+      
+      let X_Ohm_Text = "---";
+      
+      if (!isNaN(freq_mhz) && Math.sign(freq_mhz) === 1) {
+          const X_Ohm = 2 * Math.PI * freq_mhz * L_nH * 0.001;
+          
+          if (Math.sign(X_Ohm - 1) === -1) {
+              X_Ohm_Text = (X_Ohm * 1000).toFixed(2) + "mOhm";
+          } else {
+              X_Ohm_Text = X_Ohm.toFixed(3) + "Ohm";
+          }
+      }
+
+      // Output
+      $('#resL').textContent = L_nH.toFixed(3) + "nGN";
+      $('#resLuH').textContent = (L_nH / 1000).toFixed(4) + "µH";
+      $('#resXl').textContent = X_Ohm_Text;
+
+      resBox.classList.add('show');
+      resBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  $('#calcBtn').addEventListener('click', calculate);
+  
+  $('#resetBtn').addEventListener('click', () => {
+      $$('.param-inp').forEach(inp => inp.value = inp.defaultValue);
+      selMat.value = 1;
+      resBox.classList.remove('show');
+      errorEl.classList.remove('show');
+  });
+
+  wrap.addEventListener('click', (e) => {
+    if (e.target.classList.contains('c-copy')) {
+      const parent = e.target.parentElement;
+      const val = parent.querySelector('.c-resval').textContent;
+      if (val) navigator.clipboard.writeText(val);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Many radio amateurs are accustomed to thinking that only coils have inductance. However, any conductor through which current flows creates a magnetic field around itself, which means it has its own inductance.</p>
+<p>At low frequencies (audio, household power supply 50 Hz), the inductance of a 10 cm long jumper is negligible and can be neglected. But in <strong>HF and microwave technology</strong> (FM band, Wi-Fi, digital electronics with steep signal edges) even an extra millimeter of a capacitor leg or track on a printed circuit board can turn into significant reactance, which will disrupt the operation of the circuit.</p>
+<p>Our calculator allows you to instantly calculate the parasitic inductance of a circular conductor, as well as find out its reactance ( $X_L$ ) at a given frequency.</p>
+<h2 class="wp-block-heading" id="formula-rascheta-2">Calculation formula</h2>
+<p>To calculate the inductance of a straight round wire, an approximate formula is used (for the case when the length of the wire is significantly greater than its diameter $l \gg d$ ):</p>
+<p>$$L = 2 \cdot l \cdot \left( \ln \left( \frac{4l}{d} \right) — 0.75 \right) \cdot 10^{-3}$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li><strong>L</strong> — inductance (μH);</li>
+<li><strong>l</strong> — wire length (cm);</li>
+<li><strong>d</strong> — wire diameter (cm);</li>
+<li><strong>ln</strong> — natural logarithm;</li>
+<li><strong>0.75</strong> — coefficient that takes into account the internal inductance of the conductor at low and medium frequencies.</li>
+</ul>
+<p><strong>Important information about the skin effect:</strong> At very high frequencies, current is forced toward the surface of the conductor (skin effect), and the internal inductance tends to zero. In this case, the coefficient $0.75$ in the formula is replaced by $1$ . Our algorithm uses a universal coefficient suitable for most amateur radio applications.</p>
+<h2 class="wp-block-heading" id="vliyanie-materiala-pochemu-vazhna-magnitnaya-pronitsaemost-2">Material influence: why is magnetic permeability important?</h2>
+<p>The ability to select materials has been added to the calculator. This is critical if you are using steel leads (like those found on cheap resistors) instead of copper.</p>
+<ul class="wp-block-list">
+<li><strong>Copper, Aluminum, Silver ( $\mu \approx 1$ ):</strong> Non-magnetic materials. Inductance depends only on geometry.</li>
+<li><strong>Steel, Iron ( $\mu \gg 1$ ):</strong> Ferromagnets enhance the magnetic field inside a conductor. This leads to a sharp increase in internal inductance and losses at high frequencies. Steel wire is strictly not recommended for use in HF circuits.</li>
+</ul>
+<h2 class="wp-block-heading" id="reaktivnoe-soprotivlenie-x_l-2">Reactance ( $X_L$ )</h2>
+<p>Inductance itself is simply a proportionality factor. To understand how a wire will affect a signal, you need to know its inductive (reactive) reactance at the operating frequency. It is calculated using Ohm's law for alternating current:</p>
+<p>$$X_L = 2 \pi \cdot f \cdot L$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li><strong>$X_L$</strong> — resistance (Ohm);</li>
+<li><strong>$f$</strong> — frequency (Hz);</li>
+<li><strong>$L$</strong> — inductance (H).</li>
+</ul>
+<h2 class="wp-block-heading" id="tablitsa-primernyh-znachenij-2">Table of approximate values</h2>
+<p>For a quick estimate, we have prepared a table of the inductance of a copper wire length <strong>10 mm</strong> (typical length of a component leg or via) at different diameters:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Wire diameter (mm)</strong></td><td><strong>Inductance (nH)</strong></td><td><strong>Resistance at 100 MHz (mOhm)</strong></td></tr></thead><tbody><tr><td>0.1 mm</td><td>10.5 nH</td><td>6.6 Ohm</td></tr><tr><td>0.5 mm</td><td>7.3 nH</td><td>4.6 Ohm</td></tr><tr><td>1.0 mm</td><td>5.9 nH</td><td>3.7 Ohm</td></tr><tr><td>2.0 mm</td><td>4.6 nH</td><td>2.9 Ohm</td></tr></tbody></table></div></figure>
+<p><em>As can be seen from the table, even a thick busbar has inductance. Increasing the diameter reduces the inductance, but rather slowly (logarithmic dependence).</em></p>
+<h2 class="wp-block-heading" id="chasto-zadavaemye-voprosy-faq-2">Frequently asked questions (FAQ)</h2>
+<p><strong>Does wire insulation affect inductance?</strong></p>
+<p>No, for a single straight wire the insulation material (PVC, enamel, air) does not affect the magnetic field, and therefore the inductance. Insulation is only important when calculating stray capacitance between adjacent wires.</p>
+<p><strong>Is it possible to reduce the inductance of a wire?</strong></p>
+<p>Yes, there are two ways:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li>Shorten the conductor (linear relationship: 2 times shorter = 2 times less inductance).</li>
+<li>Use a flat busbar or several parallel wires instead of one round one.</li>
+</ol>
+<p><strong>In what units is the result?</strong></p>
+<p>The calculator displays the value in <strong>nanohenry (nH)</strong> and duplicates in <strong>microhenry (µH)</strong>, since at short lengths the values ​​are very small (1 µH = 1000 nH).</p>
+</div>
+    </div>
+</body>
+</html>

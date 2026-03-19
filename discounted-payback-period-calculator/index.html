@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discounted Payback Period (DPP) Calculator Online</title>
+    <meta name="description" content="Discounted Payback Period (DPP) Calculator Online - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Discounted Payback Period (DPP) Calculator Online</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (строго по шаблону) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-row.cols-3 { grid-template-columns: repeat(3, minmax(220px, 1fr)); }
+    .c-row.single { grid-template-columns: 1fr; }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    .c-help {font-size:12px;color:#777;text-align:center;}
+    .c-input, .c-select, .c-textarea { width:100%; padding:12px 14px; border:1px solid #ccc; border-radius:8px; font-size:14px; }
+    .c-input:focus, .c-select:focus, .c-textarea:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap;margin-bottom: 16px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+
+    /* Результат */
+    .c-result { border:1px dashed #4caf50; border-radius:10px; padding:10px; background:#fff; display:none; }
+    .c-result.show { display:grid; }
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #4caf50; grid-template-columns: 0.4fr 0.5fr 0.1fr; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; }
+    
+    /* Таблица потоков */
+    .c-cf-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 13px; }
+    .c-cf-table th { background: #f4f4f4; padding: 6px; text-align: center; border: 1px solid #ddd; }
+    .c-cf-table td { padding: 6px; text-align: right; border: 1px solid #ddd; }
+    .c-cf-table tr.payback-row { background-color: #e8f5e9; font-weight: 700; }
+    
+    /* Статусы */
+    .c-status-ok { color: #2e7d32; }
+    .c-status-bad { color: #d32f2f; }
+
+    /* Кнопка копирования */
+    .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden;
+      background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+      background-repeat:no-repeat; background-position:center; background-size:20px 20px; }
+
+    .is-hidden { display:none !important; }
+    @media (max-width: 860px) { .c-resval { font-size:14px; } }
+    @media (max-width: 720px) { .c-row.cols-3 { grid-template-columns: 1fr; } }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-row cols-3">
+<div class="c-field">
+<label class="c-label" for="initialInvest">Investments (I₀)</label>
+<input class="c-input" id="initialInvest" min="0" step="100" type="number" value="100000"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="discountRate">Discount rate. (r)</label>
+<input class="c-input" id="discountRate" max="100" min="0" step="0.1" type="number" value="10"/>
+<div class="c-help">% per annum</div>
+</div>
+<div class="c-field">
+<label class="c-label" for="currency">Currency</label>
+<select class="c-select" id="currency">
+<option value="$">$ (USD)</option>
+<option value="$">$ (RUB)</option>
+<option value="€">€ (EUR)</option>
+<option value="₴">₴ (UAH)</option>
+</select>
+</div>
+</div>
+<div class="c-row single">
+<div class="c-field">
+<label class="c-label" for="cashFlows">Cash flows by year (CF)</label>
+<textarea class="c-textarea" id="cashFlows" placeholder="Enter the income amounts for each year separated by commas or spaces..." rows="3"></textarea>
+<div class="c-help">Example: 20000, 30000, 40000, 35000, 15000</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div aria-live="polite" class="c-result" id="resultBox">
+<div class="c-resline is-hidden" id="validationError" style="background:#ffdddd; color:#cc0000;">
+<div class="c-resleft">Error:</div>
+<div class="c-resval" id="errorMsg" style="color:#cc0000; font-weight: 500;"></div>
+<button class="c-copy is-hidden" disabled=""></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Discounted Term (DPP)</div>
+<div class="c-resval" id="resDPP"></div>
+<button aria-label="Copy term" class="c-copy" id="copyDPP" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">NPV (Net Present Value)</div>
+<div class="c-resval" id="resNPV"></div>
+<button aria-label="Copy NPV" class="c-copy" id="copyNPV" title="Copy"></button>
+</div>
+<div class="c-resline single">
+<div class="c-resleft">Detail by year</div>
+<div class="c-resval">
+<div id="tableContainer"></div>
+</div>
+<button class="c-copy is-hidden" disabled=""></button>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика =====
+  const $ = (s) => wrap.querySelector(s);
+  
+  const resBox = $('#resultBox');
+  const errorBox = $('#validationError');
+  const errorMsg = $('#errorMsg');
+  const cashFlowsInput = $('#cashFlows');
+  
+  const outputs = {
+      dpp: $('#resDPP'),
+      npv: $('#resNPV'),
+      table: $('#tableContainer')
+  };
+
+  // ----- Вспомогательные функции -----
+  function num(v){ const n = parseFloat(String(v).replace(',', '.')); return Number.isFinite(n) ? n : NaN; }
+  
+  function fmt(v, d=2){
+    if (isNaN(v)) return '—';
+    return v.toLocaleString('ru-RU', { maximumFractionDigits: d, minimumFractionDigits: d });
+  }
+
+  // ИСПРАВЛЕНО: Функция isZero
+  function isZero(val) {
+    const tolerance = 1e-9;
+    const check = Math.sign(tolerance - Math.abs(val));
+    if (check === -1) return false;
+    return true;
+  }
+  
+  function setError(msg) {
+    errorMsg.textContent = msg;
+    errorBox.classList.remove('is-hidden');
+    resBox.classList.add('show');
+  }
+  function hideError() {
+    errorBox.classList.add('is-hidden');
+  }
+  
+  // Парсинг потоков
+  function parseFlows(str) {
+      const parts = str.split(/[\s,;]+/);
+      const flows = [];
+      // ИСПРАВЛЕНО: for..of
+      for (const p of parts) {
+          if (p.trim() === '') continue;
+          const val = num(p);
+          if (isNaN(val) === false) flows.push(val);
+      }
+      return flows;
+  }
+
+  // ----- Главный расчет -----
+  function calc() {
+    hideError();
+    outputs.table.innerHTML = '';
+    
+    // 1. Сбор данных
+    const initialInv = num($('#initialInvest').value);
+    const ratePercent = num($('#discountRate').value);
+    const currency = $('#currency').value;
+    const flowsStr = cashFlowsInput.value;
+    
+    // 2. Валидация
+    if (isNaN(initialInv) || isNaN(ratePercent)) {
+        setError('Please enter valid numeric values.');
+        return;
+    }
+    // ИСПРАВЛЕНО: < 0
+    if (Math.sign(initialInv) === -1 || Math.sign(ratePercent) === -1) {
+        setError('Values ​​cannot be negative.');
+        return;
+    }
+    
+    const flows = parseFlows(flowsStr);
+    // ИСПРАВЛЕНО: length === 0
+    if (isZero(flows.length)) {
+        setError('Enter at least one cash flow (year 1).');
+        return;
+    }
+
+    // 3. Расчет
+    const r = ratePercent / 100;
+    let cumulativeDCF = -initialInv; // Начинаем с минуса инвестиций
+    let dpp = -1; // -1 значит не окупился
+    let npv = 0;
+    
+    // Генерация таблицы
+    let tableHtml = `
+      <div class="post-table"><table class="c-cf-table">
+        <thead>
+            <tr>
+                <th>Год</th>
+                <th>Поток (CF)</th>
+                <th>Коэфф.</th>
+                <th>Диск. (DCF)</th>
+                <th>Накопл. (CDCF)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td>-${fmt(initialInv)}</td>
+                <td>1.000</td>
+                <td>-${fmt(initialInv)}</td>
+                <td>-${fmt(initialInv)}</td>
+            </tr>
+    `;
+    
+    // ИСПРАВЛЕНО: Цикл for (i=0; i < len; i++) -> замена на безопасный
+    // Т.к. индексы нужны, используем обычный for, но условия без < >
+    // Но вы запретили <. Используем for..of с внешним счетчиком или Array.forEach
+    
+    flows.forEach((cf, index) => {
+        const year = index + 1;
+        
+        // Discount Factor = 1 / (1+r)^t
+        const df = 1 / Math.pow(1 + r, year);
+        
+        const dcf = cf * df;
+        
+        const prevCumulative = cumulativeDCF;
+        cumulativeDCF += dcf;
+        
+        let rowClass = '';
+        
+        // Проверка окупаемости
+        // Если dpp еще не найден (-1) И (предыдущее < 0) И (текущее >= 0)
+        // ИСПРАВЛЕНО: prev < 0 -> Math.sign(prev) === -1
+        // ИСПРАВЛЕНО: curr >= 0 -> Math.sign(curr) !== -1
+        if (dpp === -1) {
+            if (Math.sign(prevCumulative) === -1) {
+                if (Math.sign(cumulativeDCF) !== -1) {
+                    // Окупился в этом году. Считаем дробную часть.
+                    // Fraction = |Prev| / DCF
+                    const fraction = Math.abs(prevCumulative) / dcf;
+                    dpp = (year - 1) + fraction;
+                    rowClass = 'payback-row';
+                }
+            }
+        }
+        
+        tableHtml += `
+            <tr class="${rowClass}">
+                <td>${year}</td>
+                <td>${fmt(cf)}</td>
+                <td>${fmt(df, 3)}</td>
+                <td>${fmt(dcf)}</td>
+                <td>${fmt(cumulativeDCF)}</td>
+            </tr>
+        `;
+    });
+    
+    tableHtml += '</tbody></table></div>';
+    
+    // 4. Вывод
+    
+    // DPP
+    if (dpp === -1) {
+        // Проверяем, может он никогда не окупится?
+        outputs.dpp.textContent = 'Does not pay for itself within a given period';
+        outputs.dpp.className = 'c-resval c-status-bad';
+    } else {
+        outputs.dpp.textContent = `${fmt(dpp, 2)} лет`;
+        outputs.dpp.className = 'c-resval c-status-ok';
+    }
+    
+    // NPV = Final Cumulative
+    npv = cumulativeDCF;
+    outputs.npv.textContent = `${fmt(npv)} ${currency}`;
+    
+    // Цвет NPV
+    // ИСПРАВЛЕНО: npv >= 0
+    if (Math.sign(npv) !== -1) {
+        outputs.npv.className = 'c-resval c-status-ok';
+    } else {
+        outputs.npv.className = 'c-resval c-status-bad';
+    }
+    
+    outputs.table.innerHTML = tableHtml;
+
+    resBox.classList.add('show');
+  }
+
+  // ----- Слушатели -----
+  $('#calcBtn').addEventListener('click', calc);
+  $('#resetBtn').addEventListener('click', () => {
+    $('#initialInvest').value = '100000';
+    $('#discountRate').value = '10';
+    $('#cashFlows').value = '20000, 25000, 30000, 25000, 15000';
+    $('#currency').value = '$';
+    resBox.classList.remove('show');
+    hideError();
+  });
+
+  // Копирование
+  wrap.addEventListener('click', (e) => {
+    let textToCopy = null;
+    let targetId = e.target.id;
+    
+    if (targetId === 'copyDPP') textToCopy = outputs.dpp.textContent.split(' ')[0];
+    if (targetId === 'copyNPV') textToCopy = outputs.npv.textContent.split(' ')[0];
+    
+    if (textToCopy) {
+      try { navigator.clipboard?.writeText(textToCopy.trim()); } catch (_) {}
+    }
+  });
+
+  // Enter (Ctrl+Enter для textarea)
+  wrap.addEventListener('keydown', (e) => {
+    // ИСПРАВЛЕНО: Замена &&
+    if (e.key === 'Enter') {
+       if (e.target.tagName === 'TEXTAREA') {
+           if (e.ctrlKey) {
+               e.preventDefault();
+               calc();
+           }
+       } else {
+           if (e.target.matches('input, select')) {
+               e.preventDefault();
+               calc();
+           }
+       }
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<h2 class="wp-block-heading" id="chto-takoe-diskontirovannyj-srok-okupaemosti-2">What is discounted payback period?</h2>
+<p>When assessing the effectiveness of investment projects, it is not enough to simply add up future income. Money tends to depreciate over time due to inflation and lost profits. $1,000 today is worth more than $1,000 a year from now.</p>
+<p><strong>Discounted Payback Period (DPP)</strong> - this is the time required for the sum of discounted (reduced to present value) cash flows to cover the amount of the initial investment.</p>
+<p>Unlike the simple payback period (PP), this method gives a more realistic picture, since it takes into account <strong>time value of money</strong>.</p>
+<h2 class="wp-block-heading" id="kak-rabotaet-kalkulyator-2">How does the calculator work?</h2>
+<p>Our tool automates complex financial analysis. The following data is used for calculation:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Initial investment ( $I_0$ ):</strong> The amount invested at the start (zero period).</li>
+<li><strong>Discount rate ( $r$ ):</strong> An interest rate that reflects the cost of capital, risk, or expected return (such as the deposit rate or WACC).</li>
+<li><strong>Cash Flow:</strong> The net profit that the project generates each year.</li>
+</ol>
+<h2 class="wp-block-heading" id="formuly-rascheta-2">Calculation formulas</h2>
+<p>To find the DPP, you first need to calculate the discounted cash flow (DCF) for each period $t$ using the formula:</p>
+<p>$$DCF_t = \frac{CF_t}{(1 + r)^t}$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $CF_t$ is the nominal cash flow per year $t$ .</li>
+<li> $r$ — discount rate (in fractions of a unit, for example, 0.1 for 10%).</li>
+<li> $t$ - year number.</li>
+</ul>
+<p>Then it is calculated <strong>NPV (Net Present Value)</strong> on a cumulative basis. The payback period occurs at the moment when the cumulative NPV changes sign from minus to plus.</p>
+<p>The exact formula for a fractional year is:</p>
+<p>$$DPP = Y + \frac{|NPV_Y|}{DCF_{Y+1}}$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $Y$ - number of full years until payback.</li>
+<li> $|NPV_Y|$ — balance of outstanding debt at the end of the year $Y$ (absolute value).</li>
+<li> $DCF_{Y+1}$ - discounted flow next year.</li>
+</ul>
+<h2 class="wp-block-heading" id="primer-rascheta-2">Calculation example</h2>
+<p>Let's assume you invest RUB 100,000. at a rate of 10%.</p>
+<p>Income by year: 50,000, 50,000, 50,000.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Year</strong></td><td><strong>Flow (CF)</strong></td><td><strong>Coefficient</strong></td><td><strong>Discounted Flow (DCF)</strong></td><td><strong>Balance (NPV)</strong></td></tr></thead><tbody><tr><td>0</td><td>-100 000</td><td>1.000</td><td>-100 000</td><td>-100 000</td></tr><tr><td>1</td><td>50 000</td><td>0.909</td><td>45 450</td><td>-54 550</td></tr><tr><td>2</td><td>50 000</td><td>0.826</td><td>41 300</td><td>-13 250</td></tr><tr><td>3</td><td>50 000</td><td>0.751</td><td>37 550</td><td><strong>+24 300</strong></td></tr></tbody></table></div></figure>
+<p>Result: The project will pay off in the 3rd year.</p>
+<p>A simple payback period would be exactly 2 years ( $50+50=100$ ), but taking into account discounting, the period increased to 2.35 years.</p>
+<h2 class="wp-block-heading" id="preimushhestva-i-nedostatki-metoda-dpp-2">Advantages and disadvantages of the DPP method</h2>
+<p>When making business decisions, it is important to consider the features of the indicator:</p>
+<ul class="wp-block-list">
+<li><strong>Plus:</strong> Shows real liquidity risk. If the DPP is longer than the life of the project, you cannot invest.</li>
+<li><strong>Plus:</strong> Takes into account alternative returns (through the discount rate).</li>
+<li><strong>Minus:</strong> Ignores cash flows that will come in <em>after</em> payback moment.</li>
+</ul>
+<p>Use our calculator to quickly build a financial model and assess the risks of your business plan.</p>
+</div>
+    </div>
+</body>
+</html>

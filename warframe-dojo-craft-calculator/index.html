@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warframe Dojo Research Cost Calculator</title>
+    <meta name="description" content="Warframe Dojo Research Cost Calculator - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Warframe Dojo Research Cost Calculator</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box;}
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #f8fafc; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #eff6ff; border: 1px solid #bae6fd; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05); }
+    .c-highlight-line:hover { background: #e0f2fe; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .c-switch-wrap { display: flex; align-items: center; gap: 12px; cursor: pointer; margin-bottom: 5px; padding: 14px 16px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 2px 6px rgba(0,0,0,0.02); transition: 0.3s; }
+    .c-switch-wrap:hover { border-color: #cbd5e1; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .c-switch-track { width: 44px; height: 24px; background: #cbd5e1; border-radius: 24px; position: relative; transition: 0.3s; flex-shrink: 0; }
+    .c-switch-thumb { width: 18px; height: 18px; background: #fff; border-radius: 50%; position: absolute; top: 3px; left: 3px; transition: 0.3s; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+    input:checked + .c-switch-track { background: #0693e3; }
+    input:checked + .c-switch-track .c-switch-thumb { left: 23px; }
+    .c-switch-label { font-weight: 600; font-size: 15px; color: #333; }
+    
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* SVG Circular Diagram */
+    .c-chart-box { display: flex; align-items: center; gap: 20px; margin: 15px 0 25px; padding: 25px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); }
+    .c-circular-chart { display: block; width: 120px; height: 120px; flex-shrink: 0; filter: drop-shadow(0 4px 8px rgba(6, 147, 227, 0.15)); }
+    .c-circle-bg { fill: none; stroke: #e2e8f0; stroke-width: 3.8; }
+    .c-circle { fill: none; stroke-width: 2.8; stroke-linecap: round; transition: stroke-dasharray 1.2s cubic-bezier(0.4, 0, 0.2, 1); }
+    .c-chart-percent { fill: #0f172a; font-size: 8px; font-weight: 700; text-anchor: middle; }
+    .c-chart-sub { fill: #64748b; font-size: 3.5px; font-weight: 600; text-anchor: middle; }
+    .c-chart-info { flex: 1; display: flex; flex-direction: column; gap: 12px; }
+    .c-legend-item { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #475569; }
+    .c-legend-dot { width: 12px; height: 12px; border-radius: 4px; flex-shrink: 0; }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-chart-box { flex-direction: column; text-align: center; padding: 20px 15px; }
+       .c-chart-info { align-items: center; }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="wf-calc-wrapper">
+<div class="c-body">
+<div class="c-divider"><span class="icon">🔬</span>Resource requirements</div>
+<div class="c-row" style="margin-bottom: 8px;">
+<div class="c-field">
+<label class="c-label">Basic cost<span class="c-term">Phantom Clan x1</span>
+<span class="c-help-icon" id="openWfInfo">?</span>
+</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="baseCost" placeholder="For example: 5000" type="number"/>
+<span class="c-input-suffix">pcs</span>
+</div>
+<div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-target="baseCost" data-val="100" type="button">Standard</button>
+<button class="c-quick-btn" data-target="baseCost" data-val="5000" type="button">Hema (Samples)</button>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Target clan size<span class="c-term">Factor</span></label>
+<select class="c-select" id="tier">
+<option value="1">Ghost - x1</option>
+<option value="3">Shadow - x3</option>
+<option value="10">Storm - x10</option>
+<option value="30">Mountain – x30</option>
+<option value="100">Moon - x100</option>
+</select>
+</div>
+</div>
+<div class="c-divider" style="margin-top: 30px;"><span class="icon">👥</span>Task distribution</div>
+<label class="c-switch-wrap">
+<input class="is-hidden" id="advModeToggle" type="checkbox"/>
+<div class="c-switch-track"><div class="c-switch-thumb"></div></div>
+<span class="c-switch-label">Calculate participant contributions</span>
+</label>
+<div class="c-adv-app is-hidden" id="adv-block" style="margin-top: 15px;">
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Already contributed to the treasury</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="vault" placeholder="0" type="number"/>
+<span class="c-input-suffix">pcs</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Active participants<span class="c-term">They chip in</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="members" placeholder="1" type="number" value="1"/>
+<span class="c-input-suffix">people</span>
+</div>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-chart-box is-hidden" id="vis-box">
+<svg class="c-circular-chart" viewbox="0 0 36 36">
+<defs>
+<lineargradient id="gradDefault" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#0693e3"></stop>
+<stop offset="100%" stop-color="#38bdf8"></stop>
+</lineargradient>
+<lineargradient id="gradAdv" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#10b981"></stop>
+<stop offset="100%" stop-color="#34d399"></stop>
+</lineargradient>
+</defs>
+<path class="c-circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+<path class="c-circle" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" id="donutPath" stroke="url(#gradDefault)" stroke-dasharray="0, 100"></path>
+<text class="c-chart-percent" id="donutText" x="18" y="19">0%</text>
+<text class="c-chart-sub" id="donutSubText" x="18" y="24">Base share</text>
+</svg>
+<div class="c-chart-info" id="legendDefault">
+<div class="c-legend-item">
+<div class="c-legend-dot" style="background: #0693e3;"></div>
+<span>Basic research cost</span>
+</div>
+<div class="c-legend-item">
+<div class="c-legend-dot" style="background: #e2e8f0;"></div>
+<span>Surcharge (Clan Multiplier)</span>
+</div>
+</div>
+<div class="c-chart-info is-hidden" id="legendAdv">
+<div class="c-legend-item">
+<div class="c-legend-dot" style="background: #10b981;"></div>
+<span>Already added to the repository</span>
+</div>
+<div class="c-legend-item">
+<div class="c-legend-dot" style="background: #e2e8f0;"></div>
+<span>Remains to be collected (Shortage)</span>
+</div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">💎</span>Calculation results</div>
+<div class="c-resline">
+<div class="c-resleft">Full price<span class="c-subtext" id="resTotalSub">Taking into account the clan multiplier</span></div>
+<div class="c-resval" id="resTotal"></div>
+<button class="c-copy"></button>
+</div>
+<div class="is-hidden" id="advResWrap" style="margin-top: 10px; border-top: 2px solid #e2e8f0; padding-top: 10px;">
+<div class="c-resline" style="border-bottom: 1px dashed #cbd5e1;">
+<div class="c-resleft">All that remains is to assemble<span class="c-subtext">Required to add</span></div>
+<div class="c-resval" id="resRemain"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline c-highlight-line" style="border-bottom: none;">
+<div class="c-resleft">Contribution rate<span class="c-subtext" id="resMemberSub">From each active participant</span></div>
+<div class="c-resval" id="resPerMember" style="color: #0693e3; font-size: 22px;"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+</div>
+<div class="c-modal-overlay" id="wfInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeWfInfo">×</button>
+<div class="c-modal-title"><span class="icon">📖</span>Dojo Multipliers</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">In Warframe, the cost of all research in the Dojo (weapons, archwings, segments) directly depends on the current rank of the clan.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">The higher the tier, the greater the coefficient by which the base price is multiplied (Ghost Clan):<ul style="margin: 8px 0 0 15px; padding: 0; color: #0284c7; font-weight: 600;">
+<li>Ghostly: x1</li>
+<li>Shadow: x3</li>
+<li>Storm: x10</li>
+<li>Mountain: x30</li>
+<li>Lunar: x100</li>
+</ul>
+</div>
+<div style="font-size: 13px; color: #64748b;">* If you plan to research resource-intensive blueprints (for example, Hema), it is recommended to do this at the minimum clan rank before promoting it.</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let isCalculated = false;
+
+  // Modal logic
+  $('#openWfInfo').addEventListener('click', () => { $('#wfInfoModal').classList.add('show'); });
+  $('#closeWfInfo').addEventListener('click', () => { $('#wfInfoModal').classList.remove('show'); });
+  $('#wfInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#wfInfoModal').classList.remove('show');
+  });
+
+  $('#advModeToggle').addEventListener('change', (e) => {
+      let isAdv = e.target.checked;
+      if (Math.abs(isAdv === true) === 1) {
+          $('#adv-block').classList.remove('is-hidden');
+      } else {
+          $('#adv-block').classList.add('is-hidden');
+          $('#vault').value = '';
+          $('#members').value = '1';
+      }
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+      else $('#resultBox').classList.remove('show');
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          let targetId = btn.dataset.target;
+          let val = btn.dataset.val;
+          $('#' + targetId).value = val;
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  function formatNum(n) {
+      return Math.ceil(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  }
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let base = parseFloat($('#baseCost').value);
+    let mult = parseFloat($('#tier').value);
+    let isAdvMode = $('#advModeToggle').checked;
+
+    let isNanBase = isNaN(base);
+    let isErr = false;
+    if (Math.abs(isNanBase === true) === 1) isErr = true;
+    
+    let isPosBase = false;
+    if (Math.abs(Math.sign(base) === 1) === 1) isPosBase = true;
+    if (Math.abs(isPosBase === false) === 1) isErr = true;
+
+    if (Math.abs(isErr === true) === 1) {
+        $('#vis-box').classList.add('is-hidden');
+        $('#resultBox').classList.remove('show');
+        if (Math.abs(shouldScroll === true) === 1) {
+            $('#errorMsg').textContent = "Please enter a base price greater than zero";
+            $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    let totalCost = base * mult;
+    $('#resTotal').textContent = formatNum(totalCost) + "pcs";
+    $('#resTotalSub').textContent = "Base" + base + " × " + mult;
+
+    let chartPercent = 0;
+    let chartPath = $('#donutPath');
+
+    if (Math.abs(isAdvMode === true) === 1) {
+        let vault = parseFloat($('#vault').value);
+        let isNanVault = isNaN(vault);
+        if (Math.abs(isNanVault === true) === 1) vault = 0;
+        let isNegVault = false;
+        if (Math.abs(Math.sign(vault) === -1) === 1) isNegVault = true;
+        if (Math.abs(isNegVault === true) === 1) vault = 0;
+
+        let members = parseFloat($('#members').value);
+        let isNanMem = isNaN(members);
+        if (Math.abs(isNanMem === true) === 1) members = 1;
+        let isPosMem = false;
+        if (Math.abs(Math.sign(members) === 1) === 1) isPosMem = true;
+        if (Math.abs(isPosMem === false) === 1) members = 1;
+
+        let remain = totalCost - vault;
+        let isRemainNeg = false;
+        if (Math.abs(Math.sign(remain) === -1) === 1) isRemainNeg = true;
+        if (Math.abs(isRemainNeg === true) === 1) remain = 0;
+
+        let perMember = remain / members;
+
+        $('#resRemain').textContent = formatNum(remain) + "pcs";
+        $('#resPerMember').textContent = formatNum(perMember) + "pcs";
+        
+        let memTxt = "On" + members + "people";
+        let isOne = false;
+        if (Math.abs(Math.sign(members - 1) === 0) === 1) isOne = true;
+        if (Math.abs(isOne === true) === 1) memTxt = "The whole amount for one";
+        $('#resMemberSub').textContent = memTxt;
+        $('#advResWrap').classList.remove('is-hidden');
+
+        // Adv Chart (Green)
+        let vaultCapped = vault;
+        let isVaultOver = false;
+        let diffOver = Math.sign(vault - totalCost);
+        if (Math.abs(diffOver === 1) === 1) isVaultOver = true;
+        if (Math.abs(isVaultOver === true) === 1) vaultCapped = totalCost;
+
+        chartPercent = (vaultCapped / totalCost) * 100;
+        chartPath.setAttribute('stroke', 'url(#gradAdv)');
+        $('#donutSubText').textContent = "Submitted";
+        $('#legendDefault').classList.add('is-hidden');
+        $('#legendAdv').classList.remove('is-hidden');
+
+    } else {
+        $('#advResWrap').classList.add('is-hidden');
+        
+        // Default Chart (Blue)
+        chartPercent = (base / totalCost) * 100;
+        chartPath.setAttribute('stroke', 'url(#gradDefault)');
+        $('#donutSubText').textContent = "Base share";
+        $('#legendAdv').classList.add('is-hidden');
+        $('#legendDefault').classList.remove('is-hidden');
+    }
+
+    // Update Circle Diagram
+    let dashVal = chartPercent.toFixed(1);
+    chartPath.setAttribute('stroke-dasharray', dashVal + ', 100');
+    $('#donutText').textContent = Math.round(chartPercent) + '%';
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#vis-box').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(e.target.tagName === 'SELECT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    wrap.querySelectorAll('input[type="number"]').forEach(i => i.value = '');
+    $('#tier').value = '1';
+    $('#advModeToggle').checked = false;
+    $('#adv-block').classList.add('is-hidden');
+    $('#members').value = '1';
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      let valClean = valRaw.replace('pcs', '').replace(/\\s/g, '').trim();
+      navigator.clipboard.writeText(valClean);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Building and researching in the Dojo is one of the most resource-intensive mechanics in Warframe. The main difficulty lies in dynamic scaling: the base cost indicated in Wikipedia or game databases is relevant only for <strong>Phantom Clan</strong>. As soon as a clan increases its member limit (tier level), the cost of all active and future projects increases exponentially.</p>
+<p>Our calculator allows you to instantly calculate the final price of any blueprint, be it weapons, Warframe components or Dojo rooms, saving you from manual calculations and errors when planning your clan budget.</p>
+<h2 class="wp-block-heading" id="tablitsa-mnozhitelej-stoimosti-v-zavisimosti-ot-tira-klana-2">Table of cost multipliers depending on the clan's tier</h2>
+<p>There are 5 main clan levels in Warframe. Each level increases the cost of resources by a fixed factor.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Clan type</strong></td><td><strong>Max. participants</strong></td><td><strong>Multiplier</strong></td></tr></thead><tbody><tr><td><strong>Ghost</strong></td><td>10</td><td>x1</td></tr><tr><td><strong>Shadow</strong></td><td>30</td><td>x3</td></tr><tr><td><strong>Storm</strong></td><td>100</td><td>x10</td></tr><tr><td><strong>Mountain</strong></td><td>300</td><td>x30</td></tr><tr><td><strong>Moon</strong></td><td>1000</td><td>x100</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="matematicheskaya-model-rascheta-2">Mathematical calculation model</h2>
+<p>For accurate planning, we use two basic formulas. The first determines the total cost of the project, the second determines the individual load on each active player, taking into account existing reserves in the treasury (Dojo Storage).</p>
+<p><strong>Total cost formula:</strong></p>
+<p>$$C_{total} = C_{base} \times M$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $C_{total}$ - total cost of resources;</li>
+<li> $C_{base}$ - base cost for the Phantom Clan;</li>
+<li> $M$ - clan tier multiplier.</li>
+</ul>
+<p><strong>Individual contribution formula:</strong></p>
+<p>$$C_{per\_member} = \frac{C_{total} — V}{N_{active}}$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $V$ - the number of resources already added to the storage;</li>
+<li> $N_{active}$ - the number of participants ready to chip in.</li>
+</ul>
+<h3 class="wp-block-heading" id="kak-polzovatsya-kalkulyatorom-2">How to use the calculator</h3>
+<p>To get an accurate result, follow these instructions:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Please indicate the base price:</strong> Enter the amount of resources required for the Phantom Clan. We have added a quick input button for <strong>Hema</strong>, since its research is the most difficult test for any clan leader.</li>
+<li><strong>Select clan tier:</strong> Indicate the current status of your clan (from Ghost to Lunar).</li>
+<li><strong>Use advanced mode:</strong> If some of the resources have already been contributed or you want to divide the expenses between friends, activate the “Calculate participant contributions” switch.</li>
+<li><strong>Analyze the visualization:</strong> Our calculator builds a pie chart that clearly shows the share of the base in the total cost or the percentage of research readiness when taking into account contributions.</li>
+</ol>
+<h2 class="wp-block-heading" id="sovety-po-upravleniyu-resursami-v-dodzyo-2">Tips for managing resources in the Dojo</h2>
+<ul class="wp-block-list">
+<li><strong>Plan ahead:</strong> If you plan to increase your clan's tier, complete all expensive research (such as Fieldron Injector, Mutagenic Mass) at the minimum level.</li>
+<li><strong>Use Storage:</strong> Resources obtained from demolishing old rooms or decorations go into the Storage. Always check its condition before requesting contributions from players.</li>
+<li><strong>Fairness of contributions:</strong> In large clans, not all players are active. Use the Active Members field to ensure that the per person calculation is realistic and not formal.</li>
+</ul>
+<p>This calculator will help your clan effectively distribute efforts and quickly gain access to new equipment. Copy the total in one click and send it to clan chat or Discord to coordinate the collection!</p>
+</div>
+    </div>
+</body>
+</html>

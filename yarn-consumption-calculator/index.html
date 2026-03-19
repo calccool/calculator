@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yarn consumption calculator: calculation by weight, thread length and pattern</title>
+    <meta name="description" content="Yarn consumption calculator: calculation by weight, thread length and pattern - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Yarn consumption calculator: calculation by weight, thread length and pattern</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-row.cols-3 { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-receipt-wrap { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 15px; position: relative; overflow: hidden; }
+    .c-receipt-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: repeating-linear-gradient(45deg, #0693e3, #0693e3 10px, #38bdf8 10px, #38bdf8 20px); }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #fff; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #eff6ff; border: 1px solid #bae6fd; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05); }
+    .c-highlight-line:hover { background: #e0f2fe; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .c-switch-wrap { display: flex; align-items: center; gap: 12px; cursor: pointer; margin-bottom: 5px; padding: 14px 16px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 2px 6px rgba(0,0,0,0.02); transition: 0.3s; }
+    .c-switch-wrap:hover { border-color: #cbd5e1; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .c-switch-track { width: 44px; height: 24px; background: #cbd5e1; border-radius: 24px; position: relative; transition: 0.3s; flex-shrink: 0; }
+    .c-switch-thumb { width: 18px; height: 18px; background: #fff; border-radius: 50%; position: absolute; top: 3px; left: 3px; transition: 0.3s; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+    input:checked + .c-switch-track { background: #0693e3; }
+    input:checked + .c-switch-track .c-switch-thumb { left: 23px; }
+    .c-switch-label { font-weight: 600; font-size: 15px; color: #333; }
+    
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* Skein Visualization */
+    .c-yarn-vis { margin: 15px 0 25px; padding: 25px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); text-align: center; }
+    .c-yarn-title { font-weight: 700; color: #0f172a; font-size: 15px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .c-skeins-container { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; min-height: 40px; }
+    
+    .c-skein-icon { width: 36px; height: 22px; background: linear-gradient(135deg, #0284c7, #38bdf8); border-radius: 10px; position: relative; box-shadow: 0 2px 5px rgba(2, 132, 199, 0.3); display: inline-flex; overflow: hidden; animation: popIn 0.4s ease-out forwards; opacity: 0; transform: scale(0.8); }
+    .c-skein-icon::before { content: ''; position: absolute; top: -2px; bottom: -2px; left: 25%; right: 25%; border-left: 1px solid rgba(255,255,255,0.4); border-right: 1px solid rgba(255,255,255,0.4); }
+    .c-skein-icon::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: repeating-linear-gradient(75deg, transparent, transparent 3px, rgba(255,255,255,0.15) 3px, rgba(255,255,255,0.15) 6px); }
+    
+    .c-skein-partial { background: #e2e8f0; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); }
+    .c-skein-partial-fill { position: absolute; top: 0; bottom: 0; left: 0; background: linear-gradient(135deg, #0284c7, #38bdf8); z-index: 1; transition: width 1s ease-out; width: 0%; }
+    .c-skein-partial::after { z-index: 2; }
+    .c-skein-partial::before { z-index: 2; border-color: rgba(255,255,255,0.6); }
+
+    @keyframes popIn { to { opacity: 1; transform: scale(1); } }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { .c-row.cols-2, .c-row.cols-3 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-yarn-vis { padding: 15px; }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="yarn-calc-wrapper">
+<div class="c-body">
+<div class="c-toggle" id="mode-tabs">
+<button class="c-toggle-btn active" data-mode="sub">Replacing yarn<span class="c-term">According to description</span></button>
+<button class="c-toggle-btn" data-mode="swatch">Calculation according to the sample<span class="c-term">Own mating</span></button>
+</div>
+<div id="block-sub">
+<div class="c-divider"><span class="icon">📜</span>Original yarn<span class="c-term">From the diagram</span></div>
+<div class="c-row cols-3" style="margin-bottom: 8px;">
+<div class="c-field">
+<label class="c-label">Hank weight</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="sub-pat-w" placeholder="50" type="number"/>
+<span class="c-input-suffix">G</span>
+</div>
+<div style="display:flex; gap:6px; margin-top:4px;">
+<button class="c-quick-btn" data-target="sub-pat-w" data-val="50" type="button">50</button>
+<button class="c-quick-btn" data-target="sub-pat-w" data-val="100" type="button">100</button>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Thread length<span class="c-term">in a skein</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="sub-pat-l" placeholder="For example: 120" type="number"/>
+<span class="c-input-suffix">m</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">All it takes is</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="sub-pat-tot" placeholder="Total weight" type="number"/>
+<span class="c-input-suffix">G</span>
+</div>
+</div>
+</div>
+<div class="c-divider" style="margin-top: 25px;"><span class="icon">🧶</span>New yarn<span class="c-term">Yours</span></div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Hank weight</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="sub-new-w" placeholder="50" type="number"/>
+<span class="c-input-suffix">G</span>
+</div>
+<div style="display:flex; gap:6px; margin-top:4px;">
+<button class="c-quick-btn" data-target="sub-new-w" data-val="50" type="button">50</button>
+<button class="c-quick-btn" data-target="sub-new-w" data-val="100" type="button">100</button>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Thread length<span class="c-term">in a skein</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="sub-new-l" placeholder="For example: 150" type="number"/>
+<span class="c-input-suffix">m</span>
+</div>
+</div>
+</div>
+</div>
+<div class="is-hidden" id="block-swatch">
+<div class="c-divider"><span class="icon">📏</span>Your linked sample</div>
+<div class="c-row cols-3" style="margin-bottom: 8px;">
+<div class="c-field">
+<label class="c-label">Width</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="sw-w" placeholder="10" type="number"/>
+<span class="c-input-suffix">cm</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Height</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="sw-h" placeholder="10" type="number"/>
+<span class="c-input-suffix">cm</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Actual weight</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="sw-wg" placeholder="For example: 12" type="number"/>
+<span class="c-input-suffix">G</span>
+</div>
+</div>
+</div>
+<div class="c-divider" style="margin-top: 25px;"><span class="icon">👕</span>Planned product</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Total area<span class="c-help-icon" id="openAreaInfo">?</span>
+</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="sw-proj-a" placeholder="Sum of parts areas" type="number"/>
+<span class="c-input-suffix">cm²</span>
+</div>
+<div style="display:flex; gap:6px; margin-top:4px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-target="sw-proj-a" data-val="600" type="button">Cap</button>
+<button class="c-quick-btn" data-target="sw-proj-a" data-val="2500" type="button">Scarf</button>
+<button class="c-quick-btn" data-target="sw-proj-a" data-val="8000" type="button">Sweater</button>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Weight of 1 new skein</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="sw-new-w" placeholder="50" type="number"/>
+<span class="c-input-suffix">G</span>
+</div>
+<div style="display:flex; gap:6px; margin-top:4px;">
+<button class="c-quick-btn" data-target="sw-new-w" data-val="50" type="button">50</button>
+<button class="c-quick-btn" data-target="sw-new-w" data-val="100" type="button">100</button>
+</div>
+</div>
+</div>
+</div>
+<div class="c-divider" style="margin-top: 30px;"><span class="icon">⚙️</span>Additionally</div>
+<label class="c-switch-wrap">
+<input class="is-hidden" id="advModeToggle" type="checkbox"/>
+<div class="c-switch-track"><div class="c-switch-thumb"></div></div>
+<span class="c-switch-label">Take into account the yarn supply</span>
+</label>
+<div class="c-adv-app is-hidden" id="adv-block" style="margin-top: 15px;">
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Stock percentage<span class="c-term">For samples and seams</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="margin-pct" placeholder="10" type="number" value="10"/>
+<span class="c-input-suffix">%</span>
+</div>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-yarn-vis is-hidden" id="vis-box">
+<div class="c-yarn-title"><span class="icon">📦</span>Purchase visualization</div>
+<div class="c-skeins-container" id="skeins-draw-area"></div>
+<div id="vis-subtitle" style="font-size: 13px; color: #64748b; margin-top: 12px; font-weight: 500;"></div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">📝</span>Calculation results</div>
+<div class="c-receipt-wrap">
+<div class="c-resline">
+<div class="c-resleft">Net estimated weight<span class="c-subtext">Without stock</span></div>
+<div class="c-resval" id="resBaseWeight"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline is-hidden" id="resMarginLine">
+<div class="c-resleft">Added stock<span class="c-subtext" id="resMarginLabel">Insurance</span></div>
+<div class="c-resval" id="resMarginWeight"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline c-highlight-line">
+<div class="c-resleft">Total weight for purchase<span class="c-subtext">Total weight</span></div>
+<div class="c-resval" id="resTotalWeight"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline" style="border-bottom: none; margin-top: 10px; border-top: 2px solid #cbd5e1; padding-top: 16px;">
+<div class="c-resleft" style="font-weight: 700;">Need skeins<span class="c-subtext">Rounded up</span></div>
+<div class="c-resval" id="resSkeins" style="font-size: 24px; color: #10b981;"></div>
+<button class="c-copy" style="margin-top:-5px;"></button>
+</div>
+</div>
+</div>
+<div class="c-modal-overlay" id="areaInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeAreaInfo">×</button>
+<div class="c-modal-title"><span class="icon">📐</span>How to calculate area?</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">Divide the future product into simple rectangles (back, front, two sleeves), calculate the area of ​​each and fold.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>Rectangle formula:</b><br/>Width (cm) × Height (cm) = Area (cm²)</div>
+<div style="background: #eff6ff; padding: 12px; border-radius: 8px; border: 1px solid #bae6fd; font-size: 13px; color: #0284c7;">
+<b>Example for a sweater:</b><br/>Back: 50×60 = 3000<br/>Front: 50×60 = 3000<br/>Sleeves (2 pcs): 40×50×2 = 4000<br/>Total area:<b>10000 cm²</b>
+</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let activeMode = 'sub';
+  let isCalculated = false;
+
+  // Modal logic
+  $('#openAreaInfo').addEventListener('click', () => { $('#areaInfoModal').classList.add('show'); });
+  $('#closeAreaInfo').addEventListener('click', () => { $('#areaInfoModal').classList.remove('show'); });
+  $('#areaInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#areaInfoModal').classList.remove('show');
+  });
+
+  function updateModeUI() {
+      if (Math.abs(activeMode === 'sub') === 1) {
+          $('#block-sub').classList.remove('is-hidden');
+          $('#block-swatch').classList.add('is-hidden');
+      } else {
+          $('#block-sub').classList.add('is-hidden');
+          $('#block-swatch').classList.remove('is-hidden');
+      }
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  }
+
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeMode = btn.dataset.mode;
+        updateModeUI();
+    });
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          let targetId = btn.dataset.target;
+          let val = btn.dataset.val;
+          $('#' + targetId).value = val;
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  $('#advModeToggle').addEventListener('change', (e) => {
+      let isAdv = e.target.checked;
+      if (Math.abs(isAdv === true) === 1) {
+          $('#adv-block').classList.remove('is-hidden');
+      } else {
+          $('#adv-block').classList.add('is-hidden');
+          $('#margin-pct').value = '10';
+      }
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+      else {
+          $('#resultBox').classList.remove('show');
+          $('#vis-box').classList.add('is-hidden');
+      }
+  });
+
+  function formatNum(n) {
+      let rounded = Math.round(n * 10) / 10;
+      let parts = rounded.toString().split(".");
+      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+      return parts.join(".");
+  }
+
+  function renderSkeins(totalSkeinsNum) {
+      const container = $('#skeins-draw-area');
+      container.innerHTML = '';
+      
+      let fullCount = Math.floor(totalSkeinsNum);
+      let partial = totalSkeinsNum - fullCount;
+      
+      let htmlStr = '';
+      let i = 0;
+      let delay = 0;
+      
+      // Safe loop using Math.sign instead of <
+      while (Math.abs(Math.sign(fullCount - i) === 1) === 1) {
+          htmlStr += '<div class="c-skein-icon" style="animation-delay: '+delay+'s"></div>';
+          i++;
+          delay += 0.05;
+      }
+      
+      let hasPartial = false;
+      if (Math.abs(Math.sign(partial) === 1) === 1) hasPartial = true;
+      
+      if (Math.abs(hasPartial === true) === 1) {
+          let pPct = Math.round(partial * 100);
+          htmlStr += '<div class="c-skein-icon c-skein-partial" style="animation-delay: '+delay+'s"><div class="c-skein-partial-fill" style="width:'+pPct+'%"></div></div>';
+      }
+      
+      container.innerHTML = htmlStr;
+      
+      let textSub = "Full skeins:" + Math.ceil(totalSkeinsNum) + "pcs.";
+      if (Math.abs(hasPartial === true) === 1) {
+          textSub += "(Last used on" + Math.round(partial * 100) + "%)";
+      } else {
+          textSub += "(Without remainder)";
+      }
+      $('#vis-subtitle').textContent = textSub;
+  }
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let isErr = false;
+    let baseWeightNeeded = 0;
+    let newSkeinWeight = 0;
+
+    if (Math.abs(activeMode === 'sub') === 1) {
+        let patW = parseFloat($('#sub-pat-w').value);
+        let patL = parseFloat($('#sub-pat-l').value);
+        let patTot = parseFloat($('#sub-pat-tot').value);
+        let newW = parseFloat($('#sub-new-w').value);
+        let newL = parseFloat($('#sub-new-l').value);
+
+        let c1 = Math.sign(patW);
+        let c2 = Math.sign(patL);
+        let c3 = Math.sign(patTot);
+        let c4 = Math.sign(newW);
+        let c5 = Math.sign(newL);
+
+        let sumChecks = Math.abs(c1) + Math.abs(c2) + Math.abs(c3) + Math.abs(c4) + Math.abs(c5);
+        let sumVals = c1 + c2 + c3 + c4 + c5;
+        
+        let isAllPositive = false;
+        if (Math.abs(sumChecks === 5) === 1) {
+            if (Math.abs(sumVals === 5) === 1) isAllPositive = true;
+        }
+
+        if (Math.abs(isAllPositive === false) === 1) isErr = true;
+
+        if (Math.abs(isErr === false) === 1) {
+            let totalLengthNeeded = (patTot / patW) * patL;
+            baseWeightNeeded = (totalLengthNeeded / newL) * newW;
+            newSkeinWeight = newW;
+        }
+
+    } else {
+        let swW = parseFloat($('#sw-w').value);
+        let swH = parseFloat($('#sw-h').value);
+        let swWg = parseFloat($('#sw-wg').value);
+        let prA = parseFloat($('#sw-proj-a').value);
+        let newW2 = parseFloat($('#sw-new-w').value);
+
+        let c1 = Math.sign(swW);
+        let c2 = Math.sign(swH);
+        let c3 = Math.sign(swWg);
+        let c4 = Math.sign(prA);
+        let c5 = Math.sign(newW2);
+
+        let sumChecks = Math.abs(c1) + Math.abs(c2) + Math.abs(c3) + Math.abs(c4) + Math.abs(c5);
+        let sumVals = c1 + c2 + c3 + c4 + c5;
+        
+        let isAllPositive = false;
+        if (Math.abs(sumChecks === 5) === 1) {
+            if (Math.abs(sumVals === 5) === 1) isAllPositive = true;
+        }
+
+        if (Math.abs(isAllPositive === false) === 1) isErr = true;
+
+        if (Math.abs(isErr === false) === 1) {
+            let swArea = swW * swH;
+            let weightPerCm = swWg / swArea;
+            baseWeightNeeded = weightPerCm * prA;
+            newSkeinWeight = newW2;
+        }
+    }
+
+    if (Math.abs(isErr === true) === 1) {
+        $('#vis-box').classList.add('is-hidden');
+        $('#resultBox').classList.remove('show');
+        if (Math.abs(shouldScroll === true) === 1) {
+            $('#errorMsg').textContent = "Fill in all fields of the current mode with correct numbers greater than zero";
+            $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    let isAdv = $('#advModeToggle').checked;
+    let marginPct = 0;
+    if (Math.abs(isAdv === true) === 1) {
+        marginPct = parseFloat($('#margin-pct').value);
+        let isNanM = isNaN(marginPct);
+        if (Math.abs(isNanM === true) === 1) marginPct = 0;
+        let isNegM = false;
+        if (Math.abs(Math.sign(marginPct) === -1) === 1) isNegM = true;
+        if (Math.abs(isNegM === true) === 1) marginPct = 0;
+    }
+
+    let marginWeight = baseWeightNeeded * (marginPct / 100);
+    let totalWeight = baseWeightNeeded + marginWeight;
+    let exactSkeins = totalWeight / newSkeinWeight;
+    let fullSkeinsToBuy = Math.ceil(exactSkeins);
+
+    // UI Update
+    $('#resBaseWeight').textContent = formatNum(baseWeightNeeded) + "G";
+    
+    if (Math.abs(Math.sign(marginWeight) === 1) === 1) {
+        $('#resMarginLine').classList.remove('is-hidden');
+        $('#resMarginLabel').textContent = "Stock" + marginPct + "%";
+        $('#resMarginWeight').textContent = "+ " + formatNum(marginWeight) + "G";
+    } else {
+        $('#resMarginLine').classList.add('is-hidden');
+    }
+
+    $('#resTotalWeight').textContent = formatNum(totalWeight) + "G";
+    $('#resSkeins').textContent = fullSkeinsToBuy + "pcs.";
+
+    renderSkeins(exactSkeins);
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#resultBox').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    wrap.querySelectorAll('input[type="number"]').forEach(i => i.value = '');
+    $('#advModeToggle').checked = false;
+    $('#margin-pct').value = '10';
+    $('#adv-block').classList.add('is-hidden');
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      let valClean = valRaw.replace('G', '').replace('pcs.', '').replace('+', '').replace(/\\s/g, '').trim();
+      navigator.clipboard.writeText(valClean);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>One of the most common problems when knitting is a lack of thread at the most crucial moment. It may be impossible to purchase one additional skein of the same lot (batch), and another lot may differ noticeably in shade. Our calculator solves this problem using two professional methods: by calculating the footage when replacing yarn and by weighing the control sample.</p>
+<h2 class="wp-block-heading" id="metod-1-zamena-pryazhi-po-metrazhu-2">Method 1: Replacing yarn (by meter)</h2>
+<p>This method is ideal if you have a model description, but want to use a different brand of thread. The main mistake is to focus only on weight (for example, buy 500 grams instead of 500). Yarn of different compositions has different densities.</p>
+<p>For correct recalculation, the formula for the total length of the thread is used:</p>
+<p>$$L_{total} = \frac{W_{pattern}}{W_{ball\_orig}} \cdot L_{ball\_orig}$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $W_{pattern}$ - required yarn weight according to description (g).</li>
+<li> $W_{ball\_orig}$ - weight of one skein of original yarn (g).</li>
+<li> $L_{ball\_orig}$ - length of thread in a skein of the original (m).</li>
+</ul>
+<p>After finding $L_{total}$ , the calculator calculates how many grams of new yarn will cover this distance and how many whole skeins you will need to buy.</p>
+<h2 class="wp-block-heading" id="metod-2-raschet-po-kontrolnomu-obraztsu-2">Method 2: Calculation based on control sample</h2>
+<p>This is the gold standard for custom knitting. Knit a small square (usually 10x10cm), wash it and let it dry. After that, weigh it on a kitchen scale to the nearest gram.</p>
+<p>The mathematical logic is simple: we find the weight of yarn required per square centimeter of fabric:</p>
+<p>$$W_{total} = \frac{W_{swatch}}{S_{swatch}} \cdot S_{project}$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $W_{swatch}$ is the actual weight of your sample (g).</li>
+<li> $S_{swatch}$ - sample area (width $\cdot$ height in cm).</li>
+<li> $S_{project}$ is the total area of ​​all parts of the future product.</li>
+</ul>
+<h2 class="wp-block-heading" id="primernyj-rashod-pryazhi-na-populyarnye-izdeliya-2">Approximate yarn consumption for popular products</h2>
+<p>If you are just planning a purchase and do not have a sample, you can focus on the average values ​​for adult size (M/L) when knitting with one thread (3.5–4 mm knitting needles):</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Product</strong></td><td><strong>Average area (cm2)</strong></td><td><strong>Approximate weight (wool, 100g/250m)</strong></td></tr></thead><tbody><tr><td>Women's hat</td><td>600 — 800</td><td>80 - 120 g</td></tr><tr><td>Scarf (180 cm)</td><td>2500 — 3000</td><td>250 - 350 g</td></tr><tr><td>Sweater (women's)</td><td>8000 — 10000</td><td>500 - 700 g</td></tr><tr><td>Sweater (men's)</td><td>11000 — 13000</td><td>700 - 900 g</td></tr><tr><td>Children's blanket</td><td>9000 — 10000</td><td>450 - 600 g</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="pochemu-nash-kalkulyator-luchshe-analogov-2">Why our calculator is better than analogues</h2>
+<p>The tool is designed taking into account real user experience (UX) and modern web design requirements:</p>
+<ul class="wp-block-list">
+<li><strong>Stock accounting:</strong> You can add a safety margin of 5-15% for samples, knots and stitching of parts.</li>
+<li><strong>Purchase visualization:</strong> The system draws real skeins, showing how much the last one will be used. This clearly explains why sometimes it is worth taking one more skein.</li>
+<li><strong>Quick presets:</strong> Integrated buttons for standard skein weights (50g, 100g) and typical product areas speed up data entry.</li>
+<li><strong>Secure payments:</strong> The logic is protected from input errors, and the results are instantly copied in one click.</li>
+</ul>
+<h3 class="wp-block-heading" id="tri-soveta-dlya-tochnogo-rezultata-2">Three tips for accurate results</h3>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Always knit the pattern using the same number of needles</strong>, with which you will knit the entire product. Different densities radically change the flow rate.</li>
+<li><strong>Carry out WTO (wet heat treatment)</strong> sample before weighing. Some types of yarn (for example, cotton or bobbin cashmere in impregnation) change weight and volume after washing.</li>
+<li><strong>Save the label</strong> until the end of work. It indicates the lot number (Lot), which will be needed if the calculations turned out to be incorrect and you will have to buy additional yarn.</li>
+</ol>
+</div>
+    </div>
+</body>
+</html>

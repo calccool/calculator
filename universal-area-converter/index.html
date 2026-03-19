@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal online area converter: conversion of metric, imperial and historical units</title>
+    <meta name="description" content="Universal online area converter: conversion of metric, imperial and historical units - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Universal online area converter: conversion of metric, imperial and historical units</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function() {
+
+  var UNITS = [
+    // Метрические (SI)
+    { key:'sq_fm', label:'Square femtometer (sq. fm)', short:'sq.fm', toBase:1e-30, group:'Metric (SI)' },
+    { key:'sq_pm', label:'Square picometer (sq.m.)', short:'sq.m.', toBase:1e-24, group:'Metric (SI)' },
+    { key:'sq_nm', label:'Square nanometer (sq nm)', short:'sq.nm', toBase:1e-18, group:'Metric (SI)' },
+    { key:'sq_um', label:'Square micrometer (sq. µm)', short:'sq.µm', toBase:1e-12, group:'Metric (SI)' },
+    { key:'sq_mm', label:'Square millimeter (sq. mm)', short:'sq.mm', toBase:1e-6, group:'Metric (SI)' },
+    { key:'sq_cm', label:'Square centimeter (sq. cm)', short:'sq.cm', toBase:1e-4, group:'Metric (SI)' },
+    { key:'sq_dm', label:'Square decimeter (sq dm)', short:'sq.dm', toBase:1e-2, group:'Metric (SI)' },
+    { key:'sq_m', label:'Square meter (sq.m)', short:'sq.m', toBase:1, group:'Metric (SI)' },
+    { key:'are', label:'Ar / Sotka (a)', short:'A', toBase:100, group:'Metric (SI)' },
+    { key:'hectare', label:'Hectare (ha)', short:'ha', toBase:10000, group:'Metric (SI)' },
+    { key:'sq_km', label:'Square kilometer (sq. km)', short:'sq.km', toBase:1e6, group:'Metric (SI)' },
+    { key:'sq_Mm', label:'Square megameter (sq mm)', short:'sq.mm', toBase:1e12, group:'Metric (SI)' },
+    { key:'barn', label:'Barn (b)', short:'b', toBase:1e-28, group:'Metric (SI)' },
+
+    // Британские / Американские
+    { key:'sq_thou', label:'Square mil/Thou', short:'sq mil', toBase:6.4516e-10, group:'British / American' },
+    { key:'sq_in', label:'Square inch (sq in)', short:'sq.in.', toBase:0.00064516, group:'British / American' },
+    { key:'sq_ft', label:'Square foot (sq ft)', short:'sq.ft', toBase:0.09290304, group:'British / American' },
+    { key:'sq_yd', label:'Square yard (sq yd)', short:'sq.yard', toBase:0.83612736, group:'British / American' },
+    { key:'square', label:'Square', short:'sq', toBase:9.290304, group:'British / American' },
+    { key:'sq_rod', label:'Square rod/Perch', short:'sq rod', toBase:25.29285264, group:'British / American' },
+    { key:'rood', label:'Rood', short:'rood', toBase:1011.7141056, group:'British / American' },
+    { key:'acre', label:'acre', short:'acre', toBase:4046.8564224, group:'British / American' },
+    { key:'sq_mi', label:'Square mile (sq mi)', short:'sq. mile', toBase:2589988.110336, group:'British / American' },
+    { key:'township', label:'Township', short:'twp', toBase:93239571.972, group:'British / American' },
+
+    // Старорусские
+    { key:'sq_line_ru', label:'Square line', short:'sq.lin', toBase:0.0000064516, group:'Old Russian' },
+    { key:'sq_vershok', label:'Square tip', short:'sq.ver', toBase:0.0019758, group:'Old Russian' },
+    { key:'sq_arshin', label:'Square arshin', short:'sq.arsh', toBase:0.505805, group:'Old Russian' },
+    { key:'sq_sazhen', label:'Square fathom', short:'sq. soot', toBase:4.55224, group:'Old Russian' },
+    { key:'desyatina_k', label:'Government tithe', short:'des.k', toBase:10925.4, group:'Old Russian' },
+    { key:'desyatina_v', label:'Owner\'s tithe', short:'des.v', toBase:14567.2, group:'Old Russian' },
+    { key:'sq_versta', label:'Square mile', short:'sq.ver', toBase:1138060, group:'Old Russian' },
+
+    // Японские
+    { key:'sq_shaku_jp', label:'Square shaku', short:'sq.syaku', toBase:0.091827, group:'Japanese' },
+    { key:'tsubo', label:'Tsubo/Boo (tsubo)', short:'tsubo', toBase:3.305785, group:'Japanese' },
+    { key:'se_jp', label:'Se (se)', short:'se', toBase:99.17355, group:'Japanese' },
+    { key:'tan_jp', label:'Tan', short:'tan', toBase:991.7355, group:'Japanese' },
+    { key:'cho_jp', label:'Cho (cho)', short:'those', toBase:9917.355, group:'Japanese' },
+
+    // Китайские
+    { key:'sq_cun_cn', label:'Square cun', short:'sq.cun', toBase:0.00111111, group:'Chinese' },
+    { key:'sq_chi_cn', label:'Square chi (chi)', short:'kv.chi', toBase:0.1111111, group:'Chinese' },
+    { key:'sq_zhang_cn',label:'Square zhang', short:'sq.zhang', toBase:11.11111, group:'Chinese' },
+    { key:'hao_cn', label:'Hao', short:'hao', toBase:3.33333, group:'Chinese' },
+    { key:'li_cn', label:'Li (li)', short:'whether', toBase:33.3333, group:'Chinese' },
+    { key:'fen_cn', label:'fen', short:'fen', toBase:333.333, group:'Chinese' },
+    { key:'mu_cn', label:'Mu/Mao (mu)', short:'mu', toBase:666.6667, group:'Chinese' },
+    { key:'qing_cn', label:'Qing (qing)', short:'qing', toBase:66666.67, group:'Chinese' },
+
+    // Древнеримские
+    { key:'sq_pes', label:'Square foot (pes)', short:'sq.pes', toBase:0.087798, group:'Ancient Roman' },
+    { key:'scripulum', label:'Scripulum', short:'scrip', toBase:8.7798, group:'Ancient Roman' },
+    { key:'actus_min', label:'Small act (actus minimus)', short:'act.m', toBase:421.43, group:'Ancient Roman' },
+    { key:'clima', label:'Clima', short:'clima', toBase:316.07, group:'Ancient Roman' },
+    { key:'actus_quad', label:'Square act (actus)', short:'act.q', toBase:1264.29, group:'Ancient Roman' },
+    { key:'jugerum', label:'Juger (jugerum)', short:'jug', toBase:2528.58, group:'Ancient Roman' },
+    { key:'heredium', label:'Heredium', short:'hered', toBase:5057.16, group:'Ancient Roman' },
+    { key:'centuria', label:'Centuria', short:'cent', toBase:252858, group:'Ancient Roman' },
+    { key:'saltus', label:'Saltus', short:'salt', toBase:1011432, group:'Ancient Roman' },
+
+    // Древнегреческие
+    { key:'sq_pous', label:'Square foot (pous)', short:'sq.pous', toBase:0.09525, group:'Ancient Greek' },
+    { key:'hexapod', label:'Hexapod', short:'hex', toBase:3.429, group:'Ancient Greek' },
+    { key:'plethron', label:'Plethra (plethron)', short:'pleth', toBase:952.5, group:'Ancient Greek' },
+
+    // Египетские
+    { key:'sq_cubit_eg',label:'Square elbow', short:'sq.lock', toBase:0.27415, group:'Egyptian' },
+    { key:'sa_eg', label:'Sa (sa)', short:'sa', toBase:342.68, group:'Egyptian' },
+    { key:'hesab_eg', label:'Hesab', short:'hesab', toBase:685.37, group:'Egyptian' },
+    { key:'remen_eg', label:'Remen', short:'remen', toBase:1370.75, group:'Egyptian' },
+    { key:'setat_eg', label:'Setat', short:'setat', toBase:2741.5, group:'Egyptian' },
+
+    // Индийские
+    { key:'sq_hasta', label:'Square hasta', short:'sq.hast', toBase:0.209, group:'Indian' },
+    { key:'biswansi', label:'Biswansi', short:'biswansi', toBase:3.344, group:'Indian' },
+    { key:'biswa', label:'Biswa / Katha (biswa)', short:'biswa', toBase:66.89, group:'Indian' },
+    { key:'gunta', label:'Gunta', short:'gunta', toBase:101.17, group:'Indian' },
+    { key:'bigha', label:'Bigha', short:'bigha', toBase:1337.8, group:'Indian' },
+
+    // Немецкие / Скандинавские
+    { key:'sq_fuss', label:'Square Fuss', short:'sq. Fuss', toBase:0.0985, group:'German / Scandinavian' },
+    { key:'kappland', label:'Kappland', short:'kapp', toBase:154.26, group:'German / Scandinavian' },
+    { key:'morgen_pr', label:'Prussian Morgen', short:'morgen', toBase:2553.22, group:'German / Scandinavian' },
+    { key:'tunnland', label:'Tunnland', short:'tunn', toBase:4936.4, group:'German / Scandinavian' },
+    { key:'hufe', label:'Gufa', short:'hufe', toBase:76596.6, group:'German / Scandinavian' },
+
+    // Астрономические
+    { key:'sq_ls', label:'Square light second', short:'sq.s.s.', toBase:8.98755e16, group:'Astronomical' },
+    { key:'sq_au', label:'Square astr. unit', short:'sq.AE', toBase:2.238e22, group:'Astronomical' },
+    { key:'sq_ly', label:'Square light year', short:'sq.s.g.', toBase:8.9505e31, group:'Astronomical' },
+    { key:'sq_pc', label:'Square parsec', short:'kv.pk', toBase:9.521e32, group:'Astronomical' },
+
+    // Прочие исторические / Локальные
+    { key:'dunam_old', label:'Dunam (old/Ottoman)', short:'dunam.o', toBase:919.3, group:'Other historical/local' },
+    { key:'dunam_new', label:'Dunam (metric)', short:'dunam.m', toBase:1000, group:'Other historical/local' },
+    { key:'stremma', label:'Stremma (Greece)', short:'stremma', toBase:1000, group:'Other historical/local' },
+    { key:'cuerda', label:'Cuerda (Puerto Rico)', short:'cuerda', toBase:3930.39, group:'Other historical/local' },
+    { key:'tatami_k', label:'Tatami (Kyoto)', short:'tatami.k', toBase:1.824, group:'Other historical/local' },
+    { key:'tatami_n', label:'Tatami (Nagoya)', short:'tatami.n', toBase:1.656, group:'Other historical/local' },
+    { key:'tatami_t', label:'Tatami (Tokyo)', short:'tatami.t', toBase:1.548, group:'Other historical/local' },
+    { key:'sq_smoot', label:'Square smoot', short:'sq. troubles', toBase:2.896, group:'Other historical/local' }
+  ];
+
+  var QUICK = [1, 5, 10, 20, 50, 100, 500, 1000];
+
+  document.getElementById('converter-block').innerHTML = '\
+<div class="uc">\
+  <div class="uc-units-row">\
+    <div class="uc-custom-dd" id="ddFromWrap">\
+      <div class="uc-dd-trigger" id="ddFromTrigger">\
+        <span class="uc-prefix-badge">Из</span>\
+        <span class="uc-dd-val" id="ddFromVal">Квадратный метр (кв. м)</span>\
+        <svg class="uc-dd-arr" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>\
+      </div>\
+      <div class="uc-dd-menu" id="ddFromMenu">\
+        <div class="uc-dd-search-wrap">\
+          <svg class="uc-search-icon" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.6"/><path d="M15 15l-3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>\
+          <input type="text" id="ucFromSearch" class="uc-dd-search" placeholder="Search for a unit..." autocomplete="off" />\
+        </div>\
+        <div class="uc-dd-list" id="ddFromList"></div>\
+      </div>\
+      <input type="hidden" id="ucFrom" />\
+    </div>\
+    <button type="button" class="uc-swap" id="ucSwap" title="Swap" aria-label="Swap">\
+      <img decoding="async" src="/wp-content/themes/adlera3/img/swap.png" alt="swap" />\
+    </button>\
+    <div class="uc-custom-dd" id="ddToWrap">\
+      <div class="uc-dd-trigger" id="ddToTrigger">\
+        <span class="uc-prefix-badge" style="background: #4a5565;">В</span>\
+        <span class="uc-dd-val" id="ddToVal">Гектар (га)</span>\
+        <svg class="uc-dd-arr" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>\
+      </div>\
+      <div class="uc-dd-menu" id="ddToMenu">\
+        <div class="uc-dd-search-wrap">\
+          <svg class="uc-search-icon" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.6"/><path d="M15 15l-3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>\
+          <input type="text" id="ucToSearch" class="uc-dd-search" placeholder="Search for a unit..." autocomplete="off" />\
+        </div>\
+        <div class="uc-dd-list" id="ddToList"></div>\
+      </div>\
+      <input type="hidden" id="ucTo" />\
+    </div>\
+  </div>\
+  <div class="uc-calc-row">\
+    <div class="uc-field">\
+      <div class="uc-val-wrap">\
+        <span class="uc-val-lbl">Значение:</span>\
+        <input type="number" id="ucLeft" class="uc-input" placeholder="0" step="any" />\
+      </div>\
+    </div>\
+    <div class="uc-equals">=</div>\
+    <div class="uc-field">\
+      <div class="uc-val-wrap">\
+        <span class="uc-val-lbl">Результат:</span>\
+        <input type="number" id="ucRight" class="uc-input uc-result" placeholder="—" readonly />\
+        <button type="button" class="uc-copy" id="ucCopy" title="Copy">\
+          <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" stroke="currentColor" stroke-width="2"/></svg>\
+        </button>\
+      </div>\
+    </div>\
+  </div>\
+  <div class="uc-formula-row">\
+    <img decoding="async" src="/wp-content/themes/adlera3/img/formula.png" class="uc-f-ico" alt="" />\
+    <span id="ucFormula" class="uc-f-text">Выберите единицы измерения</span>\
+    <button type="button" id="ucClear" class="uc-clear-btn">Очистить</button>\
+  </div>\
+  <div class="uc-chips-wrap">\
+    <span class="uc-chips-label">Быстрый ввод:</span>\
+    <div class="uc-chips" id="ucChips"></div>\
+  </div>\
+  <div class="uc-table-wrap">\
+    <div class="uc-table-head" id="ucTableHead">Таблица перевода</div>\
+    <div class="uc-table-scroll">\
+      <div class="post-table"><table class="uc-table"><thead><tr><th id="ucTh1">—</th><th id="ucTh2">—</th></tr></thead><tbody id="ucTbody"></tbody></table></div>\
+    </div>\
+  </div>\
+</div>';
+
+  var fromInp   = document.getElementById('ucFrom');
+  var toInp     = document.getElementById('ucTo');
+  var fromSrch  = document.getElementById('ucFromSearch');
+  var toSrch    = document.getElementById('ucToSearch');
+  var leftInp   = document.getElementById('ucLeft');
+  var rightInp  = document.getElementById('ucRight');
+  var swapBtn   = document.getElementById('ucSwap');
+  var copyBtn   = document.getElementById('ucCopy');
+  var clearBtn  = document.getElementById('ucClear');
+  var formulaEl = document.getElementById('ucFormula');
+  var chipsEl   = document.getElementById('ucChips');
+  var tbody     = document.getElementById('ucTbody');
+
+  var fromList  = document.getElementById('ddFromList');
+  var toList    = document.getElementById('ddToList');
+  var fromVal   = document.getElementById('ddFromVal');
+  var toVal     = document.getElementById('ddToVal');
+  var fromTrig  = document.getElementById('ddFromTrigger');
+  var toTrig    = document.getElementById('ddToTrigger');
+  var fromMenu  = document.getElementById('ddFromMenu');
+  var toMenu    = document.getElementById('ddToMenu');
+
+  var _p   = new URLSearchParams(window.location.search);
+  var _pF  = _p.get('from');
+  var _pT  = _p.get('to');
+  var _pV  = _p.get('val');
+  var uFrom = (_pF === null) ? 'sq_m' : _pF;
+  var uTo   = (_pT === null) ? 'hectare' : _pT;
+  var uVal  = (_pV === null) ? '' : _pV;
+
+  function fmtNum(n) {
+    if (isFinite(n) === false) return '';
+    if (Math.abs(n === 0) === 1) return '0';
+    var a    = Math.abs(n);
+    var big  = Math.sign(a - 1e15) !== -1;
+    var tiny = (Math.abs(a === 0) === 0) ? (Math.sign(a - 1e-6) === -1) : false;
+    if (big ? true : tiny) return n.toExponential(6).replace(/\.?0+e/, 'e');
+    return parseFloat(n.toPrecision(10)).toString();
+  }
+
+  function getUnit(key) {
+    return UNITS.find(function(u) { return Math.abs(u.key === key) === 1; });
+  }
+
+  function buildSel(listEl, q, hiddenInp, valEl) {
+    q = (q === undefined) ? '' : q.toLowerCase().trim();
+    listEl.innerHTML = '';
+    var groups = {};
+    UNITS.forEach(function(u) {
+      var noMatch = (u.label.toLowerCase().includes(q) === false)
+        ? ((u.key.toLowerCase().includes(q) === false) ? (u.short.toLowerCase().includes(q) === false) : false)
+        : false;
+      if (q ? noMatch : false) return;
+      if (groups[u.group] === undefined) groups[u.group] = [];
+      groups[u.group].push(u);
+    });
+    Object.entries(groups).forEach(function(e) {
+      var og = document.createElement('div');
+      og.className = 'uc-dd-optgroup';
+      og.textContent = e[0];
+      listEl.appendChild(og);
+      e[1].forEach(function(u) {
+        var o = document.createElement('div');
+        o.className = 'uc-dd-option';
+        if(Math.abs(hiddenInp.value === u.key) === 1) o.classList.add('is-selected');
+        o.textContent = u.label;
+        o.dataset.val = u.key;
+        o.addEventListener('click', function() {
+           hiddenInp.value = u.key;
+           valEl.textContent = u.label;
+           closeAllDD();
+           updateFormula(); updateTable(); updateChips(); if (leftInp.value) convert();
+        });
+        listEl.appendChild(o);
+      });
+    });
+  }
+
+  function setOpt(inp, listEl, valEl, key) {
+    var u = getUnit(key);
+    if(u) {
+      inp.value = key;
+      valEl.textContent = u.label;
+      var opts = listEl.querySelectorAll('.uc-dd-option');
+      opts.forEach(function(o) { o.classList.remove('is-selected'); });
+      var sel = listEl.querySelector('.uc-dd-option[data-val="' + key + '"]');
+      if(sel) sel.classList.add('is-selected');
+    }
+  }
+
+  function convert() {
+    var val  = parseFloat(leftInp.value);
+    if (isNaN(val) === true) { rightInp.value = ''; updateFormula(); updateTable(); return; }
+    var from = getUnit(fromInp.value);
+    var to   = getUnit(toInp.value);
+    if ((from === undefined) ? true : (to === undefined)) return;
+    rightInp.value = fmtNum(val * from.toBase / to.toBase);
+    updateFormula(from, to);
+    updateTable(from, to);
+    window.history.replaceState({}, '', '?from=' + fromInp.value + '&to=' + toInp.value + '&val=' + val);
+  }
+
+  function updateFormula(from, to) {
+    from = (from === undefined) ? getUnit(fromInp.value) : from;
+    to   = (to === undefined)   ? getUnit(toInp.value)   : to;
+    if ((from === undefined) ? true : (to === undefined)) { formulaEl.textContent = 'Выберите единицы измерения'; return; }
+    formulaEl.innerHTML = '1 ' + from.label + ' = <strong>' + fmtNum(from.toBase / to.toBase) + '</strong> ' + to.label;
+  }
+
+  function updateTable(from, to) {
+    from = (from === undefined) ? getUnit(fromInp.value) : from;
+    to   = (to === undefined)   ? getUnit(toInp.value)   : to;
+    if ((from === undefined) ? true : (to === undefined)) return;
+    document.getElementById('ucTh1').textContent = from.label;
+    document.getElementById('ucTh2').textContent = to.label;
+    document.getElementById('ucTableHead').textContent = 'Таблица: ' + from.label + ' → ' + to.label;
+    tbody.innerHTML = '';
+    QUICK.forEach(function(v) {
+      var tr = document.createElement('tr');
+      tr.innerHTML = '<td>' + v + ' <span>' + from.short + '</span></td><td>' + fmtNum(v * from.toBase / to.toBase) + ' <span>' + to.short + '</span></td>';
+      tbody.appendChild(tr);
+    });
+  }
+
+  function updateChips() {
+    chipsEl.innerHTML = '';
+    QUICK.forEach(function(v) {
+      var a = document.createElement('a');
+      a.className   = 'uc-chip';
+      a.textContent = v;
+      a.href = '?from=' + fromInp.value + '&to=' + toInp.value + '&val=' + v;
+      a.addEventListener('click', function(e) {
+        e.preventDefault();
+        leftInp.value = v;
+        convert();
+      });
+      chipsEl.appendChild(a);
+    });
+  }
+
+  function closeAllDD() {
+    fromMenu.classList.remove('is-open');
+    toMenu.classList.remove('is-open');
+    fromTrig.classList.remove('is-active');
+    toTrig.classList.remove('is-active');
+  }
+
+  fromTrig.addEventListener('click', function(e) {
+    e.stopPropagation();
+    var isOpen = fromMenu.classList.contains('is-open');
+    closeAllDD();
+    if(isOpen === false) { fromMenu.classList.add('is-open'); fromTrig.classList.add('is-active'); fromSrch.focus(); }
+  });
+
+  toTrig.addEventListener('click', function(e) {
+    e.stopPropagation();
+    var isOpen = toMenu.classList.contains('is-open');
+    closeAllDD();
+    if(isOpen === false) { toMenu.classList.add('is-open'); toTrig.classList.add('is-active'); toSrch.focus(); }
+  });
+
+  document.addEventListener('click', function(e) {
+    if (e.target.closest('.uc-custom-dd') === null) closeAllDD();
+  });
+
+  fromMenu.addEventListener('click', function(e) { e.stopPropagation(); });
+  toMenu.addEventListener('click', function(e) { e.stopPropagation(); });
+
+  fromInp.value = uFrom;
+  toInp.value = uTo;
+  buildSel(fromList, '', fromInp, fromVal);
+  buildSel(toList, '', toInp, toVal);
+  setOpt(fromInp, fromList, fromVal, uFrom);
+  setOpt(toInp, toList, toVal, uTo);
+  updateFormula(); updateTable(); updateChips();
+  if (uVal) { leftInp.value = uVal; convert(); }
+
+  var tF, tT;
+  fromSrch.addEventListener('input', function() {
+    clearTimeout(tF);
+    tF = setTimeout(function() {
+      var prev = fromInp.value;
+      buildSel(fromList, fromSrch.value, fromInp, fromVal);
+      setOpt(fromInp, fromList, fromVal, prev);
+      if ((fromInp.value === '') ? true : (fromList.querySelector('.uc-dd-option[data-val="' + prev + '"]') === null)) {
+         var first = fromList.querySelector('.uc-dd-option');
+         if(first) {
+            fromInp.value = first.dataset.val;
+            fromVal.textContent = first.textContent;
+            first.classList.add('is-selected');
+         }
+      }
+      updateFormula(); updateTable(); updateChips(); if (leftInp.value) convert();
+    }, 200);
+  });
+
+  toSrch.addEventListener('input', function() {
+    clearTimeout(tT);
+    tT = setTimeout(function() {
+      var prev = toInp.value;
+      buildSel(toList, toSrch.value, toInp, toVal);
+      setOpt(toInp, toList, toVal, prev);
+      if ((toInp.value === '') ? true : (toList.querySelector('.uc-dd-option[data-val="' + prev + '"]') === null)) {
+         var first = toList.querySelector('.uc-dd-option');
+         if(first) {
+            toInp.value = first.dataset.val;
+            toVal.textContent = first.textContent;
+            first.classList.add('is-selected');
+         }
+      }
+      updateFormula(); updateTable(); updateChips(); if (leftInp.value) convert();
+    }, 200);
+  });
+
+  leftInp.addEventListener('input', function() { convert(); });
+
+  swapBtn.addEventListener('click', function() {
+    var kF = fromInp.value, kT = toInp.value, sF = fromSrch.value, sT = toSrch.value;
+    buildSel(fromList, sT, fromInp, fromVal); setOpt(fromInp, fromList, fromVal, kT); fromSrch.value = sT;
+    buildSel(toList,   sF, toInp, toVal);   setOpt(toInp, toList, toVal, kF);   toSrch.value = sF;
+    updateFormula(); updateTable(); updateChips(); if (leftInp.value) convert();
+  });
+
+  copyBtn.addEventListener('click', function() {
+    if (rightInp.value === '') return;
+    navigator.clipboard.writeText(rightInp.value);
+    copyBtn.classList.add('uc-copied');
+    setTimeout(function() { copyBtn.classList.remove('uc-copied'); }, 1500);
+  });
+
+  clearBtn.addEventListener('click', function() {
+    leftInp.value = '';
+    rightInp.value = '';
+    updateFormula();
+    leftInp.focus();
+  });
+});
+</script>
+
+        <div class="post-content">
+<style>
+#converter-block *,
+#converter-block *::before,
+#converter-block *::after { box-sizing: border-box; }
+
+/* ── Wrapper ─────────────────────────────────── */
+.uc {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* ── Unit row ────────────────────────────────── */
+.uc-units-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  z-index: 2; /* Выше калькулятора, чтобы меню выпадало поверх */
+}
+
+/* ── Custom Dropdown (Вместо Select) ─────────── */
+.uc-custom-dd { position: relative; flex: 1; }
+
+.uc-dd-trigger {
+  width: 100%;
+  padding: 14px 34px 14px 50px; /* Место под бейдж слева и стрелку справа */
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #f8fafc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all .2s;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.01);
+}
+.uc-dd-trigger.is-active {
+  border-color: #0693e3;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(6,147,227,.15);
+}
+
+.uc-prefix-badge {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, #0693e3, #006eb5);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  pointer-events: none;
+}
+
+.uc-dd-val {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 6px;
+}
+
+.uc-dd-arr {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 8px;
+  color: #475569;
+  transition: transform .2s;
+}
+.uc-dd-trigger.is-active .uc-dd-arr { transform: translateY(-50%) rotate(180deg); color: #0693e3; }
+
+/* Dropdown Menu */
+.uc-dd-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  z-index: 100;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 380px;
+}
+.uc-dd-menu.is-open { display: flex; }
+
+.uc-dd-search-wrap {
+  padding: 12px;
+  border-bottom: 1px solid #f1f5f9;
+  position: relative;
+  background: #f8fafc;
+}
+.uc-search-icon {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  color: #94a3b8;
+  pointer-events: none;
+}
+.uc-dd-search {
+  width: 100%;
+  padding: 10px 14px 10px 36px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #111;
+  background: #fff;
+  outline: none;
+  transition: border-color .15s;
+}
+.uc-dd-search:focus { border-color: #0693e3; }
+
+.uc-dd-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 6px 0;
+}
+.uc-dd-list::-webkit-scrollbar { width: 6px; }
+.uc-dd-list::-webkit-scrollbar-track { background: #f8fafc; }
+.uc-dd-list::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+
+.uc-dd-optgroup {
+  padding: 10px 16px 4px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #94a3b8;
+  letter-spacing: 0.5px;
+}
+.uc-dd-option {
+  padding: 8px 16px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #334155;
+  cursor: pointer;
+  transition: background .15s, color .15s;
+}
+.uc-dd-option:hover { background: #f1f5f9; color: #111; }
+.uc-dd-option.is-selected {
+  background: linear-gradient(135deg, rgba(6,147,227,0.1), rgba(0,110,181,0.1));
+  color: #0693e3;
+  font-weight: 600;
+  border-left: 3px solid #0693e3;
+}
+
+/* Swap Button */
+.uc-swap {
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  border: 1px solid #e2e8f0 !important;
+  background: #fff !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  transition: all .3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,.04) !important;
+  outline: none !important;
+}
+.uc-swap img { 
+  width: 20px !important; 
+  height: 20px !important; 
+  transition: all .2s !important; 
+  display: block !important;
+}
+.uc-swap:hover {
+  border-color: #0693e3 !important;
+  background: linear-gradient(135deg, #0693e3, #006eb5) !important;
+  transform: rotate(180deg) scale(1.05) !important;
+  box-shadow: 0 6px 14px rgba(6,147,227,0.3) !important;
+}
+.uc-swap:hover img { filter: brightness(0) invert(1) !important; opacity: 1 !important; }
+
+/* ── Calc row (Ввод и Результат) ──────────────── */
+.uc-calc-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+}
+.uc-field { flex: 1; }
+
+.uc-equals {
+  font-size: 24px;
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
+.uc-val-wrap { position: relative; }
+.uc-val-lbl {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+  pointer-events: none;
+}
+
+.uc-input {
+  width: 100%;
+  padding: 16px 16px 16px 105px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: right;
+  color: #111;
+  background: #fff;
+  outline: none;
+  transition: all .2s;
+  -moz-appearance: textfield;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+}
+.uc-input::-webkit-outer-spin-button,
+.uc-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+.uc-input:focus {
+  border-color: #0693e3;
+  box-shadow: 0 0 0 4px rgba(6,147,227,.15);
+}
+
+.uc-result {
+  background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%);
+  color: #0693e3;
+  cursor: default;
+  padding-right: 50px;
+  border-color: #bae6fd;
+}
+.uc-result:focus { border-color: #7dd3fc; box-shadow: none; }
+
+.uc-copy {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  color: #64748b;
+  padding: 6px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  transition: all .2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.uc-copy:hover { color: #0693e3; border-color: #0693e3; box-shadow: 0 2px 6px rgba(6,147,227,0.2); }
+.uc-copy.uc-copied { color: #fff; background: #22c55e; border-color: #22c55e; }
+
+/* ── Formula row ─────────────────────────────── */
+.uc-formula-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+}
+.uc-f-ico { width: 22px; height: 22px; flex-shrink: 0;  }
+.uc-f-text {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  color: #475569;
+  min-width: 0;
+  overflow-wrap: break-word;
+  line-height: 1.5;
+}
+.uc-f-text strong { color: #111; font-weight: 700; font-size: 15px; }
+
+.uc-clear-btn {
+  flex-shrink: 0;
+  padding: 8px 18px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fff;
+  color: #4a5565;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all .2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.uc-clear-btn:hover { border-color: #94a3b8; color: #111; background: #f1f5f9; }
+
+/* ── Chips ───────────────────────────────────── */
+.uc-chips-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.uc-chips-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #888;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.uc-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.uc-chip {
+  padding: 6px 16px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  text-decoration: none;
+  background: #f1f5f9;
+  transition: all .2s;
+  display: inline-block;
+}
+.uc-chip:hover {
+  color: #fff;
+  background: linear-gradient(135deg, #0693e3, #006eb5);
+  box-shadow: 0 4px 10px rgba(6,147,227,.25);
+  transform: translateY(-2px);
+}
+
+/* ── Table ───────────────────────────────────── */
+.uc-table-wrap { display: flex; flex-direction: column; gap: 12px; margin-top: 6px; }
+.uc-table-head {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #111;
+}
+.uc-table-scroll {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+.uc-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.uc-table thead tr { background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); }
+.uc-table th {
+  text-align: left;
+  padding: 14px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+  border-bottom: 2px solid #e2e8f0;
+}
+.uc-table td {
+  padding: 12px 18px;
+  font-size: 14px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #111;
+  font-weight: 500;
+}
+.uc-table td span { color: #888; font-size: 12px; margin-left: 6px; font-weight: 400; }
+.uc-table tr:last-child td { border-bottom: none; }
+.uc-table tbody tr:hover { background: #f8fafc; }
+.uc-table td:last-child { color: #0693e3; font-weight: 700; }
+.uc-table td:last-child span { color: #7dd3fc; }
+
+/* ── Mobile ──────────────────────────────────── */
+@media (max-width: 650px) {
+  .uc-units-row { flex-direction: column; gap: 12px; align-items: stretch; }
+  .uc-swap { 
+    align-self: center !important; 
+    margin: 4px auto !important; 
+    transform: rotate(90deg) !important; 
+  }
+  .uc-swap:hover { transform: rotate(90deg) scale(1.05) !important; }
+  
+  .uc-calc-row { flex-direction: column; gap: 16px; align-items: stretch; }
+  .uc-equals { display: none; }
+  
+  .uc-val-lbl { font-size: 13px; left: 14px; }
+  .uc-input { padding: 16px 14px 16px 95px; font-size: 20px; }
+  .uc-result { padding-right: 46px; }
+  
+  .uc-formula-row { flex-wrap: wrap; }
+}
+</style>
+<p>Area is one of the most important physical quantities, which is used everywhere: from purchasing land and renovating an apartment to calculations in quantum physics and astronomy. Our universal calculator allows you to instantly convert between more than 80 different units of measurement from 12 world and historical systems.</p>
+<p>You no longer need to search for separate reference books. The converter automatically recalculates the values, taking into account mathematical precision to decimal parts, and immediately shows the formula used to calculate it.</p>
+<h2 class="wp-block-heading" id="vozmozhnosti-i-preimushhestva-nashego-konvertera-2">Features and advantages of our converter</h2>
+<p>We designed this tool with an emphasis on maximum convenience and speed. An intelligent algorithm provides instant response when entering data.</p>
+<ul class="wp-block-list">
+<li><strong>Smart Search:</strong> The built-in search bar in the drop-down menu allows you to find the desired unit (for example, “hectare” or “acre”) in a fraction of a second.</li>
+<li><strong>Quick entry buttons:</strong> Popular values ​​(1, 10, 50, 100, etc.) can be entered in one click.</li>
+<li><strong>Dynamic table:</strong> When you select units, a conversion table is automatically generated for the most common values.</li>
+<li><strong>Scientific notation:</strong> For ultra-small (e.g., square nanometer) or ultra-large (light-year) values, a convenient exponential format is used.</li>
+<li><strong>Copying the result:</strong> The finished number is copied to the clipboard with one click.</li>
+</ul>
+<h2 class="wp-block-heading" id="podderzhivaemye-sistemy-izmereniya-ploshhadi-2">Supported area measurement systems</h2>
+<p>Our tool covers both modern standards and measures that are found in historical literature or specific regions.</p>
+<h3 class="wp-block-heading" id="metricheskaya-sistema-si-2">Metric system (SI)</h3>
+<p>The basis of modern calculations. The basic unit is the square meter. We support the entire range of SI prefixes: from square femtometer to megameter, as well as sotka (ares) and hectares, which are popular in agriculture.</p>
+<h3 class="wp-block-heading" id="britanskaya-i-amerikanskaya-sistemy-2">British and American systems</h3>
+<p>Indispensable when working with foreign real estate, documentation or literature. Include:</p>
+<ul class="wp-block-list">
+<li>Square inches, feet, yards and miles.</li>
+<li>Acres and ores.</li>
+<li>Specific measures like township ( $1 \text{ township} \approx 93.24 \text{ км}^2$ ).</li>
+</ul>
+<h3 class="wp-block-heading" id="istoricheskie-i-regionalnye-mery-2">Historical and regional measures</h3>
+<p>We've added systems that make this calculator truly encyclopedic:</p>
+<ul class="wp-block-list">
+<li><strong>Old Russian:</strong> Square fathom, arshin, verst, as well as state and owner's tithes.</li>
+<li><strong>Japanese:</strong> Chu, tan, se, tsubo and even traditional tatami (with differences for Tokyo, Kyoto and Nagoya).</li>
+<li><strong>Chinese:</strong> Mu, qing, chi, tsun.</li>
+<li><strong>Antique:</strong> Ancient Roman (juger, centuria) and ancient Greek (pletra) measures.</li>
+<li><strong>Ancient Egyptian and Indian:</strong> Setat, remen, bigha and gunta.</li>
+</ul>
+<h2 class="wp-block-heading" id="matematika-perevoda-formuly-i-koeffitsienty-2">Translation mathematics: formulas and coefficients</h2>
+<p>Under the hood of the converter there is a single reference base, where each value is tied to a square meter ( $м^2$ ).</p>
+<p>The mathematical logic for converting from a $A$ unit to a $B$ unit is as follows:</p>
+<p>$$V_{B} = V_{A} \times \frac{K_{A}}{K_{B}}$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $V_{A}$ - initial area value.</li>
+<li> $V_{B}$ is the desired value.</li>
+<li> $K_{A}$ is the conversion factor from the original unit to square meters.</li>
+<li> $K_{B}$ - conversion factor of the target unit to square meters.</li>
+</ul>
+<p>Let's look at the example of converting 5 acres to hectares.</p>
+<p>Acre factor: $K_{A} = 4046.8564$ </p>
+<p>Hectare factor: $K_{B} = 10000$ </p>
+<p> $$V_{B} = 5 \times \frac{4046.8564}{10000} = 5 \times 0.40468564 = 2.023428 \text{ га}$$ </p>
+<h3 class="wp-block-heading" id="tablitsa-populyarnyh-konvertatsij-2">Table of popular conversions</h3>
+<p>For your convenience, we have collected the values ​​that are most often searched for:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Initial area</strong></td><td><strong>Target unit of measure</strong></td><td><strong>Formula (approx.)</strong></td></tr></thead><tbody><tr><td>1 Sotka (ar)</td><td>Square meters</td><td> $1 \text{ а} = 100 \text{ м}^2$ </td></tr><tr><td>1 Hectare (ha)</td><td>Weaving</td><td> $1 \text{ га} = 100 \text{ соток}$ </td></tr><tr><td>1 Acre</td><td>Hectares</td><td> $1 \text{ акр} \approx 0.4047 \text{ га}$ </td></tr><tr><td>1 Square meter</td><td>Square feet (sq ft)</td><td> $1 \text{ м}^2 \approx 10.7639 \text{ sq ft}$ </td></tr><tr><td>1 square mile</td><td>Square kilometers</td><td> $1 \text{ sq mi} \approx 2.5899 \text{ км}^2$ </td></tr><tr><td>1 Tithe (state)</td><td>Hectares</td><td> $1 \text{ дес.} \approx 1.0925 \text{ га}$ </td></tr><tr><td>1 Tsubo (Japan)</td><td>Square meters</td><td> $1 \text{ цубо} \approx 3.305 \text{ м}^2$ </td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="astronomicheskie-i-kvantovye-ploshhadi-2">Astronomical and quantum areas</h2>
+<p>For scientific purposes, we have provided extreme values. Used in particle physics <strong>Barn</strong> ( $1 \text{ б} = 10^{-28} \text{ м}^2$ ) for measuring the cross section of nuclear reactions.</p>
+<p>In astrophysics, on the contrary, they operate with colossal numbers. Area is measured in square light years and square parsecs. For reference:</p>
+<p> $$1 \text{ кв. парсек} \approx 9.521 \times 10^{32} \text{ м}^2$$ </p>
+<p>Use our calculator to save time on complex calculations. Simply select the desired values ​​from the list, enter the number and get an instant, mathematically verified result.</p>
+</div>
+    </div>
+</body>
+</html>

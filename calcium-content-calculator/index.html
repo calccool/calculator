@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator (Ca) and oxide (CaO) content calculator</title>
+    <meta name="description" content="Calculator (Ca) and oxide (CaO) content calculator - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Calculator (Ca) and oxide (CaO) content calculator</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (Золотой стандарт + Chemistry Visuals) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; position: relative; }
+    
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; margin-bottom: 4px;}
+    
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:16px; background:#fff; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 10px; } 
+    .c-input-suffix {
+        position: absolute; right: 32px; top: 50%; transform: translateY(-50%);
+        color: #888; font-size: 14px; pointer-events: none; font-weight: 500;
+    }
+
+    .c-visual-box { text-align: center; margin-bottom: 20px; padding: 20px; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0; display:flex; flex-direction:column; align-items:center; }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 10px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; font-size: 16px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+
+    .c-result { border:1px dashed #0693e3; border-radius:12px; padding:10px; background:#fff; margin-top: 20px; display:none; }
+    .c-result.show { display:grid; }
+    .c-resline { display:grid; grid-template-columns: 1fr auto 30px; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #0693e3; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; }
+    .c-resval { font-weight:700; font-size:18px; color:#0693e3; text-align:right;}
+    .c-subtext { display: block; font-size: 11px; color: #888; margin-top: 3px; }
+
+    .c-copy { 
+      width: 28px; height: 28px; border: none; background: #fff url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; 
+      background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; 
+      opacity: 0.6; transition: 0.2s;
+    }
+    .c-copy:hover { opacity: 1; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 10px; border-radius: 8px; margin-bottom: 10px; display: none; font-size: 14px; }
+    .c-error.show { display: block; }
+    
+    /* Animation for liquid */
+    @keyframes bubble {
+        0% { transform: translateY(0); opacity: 0; }
+        50% { opacity: 1; }
+        100% { transform: translateY(-20px); opacity: 0; }
+    }
+    .c-bubble { animation: bubble 2s infinite; transform-origin: center; }
+
+    @media (max-width: 600px) {
+        .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; }
+        .c-resval { grid-column: 1; grid-row: 2; text-align: left; }
+        .c-copy { grid-column: 2; grid-row: 1 / 3; width: 34px; height: 34px; background-size: 22px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-body">
+<div class="c-visual-box">
+<svg height="100" viewbox="0 0 80 100" width="80">
+<path d="M30 10 L30 40 L10 90 L70 90 L50 40 L50 10 Z" fill="none" stroke="#546e7a" stroke-width="2"></path>
+<path d="M15 80 L65 80 L55 60 L25 60 Z" fill="#e1f5fe" opacity="0.8"></path>
+<circle class="c-bubble" cx="40" cy="45" fill="#0693e3" r="2"></circle>
+<rect fill="#cfd8dc" height="25" width="4" x="38" y="0"></rect>
+</svg>
+<div style="font-size:14px; font-weight:bold; margin-top:10px; color:#333;">Calcium analysis</div>
+<div style="font-size:11px; color:#666;">Titrimetric method</div>
+</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Method of analysis</label>
+<select class="c-select" id="selMethod">
+<option value="permanganate">Permanganatometry (KMnO₄)</option>
+<option value="edta">Complexometry (EDTA)</option>
+</select>
+</div>
+<div class="c-field">
+<label class="c-label">Sample weight (weight)</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="inMass" min="0.0001" step="0.01" type="number" value="0.25"/>
+<span class="c-input-suffix">G</span>
+</div>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label" id="lblVol">Titrant volume (V)</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="inVol" min="0" step="0.1" type="number" value="12.5"/>
+<span class="c-input-suffix">ml</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label" id="lblConc">Normality (N)</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="inConc" min="0" step="0.001" type="number" value="0.05"/>
+<span class="c-input-suffix" id="sufConc">N</span>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-result" id="resBox">
+<div class="c-resline" style="background:#e3f2fd;">
+<div class="c-resleft">Ca content<span class="c-subtext">Percentage</span>
+</div>
+<div class="c-resval" id="resPercent">0 %</div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Ca content (mg)<span class="c-subtext">Mass fraction</span>
+</div>
+<div class="c-resval" id="resMg">0 mg/g</div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">In terms of CaO<span class="c-subtext">Calcium oxide</span>
+</div>
+<div class="c-resval" id="resCaO">0 %</div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Titer (T)<span class="c-subtext">Mass of Ca in 1 ml solution</span>
+</div>
+<div class="c-resval" id="resTiter" style="font-size:14px; color:#555;">0 g/ml</div>
+<button class="c-copy"></button>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (id) => wrap.querySelector('#'+id);
+  const errorEl = $('errorMsg');
+
+  // Change labels based on method
+  $('selMethod').addEventListener('change', function() {
+      if (this.value === 'edta') {
+          $('lblConc').textContent = "Molarity of EDTA (M)";
+          $('sufConc').textContent = "M";
+          $('inConc').value = "0.05"; 
+      } else {
+          $('lblConc').textContent = "Normality KMnO₄ (N)";
+          $('sufConc').textContent = "N";
+          $('inConc').value = "0.05";
+      }
+  });
+
+  function calculate() {
+      errorEl.classList.remove('show');
+      
+      const massSample = parseFloat($('inMass').value);
+      const vol = parseFloat($('inVol').value);
+      const conc = parseFloat($('inConc').value);
+      const method = $('selMethod').value;
+
+      if ([massSample, vol, conc].some(x => isNaN(x) || Math.sign(x) !== 1)) {
+          errorEl.textContent = "Please check the entered values.";
+          errorEl.classList.add('show'); return;
+      }
+      
+      // Atomic weights
+      // Ca = 40.078
+      // Eq weight Ca (valence 2) = 20.039
+      
+      let massCa = 0;
+      let titer = 0;
+
+      if (method === 'permanganate') {
+          // Permanganate titration (Redox)
+          // Reaction: 5 CaC2O4 + 2 KMnO4 ...
+          // 1 mL 1N KMnO4 corresponds to 0.02004 g Ca
+          // Formula: m(Ca) = V * N * Eq(Ca) / 1000
+          
+          const eqCa = 20.04;
+          massCa = (vol * conc * eqCa) / 1000;
+          titer = (conc * eqCa) / 1000;
+          
+      } else {
+          // EDTA Complexometry
+          // 1 mol EDTA reacts with 1 mol Ca2+
+          // 1 mL 1M EDTA = 0.04008 g Ca
+          // Formula: m(Ca) = V * M * Mol(Ca) / 1000
+          
+          const molCa = 40.08;
+          massCa = (vol * conc * molCa) / 1000;
+          titer = (conc * molCa) / 1000;
+      }
+      
+      const percentCa = (massCa / massSample) * 100;
+      const mgPerGram = (massCa / massSample) * 1000;
+      
+      // Conversion to CaO
+      // M(CaO) = 40.08 + 16.00 = 56.08
+      // Factor = 56.08 / 40.08 = 1.3992
+      const percentCaO = percentCa * 1.3992;
+
+      // Output
+      $('resPercent').textContent = percentCa.toFixed(2) + " %";
+      $('resMg').textContent = mgPerGram.toFixed(1) + "mg/g";
+      $('resCaO').textContent = percentCaO.toFixed(2) + " %";
+      $('resTiter').textContent = titer.toFixed(5) + "g/ml";
+
+      $('resBox').classList.add('show');
+      $('resBox').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  $('calcBtn').addEventListener('click', calculate);
+  
+  $('resetBtn').addEventListener('click', () => {
+      $('inMass').value = '0.25';
+      $('inVol').value = '12.5';
+      $('resBox').classList.remove('show');
+      errorEl.classList.remove('show');
+  });
+
+  wrap.addEventListener('click', (e) => {
+      if (e.target.classList.contains('c-copy')) {
+          const val = e.target.previousElementSibling.textContent;
+          navigator.clipboard.writeText(val);
+          e.target.style.opacity = '1';
+          setTimeout(() => e.target.style.opacity = '0.6', 200);
+      }
+  });
+
+});
+</script>
+
+        <div class="post-content">
+<p>Determination of calcium content is one of the key tasks in analytical chemistry, construction inspection (analysis of cement and limestone), as well as in medicine and water quality control. Our calculator allows you to automate routine calculations using the two most common methods of titrimetric analysis: complexometry and permanganatometry.</p>
+<h2 class="wp-block-heading" id="printsipy-rascheta-2">Principles of calculation</h2>
+<p>The result of the analysis depends on the chosen chemical method, since the stoichiometry of the reactions differs. The calculator uses the following basic constants and algorithms.</p>
+<h3 class="wp-block-heading" id="1-metod-kompleksonometrii-edta-trilon-b-2">1. Complexometry method (EDTA / Trilon B)</h3>
+<p>This is the most modern and accurate method. It is based on the formation of a strong complex compound of calcium ions with ethylenediaminetetraacetic acid (EDTA) in an alkaline environment (usually at pH 12-13).</p>
+<p>Reaction equation in simplified form:</p>
+<p>$$Ca^{2+} + H_2Y^{2-} \rightarrow CaY^{2-} + 2H^+$$</p>
+<p>Since the reaction occurs in a 1:1 ratio, the formula for calculating the mass of calcium looks like this:</p>
+<p>$$m(Ca) = \frac{V \cdot M \cdot A_r(Ca)}{1000}$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $V$ —volume of EDTA solution used for titration (ml);</li>
+<li> $M$ —molarity of EDTA solution (mol/l);</li>
+<li> $A_r(Ca)$ - atomic mass of calcium (40.078 g/mol).</li>
+</ul>
+<h3 class="wp-block-heading" id="2-metod-permanganatometrii-2">2. Permanganatometry method</h3>
+<p>The classical method is based on the precipitation of calcium in the form of oxalate ( $CaC_2O_4$ ), followed by dissolving the precipitate in sulfuric acid and titrating the liberated oxalic acid with a solution of potassium permanganate ( $KMnO_4$ ).</p>
+<p>The law of equivalents is used here. The equivalent mass of calcium is equal to half its atomic mass (since the valence is 2):</p>
+<p> $$E(Ca) = \frac{40.078}{2} \approx 20.04 \text{ г/экв}$$ </p>
+<p>Calculation formula:</p>
+<p>$$m(Ca) = \frac{V \cdot N \cdot E(Ca)}{1000}$$</p>
+<p>Where $N$ is the normality of the $KMnO_4$ solution.</p>
+<h2 class="wp-block-heading" id="pereschet-kaltsiya-ca-v-oksid-kaltsiya-cao-2">Conversion of Calcium (Ca) to Calcium Oxide (CaO)</h2>
+<p>In geology and the building materials industry (cement, concrete, gypsum), it is customary to express the calcium content in the form of its oxide ( $CaO$ ).</p>
+<p>The conversion factor is calculated through the ratio of molar masses:</p>
+<p>$$K = \frac{M(CaO)}{M(Ca)} = \frac{40.08 + 16.00}{40.08} \approx 1.3992$$</p>
+<p>Thus, to obtain the result for the oxide:</p>
+<p>$$CaO (\%) = Ca (\%) \cdot 1.3992$$</p>
+<h2 class="wp-block-heading" id="spravochnaya-tablitsa-molyarnyh-mass-2">Molar Masses Reference Table</h2>
+<p>For independent calculations, you can use the following reference data:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Substance</strong></td><td><strong>Chemical formula</strong></td><td><strong>Molar mass (g/mol)</strong></td><td><strong>Equivalent weight (g/eq)</strong></td></tr></thead><tbody><tr><td>Calcium</td><td>$Ca$</td><td>40.078</td><td>20.039</td></tr><tr><td>Calcium oxide</td><td>$CaO$</td><td>56.077</td><td>28.039</td></tr><tr><td>Calcium carbonate</td><td>$CaCO_3$</td><td>100.087</td><td>50.044</td></tr><tr><td>Potassium permanganate</td><td>$KMnO_4$</td><td>158.034</td><td>31.606 (in acidic medium)</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="algoritm-provedeniya-analiza-2">Analysis algorithm</h2>
+<p>To obtain accurate data to enter into the calculator, you must follow the laboratory procedure:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Sample preparation.</strong> An accurate portion of the analyte (usually 0.1–0.5 g) is dissolved in acid and transferred to a volumetric flask.</li>
+<li><strong>Aliquot.</strong> For titration, take part of the solution (an aliquot) or titrate the entire volume if the sample was small.</li>
+<li><strong>Titration.</strong>
+<ul class="wp-block-list">
+<li><em>For EDTA:</em> Add an indicator (murexide or eriochrome black T) and a buffer solution. Titrate until the color changes from cherry to blue-violet.</li>
+<li><em>For $KMnO_4$ :</em> Precipitate calcium with ammonium oxalate, filter, wash the precipitate, dissolve it in $H_2SO_4$ and titrate the hot solution with permanganate until a faint pink color appears.</li>
+</ul>
+</li>
+<li><strong>Calculation.</strong> Enter the resulting volume ( $V$ ) and titrant concentration into the form above for instant results.</li>
+</ol>
+<h3 class="wp-block-heading" id="chastye-oshibki-pri-raschete-2">Frequent errors in calculations</h3>
+<ul class="wp-block-list">
+<li><strong>Confusion with units.</strong> Make sure the concentration is correct: for EDTA it is usually Molarity (M), for permanganate it is Normality (N).</li>
+<li><strong>Accounting for dilution.</strong> If you took an aliquot (for example, 20 ml from a 200 ml flask), the calculator result must be multiplied by the dilution factor (in this example, 10).</li>
+<li><strong>Ignoring blank samples.</strong> For particularly accurate analyses, from the volume used for titrating the sample, it is necessary to subtract the volume used for titration of the blank sample (distilled water with reagents).</li>
+</ul>
+</div>
+    </div>
+</body>
+</html>

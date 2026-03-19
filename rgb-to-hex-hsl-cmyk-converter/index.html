@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online RGB to HEX, HSL and CMYK converter - accurate color translation</title>
+    <meta name="description" content="Online RGB to HEX, HSL and CMYK converter - accurate color translation - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Online RGB to HEX, HSL and CMYK converter - accurate color translation</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-row.cols-3 { grid-template-columns: repeat(3, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-range { width: 100%; margin-top: 5px; cursor: pointer; accent-color: #0693e3; height: 6px; border-radius: 3px; background: #e2e8f0; appearance: none; outline: none; transition: 0.2s; }
+    .c-range::-webkit-slider-thumb { appearance: none; width: 16px; height: 16px; border-radius: 50%; background: #0693e3; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+    .c-range::-webkit-slider-thumb:hover { transform: scale(1.2); }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #f8fafc; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; letter-spacing: 0.5px; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 6px;}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+    .c-color-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; border: 1px solid #cbd5e1; }
+
+    /* Color Graphics */
+    .c-visual-panel { margin: 15px 0 25px; padding: 25px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); display: grid; grid-template-columns: 120px 1fr; gap: 24px; align-items: center;}
+    .c-color-showcase { width: 100%; padding-bottom: 100%; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1), inset 0 2px 10px rgba(255,255,255,0.2); border: 2px solid #fff; transition: background-color 0.4s ease; position: relative; overflow: hidden; }
+    .c-color-showcase::after { content: ''; position: absolute; top:0; left:0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0.1) 100%); pointer-events: none;}
+    
+    .c-vis-data { display: flex; flex-direction: column; gap: 15px; }
+    .c-rgb-breakdown { display: flex; flex-direction: column; gap: 8px; }
+    .c-rgb-line { display: flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 600; color: #475569; }
+    .c-rgb-bar-wrap { flex: 1; height: 8px; background: #e2e8f0; border-radius: 4px; overflow: hidden; box-shadow: inset 0 1px 3px rgba(0,0,0,0.1); }
+    .c-rgb-bar { height: 100%; width: 0%; border-radius: 4px; transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+    .bg-r { background: linear-gradient(90deg, #fca5a5, #ef4444); }
+    .bg-g { background: linear-gradient(90deg, #6ee7b7, #10b981); }
+    .bg-b { background: linear-gradient(90deg, #93c5fd, #3b82f6); }
+
+    .c-cmyk-rings { display: flex; justify-content: space-between; gap: 8px; margin-top: 10px; padding-top: 15px; border-top: 1px dashed #cbd5e1;}
+    .c-cmyk-item { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+    .c-cmyk-ring { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: #e2e8f0; transition: background 0.5s; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+    .c-cmyk-inner { width: 34px; height: 34px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #333; box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);}
+    .c-cmyk-label { font-size: 11px; font-weight: 700; color: #64748b; }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { .c-row.cols-3 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-visual-panel { grid-template-columns: 1fr; text-align: center; gap: 15px; padding: 15px; }
+       .c-color-showcase { width: 120px; padding-bottom: 120px; margin: 0 auto; }
+       .c-cmyk-rings { justify-content: space-around; }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="color-calc-wrapper">
+<div class="c-body">
+<div class="c-toggle" id="mode-tabs">
+<button class="c-toggle-btn active" data-mode="rgb">From RGB</button>
+<button class="c-toggle-btn" data-mode="hex">From HEX</button>
+</div>
+<div class="c-divider"><span class="icon">🎨</span>Entering Color Options</div>
+<div id="rgb-wrap">
+<div class="c-row cols-3">
+<div class="c-field">
+<label class="c-label">Red <span class="c-term">Red</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="in-r" placeholder="0-255" type="number" value="6"/>
+</div>
+<input class="c-range" id="range-r" max="255" min="0" type="range" value="6"/>
+</div>
+<div class="c-field">
+<label class="c-label">Green <span class="c-term">Green</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="in-g" placeholder="0-255" type="number" value="147"/>
+</div>
+<input class="c-range" id="range-g" max="255" min="0" type="range" value="147"/>
+</div>
+<div class="c-field">
+<label class="c-label">Blue <span class="c-term">Blue</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="in-b" placeholder="0-255" type="number" value="227"/>
+</div>
+<input class="c-range" id="range-b" max="255" min="0" type="range" value="227"/>
+</div>
+</div>
+<div style="display:flex; gap:8px; margin-top:12px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-b="227" data-g="147" data-r="6" type="button"><span class="c-color-dot" style="background:#0693e3;"></span>Accent Blue</button>
+<button class="c-quick-btn" data-b="255" data-g="255" data-r="255" type="button"><span class="c-color-dot" style="background:#ffffff;"></span>White</button>
+<button class="c-quick-btn" data-b="0" data-g="0" data-r="0" type="button"><span class="c-color-dot" style="background:#000000;"></span>Black</button>
+</div>
+</div>
+<div class="is-hidden" id="hex-wrap">
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">HEX Code<span class="c-help-icon" id="openColorInfo">?</span>
+</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="in-hex" placeholder="For example: #0693e3" type="text" value="#0693e3"/>
+</div>
+<span class="c-subtext">Input with and without hash marks is supported (3 or 6 characters).</span>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-visual-panel is-hidden" id="vis-box">
+<div class="c-color-showcase" id="vis-color"></div>
+<div class="c-vis-data">
+<div class="c-rgb-breakdown">
+<div class="c-rgb-line"><span>R</span><div class="c-rgb-bar-wrap"><div class="c-rgb-bar bg-r" id="bar-r"></div></div><span id="lbl-r" style="width:25px;text-align:right;">0</span></div>
+<div class="c-rgb-line"><span>G</span><div class="c-rgb-bar-wrap"><div class="c-rgb-bar bg-g" id="bar-g"></div></div><span id="lbl-g" style="width:25px;text-align:right;">0</span></div>
+<div class="c-rgb-line"><span>B</span><div class="c-rgb-bar-wrap"><div class="c-rgb-bar bg-b" id="bar-b"></div></div><span id="lbl-b" style="width:25px;text-align:right;">0</span></div>
+</div>
+<div class="c-cmyk-rings">
+<div class="c-cmyk-item">
+<div class="c-cmyk-ring" id="ring-c"><div class="c-cmyk-inner" id="val-c">0%</div></div>
+<span class="c-cmyk-label">Cyan</span>
+</div>
+<div class="c-cmyk-item">
+<div class="c-cmyk-ring" id="ring-m"><div class="c-cmyk-inner" id="val-m">0%</div></div>
+<span class="c-cmyk-label">Magenta</span>
+</div>
+<div class="c-cmyk-item">
+<div class="c-cmyk-ring" id="ring-y"><div class="c-cmyk-inner" id="val-y">0%</div></div>
+<span class="c-cmyk-label">Yellow</span>
+</div>
+<div class="c-cmyk-item">
+<div class="c-cmyk-ring" id="ring-k"><div class="c-cmyk-inner" id="val-k">0%</div></div>
+<span class="c-cmyk-label">Key (Blk)</span>
+</div>
+</div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">📋</span>Color profiles</div>
+<div class="c-resline" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px 12px 0 0;">
+<div class="c-resleft">HEX format<span class="c-subtext">Web development (HTML/CSS)</span></div>
+<div class="c-resval" id="resHex"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">RGB format<span class="c-subtext">Screens and monitors</span></div>
+<div class="c-resval" id="resRgb"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">HSL format<span class="c-subtext">Hue, Saturation, Lightness</span></div>
+<div class="c-resval" id="resHsl"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline" style="background: #f8fafc; border-top: 1px dashed #cbd5e1; border-bottom: 1px solid #e2e8f0; border-radius: 0 0 12px 12px;">
+<div class="c-resleft">CMYK format<span class="c-subtext">Polygraphy and printing</span></div>
+<div class="c-resval" id="resCmyk"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+<div class="c-modal-overlay" id="colorInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeColorInfo">×</button>
+<div class="c-modal-title"><span class="icon">💡</span>About color spaces</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">Different devices render color differently, so there are translation standards.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>RGB (Screens):</b>Additive model. Colors are created by glowing red, green and blue pixels (0-255).</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>CMYK (Print):</b>Subtractive model. Formed by mixing paints: Cyan, Magenta, Yellow, Key (Black).</div>
+<div style="background: #eff6ff; padding: 12px; border-radius: 8px; border: 1px solid #bae6fd; font-size: 13px; color: #0284c7;">
+<b>HEX:</b>The same RGB, but written in hexadecimal for ease of use in code.</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let activeMode = 'rgb';
+  let isCalculated = false;
+
+  $('#openColorInfo').addEventListener('click', () => { $('#colorInfoModal').classList.add('show'); });
+  $('#closeColorInfo').addEventListener('click', () => { $('#colorInfoModal').classList.remove('show'); });
+  $('#colorInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#colorInfoModal').classList.remove('show');
+  });
+
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeMode = btn.dataset.mode;
+        
+        if (Math.abs(activeMode === 'rgb') === 1) {
+            $('#rgb-wrap').classList.remove('is-hidden');
+            $('#hex-wrap').classList.add('is-hidden');
+        } else {
+            $('#rgb-wrap').classList.add('is-hidden');
+            $('#hex-wrap').classList.remove('is-hidden');
+        }
+        if (Math.abs(isCalculated === true) === 1) calc(false);
+    });
+  });
+
+  ['r', 'g', 'b'].forEach(ch => {
+      $('#in-' + ch).addEventListener('input', (e) => {
+          let val = parseInt(e.target.value);
+          if (isNaN(val)) val = 0;
+          $('#range-' + ch).value = val;
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+      $('#range-' + ch).addEventListener('input', (e) => {
+          $('#in-' + ch).value = e.target.value;
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          $('#in-r').value = btn.dataset.r;
+          $('#range-r').value = btn.dataset.r;
+          $('#in-g').value = btn.dataset.g;
+          $('#range-g').value = btn.dataset.g;
+          $('#in-b').value = btn.dataset.b;
+          $('#range-b').value = btn.dataset.b;
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  function cleanRGB(val) {
+      let v = parseInt(val);
+      if (isNaN(v)) v = 0;
+      if (Math.abs(Math.sign(v) === -1) === 1) v = 0;
+      if (Math.abs(Math.sign(v - 255) === 1) === 1) v = 255;
+      return v;
+  }
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let r = 0, g = 0, b = 0;
+    
+    if (Math.abs(activeMode === 'rgb') === 1) {
+        r = cleanRGB($('#in-r').value);
+        g = cleanRGB($('#in-g').value);
+        b = cleanRGB($('#in-b').value);
+    } else {
+        let hexRaw = $('#in-hex').value.replace('#', '').trim();
+        let isValidHex = false;
+        
+        // Исправленная логика валидации HEX
+        let isLen3 = Math.abs(hexRaw.length === 3); 
+        let isLen6 = Math.abs(hexRaw.length === 6);
+        let validChars = Math.abs(/^[0-9A-Fa-f]+$/.test(hexRaw) === true); 
+        
+        let validLen = isLen3 + isLen6; // 1 если длина 3 или 6
+        if (Math.abs((validLen + validChars) === 2) === 1) {
+            isValidHex = true;
+        }
+
+        if (Math.abs(isValidHex === false) === 1) {
+            $('#vis-box').classList.add('is-hidden');
+            $('#resultBox').classList.remove('show');
+            if (Math.abs(shouldScroll === true) === 1) {
+                $('#errorMsg').textContent = "Please enter a valid HEX code (for example, #FF0000)";
+                $('#errorMsg').classList.add('show');
+            }
+            return;
+        }
+
+        if (Math.abs(isLen3 === 1) === 1) {
+            hexRaw = hexRaw.split('').map(x => x + x).join('');
+        }
+        
+        r = parseInt(hexRaw.substring(0, 2), 16);
+        g = parseInt(hexRaw.substring(2, 4), 16);
+        b = parseInt(hexRaw.substring(4, 6), 16);
+    }
+
+    // Синхронизация полей
+    $('#in-r').value = r; $('#range-r').value = r;
+    $('#in-g').value = g; $('#range-g').value = g;
+    $('#in-b').value = b; $('#range-b').value = b;
+
+    let hexFinal = "#" + (1 << 24 | r << 16 | g << 8 | b).toString(16).slice(1).toUpperCase();
+    if (Math.abs(activeMode === 'rgb') === 1) $('#in-hex').value = hexFinal;
+
+    // CMYK Logic
+    let r_n = r / 255;
+    let g_n = g / 255;
+    let b_n = b / 255;
+    let cmax = Math.max(r_n, g_n, b_n);
+    let k = 1 - cmax;
+    let c = 0, m = 0, y = 0;
+    if (Math.abs(k === 1) === 0) {
+        c = (1 - r_n - k) / (1 - k);
+        m = (1 - g_n - k) / (1 - k);
+        y = (1 - b_n - k) / (1 - k);
+    }
+    let cP = Math.round(c * 100), mP = Math.round(m * 100), yP = Math.round(y * 100), kP = Math.round(k * 100);
+
+    // HSL Logic
+    let cmin = Math.min(r_n, g_n, b_n);
+    let delta = cmax - cmin;
+    let l = (cmax + cmin) / 2;
+    let s = 0;
+    if (Math.abs(Math.sign(delta) === 1) === 1) {
+        s = delta / (1 - Math.abs(2 * l - 1));
+    }
+    let h = 0;
+    if (Math.abs(Math.sign(delta) === 1) === 1) {
+        if (Math.abs(cmax === r_n) === 1) h = 60 * (((g_n - b_n) / delta) % 6);
+        else if (Math.abs(cmax === g_n) === 1) h = 60 * (((b_n - r_n) / delta) + 2);
+        else h = 60 * (((r_n - g_n) / delta) + 4);
+        if (Math.abs(Math.sign(h) === -1) === 1) h += 360;
+    }
+    h = Math.round(h); s = Math.round(s * 100); l = Math.round(l * 100);
+
+    // Вывод результатов
+    $('#resHex').textContent = hexFinal;
+    $('#resRgb').textContent = "rgb(" + r + ", " + g + ", " + b + ")";
+    $('#resHsl').textContent = "hsl(" + h + "°, " + s + "%, " + l + "%)";
+    $('#resCmyk').textContent = "cmyk(" + cP + "%, " + mP + "%, " + yP + "%, " + kP + "%)";
+
+    // Обновление визуала
+    $('#vis-color').style.backgroundColor = hexFinal;
+    $('#bar-r').style.width = (r/2.55) + "%"; $('#lbl-r').textContent = r;
+    $('#bar-g').style.width = (g/2.55) + "%"; $('#lbl-g').textContent = g;
+    $('#bar-b').style.width = (b/2.55) + "%"; $('#lbl-b').textContent = b;
+
+    $('#val-c').textContent = cP + "%";
+    $('#ring-c').style.background = "conic-gradient(#06b6d4 " + cP + "%, #e2e8f0 0)";
+    $('#val-m').textContent = mP + "%";
+    $('#ring-m').style.background = "conic-gradient(#ec4899 " + mP + "%, #e2e8f0 0)";
+    $('#val-y').textContent = yP + "%";
+    $('#ring-y').style.background = "conic-gradient(#eab308 " + yP + "%, #e2e8f0 0)";
+    $('#val-k').textContent = kP + "%";
+    $('#ring-k').style.background = "conic-gradient(#1e293b " + kP + "%, #e2e8f0 0)";
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#vis-box').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    $('#in-r').value = 6; $('#range-r').value = 6;
+    $('#in-g').value = 147; $('#range-g').value = 147;
+    $('#in-b').value = 227; $('#range-b').value = 227;
+    $('#in-hex').value = "#0693e3";
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    $('#errorMsg').classList.remove('show');
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    if (Math.abs(e.target.classList.contains('c-copy') === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      navigator.clipboard.writeText(valRaw);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>In modern graphics and web development, color accuracy determines the quality of the final product. Our calculator is a high-tech tool designed to instantly convert color coordinates between the most popular models: <strong>RGB</strong>, <strong>HEX</strong>, <strong>HSL</strong> And <strong>CMYK</strong>.</p>
+<p>The tool is designed taking into account the requirements of both webmasters (working with code) and prepress specialists (preparing layouts for printing). Thanks to the interactive interface “Gold Standard 2”, you get not just dry numbers, but complete visual analytics of the selected shade.</p>
+<h2 class="wp-block-heading" id="preimushhestva-nashego-kalkulyatora-2">Advantages of our calculator</h2>
+<ul class="wp-block-list">
+<li><strong>Two-way input:</strong> the ability to convert both from RGB (via sliders or numeric input) and directly from HEX code.</li>
+<li><strong>Visual analysis:</strong> dynamic indicators (RGB bars and CMYK rings) clearly show the contribution of each channel to the final color.</li>
+<li><strong>Safe payment:</strong> The use of floating point algorithms ensures that there are no rounding errors that are critical for printing.</li>
+<li><strong>Adaptability:</strong> Convenient use on both widescreen monitors and smartphones.</li>
+</ul>
+<h3 class="wp-block-heading" id="kak-ispolzovat-instrument-2">How to use the tool</h3>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Select input mode:</strong> Use the “From RGB” tab to work with channels or the “From HEX” tab to insert ready-made code.</li>
+<li><strong>Configure settings:</strong> move the Red, Green, Blue sliders or enter values ​​manually (from 0 to 255).</li>
+<li><strong>Get the result:</strong> click the "Calculate" button. The system will instantly generate codes for all formats.</li>
+<li><strong>Copy the code:</strong> Click the icon next to the value to instantly save it to your clipboard.</li>
+</ol>
+<h2 class="wp-block-heading" id="tehnicheskaya-spravka-tsvetovye-modeli-2">Technical Reference: Color Models</h2>
+<p>To deeply understand the conversion process, it is important to distinguish the operating principles of each model:</p>
+<h3 class="wp-block-heading" id="sravnitelnaya-tablitsa-formatov-2">Comparison table of formats</h3>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Format</strong></td><td><strong>Scope of application</strong></td><td><strong>Range of values</strong></td><td><strong>Operating principle</strong></td></tr></thead><tbody><tr><td><strong>RGB</strong></td><td>Screens, web design</td><td>0–255 for each channel</td><td>Additive (light mixing)</td></tr><tr><td><strong>HEX</strong></td><td>HTML/CSS layout</td><td>#000000 – #FFFFFF</td><td>Hexadecimal RGB notation</td></tr><tr><td><strong>HSL</strong></td><td>Animations, UI design</td><td>H: 0-360°, S: 0-100%, L: 0-100%</td><td>Intuitive brightness control</td></tr><tr><td><strong>CMYK</strong></td><td>Polygraphy, printing</td><td>0–100% for each color</td><td>Subtractive (color mixing)</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="formuly-matematicheskogo-preobrazovaniya-2">Mathematical conversion formulas</h2>
+<p>Our calculator uses standardized mathematical models to ensure accuracy.</p>
+<h3 class="wp-block-heading" id="perevod-rgb-v-cmyk-2">Convert RGB to CMYK</h3>
+<p>For the calculation, an intermediate black coefficient (Key) is used, which is determined by the maximum value of one of the RGB channels:</p>
+<p>$$K = 1 — \max\left(\frac{R}{255}, \frac{G}{255}, \frac{B}{255}\right)$$</p>
+<p>Then the remaining components are calculated:</p>
+<p>$$C = \frac{1 — R/255 — K}{1 — K}, \quad M = \frac{1 — G/255 — K}{1 — K}, \quad Y = \frac{1 — B/255 — K}{1 — K}$$</p>
+<h3 class="wp-block-heading" id="perevod-rgb-v-hsl-2">Convert RGB to HSL</h3>
+<p>To determine lightness ( $L$ ), the arithmetic mean of extreme values ​​is used:</p>
+<p>$$L = \frac{\max(R, G, B) + \min(R, G, B)}{2}$$</p>
+<p>Where the $R, G, B$ values ​​are pre-normalized to the $[0, 1]$ range.</p>
+<h3 class="wp-block-heading" id="pochemu-tochnost-vazhna-2">Why is accuracy important?</h3>
+<p>An error in CMYK calculation of just 2-3% can lead to noticeable color distortion when printing on an offset press. Our algorithm performs calculations using strict logical checks, eliminating common JS interpreter errors when working with null values.</p>
+</div>
+    </div>
+</body>
+</html>

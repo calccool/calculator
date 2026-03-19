@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cable and wire weight calculator by cross-section and length</title>
+    <meta name="description" content="Cable and wire weight calculator by cross-section and length - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Cable and wire weight calculator by cross-section and length</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (Золотой стандарт + Cable Visuals) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; position: relative; }
+    
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; margin-bottom: 4px;}
+    
+    .c-term { 
+        display: inline-flex; align-items: center; justify-content: center; 
+        border: 1px solid #ddd; border-radius: 6px; background: #fff; 
+        color: #555; height: 22px; padding: 0 8px; font-size: 12px; 
+        font-weight: normal; margin-left: 8px; 
+    }
+    
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; background:#fff; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 10px; } 
+    .c-input-suffix {
+        position: absolute; right: 32px; top: 50%; transform: translateY(-50%);
+        color: #888; font-size: 14px; pointer-events: none; font-weight: 500;
+    }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 10px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; font-size: 16px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+
+    .c-result { border:1px dashed #0693e3; border-radius:12px; padding:10px; background:#fff; margin-top: 20px; display:none; }
+    .c-result.show { display:grid; }
+    .c-resline { display:grid; grid-template-columns: 1fr auto 30px; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #0693e3; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; }
+    .c-resval { font-weight:700; font-size:18px; color:#0693e3; text-align:right;}
+    .c-subtext { display: block; font-size: 11px; color: #888; margin-top: 3px; }
+
+    .c-copy { 
+      width: 28px; height: 28px; border: none; background: #fff url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; 
+      background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; 
+      opacity: 0.6; transition: 0.2s;
+    }
+    .c-copy:hover { opacity: 1; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 10px; border-radius: 8px; margin-bottom: 10px; display: none; font-size: 14px; }
+    .c-error.show { display: block; }
+
+    .c-visual-box { text-align: center; margin-bottom: 20px; padding: 20px; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0; display:flex; flex-direction:column; align-items:center; }
+    
+    .c-tab-group { display: flex; background: #eee; padding: 4px; border-radius: 8px; margin-bottom: 15px; }
+    .c-tab { flex: 1; text-align: center; padding: 8px; cursor: pointer; border-radius: 6px; font-weight: 500; font-size: 14px; transition: 0.2s; }
+    .c-tab.active { background: #fff; color: #0693e3; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    
+    .is-hidden-opt { display:none; }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-body">
+<div class="c-visual-box">
+<div style="font-size:14px; font-weight:bold; margin-top:10px; color:#333;">Cable weight calculator</div>
+<div style="font-size:11px; color:#666;">VVGng, NYM, KG, VBBShv, etc.</div>
+</div>
+<div class="c-tab-group">
+<div class="c-tab active" data-mode="len-to-mass">Calculate weight</div>
+<div class="c-tab" data-mode="mass-to-len">Calculate length</div>
+</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Cable brand</label>
+<select class="c-select" id="selMark">
+<option value="VVGng">VVGng</option>
+<option value="VVGngLS">VVGng-LS</option>
+<option value="NYM">NYM</option>
+<option value="KG">KG</option>
+<option value="VBBShv">VBBShv</option>
+<option value="custom">Your option (kg/m)</option>
+</select>
+</div>
+<div class="c-field is-hidden-opt" id="grpCustom">
+<label class="c-label">Weight 1 meter</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="inCustomW" step="0.001" type="number" value="0.1"/>
+<span class="c-input-suffix">kg</span>
+</div>
+</div>
+</div>
+<div class="c-row" id="grpSpecs">
+<div class="c-field">
+<label class="c-label">Number of cores</label>
+<select class="c-select" id="selCores">
+</select>
+</div>
+<div class="c-field">
+<label class="c-label">Core cross-section<span class="c-term">mm²</span></label>
+<select class="c-select" id="selSection">
+</select>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label" id="lblInput">Cable length<span class="c-term">L</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="inVal" min="0" step="1" type="number" value="100"/>
+<span class="c-input-suffix" id="sufInput">m</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Drum type (Container)</label>
+<select class="c-select" id="selDrum">
+<option value="0">Without drum (Bay)</option>
+<option value="23">No. 8 (23 kg)</option>
+<option value="33">No. 10 (33 kg)</option>
+<option value="58">No. 12 (58 kg)</option>
+<option value="95">No. 14 (95 kg)</option>
+<option value="132">No. 16 (132 kg)</option>
+<option value="175">No. 18 (175 kg)</option>
+<option value="225">No. 20 (225 kg)</option>
+<option value="300">No. 22 (300 kg)</option>
+</select>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-result" id="resBox">
+<div class="c-resline" style="background:#e3f2fd;">
+<div class="c-resleft" id="lblResMain">Total Weight (Gross)<span class="c-subtext">Cable + Drum</span>
+</div>
+<div class="c-resval" id="resMain">0 kg</div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft" id="lblResNet">Cable Weight (Net)<span class="c-subtext">Net material weight</span>
+</div>
+<div class="c-resval" id="resNet">0 kg</div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Specific gravity<span class="c-subtext">For information</span>
+</div>
+<div class="c-resval" id="resSpec">0 kg/m</div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline" style="background:#fff3e0;">
+<div class="c-resleft">Tare weight (Drum)</div>
+<div class="c-resval" id="resDrum">0 kg</div>
+<button class="c-copy"></button>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (id) => wrap.querySelector('#'+id);
+  const errorEl = $('errorMsg');
+  const tabs = wrap.querySelectorAll('.c-tab');
+  
+  let calcMode = 'len-to-mass';
+
+  // --- DATABASE: Simplified weights (kg/m) based on prompt & standards ---
+  // Structure: Mark -> Cores -> Section -> Weight
+  const DB = {
+      'VVGng': {
+          '1': { '1.5': 0.045, '2.5': 0.058, '4': 0.081, '6': 0.103, '10': 0.146, '16': 0.218, '25': 0.321, '35': 0.417, '50': 0.571 },
+          '3': { '1.5': 0.134, '2.5': 0.170, '4': 0.225, '6': 0.268, '10': 0.387, '16': 0.590, '25': 0.863, '35': 1.234, '50': 1.693 },
+          '4': { '1.5': 0.165, '2.5': 0.213, '4': 0.282, '6': 0.366, '10': 0.497, '16': 0.780, '25': 1.210, '35': 1.606, '50': 2.218 },
+          '5': { '1.5': 0.179, '2.5': 0.241, '4': 0.352, '6': 0.458, '10': 0.689, '16': 0.981, '25': 1.524, '35': 2.011, '50': 2.792 }
+      },
+      'VVGngLS': {
+           '1': { '1.5': 0.050, '2.5': 0.063, '4': 0.088, '6': 0.111, '10': 0.156, '16': 0.231 },
+           '3': { '1.5': 0.184, '2.5': 0.254, '4': 0.369, '6': 0.460, '10': 0.635, '16': 0.865 },
+           '5': { '1.5': 0.264, '2.5': 0.339, '4': 0.491, '6': 0.624, '10': 0.817, '16': 1.107 }
+      },
+      'NYM': {
+          '2': { '1.5': 0.128, '2.5': 0.169 },
+          '3': { '1.5': 0.146, '2.5': 0.198, '4': 0.273 },
+          '5': { '1.5': 0.210, '2.5': 0.280, '4': 0.427, '6': 0.550, '10': 0.873, '16': 1.289 }
+      },
+      'KG': {
+          '1': { '10': 0.19, '16': 0.26, '25': 0.38, '35': 0.53, '50': 0.69 },
+          '2': { '1.5': 0.12, '2.5': 0.16, '4': 0.22 },
+          '3': { '1.5': 0.14, '2.5': 0.20, '4': 0.27, '6': 0.38, '10': 0.66, '16': 0.98 },
+          '4': { '2.5': 0.24, '4': 0.35, '6': 0.47, '10': 0.82, '16': 1.11, '25': 1.75 },
+          '5': { '1.5': 0.21, '2.5': 0.31, '4': 0.43, '6': 0.60, '10': 1.05, '16': 1.47 }
+      },
+      'VBBShv': {
+          '3': { '1.5': 0.252, '2.5': 0.298, '4': 0.394, '6': 0.606, '10': 0.761, '16': 1.056 },
+          '4': { '1.5': 0.197, '2.5': 0.347, '4': 0.466, '6': 0.715, '10': 0.912, '16': 1.170 },
+          '5': { '1.5': 0.365, '2.5': 0.440, '4': 0.584, '6': 0.715, '10': 0.943, '16': 1.315 }
+      }
+  };
+
+  // Logic to update dropdowns
+  function updateSpecs() {
+      const mark = $('selMark').value;
+      
+      if (mark === 'custom') {
+          $('grpSpecs').classList.add('is-hidden-opt');
+          $('grpSpecs').classList.remove('c-row'); // remove grid layout if hidden
+          $('grpSpecs').style.display = 'none';
+          $('grpCustom').classList.remove('is-hidden-opt');
+          $('grpCustom').style.display = 'flex';
+          return;
+      } else {
+          $('grpSpecs').classList.remove('is-hidden-opt');
+          $('grpSpecs').classList.add('c-row');
+          $('grpSpecs').style.display = 'grid';
+          $('grpCustom').classList.add('is-hidden-opt');
+          $('grpCustom').style.display = 'none';
+      }
+      
+      const coresData = DB[mark];
+      const selCores = $('selCores');
+      const selSection = $('selSection');
+      
+      // Save current selections if possible
+      const prevCore = selCores.value;
+      
+      // Populate Cores
+      selCores.innerHTML = '';
+      for (const core in coresData) {
+          const opt = document.createElement('option');
+          opt.value = core;
+          opt.textContent = core;
+          selCores.appendChild(opt);
+      }
+      
+      // Restore core selection or default
+      if (prevCore && coresData[prevCore]) {
+          selCores.value = prevCore;
+      }
+      
+      updateSections(); // Trigger section update
+  }
+  
+  function updateSections() {
+      const mark = $('selMark').value;
+      if (mark === 'custom') return;
+      
+      const cores = $('selCores').value;
+      const sectionData = DB[mark][cores];
+      const selSection = $('selSection');
+      
+      const prevSec = selSection.value;
+      selSection.innerHTML = '';
+      
+      for (const sec in sectionData) {
+          const opt = document.createElement('option');
+          opt.value = sec;
+          opt.textContent = sec;
+          selSection.appendChild(opt);
+      }
+      
+      // Restore section or default
+      if (prevSec && sectionData[prevSec]) {
+          selSection.value = prevSec;
+      }
+  }
+
+  $('selMark').addEventListener('change', updateSpecs);
+  $('selCores').addEventListener('change', updateSections);
+  
+  // Init
+  updateSpecs();
+
+  // Tab Logic
+  tabs.forEach(t => {
+      t.addEventListener('click', () => {
+          tabs.forEach(x => x.classList.remove('active'));
+          t.classList.add('active');
+          calcMode = t.getAttribute('data-mode');
+          
+          if (calcMode === 'len-to-mass') {
+              $('lblInput').innerHTML = 'Cable length <span class="c-term">L</span>';
+              $('sufInput').textContent = "m";
+              $('lblResMain').innerHTML = 'Total weight (Gross)<span class="c-subtext">Cable + Drum</span>';
+              $('lblResNet').innerHTML = 'Cable weight (Net)<span class="c-subtext">Net material weight</span>';
+              $('inVal').value = 100;
+          } else {
+              $('lblInput').innerHTML = 'Total cable weight <span class="c-term">M</span>';
+              $('sufInput').textContent = "kg";
+              $('lblResMain').innerHTML = 'Total cable length<span class="c-subtext">Approximate footage</span>';
+              $('lblResNet').innerHTML = 'Weight without drum<span class="c-subtext">For reference</span>';
+              $('inVal').value = 50;
+          }
+          $('resBox').classList.remove('show');
+      });
+  });
+
+  function calculate() {
+      errorEl.classList.remove('show');
+      
+      const mark = $('selMark').value;
+      const drumW = parseFloat($('selDrum').value);
+      const val = parseFloat($('inVal').value);
+      
+      if (isNaN(val) || Math.sign(val) !== 1) {
+          errorEl.textContent = "Enter a positive value.";
+          errorEl.classList.add('show'); return;
+      }
+      
+      // Determine Specific Weight
+      let specW = 0;
+      if (mark === 'custom') {
+          specW = parseFloat($('inCustomW').value);
+      } else {
+          const cores = $('selCores').value;
+          const sec = $('selSection').value;
+          if (DB[mark] && DB[mark][cores]) {
+              specW = DB[mark][cores][sec];
+          }
+      }
+      
+      if (!specW || isNaN(specW)) {
+           errorEl.textContent = "Data error for selected cable.";
+           errorEl.classList.add('show'); return;
+      }
+      
+      let cableWeight = 0;
+      let cableLen = 0;
+      let totalWeight = 0;
+      
+      if (calcMode === 'len-to-mass') {
+          // L -> W
+          cableLen = val;
+          cableWeight = cableLen * specW;
+          totalWeight = cableWeight + drumW;
+          
+          $('resMain').textContent = totalWeight.toFixed(1) + "kg";
+          $('resNet').textContent = cableWeight.toFixed(1) + "kg";
+      } else {
+          // W -> L
+          // Input val is Total Weight (presumably Net if user weighs cable, but usually "Gross" is weighed)
+          // Let's assume input is NET weight of cable if drum is 0, or GROSS if drum is selected.           // Logic: User puts scale value. If drum selected, we subtract drum.                      let netInput = val;           if (Math.sign(drumW) === 1) {               netInput = val - drumW;           }                      if (Math.sign(netInput) === -1) {               errorEl.textContent = "Tare weight is greater than total weight!";               errorEl.classList.add('show'); return;
+          }
+          
+          cableLen = netInput / specW;
+          
+          $('resMain').textContent = cableLen.toFixed(1) + " m";           $('resNet').textContent = netInput.toFixed(1) + " kg (Net)";       }        // Output Common       $('resSpec').textContent = specW.toFixed(3) + " kg/m";       $('resDrum').textContent = drumW + "kg";        $('resBox').classList.add('show');
+      $('resBox').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  $('calcBtn').addEventListener('click', calculate);
+  
+  $('resetBtn').addEventListener('click', () => {
+      $('inVal').value = (calcMode === 'len-to-mass') ? '100' : '50';
+      $('selDrum').value = '0';
+      $('resBox').classList.remove('show');
+      errorEl.classList.remove('show');
+  });
+
+  wrap.addEventListener('click', (e) => {
+      if (e.target.classList.contains('c-copy')) {
+          const val = e.target.previousElementSibling.textContent;
+          navigator.clipboard.writeText(val);
+          e.target.style.opacity = '1';
+          setTimeout(() => e.target.style.opacity = '0.6', 200);
+      }
+  });
+
+});
+</script>
+
+        <div class="post-content">
+<p>In construction and electrical installations, accurate calculation of the weight of cable products is critical for logistics. You can’t just order a truck “by eye” - overloading can lead to fines, and the wrong choice of hangers can lead to broken lines. Our tool allows you to instantly determine the weight of the cable (net) and the total weight with the drum (gross), as well as solve the inverse problem - calculate the length of the remainder in the warehouse, knowing its weight.</p>
+<h2 class="wp-block-heading" id="zachem-schitat-ves-kabelya-2">Why count cable weight?</h2>
+<p>Cable and wire products (CPP) have a high density due to the copper and lead content. Even a small coil of power cable can weigh more than 100 kg. Preliminary calculation is required for:</p>
+<ul class="wp-block-list">
+<li><strong>Logistics:</strong> Selection of vehicles with appropriate carrying capacity.</li>
+<li><strong>Installation:</strong> Calculation of loads on cable trays, overpasses and load-bearing cables.</li>
+<li><strong>Warehouse accounting:</strong> Quick inventory of residues without unwinding drums (through weighing).</li>
+</ul>
+<h2 class="wp-block-heading" id="formula-rascheta-massy-kabelya-2">Formula for calculating cable mass</h2>
+<p>For theoretical calculations, a basic formula is used based on the specific gravity of the materials. However, in reality, a cable is a complex composite structure (core, insulation, armor, shell).</p>
+<p>A simplified mathematical model looks like this:</p>
+<p>$$M = L \times m_{ud}$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $M$ - total cable weight (kg).</li>
+<li> $L$ - line length (m).</li>
+<li> $m_{ud}$ - specific weight of one meter of cable (kg/m).</li>
+</ul>
+<p>If it is necessary to take into account the weight of the container (drum), the formula takes the form:</p>
+<p>$$M_{total} = (L \times m_{ud}) + M_{tare}$$</p>
+<p>Where $M_{tare}$ is the weight of the wooden drum according to GOST 5151-79.</p>
+<h3 class="wp-block-heading" id="raschet-secheniya-i-obema-medi-2">Calculation of cross-section and volume of copper</h3>
+<p>Sometimes it is necessary to calculate the mass of pure metal (for example, to hand over scrap or calculate resistance). The mass of copper is calculated through density ( $\rho \approx 8.92$ g/cm³) and volume:</p>
+<p>$$M_{Cu} = N \times S \times L \times \rho$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $N$ - number of cores.</li>
+<li> $S$ - cross-section of one core (mm²).</li>
+</ul>
+<h2 class="wp-block-heading" id="tipy-kabelej-i-osobennosti-ih-vesa-2">Types of cables and features of their weight</h2>
+<p>Different brands of cable have radically different weights with the same cross-section of current-carrying conductors. This is due to the type of insulation and the presence of armor.</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>VVGng / VVGng-LS:</strong> The most popular power cable with PVC insulation. Relatively lightweight, used for internal laying.</li>
+<li><strong>NYM:</strong> Analogous to VVG, but with chalk-filled filler between the cores, which adds about 10-15% to the weight and makes the cable round in cross-section.</li>
+<li><strong>KG (Flexible Cable):</strong> Has heavy rubber insulation that is UV and frost resistant. Significantly heavier than PVC analogues.</li>
+<li><strong>VBBShv (Armored):</strong> The heaviest type. Contains two steel strips under the outer shell to protect against mechanical damage (trenching).</li>
+</ol>
+<h2 class="wp-block-heading" id="spravochnaya-tablitsa-vesa-populyarnyh-marok-2">Weight reference table for popular brands</h2>
+<p>Below are the average mass values ​​of 1 kilometer of cable for popular sections. Data may vary slightly depending on the manufacturer (TU or GOST).</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Brand and section</strong></td><td><strong>Weight 1 km (kg)</strong></td><td><strong>Weight 1 m (kg)</strong></td></tr></thead><tbody><tr><td><strong>VVGng 3x1.5</strong></td><td>134</td><td>0.134</td></tr><tr><td><strong>VVGng 3x2.5</strong></td><td>158</td><td>0.158</td></tr><tr><td><strong>VVGng 3x4.0</strong></td><td>225</td><td>0.225</td></tr><tr><td><strong>VVGng 3x6.0</strong></td><td>268</td><td>0.268</td></tr><tr><td><strong>VVGng 5x2.5</strong></td><td>241</td><td>0.241</td></tr><tr><td><strong>VVGng 5x4.0</strong></td><td>352</td><td>0.352</td></tr><tr><td><strong>VVGng 5x6.0</strong></td><td>458</td><td>0.458</td></tr><tr><td><strong>VVGng 5x10.0</strong></td><td>689</td><td>0.689</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="ves-kabelnyh-barabanov-tara-2">Weight of cable drums (Container)</h2>
+<p>When transporting large quantities, the weight of the wooden drum can constitute a significant part of the load. Our calculator automatically takes these values ​​into account.</p>
+<p>Reference data according to GOST 5151-79 (for drums made of edged boards):</p>
+<ul class="wp-block-list">
+<li><strong>№ 8:</strong> ~23 kg</li>
+<li><strong>№ 10:</strong> ~33 kg</li>
+<li><strong>№ 12:</strong> ~58 kg</li>
+<li><strong>№ 14:</strong> ~95 kg</li>
+<li><strong>№ 16:</strong> ~132 kg</li>
+<li><strong>№ 18:</strong> ~175 kg</li>
+<li><strong>№ 20:</strong> ~225 kg</li>
+<li><strong>№ 22:</strong> ~300 kg</li>
+</ul>
+<h3 class="wp-block-heading" id="kak-uznat-dlinu-kabelya-po-vesu-2">How to find out the cable length by weight?</h3>
+<p>This problem is often solved by storekeepers when taking inventory. To avoid unwinding the drum, it is weighed as a whole.</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li>The weight of the empty drum is subtracted from the resulting weight (usually indicated on the “cheek” of the drum or taken from the table above).</li>
+<li>The resulting “net” weight is divided by the specific weight of one meter of a given cable brand.</li>
+</ol>
+<p>$$L = \frac{M_{total} — M_{tare}}{m_{ud}}$$</p>
+<p>Our calculator supports this mode of operation: simply switch the tab to “Calculate length” and enter the known weight.</p>
+</div>
+    </div>
+</body>
+</html>

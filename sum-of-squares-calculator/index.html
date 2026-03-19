@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of squares calculator for consecutive numbers (1 to n)</title>
+    <meta name="description" content="Sum of squares calculator for consecutive numbers (1 to n) - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Sum of squares calculator for consecutive numbers (1 to n)</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (Body Shape Template) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(220px, 1fr)); }
+    
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    
+    .c-input, .c-select { width:100%; padding:12px 14px; border:1px solid #ccc; border-radius:8px; font-size:14px; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 45px; } 
+    .c-input-suffix {
+        position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+        color: #888; font-size: 14px; pointer-events: none; font-weight: 500;
+    }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 10px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+
+    .c-divider { 
+        display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; 
+        font-weight: 700; color: #444; font-size: 15px; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; }
+
+    .c-result { border:1px dashed #4caf50; border-radius:10px; padding:10px; background:#fff; display:none; }
+    .c-result.show { display:grid; }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #4caf50; grid-template-columns: 1fr auto 30px; }
+    .c-resline:last-child { border-bottom:none; }
+    
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 4px; }
+    
+    .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden; padding: 3px;
+      background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+      background-repeat:no-repeat; background-position:center; background-size:20px 20px; opacity: 0.6;}
+    .c-copy:hover { opacity: 1; }
+
+    .c-error { color: #d32f2f; background: #ffebee; padding: 10px; border-radius: 8px; margin-bottom: 10px; display: none; font-size: 14px; }
+    .c-error.show { display: block; }
+    .is-hidden { display:none !important; }
+
+    /* SVG Diagram */
+    .c-diagram-box { text-align: center; margin-bottom: 20px; padding: 10px; background: #fafafa; border-radius: 8px; border: 1px solid #eee; }
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-diagram-box">
+<svg style="max-width:100%; height:auto;" viewbox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#ff9800" height="20" stroke="#fff" width="20" x="140" y="20"></rect>
+<rect fill="#0693e3" height="20" stroke="#fff" width="20" x="130" y="42"></rect>
+<rect fill="#0693e3" height="20" stroke="#fff" width="20" x="150" y="42"></rect>
+<rect fill="#4caf50" height="20" stroke="#fff" width="20" x="120" y="64"></rect>
+<rect fill="#4caf50" height="20" stroke="#fff" width="20" x="140" y="64"></rect>
+<rect fill="#4caf50" height="20" stroke="#fff" width="20" x="160" y="64"></rect>
+<text fill="#555" font-size="12" text-anchor="middle" x="150" y="110">Sum of squares = Pyramid number</text>
+</svg>
+</div>
+<div class="c-divider"><span class="icon">🔢</span>Number range</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">From (Start)</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="start" min="1" step="1" type="number" value="1"/>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Until (End)</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="end" min="1" step="1" type="number" value="5"/>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div aria-live="polite" class="c-result" id="resultBox">
+<div class="c-resline" style="border-bottom:none;">
+<div class="c-resleft">Sum of squares (S)</div>
+<div class="c-resval" id="resSum" style="font-size:24px; color:#0693e3;"></div>
+<button class="c-copy" id="copySum"></button>
+</div>
+<div class="c-resline" style="background:#f9f9f9; display:block;">
+<div style="font-size:12px; color:#888; margin-bottom:5px;">Series of numbers:</div>
+<div class="c-resval" id="resSeq" style="font-size:14px; font-weight:400; text-align:left; word-break:break-all;"></div>
+</div>
+<div class="c-divider"><span class="icon">📐</span>Formula</div>
+<div class="c-resline">
+<div class="c-resleft">Calculation for N =<span id="valN"></span></div>
+<div class="c-resval" id="resFormula" style="font-size:13px; font-weight:400;"></div>
+<button class="c-copy" id="copyForm"></button>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика =====
+  const $ = (s) => wrap.querySelector(s);
+  const resBox = $('#resultBox');
+  const errorEl = $('#errorMsg');
+  
+  const inputs = {
+      s: $('#start'),
+      e: $('#end')
+  };
+  
+  const outputs = {
+      sum: $('#resSum'),
+      seq: $('#resSeq'),
+      form: $('#resFormula'),
+      n: $('#valN')
+  };
+
+  function num(el){ const n = parseInt(el.value); return isNaN(n) ? 0 : n; }
+  
+  // Функция суммы квадратов от 1 до n: n(n+1)(2n+1)/6
+  function sumSq(n) {
+      if (Math.sign(n) !== 1) return 0;
+      return (n * (n + 1) * (2 * n + 1)) / 6;
+  }
+
+  function calc() {
+    errorEl.classList.remove('show');
+    
+    const Start = num(inputs.s);
+    const End = num(inputs.e);
+    
+    if (Math.sign(Start) !== 1 || Math.sign(End) !== 1) {
+        errorEl.textContent = "Numbers must be natural numbers (>= 1)"; 
+        errorEl.classList.add('show'); resBox.classList.remove('show'); return; 
+    }
+    
+    if (Math.sign(Start - End) === 1) { // Start > End
+        errorEl.textContent = "The start of the range cannot be greater than the end"; 
+        errorEl.classList.add('show'); resBox.classList.remove('show'); return; 
+    }
+
+    // Расчет
+    const totalSum = sumSq(End) - sumSq(Start - 1);
+    
+    outputs.sum.textContent = totalSum.toLocaleString();
+
+    // Генерация строки ряда (БЕЗ использования &&, ||, <, >)
+    let seq = [];
+    const limit = 5;
+    
+    let i = Start;
+    let count = 0;
+    
+    // Эмуляция цикла for
+    while (Math.sign(End - i) !== -1) { // пока i <= End
+        
+        if (Math.sign(limit - count) === 1) { 
+            // Первые 5 элементов
+            seq.push(i + "²");
+        } else {
+            // Элементы, не вошедшие в лимит
+            if (i === End) {
+                // Если это последний элемент, добавляем его
+                seq.push(i + "²");
+            } else {
+                // Если это промежуточный элемент
+                // Добавляем "..." только один раз
+                if (seq[seq.length - 1] !== "...") {
+                     seq.push("...");
+                }
+            }
+        }
+        
+        i++;
+        count++;
+    }
+    
+    outputs.seq.textContent = seq.join(" + ") + " = " + totalSum;
+
+    // Формула
+    outputs.n.textContent = End;
+    let formulaText = "";
+    if (Start === 1) {
+        formulaText = `(${End} × ${End + 1} × ${2 * End + 1}) / 6`;
+    } else {
+        formulaText = `S(${End}) - S(${Start - 1})`;
+    }
+    outputs.form.textContent = formulaText;
+
+    resBox.classList.add('show');
+  }
+
+  // Слушатели
+  $('#calcBtn').addEventListener('click', calc);
+  $('#resetBtn').addEventListener('click', () => {
+    inputs.s.value = '1';
+    inputs.e.value = '5';
+    resBox.classList.remove('show');
+    errorEl.classList.remove('show');
+  });
+
+  // Копирование
+  wrap.addEventListener('click', (e) => {
+    if (e.target.classList.contains('c-copy')) {
+      const parent = e.target.parentElement;
+      const val = parent.querySelector('.c-resval').textContent;
+      if (val) navigator.clipboard.writeText(val);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p><strong>Sum of consecutive squares</strong> is a classic problem from number theory and algebra, which is often found in statistics (when calculating variance) and physics (moments of inertia). Our calculator allows you to instantly find the sum of squares of natural numbers not only from 1 to $n$ , but also for any arbitrary range.</p>
+<h2 class="wp-block-heading" id="formula-summy-kvadratov-2">Sum of squares formula</h2>
+<p>To calculate the sum of squares of the first $n$ natural numbers, it is not necessary to add them manually. There is a proven formula (known as the square pyramid formula):</p>
+<p>$$S_n = \frac{n(n + 1)(2n + 1)}{6}$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li><strong>$S_n$</strong> — the required sum of the series $1^2 + 2^2 + 3^2 + \dots + n^2$ ;</li>
+<li><strong>$n$</strong> is the final number of the sequence.</li>
+</ul>
+<h2 class="wp-block-heading" id="kak-schitat-summu-v-diapazone-2">How to calculate the amount in a range?</h2>
+<p>If you need to find the sum of squares not from one, but, for example, from 5 to 10 (that is, $5^2 + 6^2 + \dots + 10^2$ ), our calculator uses the difference method:</p>
+<p>$$S_{(a \dots b)} = S_b — S_{a-1}$$</p>
+<p>We take the total sum from 1 to the end of the range ( $b$ ) and subtract from it the sum from 1 to the number before the start ( $a-1$ ).</p>
+<h2 class="wp-block-heading" id="tablitsa-znachenij-pervye-10-chisel-2">Table of values ​​(first 10 numbers)</h2>
+<p>Often users look for ready-made solutions for small numbers. Below is a table of sums of squares for the first ten values ​​of $n$ .</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Number (n)</strong></td><td><strong>Row of squares</strong></td><td><strong>Amount (Sn​)</strong></td></tr></thead><tbody><tr><td><strong>1</strong></td><td>$1^2$</td><td>1</td></tr><tr><td><strong>2</strong></td><td>$1^2 + 2^2$</td><td>5</td></tr><tr><td><strong>3</strong></td><td>$1^2 + 2^2 + 3^2$</td><td>14</td></tr><tr><td><strong>4</strong></td><td>$1^2 + \dots + 4^2$</td><td>30</td></tr><tr><td><strong>5</strong></td><td>$1^2 + \dots + 5^2$</td><td>55</td></tr><tr><td><strong>6</strong></td><td>$1^2 + \dots + 6^2$</td><td>91</td></tr><tr><td><strong>7</strong></td><td>$1^2 + \dots + 7^2$</td><td>140</td></tr><tr><td><strong>8</strong></td><td>$1^2 + \dots + 8^2$</td><td>204</td></tr><tr><td><strong>9</strong></td><td>$1^2 + \dots + 9^2$</td><td>285</td></tr><tr><td><strong>10</strong></td><td>$1^2 + \dots + 10^2$</td><td>385</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="geometricheskij-smysl-piramidalnye-chisla-2">Geometric Meaning: Pyramid Numbers</h2>
+<p>Why is the result of this sum called a square pyramidal number?</p>
+<p>Imagine that you have balls. If you lay out a $3 \times 3$ square (9 balls), put a $2 \times 2$ square (4 balls) on top of it, and 1 ball on the very top, you get a pyramid.</p>
+<p>The total number of balls in such a pyramid of height $n$ layers will be equal to the sum of squares from 1 to $n$ .</p>
+<h2 class="wp-block-heading" id="gde-eto-primenyaetsya-2">Where is this applied?</h2>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Mathematical statistics:</strong> When calculating the standard deviation and sample variance, the sum of squared deviations is used.</li>
+<li><strong>Crystallography:</strong> When calculating the packing of atoms in crystal lattices.</li>
+<li><strong>Analysis of algorithms:</strong> To evaluate the complexity of nested loops in programming.</li>
+</ol>
+</div>
+    </div>
+</body>
+</html>

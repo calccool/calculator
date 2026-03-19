@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time difference calculator for scheduling calls</title>
+    <meta name="description" content="Time difference calculator for scheduling calls - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Time difference calculator for scheduling calls</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-receipt-wrap { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 15px; position: relative; overflow: hidden; }
+    .c-receipt-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: repeating-linear-gradient(45deg, #0693e3, #0693e3 10px, #38bdf8 10px, #38bdf8 20px); }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #fff; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #eff6ff; border: 1px solid #bae6fd; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05); }
+    .c-highlight-line:hover { background: #e0f2fe; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* Advanced Timeline Visuals */
+    .c-sync-box { margin: 15px 0 25px; padding: 25px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); }
+    .c-sync-title { font-weight: 700; color: #0f172a; font-size: 15px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    
+    .c-timeline-wrap { position: relative; margin-bottom: 25px; }
+    .c-timeline-info { display: flex; justify-content: space-between; font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 8px; }
+    .c-timeline-track { height: 16px; border-radius: 8px; position: relative; border: 1px solid #94a3b8; box-shadow: inset 0 2px 6px rgba(0,0,0,0.15); background: linear-gradient(90deg, #1e293b 0%, #1e293b 25%, #7dd3fc 35%, #fde047 50%, #7dd3fc 65%, #1e293b 75%, #1e293b 100%); background-size: 200% 100%; transition: background-position 0.5s ease; }
+    .c-timeline-marker { position: absolute; top: -6px; bottom: -6px; width: 4px; background: #ef4444; border-radius: 2px; box-shadow: 0 0 8px rgba(239, 68, 68, 0.6); transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1); margin-left: -2px; z-index: 2;}
+    .c-timeline-marker::after { content: ''; position: absolute; top: -10px; left: 50%; transform: translateX(-50%); border-width: 6px; border-style: solid; border-color: #ef4444 transparent transparent transparent; }
+    
+    .c-status-badge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 8px; font-size: 13px; font-weight: 700; background: #fff; border: 1px solid #e2e8f0; }
+    .c-status-badge.good { background: #ecfdf5; color: #059669; border-color: #a7f3d0; }
+    .c-status-badge.bad { background: #fef2f2; color: #dc2626; border-color: #fecaca; }
+    .c-status-badge.okay { background: #fffbeb; color: #d97706; border-color: #fde68a; }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-sync-box { padding: 15px; }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="timezone-calc-wrapper">
+<div class="c-body">
+<div class="c-toggle" id="mode-tabs">
+<button class="c-toggle-btn active" data-mode="exact">Planning for time</button>
+<button class="c-toggle-btn" data-mode="now">Compare "Now"</button>
+</div>
+<div class="c-divider"><span class="icon">📍</span>Your side (Organizer)</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Time zone<span class="c-term">Departure city</span></label>
+<select class="c-select" id="base-tz">
+<option selected="" value="3">Moscow, Minsk, Istanbul (UTC+3)</option>
+<option value="4">Samara, Baku, Tbilisi (UTC+4)</option>
+<option value="5">Ekaterinburg, Tashkent (UTC+5)</option>
+<option value="6">Omsk, Almaty (UTC+6)</option>
+<option value="7">Krasnoyarsk, Bangkok (UTC+7)</option>
+<option value="2">Kaliningrad, Kyiv, Athens (UTC+2)</option>
+<option value="1">Berlin, Paris, Rome (UTC+1)</option>
+<option value="0">London, Lisbon (UTC+0)</option>
+<option value="-5">New York, Miami, Toronto (UTC-5)</option>
+<option value="-8">Los Angeles, Vancouver (UTC-8)</option>
+</select>
+</div>
+<div class="c-field" id="time-input-wrap">
+<label class="c-label">Planned time<span class="c-term">Local</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="base-time" type="time" value="12:00"/>
+</div>
+<div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-val="09:00" type="button">Start of the day (09:00)</button>
+<button class="c-quick-btn" data-val="18:00" type="button">End of the day (18:00)</button>
+</div>
+</div>
+</div>
+<div class="c-divider" style="margin-top: 15px;"><span class="icon">🌍</span>Interlocutor's side (Recipient)</div>
+<div class="c-row">
+<div class="c-field" style="grid-column: 1 / -1;">
+<label class="c-label">Time zone<span class="c-help-icon" id="openTzInfo">?</span>
+</label>
+<select class="c-select" id="target-tz">
+<option value="3">Moscow, Minsk, Istanbul (UTC+3)</option>
+<option value="4">Samara, Baku, Tbilisi (UTC+4)</option>
+<option value="5">Ekaterinburg, Tashkent (UTC+5)</option>
+<option value="6">Omsk, Almaty (UTC+6)</option>
+<option value="7">Krasnoyarsk, Bangkok (UTC+7)</option>
+<option value="2">Kaliningrad, Kyiv, Athens (UTC+2)</option>
+<option value="1">Berlin, Paris, Rome (UTC+1)</option>
+<option value="0">London, Lisbon (UTC+0)</option>
+<option selected="" value="-5">New York, Miami, Toronto (UTC-5)</option>
+<option value="-8">Los Angeles, Vancouver (UTC-8)</option>
+</select>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-sync-box is-hidden" id="vis-box">
+<div class="c-sync-title"><span class="icon">📈</span>Daylight synchronization</div>
+<div class="c-timeline-wrap">
+<div class="c-timeline-info">
+<span id="vis-base-label">You (UTC+0)</span>
+<span id="vis-base-time" style="color: #0693e3;">00:00</span>
+</div>
+<div class="c-timeline-track" id="track-base">
+<div class="c-timeline-marker" id="marker-base"></div>
+</div>
+</div>
+<div class="c-timeline-wrap">
+<div class="c-timeline-info">
+<span id="vis-target-label">Interlocutor (UTC+0)</span>
+<span id="vis-target-time" style="color: #0693e3;">00:00</span>
+</div>
+<div class="c-timeline-track" id="track-target">
+<div class="c-timeline-marker" id="marker-target"></div>
+</div>
+</div>
+<div style="text-align: center; margin-top: 20px;">
+<div class="c-status-badge" id="sync-status"></div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">⏰</span>Final call parameters</div>
+<div class="c-receipt-wrap">
+<div class="c-resline">
+<div class="c-resleft">Your time<span class="c-subtext" id="resBaseDesc">Organizer</span></div>
+<div class="c-resval" id="resBaseStr"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline c-highlight-line">
+<div class="c-resleft">Interlocutor's time<span class="c-subtext" id="resTargetDesc">Participant</span></div>
+<div class="c-resval" id="resTargetStr"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline" style="border-bottom: none;">
+<div class="c-resleft">Time difference<span class="c-subtext">Clock offset</span></div>
+<div class="c-resval" id="resDiff" style="font-size: 16px; color: #475569;"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+</div>
+<div class="c-modal-overlay" id="tzInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeTzInfo">×</button>
+<div class="c-modal-title"><span class="icon">📖</span>Golden rules of calling</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">When scheduling international calls, please refer to both parties' standard business hours.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>Ideal time (Overlap):</b><br/>Hours when both participants have working hours (from 09:00 to 18:00).</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b;">
+<b>Compromise:</b><br/>If the difference is more than 8 hours, someone will have to call early in the morning or late in the evening. Check comfort individually.</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let activeMode = 'exact';
+  let isCalculated = false;
+
+  $('#openTzInfo').addEventListener('click', () => { $('#tzInfoModal').classList.add('show'); });
+  $('#closeTzInfo').addEventListener('click', () => { $('#tzInfoModal').classList.remove('show'); });
+  $('#tzInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#tzInfoModal').classList.remove('show');
+  });
+
+  function updateModeUI() {
+      if (Math.abs(activeMode === 'exact') === 1) {
+          $('#time-input-wrap').classList.remove('is-hidden');
+      } else {
+          $('#time-input-wrap').classList.add('is-hidden');
+      }
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  }
+
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeMode = btn.dataset.mode;
+        updateModeUI();
+    });
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          $('#base-time').value = btn.dataset.val;           if (Math.abs(isCalculated === true) === 1) calc(false);       });   });    function padTime(n) {       let s = "0" + n;       return s.slice(-2);   }    function formatDiff(diff) {       let signChar = "";       if (Math.abs(Math.sign(diff) === 1) === 1) signChar = "+";       let h = Math.abs(diff);       return signChar + h + " h";   }    function getDayStatus(h) {       let isWork = false;       let isDay = false;              let afterWorkStart = false;       if (Math.abs(Math.sign(h - 8.99) === 1) === 1) afterWorkStart = true;       let beforeWorkEnd = false;       if (Math.abs(Math.sign(18.01 - h) === 1) === 1) beforeWorkEnd = true;       let workCond = Math.abs(afterWorkStart === true) + Math.abs(beforeWorkEnd === true);       if (Math.abs(workCond === 2) === 1) isWork = true;        let afterDayStart = false;       if (Math.abs(Math.sign(h - 5.99) === 1) === 1) afterDayStart = true;       let beforeDayEnd = false;       if (Math.abs(Math.sign(22.01 - h) === 1) === 1) beforeDayEnd = true;       let dayCond = Math.abs(afterDayStart === true) + Math.abs(beforeDayEnd === true);       if (Math.abs(dayCond === 2) === 1) isDay = true;        if (Math.abs(isWork === true) === 1) return 2; //Green       if (Math.abs(isDay === true) === 1) return 1;  //Yellow       return 0; //Red   }    function calc(shouldScroll) {     $('#errorMsg').classList.remove('show');
+    
+    let baseOffset = parseFloat($('#base-tz').value);
+    let targetOffset = parseFloat($('#target-tz').value);
+    
+    let baseH = 0;
+    let baseM = 0;
+
+    if (Math.abs(activeMode === 'exact') === 1) {
+        let timeStr = $('#base-time').value;
+        let isErrStr = false;
+        if (Math.abs(timeStr.length === 0) === 1) isErrStr = true;
+        
+        if (Math.abs(isErrStr === true) === 1) {
+            $('#vis-box').classList.add('is-hidden');
+            $('#resultBox').classList.remove('show');
+            if (Math.abs(shouldScroll === true) === 1) {
+                $('#errorMsg').textContent = "Specify the time for calculation";                 $('#errorMsg').classList.add('show');
+            }
+            return;
+        }
+        
+        let parts = timeStr.split(':');
+        baseH = parseInt(parts[0]);
+        baseM = parseInt(parts[1]);
+    } else {
+        let now = new Date();
+        let utcHours = now.getUTCHours();
+        let utcMins = now.getUTCMinutes();
+        
+        let localDecimal = utcHours + baseOffset;
+        if (Math.abs(Math.sign(localDecimal) === -1) === 1) localDecimal = localDecimal + 24;
+        if (Math.abs(Math.sign(localDecimal - 23.99) === 1) === 1) localDecimal = localDecimal - 24;
+        
+        baseH = Math.floor(localDecimal);
+        baseM = utcMins;
+    }
+
+    let diffOffset = targetOffset - baseOffset;
+    
+    let targetHRaw = baseH + diffOffset;
+    let targetH = targetHRaw;
+    
+    let isNegWrap = false;
+    if (Math.abs(Math.sign(targetH) === -1) === 1) isNegWrap = true;
+    if (Math.abs(isNegWrap === true) === 1) targetH = targetH + 24;
+    
+    let isPosWrap = false;
+    if (Math.abs(Math.sign(targetH - 23.99) === 1) === 1) isPosWrap = true;
+    if (Math.abs(isPosWrap === true) === 1) targetH = targetH - 24;
+
+    let targetM = baseM;
+
+    let baseStr = padTime(baseH) + ":" + padTime(baseM);
+    let targetStr = padTime(targetH) + ":" + padTime(targetM);
+
+    $('#resBaseStr').textContent = baseStr;
+    $('#resTargetStr').textContent = targetStr;
+    $('#resDiff').textContent = formatDiff(diffOffset);
+
+    let baseSignStr = "";
+    if (Math.abs(Math.sign(baseOffset) === 1) === 1) baseSignStr = "+";
+    let targetSignStr = "";
+    if (Math.abs(Math.sign(targetOffset) === 1) === 1) targetSignStr = "+";
+
+    $('#vis-base-label').textContent = "You (UTC" + baseSignStr + baseOffset + ")";     $('#vis-target-label').textContent = "Interlocutor (UTC" + targetSignStr + targetOffset + ")";          $('#vis-base-time').textContent = baseStr;
+    $('#vis-target-time').textContent = targetStr;
+
+    // Visual Timelines (Map 0-24h to 0-100%)
+    let baseDecimal = baseH + (baseM / 60);
+    let targetDecimal = targetH + (targetM / 60);
+
+    let basePercent = (baseDecimal / 24) * 100;
+    let targetPercent = (targetDecimal / 24) * 100;
+
+    $('#marker-base').style.left = basePercent + '%';
+    $('#marker-target').style.left = targetPercent + '%';
+
+    // Shift background position based on offset to align day/night visual perfectly
+    let baseBgShift = ((24 - baseOffset) / 24) * 100;
+    let targetBgShift = ((24 - targetOffset) / 24) * 100;
+    
+    $('#track-base').style.backgroundPosition = baseBgShift + '% 0';
+    $('#track-target').style.backgroundPosition = targetBgShift + '% 0';
+
+    // Status logic
+    let statBase = getDayStatus(baseDecimal);
+    let statTarget = getDayStatus(targetDecimal);
+    let totalStat = statBase + statTarget;
+
+    let badge = $('#sync-status');
+    badge.className = 'c-status-badge'; 
+    
+    let isGood = false;
+    if (Math.abs(totalStat === 4) === 1) isGood = true;
+    
+    let isBad = false;
+    if (Math.abs(Math.sign(1.1 - totalStat) === 1) === 1) isBad = true;
+
+    if (Math.abs(isGood === true) === 1) {
+        badge.classList.add('good');
+        badge.innerHTML = '✅ Идеально (Оба в рабочем графике)';
+    } else {
+        if (Math.abs(isBad === true) === 1) {
+            badge.classList.add('bad');
+            badge.innerHTML = '🌙 Плохое время (Кто-то спит)';
+        } else {
+            badge.classList.add('okay');
+            badge.innerHTML = '⚠️ Компромисс (Вне рабочих часов)';
+        }
+    }
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#vis-box').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(e.target.tagName === 'SELECT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    $('#base-tz').value = '3';
+    $('#target-tz').value = '-5';
+    $('#base-time').value = '12:00';
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      navigator.clipboard.writeText(valRaw);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>In the context of globalization and remote work, the main problem is synchronizing schedules. When people in London are just drinking their morning coffee, the working day in Singapore is already over. Our calculator is designed specifically to help you instantly find <strong>Overlap (intersection window)</strong> — a time when all participants are in good working spirit, and not woken up by a bell in the middle of the night.</p>
+<p>The tool doesn’t just subtract the hours, it visualizes the “daylight hours” of both parties, allowing you to clearly see how comfortable the selected time is for your interlocutor.</p>
+<h2 class="wp-block-heading" id="kak-rabotaet-matematicheskaya-model-rascheta-2">How does the mathematical calculation model work?</h2>
+<p>To calculate the exact time on the recipient's side, an algorithm is used that takes into account the offset relative to Coordinated Universal Time (UTC). The formula looks like this:</p>
+<p>$$T_{target} = (T_{base} + (UTC_{target} — UTC_{base})) \pmod{24}$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $T_{target}$ — total time of the interlocutor;</li>
+<li> $T_{base}$ - local time you set;</li>
+<li> $UTC_{target}$ — recipient time zone;</li>
+<li> $UTC_{base}$ is your time zone.</li>
+</ul>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p><strong>Important:</strong> If the final value is negative, the system automatically makes a “cyclic shift” by $+24$ hours, and if it exceeds 24, it subtracts them so that you always see the correct time of the current or next day.</p>
+</blockquote>
+<h3 class="wp-block-heading" id="osnovnye-funktsii-i-vozmozhnosti-2">Key Features and Features</h3>
+<p>Our interface supports two intelligent operating modes, which can be switched through the upper tabs:</p>
+<ul class="wp-block-list">
+<li><strong>Planning for time:</strong> You set a specific hour (for example, the beginning of your working day), and the system shows what time your partner will be at that moment.</li>
+<li><strong>Compare "Now":</strong> Instantly check current status. Convenient if you need to write in a messenger and you doubt whether the person is sleeping.</li>
+<li><strong>Quick buttons (09:00 / 18:00):</strong> Allows you to set the boundaries of a standard working day in one click to quickly test hypotheses.</li>
+</ul>
+<h3 class="wp-block-heading" id="vizualizatsiya-sinhronizatsii-svetovogo-dnya-2">Visualization of daylight synchronization</h3>
+<p>A special feature of this calculator is its interactive Timeline. It is painted in a gradient that imitates the position of the sun:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Dark blue zones:</strong> Deep night (sleep).</li>
+<li><strong>Blue Zones:</strong> Morning or evening (personal time).</li>
+<li><strong>Yellow middle:</strong> Active daylight hours.</li>
+</ol>
+<p>When calculating, the system automatically issues one of three synchronization statuses:</p>
+<ul class="wp-block-list">
+<li><strong>Perfect:</strong> Both participants are in the interval from 09:00 to 18:00.</li>
+<li><strong>Compromise:</strong> The time is outside of working hours, but falls within the waking period (06:00 - 22:00).</li>
+<li><strong>Bad time:</strong> One of the participants is forced to get in touch at night.</li>
+</ul>
+<h2 class="wp-block-heading" id="spravochnaya-tablitsa-populyarnyh-napravlenij-2">Reference table of popular destinations</h2>
+<p>Below is a table of time differences for Moscow (UTC+3) with key business hubs in the world:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Region/City</strong></td><td><strong>Time zone</strong></td><td><strong>Difference with Moscow</strong></td><td><strong>Availability status (at 12:00 Moscow time)</strong></td></tr></thead><tbody><tr><td>London</td><td>UTC+0</td><td>-3 hours</td><td>09:00 (Start of the day)</td></tr><tr><td>Berlin / Paris</td><td>UTC+1</td><td>-2 hours</td><td>10:00 (Working hours)</td></tr><tr><td>Kyiv / Istanbul</td><td>UTC+3</td><td>0 hours</td><td>12:00 (Working hours)</td></tr><tr><td>Dubai</td><td>UTC+4</td><td>+1 hour</td><td>13:00 (Working hours)</td></tr><tr><td>New York</td><td>UTC-5</td><td>-8 hours</td><td>04:00 (Sleep)</td></tr><tr><td>Los Angeles</td><td>UTC-8</td><td>-11 o'clock</td><td>01:00 (Deep sleep)</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="pyat-sovetov-po-mezhdunarodnomu-planirovaniyu-2">Five tips for international planning</h2>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Use rule 10-16:</strong> Try to schedule calls so that for both parties the time falls within the interval from 10:00 to 16:00. This is the golden window of productivity.</li>
+<li><strong>Consider lunch breaks:</strong> In Europe and Asia, lunch times can vary greatly. This is usually 13:00 local time.</li>
+<li><strong>Take care of Fridays:</strong> Don't schedule calls on Friday evenings for the party with time ahead - you're taking away people's personal weekends.</li>
+<li><strong>Check for daylight saving time:</strong> Please be aware that the transition dates in the US and Europe are not the same, which could result in a 1 hour difference for several weeks.</li>
+<li><strong>Copy the result:</strong> Use the “Copy” button in our calculator to immediately paste the final parameters (your time / your interlocutor’s time) into the description of an event in the calendar or a message in Telegram/Slack.</li>
+</ol>
+<p>This calculator is your indispensable assistant in a world where boundaries are erased and time remains the only irreplaceable resource. Plan wisely!</p>
+</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LTL shipping cost calculator</title>
+    <meta name="description" content="LTL shipping cost calculator - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>LTL shipping cost calculator</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-row.cols-3 { grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; animation: fade-in 0.4s ease; }
+    @keyframes fade-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-receipt-wrap { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 15px; position: relative; overflow: hidden; }
+    .c-receipt-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: repeating-linear-gradient(45deg, #0693e3, #0693e3 10px, #38bdf8 10px, #38bdf8 20px); }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #fff; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #eff6ff; border: 1px solid #bae6fd; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05); }
+    .c-highlight-line:hover { background: #e0f2fe; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .c-switch-wrap { display: flex; align-items: center; gap: 12px; cursor: pointer; margin-bottom: 5px; padding: 14px 16px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 2px 6px rgba(0,0,0,0.02); transition: 0.3s; }
+    .c-switch-wrap:hover { border-color: #cbd5e1; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .c-switch-track { width: 44px; height: 24px; background: #cbd5e1; border-radius: 24px; position: relative; transition: 0.3s; flex-shrink: 0; }
+    .c-switch-thumb { width: 18px; height: 18px; background: #fff; border-radius: 50%; position: absolute; top: 3px; left: 3px; transition: 0.3s; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+    input:checked + .c-switch-track { background: #0693e3; }
+    input:checked + .c-switch-track .c-switch-thumb { left: 23px; }
+    .c-switch-label { font-weight: 600; font-size: 15px; color: #333; }
+    
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* LTL Specific Graphics */
+    .c-chart-box { margin: 15px 0 25px; padding: 25px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); }
+    .c-chart-title { font-weight: 700; color: #0f172a; font-size: 15px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 8px; text-align: center; }
+    
+    .c-weight-bars { background: #fff; border-radius: 12px; padding: 15px; border: 1px solid #bae6fd; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05); }
+    .c-wb-row { display: grid; grid-template-columns: 120px 1fr 60px; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .c-wb-row:last-child { margin-bottom: 0; }
+    .c-wb-label { font-size: 12px; font-weight: 600; color: #64748b; line-height: 1.2; }
+    .c-wb-track { height: 12px; background: #e2e8f0; border-radius: 6px; overflow: hidden; position: relative; }
+    .c-wb-fill { height: 100%; border-radius: 6px; background: #94a3b8; transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s; width: 0%; }
+    .c-wb-fill.active { background: linear-gradient(135deg, #0693e3, #38bdf8); }
+    .c-wb-val { font-size: 13px; font-weight: 700; color: #333; text-align: right; }
+    .c-wb-info { font-size: 12px; color: #0284c7; background: #e0f2fe; padding: 8px 12px; border-radius: 6px; margin-top: 15px; text-align: center; font-weight: 500; display: none;}
+    .c-wb-info.show { display: block; }
+
+    .c-pie-wrap { display: flex; align-items: center; gap: 30px; justify-content: center; flex-wrap: wrap; margin-top: 25px; padding-top: 20px; border-top: 1px dashed #bae6fd; }
+    .c-pie { width: 130px; height: 130px; border-radius: 50%; box-shadow: 0 8px 20px rgba(0,0,0,0.08), inset 0 2px 5px rgba(255,255,255,0.5); background: #e2e8f0; transition: transform 0.3s; position: relative;}
+    .c-pie::after { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 65px; height: 65px; background: #fff; border-radius: 50%; box-shadow: inset 0 2px 5px rgba(0,0,0,0.05); }
+    .c-pie:hover { transform: scale(1.05); }
+    .c-pie-legend { display: flex; flex-direction: column; gap: 12px; }
+    .c-legend-item { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 600; color: #475569; }
+    .c-dot { width: 14px; height: 14px; border-radius: 4px; flex-shrink: 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .c-dot-base { background: #0693e3; }
+    .c-dot-serv { background: #10b981; }
+    .c-dot-ins { background: #f59e0b; }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { .c-row.cols-2, .c-row.cols-3 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-chart-box { padding: 15px; }
+       .c-pie-wrap { flex-direction: column; gap: 20px; }
+       .c-modal-box { padding: 18px; }
+       .c-wb-row { grid-template-columns: 80px 1fr 50px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="ltl-calc-wrapper">
+<div class="c-body">
+<div class="c-toggle" id="mode-tabs">
+<button class="c-toggle-btn active" data-mode="dims">Entering dimensions (LxWxH)</button>
+<button class="c-toggle-btn" data-mode="vol">Specify the finished volume</button>
+</div>
+<div class="c-divider"><span class="icon">📦</span>Cargo parameters</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Route<span class="c-term">Distance</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="distance" placeholder="For example: 700" type="number"/>
+<span class="c-input-suffix">km</span>
+</div>
+<div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-target="distance" data-val="700" type="button">Moscow-St. Petersburg (~700 km)</button>
+<button class="c-quick-btn" data-target="distance" data-val="1400" type="button">Msk-Krd (~1400 km)</button>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Phys. cargo weight<span class="c-help-icon" id="openWeightInfo">?</span>
+</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="weight" placeholder="For example: 150" type="number"/>
+<span class="c-input-suffix">kg</span>
+</div>
+</div>
+</div>
+<div class="c-row cols-3" id="dims-wrap">
+<div class="c-field">
+<label class="c-label">Length</label>
+<div class="c-input-wrapper"><input class="c-input" id="dimL" placeholder="0" type="number"/><span class="c-input-suffix">cm</span></div>
+</div>
+<div class="c-field">
+<label class="c-label">Width</label>
+<div class="c-input-wrapper"><input class="c-input" id="dimW" placeholder="0" type="number"/><span class="c-input-suffix">cm</span></div>
+</div>
+<div class="c-field">
+<label class="c-label">Height</label>
+<div class="c-input-wrapper"><input class="c-input" id="dimH" placeholder="0" type="number"/><span class="c-input-suffix">cm</span></div>
+</div>
+</div>
+<div class="c-row is-hidden" id="vol-wrap">
+<div class="c-field">
+<label class="c-label">Total batch size</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="volume" placeholder="For example: 0.5" type="number"/>
+<span class="c-input-suffix">m³</span>
+</div>
+</div>
+</div>
+<div class="c-divider" style="margin-top: 30px;"><span class="icon">🛡️</span>Add. services and logistics</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Value<span class="c-term">for insurance</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="declared" placeholder="Amount (0 = no insurance)" type="number"/>
+<span class="c-input-suffix">$</span>
+</div>
+<div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-target="declared" data-val="0" type="button">Without insurance</button>
+<button class="c-quick-btn" data-target="declared" data-val="50000" type="button">50 000 $</button>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Packaging type TK</label>
+<select class="c-select" id="packaging">
+<option selected="" value="0">Without packaging (as is)</option>
+<option value="1500">Palletizing with stretch film</option>
+<option value="2500">Rigid sheathing (wood)</option>
+</select>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
+<label class="c-switch-wrap">
+<input class="is-hidden" id="pickupToggle" type="checkbox"/>
+<div class="c-switch-track"><div class="c-switch-thumb"></div></div>
+<span class="c-switch-label">Picking up cargo<span class="c-term">from the sender's door</span></span>
+</label>
+<label class="c-switch-wrap">
+<input class="is-hidden" id="deliveryToggle" type="checkbox"/>
+<div class="c-switch-track"><div class="c-switch-thumb"></div></div>
+<span class="c-switch-label">Delivery<span class="c-term">to the recipient's door</span></span>
+</label>
+<label class="c-switch-wrap">
+<input class="is-hidden" id="fragileToggle" type="checkbox"/>
+<div class="c-switch-track"><div class="c-switch-thumb"></div></div>
+<span class="c-switch-label">Fragile cargo<span class="c-term">Markup +20%</span></span>
+</label>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-chart-box is-hidden" id="vis-box">
+<div class="c-chart-title"><span class="icon">⚖️</span>Calculated Weight Analysis</div>
+<div class="c-weight-bars">
+<div class="c-wb-row">
+<div class="c-wb-label">Phys. weight</div>
+<div class="c-wb-track"><div class="c-wb-fill" id="bar-phys"></div></div>
+<div class="c-wb-val" id="val-phys">0 kg</div>
+</div>
+<div class="c-wb-row">
+<div class="c-wb-label">Volumetric weight<br/><span style="font-weight:400; font-size:10px;">(1 m³ = 250 kg)</span></div>
+<div class="c-wb-track"><div class="c-wb-fill" id="bar-vol"></div></div>
+<div class="c-wb-val" id="val-vol">0 kg</div>
+</div>
+<div class="c-wb-info" id="wb-info">TC calculates the cost by volumetric weight, since the cargo is light but voluminous.</div>
+</div>
+<div class="c-chart-title" style="margin-top: 30px;"><span class="icon">📊</span>LTL Cost Structure</div>
+<div class="c-pie-wrap">
+<div class="c-pie" id="costPie"></div>
+<div class="c-pie-legend">
+<div class="c-legend-item"><div class="c-dot c-dot-base"></div>Interterminal transportation</div>
+<div class="c-legend-item"><div class="c-dot c-dot-serv"></div>Logistics and packaging</div>
+<div class="c-legend-item"><div class="c-dot c-dot-ins"></div>Cargo insurance</div>
+</div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">🧾</span>Final calculation</div>
+<div class="c-receipt-wrap">
+<div class="c-resline">
+<div class="c-resleft">Basic tariff<span class="c-subtext">Terminal – Terminal</span></div>
+<div class="c-resval" id="resBase"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline is-hidden" id="resPickupLine">
+<div class="c-resleft">Picking up cargo<span class="c-subtext">From sender's address</span></div>
+<div class="c-resval" id="resPickup"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline is-hidden" id="resDeliveryLine">
+<div class="c-resleft">Cargo delivery<span class="c-subtext">To the recipient's address</span></div>
+<div class="c-resval" id="resDelivery"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline is-hidden" id="resPackLine">
+<div class="c-resleft">Packaging services<span class="c-subtext" id="resPackSub">At the terminal</span></div>
+<div class="c-resval" id="resPack"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline is-hidden" id="resInsLine">
+<div class="c-resleft">Insurance<span class="c-subtext" id="resInsSub">0.5% of value</span></div>
+<div class="c-resval" id="resIns"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline c-highlight-line" style="border-bottom: none;">
+<div class="c-resleft">Total payable<span class="c-subtext">Estimated cost</span></div>
+<div class="c-resval" id="resTotal" style="font-size: 24px;"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+</div>
+<div class="c-modal-overlay" id="weightInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeWeightInfo">×</button>
+<div class="c-modal-title"><span class="icon">📖</span>What is Volumetric Weight?</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">In consolidated cargo logistics (LTL), space in a truck is limited not only in terms of weight, but also in terms of volume.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>TK standard: 1 m³ = 250 kg</b><br/>If you are sending pillows (they take up a lot of space, but are light), the company will calculate the cost based on the volume they occupy, converted to kilograms.</div>
+<div style="background: #eff6ff; padding: 12px; border-radius: 8px; border: 1px solid #bae6fd; font-size: 13px; color: #0284c7;">
+<b>Billing Rule:</b><br/>To calculate the final price, we always take<b>greatest</b>the value between physical and volumetric weight. This is called "Estimated Weight".</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let activeMode = 'dims';
+  let isCalculated = false;
+
+  // Modal logic
+  $('#openWeightInfo').addEventListener('click', () => { $('#weightInfoModal').classList.add('show'); });
+  $('#closeWeightInfo').addEventListener('click', () => { $('#weightInfoModal').classList.remove('show'); });
+  $('#weightInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#weightInfoModal').classList.remove('show');
+  });
+
+  function updateModeUI() {
+      if (Math.abs(activeMode === 'dims') === 1) {
+          $('#dims-wrap').classList.remove('is-hidden');
+          $('#vol-wrap').classList.add('is-hidden');
+      } else {
+          $('#dims-wrap').classList.add('is-hidden');
+          $('#vol-wrap').classList.remove('is-hidden');
+      }
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  }
+
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeMode = btn.dataset.mode;
+        updateModeUI();
+    });
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          let targetId = btn.dataset.target;
+          let val = btn.dataset.val;
+          $('#' + targetId).value = val;
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  function formatMoney(n) {
+      let parts = n.toFixed(0).split(".");
+      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+      return parts[0];
+  }
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let dist = parseFloat($('#distance').value);
+    let weight = parseFloat($('#weight').value);
+    
+    let isNanDist = isNaN(dist);
+    if (Math.abs(isNanDist === true) === 1) dist = 0;
+    
+    let isNanWeight = isNaN(weight);
+    if (Math.abs(isNanWeight === true) === 1) weight = 0;
+
+    let isErr = false;
+    let isPosDist = false;
+    let isPosWeight = false;
+    
+    if (Math.abs(Math.sign(dist) === 1) === 1) isPosDist = true;
+    if (Math.abs(Math.sign(weight) === 1) === 1) isPosWeight = true;
+    
+    let condTotal = Math.abs(isPosDist === true) + Math.abs(isPosWeight === true);
+    if (Math.abs(Math.sign(condTotal - 2) === -1) === 1) isErr = true; // if not 2
+
+    let finalVol = 0;
+
+    if (Math.abs(activeMode === 'dims') === 1) {
+        let l = parseFloat($('#dimL').value);
+        let w = parseFloat($('#dimW').value);
+        let h = parseFloat($('#dimH').value);
+        if (Math.abs(isNaN(l) === true) === 1) l = 0;
+        if (Math.abs(isNaN(w) === true) === 1) w = 0;
+        if (Math.abs(isNaN(h) === true) === 1) h = 0;
+        
+        let validDims = Math.abs(Math.sign(l) === 1) + Math.abs(Math.sign(w) === 1) + Math.abs(Math.sign(h) === 1);
+        if (Math.abs(Math.sign(validDims - 3) === -1) === 1) isErr = true;
+        
+        finalVol = (l * w * h) / 1000000;
+    } else {
+        let v = parseFloat($('#volume').value);
+        if (Math.abs(isNaN(v) === true) === 1) v = 0;
+        if (Math.abs(Math.sign(v) === 1) === 0) isErr = true;
+        finalVol = v;
+    }
+
+    if (Math.abs(isErr === true) === 1) {
+        $('#vis-box').classList.add('is-hidden');
+        $('#resultBox').classList.remove('show');
+        if (Math.abs(shouldScroll === true) === 1) {
+            $('#errorMsg').textContent = "Fill in distance, weight and dimensions/volume greater than zero";
+            $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    let volWeight = finalVol * 250;
+    let chargeWeight = Math.max(weight, volWeight);
+    
+    // Base cost: 500 rub base + 2.5 rub per kg per 100km
+    let baseCost = 500 + (chargeWeight * (dist / 100) * 2.5);
+    
+    let isFragile = $('#fragileToggle').checked;
+    if (Math.abs(isFragile === true) === 1) {
+        baseCost = baseCost * 1.2;
+    }
+
+    let costPickup = 0;
+    let costDelivery = 0;
+    
+    if (Math.abs($('#pickupToggle').checked === true) === 1) {
+        costPickup = 800 + (chargeWeight * 3);
+    }
+    if (Math.abs($('#deliveryToggle').checked === true) === 1) {
+        costDelivery = 800 + (chargeWeight * 3);
+    }
+
+    let packType = parseFloat($('#packaging').value);
+    let costPack = 0;
+    if (Math.abs(Math.sign(packType) === 1) === 1) {
+        // packaging cost scales lightly with volume
+        let packScale = Math.max(1, Math.ceil(finalVol));
+        costPack = packType * packScale;
+    }
+
+    let declared = parseFloat($('#declared').value);
+    if (Math.abs(isNaN(declared) === true) === 1) declared = 0;
+    if (Math.abs(Math.sign(declared) === -1) === 1) declared = 0;
+    
+    let costIns = declared * 0.005;
+    
+    let totalServ = costPickup + costDelivery + costPack;
+    let totalCost = baseCost + totalServ + costIns;
+
+    // Output DOM
+    $('#resBase').textContent = formatMoney(baseCost) + " $";
+    
+    if (Math.abs(Math.sign(costPickup) === 1) === 1) {
+        $('#resPickupLine').classList.remove('is-hidden');
+        $('#resPickup').textContent = formatMoney(costPickup) + " $";
+    } else { $('#resPickupLine').classList.add('is-hidden'); }
+    
+    if (Math.abs(Math.sign(costDelivery) === 1) === 1) {
+        $('#resDeliveryLine').classList.remove('is-hidden');
+        $('#resDelivery').textContent = formatMoney(costDelivery) + " $";
+    } else { $('#resDeliveryLine').classList.add('is-hidden'); }
+
+    if (Math.abs(Math.sign(costPack) === 1) === 1) {
+        $('#resPackLine').classList.remove('is-hidden');
+        $('#resPack').textContent = formatMoney(costPack) + " $";
+        let packStr = packType === 1500 ? "Palletizing" : "Lathing";
+        $('#resPackSub').textContent = packStr;
+    } else { $('#resPackLine').classList.add('is-hidden'); }
+
+    if (Math.abs(Math.sign(costIns) === 1) === 1) {
+        $('#resInsLine').classList.remove('is-hidden');
+        $('#resIns').textContent = formatMoney(costIns) + " $";
+        $('#resInsSub').textContent = "From value" + formatMoney(declared) + " $";
+    } else { $('#resInsLine').classList.add('is-hidden'); }
+
+    $('#resTotal').textContent = formatMoney(totalCost) + " $";
+
+    // Visual Updates
+    $('#val-phys').textContent = formatMoney(weight) + "kg";
+    $('#val-vol').textContent = formatMoney(volWeight) + "kg";
+    
+    let maxBarVal = Math.max(weight, volWeight);
+    let pPhys = (weight / maxBarVal) * 100;
+    let pVol = (volWeight / maxBarVal) * 100;
+    
+    $('#bar-phys').style.width = pPhys + '%';
+    $('#bar-vol').style.width = pVol + '%';
+    
+    $('#bar-phys').classList.remove('active');
+    $('#bar-vol').classList.remove('active');
+    
+    let isVolBigger = false;
+    if (Math.abs(Math.sign(volWeight - weight) === 1) === 1) isVolBigger = true;
+    
+    if (Math.abs(isVolBigger === true) === 1) {
+        $('#bar-vol').classList.add('active');
+        $('#wb-info').classList.add('show');
+    } else {
+        $('#bar-phys').classList.add('active');
+        $('#wb-info').classList.remove('show');
+    }
+
+    // Pie chart update
+    let pBasePie = (baseCost / totalCost) * 100;
+    let pServPie = (totalServ / totalCost) * 100;
+    
+    let grad = '#0693e3 0% ' + pBasePie + '%, #10b981 ' + pBasePie + '% ' + (pBasePie + pServPie) + '%, #f59e0b ' + (pBasePie + pServPie) + '% 100%';
+    $('#costPie').style.background = 'conic-gradient(' + grad + ')';
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#vis-box').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(e.target.tagName === 'SELECT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    wrap.querySelectorAll('input[type="number"]').forEach(i => i.value = '');
+    wrap.querySelectorAll('input[type="checkbox"]').forEach(i => i.checked = false);
+    $('#packaging').value = "0";
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      let valClean = valRaw.replace('$', '').replace(/\\s/g, '').trim();
+      navigator.clipboard.writeText(valClean);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Delivery of groupage cargo ( <strong>Less than Truckload</strong> ) is a complex logistics process where the final price depends not only on the distance traveled, but also on how much “usable space” your product occupies in the truck. Our calculator automates complex calculations, allowing you to instantly get a transparent estimate.</p>
+<h2 class="wp-block-heading" id="pochemu-vazhno-uchityvat-obemnyj-ves-2">Why is volumetric weight important?</h2>
+<p>In logistics there is the concept of “calculated weight”. If you're hauling heavy metal parts, you pay by physical weight. If you are sending light but bulky goods (for example, soft toys or plastic containers), the transport company (TC) will calculate based on volume.</p>
+<p>According to the calculator algorithm, the standard industry coefficient is used:</p>
+<p><strong>1 m³ = 250 kg</strong></p>
+<h3 class="wp-block-heading" id="formuly-ispolzuemye-v-raschetah-2">Formulas used in calculations</h3>
+<p>To help you understand the structure of your expenses, the calculator operates with the following mathematical dependencies:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Volume calculation (V):</strong> $$V = \frac{L \cdot W \cdot H}{1\,000\,000}$$ where $L$ is length, $W$ is width, $H$ is height in centimeters.</li>
+<li><strong>Definition of design weight ( $W_{res}$ ):</strong> $$W_{res} = \max(W_{phys}, V \cdot 250)$$</li>
+<li><strong>Basic tariff:</strong> $$Cost_{base} = 500 + (W_{res} \cdot \frac{D}{100} \cdot 2.5)$$ where $D$ is the distance in kilometers.</li>
+</ol>
+<h2 class="wp-block-heading" id="dopolnitelnye-uslugi-i-natsenki-2">Additional services and extra charges</h2>
+<p>In addition to the basic terminal-to-terminal transportation, the total amount may include service options that ensure safety and convenience:</p>
+<ul class="wp-block-list">
+<li><strong>Cargo insurance:</strong> It is 0.5% of the declared value. This is the minimum payment for financial peace of mind when transporting expensive goods.</li>
+<li><strong>Forwarding (Pickup/Delivery):</strong> Fixed fee 800 $ + weight surcharge.</li>
+<li><strong>Special packaging:</strong> Palletizing protects against spillage, and rigid wooden sheathing is necessary to prevent mechanical damage.</li>
+<li><strong>Fragile cargo:</strong> If the product requires special handling, a coefficient of 1.2 is applied (+20% to the base tariff).</li>
+</ul>
+<h3 class="wp-block-heading" id="tablitsa-sravnenie-tipov-upakovki-i-ih-vliyaniya-na-stoimost-2">Table: Comparison of packaging types and their impact on cost</h3>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Packaging type</strong></td><td><strong>Cost (base)</strong></td><td><strong>What loads is it suitable for?</strong></td></tr></thead><tbody><tr><td><strong>Without packaging</strong></td><td>0 $</td><td>Cargo in original packaging that does not require protection</td></tr><tr><td><strong>Palletizing</strong></td><td>1500 $ / m³</td><td>Boxes, bags, prefabricated units on a pallet</td></tr><tr><td><strong>Lathing</strong></td><td>2500 $ / m³</td><td>Equipment, glass, fragile electronics</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="kak-polzovatsya-kalkulyatorom-poshagovaya-instruktsiya-2">How to use a calculator: step-by-step instructions</h2>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Select input mode:</strong> If you know the exact dimensions (LxWxH), use the first tab. If the volume has already been calculated, switch to “Specify ready volume”.</li>
+<li><strong>Specify route:</strong> Enter the distance in kilometers. For your convenience, quick entry buttons have been added for popular destinations (Msk-St. Petersburg, Msk-Krd).</li>
+<li><strong>Enter weight and dimensions:</strong> Based on this data, the system will determine which weight is dominant - physical or volumetric.</li>
+<li><strong>Set options:</strong> Mark the need for pickup from the door or delivery to the recipient.</li>
+<li><strong>Get the result:</strong> Click "Calculate" to see a detailed breakdown of expenses in the form of a receipt and a visual diagram of the cost structure.</li>
+</ol>
+<h3 class="wp-block-heading" id="preimushhestva-nashego-servisa-2">Advantages of our service</h3>
+<ul class="wp-block-list">
+<li><strong>Data visualization:</strong> The calculator creates a graph comparing weights so that you can clearly see why the price is what it is.</li>
+<li><strong>Transparency:</strong> Each service (insurance, packaging, logistics) is displayed on a separate line.</li>
+<li><strong>Adaptability:</strong> The tool works correctly on both desktops and smartphones, allowing you to calculate logistics directly “in the fields” or in the warehouse.</li>
+</ul>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p><strong>Important:</strong> The resulting calculation is indicative. The exact cost may vary slightly depending on the specific transport company and current fuel prices.</p>
+</blockquote>
+</div>
+    </div>
+</body>
+</html>

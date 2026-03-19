@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online hash generator: MD5, SHA-1, SHA-256 and SHA-512 with HMAC support</title>
+    <meta name="description" content="Online hash generator: MD5, SHA-1, SHA-256 and SHA-512 with HMAC support - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Online hash generator: MD5, SHA-1, SHA-256 and SHA-512 with HMAC support</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  // Инъекция криптографической библиотеки (без операторов < > в логике)
+  const cryptoScript = document.createElement('script');
+  cryptoScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js';
+  document.head.appendChild(cryptoScript);
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-textarea { min-height: 120px; resize: vertical; padding: 16px; font-family: monospace; font-size: 15px; line-height: 1.5; }
+    .c-input:focus, .c-select:focus, .c-textarea:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-receipt-wrap { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 15px; position: relative; overflow: hidden; }
+    .c-receipt-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: repeating-linear-gradient(45deg, #0693e3, #0693e3 10px, #38bdf8 10px, #38bdf8 20px); }
+    
+    .c-resline { display:flex; flex-direction: column; justify-content:space-between; gap:8px; padding:12px; border-bottom:1px dashed #cbd5e1; transition: background 0.2s; position: relative; }
+    .c-resline:hover { background: #fff; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+    .c-resval { font-weight:500; font-size:15px; word-break: break-all; color:#0f172a; font-family: monospace; padding-right: 40px; line-height: 1.4; }
+    
+    .c-highlight-line { background: #eff6ff; border: 1px solid #bae6fd; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05); }
+    .c-highlight-line:hover { background: #e0f2fe; }
+    
+    .c-copy { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; border: none; background: #e0f2fe url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 16px; border-radius: 8px; cursor: pointer; opacity: 0.8; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.1); }
+    .c-copy:hover { opacity: 1; background-color: #0284c7; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23ffffff" viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>'); }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* Deep Visual Graphics */
+    .c-chart-box { display: flex; flex-wrap: wrap; gap: 30px; margin: 15px 0 25px; padding: 25px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); justify-content: center; align-items: center; }
+    
+    .c-donut-container { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+    .c-donut-wrap { position: relative; width: 110px; height: 110px; border-radius: 50%; background: #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 16px rgba(2, 132, 199, 0.15); transition: background 0.5s ease; }
+    .c-donut-inner { width: 80px; height: 80px; background: #fff; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: 700; color: #0f172a; font-size: 18px; box-shadow: inset 0 2px 6px rgba(0,0,0,0.05); }
+    .c-donut-sub { font-size: 10px; color: #64748b; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
+    
+    .c-bit-container { flex: 1; min-width: 220px; display: flex; flex-direction: column; gap: 12px; }
+    .c-bit-title { font-size: 13px; font-weight: 700; color: #333; display: flex; justify-content: space-between; }
+    .c-bit-grid { display: grid; grid-template-columns: repeat(16, 1fr); gap: 4px; padding: 12px; background: #fff; border-radius: 12px; border: 1px solid #bae6fd; box-shadow: 0 4px 12px rgba(2, 132, 199, 0.05); }
+    .c-bit { aspect-ratio: 1; border-radius: 3px; background: #e2e8f0; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: inset 0 1px 2px rgba(0,0,0,0.05); }
+    .c-bit.active { background: linear-gradient(135deg, #0693e3, #38bdf8); box-shadow: 0 0 8px rgba(6, 147, 227, 0.6); transform: scale(1.05); }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-chart-box { flex-direction: column; padding: 20px 15px; }
+       .c-modal-box { padding: 18px; }
+       .c-resval { font-size: 13px; }
+       .c-bit-grid { gap: 2px; padding: 8px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="hash-calc-wrapper">
+<div class="c-body">
+<div class="c-toggle" id="mode-tabs">
+<button class="c-toggle-btn active" data-mode="basic">Simple hashing</button>
+<button class="c-toggle-btn" data-mode="hmac">HMAC <span class="c-term" style="background:transparent; border:none; padding:0; height:auto; color:inherit; font-size:inherit;">With secret key</span></button>
+</div>
+<div class="c-divider"><span class="icon">📝</span>Data entry</div>
+<div class="c-row" style="grid-template-columns: 1fr;">
+<div class="c-field">
+<label class="c-label">Source<span class="c-help-icon" id="openHashInfo">?</span>
+</label>
+<textarea class="c-textarea" id="inputText" placeholder="Enter text, password or encryption data..."></textarea>
+</div>
+</div>
+<div class="c-row is-hidden" id="hmac-wrap" style="margin-top: 10px;">
+<div class="c-field" style="grid-column: 1 / -1;">
+<label class="c-label">Secret key<span class="c-term">Salt / Password</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="inputSalt" placeholder="Specify a unique salt..." type="text"/>
+</div>
+<div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" id="btnGenSalt" type="button">Generate reliable salt</button>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-chart-box is-hidden" id="vis-box">
+<div class="c-donut-container">
+<div class="c-donut-wrap" id="donutChart">
+<div class="c-donut-inner">
+<span id="donutVal">0%</span>
+<span class="c-donut-sub">Digital</span>
+</div>
+</div>
+<div style="font-size: 12px; font-weight: 600; color: #475569; text-align: center;">Entropy of characters<br/>(SHA-256)</div>
+</div>
+<div class="c-bit-container">
+<div class="c-bit-title">
+<span>Signature of the first 64 bits</span>
+<span style="color: #0693e3;">Avalanche Effect</span>
+</div>
+<div class="c-bit-grid" id="bitGrid">
+</div>
+<div style="font-size: 11px; color: #64748b; text-align: justify; line-height: 1.4;">Visualization of the avalanche effect. Changing even one character in the source text completely changes the graphical pattern of the hash.</div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">🔐</span>Generated hashes</div>
+<div class="c-receipt-wrap">
+<div class="c-resline">
+<div class="c-resleft">MD5 <span class="c-term">128-bit</span></div>
+<div class="c-resval" id="resMd5"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">SHA-1 <span class="c-term">160-bit</span></div>
+<div class="c-resval" id="resSha1"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline c-highlight-line">
+<div class="c-resleft" style="color: #0284c7;">SHA-256 <span class="c-term" style="border-color: #bae6fd; background: #e0f2fe;">256-bit</span></div>
+<div class="c-resval" id="resSha256"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">SHA-512 <span class="c-term">512-bit</span></div>
+<div class="c-resval" id="resSha512"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+</div>
+<div class="c-modal-overlay" id="hashInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeHashInfo">×</button>
+<div class="c-modal-title"><span class="icon">📖</span>What is hashing?</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">Hashing is a mathematical algorithm that converts any data (text, file, password) into a unique string of a fixed length.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>Key properties:</b>
+<ul style="margin: 5px 0 0 0; padding-left: 20px;">
+<li style="margin-bottom: 4px;"><b>Irreversibility:</b>It is not possible to recover text from a hash (this is not encryption).</li>
+<li style="margin-bottom: 4px;"><b>Uniqueness:</b>Different texts give different hashes.</li>
+<li><b>Avalanche effect:</b>Changing one letter completely changes the final result.</li>
+</ul>
+</div>
+<div style="background: #eff6ff; padding: 12px; border-radius: 8px; border: 1px solid #bae6fd; font-size: 13px; color: #0284c7;">
+<b>HMAC (Salt):</b>Adding a secret key (salt) makes guessing a password using a dictionary or rainbow tables mathematically impossible.</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let activeMode = 'basic';
+  let isCalculated = false;
+
+  // Генерация сетки битов (64 квадратика)
+  let gridHtml = '';
+  let gridArr = Array.from({ length: 64 });
+  gridArr.forEach(function(_, idx) {
+      gridHtml += '<div class="c-bit" id="bit-' + idx + '"></div>';
+  });
+  $('#bitGrid').innerHTML = gridHtml;
+
+  // Модальное окно
+  $('#openHashInfo').addEventListener('click', () => { $('#hashInfoModal').classList.add('show'); });
+  $('#closeHashInfo').addEventListener('click', () => { $('#hashInfoModal').classList.remove('show'); });
+  $('#hashInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#hashInfoModal').classList.remove('show');
+  });
+
+  // Переключение табов
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeMode = btn.dataset.mode;
+        
+        if (Math.abs(activeMode === 'hmac') === 1) {
+            $('#hmac-wrap').classList.remove('is-hidden');
+        } else {
+            $('#hmac-wrap').classList.add('is-hidden');
+            $('#inputSalt').value = '';
+        }
+        if (Math.abs(isCalculated === true) === 1) calc(false);
+    });
+  });
+
+  // Генерация надежной соли
+  $('#btnGenSalt').addEventListener('click', () => {
+      let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*';
+      let salt = '';
+      let loopArr = Array.from({ length: 16 });
+      loopArr.forEach(function() {
+          let randIdx = Math.floor(Math.random() * chars.length);
+          salt += chars.charAt(randIdx);
+      });
+      $('#inputSalt').value = salt;
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  });
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let text = $('#inputText').value;
+    let isTextEmpty = false;
+    if (Math.abs(text.trim() === '') === 1) isTextEmpty = true;
+
+    // Проверка загрузки библиотеки CryptoJS
+    let isCryptoReady = false;
+    if (Math.abs(typeof CryptoJS !== 'undefined') === 1) isCryptoReady = true;
+
+    let hasError = false;
+    if (Math.abs(isTextEmpty === true) === 1) hasError = true;
+    if (Math.abs(isCryptoReady === false) === 1) hasError = true;
+
+    if (Math.abs(hasError === true) === 1) {
+        $('#vis-box').classList.add('is-hidden');
+        $('#resultBox').classList.remove('show');
+        
+        if (Math.abs(shouldScroll === true) === 1) {
+            if (Math.abs(isCryptoReady === false) === 1) {
+                $('#errorMsg').textContent = "The encryption library is loading, wait a second...";
+            } else {
+                $('#errorMsg').textContent = "Enter text to generate hashes";
+            }
+            $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    let hMd5, hSha1, hSha256, hSha512;
+
+    if (Math.abs(activeMode === 'hmac') === 1) {
+        let salt = $('#inputSalt').value;
+        hMd5 = CryptoJS.HmacMD5(text, salt).toString();
+        hSha1 = CryptoJS.HmacSHA1(text, salt).toString();
+        hSha256 = CryptoJS.HmacSHA256(text, salt).toString();
+        hSha512 = CryptoJS.HmacSHA512(text, salt).toString();
+    } else {
+        hMd5 = CryptoJS.MD5(text).toString();
+        hSha1 = CryptoJS.SHA1(text).toString();
+        hSha256 = CryptoJS.SHA256(text).toString();
+        hSha512 = CryptoJS.SHA512(text).toString();
+    }
+
+    $('#resMd5').textContent = hMd5;
+    $('#resSha1').textContent = hSha1;
+    $('#resSha256').textContent = hSha256;
+    $('#resSha512').textContent = hSha512;
+
+    // --- Визуализация: Круговая диаграмма (Цифры vs Буквы в SHA-256) ---
+    let digitsCount = 0;
+    let sha256Arr = Array.from(hSha256);
+    sha256Arr.forEach(function(char) {
+        let isDigit = false;
+        let pInt = parseInt(char);
+        if (Math.abs(isNaN(pInt) === false) === 1) isDigit = true;
+        if (Math.abs(isDigit === true) === 1) digitsCount++;
+    });
+    
+    let percentNum = (digitsCount / 64) * 100;
+    let percentRound = Math.round(percentNum);
+    $('#donutVal').textContent = percentRound + '%';
+    $('#donutChart').style.background = 'conic-gradient(#0693e3 0% ' + percentRound + '%, #e2e8f0 ' + percentRound + '% 100%)';
+
+    // --- Визуализация: Avalanche Effect (Сетка первых 64 бит SHA-256) ---
+    let hexSlice = hSha256.substring(0, 16); // 16 hex chars = 64 bits
+    let hexArr = Array.from(hexSlice);
+    let bitString = '';
+    
+    hexArr.forEach(function(hexChar) {
+        let bin = parseInt(hexChar, 16).toString(2);
+        let padLen = 4 - bin.length;
+        let padZeros = '';
+        let padArr = Array.from({ length: padLen });
+        padArr.forEach(function() { padZeros += '0'; });
+        bitString += padZeros + bin;
+    });
+
+    let bitArr = Array.from(bitString);
+    bitArr.forEach(function(bit, idx) {
+        let el = $('#bit-' + idx);
+        if (Math.abs(bit === '1') === 1) {
+            el.classList.add('active');
+        } else {
+            el.classList.remove('active');
+        }
+    });
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#vis-box').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isRelevantInput = false;
+        if (Math.abs(e.target.tagName === 'TEXTAREA') === 1) isRelevantInput = true;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isRelevantInput = true;
+        if (Math.abs(isRelevantInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    $('#inputText').value = '';
+    $('#inputSalt').value = '';
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      navigator.clipboard.writeText(valRaw);
+      e.target.style.transform = 'scale(0.9) translateY(-50%)';
+      setTimeout(() => e.target.style.transform = 'translateY(-50%)', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>This tool is an advanced cryptographic sandbox that allows you to convert arbitrary text or sensitive data into a unique digital fingerprint. Unlike standard generators, our solution provides visual analysis of the “avalanche effect” and supports the <strong>HMAC</strong>, which is critical for developing and testing API security.</p>
+<h2 class="wp-block-heading" id="kak-rabotaet-heshirovanie-dannyh-2">How data hashing works</h2>
+<p>Hashing is the process of converting an input data array of an arbitrary length into an output bit string of a fixed length, carried out according to a strict algorithm. Mathematically this can be expressed by the formula:</p>
+<p>$$h = H(M)$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li><strong>$M$</strong> — original message (text, file or key);</li>
+<li><strong>$H$</strong> — hash function (for example, SHA-256);</li>
+<li><strong>$h$</strong> — the final hash (digest), which is almost impossible to reverse.</li>
+</ul>
+<h2 class="wp-block-heading" id="sravnenie-podderzhivaemyh-algoritmov-2">Comparison of supported algorithms</h2>
+<p>To choose the optimal protection method, check out the characteristics of the main algorithms presented in our calculator:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Algorithm</strong></td><td><strong>Result length (bits)</strong></td><td><strong>Collision resistance</strong></td><td><strong>Main Application</strong></td></tr></thead><tbody><tr><td><strong>MD5</strong></td><td>128 bit</td><td>Low</td><td>Checking the integrity of non-critical data</td></tr><tr><td><strong>SHA-1</strong></td><td>160 bit</td><td>Average</td><td>Legacy protocols, Git commits</td></tr><tr><td><strong>SHA-256</strong></td><td>256 bit</td><td><strong>High</strong></td><td>Cryptocurrencies, SSL certificates, Blockchain</td></tr><tr><td><strong>SHA-512</strong></td><td>512 bit</td><td><strong>Maximum</strong></td><td>High-load security systems</td></tr></tbody></table></div></figure>
+<h3 class="wp-block-heading" id="prodvinutye-vozmozhnosti-instrumenta-2">Advanced Tool Features</h3>
+<p>Our calculator is equipped with functions that are usually only available in specialized pentesting software:</p>
+<ul class="wp-block-list">
+<li><strong>HMAC (Keyed-Hash Message Authentication Code) mode:</strong> allows you to add a "salt" or secret key to your text. This prevents password cracking using Rainbow Tables.</li>
+<li><strong>Avalanche Effect visualization:</strong> in real time, you can see how changing just one bit (one letter) in the input data leads to a radical change in the hash structure.</li>
+<li><strong>Entropy Analysis:</strong> The built-in diagram of the distribution of numbers and symbols helps to evaluate the “randomness” of the result obtained in the SHA-256 algorithm.</li>
+</ul>
+<h3 class="wp-block-heading" id="klyuchevye-svojstva-idealnoj-hesh-funktsii-2">Key properties of an ideal hash function</h3>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Determinism:</strong> given the same input data, the result will always be identical.</li>
+<li><strong>Calculation speed:</strong> Receiving a digest for any amount of data occurs instantly.</li>
+<li><strong>Irreversibility:</strong> finding the original $M$ message from its $h$ hash must be computationally impossible.</li>
+<li><strong>No collisions:</strong> the probability that two different messages will give the same hash tends to zero.</li>
+</ol>
+<h2 class="wp-block-heading" id="sfery-primeneniya-generatora-2">Application areas of the generator</h2>
+<h3 class="wp-block-heading" id="razrabotka-i-it-bezopasnost-2">Development and IT security</h3>
+<p>Programmers use our service to generate API request signatures, verify checksums during file transfers, and create secure session IDs.</p>
+<h3 class="wp-block-heading" id="hranenie-parolej-2">Password storage</h3>
+<p>Never store passwords in clear text! Run the password through SHA-256 with a unique salt (HMAC) before storing it in the database.</p>
+<h3 class="wp-block-heading" id="proverka-tselostnosti-2">Integrity check</h3>
+<p>If you receive data and want to make sure it hasn't been altered by an attacker or network interference, compare its hash sum to the original.</p>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p><strong>Important Safety Notice:</strong> All calculations are done locally in your browser using the library<code>CryptoJS</code>. Your data is not transferred to the server, which guarantees complete confidentiality of entered passwords and keys.</p>
+</blockquote>
+</div>
+    </div>
+</body>
+</html>

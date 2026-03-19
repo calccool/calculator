@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator for the ordinal number of the day in the year</title>
+    <meta name="description" content="Calculator for the ordinal number of the day in the year - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Calculator for the ordinal number of the day in the year</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-receipt-wrap { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 15px; position: relative; overflow: hidden; }
+    .c-receipt-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: repeating-linear-gradient(45deg, #0693e3, #0693e3 10px, #38bdf8 10px, #38bdf8 20px); }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #fff; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #eff6ff; border: 1px solid #bae6fd; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05); }
+    .c-highlight-line:hover { background: #e0f2fe; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* Advanced Visualization: Circular Progress */
+    .c-vis-box { margin: 15px 0 25px; padding: 25px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); display: flex; align-items: center; gap: 24px; }
+    .c-vis-svg-wrap { flex-shrink: 0; width: 110px; height: 110px; position: relative; }
+    .c-circular-chart { display: block; width: 100%; height: 100%; max-width: 100%; }
+    .c-circle-bg { fill: none; stroke: #e2e8f0; stroke-width: 3; }
+    .c-circle { fill: none; stroke-width: 3; stroke-linecap: round; transition: stroke-dasharray 1.2s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.5s; stroke: #0693e3; }
+    .c-percentage { fill: #0f172a; font-size: 8px; font-weight: 700; text-anchor: middle; }
+    
+    .c-vis-info { flex-grow: 1; }
+    .c-vis-title { font-weight: 700; color: #0f172a; font-size: 15px; margin-bottom: 8px; }
+    .c-vis-stat { font-size: 13px; color: #475569; margin-bottom: 4px; }
+    .c-vis-stat-val { font-weight: 700; color: #0693e3; }
+    
+    .c-season-badge { margin-top: 10px; display: inline-flex; align-items: center; padding: 6px 10px; border-radius: 8px; font-size: 12px; font-weight: 700; transition: 0.3s; border: 1px solid transparent; }
+    .c-season-winter { background: #e0f2fe; color: #0284c7; border-color: #bae6fd; }
+    .c-season-spring { background: #d1fae5; color: #059669; border-color: #a7f3d0; }
+    .c-season-summer { background: #fef3c7; color: #d97706; border-color: #fde68a; }
+    .c-season-autumn { background: #ffedd5; color: #ea580c; border-color: #fed7aa; }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-vis-box { flex-direction: column; text-align: center; gap: 16px; padding: 20px; }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="day-calc-wrapper">
+<div class="c-body">
+<div class="c-toggle" id="mode-tabs">
+<button class="c-toggle-btn active" data-mode="date">Search by date</button>
+<button class="c-toggle-btn" data-mode="number">Search by day number</button>
+</div>
+<div class="c-divider"><span class="icon">📅</span>Calculation parameters</div>
+<div id="mode-date">
+<div class="c-row" style="margin-bottom: 8px;">
+<div class="c-field">
+<label class="c-label">Please enter a date<span class="c-help-icon" id="openDayInfo">?</span>
+</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="date-input" type="date"/>
+</div>
+<div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-action="today" type="button">Today</button>
+<button class="c-quick-btn" data-action="newyear" type="button">Beginning of the year</button>
+<button class="c-quick-btn" data-action="endyear" type="button">End of the year</button>
+</div>
+</div>
+</div>
+</div>
+<div class="is-hidden" id="mode-number">
+<div class="c-row cols-2" style="margin-bottom: 8px;">
+<div class="c-field">
+<label class="c-label">Day number<span class="c-term">from 365 or 366</span>
+<span class="c-help-icon" id="openDayInfo2">?</span>
+</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="day-number" placeholder="For example: 256" type="number"/>
+</div>
+<div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-action="num-100" type="button">100th day</button>
+<button class="c-quick-btn" data-action="num-256" type="button">256th (IT Day)</button>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Enter the year</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="year-input" placeholder="For example: 2024" type="number"/>
+</div>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-vis-box is-hidden" id="vis-box">
+<div class="c-vis-svg-wrap">
+<svg class="c-circular-chart" viewbox="0 0 36 36">
+<path class="c-circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+<path class="c-circle" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" id="vis-circle" stroke-dasharray="0, 100"></path>
+<text class="c-percentage" id="vis-percent" x="18" y="21">0%</text>
+</svg>
+</div>
+<div class="c-vis-info">
+<div class="c-vis-title">Progress of the year</div>
+<div class="c-vis-stat">Days passed:<span class="c-vis-stat-val" id="vis-passed">0</span></div>
+<div class="c-vis-stat">Days until the end of the year:<span class="c-vis-stat-val" id="vis-left" style="color: #4a5565;">0</span></div>
+<div class="c-season-badge" id="vis-season">Season: Unknown</div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">📊</span>Summary by day</div>
+<div class="c-receipt-wrap">
+<div class="c-resline">
+<div class="c-resleft">Search date<span class="c-subtext">Format DD.MM.YYYY</span></div>
+<div class="c-resval" id="resDate"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline c-highlight-line">
+<div class="c-resleft">Serial number of the day<span class="c-subtext">Year to date</span></div>
+<div class="c-resval" id="resDayNum"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Year length<span class="c-subtext" id="resLeapSub">Leap year?</span></div>
+<div class="c-resval" id="resTotalDays"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline" style="border-bottom: none;">
+<div class="c-resleft">Ordinary week<span class="c-subtext">Counting the weeks of the year</span></div>
+<div class="c-resval" id="resWeek"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+</div>
+<div class="c-modal-overlay" id="dayInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeDayInfo">×</button>
+<div class="c-modal-title"><span class="icon">📖</span>About serial numbers of days</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">A calendar year has 365 days, and a leap year has 366. An extra day is added to synchronize with the astronomical year.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>Leap year rule:</b><br/>A year is a leap year if it is divisible by 4, but years divisible by 100 are not leap years, except those that are divisible by 400.</div>
+<div style="background: #eff6ff; padding: 12px; border-radius: 8px; border: 1px solid #bae6fd; font-size: 13px; color: #0284c7;">
+<b>Interesting fact:</b>The 256th day of the year (2 to the 8th power) is celebrated as a professional holiday for programmers. In a normal year it falls on September 13, and in a leap year it falls on September 12.</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let activeMode = 'date';
+  let isCalculated = false;
+
+  const initDate = new Date();
+  $('#date-input').value = initDate.toISOString().split('T')[0];
+  $('#year-input').value = initDate.getFullYear();
+
+  // Модальное окно
+  const openModal = () => { $('#dayInfoModal').classList.add('show'); };
+  $('#openDayInfo').addEventListener('click', openModal);
+  $('#openDayInfo2').addEventListener('click', openModal);
+  $('#closeDayInfo').addEventListener('click', () => { $('#dayInfoModal').classList.remove('show'); });
+  $('#dayInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#dayInfoModal').classList.remove('show');
+  });
+
+  function updateModeUI() {
+      if (Math.abs(activeMode === 'date') === 1) {
+          $('#mode-date').classList.remove('is-hidden');
+          $('#mode-number').classList.add('is-hidden');
+      } else {
+          $('#mode-date').classList.add('is-hidden');
+          $('#mode-number').classList.remove('is-hidden');
+      }
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  }
+
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeMode = btn.dataset.mode;
+        updateModeUI();
+    });
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          let action = btn.dataset.action;
+          let y = initDate.getFullYear();
+          let cY = parseInt($('#year-input').value);
+          let isNanCy = isNaN(cY);
+          if (Math.abs(isNanCy === false) === 1) {
+             let isNeg = false;
+             if (Math.abs(Math.sign(cY) === -1) === 1) isNeg = true;
+             if (Math.abs(isNeg === false) === 1) y = cY;
+          }
+          
+          if (Math.abs(action === 'today') === 1) {
+              $('#date-input').value = initDate.toISOString().split('T')[0];
+          }
+          if (Math.abs(action === 'newyear') === 1) {
+              $('#date-input').value = y + '-01-01';
+          }
+          if (Math.abs(action === 'endyear') === 1) {
+              $('#date-input').value = y + '-12-31';
+          }
+          if (Math.abs(action === 'num-100') === 1) {
+              $('#day-number').value = 100;
+          }
+          if (Math.abs(action === 'num-256') === 1) {
+              $('#day-number').value = 256;
+          }
+
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let isErr = false;
+    let y = 0, m = 0, d = 0;
+
+    if (Math.abs(activeMode === 'date') === 1) {
+        let val = $('#date-input').value;
+        let isEmpty = false;
+        if (Math.abs(val.length === 0) === 1) isEmpty = true;
+        
+        if (Math.abs(isEmpty === true) === 1) {
+            isErr = true;
+        } else {
+            let parts = val.split('-');
+            y = parseInt(parts[0]);
+            m = parseInt(parts[1]) - 1;
+            d = parseInt(parts[2]);
+        }
+    } else {
+        y = parseInt($('#year-input').value);
+        let targetDay = parseInt($('#day-number').value);
+
+        let isNanY = isNaN(y);
+        let isNanD = isNaN(targetDay);
+        if (Math.abs(isNanY === true) === 1) isErr = true;
+        if (Math.abs(isNanD === true) === 1) isErr = true;
+
+        let isNegY = false;
+        if (Math.abs(Math.sign(y) === -1) === 1) isNegY = true;
+        if (Math.abs(isNegY === true) === 1) isErr = true;
+
+        let isZeroY = false;
+        if (Math.abs(Math.sign(y) === 0) === 1) isZeroY = true;
+        if (Math.abs(isZeroY === true) === 1) isErr = true;
+
+        let leap = false;
+        if (Math.abs(y % 400) === 0) leap = true;
+        else if (Math.abs(y % 100) === 0) leap = false;
+        else if (Math.abs(y % 4) === 0) leap = true;
+
+        let maxDays = 365;
+        if (Math.abs(leap === true) === 1) maxDays = 366;
+
+        let isLess1 = false;
+        if (Math.abs(Math.sign(targetDay - 1) === -1) === 1) isLess1 = true;
+        let isMoreMax = false;
+        if (Math.abs(Math.sign(maxDays - targetDay) === -1) === 1) isMoreMax = true;
+
+        if (Math.abs(isLess1 === true) === 1) isErr = true;
+        if (Math.abs(isMoreMax === true) === 1) isErr = true;
+
+        if (Math.abs(isErr === false) === 1) {
+            let rem = targetDay;
+            let feb = 28;
+            if (Math.abs(leap === true) === 1) feb = 29;
+            let dim = [31, feb, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+            let mIdx = 0;
+            while(Math.abs(mIdx === 12) === 0) {
+                let s = Math.sign(rem - dim[mIdx]);
+                let isGreater = false;
+                if (Math.abs(s === 1) === 1) isGreater = true;
+
+                if (Math.abs(isGreater === true) === 1) {
+                    rem -= dim[mIdx];
+                    m++;
+                } else {
+                    break;
+                }
+                mIdx++;
+            }
+            d = rem;
+        }
+    }
+
+    if (Math.abs(isErr === true) === 1) {
+        $('#vis-box').classList.add('is-hidden');
+        $('#resultBox').classList.remove('show');
+        if (Math.abs(shouldScroll === true) === 1) {
+            $('#errorMsg').textContent = "Specify the correct parameters for calculation";
+            $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    // Mathematical Core
+    let leap = false;
+    if (Math.abs(y % 400) === 0) leap = true;
+    else if (Math.abs(y % 100) === 0) leap = false;
+    else if (Math.abs(y % 4) === 0) leap = true;
+
+    let totalDays = 365;
+    if (Math.abs(leap === true) === 1) totalDays = 366;
+
+    let feb = 28;
+    if (Math.abs(leap === true) === 1) feb = 29;
+    let dim = [31, feb, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+    let dayOfYear = 0;
+    let idx = 0;
+    while(Math.abs(idx === 12) === 0) {
+        let diff = Math.sign(m - idx);
+        let isMore = false;
+        if (Math.abs(diff === 1) === 1) isMore = true;
+
+        if (Math.abs(isMore === true) === 1) {
+            dayOfYear += dim[idx];
+        }
+        idx++;
+    }
+    dayOfYear += d;
+
+    let week = Math.floor((dayOfYear - 1) / 7) + 1;
+    let leftDays = totalDays - dayOfYear;
+    let p = (dayOfYear / totalDays) * 100;
+
+    // Output Formatting
+    let mStr = (m + 1).toString().padStart(2, '0');
+    let dStr = d.toString().padStart(2, '0');
+    $('#resDate').textContent = dStr + '.' + mStr + '.' + y;
+    
+    $('#resDayNum').textContent = dayOfYear;
+    
+    $('#resTotalDays').textContent = totalDays + "days";
+    let lStr = "No (Regular)";
+    if (Math.abs(leap === true) === 1) lStr = "Yes (Leap)";
+    $('#resLeapSub').textContent = lStr;
+    
+    $('#resWeek').textContent = week + "week";
+
+    // Visuals logic
+    let seasonNames = ["❄️ Winter", "❄️ Winter", "🌱 Spring", "🌱 Spring", "🌱 Spring", "☀️ Summer", "☀️ Summer", "☀️ Summer", "🍂 Autumn", "🍂 Autumn", "🍂 Autumn", "❄️ Winter"];
+    let seasonClasses = ["c-season-winter", "c-season-winter", "c-season-spring", "c-season-spring", "c-season-spring", "c-season-summer", "c-season-summer", "c-season-summer", "c-season-autumn", "c-season-autumn", "c-season-autumn", "c-season-winter"];
+    let seasonColors = ["#0284c7", "#0284c7", "#059669", "#059669", "#059669", "#d97706", "#d97706", "#d97706", "#ea580c", "#ea580c", "#ea580c", "#0284c7"];
+    
+    let currentSeasonName = seasonNames[m];
+    let currentSeasonClass = seasonClasses[m];
+    let currentSeasonColor = seasonColors[m];
+
+    let badge = $('#vis-season');
+    badge.className = 'c-season-badge ' + currentSeasonClass;
+    badge.textContent = currentSeasonName;
+
+    $('#vis-passed').textContent = dayOfYear;
+    $('#vis-left').textContent = leftDays;
+    $('#vis-percent').textContent = Math.round(p) + '%';
+    
+    let circle = $('#vis-circle');
+    circle.style.strokeDasharray = "0, 100";
+    circle.style.stroke = currentSeasonColor;
+    void circle.offsetWidth;
+    circle.style.strokeDasharray = p + ", 100";
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#vis-box').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    $('#date-input').value = initDate.toISOString().split('T')[0];
+    $('#year-input').value = initDate.getFullYear();
+    $('#day-number').value = '';
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    $('#vis-circle').style.strokeDasharray = "0, 100";
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      let valClean = valRaw.replace(/\\s/g, '').trim();
+      navigator.clipboard.writeText(valClean);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>The ordinal number of a day in a year is a number from 1 to 366 that indicates the position of a specific date from the beginning of the calendar cycle. This parameter is widely used in programming (ISO 8601 format), logistics, financial planning and statistics. Our tool allows you to instantly perform two types of operations:</p>
+<ul class="wp-block-list">
+<li><strong>Convert date to number:</strong> By entering a specific date and month, you get its strict index in the year.</li>
+<li><strong>Search date by number:</strong> By specifying a number (for example, 256), you will find out what calendar day it falls on in a particular year.</li>
+</ul>
+<h2 class="wp-block-heading" id="matematicheskaya-model-i-formuly-rascheta-2">Mathematical model and calculation formulas</h2>
+<p>The calculator is based on an algorithm for checking the year for a leap year and summing up the number of days in the months preceding the desired one.</p>
+<p>The following logical formula is used to determine the year type:</p>
+<p>A year ( $Y$ ) is considered a leap year if the following condition is met:</p>
+<p>$$(Y \mod 400 = 0) \lor ((Y \mod 4 = 0) \land (Y \mod 100 \neq 0))$$</p>
+<p>The day's serial number ( $N$ ) is calculated using the formula:</p>
+<p>$$N = \sum_{i=1}^{M-1} D_i + d$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $M$ — serial number of the current month;</li>
+<li> $D_i$ — number of days in the $i$ th month;</li>
+<li> $d$ is the date of the current month.</li>
+</ul>
+<h2 class="wp-block-heading" id="tablitsa-raspredeleniya-dnej-po-mesyatsam-2">Table of distribution of days by month</h2>
+<p>Depending on whether the year is a common year or a leap year, the distribution of ordinal numbers changes after February 28th.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Month</strong></td><td><strong>Days in a normal year</strong></td><td><strong>Days in a leap year</strong></td><td><strong>Number range (regular)</strong></td></tr></thead><tbody><tr><td>January</td><td>31</td><td>31</td><td>1 – 31</td></tr><tr><td>February</td><td>28</td><td>29</td><td>32 – 59 / 60</td></tr><tr><td>March</td><td>31</td><td>31</td><td>60 – 90</td></tr><tr><td>April</td><td>30</td><td>30</td><td>91 – 120</td></tr><tr><td>May</td><td>31</td><td>31</td><td>121 – 151</td></tr><tr><td>June</td><td>30</td><td>30</td><td>152 – 181</td></tr><tr><td>July</td><td>31</td><td>31</td><td>182 – 212</td></tr><tr><td>August</td><td>31</td><td>31</td><td>213 – 243</td></tr><tr><td>September</td><td>30</td><td>30</td><td>244 – 273</td></tr><tr><td>October</td><td>31</td><td>31</td><td>274 – 304</td></tr><tr><td>November</td><td>30</td><td>30</td><td>305 – 334</td></tr><tr><td>December</td><td>31</td><td>31</td><td>335 – 365 / 366</td></tr></tbody></table></div></figure>
+<h3 class="wp-block-heading" id="osoboe-znachenie-256-j-den-goda-2">Special meaning: 256th day of the year</h3>
+<p>One of the most popular queries is to search for the 256th day. This number was not chosen at random: $2^8$ (the number of values ​​that can be expressed using one eight-bit byte).</p>
+<ul class="wp-block-list">
+<li>IN <strong>normal year</strong> this day falls on <strong>September 13</strong>.</li>
+<li>IN <strong>leap year</strong> - on <strong>September 12</strong> It is on this day that a professional holiday is officially celebrated - Programmer's Day.</li>
+</ul>
+<h2 class="wp-block-heading" id="osnovnye-funktsii-nashego-kalkulyatora-2">Main functions of our calculator</h2>
+<p>The tool is designed with advanced user experience (UX) in mind and provides the following data:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Progress indicator:</strong> a visual pie chart shows what percentage of the year is already behind you.</li>
+<li><strong>Week number:</strong> calculation of the ordinal week from the beginning of the year for accurate time management.</li>
+<li><strong>Season Definition:</strong> automatic identification of the current season (winter, spring, summer, autumn).</li>
+<li><strong>Days to go counter:</strong> you immediately see how much time is left until the celebration of the next New Year.</li>
+</ol>
+<h3 class="wp-block-heading" id="kak-polzovatsya-instrumentom-2">How to use the tool</h3>
+<p>The interface is divided into two modes for your convenience:</p>
+<ul class="wp-block-list">
+<li><strong>“Search by date” mode:</strong> Select a date on the calendar or click the Today button to get an instant summary. Use the "Start of Year" or "End of Year" quick buttons to analyze period boundaries.</li>
+<li><strong>“Search by number” mode:</strong> Enter any number from 1 to 366. Be sure to specify the year, as for the 60th day onwards the result will depend on whether it is a leap year or not.</li>
+</ul>
+</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car loan calculator: Calculate monthly payment and overpayment online</title>
+    <meta name="description" content="Car loan calculator: Calculate monthly payment and overpayment online - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Car loan calculator: Calculate monthly payment and overpayment online</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (строго по шаблону) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-row.cols-3 { grid-template-columns: repeat(3, minmax(220px, 1fr)); }
+    .c-row.single { grid-template-columns: 1fr; }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    .c-help {font-size:12px;color:#777;text-align:center;}
+    .c-input, .c-select, .c-textarea { width:100%; padding:12px 14px; border:1px solid #ccc; border-radius:8px; font-size:14px; }
+    .c-input:focus, .c-select:focus, .c-textarea:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap;margin-bottom: 16px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+
+    /* Результат */
+    .c-result { border:1px dashed #4caf50; border-radius:10px; padding:10px; background:#fff; display:none; }
+    .c-result.show { display:grid; }
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #4caf50; grid-template-columns: 0.4fr 0.5fr 0.1fr; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; }
+
+    /* Кнопка копирования */
+    .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden;
+      background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+      background-repeat:no-repeat; background-position:center; background-size:20px 20px; }
+
+    .is-hidden { display:none !important; }
+    @media (max-width: 860px) { .c-resval { font-size:14px; } }
+    @media (max-width: 720px) { .c-row.cols-3 { grid-template-columns: 1fr; } }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-row">
+<div class="c-field">
+<label class="c-label" for="carPrice">Car cost</label>
+<input class="c-input" id="carPrice" min="0" step="100" type="number" value="1500000"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="initialPayment">Down payment</label>
+<input class="c-input" id="initialPayment" min="0" step="100" type="number" value="300000"/>
+</div>
+</div>
+<div class="c-row cols-3">
+<div class="c-field">
+<label class="c-label" for="rate">Bid<span class="c-term">%</span></label>
+<input class="c-input" id="rate" min="0" step="0.1" type="number" value="14.5"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="term">Term<span class="c-term">months</span></label>
+<input class="c-input" id="term" min="1" step="1" type="number" value="60"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="currency">Currency</label>
+<select class="c-select" id="currency">
+<option value="$">$ (RUB)</option>
+<option value="$">$ (USD)</option>
+<option value="€">€ (EUR)</option>
+<option value="₴">₴ (UAH)</option>
+</select>
+</div>
+</div>
+<div class="c-row single">
+<div class="c-field">
+<label class="c-label" for="scheme">Repayment scheme</label>
+<select class="c-select" id="scheme">
+<option selected="" value="annuity">Annuity (equal payments)</option>
+<option value="differentiated">Differentiated (payment decreases)</option>
+</select>
+</div>
+</div>
+<div style="margin-top:10px; padding:10px; background:#f9f9f9; border-radius:8px;">
+<div class="c-label" style="margin-bottom:10px;">Commissions (optional)</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label" style="font-weight:400;">One-time<span class="c-term">upon issuance</span></label>
+<div style="display:flex; gap:5px;">
+<input class="c-input" id="feeOneTime" min="0" step="0.1" style="flex:2;" type="number" value="0"/>
+<select class="c-select" id="feeOneTimeType" style="flex:1; min-width:60px;">
+<option value="fix">currency</option>
+<option value="perc">%</option>
+</select>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label" style="font-weight:400;">Monthly</label>
+<div style="display:flex; gap:5px;">
+<input class="c-input" id="feeMonthly" min="0" step="0.1" style="flex:2;" type="number" value="0"/>
+<select class="c-select" id="feeMonthlyType" style="flex:1; min-width:60px;">
+<option value="fix">currency</option>
+<option value="perc">%</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<div class="c-actions" style="margin-top:16px;">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div aria-live="polite" class="c-result" id="resultBox">
+<div class="c-resline is-hidden" id="validationError" style="background:#ffdddd; color:#cc0000;">
+<div class="c-resleft">Error:</div>
+<div class="c-resval" id="errorMsg" style="color:#cc0000; font-weight: 500;"></div>
+<button class="c-copy is-hidden" disabled=""></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Monthly payment</div>
+<div class="c-resval" id="resMonthly">0</div>
+<button aria-label="Copy payment" class="c-copy" id="copyMonthly" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Loan amount (body)</div>
+<div class="c-resval" id="resCreditAmount">0</div>
+<button aria-label="Copy credit" class="c-copy" id="copyCreditAmount" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Overpayment (interest)</div>
+<div class="c-resval" id="resOverpayment">0</div>
+<button aria-label="Copy overpayment" class="c-copy" id="copyOverpayment" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Commissions and extras expenses</div>
+<div class="c-resval" id="resFees">0</div>
+<button aria-label="Copy commissions" class="c-copy" id="copyFees" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Total payment amount</div>
+<div class="c-resval" id="resTotal">0</div>
+<button aria-label="Copy total" class="c-copy" id="copyTotal" title="Copy"></button>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика =====
+  const $ = (s) => wrap.querySelector(s);
+  
+  const resBox = $('#resultBox');
+  const errorBox = $('#validationError');
+  const errorMsg = $('#errorMsg');
+  
+  const outputs = {
+      monthly: $('#resMonthly'),
+      credit: $('#resCreditAmount'),
+      overpayment: $('#resOverpayment'),
+      fees: $('#resFees'),
+      total: $('#resTotal')
+  };
+
+  // ----- Вспомогательные функции -----
+  function num(v){ const n = parseFloat(String(v).replace(',', '.')); return Number.isFinite(n) ? n : NaN; }
+  
+  function fmt(v, d=2){
+    if (isNaN(v)) return '—';
+    return v.toLocaleString('ru-RU', { maximumFractionDigits: d, minimumFractionDigits: d });
+  }
+
+  // ИСПРАВЛЕНО: Функция isZero
+  function isZero(val) {
+    const tolerance = 1e-9;
+    const check = Math.sign(tolerance - Math.abs(val));
+    if (check === -1) return false;
+    return true;
+  }
+  
+  function setError(msg) {
+    errorMsg.textContent = msg;
+    errorBox.classList.remove('is-hidden');
+    resBox.classList.add('show');
+  }
+  function hideError() {
+    errorBox.classList.add('is-hidden');
+  }
+  
+  // Расчет комиссии (возвращает абсолютное значение)
+  function calcFee(val, type, creditAmount) {
+      if (isNaN(val)) return 0;
+      if (type === 'perc') {
+          return creditAmount * (val / 100);
+      }
+      return val;
+  }
+
+  // ----- Главный расчет -----
+  function calc() {
+    hideError();
+    
+    // 1. Сбор данных
+    const price = num($('#carPrice').value);
+    const initPay = num($('#initialPayment').value);
+    const rate = num($('#rate').value);
+    const term = num($('#term').value);
+    const curr = $('#currency').value;
+    const scheme = $('#scheme').value;
+    
+    // Комиссии
+    const feeOneVal = num($('#feeOneTime').value);
+    const feeOneType = $('#feeOneTimeType').value;
+    const feeMonthVal = num($('#feeMonthly').value);
+    const feeMonthType = $('#feeMonthlyType').value;
+
+    // 2. Валидация
+    if (isNaN(price) || isNaN(initPay) || isNaN(rate) || isNaN(term)) {
+      setError('Please enter valid numeric values.');
+      return;
+    }
+    // ИСПРАВЛЕНО: < 0
+    if (Math.sign(price) === -1 || Math.sign(initPay) === -1 || Math.sign(term) === -1) {
+       setError('Values ​​cannot be negative.');
+       return;
+    }
+    // ИСПРАВЛЕНО: price < initPay
+    if (Math.sign(price - initPay) === -1) {
+        setError('The down payment cannot be more than the cost of the car.');
+        return;
+    }
+
+    // 3. Расчет
+    const creditAmount = price - initPay;
+    let totalPayment = 0;
+    let totalInterest = 0;
+    let monthlyPaymentText = '';
+    
+    // Комиссии
+    const oneTimeFee = calcFee(feeOneVal, feeOneType, creditAmount);
+    const monthlyFee = calcFee(feeMonthVal, feeMonthType, creditAmount);
+    const totalFees = oneTimeFee + (monthlyFee * term);
+    
+    // Ежемесячная процентная ставка
+    const i = rate / 100 / 12;
+    
+    if (scheme === 'annuity') {
+        // Аннуитетный платеж: P = S * (i * (1+i)^n) / ((1+i)^n - 1)
+        if (isZero(i)) {
+             const pay = creditAmount / term;
+             totalPayment = creditAmount;
+             monthlyPaymentText = `${fmt(pay + monthlyFee)} ${curr}`;
+        } else {
+             const coef = Math.pow(1 + i, term);
+             const pay = creditAmount * (i * coef) / (coef - 1);
+             
+             totalPayment = pay * term;
+             totalInterest = totalPayment - creditAmount;
+             
+             monthlyPaymentText = `${fmt(pay + monthlyFee)} ${curr}`;
+        }
+    } else {
+        // Дифференцированный платеж
+        // Основной долг платится равными долями: b = S / n
+        // Проценты начисляются на остаток: In = Rest * i
+        const b = creditAmount / term;
+        let currentRest = creditAmount;
+        let firstPay = 0;
+        let lastPay = 0;
+        
+        for (let m = 0; m < term; m++) {
+            const interest = currentRest * i;
+            const payment = b + interest;
+            
+            if (m === 0) firstPay = payment;
+            if (m === term - 1) lastPay = payment;
+            
+            totalPayment += payment;
+            currentRest -= b;
+        }
+        totalInterest = totalPayment - creditAmount;
+        
+        monthlyPaymentText = `${fmt(firstPay + monthlyFee)} ... ${fmt(lastPay + monthlyFee)} ${curr}`;
+    }
+    
+    const finalTotal = totalPayment + totalFees;
+
+    // 4. Вывод
+    outputs.monthly.textContent = monthlyPaymentText;
+    outputs.credit.textContent = `${fmt(creditAmount)} ${curr}`;
+    outputs.overpayment.textContent = `${fmt(totalInterest)} ${curr}`;
+    outputs.fees.textContent = `${fmt(totalFees)} ${curr}`;
+    outputs.total.textContent = `${fmt(finalTotal)} ${curr}`;
+
+    resBox.classList.add('show');
+  }
+
+  // ----- Слушатели -----
+  $('#calcBtn').addEventListener('click', calc);
+  $('#resetBtn').addEventListener('click', () => {
+    $('#carPrice').value = '1500000';
+    $('#initialPayment').value = '300000';
+    $('#rate').value = '14.5';
+    $('#term').value = '60';
+    $('#scheme').value = 'annuity';
+    $('#feeOneTime').value = '0';
+    $('#feeMonthly').value = '0';
+    resBox.classList.remove('show');
+    hideError();
+  });
+
+  // Копирование
+  wrap.addEventListener('click', (e) => {
+    let textToCopy = null;
+    let targetId = e.target.id;
+    
+    // Функция очистки (берет только цифры и знаки)
+    function clean(s) { return s.replace(/[^\d.,-]/g, '').trim(); }
+    // Для диапазона берем как есть
+    function getVal(el) { return el.textContent.replace(/[^\d., \-]/g, '').trim(); }
+
+    if (targetId === 'copyMonthly') textToCopy = getVal(outputs.monthly);
+    if (targetId === 'copyCreditAmount') textToCopy = clean(outputs.credit.textContent);
+    if (targetId === 'copyOverpayment') textToCopy = clean(outputs.overpayment.textContent);
+    if (targetId === 'copyFees') textToCopy = clean(outputs.fees.textContent);
+    if (targetId === 'copyTotal') textToCopy = clean(outputs.total.textContent);
+    
+    if (textToCopy) {
+      try { navigator.clipboard?.writeText(textToCopy); } catch (_) {}
+    }
+  });
+
+  // Enter
+  wrap.addEventListener('keydown', (e) => {
+    // ИСПРАВЛЕНО: Замена &&
+    if (e.key === 'Enter') {
+      if (e.target.matches('input, select')) {
+        e.preventDefault();
+        calc();
+      }
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<h2 class="wp-block-heading" id="kak-rasschitat-kredit-na-avtomobil-samostoyatelno-2">How to calculate a car loan yourself?</h2>
+<p>Buying a car on credit is a serious financial decision. Bank promotional offers often indicate a “minimum payment” but are silent about the actual amount of overpayment and hidden fees.</p>
+<p>Our <strong>car loan calculator</strong> is an independent tool that will help you see the complete financial picture before going to a car dealership. It allows you to simulate any conditions: from a classic bank loan to installment plans with a balance payment.</p>
+<h2 class="wp-block-heading" id="annuitetnyj-ili-differentsirovannyj-chto-vybrat-2">Annuity or Differentiated: What to choose?</h2>
+<p>This is the most common question from borrowers. Our calculator supports both repayment plans so you can compare them at a glance.</p>
+<h3 class="wp-block-heading" id="1-annuitetnaya-shema-ravnye-platezhi-2">1. Annuity scheme (Equal payments)</h3>
+<p>You pay the bank the same amount every month for the entire term. This is convenient for the family budget, but in the end you will pay more interest. At the beginning of the term, most of the payment goes to pay off interest, and only a small part goes to the principal of the debt.</p>
+<p><strong>Formula for calculating annuity payment:</strong></p>
+<p>$$A = K \cdot \frac{i \cdot (1 + i)^n}{(1 + i)^n — 1}$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $A$ - monthly payment.</li>
+<li> $K$ — loan amount (car price minus down payment).</li>
+<li> $i$ - monthly interest rate (annual / 12 / 100).</li>
+<li> $n$ - number of months.</li>
+</ul>
+<h3 class="wp-block-heading" id="2-differentsirovannaya-shema-ubyvayushhie-platezhi-2">2. Differentiated scheme (Decreasing payments)</h3>
+<p>The principal amount is divided into equal parts, and interest is charged on the balance. In the first months, payments will be maximum (hard on the budget), but with each month the load decreases. <strong>The final overpayment with this scheme is always less.</strong></p>
+<h2 class="wp-block-heading" id="sravnenie-shem-pogasheniya-2">Comparison of repayment schemes</h2>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Characteristic</strong></td><td><strong>Annuity scheme</strong></td><td><strong>Differentiated scheme</strong></td></tr></thead><tbody><tr><td><strong>Payment amount</strong></td><td>Same every month</td><td>Decreases towards the end of the term</td></tr><tr><td><strong>Load at the beginning</strong></td><td>Moderate</td><td>High</td></tr><tr><td><strong>Total overpayment</strong></td><td>Higher</td><td>Below (cost savings)</td></tr><tr><td><strong>Popularity</strong></td><td>90% of banks offer it</td><td>Rarely seen</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="skrytye-komissii-i-realnaya-stavka-2">Hidden commissions and real rate</h2>
+<p>Banks often lower the advertised interest rate, but add additional fees that significantly increase the cost of the loan. Our tool allows you to take them into account:</p>
+<ul class="wp-block-list">
+<li><strong>One-time commissions:</strong> Fee for issuing a loan, issuing an account, or compulsory life insurance during a transaction.</li>
+<li><strong>Monthly commissions:</strong> Fee for account maintenance or SMS notification. Even 100 rubles a month over 5 years turns into 6,000 rubles of additional expenses.</li>
+</ul>
+<h2 class="wp-block-heading" id="kak-polzovatsya-kalkulyatorom-2">How to use the calculator?</h2>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Enter the cost of the car:</strong> The full price of the car in the showroom or from the seller.</li>
+<li><strong>Enter your down payment:</strong> The amount you are willing to deposit immediately (in cash or via Trade-In). The higher it is, the lower the overpayment.</li>
+<li><strong>Loan parameters:</strong> Specify the bank's rate and term (usually from 12 to 84 months).</li>
+<li><strong>Add commissions:</strong> If the contract has CASCO insurance included in the loan body, or other fees, indicate them in the appropriate block.</li>
+</ol>
+<p>Click <strong>"Calculate"</strong> to get a detailed summary: what your monthly load will be, how much you will give to the bank in the form of interest, and what the real cost of the car is, taking into account all payments.</p>
+</div>
+    </div>
+</body>
+</html>

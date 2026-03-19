@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online ROI and ROMI calculator: calculating profitability and return on marketing</title>
+    <meta name="description" content="Online ROI and ROMI calculator: calculating profitability and return on marketing - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Online ROI and ROMI calculator: calculating profitability and return on marketing</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: end; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-receipt-wrap { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 15px; position: relative; overflow: hidden; }
+    .c-receipt-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: repeating-linear-gradient(45deg, #0693e3, #0693e3 10px, #38bdf8 10px, #38bdf8 20px); }
+    .c-receipt-wrap.is-profit::before { background: repeating-linear-gradient(45deg, #10b981, #10b981 10px, #34d399 10px, #34d399 20px); }
+    .c-receipt-wrap.is-loss::before { background: repeating-linear-gradient(45deg, #ef4444, #ef4444 10px, #f87171 10px, #f87171 20px); }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #fff; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #eff6ff; border: 1px solid #bae6fd; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05); }
+    .c-highlight-line:hover { background: #e0f2fe; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .c-switch-wrap { display: flex; align-items: center; gap: 12px; cursor: pointer; margin-bottom: 5px; padding: 14px 16px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 2px 6px rgba(0,0,0,0.02); transition: 0.3s; }
+    .c-switch-wrap:hover { border-color: #cbd5e1; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .c-switch-track { width: 44px; height: 24px; background: #cbd5e1; border-radius: 24px; position: relative; transition: 0.3s; flex-shrink: 0; }
+    .c-switch-thumb { width: 18px; height: 18px; background: #fff; border-radius: 50%; position: absolute; top: 3px; left: 3px; transition: 0.3s; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+    input:checked + .c-switch-track { background: #0693e3; }
+    input:checked + .c-switch-track .c-switch-thumb { left: 23px; }
+    .c-switch-label { font-weight: 600; font-size: 15px; color: #333; }
+    
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* Advanced Visualization */
+    .c-chart-box { margin: 15px 0 25px; padding: 25px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); }
+    .c-chart-title { font-weight: 700; color: #0f172a; font-size: 15px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    
+    .c-dist-bar-wrap { width: 100%; height: 28px; background: #e2e8f0; border-radius: 8px; overflow: hidden; display: flex; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); border: 1px solid #cbd5e1; position: relative; margin-bottom: 12px; }
+    .c-dist-cost { height: 100%; background: #64748b; transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 12px; font-weight: 700; overflow: hidden; white-space: nowrap; width: 0%; }
+    .c-dist-profit { height: 100%; background: linear-gradient(135deg, #10b981, #059669); transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 12px; font-weight: 700; overflow: hidden; white-space: nowrap; width: 0%; position: relative;}
+    .c-dist-loss { height: 100%; background: linear-gradient(135deg, #ef4444, #dc2626); transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 12px; font-weight: 700; overflow: hidden; white-space: nowrap; width: 0%; position: relative;}
+    
+    .c-dist-profit::after, .c-dist-loss::after { content: ''; position: absolute; top:0; left:-100%; width:50%; height:100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); animation: shine 2s infinite linear; }
+    @keyframes shine { 100% { left: 200%; } }
+
+    .c-vis-legend { display: flex; justify-content: center; gap: 20px; font-size: 12px; font-weight: 600; color: #64748b; flex-wrap: wrap; }
+    .c-vis-dot { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; }
+
+    .c-status-badge { display: inline-flex; align-items: center; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-left: auto; }
+    .c-status-badge.green { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+    .c-status-badge.red { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-chart-box { padding: 15px; }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="roi-calc-wrapper">
+<div class="c-body">
+<div class="c-toggle" id="mode-tabs">
+<button class="c-toggle-btn active" data-mode="roi">Overall return on investment (ROI)</button>
+<button class="c-toggle-btn" data-mode="romi">Marketing and Advertising (ROMI)</button>
+</div>
+<div class="c-divider">
+<span class="icon">💼</span>Financial indicators<span class="c-help-icon" id="openRoiInfo" style="margin-left: 5px;">?</span>
+</div>
+<div id="block-roi">
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Revenue<span class="c-term">Total income</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="roi-rev" placeholder="For example: 500000" type="number"/>
+<span class="c-input-suffix">$</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Cost price<span class="c-term">Product costs</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="roi-cogs" placeholder="For example: 200000" type="number"/>
+<span class="c-input-suffix">$</span>
+</div>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field" style="grid-column: 1 / -1;">
+<label class="c-label">Additional costs<span class="c-term">Taxes, rent, salary, etc.</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="roi-exp" placeholder="0.00" type="number"/>
+<span class="c-input-suffix">$</span>
+</div>
+</div>
+</div>
+</div>
+<div class="is-hidden" id="block-romi">
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Advertising income<span class="c-term">Campaign revenue</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="romi-rev" placeholder="For example: 150000" type="number"/>
+<span class="c-input-suffix">$</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Advertising budget<span class="c-term">Investments</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="romi-spend" placeholder="For example: 30000" type="number"/>
+<span class="c-input-suffix">$</span>
+</div>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field" style="grid-column: 1 / -1;">
+<label class="c-label">Cost of goods sold<span class="c-term">Or services</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="romi-cogs" placeholder="For example: 50000" type="number"/>
+<span class="c-input-suffix">$</span>
+</div>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-chart-box is-hidden" id="vis-box">
+<div class="c-chart-title">
+<span class="icon">📊</span>Capital distribution<span class="c-status-badge" id="vis-status"></span>
+</div>
+<div class="c-dist-bar-wrap">
+<div class="c-dist-cost" id="vis-cost-bar"></div>
+<div class="c-dist-profit" id="vis-profit-bar"></div>
+<div class="c-dist-loss" id="vis-loss-bar"></div>
+</div>
+<div class="c-vis-legend">
+<div><span class="c-vis-dot" style="background:#64748b;"></span><span id="vis-lbl-cost">Cost</span></div>
+<div id="vis-leg-profit"><span class="c-vis-dot" style="background:#10b981;"></span>Net profit</div>
+<div class="is-hidden" id="vis-leg-loss"><span class="c-vis-dot" style="background:#ef4444;"></span>Net loss</div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">📈</span>Financial result</div>
+<div class="c-receipt-wrap" id="resReceiptWrap">
+<div class="c-resline">
+<div class="c-resleft">Net profit<span class="c-subtext">Income minus all expenses</span></div>
+<div class="c-resval" id="resNetProfit"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline c-highlight-line">
+<div class="c-resleft">Profitability (<span id="resMetricName">ROI</span>)<span class="c-subtext">Return on investment</span></div>
+<div class="c-resval" id="resRoiValue"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline is-hidden" id="resRoasLine">
+<div class="c-resleft">ROAS<span class="c-subtext">Refund of advertising costs</span></div>
+<div class="c-resval" id="resRoasValue"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+</div>
+<div class="c-modal-overlay" id="roiInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeRoiInfo">×</button>
+<div class="c-modal-title"><span class="icon">📖</span>What do these metrics mean?</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">Profitability metrics show how efficiently your capital is working.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>ROI (Return on Investment):</b><br/>Shows the overall profitability of a business or project.<br/>
+<span style="color: #64748b;">(Profit - Investment) / Investment * 100%</span>
+</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>ROMI (Return on Marketing Investment):</b><br/>Shows the return on marketing investments (including cost).<br/>
+<span style="color: #64748b;">(Advertising Profit - Advertising Expense) / Advertising Expense * 100%</span>
+</div>
+<div style="background: #eff6ff; padding: 12px; border-radius: 8px; border: 1px solid #bae6fd; font-size: 13px; color: #0284c7;">
+<b>ROAS (Return on Ad Spend):</b><br/>Shows the gross return on advertising costs (excluding product costs). If ROAS = 300%, then each invested ruble brought three rubles in revenue.</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let activeMode = 'roi';
+  let isCalculated = false;
+
+  // Modal logic
+  $('#openRoiInfo').addEventListener('click', () => { $('#roiInfoModal').classList.add('show'); });
+  $('#closeRoiInfo').addEventListener('click', () => { $('#roiInfoModal').classList.remove('show'); });
+  $('#roiInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#roiInfoModal').classList.remove('show');
+  });
+
+  function updateModeUI() {
+      if (Math.abs(activeMode === 'roi') === 1) {
+          $('#block-roi').classList.remove('is-hidden');
+          $('#block-romi').classList.add('is-hidden');
+          $('#resMetricName').textContent = 'ROI';
+          $('#resRoasLine').classList.add('is-hidden');
+      } else {
+          $('#block-roi').classList.add('is-hidden');
+          $('#block-romi').classList.remove('is-hidden');
+          $('#resMetricName').textContent = 'ROMI';
+          $('#resRoasLine').classList.remove('is-hidden');
+      }
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  }
+
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeMode = btn.dataset.mode;
+        updateModeUI();
+    });
+  });
+
+  function formatMoney(n) {
+      let parts = n.toFixed(0).split(".");
+      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+      return parts[0];
+  }
+
+  function formatPercent(n) {
+      return n.toFixed(1) + "%";
+  }
+
+  function getSafeFloat(id) {
+      let val = parseFloat($(id).value);
+      let isNanVal = isNaN(val);
+      if (Math.abs(isNanVal === true) === 1) val = 0;
+      let isNegative = false;
+      if (Math.abs(Math.sign(val) === -1) === 1) isNegative = true;
+      if (Math.abs(isNegative === true) === 1) val = 0;
+      return val;
+  }
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let rev = 0;
+    let cost = 0;
+    let invest = 0;
+    let spend = 0; 
+    
+    let isRoiMode = false;
+    if (Math.abs(activeMode === 'roi') === 1) isRoiMode = true;
+
+    if (Math.abs(isRoiMode === true) === 1) {
+        rev = getSafeFloat('#roi-rev');
+        let cogs = getSafeFloat('#roi-cogs');
+        let exp = getSafeFloat('#roi-exp');
+        cost = cogs + exp;
+        invest = cost;
+    } else {
+        rev = getSafeFloat('#romi-rev');
+        spend = getSafeFloat('#romi-spend');
+        let cogs = getSafeFloat('#romi-cogs');
+        cost = spend + cogs;
+        invest = spend;
+    }
+
+    let isErr = false;
+    let hasRev = false;
+    if (Math.abs(Math.sign(rev) === 1) === 1) hasRev = true;
+    let hasInvest = false;
+    if (Math.abs(Math.sign(invest) === 1) === 1) hasInvest = true;
+    
+    let condTotal = Math.abs(hasRev === false) + Math.abs(hasInvest === false);
+    if (Math.abs(Math.sign(condTotal) === 1) === 1) isErr = true;
+
+    if (Math.abs(isErr === true) === 1) {
+        $('#vis-box').classList.add('is-hidden');
+        $('#resultBox').classList.remove('show');
+        if (Math.abs(shouldScroll === true) === 1) {
+            $('#errorMsg').textContent = "Indicate revenue and costs (investments) greater than zero";
+            $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    let netProfit = rev - cost;
+    let roi = (netProfit / invest) * 100;
+    let roas = 0;
+    
+    if (Math.abs(isRoiMode === false) === 1) {
+        roas = (rev / spend) * 100;
+        $('#resRoasValue').textContent = formatPercent(roas);
+    }
+
+    // UI Update - Numbers
+    let isLoss = false;
+    if (Math.abs(Math.sign(netProfit) === -1) === 1) isLoss = true;
+    
+    if (Math.abs(isLoss === true) === 1) {
+        $('#resNetProfit').textContent = formatMoney(netProfit) + " $";
+        $('#resNetProfit').style.color = '#ef4444';
+        $('#resRoiValue').style.color = '#ef4444';
+        $('#resReceiptWrap').classList.remove('is-profit');
+        $('#resReceiptWrap').classList.add('is-loss');
+        
+        $('#vis-status').textContent = "Lesion";
+        $('#vis-status').className = "c-status-badge red";
+    } else {
+        $('#resNetProfit').textContent = "+" + formatMoney(netProfit) + " $";
+        $('#resNetProfit').style.color = '#10b981';
+        $('#resRoiValue').style.color = '#10b981';
+        $('#resReceiptWrap').classList.remove('is-loss');
+        $('#resReceiptWrap').classList.add('is-profit');
+        
+        $('#vis-status').textContent = "Pays off";
+        $('#vis-status').className = "c-status-badge green";
+    }
+    
+    let signStr = "";
+    let isPositiveRoi = false;
+    if (Math.abs(Math.sign(roi) === 1) === 1) isPositiveRoi = true;
+    if (Math.abs(isPositiveRoi === true) === 1) signStr = "+";
+    $('#resRoiValue').textContent = signStr + formatPercent(roi);
+
+    // Visual Bar Logic
+    let pCost = 0;
+    let pProfit = 0;
+    let pLoss = 0;
+
+    if (Math.abs(isLoss === false) === 1) {
+        // Profit logic: Total bar is Revenue
+        pCost = (cost / rev) * 100;
+        pProfit = (netProfit / rev) * 100;
+        pLoss = 0;
+        
+        $('#vis-leg-profit').classList.remove('is-hidden');
+        $('#vis-leg-loss').classList.add('is-hidden');
+    } else {
+        // Loss logic: Total bar is Cost
+        pCost = (rev / cost) * 100; 
+        pLoss = (Math.abs(netProfit) / cost) * 100;
+        pProfit = 0;
+        
+        $('#vis-leg-profit').classList.add('is-hidden');
+        $('#vis-leg-loss').classList.remove('is-hidden');
+        $('#vis-lbl-cost').textContent = "Recouped costs";
+    }
+
+    if (Math.abs(isLoss === false) === 1) $('#vis-lbl-cost').textContent = "Cost";
+
+    $('#vis-cost-bar').style.width = pCost + '%';
+    $('#vis-profit-bar').style.width = pProfit + '%';
+    $('#vis-loss-bar').style.width = pLoss + '%';
+
+    let displayPcost = false;
+    if (Math.abs(Math.sign(pCost - 10) === 1) === 1) displayPcost = true;
+    if (Math.abs(displayPcost === true) === 1) $('#vis-cost-bar').textContent = Math.round(pCost) + "%";
+    else $('#vis-cost-bar').textContent = "";
+
+    let displayPprofit = false;
+    if (Math.abs(Math.sign(pProfit - 10) === 1) === 1) displayPprofit = true;
+    if (Math.abs(displayPprofit === true) === 1) $('#vis-profit-bar').textContent = Math.round(pProfit) + "%";
+    else $('#vis-profit-bar').textContent = "";
+
+    let displayPloss = false;
+    if (Math.abs(Math.sign(pLoss - 10) === 1) === 1) displayPloss = true;
+    if (Math.abs(displayPloss === true) === 1) $('#vis-loss-bar').textContent = Math.round(pLoss) + "%";
+    else $('#vis-loss-bar').textContent = "";
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#resultBox').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    wrap.querySelectorAll('input[type="number"]').forEach(i => i.value = '');
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      let valClean = valRaw.replace('$', '').replace('%', '').replace('+', '').replace(/\\s/g, '').trim();
+      navigator.clipboard.writeText(valClean);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>In modern business, decisions made “by eye” lead to losses. To understand whether a project is making money or simply burning the budget, profitability metrics are used. This online calculator allows you to instantly calculate three key indicators: <strong>ROI</strong>, <strong>ROMI</strong> And <strong>ROAS</strong>.</p>
+<p>Understanding these numbers gives the business owner and marketer a number of benefits:</p>
+<ul class="wp-block-list">
+<li><strong>Efficiency rating:</strong> You see the real percentage return on every ruble invested.</li>
+<li><strong>Budget optimization:</strong> The ability to stop unprofitable campaigns in time and scale profitable ones.</li>
+<li><strong>Forecasting:</strong> A basis for planning future investments based on solid data.</li>
+<li><strong>Transparency:</strong> A clear division between revenue, “dirty” profit and net income.</li>
+</ul>
+<h2 class="wp-block-heading" id="osnovnye-formuly-rascheta-rentabelnosti-2">Basic formulas for calculating profitability</h2>
+<p>Our tool uses classical economic formulas, which are considered the “gold standard” of financial analysis.</p>
+<h3 class="wp-block-heading" id="formula-roi-return-on-investment-2">ROI (Return on Investment) formula</h3>
+<p>This indicator evaluates the total return on all investments in a project or business.</p>
+<p> $$ROI = \frac{\text{Доход} — \text{Все затраты}}{\text{Все затраты}} \times 100\%$$ </p>
+<h3 class="wp-block-heading" id="formula-romi-return-on-marketing-investment-2">ROMI (Return on Marketing Investment) formula</h3>
+<p>A metric focused exclusively on marketing activities. It takes into account the cost of the product to show the real return on advertising.</p>
+<p> $$ROMI = \frac{\text{Доход от рекламы} — \text{Маркетинговые расходы} — \text{Себестоимость}}{\text{Маркетинговые расходы}} \times 100\%$$ </p>
+<h3 class="wp-block-heading" id="formula-roas-return-on-ad-spend-2">ROAS (Return on Ad Spend) formula</h3>
+<p>Shows the gross effectiveness of advertising expenditures without taking into account production costs and operating expenses.</p>
+<p> $$ROAS = \frac{\text{Доход от рекламы}}{\text{Расходы на рекламу}} \times 100\%$$ </p>
+<h2 class="wp-block-heading" id="sravnenie-metrik-kakuyu-vybrat-2">Comparison of metrics: which one to choose?</h2>
+<p>For a comprehensive analysis, it is important to understand the difference between these indicators. The table below compares their purposes.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Metrics</strong></td><td><strong>What does it measure?</strong></td><td><strong>When to use</strong></td></tr></thead><tbody><tr><td><strong>ROI</strong></td><td>Total business profitability</td><td>When assessing the investment attractiveness of the entire project.</td></tr><tr><td><strong>ROMI</strong></td><td>Marketing ROI</td><td>To analyze the effectiveness of specific advertising channels.</td></tr><tr><td><strong>ROAS</strong></td><td>Cost efficiency</td><td>For operational control of the work of a targetologist or contextologist.</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="kak-polzovatsya-kalkulyatorom-poshagovaya-instruktsiya-2">How to use a calculator: step-by-step instructions</h2>
+<p>We've designed the most intuitive interface with data visualization so you can interpret the results in seconds.</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Select mode:</strong> Switch between ROI (for general business analysis) and ROMI (for advertising analysis).</li>
+<li><strong>Enter details:</strong>
+<ul class="wp-block-list">
+<li><strong>Revenue:</strong> The total amount of money received from sales.</li>
+<li><strong>Cost price:</strong> Direct costs of creating a product or providing a service.</li>
+<li><strong>Additional costs:</strong> Rent, taxes, salaries and other costs.</li>
+</ul>
+</li>
+<li><strong>Click "Calculate":</strong> The system will display the exact percentage and the amount of net profit.</li>
+<li><strong>Study the diagram:</strong> The interactive scale will show the distribution of your capital: what part is the cost, and what part is the net profit (or loss).</li>
+</ol>
+<h2 class="wp-block-heading" id="interpretatsiya-rezultatov-2">Interpretation of results</h2>
+<p>What do these numbers mean for your business?</p>
+<ul class="wp-block-list">
+<li><strong>Above 0%:</strong> The project is paying off. You earn more than you spend.</li>
+<li><strong>Exactly 0%:</strong> Break even. You work “to zero”, investments are returned, but there is no profit.</li>
+<li><strong>Below 0%:</strong> The business is unprofitable. Each ruble invested brings in less than a ruble of revenue. The cost structure or sales strategy needs to be reconsidered.</li>
+</ul>
+<p>For ROAS, a good indicator in retail is considered to be between <strong>400%</strong> and higher, but in high-margin services this threshold can be significantly lower.</p>
+</div>
+    </div>
+</body>
+</html>

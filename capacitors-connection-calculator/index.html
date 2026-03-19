@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacitor Capacitance Calculator: Parallel and Series Connection</title>
+    <meta name="description" content="Capacitor Capacitance Calculator: Parallel and Series Connection - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Capacitor Capacitance Calculator: Parallel and Series Connection</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (строго по шаблону) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-row.cols-3 { grid-template-columns: repeat(3, minmax(220px, 1fr)); }
+    .c-row.single { grid-template-columns: 1fr; }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    .c-help {font-size:12px;color:#777;text-align:center;}
+    .c-input, .c-select, .c-textarea { width:100%; padding:12px 14px; border:1px solid #ccc; border-radius:8px; font-size:14px; }
+    .c-input:focus, .c-select:focus, .c-textarea:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap;margin-bottom: 16px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+
+    /* Результат */
+    .c-result { border:1px dashed #4caf50; border-radius:10px; padding:10px; background:#fff; display:none; }
+    .c-result.show { display:grid; }
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #4caf50; grid-template-columns: 0.4fr 0.5fr 0.1fr; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; }
+
+    /* Кнопка копирования */
+    .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden;
+      background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+      background-repeat:no-repeat; background-position:center; background-size:20px 20px; }
+
+    .is-hidden { display:none !important; }
+    @media (max-width: 860px) { .c-resval { font-size:14px; } }
+    @media (max-width: 720px) { .c-row.cols-3 { grid-template-columns: 1fr; } }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-row single">
+<div class="c-field">
+<label class="c-label" for="connectionType">Connection type</label>
+<select class="c-select" id="connectionType">
+<option selected="" value="parallel">Parallel (C = C₁ + C₂...)</option>
+<option value="series">Sequential (1/C = 1/C₁ + 1/C₂...)</option>
+</select>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label" for="capList">List of containers</label>
+<textarea class="c-textarea" id="capList" placeholder="For example: 10, 22, 47" rows="1">10, 22</textarea>
+<div class="c-help">Enter values ​​separated by commas or spaces.</div>
+</div>
+<div class="c-field">
+<label class="c-label" for="capUnit">Unit of measurement</label>
+<select class="c-select" id="capUnit">
+<option value="1e-12">pF (pF)</option>
+<option value="1e-9">nF</option>
+<option selected="" value="1e-6">µF (µF)</option>
+<option value="1e-3">mF</option>
+<option value="1">F (F)</option>
+</select>
+</div>
+</div>
+<div class="c-row single">
+<div class="c-field">
+<label class="c-label" for="voltage">Voltage (optional)</label>
+<input class="c-input" id="voltage" placeholder="To calculate charge and energy" step="any" type="number"/>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div aria-live="polite" class="c-result" id="resultBox">
+<div class="c-resline is-hidden" id="validationError" style="background:#ffdddd; color:#cc0000;">
+<div class="c-resleft">Error:</div>
+<div class="c-resval" id="errorMsg" style="color:#cc0000; font-weight: 500;"></div>
+<button class="c-copy is-hidden" disabled=""></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Equivalent capacity</div>
+<div class="c-resval" id="resCap"></div>
+<button aria-label="Copy capacity" class="c-copy" id="copyCap" title="Copy"></button>
+</div>
+<div class="c-resline is-hidden" id="chargeRow">
+<div class="c-resleft">Accumulated charge (Q)</div>
+<div class="c-resval" id="resCharge"></div>
+<button aria-label="Copy charge" class="c-copy" id="copyCharge" title="Copy"></button>
+</div>
+<div class="c-resline is-hidden" id="energyRow">
+<div class="c-resleft">Energy (E)</div>
+<div class="c-resval" id="resEnergy"></div>
+<button aria-label="Copy energy" class="c-copy" id="copyEnergy" title="Copy"></button>
+</div>
+<div class="c-resline single">
+<div class="c-resleft" style="font-size:12px; color:#777;">Formula:</div>
+<div class="c-resval" id="resFormula" style="font-size:13px; font-weight:400;"></div>
+<button class="c-copy is-hidden" disabled=""></button>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика =====
+  const $ = (s) => wrap.querySelector(s);
+  
+  const resBox = $('#resultBox');
+  const errorBox = $('#validationError');
+  const errorMsg = $('#errorMsg');
+  
+  const typeSelect = $('#connectionType');
+  const inputList = $('#capList');
+  const unitSelect = $('#capUnit');
+  const voltInput = $('#voltage');
+  
+  const outputs = {
+      cap: $('#resCap'),
+      charge: $('#resCharge'),
+      energy: $('#resEnergy'),
+      formula: $('#resFormula'),
+      rows: {
+          q: $('#chargeRow'),
+          e: $('#energyRow')
+      }
+  };
+
+  // ----- Вспомогательные функции -----
+  function num(v){ const n = parseFloat(String(v).replace(',', '.')); return Number.isFinite(n) ? n : NaN; }
+  
+  function fmt(v, d=3){
+    if (isNaN(v)) return '—';
+    return v.toLocaleString('ru-RU', { maximumFractionDigits: d });
+  }
+
+  // ИСПРАВЛЕНО: Функция isZero
+  function isZero(val) {
+    const tolerance = 1e-12;
+    const check = Math.sign(tolerance - Math.abs(val));
+    if (check === -1) return false;
+    return true;
+  }
+  
+  function setError(msg) {
+    errorMsg.textContent = msg;
+    errorBox.classList.remove('is-hidden');
+    resBox.classList.add('show');
+  }
+  function hideError() {
+    errorBox.classList.add('is-hidden');
+  }
+  
+  // Автоматический выбор единицы для отображения
+  function formatCapacitance(valInFarads) {
+      if (isZero(valInFarads)) return "0 F";
+      
+      let val = valInFarads;
+      let u = 'F';
+      
+      // ИСПРАВЛЕНО: < 1e-9 (т.е. меньше нанофарада -> пикофарады)
+      if (Math.sign(1e-9 - val) === 1) { 
+          val = val * 1e12; u = 'pF'; 
+      }
+      // ИСПРАВЛЕНО: < 1e-6 (меньше микро -> нано)
+      else if (Math.sign(1e-6 - val) === 1) {
+          val = val * 1e9; u = 'nF';
+      }
+      // ИСПРАВЛЕНО: < 1e-3 (меньше милли -> микро)
+      else if (Math.sign(1e-3 - val) === 1) {
+          val = val * 1e6; u = 'µF';
+      }
+      // ИСПРАВЛЕНО: < 1 (меньше 1Ф -> милли)
+      else if (Math.sign(1 - val) === 1) {
+          val = val * 1000; u = 'mf';
+      }
+      
+      return `${fmt(val)} ${u}`;
+  }
+
+  // ----- Главный расчет -----
+  function calc() {
+    hideError();
+    outputs.rows.q.classList.add('is-hidden');
+    outputs.rows.e.classList.add('is-hidden');
+    
+    const mode = typeSelect.value;
+    const rawText = inputList.value;
+    const unitMult = parseFloat(unitSelect.value);
+    const V = num(voltInput.value);
+    
+    // Парсинг
+    const parts = rawText.split(/[\s,;]+/);
+    const caps = [];
+    
+    // ИСПРАВЛЕНО: for..of
+    for (const p of parts) {
+        if (p.trim() === '') continue;
+        const val = num(p);
+        if (isNaN(val)) continue;
+        // ИСПРАВЛЕНО: < 0
+        if (Math.sign(val) === -1) {
+            setError('Capacitance cannot be negative.');
+            return;
+        }
+        caps.push(val);
+    }
+    
+    // ИСПРАВЛЕНО: length < 2
+    if (Math.sign(2 - caps.length) === 1) {
+        setError('Enter at least 2 values.');
+        return;
+    }
+
+    // Расчет (в Фарадах)
+    let totalC = 0;
+    let formulaStr = '';
+    
+    if (mode === 'parallel') {
+        // C = C1 + C2 ...
+        for (const c of caps) {
+            totalC += (c * unitMult);
+        }
+        formulaStr = `C = C₁ + C₂ + ... + Cₙ`;
+        
+    } else { // series
+        // 1/C = 1/C1 + 1/C2 ...
+        let sumInverse = 0;
+        let hasZero = false;
+        
+        for (const c of caps) {
+            if (isZero(c)) {
+                hasZero = true;
+            } else {
+                sumInverse += 1 / (c * unitMult);
+            }
+        }
+        
+        if (hasZero) {
+            totalC = 0; // Последовательно с 0 емкостью = обрыв? Нет, 0 емкость = бесконечный импеданс.
+            // Математически 1/0 -> inf. 1/C_eq -> inf. C_eq -> 0.
+        } else {
+            totalC = 1 / sumInverse;
+        }
+        formulaStr = `1/C = 1/C₁ + 1/C₂ + ... + 1/Cₙ`;
+    }
+    
+    outputs.cap.textContent = formatCapacitance(totalC);
+    outputs.formula.textContent = formulaStr;
+    
+    // Энергия и Заряд
+    if (isNaN(V) === false) {
+        // Q = C * V (Кулоны)
+        const Q = totalC * V;
+        // E = 0.5 * C * V^2 (Джоули)
+        const E = 0.5 * totalC * V * V;
+        
+        outputs.charge.textContent = `${fmt(Q, 6)} Кл`; // Кулон
+        outputs.energy.textContent = `${fmt(E, 6)} Дж`; // Джоуль
+        
+        outputs.rows.q.classList.remove('is-hidden');
+        outputs.rows.e.classList.remove('is-hidden');
+    }
+
+    resBox.classList.add('show');
+  }
+
+  // ----- Слушатели -----
+  typeSelect.addEventListener('change', calc);
+  $('#calcBtn').addEventListener('click', calc);
+  $('#resetBtn').addEventListener('click', () => {
+    inputList.value = '10, 22';
+    voltInput.value = '';
+    unitSelect.value = '1e-6';
+    typeSelect.value = 'parallel';
+    resBox.classList.remove('show');
+    hideError();
+  });
+
+  // Копирование
+  wrap.addEventListener('click', (e) => {
+    let textToCopy = null;
+    let targetId = e.target.id;
+    
+    function clean(s) { return s.split(' ')[0]; }
+    
+    if (targetId === 'copyCap') textToCopy = clean(outputs.cap.textContent);
+    if (targetId === 'copyCharge') textToCopy = clean(outputs.charge.textContent);
+    if (targetId === 'copyEnergy') textToCopy = clean(outputs.energy.textContent);
+    
+    if (textToCopy) {
+      try { navigator.clipboard?.writeText(textToCopy); } catch (_) {}
+    }
+  });
+
+  // Enter
+  wrap.addEventListener('keydown', (e) => {
+    // ИСПРАВЛЕНО: Замена &&
+    if (e.key === 'Enter') {
+      if (e.target.matches('input, textarea, select')) {
+        e.preventDefault();
+        calc();
+      }
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<h2 class="wp-block-heading" id="raschet-soedineniya-kondensatorov-onlajn-2">Calculation of capacitor connections online</h2>
+<p>When designing electronic circuits and repairing equipment, a situation often arises when a capacitor of the required value is not at hand. In this case, radio amateurs and engineers resort to combining batteries from several elements.</p>
+<p>Our <strong>online capacitor calculator</strong> allows you to instantly calculate the final capacitance of the circuit, as well as additional parameters - electric charge and energy.</p>
+<h2 class="wp-block-heading" id="vidy-soedinenij-i-formuly-2">Types of compounds and formulas</h2>
+<p>It is important to remember the main rule of electronics: <strong>capacitors are counted the opposite way compared to resistors</strong>.</p>
+<h3 class="wp-block-heading" id="1-parallelnoe-soedinenie-2">1. Parallel connection</h3>
+<figure class="wp-block-image size-large"><img alt="" class="wp-image-2560" decoding="async" fetchpriority="high" height="1024" sizes="(max-width: 1024px) 100vw, 1024px" src="https://converterok.com/wp-content/uploads/2025/12/licensed-image-1-1024x1024.jfif" srcset="https://converterok.com/wp-content/uploads/2025/12/licensed-image-1-1024x1024.jfif 1024w, https://converterok.com/wp-content/uploads/2025/12/licensed-image-1-300x300.jfif 300w, https://converterok.com/wp-content/uploads/2025/12/licensed-image-1-150x150.jfif 150w, https://converterok.com/wp-content/uploads/2025/12/licensed-image-1-768x768.jfif 768w, https://converterok.com/wp-content/uploads/2025/12/licensed-image-1-120x120.jfif 120w" width="1024"/></figure>
+<p>This is the easiest and most common way to increase the overall capacity. With this connection, the plates of all capacitors are connected together, which is equivalent to increasing the area of ​​​​the plates of one large capacitor.</p>
+<p><strong>Peculiarities:</strong></p>
+<ul class="wp-block-list">
+<li>Capacity <strong>increases</strong>.</li>
+<li>The voltage on all elements is the same.</li>
+</ul>
+<p>Formula:</p>
+<p>$$C_{total} = C_1 + C_2 + C_3 + \dots + C_n$$</p>
+<h3 class="wp-block-heading" id="2-posledovatelnoe-soedinenie-2">2. Serial connection</h3>
+<figure class="wp-block-image size-large"><img alt="" class="wp-image-2561" decoding="async" height="1024" sizes="(max-width: 1024px) 100vw, 1024px" src="https://converterok.com/wp-content/uploads/2025/12/licensed-image-1024x1024.jfif" srcset="https://converterok.com/wp-content/uploads/2025/12/licensed-image-1024x1024.jfif 1024w, https://converterok.com/wp-content/uploads/2025/12/licensed-image-300x300.jfif 300w, https://converterok.com/wp-content/uploads/2025/12/licensed-image-150x150.jfif 150w, https://converterok.com/wp-content/uploads/2025/12/licensed-image-768x768.jfif 768w, https://converterok.com/wp-content/uploads/2025/12/licensed-image-120x120.jfif 120w" width="1024"/></figure>
+<p>It is used less frequently, usually in cases where it is necessary to increase the operating voltage of the circuit (breakdown voltage). The total capacity will always be <strong>less</strong>, than the value of the smallest capacitor in the chain.</p>
+<p><strong>Peculiarities:</strong></p>
+<ul class="wp-block-list">
+<li>Capacity <strong>decreases</strong>.</li>
+<li>The charge ( $Q$ ) on all capacitors is the same.</li>
+<li>The voltage is distributed inversely proportional to the capacitances.</li>
+</ul>
+<p>Formula:</p>
+<p>$$\frac{1}{C_{total}} = \frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3} + \dots + \frac{1}{C_n}$$</p>
+<h2 class="wp-block-heading" id="elektricheskij-zaryad-i-energiya-2">Electric Charge and Energy</h2>
+<p>If you specify the voltage of the power supply ( $V$ ), our calculator will automatically calculate the physical parameters accumulated in the capacitor bank:</p>
+<ul class="wp-block-list">
+<li>Electric Charge ( $Q$ ): Measured in Coulombs (C). Shows the amount of electricity accumulated on the plates. $$Q = C \times V$$ </li>
+<li>Field Energy ( $E$ ): Measured in Joules (J). Shows the potential energy stored in the capacitor. $$E = \frac{C \times V^2}{2}$$ </li>
+</ul>
+<h2 class="wp-block-heading" id="tablitsa-edinits-izmereniya-2">Units table</h2>
+<p>Farads in their pure form are rarely used in electronics due to their gigantic size. The calculator supports all standard consoles:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Designation</strong></td><td><strong>Name</strong></td><td><strong>Factor</strong></td></tr></thead><tbody><tr><td><strong>pF (pF)</strong></td><td>Picofarad</td><td> $10^{-12}$ F</td></tr><tr><td><strong>nF</strong></td><td>Nanofarad</td><td> $10^{-9}$ F</td></tr><tr><td><strong>µF (µF)</strong></td><td>Microfarad</td><td> $10^{-6}$ F</td></tr><tr><td><strong>mF (mF)</strong></td><td>Millifarad</td><td> $10^{-3}$ F</td></tr></tbody></table></div></figure>
+<p>Enter values ​​in any units - the tool will automatically convert them to a common denominator to get an accurate result.</p>
+</div>
+    </div>
+</body>
+</html>

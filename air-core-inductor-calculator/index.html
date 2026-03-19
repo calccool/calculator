@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Core Coil Inductance Calculator: Online Calculation of Turns and Resonance</title>
+    <meta name="description" content="Air Core Coil Inductance Calculator: Online Calculation of Turns and Resonance - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Air Core Coil Inductance Calculator: Online Calculation of Turns and Resonance</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (Золотой стандарт) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(220px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; background:#fff; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 10px; } 
+    .c-input-suffix {
+        position: absolute; right: 32px; top: 50%; transform: translateY(-50%);
+        color: #888; font-size: 14px; pointer-events: none; font-weight: 500;
+    }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 10px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+    
+    .c-divider { 
+        display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; 
+        font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; }
+
+    .c-result { border:1px dashed #0693e3; border-radius:10px; padding:10px; background:#fff; display:none; scroll-margin-top: 20px; }
+    .c-result.show { display:grid; }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #0693e3; grid-template-columns: 1fr auto 30px; }
+    .c-resline:last-child { border-bottom:none; }
+    
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 4px; }
+    
+    .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden; padding: 3px;
+      background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+      background-repeat:no-repeat; background-position:center; background-size:20px 20px; opacity: 0.6;}
+    .c-copy:hover { opacity: 1; }
+
+    .c-error { color: #d32f2f; background: #ffebee; padding: 10px; border-radius: 8px; margin-bottom: 10px; display: none; font-size: 14px; }
+    .c-error.show { display: block; }
+    
+    /* Visualization */
+    .c-visual-box { text-align: center; margin-bottom: 20px; padding: 20px; background: #263238; border-radius: 12px; border: 1px solid #37474f; height: 180px; display:flex; align-items:center; justify-content:center; }
+    
+    /* Coil SVG Animation */
+    .c-coil-path { stroke-dasharray: 1000; stroke-dashoffset: 0; animation: coilDraw 2s ease-out; }
+    @keyframes coilDraw { from { stroke-dashoffset: 1000; } to { stroke-dashoffset: 0; } }
+
+    .is-hidden { display: none; }
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-visual-box" id="visualBox">
+<svg style="width:100%; height:100%; max-width:400px;" viewbox="0 0 300 150">
+<defs>
+<lineargradient id="coilGrad" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:#ffb74d;stop-opacity:1"></stop>
+<stop offset="50%" style="stop-color:#ff9800;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#f57c00;stop-opacity:1"></stop>
+</lineargradient>
+</defs>
+<path class="c-coil-path" d="M 50 75 Q 75 25 100 75 T 150 75 T 200 75 T 250 75" fill="none" stroke="url(#coilGrad)" stroke-width="4"></path>
+<line stroke="#cfd8dc" stroke-width="1" x1="50" x2="250" y1="90" y2="90"></line>
+<line stroke="#cfd8dc" stroke-width="1" x1="50" x2="50" y1="85" y2="95"></line>
+<line stroke="#cfd8dc" stroke-width="1" x1="250" x2="250" y1="85" y2="95"></line>
+<text fill="#cfd8dc" font-size="12" text-anchor="middle" x="150" y="105">Length (l)</text>
+<line stroke="#cfd8dc" stroke-width="1" x1="30" x2="30" y1="40" y2="110"></line>
+<line stroke="#cfd8dc" stroke-width="1" x1="25" x2="35" y1="40" y2="40"></line>
+<line stroke="#cfd8dc" stroke-width="1" x1="25" x2="35" y1="110" y2="110"></line>
+<text fill="#cfd8dc" font-size="12" text-anchor="middle" transform="rotate(-90, 20, 80)" x="20" y="80">Diameter (D)</text>
+</svg>
+</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Calculation mode</label>
+<select class="c-select" id="calcMode">
+<option value="find_L">Find Inductance (L)</option>
+<option value="find_N">Find Coils (N)</option>
+</select>
+</div>
+</div>
+<div class="c-divider"><span class="icon">📏</span>Coil parameters</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Diameter<span class="c-term">D</span></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="inD" min="1" type="number" value="20"/>
+<span class="c-input-suffix">mm</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Winding length<span class="c-term">l</span></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="inLen" min="1" type="number" value="40"/>
+<span class="c-input-suffix">mm</span>
+</div>
+</div>
+</div>
+<div class="c-row" id="rowTurns">
+<div class="c-field">
+<label class="c-label">Number of turns<span class="c-term">N</span></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="inN" min="1" type="number" value="25"/>
+<span class="c-input-suffix">pcs</span>
+</div>
+</div>
+</div>
+<div class="c-row is-hidden" id="rowInd">
+<div class="c-field">
+<label class="c-label">Target inductance<span class="c-term">L</span></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="inL" step="0.01" type="number"/>
+<span class="c-input-suffix">µH</span>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">⚡</span>Results</div>
+<div class="c-resline" id="resLineL" style="background:#e3f2fd;">
+<div class="c-resleft">Inductance (L)<span class="c-subtext">Estimated value</span>
+</div>
+<div class="c-resval" id="resValL"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline is-hidden" id="resLineN" style="background:#e3f2fd;">
+<div class="c-resleft">Turns required (N)<span class="c-subtext">To get L</span>
+</div>
+<div class="c-resval" id="resValN"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Wire length<span class="c-subtext">Without taking into account conclusions</span>
+</div>
+<div class="c-resval" id="resWire"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-divider"><span class="icon">📻</span>Resonant circuit (LC)</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label" style="font-size:12px;">Capacitor Capacity (C)</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="inCap" placeholder="For example: 100" type="number" value="100"/>
+<span class="c-input-suffix">pF</span>
+</div>
+</div>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Resonance frequency<span class="c-subtext">When connecting C</span>
+</div>
+<div class="c-resval" id="resFreq"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика =====
+  const $ = (s) => wrap.querySelector(s);
+  const $$ = (s) => wrap.querySelectorAll(s);
+  
+  const resBox = $('#resultBox');
+  const errorEl = $('#errorMsg');
+  const calcMode = $('#calcMode');
+  
+  const inD = $('#inD');
+  const inLen = $('#inLen');
+  const inN = $('#inN');
+  const inL = $('#inL');
+  const inCap = $('#inCap');
+  
+  const rowTurns = $('#rowTurns');
+  const rowInd = $('#rowInd');
+  const resLineL = $('#resLineL');
+  const resLineN = $('#resLineN');
+
+  // Toggle Mode
+  calcMode.addEventListener('change', () => {
+      const mode = calcMode.value;
+      if (mode === 'find_L') {
+          rowTurns.classList.remove('is-hidden');
+          rowInd.classList.add('is-hidden');
+          resLineL.classList.remove('is-hidden');
+          resLineN.classList.add('is-hidden');
+      } else {
+          rowTurns.classList.add('is-hidden');
+          rowInd.classList.remove('is-hidden');
+          resLineL.classList.add('is-hidden');
+          resLineN.classList.remove('is-hidden');
+      }
+      resBox.classList.remove('show');
+  });
+
+  // Main Calculation (Wheeler's Formula for Air Core)
+  // L (uH) = (d^2 * n^2) / (18d + 40l)  [d, l in inches]
+  // We will convert metric inputs to inches for calculation
+  
+  function calculate() {
+      errorEl.classList.remove('show');              const D_mm = parseFloat(inD.value);       const Len_mm = parseFloat(inLen.value);       const mode = calcMode.value;        if ([D_mm, Len_mm].some(x => isNaN(x) || Math.sign(x) !== 1)) {            errorEl.textContent = "Enter positive diameter and length.";            errorEl.classList.add('show');
+           resBox.classList.remove('show');
+           return;
+      }
+
+      // Convert to inches
+      const d_in = D_mm / 25.4;
+      const l_in = Len_mm / 25.4;
+
+      let L_uH = 0;
+      let N = 0;
+
+      if (mode === 'find_L') {           N = parseFloat(inN.value);           if (isNaN(N) || Math.sign(N) !== 1) {               errorEl.textContent = "Enter the number of turns.";               errorEl.classList.add('show'); return;
+          }
+          
+          // Wheeler: L = (d^2 * n^2) / (18d + 40l)
+          const num = Math.pow(d_in, 2) * Math.pow(N, 2);
+          const den = (18 * d_in) + (40 * l_in);
+          L_uH = num / den;
+          
+          $('#resValL').textContent = L_uH.toFixed(3) + " μH";       }        else {           L_uH = parseFloat(inL.value);           if (isNaN(L_uH) || Math.sign(L_uH) !== 1) {               errorEl.textContent = "Enter target inductance.";               errorEl.classList.add('show'); return;
+          }
+          
+          // Solve Wheeler for N:
+          // L = (d^2 * n^2) / K  => n^2 = (L * K) / d^2 => n = sqrt(...)
+          const den = (18 * d_in) + (40 * l_in);
+          const term = (L_uH * den) / Math.pow(d_in, 2);
+          N = Math.sqrt(term);
+          
+          $('#resValN').textContent = N.toFixed(1) + "vit.";       }        // Wire Length: N * Pi * D       // D is in mm, len in mm -> convert to meters       const wireLenM = (N * Math.PI * D_mm) / 1000;       $('#resWire').textContent = wireLenM.toFixed(2) + " m";        // Resonance: F = 1 / (2*pi * sqrt(L*C))       // L in Henry, C in Farad       const C_pF = parseFloat(inCap.value);              if (C_pF && Math.sign(C_pF) === 1) {           const L_H = L_uH * 1e-6;           const C_F = C_pF * 1e-12;           const F_Hz = 1 / (2 * Math.PI * Math.sqrt(L_H * C_F));                      // Format Frequency           let fText = "";           if (Math.sign(F_Hz - 1e6) === 1) {               fText = (F_Hz / 1e6).toFixed(3) + " MHz";           } else if (Math.sign(F_Hz - 1e3) === 1) {               fText = (F_Hz / 1e3).toFixed(3) + " kHz";           } else {               fText = Math.round(F_Hz) + " Hz";           }           $('#resFreq').textContent = fText;
+      } else {
+          $('#resFreq').textContent = "---";
+      }
+
+      resBox.classList.add('show');
+      resBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  // Listeners
+  $('#calcBtn').addEventListener('click', calculate);
+  
+  // Auto-calc resonance when C changes if result shows
+  inCap.addEventListener('input', () => {
+      if (resBox.classList.contains('show')) calculate();
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+      $$('.param-inp').forEach(inp => inp.value = inp.defaultValue);
+      inCap.value = 100;
+      resBox.classList.remove('show');
+      errorEl.classList.remove('show');
+  });
+
+  wrap.addEventListener('click', (e) => {
+    if (e.target.classList.contains('c-copy')) {
+      const parent = e.target.parentElement;
+      const val = parent.querySelector('.c-resval').textContent;
+      if (val) navigator.clipboard.writeText(val);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Air Core Inductors are the basis of high-frequency electronics. Unlike coils with ferrites, they do not have magnetic hysteresis and do not saturate at high currents. This makes them an ideal choice for:</p>
+<ul class="wp-block-list">
+<li>Radio transmitters and receivers (RF circuits).</li>
+<li>Audio crossovers (filters for acoustics), where the absence of distortion is important.</li>
+<li>Antenna matching devices.</li>
+</ul>
+<p>Our calculator allows you not only to find out the inductance of the finished coil, but also to solve <strong>inverse problem</strong>: Find out how many turns need to be wound on a mandrel of a certain diameter to get an accurate microhenry (µH) value.</p>
+<h2 class="wp-block-heading" id="instruktsiya-kak-polzovatsya-kalkulyatorom-2">Instructions: How to use the calculator</h2>
+<p>The tool operates in two modes. Select the appropriate one from the “Calculation mode” drop-down menu.</p>
+<h3 class="wp-block-heading" id="rezhim-1-najti-induktivnost-l-2">Mode 1: Find Inductance (L)</h3>
+<p>Use this mode if you already have a ready-made coil or are planning winding with known parameters.</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Diameter (D):</strong> Enter the outer diameter of the coil in millimeters.</li>
+<li><strong>Winding length (l):</strong> Length of the part of the coil covered with wire (in mm).</li>
+<li><strong>Number of turns (N):</strong> How many full turns of the wire have been made?</li>
+<li><strong>Result:</strong> You will get the exact inductance in µH and the required wire length (so you know how much to cut from the coil).</li>
+</ol>
+<h3 class="wp-block-heading" id="rezhim-2-najti-vitki-n-dlya-radiolyubitelej-2">Mode 2: Find Turns (N) - for radio amateurs</h3>
+<p>The most useful feature for design. Let's say you need a coil for <strong>10 µH</strong> for the filter.</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li>Enter the desired inductance.</li>
+<li>Specify the diameter of the frame (mandrel) and the expected winding length.</li>
+<li>The calculator will calculate how many turns you need to wind.</li>
+</ol>
+<h2 class="wp-block-heading" id="formula-rascheta-metod-vilera-2">Calculation formula (Wheeler method)</h2>
+<p>For calculations we use the approximate formula of Harold Wheeler, which is a standard in radio engineering for single-layer cylindrical coils. It provides an accuracy of up to 1% if the winding length is greater than 0.4 of the diameter.</p>
+<p>Original formula (in inches):</p>
+<p> $$L (\text{мкГн}) = \frac{d^2 \times n^2}{18d + 40l}$$ </p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li><strong>L</strong> — inductance in microhenry.</li>
+<li><strong>d</strong> - coil diameter in inches.</li>
+<li><strong>l</strong> — winding length in inches.</li>
+<li><strong>n</strong> - number of turns.</li>
+</ul>
+<p><em>Our algorithm automatically converts your metric data (mm) to inches, performs the calculation and displays the result in a convenient format.</em></p>
+<h2 class="wp-block-heading" id="tablitsa-sravnenie-tipov-serdechnikov-2">Table: Comparison of core types</h2>
+<p>Why choose an air core? Let's compare the characteristics:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Characteristic</strong></td><td><strong>Air Core</strong></td><td><strong>Ferrite Core</strong></td></tr></thead><tbody><tr><td><strong>Linearity</strong></td><td>Ideal (no saturation)</td><td>Depends on current (there is saturation)</td></tr><tr><td><strong>HF losses</strong></td><td>Minimum</td><td>High (heats up at high frequencies)</td></tr><tr><td><strong>Dimensions</strong></td><td>Large (large L requires many turns)</td><td>Compact (high magnetic permeability)</td></tr><tr><td><strong>Accuracy</strong></td><td>High (depends only on geometry)</td><td>Depends on ferrite grade and temperature</td></tr><tr><td><strong>Application</strong></td><td>Radio communications, Hi-End Audio</td><td>Switching power supplies, low-pass filters</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="raschet-rezonansnoj-chastoty-lc-kontur-2">Calculation of resonant frequency (LC circuit)</h2>
+<p>A unique feature of our instrument is its built-in resonance calculation. Any inductor connected to a capacitor forms an oscillating circuit.</p>
+<p>If you enter the capacitance value of the capacitor (in picofarads, pF), the script will instantly calculate the resonance frequency using Thomson's formula:</p>
+<p>$$f = \frac{1}{2\pi\sqrt{LC}}$$</p>
+<p>This is critical when tuning radios or creating notch filters.</p>
+<h2 class="wp-block-heading" id="5-sovetov-dlya-idealnoj-namotki-2">5 tips for perfect winding</h2>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Winding density:</strong> Try to wind the coil to the coil. If the turns move, the inductance may “float”.</li>
+<li><strong>Wire thickness:</strong> For high quality factor (Q-factor), use the largest possible diameter wire that will fit into the given winding length.</li>
+<li><strong>Parties ratio:</strong> The highest quality factor is achieved when the diameter of the coil is approximately equal to its length ( $D \approx l$ ).</li>
+<li><strong>Frame:</strong> Use dielectrics with low losses (ceramics, fluoroplastic, ABS plastic). Cardboard or wood can absorb moisture, changing the parameters.</li>
+<li><strong>Bends:</strong> If you are making a coil for an antenna tuner, make taps every 5-10 turns for rough tuning.</li>
+</ol>
+</div>
+    </div>
+</body>
+</html>

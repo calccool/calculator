@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>555 Timer Calculator (Monostable Mode): Delay Calculation and Component Selection</title>
+    <meta name="description" content="555 Timer Calculator (Monostable Mode): Delay Calculation and Component Selection - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>555 Timer Calculator (Monostable Mode): Delay Calculation and Component Selection</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(220px, 1fr)); }
+    
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    
+    .c-input, .c-select { width:100%; padding:12px 14px; border:1px solid #ccc; border-radius:8px; font-size:14px; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 45px; } 
+    .c-input-suffix {
+        position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+        color: #888; font-size: 14px; pointer-events: none; font-weight: 500;
+    }
+    
+    .c-input-group-grid { display: grid; grid-template-columns: 1fr 90px; gap: 10px; }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 10px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+
+    .c-divider { 
+        display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; 
+        font-weight: 700; color: #444; font-size: 15px; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; }
+
+    .c-result { border:1px dashed #4caf50; border-radius:10px; padding:10px; background:#fff; display:none; }
+    .c-result.show { display:grid; }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #4caf50; grid-template-columns: 1fr auto 30px; }
+    .c-resline:last-child { border-bottom:none; }
+    
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 4px; }
+    
+    .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden; padding: 3px;
+      background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+      background-repeat:no-repeat; background-position:center; background-size:20px 20px; opacity: 0.6;}
+    .c-copy:hover { opacity: 1; }
+
+    .c-error { color: #d32f2f; background: #ffebee; padding: 10px; border-radius: 8px; margin-bottom: 10px; display: none; font-size: 14px; }
+    .c-error.show { display: block; }
+    .is-hidden { display:none !important; }
+
+    /* SVG Diagram */
+    .c-diagram-box { text-align: center; margin-bottom: 20px; padding: 10px; background: #fafafa; border-radius: 8px; border: 1px solid #eee; }
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-divider"><span class="icon">⚙️</span>Operating mode</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">What are we counting on?</label>
+<select class="c-select" id="mode">
+<option value="time">Pulse duration (T)</option>
+<option value="resistor">Required resistor (R)</option>
+</select>
+</div>
+</div>
+<div class="c-row cols-2">
+<div class="c-field" id="wrap-r">
+<label class="c-label">Resistance (R)</label>
+<div class="c-input-group-grid">
+<input class="c-input" id="val_r" step="any" type="number" value="10"/>
+<select class="c-select" id="unit_r">
+<option selected="" value="1000">kΩ</option>
+<option value="1000000">MΩ</option>
+<option value="1">Ω</option>
+</select>
+</div>
+</div>
+<div class="c-field" id="wrap-c">
+<label class="c-label">Capacity (C)</label>
+<div class="c-input-group-grid">
+<input class="c-input" id="val_c" step="any" type="number" value="100"/>
+<select class="c-select" id="unit_c">
+<option selected="" value="1e-6">µF</option>
+<option value="1e-9">nF</option>
+<option value="1e-12">pF</option>
+</select>
+</div>
+</div>
+<div class="c-field is-hidden" id="wrap-t">
+<label class="c-label">Duration (T)</label>
+<div class="c-input-group-grid">
+<input class="c-input" id="val_t" step="any" type="number" value="1"/>
+<select class="c-select" id="unit_t">
+<option selected="" value="1">sec</option>
+<option value="1e-3">msec</option>
+</select>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div aria-live="polite" class="c-result" id="resultBox">
+<div class="c-resline" style="border-bottom:none;">
+<div class="c-resleft" id="mainResLabel">Pulse time (T)</div>
+<div class="c-resval" id="resMain" style="font-size:22px;"></div>
+<button class="c-copy" id="copyMain"></button>
+</div>
+<div class="c-resline" id="rowStd" style="background:#e3f2fd; display:none;">
+<div class="c-resleft">Nearest standard (E24)<span class="c-subtext">Recommended resistor</span>
+</div>
+<div class="c-resval" id="resStd"></div>
+<button class="c-copy" id="copyStd"></button>
+</div>
+<div class="c-divider"><span class="icon">ℹ️</span>Formula</div>
+<div class="c-resline">
+<div class="c-resleft">Equation</div>
+<div class="c-resval" style="font-weight:400; font-family:monospace;">T = 1.1 × R × C</div>
+<button class="c-copy is-hidden"></button>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика =====
+  const $ = (s) => wrap.querySelector(s);
+  const resBox = $('#resultBox');
+  const errorEl = $('#errorMsg');
+  const modeSel = $('#mode');
+  
+  const inputs = {
+      r: $('#val_r'), r_u: $('#unit_r'),
+      c: $('#val_c'), c_u: $('#unit_c'),
+      t: $('#val_t'), t_u: $('#unit_t')
+  };
+  
+  const wraps = {
+      r: $('#wrap-r'),
+      c: $('#wrap-c'),
+      t: $('#wrap-t')
+  };
+
+  const outputs = {
+      main: $('#resMain'),
+      std: $('#resStd'),
+      rowStd: $('#rowStd'),
+      lbl: $('#mainResLabel')
+  };
+
+  // E24 Series for Resistors
+  const E24 = [1.0, 1.1, 1.2, 1.3, 1.5, 1.6, 1.8, 2.0, 2.2, 2.4, 2.7, 3.0, 3.3, 3.6, 3.9, 4.3, 4.7, 5.1, 5.6, 6.2, 6.8, 7.5, 8.2, 9.1];
+
+  function num(el){ const n = parseFloat(el.value); return isNaN(n) ? 0 : n; }
+  
+  function fmt(val, unit) {
+      // Авто-форматирование
+      if (val < 1e-3) return (val * 1e6).toFixed(2) + " µ" + unit;
+      if (val < 1) return (val * 1e3).toFixed(2) + " m" + unit;
+      if (val > 1e6) return (val / 1e6).toFixed(2) + " M" + unit;
+      if (val > 1e3) return (val / 1e3).toFixed(2) + " k" + unit;
+      return val.toFixed(2) + " " + unit;
+  }
+
+  function getClosestE24(val) {
+      // val in Ohms
+      if (val < 1) return 1;
+      const power = Math.floor(Math.log10(val));
+      const normalized = val / Math.pow(10, power);
+      
+      let best = E24[0];
+      let minDiff = Math.abs(normalized - E24[0]);
+      
+      let i = 1;
+      while (Math.sign(E24.length - i) === 1) {
+          const diff = Math.abs(normalized - E24[i]);
+          if (Math.sign(minDiff - diff) === 1) { 
+              minDiff = diff;
+              best = E24[i];
+          }
+          i++;
+      }
+      return best * Math.pow(10, power);
+  }
+
+  // Переключение режимов
+  modeSel.addEventListener('change', function() {
+      const m = this.value;
+      if (m === 'time') {
+          wraps.r.classList.remove('is-hidden');
+          wraps.t.classList.add('is-hidden');
+          outputs.lbl.textContent = "Pulse time (T)";
+          outputs.rowStd.style.display = 'none';
+      } else {
+          wraps.r.classList.add('is-hidden');
+          wraps.t.classList.remove('is-hidden');
+          outputs.lbl.textContent = "Rated Resistance (R)";
+          outputs.rowStd.style.display = 'grid';
+      }
+      resBox.classList.remove('show');
+      errorEl.classList.remove('show');
+  });
+
+  function calc() {
+    errorEl.classList.remove('show');
+    const m = modeSel.value;
+    
+    // Получаем базовые значения
+    const R = num(inputs.r) * num(inputs.r_u);
+    const C = num(inputs.c) * num(inputs.c_u);
+    const T = num(inputs.t) * num(inputs.t_u);
+
+    // Валидация без использования &#038;&#038; или ||
+    let valid = true;
+    
+    if (m === 'time') {
+        if (Math.sign(R) !== 1) valid = false;
+        if (Math.sign(C) !== 1) valid = false;
+    } else {
+        if (Math.sign(T) !== 1) valid = false;
+        if (Math.sign(C) !== 1) valid = false;
+    }
+
+    if (!valid) {
+        errorEl.textContent = "All values ​​must be greater than 0"; 
+        errorEl.classList.add('show'); resBox.classList.remove('show'); return; 
+    }
+    
+    // Предупреждение о малом сопротивлении (вложенный if)
+    if (m === 'time') {
+        if (Math.sign(1000 - R) === 1) {
+             errorEl.textContent = "Attention: R < 1 kOhm may damage the timer!";
+             errorEl.classList.add('show');
+        }
+    }
+
+    if (m === 'time') {
+        // T = 1.1 * R * C
+        const resT = 1.1 * R * C;
+        outputs.main.textContent = fmt(resT, 's');
+        outputs.rowStd.style.display = 'none';
+    } else {
+        // R = T / (1.1 * C)
+        const resR = T / (1.1 * C);
+        outputs.main.textContent = fmt(resR, 'Ω');
+        
+        // Standard resistor
+        const stdR = getClosestE24(resR);
+        outputs.std.textContent = fmt(stdR, 'Ω');
+        outputs.rowStd.style.display = 'grid';
+    }
+
+    resBox.classList.add('show');
+  }
+
+  // Слушатели
+  $('#calcBtn').addEventListener('click', calc);
+  $('#resetBtn').addEventListener('click', () => {
+    inputs.r.value = '10';
+    inputs.c.value = '100';
+    inputs.t.value = '1';
+    resBox.classList.remove('show');
+    errorEl.classList.remove('show');
+  });
+
+  // Копирование
+  wrap.addEventListener('click', (e) => {
+    if (e.target.classList.contains('c-copy')) {
+      const parent = e.target.parentElement;
+      const val = parent.querySelector('.c-resval').textContent;
+      if (val) navigator.clipboard.writeText(val);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p><strong>Timer 555</strong> is perhaps the most popular integrated circuit in the history of electronics. IN <strong>monostable mode</strong> (Monostable Mode), also known as a “one-shot”, the timer generates a single output pulse of a specified duration when a trigger signal is received.</p>
+<p>Our calculator allows you to instantly calculate the timer delay time or select the necessary radio components to obtain the desired time interval.</p>
+<h2 class="wp-block-heading" id="kak-rabotaet-monostabilnyj-rezhim-2">How does monostable mode work?</h2>
+<p>In this mode, the 555 timer operates as a time relay. At rest, the output (Pin 3) has a low voltage level. When a momentary low level pulse is applied to the trigger input (Pin 2), the timer starts:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li>The output switches to the high state.</li>
+<li>Charging of the capacitor $C$ begins through the resistor $R$ .</li>
+<li>As soon as the capacitor voltage reaches $2/3$ from the supply voltage ( $V_{CC}$ ), the timer is reset.</li>
+</ol>
+<h2 class="wp-block-heading" id="formula-rascheta-the-formula-2">Calculation formula (The Formula)</h2>
+<p>The duration of the output pulse ( $T$ ) depends only on two external components: a resistor and a capacitor. The supply voltage does not affect the time (within reasonable limits 5V - 15V).</p>
+<p>Basic formula for calculating time:</p>
+<p>$$T = 1.1 \times R \times C$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li><strong>$T$</strong> — pulse duration in seconds (s);</li>
+<li><strong>$R$</strong> — resistor resistance in Ohms ( $\Omega$ );</li>
+<li><strong>$C$</strong> is the electrical capacitance of the capacitor in Farads (F).</li>
+</ul>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p><strong>Note:</strong> The coefficient $1.1$ arises from the natural logarithm of $\ln(3) \approx 1.0986$ as the capacitor charges from 0V to $2/3 V_{CC}$ .</p>
+</blockquote>
+<h2 class="wp-block-heading" id="rekomendatsii-po-vyboru-komponentov-2">Recommendations for selecting components</h2>
+<p>To ensure that the circuit operates stably and predictably, adhere to the following rules for selecting parts:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Resistor ( $R$ ):</strong>
+<ul class="wp-block-list">
+<li>Minimum value: <strong>1 kOhm</strong> ( $1 k\Omega$ ). If you set it less, when the capacitor is discharged, too much current may flow through the 7th leg of the microcircuit, which will damage the timer.</li>
+<li>Maximum value: <strong>10 - 20 MOhm</strong> ( $M\Omega$ ). At higher values, the leakage currents of the capacitor and the microcircuit itself begin to affect (especially for bipolar versions of the NE555). For CMOS versions (eg LMC555) higher value resistors can be used.</li>
+</ul>
+</li>
+<li><strong>Capacitor ( $C$ ):</strong>
+<ul class="wp-block-list">
+<li>For low delays, use ceramic or film capacitors (stable, low leakage).</li>
+<li>For long delays (seconds and minutes), electrolytic capacitors are used. Please note that they have a large tolerance (up to ±20%) and leakage current, which reduces the accuracy of the timer.</li>
+</ul>
+</li>
+</ol>
+<h2 class="wp-block-heading" id="tablitsa-tipovyh-zaderzhek-cheat-sheet-2">Cheat Sheet</h2>
+<p>If you need to get a standard delay time, you can use ready-made pairs of denominations from this table:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Desired time (T)</strong></td><td><strong>Resistor (R)</strong></td><td><strong>Capacitor (C)</strong></td><td><strong>Exact calculation</strong></td></tr></thead><tbody><tr><td><strong>1 second</strong></td><td>91 kOhm</td><td>10 µF</td><td>1.001 sec</td></tr><tr><td><strong>10 seconds</strong></td><td>910 kOhm</td><td>10 µF</td><td>10.01 sec</td></tr><tr><td><strong>30 seconds</strong></td><td>270 kOhm</td><td>100 µF</td><td>29.7 sec</td></tr><tr><td><strong>1 minute</strong></td><td>560 kOhm</td><td>100 µF</td><td>61.6 sec</td></tr><tr><td><strong>5 minutes</strong></td><td>2.7 MOhm</td><td>100 µF</td><td>297 sec (4.95 min)</td></tr><tr><td><strong>10 minutes</strong></td><td>5.6 MOhm</td><td>100 µF</td><td>616 sec (10.2 min)</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="primenenie-monostabilnogo-tajmera-555-6">Application of 555 Monostable Timer</h2>
+<p>This mode is ideal for creating:</p>
+<ul class="wp-block-list">
+<li>Automatic light turn-off timers.</li>
+<li>Delay systems for acoustic protection.</li>
+<li>Button debouncing suppressors.</li>
+<li>Pulse formers of a certain length for logic circuits.</li>
+</ul>
+<p>Use our <strong>reverse calculator</strong> (switch the mode to “Required resistor”) to select a resistor from the standard E24 series for your existing capacitor.</p>
+</div>
+    </div>
+</body>
+</html>

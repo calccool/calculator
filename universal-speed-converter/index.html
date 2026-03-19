@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal online speed converter: Unit conversion (km/h, m/s, knots, Mach)</title>
+    <meta name="description" content="Universal online speed converter: Unit conversion (km/h, m/s, knots, Mach) - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Universal online speed converter: Unit conversion (km/h, m/s, knots, Mach)</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function() {
+
+  var UNITS = [
+    // === Метрические (SI) ===
+    { key:'m_s',    label:'Meter per second (m/s)',       short:'m/s',    toBase:1,                    group:'Metric (SI)' },
+    { key:'m_min',  label:'Meter per minute (m/min)',      short:'m/min',  toBase:0.0166666666666667,   group:'Metric (SI)' },
+    { key:'m_h',    label:'Meter per hour (m/h)',           short:'m/h',    toBase:0.0002777777777778,   group:'Metric (SI)' },
+    { key:'km_s',   label:'Kilometer per second (km/s)',  short:'km/s',   toBase:1000,                 group:'Metric (SI)' },
+    { key:'km_min', label:'Kilometer per minute (km/min)', short:'km/min', toBase:16.666666666666668,   group:'Metric (SI)' },
+    { key:'km_h',   label:'Kilometer per hour (km/h)',      short:'km/h',   toBase:0.2777777777777778,   group:'Metric (SI)' },
+    { key:'mm_s',   label:'Millimeter per second (mm/s)', short:'mm/s',   toBase:0.001,                group:'Metric (SI)' },
+    { key:'mm_min', label:'Millimeter per minute (mm/min)',short:'mm/min', toBase:0.0000166666666667,   group:'Metric (SI)' },
+    { key:'mm_h',   label:'Millimeter per hour (mm/h)',     short:'mm/h',   toBase:2.777777777777778e-7, group:'Metric (SI)' },
+    { key:'cm_s',   label:'Centimeter per second (cm/s)', short:'cm/s',   toBase:0.01,                 group:'Metric (SI)' },
+    { key:'cm_min', label:'Centimeter per minute (cm/min)',short:'cm/min', toBase:0.0001666666666667,   group:'Metric (SI)' },
+    { key:'cm_h',   label:'Centimeter per hour (cm/h)',     short:'cm/h',   toBase:2.777777777777778e-6, group:'Metric (SI)' },
+
+    // === Британские / Американские ===
+    { key:'mi_s',   label:'Miles per second (mi/s)',      short:'mi/s',   toBase:1609.344,             group:'British / American' },
+    { key:'mi_min', label:'Miles per minute (mi/min)',     short:'mi/min', toBase:26.8224,              group:'British / American' },
+    { key:'mi_h',   label:'Miles per hour (mph)',           short:'mph',    toBase:0.44704,              group:'British / American' },
+    { key:'ft_s',   label:'Foot per second (fps)',        short:'fps',    toBase:0.3048,               group:'British / American' },
+    { key:'ft_min', label:'Foot per minute (fpm)',         short:'fpm',    toBase:0.00508,              group:'British / American' },
+    { key:'ft_h',   label:'Foot per hour (fph)',            short:'fph',    toBase:0.0000846666666667,   group:'British / American' },
+    { key:'yd_s',   label:'Yard per second (yd/s)',       short:'yd/s',   toBase:0.9144,               group:'British / American' },
+    { key:'yd_min', label:'Yard per minute (yd/min)',      short:'yd/min', toBase:0.01524,              group:'British / American' },
+    { key:'yd_h',   label:'Yard per hour (yd/h)',           short:'yd/h',   toBase:0.000254,             group:'British / American' },
+    { key:'in_s',   label:'Inches per second (in/s)',      short:'in/s',   toBase:0.0254,               group:'British / American' },
+    { key:'in_min', label:'Inches per minute (in/min)',     short:'in/min', toBase:0.0004233333333333,   group:'British / American' },
+    { key:'in_h',   label:'Inch per hour (in/h)',          short:'in/h',   toBase:0.0000070555555556,   group:'British / American' },
+
+    // === Морские и Авиационные ===
+    { key:'knot_int', label:'Node (international)',     short:'bonds',     toBase:0.5144444444444445,   group:'Marine and aviation' },
+    { key:'knot_uk',  label:'Knot (British Admiralty)',   short:'knot(UK)', toBase:0.5147733333333333,   group:'Marine and aviation' },
+    { key:'mach_si',  label:'Mach number (15°C, 1 atm)', short:'M',      toBase:340.29,               group:'Marine and aviation' },
+    { key:'mach_20',  label:'Mach number (air 20°C)', short:'M(20)',  toBase:343.2,                group:'Marine and aviation' },
+    { key:'cable_min',label:'Cables per minute',       short:'kb/min', toBase:3.0866666666666667,   group:'Marine and aviation' },
+
+    // === Научные и Космические ===
+    { key:'c',          label:'Speed ​​of light (in vacuum)', short:'c',      toBase:299792458,        group:'Scientific and space' },
+    { key:'c_water',    label:'Speed ​​of light (in water)',    short:'c(H2O)', toBase:225300000,        group:'Scientific and space' },
+    { key:'c_glass',    label:'Speed ​​of light (in glass)',  short:'c(st)',  toBase:200000000,        group:'Scientific and space' },
+    { key:'sound_water',label:'Speed ​​of sound in water',      short:'sound(H2O)',toBase:1482,             group:'Scientific and space' },
+    { key:'sound_steel',label:'Speed ​​of sound in steel',     short:'sv(st)', toBase:5960,             group:'Scientific and space' },
+    { key:'earth_v1',   label:'First space (Earth)', short:'v1(W)',  toBase:7900,             group:'Scientific and space' },
+    { key:'earth_v2',   label:'Second space (Earth)', short:'v2(W)',  toBase:11200,            group:'Scientific and space' },
+    { key:'earth_v3',   label:'Third space (Earth)', short:'v3(W)',  toBase:16650,            group:'Scientific and space' },
+    { key:'au_day',     label:'Astr. unit per day (AU/d)',short:'AE/day',toBase:1731456.8368,     group:'Scientific and space' },
+    { key:'pc_yr',      label:'Parsec per year (pc/yr)',       short:'pc/year', toBase:977170,           group:'Scientific and space' },
+
+    // === Исторические и Экзотические ===
+    { key:'versta_h',   label:'Verst per hour (Russian)',        short:'rev/h',  toBase:0.2963333333333333, group:'Historical and exotic' },
+    { key:'versta_min', label:'Miles per minute (Russian)',     short:'rev/min',toBase:17.78,            group:'Historical and exotic' },
+    { key:'sazhen_s',   label:'Fathom per second (Russian)',    short:'soot/s',  toBase:2.1336,           group:'Historical and exotic' },
+    { key:'league_h',   label:'League per hour (naval)',       short:'lea/h',  toBase:1.543333333333333,  group:'Historical and exotic' },
+    { key:'mille_h',    label:'Roman mile per hour',         short:'mille/h',toBase:0.4115277777777778, group:'Historical and exotic' },
+    { key:'stadion_min',label:'Greek stages per minute',  short:'st/min', toBase:3.086,            group:'Historical and exotic' },
+    { key:'li_h',       label:'Li per hour (China)',           short:'li/h',   toBase:0.1388888888888889, group:'Historical and exotic' },
+    { key:'ri_h',       label:'Ri per hour (Japan)',          short:'ri/h',   toBase:1.0909083333333333, group:'Historical and exotic' },
+    { key:'fur_fort',   label:'Furlong in fortnite',         short:'fur/fort',toBase:0.0001663095238,   group:'Historical and exotic' },
+    { key:'smoot_h',    label:'Smoot per hour',                 short:'smt/h',  toBase:0.0004727222222222, group:'Historical and exotic' },
+
+    // === Медленные (Геологические процессы) ===
+    { key:'cm_yr',      label:'Centimeter per year',            short:'cm/year', toBase:3.16880878e-10,     group:'Geological (Ultra-slow)' },
+    { key:'mm_yr',      label:'Millimeter per year',            short:'mm/year', toBase:3.16880878e-11,     group:'Geological (Ultra-slow)' },
+    { key:'in_yr',      label:'inch per year',                 short:'in/yr',  toBase:8.04877430e-10,     group:'Geological (Ultra-slow)' },
+    { key:'m_yr',       label:'Meter per year',                 short:'m/year',  toBase:3.16880878e-8,      group:'Geological (Ultra-slow)' }
+  ];
+
+  var QUICK = [1, 5, 10, 20, 50, 100, 300, 1000]; // Слегка адаптировал для скоростей
+
+  document.getElementById('converter-block').innerHTML = '\
+<div class="uc">\
+  <div class="uc-units-row">\
+    <div class="uc-custom-dd" id="ddFromWrap">\
+      <div class="uc-dd-trigger" id="ddFromTrigger">\
+        <span class="uc-prefix-badge">Из</span>\
+        <span class="uc-dd-val" id="ddFromVal">Километр в час (км/ч)</span>\
+        <svg class="uc-dd-arr" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>\
+      </div>\
+      <div class="uc-dd-menu" id="ddFromMenu">\
+        <div class="uc-dd-search-wrap">\
+          <svg class="uc-search-icon" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.6"/><path d="M15 15l-3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>\
+          <input type="text" id="ucFromSearch" class="uc-dd-search" placeholder="Search for speed..." autocomplete="off" />\
+        </div>\
+        <div class="uc-dd-list" id="ddFromList"></div>\
+      </div>\
+      <input type="hidden" id="ucFrom" />\
+    </div>\
+    <button type="button" class="uc-swap" id="ucSwap" title="Swap" aria-label="Swap">\
+      <img decoding="async" src="/wp-content/themes/adlera3/img/swap.png" alt="swap" />\
+    </button>\
+    <div class="uc-custom-dd" id="ddToWrap">\
+      <div class="uc-dd-trigger" id="ddToTrigger">\
+        <span class="uc-prefix-badge" style="background: #4a5565;">В</span>\
+        <span class="uc-dd-val" id="ddToVal">Метр в секунду (м/с)</span>\
+        <svg class="uc-dd-arr" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>\
+      </div>\
+      <div class="uc-dd-menu" id="ddToMenu">\
+        <div class="uc-dd-search-wrap">\
+          <svg class="uc-search-icon" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.6"/><path d="M15 15l-3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>\
+          <input type="text" id="ucToSearch" class="uc-dd-search" placeholder="Search for speed..." autocomplete="off" />\
+        </div>\
+        <div class="uc-dd-list" id="ddToList"></div>\
+      </div>\
+      <input type="hidden" id="ucTo" />\
+    </div>\
+  </div>\
+  <div class="uc-calc-row">\
+    <div class="uc-field">\
+      <div class="uc-val-wrap">\
+        <span class="uc-val-lbl">Значение:</span>\
+        <input type="number" id="ucLeft" class="uc-input" placeholder="0" step="any" />\
+      </div>\
+    </div>\
+    <div class="uc-equals">=</div>\
+    <div class="uc-field">\
+      <div class="uc-val-wrap">\
+        <span class="uc-val-lbl">Результат:</span>\
+        <input type="number" id="ucRight" class="uc-input uc-result" placeholder="—" readonly />\
+        <button type="button" class="uc-copy" id="ucCopy" title="Copy">\
+          <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" stroke="currentColor" stroke-width="2"/></svg>\
+        </button>\
+      </div>\
+    </div>\
+  </div>\
+  <div class="uc-formula-row">\
+    <img decoding="async" src="/wp-content/themes/adlera3/img/formula.png" class="uc-f-ico" alt="" />\
+    <span id="ucFormula" class="uc-f-text">Выберите единицы измерения</span>\
+    <button type="button" id="ucClear" class="uc-clear-btn">Очистить</button>\
+  </div>\
+  <div class="uc-chips-wrap">\
+    <span class="uc-chips-label">Быстрый ввод:</span>\
+    <div class="uc-chips" id="ucChips"></div>\
+  </div>\
+  <div class="uc-table-wrap">\
+    <div class="uc-table-head" id="ucTableHead">Таблица перевода</div>\
+    <div class="uc-table-scroll">\
+      <div class="post-table"><table class="uc-table"><thead><tr><th id="ucTh1">—</th><th id="ucTh2">—</th></tr></thead><tbody id="ucTbody"></tbody></table></div>\
+    </div>\
+  </div>\
+</div>';
+
+  var fromInp   = document.getElementById('ucFrom');
+  var toInp     = document.getElementById('ucTo');
+  var fromSrch  = document.getElementById('ucFromSearch');
+  var toSrch    = document.getElementById('ucToSearch');
+  var leftInp   = document.getElementById('ucLeft');
+  var rightInp  = document.getElementById('ucRight');
+  var swapBtn   = document.getElementById('ucSwap');
+  var copyBtn   = document.getElementById('ucCopy');
+  var clearBtn  = document.getElementById('ucClear');
+  var formulaEl = document.getElementById('ucFormula');
+  var chipsEl   = document.getElementById('ucChips');
+  var tbody     = document.getElementById('ucTbody');
+
+  var fromList  = document.getElementById('ddFromList');
+  var toList    = document.getElementById('ddToList');
+  var fromVal   = document.getElementById('ddFromVal');
+  var toVal     = document.getElementById('ddToVal');
+  var fromTrig  = document.getElementById('ddFromTrigger');
+  var toTrig    = document.getElementById('ddToTrigger');
+  var fromMenu  = document.getElementById('ddFromMenu');
+  var toMenu    = document.getElementById('ddToMenu');
+
+  var _p   = new URLSearchParams(window.location.search);
+  var _pF  = _p.get('from');
+  var _pT  = _p.get('to');
+  var _pV  = _p.get('val');
+  var uFrom = _pF ? _pF : 'km_h'; // Start value set   var uTo = _pT ? _pT :'m_s';  // Start value set   var uVal = _pV ? _pV:'';
+
+  function fmtNum(n) {
+    if (!isFinite(n)) return '';
+    if (n === 0) return '0';
+    var a    = Math.abs(n);
+    var big  = Math.sign(a - 1e15) !== -1;
+    var tiny = (a !== 0) ? Math.sign(a - 1e-6) === -1 : false;
+    if (big ? true : tiny) return n.toExponential(6).replace(/\.?0+e/, 'e');
+    return parseFloat(n.toPrecision(10)).toString();
+  }
+
+  function getUnit(key) {
+    return UNITS.find(function(u) { return u.key === key; });
+  }
+
+  function buildSel(listEl, q, hiddenInp, valEl) {
+    q = q ? q.toLowerCase().trim() : '';
+    listEl.innerHTML = '';
+    var groups = {};
+    UNITS.forEach(function(u) {
+      var noMatch = !u.label.toLowerCase().includes(q)
+        ? (!u.key.toLowerCase().includes(q) ? !u.short.toLowerCase().includes(q) : false)
+        : false;
+      if (q ? noMatch : false) return;
+      if (!groups[u.group]) groups[u.group] = [];
+      groups[u.group].push(u);
+    });
+    Object.entries(groups).forEach(function(e) {
+      var og = document.createElement('div');
+      og.className = 'uc-dd-optgroup';
+      og.textContent = e[0];
+      listEl.appendChild(og);
+      e[1].forEach(function(u) {
+        var o = document.createElement('div');
+        o.className = 'uc-dd-option';
+        if(hiddenInp.value === u.key) o.classList.add('is-selected');
+        o.textContent = u.label;
+        o.dataset.val = u.key;
+        o.addEventListener('click', function() {
+           hiddenInp.value = u.key;
+           valEl.textContent = u.label;
+           closeAllDD();
+           updateFormula(); updateTable(); updateChips(); if (leftInp.value) convert();
+        });
+        listEl.appendChild(o);
+      });
+    });
+  }
+
+  function setOpt(inp, listEl, valEl, key) {
+    var u = getUnit(key);
+    if(u) {
+      inp.value = key;
+      valEl.textContent = u.label;
+      var opts = listEl.querySelectorAll('.uc-dd-option');
+      opts.forEach(function(o) { o.classList.remove('is-selected'); });
+      var sel = listEl.querySelector('.uc-dd-option[data-val="' + key + '"]');
+      if(sel) sel.classList.add('is-selected');
+    }
+  }
+
+  function convert() {
+    var val  = parseFloat(leftInp.value);
+    if (isNaN(val)) { rightInp.value = ''; updateFormula(); updateTable(); return; }
+    var from = getUnit(fromInp.value);
+    var to   = getUnit(toInp.value);
+    if (!from ? true : !to) return;
+    rightInp.value = fmtNum(val * from.toBase / to.toBase);
+    updateFormula(from, to);
+    updateTable(from, to);
+    window.history.replaceState({}, '', '?from=' + fromInp.value + '&to=' + toInp.value + '&val=' + val);
+  }
+
+  function updateFormula(from, to) {
+    from = from ? from : getUnit(fromInp.value);
+    to   = to   ? to   : getUnit(toInp.value);
+    if (!from ? true : !to) { formulaEl.textContent = 'Выберите единицы измерения'; return; }
+    formulaEl.innerHTML = '1 ' + from.label + ' = <strong>' + fmtNum(from.toBase / to.toBase) + '</strong> ' + to.label;
+  }
+
+  function updateTable(from, to) {
+    from = from ? from : getUnit(fromInp.value);
+    to   = to   ? to   : getUnit(toInp.value);
+    if (!from ? true : !to) return;
+    document.getElementById('ucTh1').textContent = from.label;
+    document.getElementById('ucTh2').textContent = to.label;
+    document.getElementById('ucTableHead').textContent = 'Таблица: ' + from.label + ' → ' + to.label;
+    tbody.innerHTML = '';
+    QUICK.forEach(function(v) {
+      var tr = document.createElement('tr');
+      tr.innerHTML = '<td>' + v + ' <span>' + from.short + '</span></td><td>' + fmtNum(v * from.toBase / to.toBase) + ' <span>' + to.short + '</span></td>';
+      tbody.appendChild(tr);
+    });
+  }
+
+  function updateChips() {
+    chipsEl.innerHTML = '';
+    QUICK.forEach(function(v) {
+      var a = document.createElement('a');
+      a.className   = 'uc-chip';
+      a.textContent = v;
+      a.href = '?from=' + fromInp.value + '&to=' + toInp.value + '&val=' + v;
+      a.addEventListener('click', function(e) {
+        e.preventDefault();
+        leftInp.value = v;
+        convert();
+      });
+      chipsEl.appendChild(a);
+    });
+  }
+
+  function closeAllDD() {
+    fromMenu.classList.remove('is-open');
+    toMenu.classList.remove('is-open');
+    fromTrig.classList.remove('is-active');
+    toTrig.classList.remove('is-active');
+  }
+
+  fromTrig.addEventListener('click', function(e) {
+    e.stopPropagation();
+    var isOpen = fromMenu.classList.contains('is-open');
+    closeAllDD();
+    if(!isOpen) { fromMenu.classList.add('is-open'); fromTrig.classList.add('is-active'); fromSrch.focus(); }
+  });
+
+  toTrig.addEventListener('click', function(e) {
+    e.stopPropagation();
+    var isOpen = toMenu.classList.contains('is-open');
+    closeAllDD();
+    if(!isOpen) { toMenu.classList.add('is-open'); toTrig.classList.add('is-active'); toSrch.focus(); }
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.uc-custom-dd')) closeAllDD();
+  });
+
+  fromMenu.addEventListener('click', function(e) { e.stopPropagation(); });
+  toMenu.addEventListener('click', function(e) { e.stopPropagation(); });
+
+  fromInp.value = uFrom;
+  toInp.value = uTo;
+  buildSel(fromList, '', fromInp, fromVal);
+  buildSel(toList, '', toInp, toVal);
+  setOpt(fromInp, fromList, fromVal, uFrom);
+  setOpt(toInp, toList, toVal, uTo);
+  updateFormula(); updateTable(); updateChips();
+  if (uVal) { leftInp.value = uVal; convert(); }
+
+  var tF, tT;
+  fromSrch.addEventListener('input', function() {
+    clearTimeout(tF);
+    tF = setTimeout(function() {
+      var prev = fromInp.value;
+      buildSel(fromList, fromSrch.value, fromInp, fromVal);
+      setOpt(fromInp, fromList, fromVal, prev);
+      if (!fromInp.value ? true : !fromList.querySelector('.uc-dd-option[data-val="' + prev + '"]')) {
+         var first = fromList.querySelector('.uc-dd-option');
+         if(first) {
+            fromInp.value = first.dataset.val;
+            fromVal.textContent = first.textContent;
+            first.classList.add('is-selected');
+         }
+      }
+      updateFormula(); updateTable(); updateChips(); if (leftInp.value) convert();
+    }, 200);
+  });
+
+  toSrch.addEventListener('input', function() {
+    clearTimeout(tT);
+    tT = setTimeout(function() {
+      var prev = toInp.value;
+      buildSel(toList, toSrch.value, toInp, toVal);
+      setOpt(toInp, toList, toVal, prev);
+      if (!toInp.value ? true : !toList.querySelector('.uc-dd-option[data-val="' + prev + '"]')) {
+         var first = toList.querySelector('.uc-dd-option');
+         if(first) {
+            toInp.value = first.dataset.val;
+            toVal.textContent = first.textContent;
+            first.classList.add('is-selected');
+         }
+      }
+      updateFormula(); updateTable(); updateChips(); if (leftInp.value) convert();
+    }, 200);
+  });
+
+  leftInp.addEventListener('input', function() { convert(); });
+
+  swapBtn.addEventListener('click', function() {
+    var kF = fromInp.value, kT = toInp.value, sF = fromSrch.value, sT = toSrch.value;
+    buildSel(fromList, sT, fromInp, fromVal); setOpt(fromInp, fromList, fromVal, kT); fromSrch.value = sT;
+    buildSel(toList,   sF, toInp, toVal);   setOpt(toInp, toList, toVal, kF);   toSrch.value = sF;
+    updateFormula(); updateTable(); updateChips(); if (leftInp.value) convert();
+  });
+
+  copyBtn.addEventListener('click', function() {
+    if (!rightInp.value) return;
+    navigator.clipboard.writeText(rightInp.value);
+    copyBtn.classList.add('uc-copied');
+    setTimeout(function() { copyBtn.classList.remove('uc-copied'); }, 1500);
+  });
+
+  clearBtn.addEventListener('click', function() {
+    leftInp.value = '';
+    rightInp.value = '';
+    updateFormula();
+    leftInp.focus();
+  });
+});
+</script>
+
+        <div class="post-content">
+<style>
+#converter-block *,
+#converter-block *::before,
+#converter-block *::after { box-sizing: border-box; }
+
+/* ── Wrapper ─────────────────────────────────── */
+.uc {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* ── Unit row ────────────────────────────────── */
+.uc-units-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  z-index: 2; /* Выше калькулятора, чтобы меню выпадало поверх */
+}
+
+/* ── Custom Dropdown (Вместо Select) ─────────── */
+.uc-custom-dd { position: relative; flex: 1; }
+
+.uc-dd-trigger {
+  width: 100%;
+  padding: 14px 34px 14px 50px; /* Место под бейдж слева и стрелку справа */
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #f8fafc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all .2s;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.01);
+}
+.uc-dd-trigger.is-active {
+  border-color: #0693e3;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(6,147,227,.15);
+}
+
+.uc-prefix-badge {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, #0693e3, #006eb5);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  pointer-events: none;
+}
+
+.uc-dd-val {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 6px;
+}
+
+.uc-dd-arr {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 8px;
+  color: #475569;
+  transition: transform .2s;
+}
+.uc-dd-trigger.is-active .uc-dd-arr { transform: translateY(-50%) rotate(180deg); color: #0693e3; }
+
+/* Dropdown Menu */
+.uc-dd-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  z-index: 100;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 380px;
+}
+.uc-dd-menu.is-open { display: flex; }
+
+.uc-dd-search-wrap {
+  padding: 12px;
+  border-bottom: 1px solid #f1f5f9;
+  position: relative;
+  background: #f8fafc;
+}
+.uc-search-icon {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  color: #94a3b8;
+  pointer-events: none;
+}
+.uc-dd-search {
+  width: 100%;
+  padding: 10px 14px 10px 36px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #111;
+  background: #fff;
+  outline: none;
+  transition: border-color .15s;
+}
+.uc-dd-search:focus { border-color: #0693e3; }
+
+.uc-dd-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 6px 0;
+}
+.uc-dd-list::-webkit-scrollbar { width: 6px; }
+.uc-dd-list::-webkit-scrollbar-track { background: #f8fafc; }
+.uc-dd-list::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+
+.uc-dd-optgroup {
+  padding: 10px 16px 4px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #94a3b8;
+  letter-spacing: 0.5px;
+}
+.uc-dd-option {
+  padding: 8px 16px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #334155;
+  cursor: pointer;
+  transition: background .15s, color .15s;
+}
+.uc-dd-option:hover { background: #f1f5f9; color: #111; }
+.uc-dd-option.is-selected {
+  background: linear-gradient(135deg, rgba(6,147,227,0.1), rgba(0,110,181,0.1));
+  color: #0693e3;
+  font-weight: 600;
+  border-left: 3px solid #0693e3;
+}
+
+/* Swap Button */
+.uc-swap {
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  border: 1px solid #e2e8f0 !important;
+  background: #fff !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  transition: all .3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,.04) !important;
+  outline: none !important;
+}
+.uc-swap img { 
+  width: 20px !important; 
+  height: 20px !important; 
+  transition: all .2s !important; 
+  display: block !important;
+}
+.uc-swap:hover {
+  border-color: #0693e3 !important;
+  background: linear-gradient(135deg, #0693e3, #006eb5) !important;
+  transform: rotate(180deg) scale(1.05) !important;
+  box-shadow: 0 6px 14px rgba(6,147,227,0.3) !important;
+}
+.uc-swap:hover img { filter: brightness(0) invert(1) !important; opacity: 1 !important; }
+
+/* ── Calc row (Ввод и Результат) ──────────────── */
+.uc-calc-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+}
+.uc-field { flex: 1; }
+
+.uc-equals {
+  font-size: 24px;
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
+.uc-val-wrap { position: relative; }
+.uc-val-lbl {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+  pointer-events: none;
+}
+
+.uc-input {
+  width: 100%;
+  padding: 16px 16px 16px 105px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: right;
+  color: #111;
+  background: #fff;
+  outline: none;
+  transition: all .2s;
+  -moz-appearance: textfield;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+}
+.uc-input::-webkit-outer-spin-button,
+.uc-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+.uc-input:focus {
+  border-color: #0693e3;
+  box-shadow: 0 0 0 4px rgba(6,147,227,.15);
+}
+
+.uc-result {
+  background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%);
+  color: #0693e3;
+  cursor: default;
+  padding-right: 50px;
+  border-color: #bae6fd;
+}
+.uc-result:focus { border-color: #7dd3fc; box-shadow: none; }
+
+.uc-copy {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  color: #64748b;
+  padding: 6px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  transition: all .2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.uc-copy:hover { color: #0693e3; border-color: #0693e3; box-shadow: 0 2px 6px rgba(6,147,227,0.2); }
+.uc-copy.uc-copied { color: #fff; background: #22c55e; border-color: #22c55e; }
+
+/* ── Formula row ─────────────────────────────── */
+.uc-formula-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+}
+.uc-f-ico { width: 22px; height: 22px; flex-shrink: 0;  }
+.uc-f-text {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  color: #475569;
+  min-width: 0;
+  overflow-wrap: break-word;
+  line-height: 1.5;
+}
+.uc-f-text strong { color: #111; font-weight: 700; font-size: 15px; }
+
+.uc-clear-btn {
+  flex-shrink: 0;
+  padding: 8px 18px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fff;
+  color: #4a5565;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all .2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.uc-clear-btn:hover { border-color: #94a3b8; color: #111; background: #f1f5f9; }
+
+/* ── Chips ───────────────────────────────────── */
+.uc-chips-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.uc-chips-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #888;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.uc-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.uc-chip {
+  padding: 6px 16px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  text-decoration: none;
+  background: #f1f5f9;
+  transition: all .2s;
+  display: inline-block;
+}
+.uc-chip:hover {
+  color: #fff;
+  background: linear-gradient(135deg, #0693e3, #006eb5);
+  box-shadow: 0 4px 10px rgba(6,147,227,.25);
+  transform: translateY(-2px);
+}
+
+/* ── Table ───────────────────────────────────── */
+.uc-table-wrap { display: flex; flex-direction: column; gap: 12px; margin-top: 6px; }
+.uc-table-head {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #111;
+}
+.uc-table-scroll {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+.uc-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.uc-table thead tr { background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); }
+.uc-table th {
+  text-align: left;
+  padding: 14px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+  border-bottom: 2px solid #e2e8f0;
+}
+.uc-table td {
+  padding: 12px 18px;
+  font-size: 14px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #111;
+  font-weight: 500;
+}
+.uc-table td span { color: #888; font-size: 12px; margin-left: 6px; font-weight: 400; }
+.uc-table tr:last-child td { border-bottom: none; }
+.uc-table tbody tr:hover { background: #f8fafc; }
+.uc-table td:last-child { color: #0693e3; font-weight: 700; }
+.uc-table td:last-child span { color: #7dd3fc; }
+
+/* ── Mobile ──────────────────────────────────── */
+@media (max-width: 650px) {
+  .uc-units-row { flex-direction: column; gap: 12px; align-items: stretch; }
+  .uc-swap { 
+    align-self: center !important; 
+    margin: 4px auto !important; 
+    transform: rotate(90deg) !important; 
+  }
+  .uc-swap:hover { transform: rotate(90deg) scale(1.05) !important; }
+  
+  .uc-calc-row { flex-direction: column; gap: 16px; align-items: stretch; }
+  .uc-equals { display: none; }
+  
+  .uc-val-lbl { font-size: 13px; left: 14px; }
+  .uc-input { padding: 16px 14px 16px 95px; font-size: 20px; }
+  .uc-result { padding-right: 46px; }
+  
+  .uc-formula-row { flex-wrap: wrap; }
+}
+</style>
+<p>Speed ​​is one of the most important physical quantities that describes the speed of an object’s movement in space. In everyday life, we are accustomed to kilometers per hour on a car's speedometer, but in aviation, navigation, astrophysics and geology, completely different number systems are used.</p>
+<p>Our multifunctional online calculator allows you to instantly convert speeds between dozens of different systems. The tool is designed for maximum convenience: it not only gives the exact result, but also shows the formula used, and also generates a visual conversion table for adjacent values.</p>
+<h2 class="wp-block-heading" id="kakie-kategorii-skorostej-podderzhivaet-konverter-2">What speed categories does the converter support?</h2>
+<p>The converter database includes both popular metric units and highly specialized physical constants. For convenience, they are divided into logical groups:</p>
+<ul class="wp-block-list">
+<li><strong>Metric (SI):</strong> Basic meters per second (m/s), kilometers per hour (km/h), as well as millimeters and centimeters for precise calculations.</li>
+<li><strong>British and American (Imperial):</strong> Miles per hour (mph), feet per second (fps), yards and inches, which are indispensable when working with Western documentation.</li>
+<li><strong>Marine and aviation:</strong> International and British knots, cables per minute, and Mach number (taking into account air temperature and pressure).</li>
+<li><strong>Scientific and space:</strong> The speed of light in vacuum, water and glass, the speed of sound in various media, as well as the first, second and third cosmic velocities for planet Earth.</li>
+<li><strong>Historical and exotic:</strong> Russian versts and fathoms, sea leagues, Roman miles, Chinese li and even such comic values ​​as “troubles per hour” or “furlongs in Fortnite”.</li>
+<li><strong>Ultra-slow (Geological):</strong> Measurements of the movement of tectonic plates or the growth of glaciers in millimeters, centimeters, and inches per year.</li>
+</ul>
+<h2 class="wp-block-heading" id="tablitsa-populyarnyh-skorostej-2">Popular speed table</h2>
+<p>To clearly understand the difference between different number systems, we have prepared a comparative table:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Object/Phenomenon</strong></td><td><strong>m/s</strong></td><td><strong>km/h</strong></td><td><strong>mph</strong></td><td><strong>Nodes</strong></td></tr></thead><tbody><tr><td>Man step</td><td>1.4</td><td>5</td><td>3.1</td><td>2.7</td></tr><tr><td>City limit for cars</td><td>13.89</td><td>50</td><td>31.06</td><td>27</td></tr><tr><td>Passenger plane</td><td>250</td><td>900</td><td>559</td><td>486</td></tr><tr><td>Speed ​​of sound (in air)</td><td>343.2</td><td>1235.5</td><td>767.7</td><td>667.1</td></tr><tr><td>First escape velocity</td><td>7900</td><td>28440</td><td>17671.8</td><td>15355</td></tr></tbody></table></div></figure>
+<h3 class="wp-block-heading" id="formuly-rascheta-i-perevoda-2">Calculation and conversion formulas</h3>
+<p>The basis of any speed calculation is the basic formula of classical kinematics, where speed ( $v$ ) equals distance ( $s$ ) divided by time ( $t$ ):</p>
+<p>$$v = \frac{s}{t}$$</p>
+<p>When converting from one system to another, mathematical coefficients are used. Here are some example formulas for the most popular conversions:</p>
+<ul class="wp-block-list">
+<li><strong>Meters per second to kilometers per hour:</strong> The value must be multiplied by 3.6. $$v_{km/h} = v_{m/s} \times 3.6$$ </li>
+<li><strong>Kilometers per hour to miles per hour:</strong> The coefficient used is 0.621371. $$v_{mph} = v_{km/h} \times 0.621371$$ </li>
+<li><strong>Knots to kilometers per hour:</strong> One international knot equals exactly 1.852 km/h. $$v_{km/h} = v_{knot} \times 1.852$$ </li>
+</ul>
+<h2 class="wp-block-heading" id="preimushhestva-prodvinutogo-interfejsa-2">Advantages of an advanced interface</h2>
+<p>This tool is designed with user experience in mind. Main functional solutions include:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Smart Search:</strong> Drop-down lists are equipped with a built-in search, which allows you to find the desired unit from a huge array of data in a couple of seconds.</li>
+<li><strong>Quick Entry Panel:</strong> Interactive chips under the calculator allow you to enter popular round values ​​(10, 50, 100, etc.) in one click.</li>
+<li><strong>Dynamic table:</strong> Selecting units automatically generates a conversion table for a range of values, saving time when making multiple calculations.</li>
+<li><strong>Copy in one click:</strong> The quick copy button allows you to instantly transfer the exact result to the clipboard without unnecessary text selections.</li>
+</ol>
+</div>
+    </div>
+</body>
+</html>

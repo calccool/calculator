@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marathon time prediction calculator based on half marathon results (Riegel Formula)</title>
+    <meta name="description" content="Marathon time prediction calculator based on half marathon results (Riegel Formula) - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Marathon time prediction calculator based on half marathon results (Riegel Formula)</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-row.cols-3 { grid-template-columns: repeat(3, minmax(60px, 1fr)); gap: 10px; }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #f8fafc; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #eff6ff; border: 1px solid #bae6fd; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05); }
+    .c-highlight-line:hover { background: #e0f2fe; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .c-switch-wrap { display: flex; align-items: center; gap: 12px; cursor: pointer; margin-bottom: 5px; padding: 14px 16px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 2px 6px rgba(0,0,0,0.02); transition: 0.3s; }
+    .c-switch-wrap:hover { border-color: #cbd5e1; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .c-switch-track { width: 44px; height: 24px; background: #cbd5e1; border-radius: 24px; position: relative; transition: 0.3s; flex-shrink: 0; }
+    .c-switch-thumb { width: 18px; height: 18px; background: #fff; border-radius: 50%; position: absolute; top: 3px; left: 3px; transition: 0.3s; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+    input:checked + .c-switch-track { background: #0693e3; }
+    input:checked + .c-switch-track .c-switch-thumb { left: 23px; }
+    .c-switch-label { font-weight: 600; font-size: 15px; color: #333; }
+    
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* Marathon Visuals */
+    .c-chart-box { margin: 15px 0 25px; padding: 25px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); text-align: center; }
+    .c-chart-title { font-weight: 700; color: #0f172a; font-size: 15px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    
+    .c-gauge-wrap { position: relative; width: 160px; height: 160px; margin: 0 auto 20px; }
+    .c-gauge-svg { transform: rotate(-90deg); width: 100%; height: 100%; filter: drop-shadow(0 4px 6px rgba(6, 147, 227, 0.2)); }
+    .c-gauge-bg { fill: none; stroke: #e2e8f0; stroke-width: 12; }
+    .c-gauge-fill { fill: none; stroke: url(#blue-grad); stroke-width: 12; stroke-linecap: round; stroke-dasharray: 440; stroke-dashoffset: 440; transition: stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1); }
+    .c-gauge-text { position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .c-gauge-val { font-size: 24px; font-weight: 800; color: #0693e3; line-height: 1.1; }
+    .c-gauge-sub { font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 1px; }
+    
+    .c-splits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; margin-top: 15px; text-align: left; }
+    .c-split-card { background: #fff; padding: 12px; border-radius: 10px; border: 1px solid #bae6fd; box-shadow: 0 2px 6px rgba(0,0,0,0.02); position: relative; overflow: hidden; }
+    .c-split-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: #0693e3; }
+    .c-split-card.wall::before { background: #d32f2f; }
+    .c-split-km { font-size: 13px; font-weight: 700; color: #475569; margin-bottom: 4px; display: flex; justify-content: space-between; }
+    .c-split-time { font-size: 18px; font-weight: 700; color: #111; }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-chart-box { padding: 15px; }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="marathon-calc-wrapper">
+<div class="c-body">
+<div class="c-toggle" id="mode-tabs">
+<button class="c-toggle-btn active" data-mode="half">Half marathon</button>
+<button class="c-toggle-btn" data-mode="custom">Any distance</button>
+</div>
+<div class="c-divider"><span class="icon">⏱️</span>Your current result</div>
+<div class="c-row" style="margin-bottom: 8px;">
+<div class="c-field is-hidden" id="custom-dist-wrap">
+<label class="c-label">Distance traveled</label>
+<select class="c-select" id="distance">
+<option value="5">5 km</option>
+<option value="10">10 km</option>
+<option selected="" value="21.0975">Half marathon (21.1 km)</option>
+<option value="30">30 km</option>
+</select>
+</div>
+<div class="c-field" style="grid-column: 1 / -1;">
+<label class="c-label">Finish time<span class="c-help-icon" id="openMathInfo">?</span>
+</label>
+<div class="c-row cols-3" style="margin-bottom: 0;">
+<div class="c-input-wrapper">
+<input class="c-input" id="hh" min="0" placeholder="Watch" type="number"/>
+<span class="c-input-suffix">h</span>
+</div>
+<div class="c-input-wrapper">
+<input class="c-input" id="mm" max="59" min="0" placeholder="Min" type="number"/>
+<span class="c-input-suffix">m</span>
+</div>
+<div class="c-input-wrapper">
+<input class="c-input" id="ss" max="59" min="0" placeholder="Sec" type="number"/>
+<span class="c-input-suffix">With</span>
+</div>
+</div>
+<div id="quick-btns-wrap" style="display:flex; gap:8px; margin-top:8px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-h="1" data-m="30" data-s="0" type="button">1:30:00</button>
+<button class="c-quick-btn" data-h="1" data-m="45" data-s="0" type="button">1:45:00</button>
+<button class="c-quick-btn" data-h="2" data-m="0" data-s="0" type="button">2:00:00</button>
+</div>
+</div>
+</div>
+<div class="c-divider" style="margin-top: 30px;"><span class="icon">⚙️</span>Tempo detail</div>
+<label class="c-switch-wrap">
+<input class="is-hidden" id="splitsToggle" type="checkbox"/>
+<div class="c-switch-track"><div class="c-switch-thumb"></div></div>
+<span class="c-switch-label">Calculate checkpoints (splits)</span>
+</label>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-chart-box is-hidden" id="vis-box">
+<div class="c-chart-title"><span class="icon">🏃</span>Target pace and forecast</div>
+<div class="c-gauge-wrap">
+<svg class="c-gauge-svg" viewbox="0 0 160 160">
+<defs>
+<lineargradient id="blue-grad" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#7dd3fc"></stop>
+<stop offset="100%" stop-color="#0284c7"></stop>
+</lineargradient>
+</defs>
+<circle class="c-gauge-bg" cx="80" cy="80" r="70"></circle>
+<circle class="c-gauge-fill" cx="80" cy="80" id="vis-pace-ring" r="70"></circle>
+</svg>
+<div class="c-gauge-text">
+<div class="c-gauge-val" id="vis-pace-val">00:00</div>
+<div class="c-gauge-sub">min/km</div>
+</div>
+</div>
+<div style="font-size: 13px; color: #475569; font-weight: 500;">To achieve the result, you must maintain a uniform average pace over 42.2 km.</div>
+<div class="is-hidden" id="splits-container">
+<div class="c-divider" style="margin-top: 25px;"><span class="icon">⏱️</span>Marathon checkpoints</div>
+<div class="c-splits-grid">
+<div class="c-split-card">
+<div class="c-split-km">5 km<span style="color:#0284c7">Overclocking</span></div>
+<div class="c-split-time" id="split-5k">--:--:--</div>
+</div>
+<div class="c-split-card">
+<div class="c-split-km">10 km<span></span></div>
+<div class="c-split-time" id="split-10k">--:--:--</div>
+</div>
+<div class="c-split-card">
+<div class="c-split-km">21.1 km<span style="color:#059669">Equator</span></div>
+<div class="c-split-time" id="split-21k">--:--:--</div>
+</div>
+<div class="c-split-card wall">
+<div class="c-split-km">30 km<span style="color:#d32f2f">Wall</span></div>
+<div class="c-split-time" id="split-30k">--:--:--</div>
+</div>
+</div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">🏁</span>Finish time</div>
+<div class="c-resline c-highlight-line" style="border-bottom: none; background: #f0f9ff; padding: 16px;">
+<div class="c-resleft">Marathon forecast (42.2 km)<span class="c-subtext">Pete Riegel Formula</span></div>
+<div class="c-resval" id="resTotalTime" style="font-size: 24px;"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline" style="border-top: 1px dashed #cbd5e1; margin-top: 10px;">
+<div class="c-resleft">Your current result<span class="c-subtext" id="resBaseDist">Distance: 21.1 km</span></div>
+<div class="c-resval" id="resBaseTime" style="color: #475569;"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+<div class="c-modal-overlay" id="mathInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeMathInfo">×</button>
+<div class="c-modal-title"><span class="icon">📖</span>How does the forecast work?</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">The calculator uses the internationally recognized formula of American engineer Pete Riegel, developed in 1977.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px; text-align: center; font-family: monospace; font-size: 15px; font-weight: bold;">
+                    T2 = T1 × (D2 / D1)¹·⁰⁶
+                </div>
+<div style="font-size: 13px; color: #475569; line-height: 1.5;">
+<ul style="padding-left: 20px; margin: 0 0 10px 0;">
+<li><span class="c-term">T1</span>— your time for the distance covered.</li>
+<li><span class="c-term">D1</span>- distance traveled.</li>
+<li><span class="c-term">D2</span>— target distance (Marathon 42.195 km).</li>
+</ul>
+</div>
+<div style="background: #fff1f2; padding: 12px; border-radius: 8px; border: 1px solid #fecdd3; font-size: 13px; color: #be123c;">
+<b>Note:</b>The formula assumes that you have completed the proper training to complete a marathon. It does not take into account terrain, weather and the “marathon wall” effect at the 30th kilometer.</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let activeMode = 'half';
+  let isCalculated = false;
+
+  // Modal logic
+  $('#openMathInfo').addEventListener('click', () => { $('#mathInfoModal').classList.add('show'); });
+  $('#closeMathInfo').addEventListener('click', () => { $('#mathInfoModal').classList.remove('show'); });
+  $('#mathInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#mathInfoModal').classList.remove('show');
+  });
+
+  function updateModeUI() {
+      if (Math.abs(activeMode === 'custom') === 1) {
+          $('#custom-dist-wrap').classList.remove('is-hidden');
+          $('#quick-btns-wrap').style.display = 'none';
+      } else {
+          $('#custom-dist-wrap').classList.add('is-hidden');
+          $('#distance').value = "21.0975";
+          $('#quick-btns-wrap').style.display = 'flex';
+      }
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  }
+
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeMode = btn.dataset.mode;
+        updateModeUI();
+    });
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          $('#hh').value = btn.dataset.h;
+          $('#mm').value = btn.dataset.m;
+          $('#ss').value = btn.dataset.s;
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  $('#splitsToggle').addEventListener('change', () => {
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  });
+
+  function formatTime(totalSecs) {
+      let h = Math.floor(totalSecs / 3600);
+      let m = Math.floor((totalSecs - (h * 3600)) / 60);
+      let s = Math.round(totalSecs - (h * 3600) - (m * 60));
+      
+      let hStr = h.toString();
+      let mStr = m.toString();
+      let sStr = s.toString();
+      
+      let isMLt10 = Math.sign(10 - m);
+      if (Math.abs(isMLt10 === 1) === 1) mStr = "0" + mStr;
+      
+      let isSLt10 = Math.sign(10 - s);
+      if (Math.abs(isSLt10 === 1) === 1) sStr = "0" + sStr;
+      
+      let isHZero = Math.sign(h);
+      if (Math.abs(isHZero === 0) === 1) {
+          return mStr + ":" + sStr;
+      }
+      return hStr + ":" + mStr + ":" + sStr;
+  }
+
+  function formatPace(secsPerKm) {
+      let m = Math.floor(secsPerKm / 60);
+      let s = Math.round(secsPerKm - (m * 60));
+      let mStr = m.toString();
+      let sStr = s.toString();
+      
+      let isMLt10 = Math.sign(10 - m);
+      if (Math.abs(isMLt10 === 1) === 1) mStr = "0" + mStr;
+      
+      let isSLt10 = Math.sign(10 - s);
+      if (Math.abs(isSLt10 === 1) === 1) sStr = "0" + sStr;
+      
+      return mStr + ":" + sStr;
+  }
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let h = parseFloat($('#hh').value);
+    let m = parseFloat($('#mm').value);
+    let s = parseFloat($('#ss').value);
+    
+    let isNanH = isNaN(h); if (Math.abs(isNanH === true) === 1) h = 0;
+    let isNanM = isNaN(m); if (Math.abs(isNanM === true) === 1) m = 0;
+    let isNanS = isNaN(s); if (Math.abs(isNanS === true) === 1) s = 0;
+
+    let totalSecs = (h * 3600) + (m * 60) + s;
+    let isErr = false;
+    let isPositiveSecs = false;
+    if (Math.abs(Math.sign(totalSecs) === 1) === 1) isPositiveSecs = true;
+    if (Math.abs(isPositiveSecs === false) === 1) isErr = true;
+    
+    if (Math.abs(isErr === true) === 1) {
+        $('#vis-box').classList.add('is-hidden');
+        $('#resultBox').classList.remove('show');
+        if (Math.abs(shouldScroll === true) === 1) {
+            $('#errorMsg').textContent = "Enter the correct finish time";
+            $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    let d1 = 21.0975;
+    if (Math.abs(activeMode === 'custom') === 1) {
+        d1 = parseFloat($('#distance').value);
+    }
+    let d2 = 42.195; // Marathon
+
+    // Riegel's Formula
+    let predictedSecs = totalSecs * Math.pow((d2 / d1), 1.06);
+    
+    $('#resTotalTime').textContent = formatTime(predictedSecs);
+    $('#resBaseTime').textContent = formatTime(totalSecs);          let distText = "Distance: Half Marathon (21.1 km)";     if (Math.abs(activeMode ==='custom') === 1) {         distText = "Distance: " + d1 + " km";     }     $('#resBaseDist').textContent = distText;
+
+    // Visuals & Pace
+    let paceSecs = predictedSecs / d2;
+    $('#vis-pace-val').textContent = formatPace(paceSecs);
+    
+    // Animate Ring (0 to 440) based on an arbitrary "good pace" metric for visual effect.
+    // Let's map pace 4:00 (240s) to 100%, and 8:00 (480s) to 0%.
+    let paceScore = (480 - paceSecs) / (480 - 240);
+    let isPaceScoreNeg = Math.sign(paceScore);
+    if (Math.abs(isPaceScoreNeg === -1) === 1) paceScore = 0.05; // min 5%
+    let isPaceScoreOver = Math.sign(paceScore - 1);
+    if (Math.abs(isPaceScoreOver === 1) === 1) paceScore = 1; // max 100%
+    
+    let dashOffset = 440 - (440 * paceScore);
+    
+    let ring = $('#vis-pace-ring');
+    ring.style.strokeDashoffset = '440'; // reset
+    void ring.offsetWidth; // trigger reflow
+    ring.style.strokeDashoffset = dashOffset;
+
+    // Splits logic
+    let showSplits = $('#splitsToggle').checked;
+    if (Math.abs(showSplits === true) === 1) {
+        $('#splits-container').classList.remove('is-hidden');
+        $('#split-5k').textContent = formatTime(paceSecs * 5);
+        $('#split-10k').textContent = formatTime(paceSecs * 10);
+        $('#split-21k').textContent = formatTime(paceSecs * 21.0975);
+        $('#split-30k').textContent = formatTime(paceSecs * 30);
+    } else {
+        $('#splits-container').classList.add('is-hidden');
+    }
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#vis-box').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(e.target.tagName === 'SELECT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    wrap.querySelectorAll('input[type="number"]').forEach(i => i.value = '');
+    $('#splitsToggle').checked = false;
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    $('#vis-pace-ring').style.strokeDashoffset = '440';
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      navigator.clipboard.writeText(valRaw.trim());
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>The transition from a half marathon to a full distance of 42,195 meters is not just doubling the distance, but a serious challenge to physiology. To prevent the finish from turning into a struggle for survival, it is important to calculate your <strong>target pace</strong> and realistic completion time.</p>
+<p>Our online calculator uses an algorithm proven over decades of professional running to help you strategize your race and avoid the marathon wall.</p>
+<h2 class="wp-block-heading" id="formula-pita-rigelya-zolotoj-standart-prognozirovaniya-2">Pete Riegel's Formula: The Gold Standard for Forecasting</h2>
+<p>The calculations are based on an empirical formula developed by American engineer and running researcher Pete Riegel in 1977. It takes into account the athlete’s natural deceleration as the distance increases due to the endurance coefficient.</p>
+<p>Mathematically, the relationship looks like this:</p>
+<p>$$T_2 = T_1 \times \left(\frac{D_2}{D_1}\right)^{1.06}$$</p>
+<p>Where variables mean:</p>
+<ul class="wp-block-list">
+<li><strong>$T_1$</strong> — The time during which you have already run the control distance.</li>
+<li><strong>$D_1$</strong> — Control distance (for example, 21.0975 km).</li>
+<li><strong>$D_2$</strong> — The distance for which the forecast is being made (Marathon — 42.195 km).</li>
+<li><strong>$1.06$</strong> — Speed ​​degradation coefficient applicable to most trained runners.</li>
+</ul>
+<h2 class="wp-block-heading" id="tablitsa-primernyh-prognozov-po-distantsiyam-2">Table of approximate distance forecasts</h2>
+<p>Below are guidelines to help you compare your current performance to your marathon ambitions:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>10 km result</strong></td><td><strong>Result at the Half Marathon (21.1)</strong></td><td><strong>Forecast for Marathon (42.2)</strong></td><td><strong>Recommended pace (min/km)</strong></td></tr></thead><tbody><tr><td>40:00</td><td>1:28:30</td><td>3:04:40</td><td>04:22</td></tr><tr><td>45:00</td><td>1:39:30</td><td>3:27:50</td><td>04:55</td></tr><tr><td>50:00</td><td>1:50:30</td><td>3:51:00</td><td>05:28</td></tr><tr><td>55:00</td><td>2:01:40</td><td>4:14:00</td><td>06:01</td></tr><tr><td>1:00:00</td><td>2:12:45</td><td>4:37:10</td><td>06:34</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="klyuchevye-faktory-tochnosti-prognoza-2">Key Factors in Forecast Accuracy</h2>
+<p>It is worth remembering that dry mathematics is only the foundation. In order for your actual result to coincide with the calculated one, you need to take into account the following variables:</p>
+<ul class="wp-block-list">
+<li><strong>Aerobic base:</strong> The Riegel formula only works ideally if you have done a sufficient amount of training (long runs of 25-32 km).</li>
+<li><strong>Route terrain:</strong> If the half marathon was flat and the marathon is hilly (like Boston), add 3-5% to the forecast.</li>
+<li><strong>Weather conditions:</strong> Temperatures above +15°C significantly increase the load on the cardiovascular system, reducing the rate.</li>
+<li><strong>Nutrition strategy:</strong> Lack of glycogen after the 30th kilometer is the main reason for the drop in speed, which the formula cannot predict.</li>
+</ul>
+<h3 class="wp-block-heading" id="kak-polzovatsya-kalkulyatorom-2">How to use the calculator</h3>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Select mode:</strong> Use the “Half Marathon” tab for a standard calculation, or “Any Distance” if you have a recent 5K or 10K result.</li>
+<li><strong>Enter time:</strong> Enter the hours, minutes and seconds of your best recent run.</li>
+<li><strong>Explore splits:</strong> Enable the “Calculate checkpoints” option to get time stamps for distances 5, 10, 21.1 and the critical point of 30 km.</li>
+<li><strong>Follow the tempo scale:</strong> The interactive ring visualizes the intensity of your run, helping you navigate your speed zones.</li>
+</ol>
+<p>Use this data to set your watch at the start and remember: the marathon begins after the 30th kilometer. Proper calculation is your insurance against premature finishing!</p>
+</div>
+    </div>
+</body>
+</html>

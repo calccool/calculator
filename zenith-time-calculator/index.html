@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>True noon calculator: calculating the time of zenith and height of the Sun</title>
+    <meta name="description" content="True noon calculator: calculating the time of zenith and height of the Sun - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>True noon calculator: calculating the time of zenith and height of the Sun</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-zenith-wrap { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 15px; position: relative; overflow: hidden; }
+    .c-zenith-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #f59e0b, #fbbf24, #f59e0b); }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #fff; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(245, 158, 11, 0.1); }
+    .c-highlight-line:hover { background: #fef3c7; }
+    .c-highlight-line .c-resval { color: #d97706; font-size: 22px; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* Advanced Visualization */
+    .c-sky-box { margin: 15px 0 25px; padding: 25px 20px 15px; background: linear-gradient(180deg, #38bdf8 0%, #e0f2fe 100%); border-radius: 16px; border: 1px solid #bae6fd; box-shadow: inset 0 2px 10px rgba(255,255,255,0.6); position: relative; overflow: hidden; transition: background 1s ease; }
+    .c-sky-box.night { background: linear-gradient(180deg, #1e1b4b 0%, #312e81 100%); border-color: #3730a3; }
+    .c-chart-title { font-weight: 700; color: #0f172a; font-size: 15px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 8px; position: relative; z-index: 2; }
+    .c-sky-box.night .c-chart-title { color: #e0e7ff; }
+    
+    .c-sun-svg-wrap { width: 100%; max-width: 320px; margin: 0 auto; position: relative; z-index: 2; }
+    .c-horizon { border-bottom: 2px solid #0f172a; opacity: 0.2; width: 100%; height: 2px; position: absolute; bottom: 10px; left: 0; }
+    .c-sky-box.night .c-horizon { border-color: #e0e7ff; opacity: 0.4; }
+
+    .c-info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 15px; position: relative; z-index: 2; }
+    .c-info-card { background: rgba(255,255,255,0.8); backdrop-filter: blur(4px); padding: 12px; border-radius: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.5); }
+    .c-sky-box.night .c-info-card { background: rgba(30, 27, 75, 0.6); border-color: rgba(99, 102, 241, 0.3); color: #e0e7ff; }
+    .c-info-val { font-size: 18px; font-weight: 700; color: #0284c7; margin-top: 4px; }
+    .c-sky-box.night .c-info-val { color: #818cf8; }
+    .c-info-lbl { font-size: 12px; font-weight: 600; color: #475569; }
+    .c-sky-box.night .c-info-lbl { color: #94a3b8; }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-sky-box { padding: 20px 15px; }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="zenith-calc-wrapper">
+<div class="c-body">
+<div class="c-divider"><span class="icon">🌍</span>Coordinates and time</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Calculation date</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="zDate" type="date"/>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Time zone<span class="c-term">UTC Offset</span>
+<span class="c-help-icon" id="openZenithInfo">?</span>
+</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="zTz" placeholder="For example: 3" step="1" type="number"/>
+<span class="c-input-suffix">h</span>
+</div>
+</div>
+</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Latitude<span class="c-term">Latitude</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="zLat" placeholder="55.75" step="0.0001" type="number"/>
+<span class="c-input-suffix">°</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Longitude<span class="c-term">Longitude</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="zLon" placeholder="37.61" step="0.0001" type="number"/>
+<span class="c-input-suffix">°</span>
+</div>
+</div>
+</div>
+<div style="display:flex; gap:8px; margin-bottom: 25px; flex-wrap:wrap;">
+<span class="c-subtext" style="display:flex; align-items:center; margin-right: 8px;">Quick input:</span>
+<button class="c-quick-btn" data-lat="55.7558" data-lon="37.6173" data-tz="3" type="button">Moscow</button>
+<button class="c-quick-btn" data-lat="51.5074" data-lon="-0.1278" data-tz="0" type="button">London</button>
+<button class="c-quick-btn" data-lat="40.7128" data-lon="-74.0060" data-tz="-5" type="button">New York</button>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-sky-box is-hidden" id="vis-box">
+<div class="c-chart-title"><span class="icon" id="vis-icon">☀️</span>Sky visualization</div>
+<div class="c-sun-svg-wrap">
+<svg style="width:100%; height:auto; overflow:visible;" viewbox="0 0 200 120">
+<path d="M 10 110 A 90 90 0 0 1 190 110" fill="none" stroke="rgba(255,255,255,0.4)" stroke-dasharray="4,4" stroke-width="2"></path>
+<line stroke="rgba(255,255,255,0.3)" stroke-width="1" x1="100" x2="100" y1="110" y2="20"></line>
+<text fill="rgba(255,255,255,0.8)" font-size="8" font-weight="bold" text-anchor="middle" x="100" y="15">90°</text>
+<text fill="rgba(255,255,255,0.8)" font-size="8" text-anchor="middle" x="10" y="125">Horizon</text>
+<path d="" fill="none" id="vis-path" stroke="#f59e0b" stroke-width="3" style="transition: all 1s ease;"></path>
+<circle cx="10" cy="110" fill="#fbbf24" id="vis-sun" r="8" stroke="#fff" stroke-width="2" style="transition: all 1s cubic-bezier(0.34, 1.56, 0.64, 1); filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.8));"></circle>
+</svg>
+<div class="c-horizon"></div>
+</div>
+<div class="c-info-grid">
+<div class="c-info-card">
+<div class="c-info-lbl">Peak height</div>
+<div class="c-info-val" id="vis-alt-val">0°</div>
+</div>
+<div class="c-info-card">
+<div class="c-info-lbl">Equation of time</div>
+<div class="c-info-val" id="vis-eot-val">0 min</div>
+</div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">⏱️</span>Calculation results</div>
+<div class="c-zenith-wrap">
+<div class="c-resline">
+<div class="c-resleft">Angular height of the Sun<span class="c-subtext">Angle above the horizon at zenith</span></div>
+<div class="c-resval" id="resAlt"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Longitude offset<span class="c-subtext">Difference with time zone meridian</span></div>
+<div class="c-resval" id="resLonShift"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline c-highlight-line" style="border-bottom: none;">
+<div class="c-resleft">Exact zenith time<span class="c-subtext">True astronomical noon</span></div>
+<div class="c-resval" id="resNoonTime"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+</div>
+<div class="c-modal-overlay" id="zenithInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeZenithInfo">×</button>
+<div class="c-modal-title"><span class="icon">📖</span>What is True Noon?</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">True noon (Zenith) is the exact moment in time when the Sun reaches its highest point in the sky for specific coordinates. It rarely coincides with 12:00 on the clock.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>Equation of time:</b>The Earth moves in an elliptical orbit, so the solar day varies slightly in length throughout the year. Because of this, the Sun can be “late” or “hurry” up to 16 minutes relative to the normal clock.</div>
+<div style="background: #eff6ff; padding: 12px; border-radius: 8px; border: 1px solid #bae6fd; font-size: 13px; color: #0284c7;">
+<b>Longitude offset:</b>Within the same time zone, the time is the same, but the Sun rises earlier in the east than in the west. Every 15° of longitude shifts true noon by exactly 1 hour.</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let isCalculated = false;
+
+  // Set today as default date
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  let mm = today.getMonth() + 1;
+  let dd = today.getDate();
+  let mmStr = mm.toString();
+  let ddStr = dd.toString();
+  
+  let isMmSmall = Math.sign(10 - mm);
+  if (Math.abs(isMmSmall === 1) === 1) mmStr = '0' + mm;
+  
+  let isDdSmall = Math.sign(10 - dd);
+  if (Math.abs(isDdSmall === 1) === 1) ddStr = '0' + dd;
+  
+  $('#zDate').value = yyyy + '-' + mmStr + '-' + ddStr;
+
+  // Modal logic
+  $('#openZenithInfo').addEventListener('click', () => { $('#zenithInfoModal').classList.add('show'); });
+  $('#closeZenithInfo').addEventListener('click', () => { $('#zenithInfoModal').classList.remove('show'); });
+  $('#zenithInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#zenithInfoModal').classList.remove('show');
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          $('#zLat').value = btn.dataset.lat;
+          $('#zLon').value = btn.dataset.lon;
+          $('#zTz').value = btn.dataset.tz;
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let dateVal = $('#zDate').value;
+    let lat = parseFloat($('#zLat').value);
+    let lon = parseFloat($('#zLon').value);
+    let tz = parseFloat($('#zTz').value);
+    
+    let isErr = false;
+    
+    let timeObj = new Date(dateVal);
+    let timeNum = timeObj.getTime();
+    let isNanTime = isNaN(timeNum);
+    if (Math.abs(isNanTime === true) === 1) isErr = true;
+    
+    let isNanLat = isNaN(lat);
+    if (Math.abs(isNanLat === true) === 1) isErr = true;
+    
+    let isNanLon = isNaN(lon);
+    if (Math.abs(isNanLon === true) === 1) isErr = true;
+    
+    let isNanTz = isNaN(tz);
+    if (Math.abs(isNanTz === true) === 1) isErr = true;
+
+    // Range checks using safe logic
+    if (Math.abs(isErr === false) === 1) {
+        let latAbs = Math.abs(lat);
+        let latSign = Math.sign(latAbs - 90);
+        if (Math.abs(latSign === 1) === 1) isErr = true;
+        
+        let lonAbs = Math.abs(lon);
+        let lonSign = Math.sign(lonAbs - 180);
+        if (Math.abs(lonSign === 1) === 1) isErr = true;
+        
+        let tzSignHigh = Math.sign(tz - 14);
+        let tzSignLow = Math.sign(-12 - tz);
+        let tzErrSum = Math.abs(tzSignHigh === 1) + Math.abs(tzSignLow === 1);
+        if (Math.abs(tzErrSum === 0) === 0) isErr = true;
+    }
+
+    if (Math.abs(isErr === true) === 1) {
+        $('#vis-box').classList.add('is-hidden');
+        $('#resultBox').classList.remove('show');
+        if (Math.abs(shouldScroll === true) === 1) {
+            $('#errorMsg').textContent = "Check the correctness of the entered data (Coordinates and Date)";
+            $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    // Calculation logic
+    let startOfYear = new Date(timeObj.getFullYear(), 0, 0);
+    let diff = timeObj - startOfYear;
+    let oneDay = 1000 * 60 * 60 * 24;
+    let dayOfYear = Math.floor(diff / oneDay);
+    
+    let B = (360 / 365.24) * (dayOfYear - 81) * (Math.PI / 180);
+    let eot = 9.87 * Math.sin(2 * B) - 7.53 * Math.cos(B) - 1.5 * Math.sin(B);
+    let delta = 23.45 * Math.sin(B);
+    
+    let noonVal = 12 - (eot / 60) - (lon / 15) + tz;
+    
+    let signWrap = Math.sign(noonVal);
+    if (Math.abs(signWrap === -1) === 1) noonVal = noonVal + 24;
+    
+    let signWrapOver = Math.sign(noonVal - 24);
+    if (Math.abs(signWrapOver === 1) === 1) noonVal = noonVal - 24;
+    
+    let hr = Math.floor(noonVal);
+    let mnDec = (noonVal - hr) * 60;
+    let mn = Math.floor(mnDec);
+    let sc = Math.floor((mnDec - mn) * 60);
+    
+    let hrStr = hr.toString();
+    let isHrSmall = Math.sign(10 - hr);
+    if (Math.abs(isHrSmall === 1) === 1) hrStr = '0' + hr;
+    
+    let mnStr = mn.toString();
+    let isMnSmall = Math.sign(10 - mn);
+    if (Math.abs(isMnSmall === 1) === 1) mnStr = '0' + mn;
+    
+    let scStr = sc.toString();
+    let isScSmall = Math.sign(10 - sc);
+    if (Math.abs(isScSmall === 1) === 1) scStr = '0' + sc;
+
+    let timeFormat = hrStr + ':' + mnStr + ':' + scStr;
+    
+    let alt = 90 - Math.abs(lat - delta);
+    let isNight = Math.sign(alt);
+    
+    let lstm = 15 * tz;
+    let lonShiftMins = (lstm - lon) * 4;
+    let lonShiftSign = Math.sign(lonShiftMins);
+    let lonShiftText = Math.abs(lonShiftMins).toFixed(1) + "min";
+    if (Math.abs(lonShiftSign === 1) === 1) lonShiftText = "+" + lonShiftText;
+    if (Math.abs(lonShiftSign === -1) === 1) lonShiftText = "-" + lonShiftText;
+
+    // UI Update - Results
+    $('#resAlt').textContent = alt.toFixed(2) + "°";
+    $('#resLonShift').textContent = lonShiftText;
+    $('#resNoonTime').textContent = timeFormat;
+
+    // Visual Updates
+    let eotSign = Math.sign(eot);
+    let eotText = Math.abs(eot).toFixed(1) + "min";
+    if (Math.abs(eotSign === 1) === 1) eotText = "+" + eotText;
+    if (Math.abs(eotSign === -1) === 1) eotText = "-" + eotText;
+    
+    $('#vis-eot-val').textContent = eotText;
+    $('#vis-alt-val').textContent = alt.toFixed(1) + "°";
+
+    let skyBox = $('#vis-box');
+    let sunSvg = $('#vis-sun');
+    let pathSvg = $('#vis-path');
+    let visIcon = $('#vis-icon');
+    
+    // Polar night logic
+    if (Math.abs(isNight === -1) === 1) {
+        skyBox.classList.add('night');
+        visIcon.textContent = '🌑';
+        sunSvg.setAttribute('cy', '110');
+        sunSvg.setAttribute('cx', '100');
+        pathSvg.setAttribute('d', '');
+    } else {
+        skyBox.classList.remove('night');
+        visIcon.textContent = '☀️';
+        
+        // Calculate SVG position (Max Y is 110, Min Y is 20, Center X is 100)
+        let altitudeRatio = alt / 90;
+        let cy = 110 - (90 * altitudeRatio);
+        
+        // Draw path from left horizon (10,110) to zenith (100, cy)
+        let pathD = "M 10 110 Q 55 " + cy + " 100 " + cy;
+        pathSvg.setAttribute('d', pathD);
+        
+        // Move sun
+        sunSvg.setAttribute('cx', '100');
+        sunSvg.setAttribute('cy', cy.toString());
+    }
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#vis-box').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    wrap.querySelectorAll('input[type="number"]').forEach(i => i.value = '');
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    
+    // Reset Sun position
+    $('#vis-sun').setAttribute('cx', '10');
+    $('#vis-sun').setAttribute('cy', '110');
+    $('#vis-path').setAttribute('d', '');
+    
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      let valClean = valRaw.trim();
+      navigator.clipboard.writeText(valClean);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Many people mistakenly believe that the Sun is at its highest point at exactly noon according to wall clocks. However <strong>true noon</strong> - this is the moment when the Sun crosses the local celestial meridian. The gap between civil time and an astronomical event can be more than half an hour.</p>
+<p>There are three main reasons for this discrepancy:</p>
+<ul class="wp-block-list">
+<li><strong>Geographical longitude:</strong> Within one time zone, the time is the same, but the Sun “travels” across the sky from east to west. For cities on different edges of the same belt, the difference in zenith can be up to 60 minutes.</li>
+<li><strong>Equation of time:</strong> The Earth moves around the Sun in an elliptical orbit and with an axis tilt. Because of this, the speed of the Sun's movement across the sky varies throughout the year.</li>
+<li><strong>Summer time:</strong> Changing the hands artificially shifts noon by another hour.</li>
+</ul>
+<h2 class="wp-block-heading" id="zachem-nuzhno-znat-vremya-solnechnogo-zenita-2">Why do you need to know the solar zenith time?</h2>
+<p>Knowing the exact moment of true noon and the peak height of the luminary is necessary in a variety of areas:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Photo:</strong> The time of the “golden hour” and the calculation of the hardest shadows at the zenith.</li>
+<li><strong>Solar energy:</strong> Optimizing the angle of inclination of solar panels to achieve maximum efficiency.</li>
+<li><strong>Gardening and architecture:</strong> Planning of insolation of areas and illumination of premises.</li>
+<li><strong>Navigation and astronomy:</strong> Determination of coordinates and calibration of instruments.</li>
+</ol>
+<h2 class="wp-block-heading" id="kak-rasschitat-vremya-zenita-formuly-i-algoritmy-2">How to calculate zenith time: formulas and algorithms</h2>
+<p>Our calculator uses celestial mechanics algorithms to calculate the position of the Sun. It is based on two key parameters: <strong>equation of time (EOT)</strong> And <strong>solar declination ( $\delta$ )</strong>.</p>
+<h3 class="wp-block-heading" id="matematicheskaya-model-rascheta-2">Mathematical calculation model</h3>
+<p>To calculate the day of the year ( $N$ ) and the intermediate coefficient $B$ , the formula is used:</p>
+<p>$$B = \frac{360}{365.24} \times (N — 81)$$</p>
+<p>Then the equation of time in minutes is calculated:</p>
+<p>$$EOT = 9.87 \sin(2B) — 7.53 \cos(B) — 1.5 \sin(B)$$</p>
+<p>The resulting true noon time ( $T_{noon}$ ) is calculated as:</p>
+<p>$$T_{noon} = 12 — \frac{EOT}{60} — \frac{Longitude}{15} + Timezone$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li><strong>Longitude:</strong> Your longitude (positive for eastern, negative for western).</li>
+<li><strong>Timezone:</strong> Your time zone offset from UTC.</li>
+</ul>
+<h3 class="wp-block-heading" id="raschet-maksimalnoj-vysoty-solntsa-2">Calculation of the maximum height of the Sun</h3>
+<p>The angular altitude of the Sun at the moment of zenith depends on the latitude of the observer and the current declination of the star:</p>
+<p>$$Alt = 90^\circ — |Latitude — \delta|$$</p>
+<h2 class="wp-block-heading" id="zavisimost-vremeni-poldnya-ot-dolgoty-2">Dependence of half-day time on longitude</h2>
+<p>The table below shows the average offset of true noon depending on the distance from the central meridian of your time zone.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Longitude deviation (degrees)</strong></td><td><strong>Time offset (minutes)</strong></td><td><strong>Direction</strong></td></tr></thead><tbody><tr><td>1°</td><td>4 min</td><td>To the west - later, to the east - earlier</td></tr><tr><td>5°</td><td>20 min</td><td>Delay or advance</td></tr><tr><td>10°</td><td>40 min</td><td>Significant deviation</td></tr><tr><td>15°</td><td>60 min</td><td>A whole hour difference</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="instruktsiya-po-ispolzovaniyu-kalkulyatora-2">Instructions for using the calculator</h2>
+<p>To get the most accurate data (accuracy less than 30 seconds), follow these steps:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Select date:</strong> The position of the Sun changes daily due to the Earth's orbital movement.</li>
+<li><strong>Specify coordinates:</strong> Enter the latitude and longitude of the location. You can use the quick entry buttons for the largest metropolitan areas.</li>
+<li><strong>Set the time zone:</strong> Make sure the current offset is specified (for example, +3 for Moscow). The calculator will automatically take into account the difference between the meridians.</li>
+<li><strong>Explore the visualization:</strong> The interactive block will show the trajectory of the Sun and its peak point above the horizon for the selected conditions.</li>
+</ol>
+<p>If you are in polar night conditions, the calculator will correctly display the “Night” status and show that the Sun does not rise above the horizon.</p>
+</div>
+    </div>
+</body>
+</html>

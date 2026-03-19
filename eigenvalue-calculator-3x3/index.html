@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3x3 matrix eigenvalues ​​and vectors calculator</title>
+    <meta name="description" content="3x3 matrix eigenvalues ​​and vectors calculator - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>3x3 matrix eigenvalues ​​and vectors calculator</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (Эталонный шаблон) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(220px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 10px; } 
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 10px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+
+    .c-divider { 
+        display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; 
+        font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; }
+
+    /* === Result Box Styling === */
+    .c-result { border:1px dashed #0693e3; border-radius:10px; padding:10px; background:#fff; display:none; scroll-margin-top: 20px; }
+    .c-result.show { display:grid; }
+    
+    .c-result-title {
+        margin: 0 0 10px 0; padding: 0 12px;
+        font-size: 18px; font-weight: 700; color: #333;
+        display: flex; align-items: center; gap: 8px;
+    }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #0693e3; grid-template-columns: 1fr auto 30px; }
+    .c-resline:last-child { border-bottom:none; }
+    
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 4px; }
+    
+    .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden; padding: 3px;
+      background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+      background-repeat:no-repeat; background-position:center; background-size:20px 20px; opacity: 0.6;}
+    .c-copy:hover { opacity: 1; }
+
+    .c-error { color: #d32f2f; background: #ffebee; padding: 10px; border-radius: 8px; margin-bottom: 10px; display: none; font-size: 14px; }
+    .c-error.show { display: block; }
+    .is-hidden { display:none !important; }
+
+    /* Matrix 3x3 Grid */
+    .c-matrix-grid { 
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 10px; 
+        padding: 15px;
+        background: #f8f9fa;
+        border-radius: 12px;
+        border: 1px solid #eee;
+        margin: 0 auto;
+    }
+    .c-matrix-cell input { text-align: center; font-weight: 600; padding: 10px 5px; }
+    
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 4px; padding: 12px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 19px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 24px; }
+       
+       .c-matrix-grid { gap: 5px; padding: 10px; }
+       .c-matrix-cell input { font-size: 13px; padding: 8px 2px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-divider"><span class="icon">🔢</span>Matrix A (3x3)</div>
+<div class="c-matrix-grid" id="matrixInputs">
+<div class="c-matrix-cell"><input class="c-input param-inp" id="m11" placeholder="a11" type="number"/></div>
+<div class="c-matrix-cell"><input class="c-input param-inp" id="m12" placeholder="a12" type="number"/></div>
+<div class="c-matrix-cell"><input class="c-input param-inp" id="m13" placeholder="a13" type="number"/></div>
+<div class="c-matrix-cell"><input class="c-input param-inp" id="m21" placeholder="a21" type="number"/></div>
+<div class="c-matrix-cell"><input class="c-input param-inp" id="m22" placeholder="a22" type="number"/></div>
+<div class="c-matrix-cell"><input class="c-input param-inp" id="m23" placeholder="a23" type="number"/></div>
+<div class="c-matrix-cell"><input class="c-input param-inp" id="m31" placeholder="a31" type="number"/></div>
+<div class="c-matrix-cell"><input class="c-input param-inp" id="m32" placeholder="a32" type="number"/></div>
+<div class="c-matrix-cell"><input class="c-input param-inp" id="m33" placeholder="a33" type="number"/></div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div aria-live="polite" class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">📊</span>Your result</div>
+<div class="c-resline" style="border-bottom:none;">
+<div class="c-resleft">Determinant<span class="c-subtext">det(A)</span>
+</div>
+<div class="c-resval" id="resDet"></div>
+<button class="c-copy" id="copyDet"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Matrix trace<span class="c-subtext">tr(A)</span>
+</div>
+<div class="c-resval" id="resTrace"></div>
+<button class="c-copy" id="copyTrace"></button>
+</div>
+<div class="c-resline" style="background:#f9f9f9;">
+<div class="c-resleft">Characteristic polynomial<span class="c-subtext">det(A - λI) = 0</span>
+</div>
+<div class="c-resval" id="resPoly" style="font-size:14px; font-weight:normal;"></div>
+<button class="c-copy" id="copyPoly"></button>
+</div>
+<div class="c-resline" style="background:#e3f2fd;">
+<div class="c-resleft">Eigenvalue λ₁</div>
+<div class="c-resval" id="resL1"></div>
+<button class="c-copy" id="copyL1"></button>
+</div>
+<div class="c-resline" style="background:#e3f2fd;">
+<div class="c-resleft">Eigenvalue λ₂</div>
+<div class="c-resval" id="resL2"></div>
+<button class="c-copy" id="copyL2"></button>
+</div>
+<div class="c-resline" style="background:#e3f2fd;">
+<div class="c-resleft">Eigenvalue λ₃</div>
+<div class="c-resval" id="resL3"></div>
+<button class="c-copy" id="copyL3"></button>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика =====
+  const $ = (s) => wrap.querySelector(s);
+  const $$ = (s) => wrap.querySelectorAll(s);
+  const resBox = $('#resultBox');
+  const errorEl = $('#errorMsg');
+  
+  const ids = ['m11','m12','m13','m21','m22','m23','m31','m32','m33'];
+  const inputs = {};
+  ids.forEach(id => inputs[id] = $('#' + id));
+  
+  const out = {
+      det: $('#resDet'),
+      trace: $('#resTrace'),
+      poly: $('#resPoly'),
+      l1: $('#resL1'),
+      l2: $('#resL2'),
+      l3: $('#resL3')
+  };
+
+  // Подсветка
+  $$('.param-inp').forEach(inp => {
+      inp.addEventListener('input', () => {
+          if (inp.value) inp.classList.add('filled');
+          else inp.classList.remove('filled');
+      });
+  });
+
+  function num(id) { const v = parseFloat(inputs[id].value); return isNaN(v) ? 0 : v; }
+
+  function solveCubic(a, b, c) {
+      // Решение x^3 + ax^2 + bx + c = 0
+      const Q = (a * a - 3 * b) / 9;
+      const R = (2 * a * a * a - 9 * a * b + 27 * c) / 54;
+      
+      const Q3 = Q * Q * Q;
+      const R2 = R * R;
+      
+      let roots = [];
+
+      if (Math.sign(R2 - Q3) === -1) {
+          // Три действительных корня (Q3 > R2)
+          const theta = Math.acos(R / Math.sqrt(Q3));
+          const sqrtQ = Math.sqrt(Q);
+          
+          roots.push(-2 * sqrtQ * Math.cos(theta / 3) - a / 3);
+          roots.push(-2 * sqrtQ * Math.cos((theta + 2 * Math.PI) / 3) - a / 3);
+          roots.push(-2 * sqrtQ * Math.cos((theta - 2 * Math.PI) / 3) - a / 3);
+          
+          return roots.map(r => r.toFixed(4));
+      } else {
+          // 1 действительный + 2 комплексных (или кратных)
+          const sgnR = Math.sign(R) === 0 ? 1 : Math.sign(R);
+          const inner = Math.abs(R) + Math.sqrt(R2 - Q3);
+          const A = -sgnR * Math.pow(inner, 1/3);
+          
+          const B = (A === 0) ? 0 : Q / A;
+          
+          const x1 = (A + B) - a / 3;
+          
+          const realPart = -(A + B) / 2 - a / 3;
+          const imagPart = Math.sqrt(3) / 2 * (A - B);
+          
+          roots.push(x1.toFixed(4));
+          
+          // Проверка на малое число вместо <
+          if (Math.sign(0.0001 - Math.abs(imagPart)) === 1) {
+              roots.push(realPart.toFixed(4));
+              roots.push(realPart.toFixed(4));
+          } else {
+              roots.push(realPart.toFixed(4) + " + " + Math.abs(imagPart).toFixed(4) + "i");
+              roots.push(realPart.toFixed(4) + " - " + Math.abs(imagPart).toFixed(4) + "i");
+          }
+          return roots;
+      }
+  }
+
+  function calc() {
+    errorEl.classList.remove('show');
+    
+    // Сбор матрицы
+    const m = [
+       [num('m11'), num('m12'), num('m13')],
+       [num('m21'), num('m22'), num('m23')],
+       [num('m31'), num('m32'), num('m33')]
+    ];
+    
+    // След: a11 + a22 + a33
+    const trace = m[0][0] + m[1][1] + m[2][2];
+    
+    // Определитель (Sarrus Rule)
+    const det = 
+        m[0][0]*m[1][1]*m[2][2] + m[0][1]*m[1][2]*m[2][0] + m[0][2]*m[1][0]*m[2][1] -
+        (m[0][2]*m[1][1]*m[2][0] + m[0][1]*m[1][0]*m[2][2] + m[0][0]*m[1][2]*m[2][1]);
+
+    // Характеристический полином: λ^3 - tr*λ^2 + (sum_minors)*λ - det = 0
+    // Сумма главных миноров 2-го порядка
+    const Minor11 = m[1][1]*m[2][2] - m[1][2]*m[2][1];
+    const Minor22 = m[0][0]*m[2][2] - m[0][2]*m[2][0];
+    const Minor33 = m[0][0]*m[1][1] - m[0][1]*m[1][0];
+    
+    const coeffLam2 = -trace;
+    const coeffLam1 = Minor11 + Minor22 + Minor33;
+    const coeffLam0 = -det;
+    
+    // Формируем строку полинома
+    let polyStr = "λ³";
+    
+    // λ^2
+    const s2 = (Math.sign(coeffLam2) === -1) ? " - " : " + ";
+    if (coeffLam2 !== 0) polyStr += s2 + (Math.abs(coeffLam2) === 1 ? "" : Math.abs(coeffLam2).toFixed(2)*1) + "λ²";
+    
+    // λ^1
+    const s1 = (Math.sign(coeffLam1) === -1) ? " - " : " + ";
+    if (coeffLam1 !== 0) polyStr += s1 + (Math.abs(coeffLam1) === 1 ? "" : Math.abs(coeffLam1).toFixed(2)*1) + "λ";
+    
+    // λ^0
+    const s0 = (Math.sign(coeffLam0) === -1) ? " - " : " + ";
+    if (coeffLam0 !== 0) polyStr += s0 + Math.abs(coeffLam0).toFixed(2)*1;
+    
+    polyStr += " = 0";
+
+    // Решение кубического: x^3 + ax^2 + bx + c = 0
+    const roots = solveCubic(coeffLam2, coeffLam1, coeffLam0);
+
+    // Вывод
+    out.det.textContent = parseFloat(det.toFixed(4));
+    out.trace.textContent = parseFloat(trace.toFixed(4));
+    out.poly.textContent = polyStr;
+    
+    out.l1.textContent = roots[0];
+    out.l2.textContent = roots[1];
+    out.l3.textContent = roots[2];
+
+    resBox.classList.add('show');
+    resBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  // Слушатели
+  $('#calcBtn').addEventListener('click', calc);
+  $('#resetBtn').addEventListener('click', () => {
+    ids.forEach(id => {
+        inputs[id].value = '';
+        inputs[id].classList.remove('filled');
+    });
+    resBox.classList.remove('show');
+    errorEl.classList.remove('show');
+  });
+
+  // Копирование
+  wrap.addEventListener('click', (e) => {
+    const btn = e.target.closest('.c-copy');
+    if (btn) {
+      const parent = btn.parentElement;
+      const val = parent.querySelector('.c-resval').textContent;
+      if (val) navigator.clipboard.writeText(val);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Linear algebra is the foundation of many engineering and scientific calculations, and finding eigenvalues ​​is one of the key problems in matrix analysis. Our online calculator allows you to instantly find the spectrum of a 3x3 matrix, calculating not only the eigenvalues, but also related parameters such as the characteristic polynomial, trace and determinant.</p>
+<h2 class="wp-block-heading" id="chto-takoe-sobstvennye-znacheniya-matritsy-2">What are the eigenvalues ​​of a matrix?</h2>
+<p>In linear algebra, the eigenvector of a matrix</p>
+<p>$$A$$</p>
+<p>is called a non-zero vector $$\mathbf{v}$$ which, when multiplied by this matrix, does not change its direction, but is only scaled by a factor</p>
+<p>$$\lambda$$</p>
+<p>. This coefficient</p>
+<p>$$\lambda$$</p>
+<p>and is called <strong>eigenvalue</strong> (or eigenvalue).</p>
+<p>Mathematically, this definition is written by the equation:</p>
+<p>$$A\mathbf{v} = \lambda\mathbf{v}$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $$A$$ is a square matrix (in our case 3x3).</li>
+<li> $$\mathbf{v}$$ is an eigenvector.</li>
+<li> $$\lambda$$ is an eigenvalue (scalar).</li>
+</ul>
+<h2 class="wp-block-heading" id="algoritm-rascheta-kak-eto-rabotaet-2">Calculation algorithm: how it works</h2>
+<p>To find the eigenvalues, you need to solve the characteristic equation. It is derived from the condition that the system of equations</p>
+<p>$$(A — \lambda I)\mathbf{v} = 0$$</p>
+<p>has a non-zero solution only when the determinant of the coefficient matrix is ​​equal to zero.</p>
+<h3 class="wp-block-heading" id="harakteristicheskoe-uravnenie-2">Characteristic equation</h3>
+<p>For a 3x3 matrix the equation looks like this:</p>
+<p>$$\det(A — \lambda I) = 0$$</p>
+<p>Having expanded the determinant, we obtain a cubic equation for</p>
+<p>$$\lambda$$</p>
+<p>:</p>
+<p>$$-\lambda^3 + \text{tr}(A)\lambda^2 — C_2\lambda + \det(A) = 0$$</p>
+<p>Where the polynomial coefficients have the following meaning:</p>
+<ul class="wp-block-list">
+<li><strong>tr(A)</strong> (Trace of matrix) - sum of diagonal elements: $$a_{11} + a_{22} + a_{33}$$ .</li>
+<li><strong>C₂</strong> is the sum of second-order principal minors.</li>
+<li><strong>det(A)</strong> is the determinant of the matrix.</li>
+</ul>
+<h3 class="wp-block-heading" id="reshenie-kubicheskogo-uravneniya-2">Solving the cubic equation</h3>
+<p>Our calculator uses Cardano's formula and Vieta's trigonometric method to find the roots of this equation. This allows you to accurately determine how:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Real roots</strong> (simple and multiples).</li>
+<li><strong>Complex roots</strong> (type $$a \pm bi$$ ), which are often found in rotation matrices.</li>
+</ol>
+<h2 class="wp-block-heading" id="kak-polzovatsya-kalkulyatorom-2">How to use the calculator</h2>
+<p>The tool interface is designed for maximum ease of data entry.</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Fill out the matrix:</strong> Enter the values ​​of elements $$a_{11}$$ ... $$a_{33}$$ in the appropriate grid cells. Integer and fractional numbers are supported, as well as negative values.</li>
+<li><strong>Click "Calculate":</strong> The algorithm will instantly process the data.</li>
+<li><strong>Get the result:</strong> You will see not only the final roots ( $$\lambda_1, \lambda_2, \lambda_3$$ ), but also intermediate calculations.</li>
+</ol>
+<h2 class="wp-block-heading" id="interpretatsiya-rezultatov-2">Interpretation of results</h2>
+<p>The results of the calculator are presented in the form of a structured list. Below is a table explaining each output option:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Parameter</strong></td><td><strong>Designation</strong></td><td><strong>Description</strong></td></tr></thead><tbody><tr><td><strong>Determinant</strong></td><td>$$\det(A)$$</td><td>Numerical characteristics of the matrix. If it is 0, the matrix is ​​singular and one of the eigenvalues ​​will be 0.</td></tr><tr><td><strong>Matrix trace</strong></td><td>$$\text{tr}(A)$$</td><td>The sum of the elements of the main diagonal. Important property: $$\sum \lambda_i = \text{tr}(A)$$ .</td></tr><tr><td><strong>Characteristic polynomial</strong></td><td>$$P(\lambda)$$</td><td>An equation whose roots are eigenvalues.</td></tr><tr><td><strong>Eigenvalues</strong></td><td>$$\lambda_1, \lambda_2, \lambda_3$$</td><td>The final spectrum of the matrix. They can be real or complex conjugate.</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="prakticheskoe-primenenie-2">Practical Application</h2>
+<p>Finding eigenvectors and values ​​is used in a variety of areas:</p>
+<ul class="wp-block-list">
+<li><strong>Quantum mechanics:</strong> To find energy levels of systems.</li>
+<li><strong>Data Analysis (PCA):</strong> Principal component analysis uses the eigenvectors of the covariance matrix to reduce the dimensionality of the data.</li>
+<li><strong>Mechanics:</strong> Calculation of the main axes of inertia of a solid body and analysis of vibrations of structures.</li>
+<li><strong>Computer graphics:</strong> Transformations, rotations and scaling of 3D objects.</li>
+</ul>
+<p>Use this tool to check your advanced math homework or for quick engineering calculations that require high precision.</p>
+</div>
+    </div>
+</body>
+</html>

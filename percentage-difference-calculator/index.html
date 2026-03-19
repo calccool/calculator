@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percentage difference calculator: online calculation of the change between numbers</title>
+    <meta name="description" content="Percentage difference calculator: online calculation of the change between numbers - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Percentage difference calculator: online calculation of the change between numbers</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (шаблон для калькуляторов) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 16px; }
+    .c-row.cols-3 { grid-template-columns: repeat(3, minmax(220px, 1fr)); }
+    .c-row.single { grid-template-columns: 1fr; }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    .c-help { font-size:12px; color:#777; text-align:center; }
+    .c-input, .c-select, .c-textarea { width:100%; padding:12px 14px; border:1px solid #ccc; border-radius:8px; font-size:14px; }
+    .c-input:focus, .c-select:focus, .c-textarea:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+
+    .c-result { border:1px dashed #0693e3; border-radius:10px; padding:10px; background:#fff; display:none; }
+    .c-result.show { display:grid; }
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #0693e3; grid-template-columns: 0.4fr 0.5fr 0.1fr; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; }
+
+    .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden;
+      background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+      background-repeat:no-repeat; background-position:center; background-size:20px 20px; }
+
+    .is-hidden { display:none !important; }
+    @media (max-width: 860px) { .c-resval { font-size:14px; } }
+    @media (max-width: 720px) { .c-row.cols-3 { grid-template-columns: 1fr; } }
+    /* Mobile Result Optimization */
+    @media (max-width: 480px) {
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 4px; padding: 12px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 24px; }
+    }
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    .c-visual-bar { height: 12px; background: #eee; border-radius: 6px; margin: 15px 0; position: relative; overflow: hidden; display:flex; }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка калькулятора: «Разница в процентах» =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-row single">
+<div class="c-field">
+<div class="c-help">Calculates percentage change, symmetric difference, absolute difference, and fractions of the sum (A+B).</div>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label" for="pd_a">First number<span class="c-term">A</span></label>
+<input class="c-input" id="pd_a" inputmode="decimal" step="any" type="number" value="20"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="pd_b">Second number<span class="c-term">B</span></label>
+<input class="c-input" id="pd_b" inputmode="decimal" step="any" type="number" value="96"/>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label" for="pd_method">Calculation method</label>
+<select class="c-select" id="pd_method">
+<option value="change">Percentage change</option>
+<option value="symmetric">Symmetrical difference</option>
+</select>
+<div class="c-help" id="pd_method_help">Formula: (B − A) / A × 100. The sign shows rise/fall.</div>
+</div>
+<div class="c-field">
+<label class="c-label" for="pd_precision">Accuracy<span class="c-term">signs</span></label>
+<select class="c-select" id="pd_precision">
+<option value="0">0</option>
+<option value="1">1</option>
+<option selected="" value="2">2</option>
+<option value="4">4</option>
+</select>
+<div class="c-help">Number of decimal places in the output.</div>
+</div>
+</div>
+<div class="c-row single">
+<div class="c-field">
+<label class="c-label">Options</label>
+<div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size: 14px;justify-content:center;">
+<label style="display:inline-flex;align-items:center;gap:8px;"><input checked="" id="pd_show_sign" type="checkbox"/>Show sign (+/−)</label>
+<label style="display:inline-flex;align-items:center;gap:8px;"><input checked="" id="pd_share" type="checkbox"/>Show fractions of the amount (A+B)</label>
+<label style="display:inline-flex;align-items:center;gap:8px;"><input checked="" id="pd_abs" type="checkbox"/>Show absolute difference</label>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="pd_calc" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="pd_reset" type="button">Reset</button>
+</div>
+<div aria-live="polite" class="c-result" id="pd_result">
+<div class="c-resline">
+<div class="c-resleft">Percentage difference</div>
+<div class="c-resval" id="pd_out_perc">—</div>
+<button aria-label="Copy percentage" class="c-copy" id="pd_copy_perc" title="Copy percentage"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Absolute difference</div>
+<div class="c-resval" id="pd_out_abs">—</div>
+<button aria-label="Copy absolute" class="c-copy" id="pd_copy_abs" title="Copy absolute"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Formula</div>
+<div class="c-resval" id="pd_out_note">—</div>
+<button aria-label="Copy comment" class="c-copy" id="pd_copy_note" title="Copy comment"></button>
+</div>
+<div class="c-resline" id="pd_share_row_a" style="display:none;">
+<div class="c-resleft">A's share of the total (A+B)</div> <div class="c-resval" id="pd_share_a">—</div> <button aria-label="Copy beat A" class="c-copy" id="pd_copy_share_a" title="Copy beat A"></button> </div> <div class="c-resline" id="pd_share_row_b" style="display:none;"> <div class="c-resleft">B's share of the total (A+B)</div>
+<div class="c-resval" id="pd_share_b">—</div>
+<button aria-label="Copy beat B" class="c-copy" id="pd_copy_share_b" title="Copy beat B"></button>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика (исправлено: нормальные && без HTML-escape) =====
+  const $ = sel => wrap.querySelector(sel);
+  const aEl = $('#pd_a'), bEl = $('#pd_b');
+  const methodEl = $('#pd_method'), methodHelp = $('#pd_method_help');
+  const precEl = $('#pd_precision');
+  const showAbsEl = $('#pd_abs'), showSignEl = $('#pd_show_sign'), shareEl = $('#pd_share');
+  const calcBtn = $('#pd_calc'), resetBtn = $('#pd_reset');
+  const resultBox = $('#pd_result');
+
+  const outPerc = $('#pd_out_perc'), outAbs = $('#pd_out_abs'), outNote = $('#pd_out_note');
+  const shareRowA = $('#pd_share_row_a'), shareRowB = $('#pd_share_row_b');
+  const outShareA = $('#pd_share_a'), outShareB = $('#pd_share_b');
+
+  function fmtNumber(n, prec) {
+    if (!isFinite(n)) return '—';
+    const s = Number.parseFloat(n.toFixed(prec)).toString();
+    return s.replace(/(\.\d*?[1-9])0+$|\.0+$/,'$1');
+  }
+
+  function calculate() {
+    const a = Number(aEl.value);
+    const b = Number(bEl.value);
+    const method = methodEl.value;
+    const prec = Math.max(0, parseInt(precEl.value, 10) || 2);
+
+    if (!isFinite(a) || !isFinite(b)) {
+      alert('Enter valid numeric values ​​for A and B.');
+      return;
+    }
+
+    let perc;
+    let note = '';
+    if (method === 'change') {
+      if (a === 0) {
+        if (b === 0) {
+          perc = NaN;
+          note = 'Both values ​​are 0—the percentage is undefined.';
+        } else {
+          perc = (b > 0) ? Infinity : -Infinity;
+          note = 'Division by zero is infinity (undefined in the classical sense).';
+        }
+      } else {
+        perc = ((b - a) / a) * 100;
+        note = '(B − A) / A × 100';
+      }
+      methodHelp.textContent = '(B − A) / A × 100';
+    } else {
+      const absDiff = Math.abs(b - a);
+      const denom = (Math.abs(a) + Math.abs(b)) / 2;
+      if (denom === 0) {
+        perc = 0;
+        note = 'Both values ​​are zero - symmetrical difference = 0.';
+      } else {
+        perc = (absDiff / denom) * 100;
+        note = '|B − A| / ((|A| + |B|) / 2) × 100';
+      }
+      methodHelp.textContent = '|B − A| / ((|A| + |B|) / 2) × 100';
+    }
+
+    const absVal = Math.abs(b - a);
+
+    // <-- вот исправленная строка: нормальный JS с &#038;&#038; -->
+    const sign = (showSignEl.checked && perc !== 0 && isFinite(perc)) ? (perc > 0 ? '+' : '−') : '';
+
+    let percText;
+    if (!isFinite(perc)) {
+      percText = (perc > 0) ? '∞' : (perc < 0 ? '-∞' : 'not defined');
+    } else if (isNaN(perc)) {
+      percText = 'not defined';
+    } else {
+      const base = fmtNumber(Math.abs(perc), prec);
+      percText = `${sign}${base} %`;
+    }
+
+    outPerc.textContent = percText;
+    outAbs.textContent = showAbsEl.checked ? fmtNumber(absVal, prec) : '—';
+    outNote.textContent = note;
+
+    // Доли от суммы A + B (новая фича)
+    if (shareEl.checked) {
+      const total = a + b;
+      if (total === 0) {
+        outShareA.textContent = 'not defined';
+        outShareB.textContent = 'not defined';
+      } else {
+        const shareA = (a / total) * 100;
+        const shareB = (b / total) * 100;
+        outShareA.textContent = `${fmtNumber(shareA, prec)} %`;
+        outShareB.textContent = `${fmtNumber(shareB, prec)} %`;
+      }
+      shareRowA.style.display = '';
+      shareRowB.style.display = '';
+    } else {
+      shareRowA.style.display = 'none';
+      shareRowB.style.display = 'none';
+      outShareA.textContent = '—';
+      outShareB.textContent = '—';
+    }
+
+    resultBox.classList.add('show');
+  }
+
+  function resetAll() {
+    aEl.value = '0';
+    bEl.value = '0';
+    methodEl.value = 'change';
+    precEl.value = '2';
+    showAbsEl.checked = false;
+    showSignEl.checked = true;
+    shareEl.checked = true;
+    resultBox.classList.remove('show');
+    outPerc.textContent = '—';
+    outAbs.textContent = '—';
+    outNote.textContent = '—';
+    outShareA.textContent = '—';
+    outShareB.textContent = '—';
+  }
+
+  function copyText(t) {
+    try { navigator.clipboard.writeText(String(t)); } catch (_) {}
+  }
+
+  // делегированное копирование
+  wrap.addEventListener('click', (e) => {
+    if (!e.target) return;
+    const id = e.target.id;
+    if (id === 'pd_copy_perc') copyText(outPerc.textContent.replace(/\s?%/,''));
+    if (id === 'pd_copy_abs') copyText(outAbs.textContent);
+    if (id === 'pd_copy_note') copyText(outNote.textContent);
+    if (id === 'pd_copy_share_a') copyText(outShareA.textContent.replace(/\s?%/,''));
+    if (id === 'pd_copy_share_b') copyText(outShareB.textContent.replace(/\s?%/,''));
+  });
+
+  calcBtn.addEventListener('click', calculate);
+  resetBtn.addEventListener('click', resetAll);
+
+  // Enter на инпутах — тоже считать
+  wrap.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && (e.target.matches('input, select'))) {
+      e.preventDefault();
+      calculate();
+    }
+  });
+
+  // стартовое состояние
+  resetAll();
+});
+</script>
+
+        <div class="post-content">
+<p>In business, analytics, and everyday life, there is often a need to understand how one value differs from another, not in absolute terms, but in relative terms. Our percentage difference calculator is a multifunctional tool that allows you to instantly calculate the dynamics of indicators, be it revenue growth, weight changes or measurement errors.</p>
+<p>Using percentages helps standardize data, making it comparable. For example, an increase of 100 rubles may be significant for the price of bread, but unnoticeable for the cost of a car. The percentage difference immediately puts everything in its place.</p>
+<h2 class="wp-block-heading" id="metody-rascheta-kakoj-vybrat-2">Calculation methods: which one to choose?</h2>
+<p>Our calculator supports two fundamental mathematical approaches. The choice of method depends on your goals:</p>
+<h3 class="wp-block-heading" id="metod-protsentnogo-izmeneniya-relative-change-2">Relative Change Method</h3>
+<p>This method is used when you have a clear chronology: “was” (number A) and “became” (number B). It shows by what percentage the final value increased or decreased relative to the initial one.</p>
+<p>Calculation formula:</p>
+<p>$$\Delta\% = \frac{B — A}{A} \times 100\%$$</p>
+<ul class="wp-block-list">
+<li><strong>Positive result:</strong> means percentage growth.</li>
+<li><strong>Negative result:</strong> means percentage drop.</li>
+</ul>
+<h3 class="wp-block-heading" id="simmetrichnaya-raznitsa-symmetric-difference-2">Symmetric Difference</h3>
+<p>Used when there is no cause-and-effect relationship or chronology between the numbers (for example, comparing two different stores). In this case, the difference is calculated relative to the arithmetic mean of these numbers.</p>
+<p>Calculation formula:</p>
+<p>$$\Delta\%_{sym} = \frac{|B — A|}{(|A| + |B|) / 2} \times 100\%$$</p>
+<h2 class="wp-block-heading" id="klyuchevye-vozmozhnosti-kalkulyatora-2">Key features of the calculator</h2>
+<p>To ensure that your analysis is as complete as possible, we have introduced several expert functions:</p>
+<ul class="wp-block-list">
+<li><strong>Accuracy setting:</strong> select the number of decimal places (from 0 to 4) for engineering or financial calculations.</li>
+<li><strong>Visualization of signs (+/−):</strong> automatic determination of the movement vector (growth or decline).</li>
+<li><strong>Absolute difference:</strong> calculation of the difference module $|B — A|$ .</li>
+<li><strong>Share calculation:</strong> determining the percentage contribution of each number to their total $(A + B)$ .</li>
+</ul>
+<h2 class="wp-block-heading" id="sravnitelnaya-tablitsa-metodov-rascheta-2">Comparison table of calculation methods</h2>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Situation</strong></td><td><strong>Recommended Method</strong></td><td><strong>Example</strong></td></tr></thead><tbody><tr><td>Monthly price increase</td><td>Percentage change</td><td>The price increased from 50 to 60 rubles. (+20%)</td></tr><tr><td>Comparison of colleagues' salaries</td><td>Symmetrical difference</td><td>One has 100k, the other 120k.</td></tr><tr><td>Product discount</td><td>Percentage change</td><td>The price has decreased from 100 to 80 rubles. (-20%)</td></tr><tr><td>Comparison of the area of ​​two apartments</td><td>Symmetrical difference</td><td>Apartment 40 $m^2$ and 50 $m^2$ .</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="kak-polzovatsya-instrumentom-2">How to use the tool</h2>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Enter the value of A:</strong> the original number or first comparison object.</li>
+<li><strong>Enter B value:</strong> the final number or second comparison object.</li>
+<li><strong>Select method:</strong> “Percentage Change” for dynamics or “Symmetrical Difference” for simple comparison.</li>
+<li><strong>Set precision:</strong> select how many decimal places you need.</li>
+<li><strong>Click "Calculate":</strong> you will receive a detailed report that can be copied in one click.</li>
+</ol>
+<h2 class="wp-block-heading" id="pochemu-eto-vazhno-dlya-seo-i-biznesa-2">Why is this important for SEO and business?</h2>
+<p>Accurate calculation of the percentage difference is critical for reporting (ROI, KPI), analyzing market trends, and even in programming when calculating errors. Our algorithm eliminates manual calculation errors and allows you to work with negative numbers and extreme values ​​(infinity when divided by zero).</p>
+<h2 class="wp-block-heading" id="chastye-voprosy-2">Frequently asked questions</h2>
+<div class="schema-faq wp-block-yoast-faq-block"><div class="schema-faq-section" id="faq-question-1761573966347"><strong class="schema-faq-question"><strong>How do you find out by what percentage the number has increased?</strong><br/></strong> <p class="schema-faq-answer">Enter the initial value and the final value - the calculator will show a positive percentage if there is an increase.</p> </div> <div class="schema-faq-section" id="faq-question-1761573977561"><strong class="schema-faq-question"><strong>How to determine percentage reduction?</strong><br/></strong> <p class="schema-faq-answer">If the second number is less than the first, the result will be negative, for example -15%, which means a decrease of 15%.</p> </div> <div class="schema-faq-section" id="faq-question-1761573988621"><strong class="schema-faq-question"><strong>How to calculate what percentage a number is of another?</strong><br/></strong> <p class="schema-faq-answer">Use the second part of the calculator - enter both numbers and get the share of each as a percentage of their total.</p> </div> </div>
+</div>
+    </div>
+</body>
+</html>

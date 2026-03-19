@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Land area calculator: Accurate calculation of acres and square meters</title>
+    <meta name="description" content="Land area calculator: Accurate calculation of acres and square meters - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Land area calculator: Accurate calculation of acres and square meters</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(220px, 1fr)); }
+    .c-row.cols-3 { grid-template-columns: repeat(3, minmax(100px, 1fr)); }
+    
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    
+    .c-input, .c-select { width:100%; padding:12px 14px; border:1px solid #ccc; border-radius:8px; font-size:14px; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 45px; } 
+    .c-input-suffix {
+        position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+        color: #888; font-size: 14px; pointer-events: none; font-weight: 500;
+    }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 10px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+
+    .c-divider { 
+        display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; 
+        font-weight: 700; color: #444; font-size: 15px; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; }
+
+    .c-result { border:1px dashed #4caf50; border-radius:10px; padding:10px; background:#fff; display:none; }
+    .c-result.show { display:grid; }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #4caf50; grid-template-columns: 1fr auto 30px; }
+    .c-resline:last-child { border-bottom:none; }
+    
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 4px; }
+    
+    .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden; padding: 3px;
+      background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+      background-repeat:no-repeat; background-position:center; background-size:20px 20px; opacity: 0.6;}
+    .c-copy:hover { opacity: 1; }
+
+    .c-error { color: #d32f2f; background: #ffebee; padding: 10px; border-radius: 8px; margin-bottom: 10px; display: none; font-size: 14px; }
+    .c-error.show { display: block; }
+    .is-hidden { display:none !important; }
+
+    /* SVG Diagram */
+    .c-diagram-box { text-align: center; margin-bottom: 20px; padding: 10px; background: #fafafa; border-radius: 8px; border: 1px solid #eee; min-height: 150px; display: flex; align-items: center; justify-content: center;}
+
+    @media (max-width: 600px) { .c-row.cols-2, .c-row.cols-3 { grid-template-columns: 1fr; } }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-diagram-box" id="svgContainer">
+</div>
+<div class="c-divider"><span class="icon">📐</span>Geometry of the site</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Shape of the plot</label>
+<select class="c-select" id="shape">
+<option value="rect">Rectangular (standard)</option>
+<option value="quad">Irregular 4-gon (need diagonal)</option>
+<option value="tri">Triangular (wedge)</option>
+</select>
+</div>
+</div>
+<div id="inputsBox">
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Side A</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="sideA" placeholder="0" step="0.01" type="number"/>
+<span class="c-input-suffix">m</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Side B</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="sideB" placeholder="0" step="0.01" type="number"/>
+<span class="c-input-suffix">m</span>
+</div>
+</div>
+</div>
+<div class="c-row cols-2" id="rowCD">
+<div class="c-field" id="fieldC">
+<label class="c-label">Side C</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="sideC" placeholder="0" step="0.01" type="number"/>
+<span class="c-input-suffix">m</span>
+</div>
+</div>
+<div class="c-field" id="fieldD">
+<label class="c-label">Side D</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="sideD" placeholder="0" step="0.01" type="number"/>
+<span class="c-input-suffix">m</span>
+</div>
+</div>
+</div>
+<div class="c-row" id="rowDiag">
+<div class="c-field">
+<label class="c-label">Diagonal (between corners A-B and C-D)</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="diag" placeholder="0" step="0.01" type="number"/>
+<span class="c-input-suffix">m</span>
+</div>
+<div class="c-subtext">The diagonal is necessary to accurately calculate irregular shapes</div>
+</div>
+</div>
+</div>
+<div class="c-divider"><span class="icon">💰</span>Cost (Optional)</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Price</label>
+<input class="c-input" id="price" placeholder="0" step="1000" type="number"/>
+</div>
+<div class="c-field">
+<label class="c-label">What's the price for?</label> <select class="c-select" id="priceType"> <option value="sotka">Per hundred square meters (100 m²)</option> <option value="m2">Per m²</option> </select> </div> </div> <div class="c-actions"> <button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate area</button> <button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button> </div> <div class="c-error" id="errorMsg"></div> <div aria-live="polite" class="c-result" id="resultBox"> <div class="c-resline" style="background:#e8f5e9;"> <div class="c-resleft">Area (Hundreds)<span class="c-subtext">Ar</span> </div> <div class="c-resval" id="resSotka" style="font-size:22px; color:#2e7d32;"></div> <button class="c-copy" id="copySotka"></button> </div> <div class="c-resline"> <div class="c-resleft">Area (m²)</div> <div class="c-resval" id="resM2"></div> <button class="c-copy" id="copyM2"></button> </div> <div class="c-resline"> <div class="c-resleft">Area (Hectares)</div> <div class="c-resval" id="resHa"></div> <button class="c-copy" id="copyHa"></button> </div> <div class="c-resline" id="costRow" style="display:none; border-top: 2px solid #ddd;"> <div class="c-resleft">Total cost</div> <div class="c-resval" id="resCost" style="color:#f57f17; font-weight:bold;"></div> <button class="c-copy" id="copyCost"></button> </div> </div> </div> </div> `;   host.appendChild(wrap);    // ===== SVG Templates =====   const svgRect = `     <svg viewBox="0 0 200 120" style="max-height:120px;">       <rect x="40" y="20" width="120" height="80" fill="#e3f2fd" stroke="#0693e3" stroke-width="2"/>       <text x="100" y="15" text-anchor="middle" font-size="12">A</text>       <text x="170" y="60" text-anchor="middle" font-size="12">B</text>     </svg>`;      const svgQuad = `     <svg viewBox="0 0 200 120" style="max-height:120px;">       <path d="M20,100 L60,20 L160,30 L180,110 Z" fill="#e3f2fd" stroke="#0693e3" stroke-width="2"/>       <line x1="20" y1="100" x2="160" y2="30" stroke="#f44336" stroke-width="1" stroke-dasharray="4"/>       <text x="30" y="60" font-size="12">A</text>       <text x="110" y="20" font-size="12">B</text>       <text x="175" y="70" font-size="12">C</text>       <text x="100" y="115" font-size="12">D</text>       <text x="80" y="70" font-size="10" fill="#f44336">Diag</text>     </svg>`;    const svgTri = `     <svg viewBox="0 0 200 120" style="max-height:120px;">       <path d="M20,100 L100,20 L180,100 Z" fill="#e3f2fd" stroke="#0693e3" stroke-width="2"/>       <text x="50" y="60" font-size="12">A</text>       <text x="150" y="60" font-size="12">B</text>       <text x="100" y="115" font-size="12">C</text>     </svg>`;    // ===== Logic =====   const $ = (s) => wrap.querySelector(s);   const resBox = $ ('#resultBox');
+  const errorEl = $('#errorMsg');
+  const shapeSel = $('#shape');
+  const svgContainer = $('#svgContainer');
+  
+  const inputs = {
+      a: $('#sideA'), b: $('#sideB'),
+      c: $('#sideC'), d: $('#sideD'),
+      diag: $('#diag'),
+      price: $('#price'), pType: $('#priceType')
+  };
+  
+  const blocks = {
+      cd: $('#rowCD'),
+      d: $('#fieldD'),
+      diag: $('#rowDiag')
+  };
+
+  const outputs = {
+      sotka: $('#resSotka'),
+      m2: $('#resM2'),
+      ha: $('#resHa'),
+      cost: $('#resCost'),
+      costRow: $('#costRow')   };    // Switch modes   function updateMode() {       const mode = shapeSel.value;       errorEl.classList.remove('show');
+      resBox.classList.remove('show');
+
+      if (mode === 'rect') {
+          svgContainer.innerHTML = svgRect;
+          blocks.cd.classList.add('is-hidden');
+          blocks.diag.classList.add('is-hidden');
+      } else if (mode === 'quad') {
+          svgContainer.innerHTML = svgQuad;
+          blocks.cd.classList.remove('is-hidden');
+          blocks.d.classList.remove('is-hidden');
+          blocks.diag.classList.remove('is-hidden');
+      } else if (mode === 'tri') {
+          svgContainer.innerHTML = svgTri;
+          blocks.cd.classList.remove('is-hidden');
+          blocks.d.classList.add('is-hidden');
+          blocks.diag.classList.add('is-hidden');
+      }
+  }
+  
+  shapeSel.addEventListener('change', updateMode);
+  updateMode(); // Init
+
+  function num(el){ const n = parseFloat(el.value); return isNaN(n) ? 0 : n; }
+  function fmt(n) { return n.toLocaleString('ru-RU', { maximumFractionDigits: 2 }); }    // Heron\'s formula for the area of a triangle   function heron(a, b, c) {       if (Math.sign(a) !== 1 || Math.sign(b) !== 1 || Math.sign(c) !== 1) return 0;       // Existence check: the sum of two sides must be greater than the third       if (Math.sign((a + b) - c) !== 1) return -1;       if (Math.sign((a + c) - b) !== 1) return -1;       if (Math.sign((b + c) - a) !== 1) return -1;        const s = (a + b + c) / 2;       const area = Math.sqrt(s * (s - a) * (s - b) * (s - c));       return isNaN(area) ? 0 : area;   }    function calc() {     errorEl.classList.remove('show');
+    outputs.costRow.style.display = 'none';
+
+    const Mode = shapeSel.value;
+    const A = num(inputs.a);
+    const B = num(inputs.b);
+    let Area = 0;
+
+    if (Mode === 'rect') {         if (Math.sign(A) !== 1 || Math.sign(B) !== 1) {              errorEl.textContent = "Enter the lengths of sides A and B";              errorEl.classList.add('show'); return;
+        }
+        Area = A * B;
+    } 
+    else if (Mode === 'tri') {         const C = num(inputs.c);         Area = heron(A, B, C);         if (Math.sign(Area) === -1) {             errorEl.textContent = "A triangle with such sides cannot exist";             errorEl.classList.add('show'); return;         }         if (Math.sign(Area) === 0) {             errorEl.textContent = "Enter all 3 sides";             errorEl.classList.add('show'); return;
+        }
+    }
+    else if (Mode === 'quad') {         const C = num(inputs.c);         const D = num(inputs.d);         const Diag = num(inputs.diag);                  // Two triangles: (A, B, Diag) and (C, D, Diag)         // Assume that the diagonal connects ends A and B.         // In the SVG diagram: the diagonal goes from corner (A,D) to (B,C).         // That is, triangles: (A, D, Diag) and (B, C, Diag).         // But usually users don\'t know the angles.         // Just count two triangles. The input says "Side A, B, C, D" in a circle.         // Diagonal splits into (A, B, Diag) - if it is between them, or (A, D, Diag).         // Let\'s standardize: Is the diagonal connecting the A-B joint and the C-D joint? No.         // A diagonal connects opposite corners.         // Triangle 1: Sides A, B, Diag.          // Triangle 2: Sides C, D, Diag.                  const S1 = heron(A, B, Diag);         const S2 = heron(C, D, Diag);                  if (Math.sign(S1) === -1 || Math.sign(S2) === -1) {             errorEl.textContent = "The geometry is not possible. Check the length of the diagonal and sides.";             errorEl.classList.add('show'); return;         }         if (Math.sign(S1) === 0 || Math.sign(S2) === 0) {             errorEl.textContent = "Enter all 4 sides and diagonal";             errorEl.classList.add('show'); return;         }         Area = S1 + S2;     }      // Output the area     outputs.m2.textContent = fmt(Area);     outputs.sotka.textContent = fmt(Area / 100);     outputs.ha.textContent = (Area / 10000).toFixed(4);      // Price calculation     const Price = num(inputs.price);     if (Math.sign(Price) === 1) {         const type = inputs.pType.value;         let totalCost = 0;         if (type ==='m2') {
+            totalCost = Price * Area;
+        } else {
+            totalCost = Price * (Area / 100);
+        }
+        outputs.cost.textContent = fmt(totalCost) + " $";
+        outputs.costRow.style.display = 'grid';
+    }
+
+    resBox.classList.add('show');   }    // Listeners   $('#calcBtn').addEventListener('click', calc);
+  $('#resetBtn').addEventListener('click', () => {
+    shapeSel.value = 'rect';
+    updateMode();
+    inputs.a.value = ''; inputs.b.value = '';
+    inputs.c.value = ''; inputs.d.value = '';
+    inputs.diag.value = ''; inputs.price.value = '';
+    resBox.classList.remove('show');
+    errorEl.classList.remove('show');   });    // Copy   wrap.addEventListener('click', (e) => {
+    if (e.target.classList.contains('c-copy')) {
+      const parent = e.target.parentElement;
+      const val = parent.querySelector('.c-resval').textContent;
+      if (val) navigator.clipboard.writeText(val);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Land plots are rarely a perfect rectangular shape. When purchasing land, planning construction, or installing a fence, it is critical to know the exact area of ​​the property. Our <strong>land area calculator</strong> allows you to perform professional geodetic calculations online using only side lengths and, if necessary, diagonals.</p>
+<h2 class="wp-block-heading" id="pochemu-obychnogo-umnozheniya-nedostatochno-2">Why is ordinary multiplication not enough?</h2>
+<p>Most online tools suggest simply multiplying the length by the width. This only works for perfect rectangles (90° at the corners). If your fence is even slightly “diamond-shaped” or the area has a complex trapezoidal shape, a simple calculation will give an error of up to 10-15%, which can result in significant financial losses upon purchase.</p>
+<p>Our algorithm uses the triangulation method (partitioning into triangles), which guarantees 100% accuracy for any polygons.</p>
+<h2 class="wp-block-heading" id="kak-rasschitat-ploshhad-uchastka-poshagovaya-instruktsiya-2">How to calculate the area of ​​a plot: step-by-step instructions</h2>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Select plot shape:</strong>
+<ul class="wp-block-list">
+<li><strong>Rectangular:</strong> Standard version (square or rectangle).</li>
+<li><strong>Irregular tetragon:</strong> The most common case. For an accurate calculation, you will need to measure not only 4 sides of the fence, but also <strong>diagonal</strong> (distance between opposite corners).</li>
+<li><strong>Triangular:</strong> For wedge-shaped or corner areas.</li>
+</ul>
+</li>
+<li><strong>Enter dimensions:</strong> Enter the lengths of the sides in meters (for example,<code>30.5</code>).</li>
+<li><strong>Get the result:</strong> The calculator will instantly show the area in square meters, acres and hectares, and also calculate the estimated cost of the land.</li>
+</ol>
+<h2 class="wp-block-heading" id="formuly-rascheta-calculation-formulas-2">Calculation Formulas</h2>
+<p>To ensure geodetic accuracy, we use international mathematical standards.</p>
+<p><strong>1. For a rectangle (Rectangle Area):</strong></p>
+<p>The simplest method is where area (A) is equal to the product of length (a) and width (b).</p>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>A = a × b</p>
+</blockquote>
+<p><strong>2. For Triangle Area:</strong></p>
+<p>Heron's Formula is used, which allows you to find the area knowing only the lengths of three sides (a, b, c), without measuring the angles. First the semi-perimeter (s) is calculated:</p>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>s = (a + b + c) / 2</p>
+<p>A = √[s × (s — a) × (s — b) × (s — c)]</p>
+</blockquote>
+<p><strong>3. For an Irregular Quadrilateral:</strong></p>
+<p>The area is divided by diagonal (d) into two triangles. The area is calculated as the sum of the areas of these triangles (S1 + S2), calculated using Heron's formula.</p>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>A_total = Area(a, b, d) + Area(c, e, d)</p>
+</blockquote>
+<h2 class="wp-block-heading" id="tablitsa-edinits-izmereniya-zemelnyh-ploshhadej-2">Table of land area units</h2>
+<p>Different documents and situations use different units. Our tool automatically converts the results.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Unit of measurement</strong></td><td><strong>Designation</strong></td><td><strong>Equal to m²</strong></td><td><strong>Where is it used?</strong></td></tr></thead><tbody><tr><td><strong>Square meter</strong></td><td>m² (sq. m)</td><td>1</td><td>House construction, yard planning</td></tr><tr><td><strong>Sotka (Ar)</strong></td><td>a (are)</td><td>100</td><td>Sale of summer cottages, vegetable gardens</td></tr><tr><td><strong>Hectare</strong></td><td>ha (ha)</td><td>10 000</td><td>Agriculture, large lands</td></tr><tr><td><strong>Acre</strong></td><td>ac (acre)</td><td>~4 046.86</td><td>Overseas real estate</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="chastye-oshibki-pri-zamere-uchastka-2">Common mistakes when measuring a site</h2>
+<ul class="wp-block-list">
+<li><strong>Ignoring diagonal:</strong> If you have a plot with four sides (20m, 20m, 30m, 30m), it can be either a rectangle with an area of ​​600 m² or a narrow diamond with an area of ​​300 m². Without a diagonal, it is impossible to know the truth.</li>
+<li><strong>Rounding:</strong> When entering data, use precise values ​​(for example,<code>25.4</code>meter), since rounding to the nearest meter can give an error of several “squares”.</li>
+</ul>
+<p>Use our <strong>area calculator</strong> to check cadastral data, calculate land taxes or plan landscaping. It's free, accurate and doesn't require any special software to be installed.</p>
+</div>
+    </div>
+</body>
+</html>

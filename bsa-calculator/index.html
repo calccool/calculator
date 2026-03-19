@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body surface area (BSA) calculator - formula selection + dose per m²</title>
+    <meta name="description" content="Body surface area (BSA) calculator - formula selection + dose per m² - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Body surface area (BSA) calculator - formula selection + dose per m²</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (строго по шаблону) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-row.cols-3 { grid-template-columns: repeat(3, minmax(220px, 1fr)); }
+    .c-row.single { grid-template-columns: 1fr; }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    .c-help {font-size:12px;color:#777;text-align:center;}
+    .c-input, .c-select, .c-textarea { width:100%; padding:12px 14px; border:1px solid #ccc; border-radius:8px; font-size:14px; }
+    .c-input:focus, .c-select:focus, .c-textarea:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+
+    /* Результат */
+    .c-result { border:1px dashed #4caf50; border-radius:10px; padding:10px; background:#fff; display:none; }
+    .c-result.show { display:grid; }
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #4caf50; grid-template-columns: 0.4fr 0.5fr 0.1fr; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; }
+
+    /* Кнопка копирования (иконка из стилей, не в разметке) */
+    .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden;
+      background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+      background-repeat:no-repeat; background-position:center; background-size:20px 20px; }
+
+    .is-hidden { display:none !important; }
+    @media (max-width: 860px) { .c-resval { font-size:14px; } }
+    @media (max-width: 720px) { .c-row.cols-3 { grid-template-columns: 1fr; } 
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+Input data
+<div class="c-row">
+<div class="c-field">
+<label class="c-label" for="height">Height<span class="c-term" id="termHeight">cm</span></label>
+<input class="c-input" id="height" min="30" placeholder="Eg. 170" step="0.1" type="number"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="hUnit">Growth units</label>
+<select class="c-select" id="hUnit">
+<option selected="" value="cm">centimeters (cm)</option>
+<option value="in">inches (in)</option>
+</select>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label" for="weight">Weight<span class="c-term" id="termWeight">kg</span></label>
+<input class="c-input" id="weight" min="2" placeholder="Eg. 70" step="0.1" type="number"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="wUnit">Weight units</label>
+<select class="c-select" id="wUnit">
+<option selected="" value="kg">kilograms (kg)</option>
+<option value="lb">pounds (lb)</option>
+</select>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label" for="formula">Formula<span class="c-term">BSA</span></label>
+<select class="c-select" id="formula">
+<option selected="" value="mosteller">Mosteller (√(cm×kg / 3600))</option>
+<option value="dubois">Du Bois (0.007184×cm^0.725×kg^0.425)</option>
+<option value="haycock">Haycock (0.024265×m^0.3964×kg^0.5378)</option>
+</select>
+</div>
+<div class="c-field">
+<label class="c-label" for="dosePerM2">Dose per mg/m²<span class="c-term">Not necessary</span></label>
+<input class="c-input" id="dosePerM2" min="0" placeholder="Eg. 50" step="0.01" type="number"/>
+</div>
+</div>
+Buttons
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+Result
+<div aria-live="polite" class="c-result" id="resultBox">
+<div class="c-resline">
+<div class="c-resleft">Body Surface Area (BSA)</div>
+<div class="c-resval" id="bsaVal">—</div>
+<button aria-label="Copy BSA" class="c-copy" id="copyBsa" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Formula</div>
+<div class="c-resval" id="bsaFormula">—</div>
+<div></div>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Normalized Input Data</div>
+<div class="c-resval" id="normalized">—</div>
+<div></div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика =====
+  const $ = (s) => wrap.querySelector(s);
+
+  // Единицы и подписи
+  const hUnitSel = $('#hUnit');
+  const wUnitSel = $('#wUnit');
+  const termHeight = $('#termHeight');
+  const termWeight = $('#termWeight');
+
+  function updateTerms(){
+    termHeight.textContent = hUnitSel.value === 'cm' ? 'cm' : 'in';
+    termWeight.textContent = wUnitSel.value === 'kg' ? 'kg' : 'lb';
+  }
+  hUnitSel.addEventListener('change', updateTerms);
+  wUnitSel.addEventListener('change', updateTerms);
+  updateTerms();
+
+  // Конвертация
+  function toCm(val, unit){
+    const n = parseFloat(String(val).replace(',', '.'));
+    if (!Number.isFinite(n) || n <= 0) return 0;
+    return unit === 'cm' ? n : n * 2.54; // in -> cm
+  }
+  function toKg(val, unit){
+    const n = parseFloat(String(val).replace(',', '.'));
+    if (!Number.isFinite(n) || n <= 0) return 0;
+    return unit === 'kg' ? n : n * 0.45359237; // lb -> kg
+  }
+
+  function fmt(v, d=3){
+    return (Number.isFinite(v)? v:0).toLocaleString('ru-RU',{minimumFractionDigits:d, maximumFractionDigits:d});
+  }
+
+  // Формулы BSA
+  function bsaMosteller(cm, kg){ return Math.sqrt((cm * kg) / 3600); }
+  function bsaDuBois(cm, kg){ return 0.007184 * Math.pow(cm, 0.725) * Math.pow(kg, 0.425); }
+  function bsaHaycock(cm, kg){ const m = cm / 100; return 0.024265 * Math.pow(m, 0.3964) * Math.pow(kg, 0.5378); }
+
+  function calc(){
+    const h = toCm($('#height').value, hUnitSel.value);
+    const w = toKg($('#weight').value, wUnitSel.value);
+    const f = $('#formula').value;
+
+    const resBox = $('#resultBox');
+    if (h <= 0 || w <= 0){
+      resBox.classList.remove('show');
+      return;
+    }
+
+    let bsa = 0, fname = '';
+    if (f === 'mosteller'){ bsa = bsaMosteller(h, w); fname = 'Mosteller'; }
+    else if (f === 'dubois'){ bsa = bsaDuBois(h, w); fname = 'Du Bois'; }
+    else { bsa = bsaHaycock(h, w); fname = 'Haycock'; }
+
+    $('#bsaVal').textContent = `${fmt(bsa, 3)} м²`;
+    $('#bsaFormula').textContent = fname;
+    $('#normalized').textContent = `${fmt(h,1)} см / ${fmt(w,1)} кг`;
+
+    resBox.classList.add('show');
+  }
+
+  // Копирование результата
+  function copyTextFrom(el) {
+    try { navigator.clipboard?.writeText(el.textContent.trim()); } catch (_) {}
+  }
+  wrap.addEventListener('click', (e) => {
+    if (e.target && e.target.id === 'copyBsa') {
+      const node = $('#bsaVal'); if (node) copyTextFrom(node);
+    }
+  });
+
+  // Кнопки
+  $('#calcBtn').addEventListener('click', calc);
+  $('#resetBtn').addEventListener('click', () => {
+    $('#height').value = '';
+    $('#weight').value = '';
+    $('#dosePerM2').value = '';
+    $('#formula').value = 'mosteller';
+    $('#hUnit').value = 'cm';
+    $('#wUnit').value = 'kg';
+    updateTerms();
+
+    const resBox = $('#resultBox');
+    resBox.classList.remove('show');
+    $('#bsaVal').textContent = '—';
+    $('#bsaFormula').textContent = '—';
+    $('#normalized').textContent = '—';
+  });
+
+  // Enter в полях — «Рассчитать»
+  wrap.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && (e.target.matches('input, textarea, select'))) {
+      e.preventDefault();
+      calc();
+    }
+  });
+
+  // Значения по умолчанию (для удобства теста)
+  $('#height').value = '170';
+  $('#weight').value = '70';
+});
+</script>
+
+        <div class="post-content">
+<p>Body surface area ( <strong>Body Surface Area — BSA</strong> ) is an important physiological parameter that serves as the basis for many medical calculations: drug dosage, assessment of transfusion volumes, calculation of hemodynamic parameters, etc.<br/>Today we offer a simple but accurate online tool: the BSA calculator, which takes into account height and weight, allows you to select units of measurement (cm or inches, kg or pounds), select a calculation formula and optionally indicate the dose per m² for indicative medical calculations.</p>
+<h2 class="wp-block-heading" id="chto-takoe-bsa-i-zachem-on-nuzhen-2">What is BSA and why is it needed?</h2>
+<ul class="wp-block-list">
+<li>BSA is the area of ​​human skin (approximately) in square meters (m²).</li>
+<li>Used in tasks such as:<ul class="wp-block-list">
+<li>dosage of chemotherapy and other drugs with a narrow therapeutic index;</li>
+<li>normalization of physiological parameters (for example, cardiac output index, blood volume) to body size;</li>
+</ul>
+</li>
+<li>Why not just weight? Weight does not reflect body surface area and active metabolic mass as clearly as BSA.</li>
+<li>Average values: adult men ~1.9 m², women ~1.6 m².</li>
+<li>Important: different formulas give different BSA values ​​- changes can be up to ±0.4 m².</li>
+</ul>
+<h2 class="wp-block-heading" id="osnovnye-formuly-raschyota-bsa-2">Basic formulas for calculating BSA</h2>
+<figure class="wp-block-table"><div class="post-table"><div class="post-table"><table class="has-fixed-layout">
+<thead>
+<tr>
+<th>Formula</th>
+<th>Expression</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mosteller</strong></td>
+<td>BSA = √(height (cm) × weight (kg) / 3600)</td>
+<td>The simplest and most commonly used formula in clinical practice</td>
+</tr>
+<tr>
+<td><strong>Du Bois</strong></td>
+<td>BSA = 0.007184 × height<sup>0.725</sup>× weight<sup>0.425</sup></td>
+<td>Classic formula; good for adult patients</td>
+</tr>
+<tr>
+<td><strong>Haycock</strong></td>
+<td>BSA = 0.024265 × (height in m)<sup>0.3964</sup>× weight<sup>0.5378</sup></td>
+<td>Particularly accurate for calculations in children and adolescents</td>
+</tr>
+</tbody>
+</table></div></div></figure>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>Note: The choice of formula may affect the final result. For children/special groups, certain formulas are recommended.</p>
+</blockquote>
+<h2 class="wp-block-heading" id="kak-polzovatsya-kalkulyatorom-2">How to use the calculator</h2>
+<ol class="wp-block-list">
+<li>Please enter your height and weight.</li>
+<li>Select units: cm or inches for height; kg or pounds for weight.</li>
+<li>Select the BSA calculation formula (Mosteller, Du Bois or Haycock).</li>
+<li>If necessary, enter “Dose per m² (mg/m²)” - the tool will calculate the estimated dose.</li>
+<li>Click “Calculate” - you will get:<ul class="wp-block-list">
+<li>BSA value in m²;</li>
+<li>formula used;</li>
+<li>normalized input data;</li>
+<li>(optional) results for dosage selection.</li>
+</ul>
+</li>
+</ol>
+<h2 class="wp-block-heading" id="tablitsa-primerov-raschyotov-2">Table of calculation examples</h2>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><th>Height</th><th>Weight</th><th>Formula</th><th>BSA (m²) approx.</th></tr></thead><tbody><tr><td>170 cm</td><td>70 kg</td><td>Mosteller</td><td>≈ 1.84</td></tr><tr><td>180 cm</td><td>90 kg</td><td>Du Bois</td><td>≈ 2.11</td></tr><tr><td>150 cm</td><td>50 kg</td><td>Haycock</td><td>≈ 1.47</td></tr></tbody></table></div></figure>
+<p><em>(Values ​​are approximate and vary by formula and units.)</em></p>
+<h2 class="wp-block-heading" id="preimushhestva-i-ogranicheniya-2">Advantages and Limitations</h2>
+<p><strong>Advantages:</strong></p>
+<ul class="wp-block-list">
+<li>Fast and easy input with choice of units of measurement.</li>
+<li>Ability to select a formula for the desired user group.</li>
+<li>Additional option: “Dose per m²” for medical references.</li>
+</ul>
+<p><strong>Restrictions:</strong></p>
+<ul class="wp-block-list">
+<li>The formulas provide an estimate, not an exact measurement, of the body surface.</li>
+<li>For extreme values ​​of height/weight (children, seriously ill patients), deviations are possible.</li>
+<li>The result is not a substitute for professional medical judgment.</li>
+</ul>
+<h2 class="wp-block-heading" id="chasto-zadavaemye-voprosy-2">Frequently Asked Questions</h2>
+<p><strong>Q1. Can the formula be used for children?</strong><br/>A - Yes, but it is important to note that some formulas are specifically validated for children. For example, Haycock and Mosteller show better accuracy in such groups.</p>
+<p><strong>Q2. Why are different formulas chosen?</strong><br/>A - Different formulas are developed on different groups (adults, children, different races). Some overestimate or underestimate in special groups.</p>
+<p><strong>Q3. What to do if the dose per m² exceeds the recommended one?</strong><br/>A - This is a signal to review the dosage with a medical specialist. The tool provides guidance but does not replace clinical supervision.</p>
+<p><strong>BSA Calculator</strong> is a useful tool that helps you quickly estimate the body surface area, choose the appropriate calculation formula, take into account different units of measurement and approximately calculate the dose per m². It is suitable for adults and children, for general assessment or pre-medical preparation. Use data responsibly and consult with professionals when necessary.</p>
+</div>
+    </div>
+</body>
+</html>

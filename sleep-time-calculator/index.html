@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep time calculator: find out how many years of your life you spent sleeping</title>
+    <meta name="description" content="Sleep time calculator: find out how many years of your life you spent sleeping - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Sleep time calculator: find out how many years of your life you spent sleeping</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-receipt-wrap { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 15px; position: relative; overflow: hidden; }
+    .c-receipt-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: repeating-linear-gradient(45deg, #0693e3, #0693e3 10px, #38bdf8 10px, #38bdf8 20px); }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #fff; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #eff6ff; border: 1px solid #bae6fd; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05); }
+    .c-highlight-line:hover { background: #e0f2fe; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .c-switch-wrap { display: flex; align-items: center; gap: 12px; cursor: pointer; margin-bottom: 5px; padding: 14px 16px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 2px 6px rgba(0,0,0,0.02); transition: 0.3s; }
+    .c-switch-wrap:hover { border-color: #cbd5e1; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .c-switch-track { width: 44px; height: 24px; background: #cbd5e1; border-radius: 24px; position: relative; transition: 0.3s; flex-shrink: 0; }
+    .c-switch-thumb { width: 18px; height: 18px; background: #fff; border-radius: 50%; position: absolute; top: 3px; left: 3px; transition: 0.3s; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+    input:checked + .c-switch-track { background: #0693e3; }
+    input:checked + .c-switch-track .c-switch-thumb { left: 23px; }
+    .c-switch-label { font-weight: 600; font-size: 15px; color: #333; }
+    
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* Beautiful Pie & Bars Visualization */
+    .c-vis-box { margin: 15px 0 25px; padding: 25px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); display: flex; flex-direction: column; align-items: center; }
+    .c-vis-title { font-weight: 700; color: #0f172a; font-size: 15px; margin-bottom: 25px; text-align: center; }
+    
+    .c-pie-wrap { position: relative; width: 180px; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+    .c-pie-chart { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%; background: #e2e8f0; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(6, 147, 227, 0.15); transition: background 0.1s; }
+    .c-pie-inner { width: 130px; height: 130px; background: #fff; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: inset 0 2px 6px rgba(0,0,0,0.08); z-index: 2; }
+    .c-pie-val { font-size: 28px; font-weight: 700; color: #0693e3; line-height: 1; }
+    .c-pie-lbl { font-size: 11px; color: #64748b; font-weight: 600; margin-top: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+    
+    .c-legend { display: flex; gap: 20px; font-size: 13px; font-weight: 600; color: #475569; }
+    .c-dot { display: inline-block; width: 12px; height: 12px; border-radius: 4px; margin-right: 6px; transform: translateY(1px); }
+
+    .c-phase-bar-wrap { width: 100%; display: flex; height: 16px; border-radius: 8px; overflow: hidden; margin: 15px 0 10px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); border: 1px solid #cbd5e1; }
+    .c-phase-fill { height: 100%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: #fff; transition: width 1s cubic-bezier(0.4, 0, 0.2, 1); width: 0%; overflow: hidden; }
+    
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-vis-box { padding: 15px; }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="sleep-calc-wrapper">
+<div class="c-body">
+<div class="c-toggle" id="mode-tabs">
+<button class="c-toggle-btn active" data-mode="current">Current period</button>
+<button class="c-toggle-btn" data-mode="lifetime">Life forecast</button>
+</div>
+<div class="c-divider"><span class="icon">🛏️</span>Basic data</div>
+<div class="c-row" style="margin-bottom: 8px;">
+<div class="c-field" id="age-field-wrap">
+<label class="c-label" id="age-lbl">Age<span class="c-term">full years</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="age" placeholder="For example: 30" type="number"/>
+<span class="c-input-suffix">years</span>
+</div>
+<div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-target="age" data-val="20" type="button">20</button>
+<button class="c-quick-btn" data-target="age" data-val="30" type="button">30</button>
+<button class="c-quick-btn" data-target="age" data-val="40" type="button">40</button>
+<button class="c-quick-btn" data-target="age" data-val="50" type="button">50</button>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Sleep overnight<span class="c-term">on average</span></label>
+<div class="c-row cols-2" style="gap:10px; margin-bottom:0;">
+<div class="c-input-wrapper">
+<input class="c-input" id="sleep-h" placeholder="Watch" type="number"/>
+<span class="c-input-suffix">h</span>
+</div>
+<div class="c-input-wrapper">
+<input class="c-input" id="sleep-m" placeholder="Min" type="number" value="0"/>
+<span class="c-input-suffix">min</span>
+</div>
+</div>
+<div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn set-sleep-btn" data-h="7" data-m="0" type="button">7 hours</button>
+<button class="c-quick-btn set-sleep-btn" data-h="8" data-m="0" type="button">8 hours</button>
+<button class="c-quick-btn set-sleep-btn" data-h="9" data-m="0" type="button">9 o'clock</button>
+</div>
+</div>
+</div>
+<div class="c-divider" style="margin-top: 30px;"><span class="icon">🔬</span>Deep analytics</div>
+<label class="c-switch-wrap">
+<input class="is-hidden" id="advModeToggle" type="checkbox"/>
+<div class="c-switch-track"><div class="c-switch-thumb"></div></div>
+<span class="c-switch-label">Detailing the structure of sleep (phases)</span>
+</label>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-vis-box is-hidden" id="vis-box">
+<div class="c-vis-title">Balance of life and sleep</div>
+<div class="c-pie-wrap">
+<div class="c-pie-chart" id="pie-chart"></div>
+<div class="c-pie-inner">
+<div class="c-pie-val" id="pie-val">0%</div>
+<div class="c-pie-lbl">In a dream</div>
+</div>
+</div>
+<div class="c-legend">
+<div><span class="c-dot" style="background:#0693e3;"></span>Dream</div>
+<div><span class="c-dot" style="background:#4a5565;"></span>Wakefulness</div>
+</div>
+<div class="is-hidden" id="vis-phases-wrap" style="width: 100%; margin-top: 25px;">
+<div style="display:flex; justify-content:space-between; align-items:center; width:100%; font-size:13px; font-weight:600; color:#475569;">
+<span>Approximate sleep structure</span>
+<span class="c-help-icon" id="openSleepInfo" style="margin:0;">?</span>
+</div>
+<div class="c-phase-bar-wrap">
+<div class="c-phase-fill" id="ph-light" style="background: linear-gradient(135deg, #38bdf8, #0ea5e9);"></div>
+<div class="c-phase-fill" id="ph-deep" style="background: linear-gradient(135deg, #0284c7, #0369a1);"></div>
+<div class="c-phase-fill" id="ph-rem" style="background: linear-gradient(135deg, #8b5cf6, #6d28d9);"></div>
+</div>
+<div style="display:flex; justify-content:space-between; font-size:11px; font-weight:600; color:#64748b; text-transform:uppercase;">
+<span style="color: #0ea5e9;">Easy</span>
+<span style="color: #0284c7;">Deep</span>
+<span style="color: #8b5cf6;">Rapid (REM)</span>
+</div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">⌛</span>Time spent sleeping</div>
+<div class="c-receipt-wrap">
+<div class="c-resline">
+<div class="c-resleft">Full years<span class="c-subtext" id="resLblY">For the specified period</span></div>
+<div class="c-resval" id="resY"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">months<span class="c-subtext">In addition to years</span></div>
+<div class="c-resval" id="resM"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline c-highlight-line" style="border-bottom: none;">
+<div class="c-resleft">Days<span class="c-subtext">Remainder</span></div>
+<div class="c-resval" id="resD"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+<div class="c-receipt-wrap is-hidden" id="resAdvWrap" style="background: #fff; border: 2px solid #e2e8f0; margin-top: 15px;">
+<div style="font-size: 14px; font-weight: 700; color: #333; margin-bottom: 10px; padding: 0 12px;">Analytics of phases (net time)</div>
+<div class="c-resline" style="padding: 8px 12px;">
+<div class="c-resleft" style="font-size: 13px;">Light sleep (~50%)</div>
+<div class="c-resval" id="resLight" style="font-size: 15px; color:#0ea5e9;"></div>
+<button class="c-copy" style="width:24px; height:24px; background-size: 14px;"></button>
+</div>
+<div class="c-resline" style="padding: 8px 12px;">
+<div class="c-resleft" style="font-size: 13px;">Deep sleep (~20%)</div>
+<div class="c-resval" id="resDeep" style="font-size: 15px; color:#0284c7;"></div>
+<button class="c-copy" style="width:24px; height:24px; background-size: 14px;"></button>
+</div>
+<div class="c-resline" style="border-bottom: none; padding: 8px 12px;">
+<div class="c-resleft" style="font-size: 13px;">REM sleep (~25%)</div>
+<div class="c-resval" id="resRem" style="font-size: 15px; color:#8b5cf6;"></div>
+<button class="c-copy" style="width:24px; height:24px; background-size: 14px;"></button>
+</div>
+</div>
+</div>
+<div class="c-modal-overlay" id="sleepInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeSleepInfo">×</button>
+<div class="c-modal-title"><span class="icon">🌙</span>Sleep structure</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">Sleep is heterogeneous and consists of cycles (usually 90-120 minutes), each of which includes several phases.</div>
+<ul style="font-size: 13px; color: #1e293b; padding-left: 20px; line-height: 1.6;">
+<li style="margin-bottom: 8px;"><b>Light sleep (~50%):</b>Preparing for deep sleep. The muscles relax, the pulse slows down.</li>
+<li style="margin-bottom: 8px;"><b>Deep sleep (~20%):</b>Physical restoration of the body, hormone production, tissue repair. In this phase, it is most difficult to wake a person.</li>
+<li style="margin-bottom: 8px;"><b>REM sleep (~25%):</b>Psychological recovery, memory processing, vivid dreams. The brain is active in much the same way as when awake.</li>
+<li><b>Awakenings (~5%):</b>Micro-awakenings at night, which a person usually does not even remember.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let activeMode = 'current';
+  let isCalculated = false;
+  let pieAnimInterval = null;
+
+  // Modal logic
+  $('#openSleepInfo').addEventListener('click', () => { $('#sleepInfoModal').classList.add('show'); });
+  $('#closeSleepInfo').addEventListener('click', () => { $('#sleepInfoModal').classList.remove('show'); });
+  $('#sleepInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#sleepInfoModal').classList.remove('show');
+  });
+
+  function updateModeUI() {
+      if (Math.abs(activeMode === 'lifetime') === 1) {
+          $('#age-lbl').innerHTML = 'Ожидаемая жизнь <span class="c-term">прогноз</span>';
+          $('#resLblY').textContent = 'Прогноз на всю жизнь';
+      } else {
+          $('#age-lbl').innerHTML = 'Возраст <span class="c-term">полных лет</span>';
+          $('#resLblY').textContent = 'За прожитый период';
+      }
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  }
+
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeMode = btn.dataset.mode;
+        updateModeUI();
+    });
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          let hasTarget = false;
+          let targetId = btn.dataset.target;
+          if (typeof targetId !== 'undefined') hasTarget = true;
+          
+          if (Math.abs(hasTarget === true) === 1) {
+              $('#' + targetId).value = btn.dataset.val;
+          } else {
+              let h = btn.dataset.h;
+              let m = btn.dataset.m;
+              $('#sleep-h').value = h;
+              $('#sleep-m').value = m;
+          }
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  $('#advModeToggle').addEventListener('change', () => {
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  });
+
+  function declOfNum(n, text_forms) {  
+      n = Math.abs(n) % 100; 
+      var n1 = n % 10;
+      
+      let is10to20 = false;
+      let diff10 = Math.sign(n - 10);
+      let diff20 = Math.sign(n - 20);
+      let cond1020 = Math.abs(diff10 === 1) + Math.abs(diff20 === -1);
+      let isExactly10 = Math.abs(diff10 === 0);
+      
+      let sumCond = cond1020 + Math.abs(isExactly10 === true);
+      if (Math.abs(Math.sign(sumCond) === 1) === 1) { return text_forms[2]; }
+      
+      let isOne = Math.sign(n1 - 1);
+      if (Math.abs(isOne === 0) === 1) { return text_forms[0]; }
+      
+      let isTwoToFour = false;
+      let diffOne = Math.sign(n1 - 1);
+      let diffFive = Math.sign(n1 - 5);
+      let cond24 = Math.abs(diffOne === 1) + Math.abs(diffFive === -1);
+      if (Math.abs(cond24 === 2) === 1) { return text_forms[1]; }
+      
+      return text_forms[2];
+  }
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let age = parseFloat($('#age').value);
+    let sH = parseFloat($('#sleep-h').value);
+    let sM = parseFloat($('#sleep-m').value);
+    
+    let isNanAge = isNaN(age);
+    if (Math.abs(isNanAge === true) === 1) age = 0;
+    
+    let isNanSh = isNaN(sH);
+    if (Math.abs(isNanSh === true) === 1) sH = 0;
+    
+    let isNanSm = isNaN(sM);
+    if (Math.abs(isNanSm === true) === 1) sM = 0;
+
+    let isErr = false;
+    let isPositiveAge = false;
+    if (Math.abs(Math.sign(age) === 1) === 1) isPositiveAge = true;
+    if (Math.abs(isPositiveAge === false) === 1) isErr = true;
+    
+    let totalSleepDay = sH + (sM / 60);
+    let isPositiveSleep = false;
+    if (Math.abs(Math.sign(totalSleepDay) === 1) === 1) isPositiveSleep = true;
+    if (Math.abs(isPositiveSleep === false) === 1) isErr = true;
+
+    let isTooMuchSleep = false;
+    let diff24 = Math.sign(24 - totalSleepDay);
+    if (Math.abs(diff24 === -1) === 1) isTooMuchSleep = true;
+    if (Math.abs(isTooMuchSleep === true) === 1) isErr = true;
+
+    if (Math.abs(isErr === true) === 1) {
+        $('#vis-box').classList.add('is-hidden');
+        $('#resultBox').classList.remove('show');
+        if (Math.abs(shouldScroll === true) === 1) {
+            $('#errorMsg').textContent = "Please enter the correct age and sleep time (from 0 to 24 hours)";             $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    // Math calculation
+    let totalDays = age * 365.25;
+    let totalSleepHours = totalDays * totalSleepDay;
+    let totalSleepDays = totalSleepHours / 24;
+    
+    let ySleep = Math.floor(totalSleepDays / 365.25);
+    let remainderDays = totalSleepDays - (ySleep * 365.25);
+    
+    let mSleep = Math.floor(remainderDays / 30.4375);
+    remainderDays = remainderDays - (mSleep * 30.4375);
+    
+    let dSleep = Math.floor(remainderDays);
+
+    let sleepPercent = (totalSleepDay / 24) * 100;
+
+    $('#resY').textContent = ySleep + " " + declOfNum(ySleep, ['год', 'года', 'лет']);
+    $('#resM').textContent = mSleep + " " + declOfNum(mSleep, ['месяц', 'месяца', 'месяцев']);
+    $('#resD').textContent = dSleep + " " + declOfNum(dSleep, ['день', 'дня', 'дней']);
+
+    // Visuals Pie Animation
+    if (pieAnimInterval !== null) clearInterval(pieAnimInterval);
+    let currentP = 0;
+    pieAnimInterval = setInterval(() => {
+        let diff = sleepPercent - currentP;
+        let step = diff * 0.1;
+        let isSmall = Math.sign(Math.abs(diff) - 0.1);
+        
+        if (Math.abs(isSmall === -1) === 1) {
+            currentP = sleepPercent;
+            clearInterval(pieAnimInterval);
+        } else {
+            currentP = currentP + step;
+        }
+        
+        $('#pie-chart').style.background = `conic-gradient(#0693e3 0%, #0693e3 ${currentP}%, #4a5565 ${currentP}%, #4a5565 100%)`;
+        $('#pie-val').textContent = Math.round(currentP) + '%';
+    }, 16);
+
+    // Advanced
+    let isAdv = $('#advModeToggle').checked;
+    if (Math.abs(isAdv === true) === 1) {
+        $('#resAdvWrap').classList.remove('is-hidden');
+        $('#vis-phases-wrap').classList.remove('is-hidden');
+        
+        // Percentages: Light 50%, Deep 20%, REM 25% (total 95%, 5% awake)
+        let phLight = totalSleepDays * 0.50;
+        let phDeep = totalSleepDays * 0.20;
+        let phRem = totalSleepDays * 0.25;
+        
+        let fmtPhase = (daysNum) => {
+            let y = Math.floor(daysNum / 365.25);
+            let remD = daysNum - (y * 365.25);
+            let m = Math.floor(remD / 30.4375);
+            let str = "";
+            let hasY = false;
+            if (Math.abs(Math.sign(y) === 1) === 1) hasY = true;
+            if (Math.abs(hasY === true) === 1) str = str + y + " " + declOfNum(y, ['год', 'года', 'лет']) + " ";
+            str = str + m + " " + declOfNum(m, ['мес', 'мес', 'мес']);
+            return str;
+        };
+
+        $('#resLight').textContent = fmtPhase(phLight);
+        $('#resDeep').textContent = fmtPhase(phDeep);
+        $('#resRem').textContent = fmtPhase(phRem);
+        
+        setTimeout(() => {
+            $('#ph-light').style.width = '52.6%'; // relative to the 95% total sleep (50/95)
+            $('#ph-deep').style.width = '21.1%';  // 20/95
+            $('#ph-rem').style.width = '26.3%';   // 25/95
+            $('#ph-light').textContent = '50%';
+            $('#ph-deep').textContent = '20%';
+            $('#ph-rem').textContent = '25%';
+        }, 100);
+
+    } else {
+        $('#resAdvWrap').classList.add('is-hidden');
+        $('#vis-phases-wrap').classList.add('is-hidden');
+        $('#ph-light').style.width = '0%';
+        $('#ph-deep').style.width = '0%';
+        $('#ph-rem').style.width = '0%';
+        $('#ph-light').textContent = '';
+        $('#ph-deep').textContent = '';
+        $('#ph-rem').textContent = '';
+    }
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#vis-box').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    wrap.querySelectorAll('input[type="number"]').forEach(i => i.value = '');
+    $('#sleep-m').value = '0';
+    $('#advModeToggle').checked = false;
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    if (pieAnimInterval !== null) clearInterval(pieAnimInterval);
+    $('#pie-chart').style.background = '#e2e8f0';
+    $('#pie-val').textContent = '0%';
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      navigator.clipboard.writeText(valRaw.trim());
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Sleep is not just a period of passivity, but a complex biological process of recovery. Statistically, a person spends about a third of his earthly existence in a state of sleep. Our <strong>sleep time calculator</strong> allows you not just to get a dry figure, but to look into the structure of your rest, using visualization algorithms and a mathematical model of phase distribution.</p>
+<h2 class="wp-block-heading" id="kak-rabotaet-matematicheskaya-model-rascheta-2">How does the mathematical calculation model work?</h2>
+<p>To obtain accurate data, the calculator uses a formula that takes into account leap years (average value of 365.25 days) and the exact sleep time in minutes. The calculation is made according to the following algorithm:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Determining the total number of hours:</strong> Product of age by the number of days in a year and the average duration of sleep per night.</li>
+<li><strong>Conversion per day:</strong> Divide the total hours by 24.</li>
+<li><strong>Decomposition into time periods:</strong> Selecting entire years, remaining months and days.</li>
+</ol>
+<p>The formula for calculating total sleep time ( $T_{total}$ ) is as follows:</p>
+<p>$$T_{total} = A \times 365.25 \times (S_{h} + \frac{S_{m}}{60})$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $A$ - your current age or life expectancy forecast;</li>
+<li> $S_{h}$ - number of complete hours of sleep;</li>
+<li> $S_{m}$ - number of minutes of sleep.</li>
+</ul>
+<h3 class="wp-block-heading" id="glubokaya-analitika-struktury-sna-2">Deep analytics of sleep structure</h3>
+<p>Our tool is not only a year counter. In Deep Analytics mode, the system divides your total sleep time into key phases that are critical to your health.</p>
+<ul class="wp-block-list">
+<li><strong>Light sleep (~50%):</strong> A stage during which the heart rate slows and muscles relax. This is the foundation for moving into deeper stages.</li>
+<li><strong>Deep sleep (~20%):</strong> The most important stage for physical recovery. It is at this time that tissue regeneration and hormone synthesis occur.</li>
+<li><strong>Rapid eye movement sleep (REM, ~25%):</strong> A period of high brain activity responsible for processing emotions, memory consolidation, and creative insights.</li>
+<li><strong>Micro-awakenings (~5%):</strong> Natural short-term exits from sleep, which are rarely recorded by consciousness.</li>
+</ul>
+<h2 class="wp-block-heading" id="rekomendovannye-normy-sna-i-nakoplennyj-itog-2">Recommended sleep standards and cumulative total</h2>
+<p>The table below compares how much time a person spends sleeping depending on age and compliance with the recommendations of sleep doctors over a 10-year period.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Age group</strong></td><td><strong>Recommended rate (h)</strong></td><td><strong>Total sleep over 10 years (days)</strong></td><td><strong>Total Sleep in 10 Year(s)</strong></td></tr></thead><tbody><tr><td>Teenagers (14-17 years old)</td><td>9 o'clock</td><td>1369 days</td><td>~3.75 years</td></tr><tr><td>Adults (18-64 years old)</td><td>8 hours</td><td>1217 days</td><td>~3.33 years</td></tr><tr><td>Elderly (65+ years)</td><td>7 o'clock</td><td>1065 days</td><td>~2.91 years</td></tr></tbody></table></div></figure>
+<h3 class="wp-block-heading" id="pochemu-vazhno-ispolzovat-nash-kalkulyator-2">Why is it important to use our calculator?</h3>
+<p>Using this tool helps you understand the extent of the impact sleep has on your productivity and longevity.</p>
+<ul class="wp-block-list">
+<li><strong>Life forecast:</strong> You can switch to Life Forecast mode and see how much time you'll spend sleeping by age 80 or 90.</li>
+<li><strong>Balance visualization:</strong> An interactive pie chart clearly shows the ratio of wakefulness and rest.</li>
+<li><strong>Accuracy to the minute:</strong> Unlike simple counters, our algorithm takes into account additional minutes of sleep, which over a distance of 30-40 years gives an error of less than <strong>0,1%</strong>.</li>
+<li><strong>Convenience and copying:</strong> All results can be instantly copied with one click and saved to your personal health diary.</li>
+</ul>
+<p>Remember that quality sleep is an investment. If your calculation shows critically low values ​​for the deep sleep phase, this is a reason to think about rest hygiene: maintaining a routine, eliminating gadgets before bed and maintaining an optimal temperature in the bedroom ( <strong>18°C</strong> — <strong>22°C</strong> ).</p>
+</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle Calculator: Calculate Area, Perimeter and Sides (Online)</title>
+    <meta name="description" content="Triangle Calculator: Calculate Area, Perimeter and Sides (Online) - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Triangle Calculator: Calculate Area, Perimeter and Sides (Online)</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (строго по шаблону) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-row.cols-3 { grid-template-columns: repeat(3, minmax(220px, 1fr)); }
+    .c-row.single { grid-template-columns: 1fr; }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    .c-help {font-size:12px;color:#777;text-align:center;}
+    .c-input, .c-select, .c-textarea { width:100%; padding:12px 14px; border:1px solid #ccc; border-radius:8px; font-size:14px; }
+    .c-input:focus, .c-select:focus, .c-textarea:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap;margin-bottom: 16px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+
+    /* Результат */
+    .c-result { border:1px dashed #4caf50; border-radius:10px; padding:10px; background:#fff; display:none; }
+    .c-result.show { display:grid; }
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #4caf50; grid-template-columns: 0.4fr 0.5fr 0.1fr; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; }
+
+    /* Кнопка копирования */
+    .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden;
+      background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+      background-repeat:no-repeat; background-position:center; background-size:20px 20px; }
+
+    .is-hidden { display:none !important; }
+    @media (max-width: 860px) { .c-resval { font-size:14px; } }
+    @media (max-width: 720px) { .c-row.cols-3 { grid-template-columns: 1fr; } }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-row single">
+<div class="c-field">
+<label class="c-label" for="calcMode">Calculation method</label>
+<select class="c-select" id="calcMode">
+<option value="base_height">By base and height (S = ½ a h)</option>
+<option selected="" value="heron">On three sides (Heron)</option>
+<option value="sas">Two Sides and Angle (SAS)</option>
+<option value="equilateral">Equilateral triangle</option>
+</select>
+</div>
+</div>
+<div id="block_heron">
+<div class="c-row cols-3">
+<div class="c-field">
+<label class="c-label" for="h_a">Side a</label>
+<input class="c-input" id="h_a" min="0" step="any" type="number" value="3"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="h_b">Side b</label>
+<input class="c-input" id="h_b" min="0" step="any" type="number" value="4"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="h_c">Side c</label>
+<input class="c-input" id="h_c" min="0" step="any" type="number" value="5"/>
+</div>
+</div>
+</div>
+<div class="is-hidden" id="block_base_height">
+<div class="c-row">
+<div class="c-field">
+<label class="c-label" for="bh_a">Base(a)</label>
+<input class="c-input" id="bh_a" min="0" step="any" type="number"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="bh_h">Height (h)</label>
+<input class="c-input" id="bh_h" min="0" step="any" type="number"/>
+</div>
+</div>
+</div>
+<div class="is-hidden" id="block_sas">
+<div class="c-row cols-3">
+<div class="c-field">
+<label class="c-label" for="sas_a">Side a</label>
+<input class="c-input" id="sas_a" min="0" step="any" type="number"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="sas_b">Side b</label>
+<input class="c-input" id="sas_b" min="0" step="any" type="number"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="sas_angle">Angle γ (°)</label>
+<input class="c-input" id="sas_angle" max="180" min="0" placeholder="between a and b" step="any" type="number"/>
+</div>
+</div>
+</div>
+<div class="is-hidden" id="block_equilateral">
+<div class="c-row single">
+<div class="c-field">
+<label class="c-label" for="eq_a">Side a</label>
+<input class="c-input" id="eq_a" min="0" step="any" type="number"/>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div aria-live="polite" class="c-result" id="resultBox">
+<div class="c-resline is-hidden" id="validationError" style="background:#ffdddd; color:#cc0000;">
+<div class="c-resleft">Error:</div>
+<div class="c-resval" id="errorMsg" style="color:#cc0000; font-weight: 500;"></div>
+<button class="c-copy is-hidden" disabled=""></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Area (S)</div>
+<div class="c-resval" id="resArea"></div>
+<button aria-label="Copy area" class="c-copy" id="copyArea" title="Copy"></button>
+</div>
+<div class="c-resline" id="perimRow">
+<div class="c-resleft">Perimeter (P)</div>
+<div class="c-resval" id="resPerimeter"></div>
+<button aria-label="Copy perimeter" class="c-copy" id="copyPerimeter" title="Copy"></button>
+</div>
+<div class="c-resline" id="typeRow">
+<div class="c-resleft">Triangle type</div>
+<div class="c-resval" id="resType"></div>
+<button aria-label="Copy type" class="c-copy" id="copyType" title="Copy"></button>
+</div>
+<div class="c-resline single is-hidden" id="heightsRow">
+<div class="c-resleft">Heights (hₐ, hᵦ, hᵧ)</div>
+<div class="c-resval" id="resHeights" style="font-weight:400;"></div>
+<button class="c-copy is-hidden" disabled=""></button>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика =====
+  const $ = (s) => wrap.querySelector(s);
+  
+  const resBox = $('#resultBox');
+  const errorBox = $('#validationError');
+  const errorMsg = $('#errorMsg');
+  const modeSelect = $('#calcMode');
+  
+  const blocks = {
+      base_height: $('#block_base_height'),
+      heron: $('#block_heron'),
+      sas: $('#block_sas'),
+      equilateral: $('#block_equilateral')
+  };
+  
+  const outputs = {
+      area: $('#resArea'),
+      perimeter: $('#resPerimeter'),
+      type: $('#resType'),
+      heights: $('#resHeights'),
+      perimRow: $('#perimRow'),
+      typeRow: $('#typeRow'),
+      heightsRow: $('#heightsRow')
+  };
+
+  // ----- Вспомогательные функции -----
+  function num(v){ const n = parseFloat(String(v).replace(',', '.')); return Number.isFinite(n) ? n : NaN; }
+  
+  function fmt(v, d=4){
+    if (isNaN(v)) return '—';
+    const rounded = Number(v.toFixed(d));
+    return rounded.toLocaleString('ru-RU', { maximumFractionDigits: d });
+  }
+
+  // ИСПРАВЛЕНО: Функция isZero
+  function isZero(val) {
+    const tolerance = 1e-9;
+    const check = Math.sign(tolerance - Math.abs(val));
+    if (check === -1) return false;
+    return true;
+  }
+  
+  function setError(msg) {
+    errorMsg.textContent = msg;
+    errorBox.classList.remove('is-hidden');
+    resBox.classList.add('show');
+  }
+  function hideError() {
+    errorBox.classList.add('is-hidden');
+  }
+  
+  function updateUI() {
+      const mode = modeSelect.value;
+      // Скрываем все
+      Object.values(blocks).forEach(el => el.classList.add('is-hidden'));
+      // Показываем нужный
+      blocks[mode].classList.remove('is-hidden');
+      
+      resBox.classList.remove('show');
+      hideError();
+  }
+
+  // ----- Главный расчет -----
+  function calc() {
+    hideError();
+    
+    // Сброс доп полей
+    outputs.perimRow.classList.remove('is-hidden');
+    outputs.typeRow.classList.remove('is-hidden');
+    outputs.heightsRow.classList.add('is-hidden');
+
+    const mode = modeSelect.value;
+    
+    let area = 0;
+    let perimeter = 0;
+    let typeText = '';
+    
+    // --- Режим 1: Герон ---
+    if (mode === 'heron') {
+        const a = num($('#h_a').value);
+        const b = num($('#h_b').value);
+        const c = num($('#h_c').value);
+        
+        if (isNaN(a) || isNaN(b) || isNaN(c)) { setError('Enter the lengths of the sides.'); return; }
+        // ИСПРАВЛЕНО: <= 0
+        if (Math.sign(a) !== 1 || Math.sign(b) !== 1 || Math.sign(c) !== 1) { setError('The sides must be > 0.'); return; }
+        
+        // Неравенство треугольника: a+b > c и т.д.
+        // ИСПРАВЛЕНО: (a+b) <= c
+        if (Math.sign((a+b) - c) !== 1) { setError('The triangle does not exist (a+b ≤ c).'); return; }
+        if (Math.sign((a+c) - b) !== 1) { setError('The triangle does not exist (a+c ≤ b).'); return; }
+        if (Math.sign((b+c) - a) !== 1) { setError('The triangle does not exist (b+c ≤ a).'); return; }
+        
+        perimeter = a + b + c;
+        const p = perimeter / 2;
+        area = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+        
+        // Тип
+        if (a === b) {
+             if (b === c) typeText = 'Equilateral';
+             else typeText = 'Isosceles';
+        } else if (a === c || b === c) {
+             typeText = 'Isosceles';
+        } else {
+             typeText = 'Versatile';
+        }
+        
+        // Проверка углов по теореме косинусов
+        // a^2 + b^2 = c^2 (Прямоугольный)
+        const sides = [a, b, c].sort((x, y) => x - y); // x, y, z (z - max)
+        const x = sides[0], y = sides[1], z = sides[2];
+        
+        const pythagoras = (x*x + y*y) - z*z;
+        
+        if (isZero(pythagoras)) typeText += ', Rectangular';
+        // ИСПРАВЛЕНО: pythagoras < 0
+        else if (Math.sign(pythagoras) === -1) typeText += ', Obtuse';
+        else typeText += ', Acute angular';
+        
+        // Высоты
+        const ha = (2 * area) / a;
+        const hb = (2 * area) / b;
+        const hc = (2 * area) / c;
+        outputs.heights.textContent = `hₐ=${fmt(ha)}, hᵦ=${fmt(hb)}, hᵧ=${fmt(hc)}`;
+        outputs.heightsRow.classList.remove('is-hidden');
+    } 
+    
+    // --- Режим 2: Основание и Высота ---
+    else if (mode === 'base_height') {
+        const a = num($('#bh_a').value);
+        const h = num($('#bh_h').value);
+        
+        if (isNaN(a) || isNaN(h)) { setError('Enter values.'); return; }
+        if (Math.sign(a) !== 1 || Math.sign(h) !== 1) { setError('Values ​​must be > 0.'); return; }
+        
+        area = 0.5 * a * h;
+        
+        // Периметр неизвестен
+        outputs.perimRow.classList.add('is-hidden');
+        outputs.typeRow.classList.add('is-hidden');
+    }
+    
+    // --- Режим 3: SAS (2 стороны + угол) ---
+    else if (mode === 'sas') {
+        const a = num($('#sas_a').value);
+        const b = num($('#sas_b').value);
+        const ang = num($('#sas_angle').value);
+        
+        if (isNaN(a) || isNaN(b) || isNaN(ang)) { setError('Enter values.'); return; }
+        if (Math.sign(a) !== 1 || Math.sign(b) !== 1) { setError('The sides must be > 0.'); return; }
+        // ИСПРАВЛЕНО: ang >= 180
+        if (Math.sign(180 - ang) !== 1) { setError('The angle must be < 180°.'); return; }
+        if (Math.sign(ang) !== 1) { setError('The angle must be > 0°.'); return; }
+        
+        const rad = ang * (Math.PI / 180);
+        area = 0.5 * a * b * Math.sin(rad);
+        
+        // Третья сторона по теореме косинусов
+        // c^2 = a^2 + b^2 - 2ab cos(gamma)
+        const c2 = a*a + b*b - 2*a*b*Math.cos(rad);
+        const c = Math.sqrt(c2);
+        
+        perimeter = a + b + c;
+        typeText = 'On both sides';
+        if (isZero(a - b)) typeText = 'Isosceles';
+    }
+    
+    // --- Режим 4: Равносторонний ---
+    else if (mode === 'equilateral') {
+        const a = num($('#eq_a').value);
+        if (isNaN(a)) { setError('Enter the side.'); return; }
+        if (Math.sign(a) !== 1) { setError('The side must be > 0.'); return; }
+        
+        area = (Math.sqrt(3) / 4) * a * a;
+        perimeter = 3 * a;
+        typeText = 'Equilateral, Acute Angular';
+        
+        const h = (Math.sqrt(3) / 2) * a;
+        outputs.heights.textContent = `h = ${fmt(h)}`;
+        outputs.heightsRow.classList.remove('is-hidden');
+    }
+
+    // Вывод
+    outputs.area.textContent = fmt(area);
+    if (mode !== 'base_height') {
+        outputs.perimeter.textContent = fmt(perimeter);
+        outputs.type.textContent = typeText;
+    }
+
+    resBox.classList.add('show');
+  }
+
+  // ----- Слушатели -----
+  modeSelect.addEventListener('change', updateUI);
+  $('#calcBtn').addEventListener('click', calc);
+  $('#resetBtn').addEventListener('click', () => {
+    // Сброс значений
+    $('#h_a').value = '3'; $('#h_b').value = '4'; $('#h_c').value = '5';
+    $('#bh_a').value = ''; $('#bh_h').value = '';
+    $('#sas_a').value = ''; $('#sas_b').value = ''; $('#sas_angle').value = '';
+    $('#eq_a').value = '';
+    $('#calcMode').value = 'heron';
+    updateUI();
+    resBox.classList.remove('show');
+    hideError();
+  });
+
+  // Копирование
+  wrap.addEventListener('click', (e) => {
+    let textToCopy = null;
+    let targetId = e.target.id;
+    
+    if (targetId === 'copyArea') textToCopy = outputs.area.textContent;
+    if (targetId === 'copyPerimeter') textToCopy = outputs.perimeter.textContent;
+    if (targetId === 'copyType') textToCopy = outputs.type.textContent;
+    
+    if (textToCopy) {
+      try { navigator.clipboard?.writeText(textToCopy.trim()); } catch (_) {}
+    }
+  });
+
+  // Enter
+  wrap.addEventListener('keydown', (e) => {
+    // ИСПРАВЛЕНО: Замена &&
+    if (e.key === 'Enter') {
+      if (e.target.matches('input, select')) {
+        e.preventDefault();
+        calc();
+      }
+    }
+  });
+  
+  updateUI();
+});
+</script>
+
+        <div class="post-content">
+<h2 class="wp-block-heading" id="onlajn-reshenie-treugolnikov-lyuboj-slozhnosti-2">Online solution of triangles of any complexity</h2>
+<p>The triangle is a basic figure in geometry, but calculating its parameters is often difficult due to the abundance of formulas. Our <strong>universal calculator</strong> replaces a reference book on geometry. It not only gives an answer, but also determines the type of figure, checks the possibility of its existence and calculates additional parameters (heights, angles).</p>
+<p>The tool supports 4 main calculation methods, covering 99% of problems.</p>
+<h3 class="wp-block-heading" id="1-formula-gerona-po-trem-storonam-2">1. Heron's formula (on three sides)</h3>
+<p>The most popular method is when the lengths of all sides are known ( $a, b, c$ ), but the height is unknown.</p>
+<p>First the semi-perimeter ( $p$ ) is calculated:</p>
+<p>$$p = \frac{a + b + c}{2}$$</p>
+<p>Then the area ( $S$ ) is found using the formula:</p>
+<p>$$S = \sqrt{p(p — a)(p — b)(p — c)}$$</p>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p><strong>Important:</strong> The calculator automatically checks the "triangle inequality" ( $a + b &gt; c$ ). If it is not possible to construct a shape with the given sides, you will see an error message.</p>
+</blockquote>
+<h3 class="wp-block-heading" id="2-klassicheskij-metod-cherez-osnovanie-i-vysotu-2">2. Classic method (through base and height)</h3>
+<p>Basic school formula. Used if the length of one side (base $a$ ) and the height ( $h$ ) dropped onto it are known.</p>
+<p>$$S = \frac{1}{2} \cdot a \cdot h$$</p>
+<h3 class="wp-block-heading" id="3-trigonometricheskij-metod-cherez-ugol-2">3. Trigonometric method (through angle)</h3>
+<p>If two sides ( $a$ and $b$ ) and the angle between them ( $\gamma$ ) are known, the area is calculated using the sine:</p>
+<p>$$S = \frac{1}{2} \cdot a \cdot b \cdot \sin(\gamma)$$</p>
+<h3 class="wp-block-heading" id="4-ravnostoronnij-treugolnik-2">4. Equilateral triangle</h3>
+<p>A special case when all sides are equal ( $a$ ). The formula is simplified as much as possible:</p>
+<p>$$S = \frac{\sqrt{3}}{4} \cdot a^2$$</p>
+<h2 class="wp-block-heading" id="klassifikatsiya-treugolnikov-2">Classification of triangles</h2>
+<p>One of the unique features of our calculator is automatic determination of your body type.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Corner type</strong></td><td><strong>Description</strong></td></tr></thead><tbody><tr><td><strong>Acute-angled</strong></td><td>All angles are less than 90°. The square of any side is less than the sum of the squares of the other two ( $c^2 &lt; a^2 + b^2$ ).</td></tr><tr><td><strong>Rectangular</strong></td><td>One angle is 90°. The Pythagorean theorem works ( $c^2 = a^2 + b^2$ ).</td></tr><tr><td><strong>Obtuse</strong></td><td>One angle is greater than 90°. The square of one side is greater than the sum of the squares of the other two ( $c^2 &gt; a^2 + b^2$ ).</td></tr></tbody></table></div></figure>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Side type</strong></td><td><strong>Description</strong></td></tr></thead><tbody><tr><td><strong>Versatile</strong></td><td>All sides have different lengths.</td></tr><tr><td><strong>Isosceles</strong></td><td>The two sides are equal. The angles at the base are also equal.</td></tr><tr><td><strong>Equilateral</strong></td><td>All three sides are equal, all angles are 60°.</td></tr></tbody></table></div></figure>
+<h3 class="wp-block-heading" id="dopolnitelnye-vychisleniya-2">Additional calculations</h3>
+<p>In addition to area and perimeter ( $P = a + b + c$ ), our service automatically calculates the lengths of all three heights ( $h_a, h_b, h_c$ ). This is especially useful for solving complex geometric problems and engineering calculations.</p>
+</div>
+    </div>
+</body>
+</html>

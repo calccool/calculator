@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal online weight and mass converter: 90+ units of measurement</title>
+    <meta name="description" content="Universal online weight and mass converter: 90+ units of measurement - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Universal online weight and mass converter: 90+ units of measurement</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function() {
+
+  var UNITS = [
+    // Метрические (SI)
+    { key:'u',       label:'Atomic mass unit (a.m.u.)', short:'a.e.m.', toBase:1.660539e-24, group:'Metric (SI)' },
+    { key:'pg',      label:'Picogram (pg)',             short:'pg',     toBase:1e-12,        group:'Metric (SI)' },
+    { key:'ng',      label:'Nanogram (ng)',             short:'ng',     toBase:1e-9,         group:'Metric (SI)' },
+    { key:'mcg',     label:'Microgram (mcg)',           short:'mcg',    toBase:1e-6,         group:'Metric (SI)' },
+    { key:'mg',      label:'Milligram (mg)',            short:'mg',     toBase:0.001,        group:'Metric (SI)' },
+    { key:'cg',      label:'Centigram (sg)',            short:'sg',     toBase:0.01,         group:'Metric (SI)' },
+    { key:'dg',      label:'Decigram (dg)',             short:'dg',     toBase:0.1,          group:'Metric (SI)' },
+    { key:'g',       label:'Gram (g)',                  short:'G',      toBase:1,            group:'Metric (SI)' },
+    { key:'dag',     label:'Dekagram (dag)',            short:'Doug',    toBase:10,           group:'Metric (SI)' },
+    { key:'hg',      label:'Hectogram (gg)',            short:'yy',     toBase:100,          group:'Metric (SI)' },
+    { key:'kg',      label:'Kilogram (kg)',             short:'kg',     toBase:1000,         group:'Metric (SI)' },
+    { key:'centner', label:'Centner (c)',                short:'ts',      toBase:100000,       group:'Metric (SI)' },
+    { key:'t',       label:'Ton (t)',                  short:'T',      toBase:1000000,      group:'Metric (SI)' },
+    { key:'kt',      label:'Kiloton (kt)',             short:'CT',     toBase:1e9,          group:'Metric (SI)' },
+    { key:'Mt',      label:'Megaton (Mt)',             short:'Mt',     toBase:1e12,         group:'Metric (SI)' },
+    { key:'Gt',      label:'Gigaton (Gt)',             short:'Gt',     toBase:1e15,         group:'Metric (SI)' },
+
+    // Британские / Американские (Avoirdupois)
+    { key:'gr',      label:'Gran',               short:'gr',     toBase:0.06479891,   group:'British/US' },
+    { key:'dr',      label:'Drachma (dram)',              short:'dr',     toBase:1.77184519,   group:'British/US' },
+    { key:'oz',      label:'Ounce (ounce, oz)',          short:'oz',     toBase:28.3495231,   group:'British/US' },
+    { key:'lb',      label:'Pound (pound, lb)',           short:'lb',     toBase:453.59237,    group:'British/US' },
+    { key:'st',      label:'Moan (stone, st)',           short:'st',     toBase:6350.29318,   group:'British/US' },
+    { key:'qr_us',   label:'Quarter of the USA',     short:'qr US',  toBase:11339.8092,   group:'British/US' },
+    { key:'qr_uk',   label:'Quarter Brit. (quarter)',   short:'qr UK',  toBase:12700.5863,   group:'British/US' },
+    { key:'cwt_us',  label:'US HW (cwt US)',   short:'cwt US', toBase:45359.237,    group:'British/US' },
+    { key:'cwt_uk',  label:'Hundred weight brit. (cwt UK)', short:'cwt UK', toBase:50802.345,    group:'British/US' },
+    { key:'ton_us',  label:'Short ton (US ton)',    short:'tn US',  toBase:907184.74,    group:'British/US' },
+    { key:'ton_uk',  label:'Long ton (UK ton)',     short:'tn UK',  toBase:1016046.908,  group:'British/US' },
+    { key:'slug',    label:'Slug',                short:'slug',   toBase:14593.9029,   group:'British/US' },
+
+    // Тройская система и Ювелирные
+    { key:'point',   label:'Pont (point)',               short:'pt',     toBase:0.002,        group:'Troy / Jewelry' },
+    { key:'ct',      label:'Carat (ct)',          short:'ct',     toBase:0.2,          group:'Troy / Jewelry' },
+    { key:'dwt',     label:'Pennyweight',    short:'dwt',    toBase:1.55517384,   group:'Troy / Jewelry' },
+    { key:'oz_t',    label:'Troy ounce (oz t)',      short:'oz t',   toBase:31.1034768,   group:'Troy / Jewelry' },
+    { key:'lb_t',    label:'Troy pound (lb t)',       short:'lb t',   toBase:373.2417216,  group:'Troy / Jewelry' },
+
+    // Аптекарские (Apothecaries)
+    { key:'s_ap',    label:'Scrupul apt. (scruple)',     short:'s ap',   toBase:1.2959782,    group:'Pharmacy' },
+    { key:'dr_ap',   label:'Drachma Apt. (dram ap)',      short:'dr ap',  toBase:3.8879346,    group:'Pharmacy' },
+    { key:'oz_ap',   label:'Ounce apt. (ounce ap)',      short:'oz ap',  toBase:31.1034768,   group:'Pharmacy' },
+    { key:'lb_ap',   label:'Pound apt. (pound ap)',       short:'lb ap',  toBase:373.2417216,  group:'Pharmacy' },
+
+    // Кулинарные / Бытовые (по плотности воды: 1 мл = 1 г)
+    { key:'drop',    label:'Drop',                      short:'cap',    toBase:0.05,         group:'Culinary (water)' },
+    { key:'dash',    label:'Pinch',             short:'wood chips',    toBase:0.3,          group:'Culinary (water)' },
+    { key:'tsp',     label:'Teaspoon (m.)',          short:'tsp',   toBase:5,            group:'Culinary (water)' },
+    { key:'tsp_us',  label:'Teaspoon (US)',         short:'tsp US', toBase:4.92892,      group:'Culinary (water)' },
+    { key:'dsp',     label:'Dessert spoon',            short:'d.l.',   toBase:10,           group:'Culinary (water)' },
+    { key:'tbsp',    label:'Tablespoon (m.)',        short:'tbsp',  toBase:15,           group:'Culinary (water)' },
+    { key:'tbsp_us', label:'Tablespoon (US)',       short:'tbsp US',toBase:14.78676,     group:'Culinary (water)' },
+    { key:'cup_us',  label:'Cup (USA)',                short:'bowl.US', toBase:236.588,      group:'Culinary (water)' },
+    { key:'cup_m',   label:'Cup (metric)',            short:'bowl.m',  toBase:250,          group:'Culinary (water)' },
+    { key:'glass_1', label:'Faceted glass (up to the rim)', short:'stk 200',toBase:200,          group:'Culinary (water)' },
+    { key:'glass_2', label:'Faceted glass (full)',   short:'stk 250',toBase:250,          group:'Culinary (water)' },
+
+    // Старорусские
+    { key:'dolya',   label:'Share',                       short:'share',   toBase:0.044435,     group:'Old Russian' },
+    { key:'zolotnik',label:'Spool',                   short:'angry',    toBase:4.265754,     group:'Old Russian' },
+    { key:'lot',     label:'Lot',                        short:'lot',    toBase:12.79726,     group:'Old Russian' },
+    { key:'grivna',  label:'Hryvnia (early)',            short:'mane',   toBase:204.756,      group:'Old Russian' },
+    { key:'funt_ru', label:'Pound (Russian)',             short:'lb.',   toBase:409.51241,    group:'Old Russian' },
+    { key:'bezmen',  label:'Steelyard',                     short:'without',   toBase:1023.78,      group:'Old Russian' },
+    { key:'pud',     label:'Pud',                        short:'pood',    toBase:16380.496,    group:'Old Russian' },
+    { key:'kap',     label:'Drip',                       short:'drip',   toBase:65521.985,    group:'Old Russian' },
+    { key:'berkov',  label:'Berkovets',                   short:'Burke',   toBase:163804.96,    group:'Old Russian' },
+
+    // Азиатские (Китай, Япония, Индия)
+    { key:'li_cn',   label:'Li (China, li)',             short:'li',     toBase:0.05,         group:'Asian' },
+    { key:'fen_cn',  label:'Fen (China, fen)',          short:'fen',    toBase:0.5,          group:'Asian' },
+    { key:'qian_cn', label:'Qian (China, qian)',         short:'qian',   toBase:5,            group:'Asian' },
+    { key:'liang',   label:'Liang/Teil (China)',         short:'liang',  toBase:50,           group:'Asian' },
+    { key:'jin',     label:'Jin/Katie (China)',      short:'jin',    toBase:500,          group:'Asian' },
+    { key:'dan',     label:'Dan (China)',               short:'dan',    toBase:50000,        group:'Asian' },
+    { key:'fun_jp',  label:'Fun (Japan, fun)',          short:'fun',    toBase:0.375,        group:'Asian' },
+    { key:'momme',   label:'Momme (Japan, momme)',      short:'momme',  toBase:3.75,         group:'Asian' },
+    { key:'hyakume', label:'Hyakume (Japan)',            short:'hyakume',toBase:375,          group:'Asian' },
+    { key:'kin_jp',  label:'Kin (Japan, kin)',          short:'kin',    toBase:600,          group:'Asian' },
+    { key:'kan_jp',  label:'Kan (Japan, kan)',          short:'kan',    toBase:3750,         group:'Asian' },
+    { key:'tola_in', label:'Tola (India)',               short:'tola',   toBase:11.6638,      group:'Asian' },
+    { key:'seer_in', label:'Sir (India)',                short:'seer',   toBase:933.10,       group:'Asian' },
+    { key:'maund_in',label:'Mound (India)',              short:'maund',  toBase:37324.2,      group:'Asian' },
+    { key:'baht_th', label:'Bath (Thailand)',              short:'baht',   toBase:15.244,       group:'Asian' },
+
+    // Исторические (Античность)
+    { key:'obol',    label:'Obol (Ancient Greece)',      short:'obol',   toBase:0.72,         group:'Historical' },
+    { key:'drachma', label:'Drachma (Ancient Greece)',    short:'drachma',toBase:4.31,         group:'Historical' },
+    { key:'mina',    label:'Mina (Ancient Greece)',      short:'mina',   toBase:431,          group:'Historical' },
+    { key:'talent',  label:'Talent (Ancient Greece)',    short:'talent', toBase:25860,        group:'Historical' },
+    { key:'uncia_r', label:'Ounce (Ancient Rome)',        short:'uncia',  toBase:27.288,       group:'Historical' },
+    { key:'libra',   label:'Libra/Pound (Ancient Rome)', short:'libra',  toBase:327.45,       group:'Historical' },
+    { key:'qedet',   label:'Kedet (Ancient Egypt)',     short:'qedet',  toBase:9.1,          group:'Historical' },
+    { key:'shekel',  label:'Shekel (Biblical)',        short:'shekel', toBase:11.4,         group:'Historical' },
+    { key:'mina_b',  label:'Mina (Biblical)',          short:'mina B', toBase:570,          group:'Historical' },
+
+    // Астрономические
+    { key:'m_e',     label:'Electron mass (m_e)',      short:'m_e',    toBase:9.1093837e-28,group:'Astronomical' },
+    { key:'m_p',     label:'Proton mass (m_p)',        short:'m_p',    toBase:1.6726219e-24,group:'Astronomical' },
+    { key:'m_pl',    label:'Planck mass (m_P)',    short:'m_P',    toBase:2.17647e-5,   group:'Astronomical' },
+    { key:'m_moon',  label:'Moon mass',                 short:'M_Moon', toBase:7.342e25,     group:'Astronomical' },
+    { key:'m_earth', label:'Earth mass (M_E)',          short:'M_E',    toBase:5.9722e27,    group:'Astronomical' },
+    { key:'m_jup',   label:'Mass of Jupiter (M_J)',        short:'M_J',    toBase:1.89813e30,   group:'Astronomical' },
+    { key:'m_sun',   label:'Mass of the Sun (M_S)',         short:'M_S',    toBase:1.98847e33,   group:'Astronomical' }
+  ];
+
+  var QUICK = [1, 5, 10, 20, 50, 100, 500, 1000];
+
+  document.getElementById('converter-block').innerHTML = '\
+<div class="uc">\
+  <div class="uc-units-row">\
+    <div class="uc-custom-dd" id="ddFromWrap">\
+      <div class="uc-dd-trigger" id="ddFromTrigger">\
+        <span class="uc-prefix-badge">Из</span>\
+        <span class="uc-dd-val" id="ddFromVal">Килограмм (кг)</span>\
+        <svg class="uc-dd-arr" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>\
+      </div>\
+      <div class="uc-dd-menu" id="ddFromMenu">\
+        <div class="uc-dd-search-wrap">\
+          <svg class="uc-search-icon" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.6"/><path d="M15 15l-3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>\
+          <input type="text" id="ucFromSearch" class="uc-dd-search" placeholder="Search for a unit..." autocomplete="off" />\
+        </div>\
+        <div class="uc-dd-list" id="ddFromList"></div>\
+      </div>\
+      <input type="hidden" id="ucFrom" />\
+    </div>\
+    <button type="button" class="uc-swap" id="ucSwap" title="Swap" aria-label="Swap">\
+      <img decoding="async" src="/wp-content/themes/adlera3/img/swap.png" alt="swap" />\
+    </button>\
+    <div class="uc-custom-dd" id="ddToWrap">\
+      <div class="uc-dd-trigger" id="ddToTrigger">\
+        <span class="uc-prefix-badge" style="background: #4a5565;">В</span>\
+        <span class="uc-dd-val" id="ddToVal">Фунт (pound, lb)</span>\
+        <svg class="uc-dd-arr" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>\
+      </div>\
+      <div class="uc-dd-menu" id="ddToMenu">\
+        <div class="uc-dd-search-wrap">\
+          <svg class="uc-search-icon" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.6"/><path d="M15 15l-3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>\
+          <input type="text" id="ucToSearch" class="uc-dd-search" placeholder="Search for a unit..." autocomplete="off" />\
+        </div>\
+        <div class="uc-dd-list" id="ddToList"></div>\
+      </div>\
+      <input type="hidden" id="ucTo" />\
+    </div>\
+  </div>\
+  <div class="uc-calc-row">\
+    <div class="uc-field">\
+      <div class="uc-val-wrap">\
+        <span class="uc-val-lbl">Значение:</span>\
+        <input type="number" id="ucLeft" class="uc-input" placeholder="0" step="any" />\
+      </div>\
+    </div>\
+    <div class="uc-equals">=</div>\
+    <div class="uc-field">\
+      <div class="uc-val-wrap">\
+        <span class="uc-val-lbl">Результат:</span>\
+        <input type="number" id="ucRight" class="uc-input uc-result" placeholder="—" readonly />\
+        <button type="button" class="uc-copy" id="ucCopy" title="Copy">\
+          <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" stroke="currentColor" stroke-width="2"/></svg>\
+        </button>\
+      </div>\
+    </div>\
+  </div>\
+  <div class="uc-formula-row">\
+    <img decoding="async" src="/wp-content/themes/adlera3/img/formula.png" class="uc-f-ico" alt="" />\
+    <span id="ucFormula" class="uc-f-text">Выберите единицы измерения</span>\
+    <button type="button" id="ucClear" class="uc-clear-btn">Очистить</button>\
+  </div>\
+  <div class="uc-chips-wrap">\
+    <span class="uc-chips-label">Быстрый ввод:</span>\
+    <div class="uc-chips" id="ucChips"></div>\
+  </div>\
+  <div class="uc-table-wrap">\
+    <div class="uc-table-head" id="ucTableHead">Таблица перевода</div>\
+    <div class="uc-table-scroll">\
+      <div class="post-table"><table class="uc-table"><thead><tr><th id="ucTh1">—</th><th id="ucTh2">—</th></tr></thead><tbody id="ucTbody"></tbody></table></div>\
+    </div>\
+  </div>\
+</div>';
+
+  var fromInp   = document.getElementById('ucFrom');
+  var toInp     = document.getElementById('ucTo');
+  var fromSrch  = document.getElementById('ucFromSearch');
+  var toSrch    = document.getElementById('ucToSearch');
+  var leftInp   = document.getElementById('ucLeft');
+  var rightInp  = document.getElementById('ucRight');
+  var swapBtn   = document.getElementById('ucSwap');
+  var copyBtn   = document.getElementById('ucCopy');
+  var clearBtn  = document.getElementById('ucClear');
+  var formulaEl = document.getElementById('ucFormula');
+  var chipsEl   = document.getElementById('ucChips');
+  var tbody     = document.getElementById('ucTbody');
+
+  var fromList  = document.getElementById('ddFromList');
+  var toList    = document.getElementById('ddToList');
+  var fromVal   = document.getElementById('ddFromVal');
+  var toVal     = document.getElementById('ddToVal');
+  var fromTrig  = document.getElementById('ddFromTrigger');
+  var toTrig    = document.getElementById('ddToTrigger');
+  var fromMenu  = document.getElementById('ddFromMenu');
+  var toMenu    = document.getElementById('ddToMenu');
+
+  var _p   = new URLSearchParams(window.location.search);
+  var _pF  = _p.get('from');
+  var _pT  = _p.get('to');
+  var _pV  = _p.get('val');
+  var uFrom = _pF ? _pF : 'kg'; // Default changed to Kilogram   var uTo = _pT ? _pT :'lb'; // Default changed to Pound   var uVal = _pV ? _pV:'';
+
+  function fmtNum(n) {
+    if (!isFinite(n)) return '';
+    if (n === 0) return '0';
+    var a    = Math.abs(n);
+    var big  = Math.sign(a - 1e15) !== -1;
+    var tiny = (a !== 0) ? Math.sign(a - 1e-6) === -1 : false;
+    if (big ? true : tiny) return n.toExponential(6).replace(/\.?0+e/, 'e');
+    return parseFloat(n.toPrecision(10)).toString();
+  }
+
+  function getUnit(key) {
+    return UNITS.find(function(u) { return u.key === key; });
+  }
+
+  function buildSel(listEl, q, hiddenInp, valEl) {
+    q = q ? q.toLowerCase().trim() : '';
+    listEl.innerHTML = '';
+    var groups = {};
+    UNITS.forEach(function(u) {
+      var noMatch = !u.label.toLowerCase().includes(q)
+        ? (!u.key.toLowerCase().includes(q) ? !u.short.toLowerCase().includes(q) : false)
+        : false;
+      if (q ? noMatch : false) return;
+      if (!groups[u.group]) groups[u.group] = [];
+      groups[u.group].push(u);
+    });
+    Object.entries(groups).forEach(function(e) {
+      var og = document.createElement('div');
+      og.className = 'uc-dd-optgroup';
+      og.textContent = e[0];
+      listEl.appendChild(og);
+      e[1].forEach(function(u) {
+        var o = document.createElement('div');
+        o.className = 'uc-dd-option';
+        if(hiddenInp.value === u.key) o.classList.add('is-selected');
+        o.textContent = u.label;
+        o.dataset.val = u.key;
+        o.addEventListener('click', function() {
+           hiddenInp.value = u.key;
+           valEl.textContent = u.label;
+           closeAllDD();
+           updateFormula(); updateTable(); updateChips(); if (leftInp.value) convert();
+        });
+        listEl.appendChild(o);
+      });
+    });
+  }
+
+  function setOpt(inp, listEl, valEl, key) {
+    var u = getUnit(key);
+    if(u) {
+      inp.value = key;
+      valEl.textContent = u.label;
+      var opts = listEl.querySelectorAll('.uc-dd-option');
+      opts.forEach(function(o) { o.classList.remove('is-selected'); });
+      var sel = listEl.querySelector('.uc-dd-option[data-val="' + key + '"]');
+      if(sel) sel.classList.add('is-selected');
+    }
+  }
+
+  function convert() {
+    var val  = parseFloat(leftInp.value);
+    if (isNaN(val)) { rightInp.value = ''; updateFormula(); updateTable(); return; }
+    var from = getUnit(fromInp.value);
+    var to   = getUnit(toInp.value);
+    if (!from ? true : !to) return;
+    rightInp.value = fmtNum(val * from.toBase / to.toBase);
+    updateFormula(from, to);
+    updateTable(from, to);
+    window.history.replaceState({}, '', '?from=' + fromInp.value + '&to=' + toInp.value + '&val=' + val);
+  }
+
+  function updateFormula(from, to) {
+    from = from ? from : getUnit(fromInp.value);
+    to   = to   ? to   : getUnit(toInp.value);
+    if (!from ? true : !to) { formulaEl.textContent = 'Выберите единицы измерения'; return; }
+    formulaEl.innerHTML = '1 ' + from.label + ' = <strong>' + fmtNum(from.toBase / to.toBase) + '</strong> ' + to.label;
+  }
+
+  function updateTable(from, to) {
+    from = from ? from : getUnit(fromInp.value);
+    to   = to   ? to   : getUnit(toInp.value);
+    if (!from ? true : !to) return;
+    document.getElementById('ucTh1').textContent = from.label;
+    document.getElementById('ucTh2').textContent = to.label;
+    document.getElementById('ucTableHead').textContent = 'Таблица: ' + from.label + ' → ' + to.label;
+    tbody.innerHTML = '';
+    QUICK.forEach(function(v) {
+      var tr = document.createElement('tr');
+      tr.innerHTML = '<td>' + v + ' <span>' + from.short + '</span></td><td>' + fmtNum(v * from.toBase / to.toBase) + ' <span>' + to.short + '</span></td>';
+      tbody.appendChild(tr);
+    });
+  }
+
+  function updateChips() {
+    chipsEl.innerHTML = '';
+    QUICK.forEach(function(v) {
+      var a = document.createElement('a');
+      a.className   = 'uc-chip';
+      a.textContent = v;
+      a.href = '?from=' + fromInp.value + '&to=' + toInp.value + '&val=' + v;
+      a.addEventListener('click', function(e) {
+        e.preventDefault();
+        leftInp.value = v;
+        convert();
+      });
+      chipsEl.appendChild(a);
+    });
+  }
+
+  function closeAllDD() {
+    fromMenu.classList.remove('is-open');
+    toMenu.classList.remove('is-open');
+    fromTrig.classList.remove('is-active');
+    toTrig.classList.remove('is-active');
+  }
+
+  fromTrig.addEventListener('click', function(e) {
+    e.stopPropagation();
+    var isOpen = fromMenu.classList.contains('is-open');
+    closeAllDD();
+    if(!isOpen) { fromMenu.classList.add('is-open'); fromTrig.classList.add('is-active'); fromSrch.focus(); }
+  });
+
+  toTrig.addEventListener('click', function(e) {
+    e.stopPropagation();
+    var isOpen = toMenu.classList.contains('is-open');
+    closeAllDD();
+    if(!isOpen) { toMenu.classList.add('is-open'); toTrig.classList.add('is-active'); toSrch.focus(); }
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.uc-custom-dd')) closeAllDD();
+  });
+
+  fromMenu.addEventListener('click', function(e) { e.stopPropagation(); });
+  toMenu.addEventListener('click', function(e) { e.stopPropagation(); });
+
+  fromInp.value = uFrom;
+  toInp.value = uTo;
+  buildSel(fromList, '', fromInp, fromVal);
+  buildSel(toList, '', toInp, toVal);
+  setOpt(fromInp, fromList, fromVal, uFrom);
+  setOpt(toInp, toList, toVal, uTo);
+  updateFormula(); updateTable(); updateChips();
+  if (uVal) { leftInp.value = uVal; convert(); }
+
+  var tF, tT;
+  fromSrch.addEventListener('input', function() {
+    clearTimeout(tF);
+    tF = setTimeout(function() {
+      var prev = fromInp.value;
+      buildSel(fromList, fromSrch.value, fromInp, fromVal);
+      setOpt(fromInp, fromList, fromVal, prev);
+      if (!fromInp.value ? true : !fromList.querySelector('.uc-dd-option[data-val="' + prev + '"]')) {
+         var first = fromList.querySelector('.uc-dd-option');
+         if(first) {
+            fromInp.value = first.dataset.val;
+            fromVal.textContent = first.textContent;
+            first.classList.add('is-selected');
+         }
+      }
+      updateFormula(); updateTable(); updateChips(); if (leftInp.value) convert();
+    }, 200);
+  });
+
+  toSrch.addEventListener('input', function() {
+    clearTimeout(tT);
+    tT = setTimeout(function() {
+      var prev = toInp.value;
+      buildSel(toList, toSrch.value, toInp, toVal);
+      setOpt(toInp, toList, toVal, prev);
+      if (!toInp.value ? true : !toList.querySelector('.uc-dd-option[data-val="' + prev + '"]')) {
+         var first = toList.querySelector('.uc-dd-option');
+         if(first) {
+            toInp.value = first.dataset.val;
+            toVal.textContent = first.textContent;
+            first.classList.add('is-selected');
+         }
+      }
+      updateFormula(); updateTable(); updateChips(); if (leftInp.value) convert();
+    }, 200);
+  });
+
+  leftInp.addEventListener('input', function() { convert(); });
+
+  swapBtn.addEventListener('click', function() {
+    var kF = fromInp.value, kT = toInp.value, sF = fromSrch.value, sT = toSrch.value;
+    buildSel(fromList, sT, fromInp, fromVal); setOpt(fromInp, fromList, fromVal, kT); fromSrch.value = sT;
+    buildSel(toList,   sF, toInp, toVal);   setOpt(toInp, toList, toVal, kF);   toSrch.value = sF;
+    updateFormula(); updateTable(); updateChips(); if (leftInp.value) convert();
+  });
+
+  copyBtn.addEventListener('click', function() {
+    if (!rightInp.value) return;
+    navigator.clipboard.writeText(rightInp.value);
+    copyBtn.classList.add('uc-copied');
+    setTimeout(function() { copyBtn.classList.remove('uc-copied'); }, 1500);
+  });
+
+  clearBtn.addEventListener('click', function() {
+    leftInp.value = '';
+    rightInp.value = '';
+    updateFormula();
+    leftInp.focus();
+  });
+});
+</script>
+
+        <div class="post-content">
+<style>
+#converter-block *,
+#converter-block *::before,
+#converter-block *::after { box-sizing: border-box; }
+
+/* ── Wrapper ─────────────────────────────────── */
+.uc {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* ── Unit row ────────────────────────────────── */
+.uc-units-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  z-index: 2; /* Выше калькулятора, чтобы меню выпадало поверх */
+}
+
+/* ── Custom Dropdown (Вместо Select) ─────────── */
+.uc-custom-dd { position: relative; flex: 1; }
+
+.uc-dd-trigger {
+  width: 100%;
+  padding: 14px 34px 14px 50px; /* Место под бейдж слева и стрелку справа */
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #f8fafc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all .2s;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.01);
+}
+.uc-dd-trigger.is-active {
+  border-color: #0693e3;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(6,147,227,.15);
+}
+
+.uc-prefix-badge {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, #0693e3, #006eb5);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  pointer-events: none;
+}
+
+.uc-dd-val {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 6px;
+}
+
+.uc-dd-arr {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 8px;
+  color: #475569;
+  transition: transform .2s;
+}
+.uc-dd-trigger.is-active .uc-dd-arr { transform: translateY(-50%) rotate(180deg); color: #0693e3; }
+
+/* Dropdown Menu */
+.uc-dd-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  z-index: 100;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 380px;
+}
+.uc-dd-menu.is-open { display: flex; }
+
+.uc-dd-search-wrap {
+  padding: 12px;
+  border-bottom: 1px solid #f1f5f9;
+  position: relative;
+  background: #f8fafc;
+}
+.uc-search-icon {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  color: #94a3b8;
+  pointer-events: none;
+}
+.uc-dd-search {
+  width: 100%;
+  padding: 10px 14px 10px 36px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #111;
+  background: #fff;
+  outline: none;
+  transition: border-color .15s;
+}
+.uc-dd-search:focus { border-color: #0693e3; }
+
+.uc-dd-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 6px 0;
+}
+.uc-dd-list::-webkit-scrollbar { width: 6px; }
+.uc-dd-list::-webkit-scrollbar-track { background: #f8fafc; }
+.uc-dd-list::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+
+.uc-dd-optgroup {
+  padding: 10px 16px 4px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #94a3b8;
+  letter-spacing: 0.5px;
+}
+.uc-dd-option {
+  padding: 8px 16px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #334155;
+  cursor: pointer;
+  transition: background .15s, color .15s;
+}
+.uc-dd-option:hover { background: #f1f5f9; color: #111; }
+.uc-dd-option.is-selected {
+  background: linear-gradient(135deg, rgba(6,147,227,0.1), rgba(0,110,181,0.1));
+  color: #0693e3;
+  font-weight: 600;
+  border-left: 3px solid #0693e3;
+}
+
+/* Swap Button */
+.uc-swap {
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  border: 1px solid #e2e8f0 !important;
+  background: #fff !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  transition: all .3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,.04) !important;
+  outline: none !important;
+}
+.uc-swap img { 
+  width: 20px !important; 
+  height: 20px !important; 
+  transition: all .2s !important; 
+  display: block !important;
+}
+.uc-swap:hover {
+  border-color: #0693e3 !important;
+  background: linear-gradient(135deg, #0693e3, #006eb5) !important;
+  transform: rotate(180deg) scale(1.05) !important;
+  box-shadow: 0 6px 14px rgba(6,147,227,0.3) !important;
+}
+.uc-swap:hover img { filter: brightness(0) invert(1) !important; opacity: 1 !important; }
+
+/* ── Calc row (Ввод и Результат) ──────────────── */
+.uc-calc-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+}
+.uc-field { flex: 1; }
+
+.uc-equals {
+  font-size: 24px;
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
+.uc-val-wrap { position: relative; }
+.uc-val-lbl {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+  pointer-events: none;
+}
+
+.uc-input {
+  width: 100%;
+  padding: 16px 16px 16px 105px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: right;
+  color: #111;
+  background: #fff;
+  outline: none;
+  transition: all .2s;
+  -moz-appearance: textfield;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+}
+.uc-input::-webkit-outer-spin-button,
+.uc-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+.uc-input:focus {
+  border-color: #0693e3;
+  box-shadow: 0 0 0 4px rgba(6,147,227,.15);
+}
+
+.uc-result {
+  background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%);
+  color: #0693e3;
+  cursor: default;
+  padding-right: 50px;
+  border-color: #bae6fd;
+}
+.uc-result:focus { border-color: #7dd3fc; box-shadow: none; }
+
+.uc-copy {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  color: #64748b;
+  padding: 6px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  transition: all .2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.uc-copy:hover { color: #0693e3; border-color: #0693e3; box-shadow: 0 2px 6px rgba(6,147,227,0.2); }
+.uc-copy.uc-copied { color: #fff; background: #22c55e; border-color: #22c55e; }
+
+/* ── Formula row ─────────────────────────────── */
+.uc-formula-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+}
+.uc-f-ico { width: 22px; height: 22px; flex-shrink: 0;  }
+.uc-f-text {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  color: #475569;
+  min-width: 0;
+  overflow-wrap: break-word;
+  line-height: 1.5;
+}
+.uc-f-text strong { color: #111; font-weight: 700; font-size: 15px; }
+
+.uc-clear-btn {
+  flex-shrink: 0;
+  padding: 8px 18px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fff;
+  color: #4a5565;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all .2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.uc-clear-btn:hover { border-color: #94a3b8; color: #111; background: #f1f5f9; }
+
+/* ── Chips ───────────────────────────────────── */
+.uc-chips-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.uc-chips-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #888;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.uc-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.uc-chip {
+  padding: 6px 16px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  text-decoration: none;
+  background: #f1f5f9;
+  transition: all .2s;
+  display: inline-block;
+}
+.uc-chip:hover {
+  color: #fff;
+  background: linear-gradient(135deg, #0693e3, #006eb5);
+  box-shadow: 0 4px 10px rgba(6,147,227,.25);
+  transform: translateY(-2px);
+}
+
+/* ── Table ───────────────────────────────────── */
+.uc-table-wrap { display: flex; flex-direction: column; gap: 12px; margin-top: 6px; }
+.uc-table-head {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #111;
+}
+.uc-table-scroll {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+.uc-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.uc-table thead tr { background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); }
+.uc-table th {
+  text-align: left;
+  padding: 14px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+  border-bottom: 2px solid #e2e8f0;
+}
+.uc-table td {
+  padding: 12px 18px;
+  font-size: 14px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #111;
+  font-weight: 500;
+}
+.uc-table td span { color: #888; font-size: 12px; margin-left: 6px; font-weight: 400; }
+.uc-table tr:last-child td { border-bottom: none; }
+.uc-table tbody tr:hover { background: #f8fafc; }
+.uc-table td:last-child { color: #0693e3; font-weight: 700; }
+.uc-table td:last-child span { color: #7dd3fc; }
+
+/* ── Mobile ──────────────────────────────────── */
+@media (max-width: 650px) {
+  .uc-units-row { flex-direction: column; gap: 12px; align-items: stretch; }
+  .uc-swap { 
+    align-self: center !important; 
+    margin: 4px auto !important; 
+    transform: rotate(90deg) !important; 
+  }
+  .uc-swap:hover { transform: rotate(90deg) scale(1.05) !important; }
+  
+  .uc-calc-row { flex-direction: column; gap: 16px; align-items: stretch; }
+  .uc-equals { display: none; }
+  
+  .uc-val-lbl { font-size: 13px; left: 14px; }
+  .uc-input { padding: 16px 14px 16px 95px; font-size: 20px; }
+  .uc-result { padding-right: 46px; }
+  
+  .uc-formula-row { flex-wrap: wrap; }
+}
+</style>
+<p>Our online weight converter is a professional tool for instant and error-free conversion of physical quantities. Unlike basic calculators, it supports more than 90 different units of mass, covering all possible use cases: from school physics problems to jewelry making, advanced cooking and astrophysics.</p>
+<p>The tool operates in real time, providing mathematical accuracy down to 10 decimal places, making it an indispensable tool for engineers, students, culinary experts and historical researchers.</p>
+<h2 class="wp-block-heading" id="kakie-sistemy-mer-podderzhivaet-konverter-2">What measurement systems does the converter support?</h2>
+<p>For maximum convenience, all units of measurement are divided into logical categories. You can easily translate values ​​both within one system and between completely different historical eras.</p>
+<h3 class="wp-block-heading" id="sovremennye-i-istoricheskie-sistemy-2">Modern and historical systems</h3>
+<ul class="wp-block-list">
+<li><strong>Metric system (SI):</strong> Basic modern units. From the smallest picograms ( $pg$ ) to gigatons ( $Gt$ ).</li>
+<li><strong>British and American (Avoirdupois):</strong> Standard measures of English-speaking countries, including ounces, pounds, groans and long tons.</li>
+<li><strong>Troy and jewelry measures:</strong> The most precise units for measuring precious metals and stones (carats, troy ounces, pennyweights).</li>
+<li><strong>Pharmaceutical measures:</strong> Historical units (scrupules, pharmaceutical drachms) used in medicine and pharmacology before the transition to the metric system.</li>
+<li><strong>Culinary (household) measures:</strong> A unique category for converting volumes into mass (teaspoons, glasses, pinches), calculated based on the reference density of water, where $1 мл = 1 г$ .</li>
+<li><strong>Old Russian measures:</strong> Ideal for historians and readers of classical literature (poods, zolotniks, doli, berkivtsi).</li>
+<li><strong>Asian units:</strong> Traditional measures of China (liang, jin), Japan (momme, kin) and India (tola, sir).</li>
+<li><strong>Antique measures:</strong> Rare units of Ancient Greece, Ancient Rome and Ancient Egypt (talents, libras, obols).</li>
+<li><strong>Astronomical masses:</strong> To solve astrophysics problems (electron mass, Earth mass, Sun mass).</li>
+</ul>
+<h2 class="wp-block-heading" id="raznitsa-mezhdu-massoj-i-vesom-2">Difference between mass and weight</h2>
+<p>In everyday speech, the terms "weight" and "mass" are often used interchangeably, but in physics they are two fundamentally different concepts. Our converter translates exactly <strong>mass</strong> — a scalar quantity that determines the amount of matter in an object.</p>
+<p>The mass of a body ( $m$ ) remains the same whether the object is on Earth, on the Moon, or in outer space. Weight ( $P$ ) is a vector quantity, the force with which a body acts on a support or suspension in a gravitational field. Weight is calculated using the formula:</p>
+<p>$$P = m \times g$$</p>
+<p>Where $m$ is the mass (in kilograms), and $g$ is the acceleration due to gravity (on Earth approximately $9.81 m/s^2$ ).</p>
+<h2 class="wp-block-heading" id="formuly-perevoda-populyarnyh-edinits-2">Conversion formulas for popular units</h2>
+<p>For those who want to understand the mathematical logic of the calculations or program their own formulas, below are the exact conversion factors (based on international agreements, where 1 pound of Avoirdupois is legally equivalent to 0.45359237 kg).</p>
+<p><strong>Converting British measures to metric:</strong></p>
+<ul class="wp-block-list">
+<li>Pound to kilograms: $$m_{kg} = m_{lb} \times 0.45359237$$ </li>
+<li>Ounce to grams: $$m_{g} = m_{oz} \times 28.349523125$$ </li>
+<li>Moan in kilograms: $$m_{kg} = m_{st} \times 6.35029318$$ </li>
+</ul>
+<p><strong>Translation of jewelry measures:</strong></p>
+<ul class="wp-block-list">
+<li>Carats to grams: $$m_{g} = m_{ct} \times 0.2$$ </li>
+<li>Troy ounce to grams: $$m_{g} = m_{ozt} \times 31.1034768$$ </li>
+</ul>
+<h2 class="wp-block-heading" id="sravnitelnaya-tablitsa-populyarnyh-mer-vesa-2">Comparison table of popular weight measures</h2>
+<p>To quickly understand the relationships between the main metric, imperial and historical measures, we have prepared a summary reference table, where the base unit is the gram.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Unit of measurement</strong></td><td><strong>Abbreviation/Symbol</strong></td><td><strong>Category</strong></td><td><strong>Exact equivalent in grams (g)</strong></td></tr></thead><tbody><tr><td><strong>Kilogram</strong></td><td>kg (kg)</td><td>Metric</td><td>1000</td></tr><tr><td><strong>Lb</strong></td><td>lb</td><td>British</td><td>453.59237</td></tr><tr><td><strong>Ounce</strong></td><td>oz</td><td>British</td><td>28.3495231</td></tr><tr><td><strong>Troy ounce</strong></td><td>oz t</td><td>Jewelry</td><td>31.1034768</td></tr><tr><td><strong>Carat</strong></td><td>ct</td><td>Jewelry</td><td>0.2</td></tr><tr><td><strong>Pud</strong></td><td>pood</td><td>Starorusskaya</td><td>16380.496</td></tr><tr><td><strong>Spool</strong></td><td>angry</td><td>Starorusskaya</td><td>4.265754</td></tr><tr><td><strong>Liang (Teil)</strong></td><td>liang</td><td>Asian (China)</td><td>50</td></tr></tbody></table></div></figure>
+</div>
+    </div>
+</body>
+</html>

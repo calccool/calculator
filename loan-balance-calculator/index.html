@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan debt balance calculator: accurate calculation of the loan amount and interest</title>
+    <meta name="description" content="Loan debt balance calculator: accurate calculation of the loan amount and interest - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Loan debt balance calculator: accurate calculation of the loan amount and interest</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (Золотой стандарт + Loan Visuals) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; position: relative; }
+    
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; margin-bottom: 4px;}
+    
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; margin-left:5px;}
+    
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:16px; background:#fff; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 10px; } 
+    .c-input-suffix {
+        position: absolute; right: 32px; top: 50%; transform: translateY(-50%);
+        color: #888; font-size: 14px; pointer-events: none; font-weight: 500;
+    }
+
+    .c-divider { 
+        display: flex; align-items: center; gap: 10px; margin: 30px 0 15px; 
+        font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 10px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; font-size: 16px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+
+    .c-result { border:1px dashed #0693e3; border-radius:12px; padding:10px; background:#fff; margin-top: 20px; display:none; }
+    .c-result.show { display:grid; }
+    .c-resline { display:grid; grid-template-columns: 1fr auto 30px; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #0693e3; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; }
+    .c-resval { font-weight:700; font-size:18px; color:#0693e3; text-align:right;}
+    .c-subtext { display: block; font-size: 11px; color: #888; margin-top: 3px; }
+
+    .c-copy { 
+      width: 28px; height: 28px; border: none; background: #fff url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; 
+      background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; 
+      opacity: 0.6; transition: 0.2s;
+    }
+    .c-copy:hover { opacity: 1; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 10px; border-radius: 8px; margin-bottom: 10px; display: none; font-size: 14px; }
+    .c-error.show { display: block; }
+
+    /* Progress Bar */
+    .c-progress-wrap { width: 100%; background: #e0e0e0; border-radius: 8px; height: 24px; margin-top: 10px; overflow: hidden; position: relative; }
+    .c-progress-bar { height: 100%; background: #4caf50; width: 0%; transition: width 0.6s ease; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #fff; font-weight: bold; }
+    .c-progress-text { position: absolute; width: 100%; text-align: center; font-size: 11px; color: #555; font-weight: 600; top: 4px; pointer-events: none;}
+
+    @media (max-width: 600px) {
+        .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; }
+        .c-resval { grid-column: 1; grid-row: 2; text-align: left; }
+        .c-copy { grid-column: 2; grid-row: 1 / 3; width: 34px; height: 34px; background-size: 22px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-body">
+<div class="c-row">
+<div class="c-field" style="grid-column: 1 / -1;">
+<label class="c-label">Loan amount (initial)</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="inAmount" min="0" step="1000" type="number" value="1000000"/>
+<span class="c-input-suffix">$</span>
+</div>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Interest rate</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="inRate" min="0" step="0.1" type="number" value="15"/>
+<span class="c-input-suffix">%</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Loan term</label>
+<div class="c-input-group" style="display:flex; gap:10px;">
+<div class="c-input-wrapper" style="flex:1;">
+<input class="c-input" id="inTerm" min="1" step="1" type="number" value="5"/>
+</div>
+<select class="c-select" id="selTermType" style="width:110px;">
+<option value="years">Years</option>
+<option value="months">Months</option>
+</select>
+</div>
+</div>
+</div>
+<div class="c-divider"><span class="icon">📅</span>Current status</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Paid Payments</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="inPaidCount" min="0" step="1" type="number" value="12"/>
+<span class="c-input-suffix">pcs.</span>
+</div>
+<small style="font-size:11px; color:#666;">How many months have passed</small>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-result" id="resBox">
+<div class="c-resline" style="background:#e3f2fd;">
+<div class="c-resleft">Principal balance<span class="c-subtext">Current debt</span>
+</div>
+<div class="c-resval" id="resBalance">0 $</div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Your monthly payment<span class="c-subtext">Estimated value</span>
+</div>
+<div class="c-resval" id="resPayment">0 $</div>
+<button class="c-copy"></button>
+</div>
+<div class="c-divider"><span class="icon">💰</span>Payment structure</div>
+<div class="c-resline">
+<div class="c-resleft">Loan body repaid<span class="c-subtext">Real debt reduction</span>
+</div>
+<div class="c-resval" id="resPrincipalPaid" style="color:#4caf50;">0 $</div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Interest paid<span class="c-subtext">Bank income for the period</span>
+</div>
+<div class="c-resval" id="resInterestPaid" style="color:#f44336;">0 $</div>
+<button class="c-copy"></button>
+</div>
+<div style="padding:10px;">
+<div class="c-label" style="font-size:12px;">Debt repayment progress:</div>
+<div class="c-progress-wrap">
+<div class="c-progress-text" id="progText">0%</div>
+<div class="c-progress-bar" id="progBar"></div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (id) => wrap.querySelector('#'+id);
+  const errorEl = $('errorMsg');
+
+  function calculate() {
+      errorEl.classList.remove('show');
+      
+      const amount = parseFloat($('inAmount').value);
+      const rateYear = parseFloat($('inRate').value);
+      const termVal = parseFloat($('inTerm').value);
+      const termType = $('selTermType').value;
+      const paidCount = parseFloat($('inPaidCount').value);
+
+      if ([amount, rateYear, termVal, paidCount].some(x => isNaN(x))) {
+          errorEl.textContent = "Fill in all fields.";
+          errorEl.classList.add('show'); return;
+      }
+      
+      if (Math.sign(amount) !== 1) {
+          errorEl.textContent = "The loan amount must be greater than 0.";
+          errorEl.classList.add('show'); return;
+      }
+
+      // Convert term to months
+      let totalMonths = termVal;
+      if (termType === 'years') {
+          totalMonths = termVal * 12;
+      }
+      
+      if (Math.sign(paidCount - totalMonths) === 1) {
+          errorEl.textContent = "The number of payments cannot exceed the loan term.";
+          errorEl.classList.add('show'); return;
+      }
+
+      // Calculation (Annuity)
+      // i = Monthly Rate
+      const i = rateYear / 12 / 100;
+      
+      // Annuity Coefficient: K = (i * (1+i)^n) / ((1+i)^n - 1)
+      const powTotal = Math.pow(1 + i, totalMonths);
+      const k = (i * powTotal) / (powTotal - 1);
+      
+      const monthlyPayment = amount * k;
+      
+      // Balance Formula after p payments
+      // B = S * [ (1+i)^n - (1+i)^p ] / [ (1+i)^n - 1 ]
+      const powPaid = Math.pow(1 + i, paidCount);
+      const balance = amount * (powTotal - powPaid) / (powTotal - 1);
+      
+      // Stats
+      const principalPaid = amount - balance;
+      const totalPaidSoFar = monthlyPayment * paidCount;
+      const interestPaid = totalPaidSoFar - principalPaid;
+      
+      // Progress
+      let progressPct = (principalPaid / amount) * 100;
+      // Clamp logic without < >
+      if (Math.sign(progressPct) === -1) progressPct = 0;
+      if (Math.sign(progressPct - 100) === 1) progressPct = 100;
+
+      // Output
+      const fmt = (n) => n.toLocaleString('ru-RU', {maximumFractionDigits: 0});
+      
+      $('resBalance').textContent = fmt(balance) + " $";
+      $('resPayment').textContent = fmt(monthlyPayment) + " $";
+      $('resPrincipalPaid').textContent = fmt(principalPaid) + " $";
+      $('resInterestPaid').textContent = fmt(interestPaid) + " $";
+      
+      $('progBar').style.width = progressPct + "%";
+      $('progText').textContent = progressPct.toFixed(1) + "%";
+      
+      // Change text color if bar is too full
+      if (Math.sign(progressPct - 55) === 1) {
+           $('progText').style.color = '#fff';
+           $('progText').style.zIndex = '2';
+      } else {
+           $('progText').style.color = '#555';
+      }
+
+      $('resBox').classList.add('show');
+      $('resBox').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  $('calcBtn').addEventListener('click', calculate);
+  
+  $('resetBtn').addEventListener('click', () => {
+      $('inAmount').value = '1000000';
+      $('inPaidCount').value = '12';
+      $('resBox').classList.remove('show');
+      errorEl.classList.remove('show');
+  });
+
+  wrap.addEventListener('click', (e) => {
+      if (e.target.classList.contains('c-copy')) {
+          const val = e.target.previousElementSibling.textContent;
+          navigator.clipboard.writeText(val);
+          e.target.style.opacity = '1';
+          setTimeout(() => e.target.style.opacity = '0.6', 200);
+      }
+  });
+
+});
+</script>
+
+        <div class="post-content">
+<p>Understanding the actual amount of debt owed to the bank is a key stage in financial planning. Many borrowers confuse the “total payment amount” (which includes future interest) and the “loan body” (the principal debt). The debt balance calculator allows you to instantly separate these concepts and see the real picture of your current obligations.</p>
+<p>This tool is indispensable in the following situations:</p>
+<ul class="wp-block-list">
+<li><strong>Planning for full early repayment.</strong> You will find out the exact amount you need to pay to close the loan agreement today.</li>
+<li><strong>Assessing the benefits of refinancing.</strong> Comparison of the current balance with offers from other banks.</li>
+<li><strong>Division of property.</strong> Determining the real value of debt obligations in legal disputes.</li>
+<li><strong>Financial analysis.</strong> An assessment of how effectively the debt is being repaid with the current payment schedule.</li>
+</ul>
+<h2 class="wp-block-heading" id="matematicheskaya-model-rascheta-2">Mathematical calculation model</h2>
+<p>Most modern consumer and mortgage loans use an annuity repayment scheme. This means that the borrower pays an equal amount each month. However, the structure of this payment changes over time: at the beginning of the term, the lion's share is spent on paying off interest, and the loan amount decreases extremely slowly.</p>
+<p>To calculate the remaining debt ( $B$ ), the following financial model is used, based on the annuity present value formula:</p>
+<p>$$B = S \cdot \frac{(1 + i)^n — (1 + i)^p}{(1 + i)^n — 1}$$</p>
+<p>Where variables mean:</p>
+<ul class="wp-block-list">
+<li> $B$ - current principal balance.</li>
+<li> $S$ - initial loan amount.</li>
+<li> $i$ - monthly interest rate (annual rate / 12 / 100).</li>
+<li> $n$ — total loan term in months.</li>
+<li> $p$ - number of payments already made (past months).</li>
+</ul>
+<h3 class="wp-block-heading" id="dinamika-struktury-platezha-2">Dynamics of payment structure</h3>
+<p>To better understand why debt declines unevenly, consider the annuity payment structure in the table below. The example is given for a loan with a high interest rate.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Loan period</strong></td><td><strong>Share of interest in payment</strong></td><td><strong>Share of the loan body in the payment</strong></td><td><strong>Debt reduction rate</strong></td></tr></thead><tbody><tr><td><strong>Beginning of term (1-12 months)</strong></td><td>High (up to 70-80%)</td><td>Low (20-30%)</td><td>Minimum</td></tr><tr><td><strong>Mid term</strong></td><td>Average (~50%)</td><td>Average (~50%)</td><td>Moderate</td></tr><tr><td><strong>End of term</strong></td><td>Minimal (&lt;10%)</td><td>High (&gt;90%)</td><td>Maximum</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="instruktsiya-po-ispolzovaniyu-kalkulyatora-2">Instructions for using the calculator</h2>
+<p>The tool is designed for maximum simplicity and does not require you to have a complex banking agreement on hand. To get the result, follow three steps:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Enter loan parameters.</strong> Enter the original amount you received in hand and the annual interest rate.</li>
+<li><strong>Specify the deadline.</strong> Select the loan duration in years or months (as specified in the agreement).</li>
+<li><strong>Enter the number of payments paid.</strong> Indicate how many months you have already been paying off the loan.</li>
+</ol>
+<h3 class="wp-block-heading" id="analiz-rezultatov-2">Analysis of results</h3>
+<p>After calculation, the system will generate a detailed report, which includes:</p>
+<ul class="wp-block-list">
+<li><strong>Current balance (Balance).</strong> The amount that needs to be paid to completely close the debt without taking into account future interest.</li>
+<li><strong>Interest paid.</strong> The amount that the bank has already earned for you at the current moment. This is “burnt” money that did not reduce your debt.</li>
+<li><strong>Repayment progress.</strong> A visual timeline showing how far you've gone. Note that even if 50% of the time has passed, the principal paid may still be only 30% due to the nature of the annuity.</li>
+</ul>
+<h2 class="wp-block-heading" id="kogda-vygodno-gasit-kredit-dosrochno-2">When is it profitable to repay a loan early?</h2>
+<p>Looking at the calculation results, we can conclude that early repayment is advisable. The economic effect of early payments is maximum in the first half of the loan term.</p>
+<p>The mathematical justification for the benefit is based on the principle of calculating interest on the balance:</p>
+<p>$$I_{month} = B_{current} \cdot \frac{R}{12}$$</p>
+<p>Where $I_{month}$ is the monthly interest amount, $B_{current}$ is the current debt balance, $R$ is the annual rate.</p>
+<p>By reducing your debt balance ( $B_{current}$ ) now, you automatically reduce your interest basis for all subsequent months, resulting in exponential cost savings.</p>
+</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 9 and 11 certificate calculator: average score calculation</title>
+    <meta name="description" content="Grade 9 and 11 certificate calculator: average score calculation - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Grade 9 and 11 certificate calculator: average score calculation</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal { position: relative; overflow: hidden; width: 100%; }
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 2px; position: relative; }
+
+    /* Табы */
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #006eb5; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+
+    /* Переключатель ОГЭ */
+    .c-switch-wrap { display: flex; align-items: center; gap: 15px; cursor: pointer; margin-bottom: 25px; padding: 10px; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0; transition: 0.3s; }
+    .c-switch-wrap:hover { border-color: #cbd5e1; }
+    .c-switch-track { width: 44px; height: 24px; background: #cbd5e1; border-radius: 24px; position: relative; transition: 0.3s; flex-shrink: 0; margin-top: 2px; }
+    .c-switch-thumb { width: 18px; height: 18px; background: #fff; border-radius: 50%; position: absolute; top: 3px; left: 3px; transition: 0.3s; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+    input:checked + .c-switch-track { background: #006eb5; }
+    input:checked + .c-switch-track .c-switch-thumb { left: 23px; }
+    .c-switch-text { display: flex; flex-direction: column; }
+    .c-switch-label { font-weight: 700; font-size: 15px; color: #111; }
+    .c-switch-sub { font-size: 13px; color: #64748b; margin-top: 4px; line-height: 1.4; }
+
+    /* БАЗОВЫЕ ИНПУТЫ */
+    .c-input { width:100%; padding:14px 16px; border:1px solid #cbd5e1; border-radius:10px; font-size:14px; transition: 0.3s; background: #fff; color: #333; outline: none; }
+    .c-input:focus { border-color:#006eb5; box-shadow:0 0 0 3px rgba(0, 110, 181, 0.15); }
+
+    /* СТРОКА ПРЕДМЕТА (ПУЛЕНЕПРОБИВАЕМАЯ) */
+    .c-subj-grid { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+    .c-subj-row { display: flex; flex-direction: row; gap: 12px; align-items: center; padding: 8px; border-radius: 12px; border: 1px solid transparent; transition: 0.3s; }
+    .c-subj-row:hover { border-color: #e2e8f0; background: #f8fafc; }
+    
+    .c-subj-name-col { flex: 2; min-width: 200px; }
+    .c-subj-grades-col { flex: 3; display: flex; align-items: stretch; gap: 10px; }
+
+    /* COMBO-INPUT (Защита от наложения текста на мобилках) */
+    .c-combo-wrap { display: flex; align-items: stretch; border: 1px solid #cbd5e1; border-radius: 8px; overflow: hidden; background: #fff; flex: 1; transition: 0.2s; height: 47px;}
+    .c-combo-wrap:focus-within { border-color: #006eb5; box-shadow: 0 0 0 3px rgba(0, 110, 181, 0.15); }
+    .c-combo-lbl { background: #f1f5f9; padding: 0 12px; font-size: 13px; font-weight: 700; color: #64748b; border-right: 1px solid #cbd5e1; display: flex; align-items: center; white-space: nowrap; }
+    .c-combo-field { flex: 1; border: none; padding: 12px; font-size: 14px; min-width: 0; outline: none; background: transparent; color: #111; font-weight: 500;}
+    
+    .c-subj-oge-col { display: none; }
+    .c-subj-row.has-oge .c-subj-oge-col { display: flex; animation: fadeIn 0.3s ease; }
+    
+    .c-subj-del { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; color: #94a3b8; cursor: pointer; display: flex; align-items: center; justify-content: center; width: 42px; flex-shrink: 0; transition: 0.2s; height: 47px;}
+    .c-subj-del:hover { color: #ef4444; border-color: #fecaca; background: #fef2f2; }
+
+    .c-quick-btn { background: #fff; border: 2px dashed #cbd5e1; border-radius: 10px; padding: 12px; font-size: 13px; font-weight: 600; color: #64748b; cursor: pointer; transition: 0.2s; width: 100%; margin-top: 5px;}
+    .c-quick-btn:hover { background: #f0f9ff; color: #006eb5; border-color: #7dd3fc; }
+
+    /* РЕЖИМ ПО ОЦЕНКАМ */
+    .c-grade-slider-box { display: flex; align-items: center; gap: 15px; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 12px; transition: 0.2s; }
+    .c-grade-slider-box:hover { border-color: #cbd5e1; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+    .c-grade-lbl { font-weight: 700; font-size: 14px; color: #1e293b; width: 110px; display: flex; align-items: center; gap: 8px;}
+    .c-grade-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .c-grade-num-wrap { display: flex; align-items: center; gap: 8px; }
+    
+    input[type=range] { appearance: none; flex: 1; background: transparent; cursor: pointer; }
+    input[type=range]:focus { outline: none; }
+    input[type=range]::-webkit-slider-runnable-track { background: #e2e8f0; height: 6px; border-radius: 3px; }
+    input[type=range]::-webkit-slider-thumb { appearance: none; height: 20px; width: 20px; background: #006eb5; border-radius: 50%; margin-top: -7px; box-shadow: 0 2px 5px rgba(0, 110, 181, 0.3); border: 2px solid #fff; }
+
+    /* КНОПКИ */
+    .c-actions { display:flex; gap:15px; flex-wrap:wrap; margin-top: 30px; }
+    .c-btn { appearance:none; border:none; border-radius:12px; padding:16px 24px; cursor:pointer; font-weight:700; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 16px; }
+    .c-btn-primary { background: linear-gradient(135deg, #006eb5, #00568f); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(0, 110, 181, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#f1f5f9; color:#475569; }
+    .c-btn-secondary:hover { background: #e2e8f0; color: #0f172a; }
+
+    .c-error { color: #dc2626; background: #fef2f2; padding: 16px; border-radius: 12px; margin-top: 20px; display: none; font-size: 14px; font-weight: 600; border-left: 4px solid #ef4444; }
+    .c-error.show { display: block; animation: shake 0.4s; }
+    .is-hidden { display: none !important; }
+
+    /* РЕЗУЛЬТАТЫ */
+    .c-result { border: 1px solid #bae6fd; border-radius: 16px; padding: 30px 25px; background: linear-gradient(180deg, #f8fafc 0%, #fff 100%); box-shadow: 0 10px 30px rgba(0, 110, 181, 0.08); display: none; margin-top: 25px;}
+    .c-result.show { display: block; animation: fadeInUp 0.5s ease; }
+    
+    .c-score-wrap { text-align: center; margin-bottom: 30px; }
+    .c-score-lbl { font-size: 13px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+    .c-score-val { font-size: 60px; font-weight: 800; color: #0f172a; line-height: 1; margin-bottom: 10px;}
+    .c-score-val span { color: #006eb5; }
+    
+    .c-chart-container { width: 100%; max-width: 400px; height: 12px; background: #e2e8f0; border-radius: 10px; margin: 0 auto; overflow: hidden; position: relative; }
+    .c-chart-fill { height: 100%; background: linear-gradient(90deg, #38bdf8, #006eb5); width: 0%; border-radius: 10px; transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1); }
+
+    .c-semantic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
+    .c-info-block { padding: 20px; border-radius: 12px; border-left: 4px solid; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
+    .c-info-title { font-size: 15px; font-weight: 700; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+    .c-info-text { font-size: 14px; line-height: 1.5; font-weight: 500; color: #475569; }
+    
+    .theme-chance { border-color: #10b981; } .theme-chance .c-info-title { color: #059669; }
+    .theme-oge { border-color: #006eb5; background: #f0f9ff; } .theme-oge .c-info-title { color: #00568f; }
+    .theme-rules { border-color: #8b5cf6; } .theme-rules .c-info-title { color: #5b21b6; }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
+
+    /* ИДЕАЛЬНАЯ МОБИЛЬНАЯ АДАПТАЦИЯ */
+    @media (max-width: 650px) {
+       /* Карточка предмета */
+       .c-subj-row { flex-direction: column; align-items: stretch; background: #f8fafc; border: 1px solid #e2e8f0; padding: 15px; }
+       .c-subj-name-col { min-width: 100%; margin-bottom: 5px; }
+       .c-subj-grades-col { flex-wrap: wrap; gap: 10px; }
+       
+       /* Год и ОГЭ занимают по 50% ширины */
+       .c-combo-wrap { min-width: calc(50% - 35px); }
+       
+       /* Кнопка удаления на всю ширину снизу */
+       .c-subj-del { width: 100%; padding: 10px; background: #fff; border-color: #cbd5e1; font-size: 16px; margin-top: 5px; }
+       .c-subj-del::after { content: 'Delete'; font-weight: 600; font-size: 14px; margin-left: 5px;}
+
+       /* Режим по оценкам на мобильных */
+       .c-grade-slider-box { flex-wrap: wrap; padding: 15px; gap: 10px;}
+       .c-grade-lbl { width: 100%; }
+       .c-grade-num-wrap { width: 100%; }
+       input[type=range] { width: 100%; flex: none; margin-top: 5px; }
+       
+       .c-semantic-grid { grid-template-columns: 1fr; }
+       .c-btn { width: 100%; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-body">
+<div class="c-toggle">
+<button class="c-toggle-btn active" data-mode="subjects">By subject</button>
+<button class="c-toggle-btn" data-mode="grades">By number of ratings</button>
+</div>
+<div id="mode-subjects">
+<label class="c-switch-wrap">
+<input class="is-hidden" id="ogeSwitch" type="checkbox"/>
+<div class="c-switch-track"><div class="c-switch-thumb"></div></div>
+<div class="c-switch-text">
+<span class="c-switch-label">Take into account the results of the OGE (grade 9)</span>
+<span class="c-switch-sub">Formation of the final grade according to the rounding rules of the Russian Federation</span>
+</div>
+</label>
+<div class="c-subj-grid" id="subjContainer">
+</div>
+<button class="c-quick-btn" id="addSubjectBtn" type="button">+ Add item</button>
+</div>
+<div class="is-hidden" id="mode-grades">
+<div style="font-weight: 600; font-size: 15px; color: #111; margin-bottom: 15px;">Please indicate the total number of ratings:</div>
+<div id="gradesContainer"></div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate score</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-result" id="resultBox">
+<div class="c-score-wrap">
+<div class="c-score-lbl">Final GPA</div>
+<div class="c-score-val"><span id="resAvgInt">0</span>.<span id="resAvgDec">00</span></div>
+<div class="c-chart-container">
+<div class="c-chart-fill" id="resBar"></div>
+</div>
+</div>
+<div class="c-semantic-grid">
+<div class="c-info-block theme-chance">
+<div class="c-info-title">🎓 Prospects (SPO)</div>
+<div class="c-info-text" id="resChance"></div>
+</div>
+<div class="c-info-block theme-oge is-hidden" id="resOgeBlock">
+<div class="c-info-title">📊 Impact of OGE exams</div>
+<div class="c-info-text" id="resOgeImpact"></div>
+</div>
+<div class="c-info-block theme-rules">
+<div class="c-info-title">📌 Rounding 2026</div>
+<div class="c-info-text">The grade in Russian, mathematics and 2 elective subjects is formed as the arithmetic average of the annual and examination grades with<b>rounding in favor of the student</b>(3 and 4 add up to a final 4).</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  const $$ = (s) => wrap.querySelectorAll(s);
+  
+  let currentMode = 'subjects';
+  let isCalculated = false;
+
+  const defaultSubjects = ['Russian language', 'Mathematics', 'Literature', 'Story', 'Foreign language', 'Physics', 'Chemistry'];
+
+  // ГЕНЕРАЦИЯ СТРОК С COMBO-INPUT
+  function createSubjectRow(name = '') {
+      let row = document.createElement('div');
+      row.className = 'c-subj-row subject-item';
+      
+      let isOgeChecked = false;
+      if (Math.abs($('#ogeSwitch').checked === true) === 1) isOgeChecked = true;
+      if (Math.abs(isOgeChecked === true) === 1) row.classList.add('has-oge');
+
+      row.innerHTML = `
+<div class="c-subj-name-col">
+<input class="c-input s-name" placeholder="Item" type="text" value="${name}"/>
+</div>
+<div class="c-subj-grades-col">
+<div class="c-combo-wrap">
+<div class="c-combo-lbl">Ots.</div>
+<input class="c-combo-field s-year" max="5" min="2" placeholder="2-5" type="number"/>
+</div>
+<div class="c-combo-wrap c-subj-oge-col">
+<div class="c-combo-lbl">OGE</div>
+<input class="c-combo-field s-oge" max="5" min="2" placeholder="2-5" type="number"/>
+</div>
+<button class="c-subj-del" title="Delete">×</button>
+</div>
+`;
+      $('#subjContainer').appendChild(row);
+      
+      row.querySelector('.c-subj-del').addEventListener('click', () => {
+          row.remove();
+          if (Math.abs(isCalculated === true) === 1) calculateMath();
+      });
+  }
+
+  defaultSubjects.forEach(s => createSubjectRow(s));
+  $('#addSubjectBtn').addEventListener('click', () => createSubjectRow(''));
+
+  // ГЕНЕРАЦИЯ ПОЛЗУНКОВ
+  const gradesSetup = [
+      { v: 5, l: "Great", c: "#10b981" }, { v: 4, l: "Fine", c: "#006eb5" },
+      { v: 3, l: "Satisfied", c: "#f59e0b" }, { v: 2, l: "Unsuccessful", c: "#ef4444" }
+  ];
+  
+  gradesSetup.forEach(g => {
+      let box = document.createElement('div');
+      box.className = 'c-grade-slider-box';
+      box.innerHTML = `
+<div class="c-grade-lbl"><div class="c-grade-dot" style="background:${g.c}"></div>${g.l}</div>
+<div class="c-grade-num-wrap">
+<input class="c-input g-num" data-val="${g.v}" max="30" min="0" style="padding: 10px; text-align: center;" type="number" value="0"/>
+<span style="font-size: 13px; color: #64748b; font-weight: 600;">pcs.</span>
+</div>
+<input class="g-range" max="30" min="0" type="range" value="0"/>
+`;
+      $('#gradesContainer').appendChild(box);
+
+      let numInp = box.querySelector('.g-num');
+      let rangeInp = box.querySelector('.g-range');
+      
+      numInp.addEventListener('input', () => {
+          rangeInp.value = numInp.value;
+          if (Math.abs(isCalculated === true) === 1) calculateMath();
+      });
+      rangeInp.addEventListener('input', () => {
+          numInp.value = rangeInp.value;
+          if (Math.abs(isCalculated === true) === 1) calculateMath();
+      });
+  });
+
+  // ЛОГИКА ТАБОВ
+  $$('.c-toggle-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          $$('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentMode = btn.dataset.mode;
+          
+          let isSubj = false;
+          if (Math.abs(currentMode === 'subjects') === 1) isSubj = true;
+          
+          if (Math.abs(isSubj === true) === 1) {
+              $('#mode-subjects').classList.remove('is-hidden');
+              $('#mode-grades').classList.add('is-hidden');
+          } else {
+              $('#mode-subjects').classList.add('is-hidden');
+              $('#mode-grades').classList.remove('is-hidden');
+          }
+          $('#resultBox').classList.remove('show');
+          $('#errorMsg').classList.remove('show');
+          isCalculated = false;
+      });
+  });
+
+  $('#ogeSwitch').addEventListener('change', (e) => {
+      let isChecked = false;
+      if (Math.abs(e.target.checked === true) === 1) isChecked = true;
+      
+      let rows = $$('.c-subj-row');
+      rows.forEach(r => {
+          if (Math.abs(isChecked === true) === 1) r.classList.add('has-oge');
+          else r.classList.remove('has-oge');
+      });
+
+      if (Math.abs(isCalculated === true) === 1) calculateMath();
+  });
+
+  // МАТЕМАТИКА 2026 И БЕЗОПАСНЫЙ JS
+  function calculateMath(shouldScroll) {
+      $('#errorMsg').classList.remove('show');
+      
+      let totalSum = 0;
+      let totalCount = 0;
+      let pureYearSum = 0; 
+      
+      let isSubjMode = false;
+      if (Math.abs(currentMode === 'subjects') === 1) isSubjMode = true;
+
+      let isOgeActive = false;
+      if (Math.abs($('#ogeSwitch').checked === true) === 1) isOgeActive = true;
+      let ogeUsedCount = 0;
+
+      if (Math.abs(isSubjMode === true) === 1) {
+          let rows = $$('.subject-item');
+          rows.forEach(r => {
+              let yVal = parseInt(r.querySelector('.s-year').value);
+              let oVal = parseInt(r.querySelector('.s-oge').value);
+              
+              let isNanY = isNaN(yVal);
+              let isNanO = isNaN(oVal);
+              
+              if (Math.abs(isNanY === false) === 1) {
+                  let isValidY = false;
+                  if (Math.abs(Math.sign(yVal - 1) === 1) === 1) { 
+                      if (Math.abs(Math.sign(yVal - 6) === -1) === 1) isValidY = true; 
+                  }
+
+                  if (Math.abs(isValidY === true) === 1) {
+                      let finalGrade = yVal;
+                      pureYearSum = pureYearSum + yVal;
+                      
+                      if (Math.abs(isOgeActive === true) === 1) {
+                          if (Math.abs(isNanO === false) === 1) {
+                              let isValidO = false;
+                              if (Math.abs(Math.sign(oVal - 1) === 1) === 1) {
+                                  if (Math.abs(Math.sign(oVal - 6) === -1) === 1) isValidO = true;
+                              }
+                              if (Math.abs(isValidO === true) === 1) {
+                                  // Округление в пользу ученика по правилам РФ
+                                  finalGrade = Math.ceil((yVal + oVal) / 2);
+                                  ogeUsedCount = ogeUsedCount + 1;
+                              }
+                          }
+                      }
+                      totalSum = totalSum + finalGrade;
+                      totalCount = totalCount + 1;
+                  }
+              }
+          });
+      } else {
+          let inputs = $$('.g-num');
+          inputs.forEach(inp => {
+              let gradeWeight = parseInt(inp.dataset.val);
+              let count = parseInt(inp.value);
+              let isNanC = isNaN(count);
+              if (Math.abs(isNanC === true) === 1) count = 0;
+              
+              let isPos = false;
+              if (Math.abs(Math.sign(count) === 1) === 1) isPos = true;
+              
+              if (Math.abs(isPos === true) === 1) {
+                  totalSum = totalSum + (gradeWeight * count);
+                  totalCount = totalCount + count;
+              }
+          });
+      }
+
+      let hasGrades = false;
+      if (Math.abs(Math.sign(totalCount) === 1) === 1) hasGrades = true;
+
+      if (Math.abs(hasGrades === false) === 1) {
+          $('#resultBox').classList.remove('show');
+          $('#errorMsg').textContent = "Enter at least one correct rating (from 2 to 5).";
+          $('#errorMsg').classList.add('show');
+          return;
+      }
+
+      let avg = totalSum / totalCount;
+      let pureAvg = pureYearSum / totalCount; 
+      
+      let avgStr = avg.toFixed(2);
+      let parts = avgStr.split('.');
+      $('#resAvgInt').textContent = parts[0];
+      $('#resAvgDec').textContent = parts[1];
+      
+      $('#resBar').style.width = '0%';
+      let percent = 0;
+      let diff = avg - 3.0;
+      let isOverThree = false;
+      if (Math.abs(Math.sign(diff) === 1) === 1) isOverThree = true;
+      if (Math.abs(isOverThree === true) === 1) percent = (diff / 2.0) * 100;
+      
+      let isOverHundred = false;
+      if (Math.abs(Math.sign(percent - 100) === 1) === 1) isOverHundred = true;
+      if (Math.abs(isOverHundred === true) === 1) percent = 100;
+
+      // Анализ шансов
+      let chanceText = "The score is below average. Budget places in colleges are unlikely; it is worth focusing on paid departments.";
+      
+      let isHigh = false;
+      if (Math.abs(Math.sign(avg - 4.49) === 1) === 1) isHigh = true; 
+      let isMid = false;
+      if (Math.abs(Math.sign(avg - 3.99) === 1) === 1) isMid = true; 
+      
+      if (Math.abs(isHigh === true) === 1) {
+          chanceText = "Brilliant result! You have an excellent chance of admission to even the most rated colleges on a budget.";
+      } else {
+          if (Math.abs(isMid === true) === 1) {
+              chanceText = "Strong GPA. You can qualify for a budget in most specialties, but we recommend applying to several places.";
+          }
+      }
+      $('#resChance').textContent = chanceText;
+
+      // Влияние ОГЭ
+      $('#resOgeBlock').classList.add('is-hidden');
+      
+      let hasOgeImpact = false;
+      if (Math.abs(isSubjMode === true) === 1) {
+          if (Math.abs(isOgeActive === true) === 1) {
+              if (Math.abs(Math.sign(ogeUsedCount) === 1) === 1) hasOgeImpact = true;
+          }
+      }
+
+      if (Math.abs(hasOgeImpact === true) === 1) {
+          $('#resOgeBlock').classList.remove('is-hidden');
+          let impactText = "The exams coincided with the annual assessments and did not change your final score.";
+          let impactDiff = avg - pureAvg;
+          
+          let isPositive = false;
+          if (Math.abs(Math.sign(impactDiff) === 1) === 1) isPositive = true;
+          let isNegative = false;
+          if (Math.abs(Math.sign(impactDiff) === -1) === 1) isNegative = true;
+
+          if (Math.abs(isPositive === true) === 1) {
+              impactText = "The rounding rule worked for you! OGE increased the final certificate score by +" + impactDiff.toFixed(2) + "point.";
+          }
+          if (Math.abs(isNegative === true) === 1) {
+              impactText = "Examination grades turned out to be lower than the annual ones, which reduced the final score (by -" + Math.abs(impactDiff).toFixed(2) + ").";
+          }
+          $('#resOgeImpact').textContent = impactText;
+      }
+
+      $('#resultBox').classList.add('show');
+      
+      setTimeout(() => {
+          $('#resBar').style.width = percent + '%';
+      }, 50);
+
+      if (Math.abs(shouldScroll === true) === 1) {
+          $('#resultBox').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calculateMath(true); });
+
+  wrap.addEventListener('input', (e) => {
+      let isInput = false;
+      if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+      if (Math.abs(isCalculated === true) === 1) {
+          if (Math.abs(isInput === true) === 1) calculateMath(false);
+      }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+      $$('.s-year, .s-oge').forEach(i => i.value = '');
+      $$('.g-num, .g-range').forEach(i => i.value = 0);
+      $('#ogeSwitch').checked = false;
+      $$('.c-subj-row').forEach(r => r.classList.remove('has-oge'));
+      $('#resultBox').classList.remove('show');
+      $('#errorMsg').classList.remove('show');
+      isCalculated = false;
+  });
+});
+</script>
+
+        <div class="post-content">
+<h2 class="wp-block-heading" id="kalkulyator-srednego-balla-attestata-2026-onlajn-raschet-dlya-9-i-11-k-2">GPA calculator 2026: online calculation for grades 9 and 11</h2>
+<p>In 2026, competition for admission to colleges and technical schools is at an all-time high. The average certificate score has become practically the only selection criterion for most specialties of secondary vocational education (SVE). Even a minor error in calculations of 0.01 points can separate an applicant from a coveted budget place. Our updated online calculator is designed specifically so that graduates of grades 9 and 11 can instantly get an accurate result that meets the current requirements of the Ministry of Education of the Russian Federation. The system takes into account the latest changes in the rules for the formation of final grades and allows you to simulate scenarios to increase your chances of admission.</p>
+<h2 class="wp-block-heading" id="zachem-nuzhen-kalkulyator-attestata-2">Why do you need a certificate calculator?</h2>
+<p>The average score is calculated as <strong>arithmetic of all final grades</strong> by subject. The higher the result, the greater the chance of passing the budget.</p>
+<p><strong>Benefits of the calculator:</strong></p>
+<ul class="wp-block-list">
+<li><strong>Quick calculation</strong> average score for 9th or 11th grade.</li>
+<li><strong>Accounting for all disciplines</strong>, including physical education, fine arts, music.</li>
+<li><strong>Help with planning</strong> — what grades should be improved to improve the result.</li>
+<li><strong>Flexibility</strong> — support for 5-point and 12-point scales.</li>
+</ul>
+<p><strong>Usage example:</strong><br/>Graduate Vasya will graduate from 9th grade in 2026 and wants to go to college. His current GPA is 4.1. To score a passing 4.5, you need to replace two “fours” with “fives”.</p>
+<h2 class="wp-block-heading" id="metodologiya-i-formuly-rascheta-2">Methodology and calculation formulas</h2>
+<p>According to current regulations, the grade point average (GPA) is calculated as the arithmetic mean of all final grades on the education document. In 2026, all disciplines without exception are taken into account in the calculation, including “Music”, “Art” and “Technology”, if points are given for them.</p>
+<p>The following mathematical model is used for the calculation:</p>
+<p>$$GPA = \frac{\sum_{i=1}^{n} g_i}{n}$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $\sum g_i$ - the sum of all received ratings;</li>
+<li> $n$ - the total number of items in the certificate.</li>
+</ul>
+<p><strong>Important for 9th grade graduates:</strong> Remember that the final grade in Russian language, mathematics and two elective subjects in 2026 is formed as the arithmetic average of annual and exam (OGE) grades, rounded in favor of the student.)</p>
+<p><strong>Calculation examples:</strong></p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><th>Items</th><th>Ratings</th><th>Calculation</th><th>Bottom line</th></tr></thead><tbody><tr><td>Russian, Algebra, Biology, Chemistry, Physical Education</td><td>5, 4, 5, 4, 5</td><td>(5+4+5+4+5)/5</td><td>4.6</td></tr><tr><td>15 items, total marks - 60</td><td>—</td><td>60 / 15</td><td>4.0</td></tr><tr><td>After correcting one rating to “4”</td><td>Amount = 61</td><td>61 / 15</td><td>4.07</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="kak-rabotaet-onlajn-kalkulyator-2">How does the online calculator work?</h2>
+<ol class="wp-block-list">
+<li>Enter <strong>names of items</strong> and grades for each.</li>
+<li>Both compulsory and additional disciplines are taken into account.</li>
+<li>Support <strong>different assessment systems</strong>: 3–5 and 1–12.</li>
+<li>When you enter all the data, the calculator automatically displays:<ul class="wp-block-list">
+<li>amount of points;</li>
+<li>number of items;</li>
+<li>final average score (rounded to the nearest hundredth).</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example:</strong><br/>8 fives, 6 fours and 1 three<br/>Calculation: (8×5 + 6×4 + 1×3) / 15 = <strong>4.47</strong></p>
+<h2 class="wp-block-heading" id="attestat-9-klassa-osobennosti-raschyota-2">9th grade certificate: calculation features</h2>
+<ul class="wp-block-list">
+<li>Are taken into account <strong>annual estimates</strong> from 5th to 9th grade.</li>
+<li><strong>Examination score</strong> affects the outcome only in 4 subjects: mathematics, Russian and two electives.</li>
+<li>Total = (annual + exam) / 2 → rounded according to the rules of mathematics.</li>
+<li>Some subjects, such as physical education, may be credited rather than graded.</li>
+</ul>
+<p><strong>Rounding example:</strong><br/>Annual “5” + exam “4” = 4.5 → total “5”</p>
+<h2 class="wp-block-heading" id="attestat-11-klassa-osobennosti-raschyota-2">11th grade certificate: calculation features</h2>
+<ul class="wp-block-list">
+<li>Are taken into account <strong>grades for grades 10 and 11</strong>.</li>
+<li>GPA is important when <strong>admission without Unified State Exam</strong> (for example, for creative specialties).</li>
+<li>Unified State Exam results <strong>do not affect</strong> for grades in the certificate.</li>
+<li>Without passing the Unified State Exam in Russian and mathematics <strong>certificate is not issued</strong>.</li>
+</ul>
+<p><strong>Example:</strong><br/>History - ratings 4, 5, 5, 4 → (4+5+5+4)/4 = 4.5 → total “5”</p>
+<h2 class="wp-block-heading" id="analiz-stsenariev-postupleniya-v-2026-godu-2">Analysis of admission scenarios in 2026</h2>
+<p>Below is a comparison table showing how a change in just one grade affects the overall ranking of an applicant for a standard set of 15 subjects:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Number of ratings (5/4/3/2)</strong></td><td><strong>Sum of points</strong></td><td><strong>Number of items</strong></td><td><strong>Average score</strong></td><td><strong>Chances for the budget (SPO 2026)</strong></td></tr></thead><tbody><tr><td><strong>8 / 5 / 2 / 0</strong></td><td>66</td><td>15</td><td><strong>4.40</strong></td><td>Secondary (humanities)</td></tr><tr><td><strong>10 / 5 / 0 / 0</strong></td><td>70</td><td>15</td><td><strong>4.67</strong></td><td>High (technical schools)</td></tr><tr><td><strong>12 / 3 / 0 / 0</strong></td><td>72</td><td>15</td><td><strong>4.80</strong></td><td>Very tall</td></tr><tr><td><strong>15 / 0 / 0 / 0</strong></td><td>75</td><td>15</td><td><strong>5.00</strong></td><td>Guaranteed enrollment</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="trendy-postupleniya-v-2026-godu-chto-nuzhno-znat-2">Admissions trends in 2026: what you need to know</h2>
+<p>In the current academic year, there is a clear trend towards digitalization of admissions campaigns. Most applications are submitted through State Services, where the average score is automatically calculated from the digital registry. However, manual self-monitoring remains necessary for the following reasons:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Registry check:</strong> There are frequent cases of technical failures when the data in the electronic system does not match the paper certificate. Our calculator will help you notice the error in time.</li>
+<li><strong>Passing points for “Professionality”:</strong> In 2026, the Vocational program will cover more than 70% of colleges. Study periods have been shortened and score requirements have increased due to the high demand for practical education.</li>
+<li><strong>Item priority:</strong> If two applicants have an equal average score, the admissions committee looks at grades in core subjects (for example, physics and mathematics for IT specialties).</li>
+</ol>
+<h2 class="wp-block-heading" id="kak-legalno-povysit-srednij-ball-2">How to legally increase your GPA?</h2>
+<p>If our calculator shows a result lower than expected, you still have time to correct the situation before the certificate is issued. In 2026, teaching councils are focused on supporting motivated students. Try to “close” the controversial B’s in secondary subjects (life safety, ecology, technology) - in the average score formula they have the same weight as physics and the Russian language.</p>
+<h2 class="wp-block-heading" id="chto-vazhnee-attestat-ili-ege-2">What is more important - a certificate or an Unified State Exam?</h2>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><th>Situation</th><th>What plays a role</th></tr></thead><tbody><tr><td>Receipt on the budget</td><td>The main priority is the Unified State Examination, in case of equality - the average score</td></tr><tr><td>Target direction</td><td>GPA can be decisive</td></tr><tr><td>Creative specialties (VGIK, Shchukinskoye)</td><td>GPA is added to creative scores</td></tr></tbody></table></div></figure>
+<p>GPA is the most important indicator of academic performance, which affects the chances of admission. An accurate calculation using an online calculator helps to objectively assess the current level and understand what can be improved. For 9th grade graduates this is the key to admission without exams, and for 11th graders it is an additional argument in the competition. A high score is not only prestige, but also a real advantage.</p>
+<p>Use our simulation calculator to enter your desired grades and see what GPA you end up with. This is the best way to set yourself a clear goal for the home stretch of the school year.</p>
+</div>
+    </div>
+</body>
+</html>

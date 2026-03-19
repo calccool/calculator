@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heating boiler power calculator: Accurate online calculation by area and volume</title>
+    <meta name="description" content="Heating boiler power calculator: Accurate online calculation by area and volume - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Heating boiler power calculator: Accurate online calculation by area and volume</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (Золотой стандарт + Heat Icons) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; position: relative; }
+    
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; margin-bottom: 4px;}
+    
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; background:#fff; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 40px; } 
+    .c-input-suffix {
+        position: absolute; right: 15px; top: 50%; transform: translateY(-50%);
+        color: #888; font-size: 14px; pointer-events: none; font-weight: 500;
+    }
+
+    .c-divider { 
+        display: flex; align-items: center; gap: 10px; margin: 30px 0 15px; 
+        font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 10px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; font-size: 16px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+
+    .c-result { border:1px dashed #0693e3; border-radius:12px; padding:10px; background:#fff; margin-top: 20px; display:none; }
+    .c-result.show { display:grid; }
+    .c-resline { display:grid; grid-template-columns: 1fr auto 30px; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #0693e3; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; }
+    .c-resval { font-weight:700; font-size:18px; color:#0693e3; text-align:right;}
+    .c-subtext { display: block; font-size: 11px; color: #888; margin-top: 3px; }
+
+    .c-copy { 
+      width: 28px; height: 28px; border: none; background: #fff url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; 
+      background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; 
+      opacity: 0.6; transition: 0.2s;
+    }
+    .c-copy:hover { opacity: 1; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 10px; border-radius: 8px; margin-bottom: 10px; display: none; font-size: 14px; }
+    .c-error.show { display: block; }
+
+    @media (max-width: 600px) {
+        .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; }
+        .c-resval { grid-column: 1; grid-row: 2; text-align: left; }
+        .c-copy { grid-column: 2; grid-row: 1 / 3; width: 34px; height: 34px; background-size: 22px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-body">
+<div class="c-divider"><span class="icon">🏠</span>House characteristics</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">House area<span class="c-term">S</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="inArea" min="0" step="1" type="number" value="100"/>
+<span class="c-input-suffix">m²</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Ceiling height<span class="c-term">H</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="inHeight" min="0" step="0.1" type="number" value="2.7"/>
+<span class="c-input-suffix">m</span>
+</div>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Insulation degree</label>
+<select class="c-select" id="selInsul">
+<option value="60">Weak (Old Fund)</option>
+<option value="50">Average (Brick 1.5-2)</option>
+<option selected="" value="40">Good (Modern)</option>
+<option value="30">Excellent (Energy efficiency.)</option>
+</select>
+</div>
+<div class="c-field">
+<label class="c-label">Region (Climate)</label>
+<select class="c-select" id="selRegion">
+<option value="0.7">South (mild winter)</option>
+<option value="1.0">Center/Moderate</option>
+<option selected="" value="1.2">Moscow / Moscow region</option>
+<option value="1.5">North / Siberia</option>
+<option value="2.0">Far North</option>
+</select>
+</div>
+</div>
+<div class="c-divider"><span class="icon">🚿</span>Hot water supply</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Need water heating?</label>
+<select class="c-select" id="selGVS">
+<option value="0">No (Heating only)</option>
+<option value="1">Yes (Double circuit / Boiler)</option>
+</select>
+</div>
+<div class="c-field" id="wrapUsers" style="display:none;">
+<label class="c-label">Number of residents</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="inUsers" min="1" step="1" type="number" value="3"/>
+<span class="c-input-suffix">people</span>
+</div>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Power reserve</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="inReserve" min="0" step="5" type="number" value="15"/>
+<span class="c-input-suffix">%</span>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-result" id="resBox">
+<div class="c-resline" style="background:#e3f2fd;">
+<div class="c-resleft">Recommended power<span class="c-subtext">Including stock</span>
+</div>
+<div class="c-resval" id="resPower">0</div>
+<button class="c-copy"></button>
+</div>
+<div class="c-divider"><span class="icon">🔥</span>Approximate consumption</div>
+<div class="c-resline">
+<div class="c-resleft">Gas (natural)<span class="c-subtext">Cubes per hour (max)</span>
+</div>
+<div class="c-resval" id="resGas">0</div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Firewood (dry)<span class="c-subtext">kg per hour</span>
+</div>
+<div class="c-resval" id="resWood">0</div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Electricity<span class="c-subtext">kWh</span>
+</div>
+<div class="c-resval" id="resElectro">0</div>
+<button class="c-copy"></button>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (id) => wrap.querySelector('#'+id);
+  const errorEl = $('errorMsg');
+  const selGVS = $('selGVS');
+  const wrapUsers = $('wrapUsers');
+
+  selGVS.addEventListener('change', () => {
+      if (selGVS.value === '1') {
+          wrapUsers.style.display = 'flex';
+      } else {
+          wrapUsers.style.display = 'none';
+      }
+      $('resBox').classList.remove('show');
+  });
+
+  function calculate() {
+      errorEl.classList.remove('show');
+      
+      const area = parseFloat($('inArea').value);
+      const height = parseFloat($('inHeight').value);
+      const qFactor = parseFloat($('selInsul').value); // Watts per m3
+      const kRegion = parseFloat($('selRegion').value);
+      const reserve = parseFloat($('inReserve').value);
+      const hasGVS = selGVS.value === '1';
+      const users = parseFloat($('inUsers').value);
+
+      if ([area, height].some(x => isNaN(x) || Math.sign(x) !== 1)) {
+          errorEl.textContent = "Check the area and height of the ceilings.";
+          errorEl.classList.add('show'); return;
+      }
+
+      // 1. Base Heating Power (Volume method)
+      // Q = Volume * qFactor * kRegion
+      const volume = area * height;
+      let powerW = volume * qFactor * kRegion;
+
+      // 2. GVS Add-on
+      // Approx 25% reserve for GVS usually, or ~0.5-1 kW per person instant?
+      // Better: if boiler, just add ~20-30%. If flow-through, huge power needed.
+      // Assuming standard boiler indirect: +15-20% is typical recommendation.
+      // Let's use: +200W per person continuous avg or simply +25% factor if active.
+      if (hasGVS) {
+          // Add roughly 0.5 kW per person for comfort reserve
+          powerW += (users * 500); 
+      }
+
+      // 3. Reserve
+      powerW = powerW * (1 + (reserve / 100));
+
+      const powerKW = powerW / 1000;
+
+      // 4. Fuel Consumption (Approx)
+      // Gas: ~0.11 m3 per 1 kW
+      const gasCons = powerKW * 0.11;
+      // Wood: ~0.3-0.4 kg per 1 kW (depends on efficiency 75%)
+      const woodCons = powerKW * 0.4;
+      // Electro: 1 to 1 (Efficiency ~99%)
+      const elCons = powerKW;
+
+      // Output
+      $('resPower').textContent = powerKW.toFixed(1) + " kW";       $('resGas').textContent = "~" + gasCons.toFixed(2) + " m³/h";       $('resWood').textContent = "~" + woodCons.toFixed(1) + " kg/h";       $('resElectro').textContent = elCons.toFixed(1) + " kWh";        $('resBox').classList.add('show');
+      $('resBox').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  $('calcBtn').addEventListener('click', calculate);
+  
+  $('resetBtn').addEventListener('click', () => {
+      $('inArea').value = '100';
+      $('inReserve').value = '15';
+      $('resBox').classList.remove('show');
+      errorEl.classList.remove('show');
+  });
+
+  wrap.addEventListener('click', (e) => {
+      if (e.target.classList.contains('c-copy')) {
+          const val = e.target.previousElementSibling.textContent;
+          navigator.clipboard.writeText(val);
+          e.target.style.opacity = '1';
+          setTimeout(() => e.target.style.opacity = '0.6', 200);
+      }
+  });
+
+});
+</script>
+
+        <div class="post-content">
+<p>The choice of heating equipment is a balance between comfort and savings. An error in calculations leads to two critical problems:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Lack of power:</strong> The boiler will work at its maximum capacity without turning off, which will lead to rapid wear of the burner or heating elements, and the house will still be cold during peak frosts.</li>
+<li><strong>Excess power (oversizing):</strong> Leads to clocking (frequent switching on/off), increased fuel consumption, the formation of condensation in the chimney and a decrease in system efficiency.</li>
+</ol>
+<p>Our calculator uses the volumetric calculation method ( $Q = V \times \Delta T \times K$ ), which is much more accurate than the classic formula “1 kW per 10 m²”, since it takes into account the height of the ceilings and the actual degree of insulation of the building.</p>
+<h2 class="wp-block-heading" id="formula-rascheta-moshhnosti-kotla-2">Formula for calculating boiler power</h2>
+<p>To obtain the basic value of thermal power ( $W_{base}$ ), the following relationship is used:</p>
+<p>$$W_{base} = \frac{S \cdot H \cdot q_{ud} \cdot k_{reg}}{1000}$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $S$ - heated room area (m²).</li>
+<li> $H$ - ceiling height (m).</li>
+<li> $q_{ud}$ - specific thermal characteristic of the building (W/m³).</li>
+<li> $k_{reg}$ is the climate coefficient of the region.</li>
+</ul>
+<h3 class="wp-block-heading" id="udelnaya-teplovaya-harakteristika-q_-ud-2">Specific thermal characteristic ( $q_{ud}$ )</h3>
+<p>This parameter determines how much heat the house loses through the walls, windows and roof. Our algorithm uses the following average values:</p>
+<ul class="wp-block-list">
+<li><strong>60 W/m³:</strong> Old houses, poor insulation, old windows.</li>
+<li><strong>50 W/m³:</strong> Standard brickwork, average insulation.</li>
+<li><strong>40 W/m³:</strong> Modern construction, high-quality double-glazed windows, mineral wool/foam insulation.</li>
+<li><strong>30 W/m³:</strong> Energy efficient houses (thermos), SIP panels.</li>
+</ul>
+<h3 class="wp-block-heading" id="klimaticheskie-koeffitsienty-k_-reg-2">Climate coefficients ( $k_{reg}$ )</h3>
+<p>The boiler power directly depends on the temperature delta (the difference between room and street temperatures).</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Region</strong></td><td><strong>Coefficient (kreg​)</strong></td><td><strong>Description of climate</strong></td></tr></thead><tbody><tr><td>Southern regions</td><td>0.7 – 0.9</td><td>Mild winter, rare frosts</td></tr><tr><td>Middle lane</td><td>1.0 – 1.2</td><td>Temperate climate (Moscow, Volga region)</td></tr><tr><td>Northern regions</td><td>1.3 – 1.5</td><td>Harsh winters (Ural, Siberia)</td></tr><tr><td>Far North</td><td>1.6 – 2.0</td><td>Extremely low temperatures (Yakutia)</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="uchet-goryachego-vodosnabzheniya-gvs-2">Hot water supply (DHW) metering</h2>
+<p>If you plan to use a double-circuit boiler or a single-circuit boiler in conjunction with an indirect heating boiler (IBC), you need to provide a power reserve. Heating water is a priority for the boiler automation: the moment the tap opens, the heating is turned off.</p>
+<p>For comfortable use of domestic hot water, it is recommended to add to the calculated power:</p>
+<ul class="wp-block-list">
+<li><strong>+20-25%</strong> — standard safety factor.</li>
+<li>Or <strong>+4-5 kW</strong> for each water intake point during flow-through heating.</li>
+</ul>
+<h2 class="wp-block-heading" id="tablitsa-primernogo-podbora-moshhnosti-2">Approximate power selection table</h2>
+<p>For a quick assessment without taking into account the height of the ceilings and the specifics of insulation, you can use the table of average values ​​(for the middle zone, ceiling heights up to 2.7 m).</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>House area (m²)</strong></td><td><strong>Boiler power (kW)</strong></td><td><strong>Approximate gas consumption (m³/hour)</strong></td></tr></thead><tbody><tr><td>60 — 80</td><td>8 — 10</td><td>0.9 — 1.1</td></tr><tr><td>100 — 120</td><td>12 — 15</td><td>1.3 — 1.7</td></tr><tr><td>150 — 180</td><td>18 — 24</td><td>2.0 — 2.6</td></tr><tr><td>200 — 250</td><td>24 — 30</td><td>2.8 — 3.4</td></tr><tr><td>300 — 400</td><td>35 — 50</td><td>4.0 — 5.5</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="raschet-rashoda-topliva-2">Fuel consumption calculation</h2>
+<p>After determining the required thermal power ( $N$ , kW), it is important to estimate future operating costs. Consumption depends on the calorific value of the fuel and the efficiency of the boiler unit.</p>
+<p>Basic flow formulas ( $V$ ):</p>
+<h3 class="wp-block-heading" id="1-prirodnyj-gaz-g20-1">1. Natural gas (G20)</h3>
+<p>$$V_{gaz} = \frac{N}{9.45 \cdot \eta}$$</p>
+<p>Where $9.45$ is the calorific value of the gas (kWh/m³), $\eta$ is the efficiency (usually 0.9 - 0.92).</p>
+<p><em>Average consumption:</em> ~0.11 m³ per 1 kW of power.</p>
+<h3 class="wp-block-heading" id="2-tverdoe-toplivo-drova-ugol-2">2. Solid fuel (Wood/Coal)</h3>
+<p>$$V_{wood} = \frac{N}{4.0 \cdot \eta}$$</p>
+<p>Where $4.0$ is the average calorific value of dry firewood (kWh/kg). The efficiency of solid fuel boilers is lower (0.75 - 0.8).</p>
+<p><em>Average consumption:</em> ~0.4 kg of firewood per 1 kW of power.</p>
+<h3 class="wp-block-heading" id="3-elektrichestvo-2">3. Electricity</h3>
+<p>Here the relationship is linear, since the efficiency of the electric boiler tends to 99%.</p>
+<p>$$V_{el} = N$$</p>
+<p><em>Consumption:</em> 1 kW of thermal power consumes 1 kW of electrical energy.</p>
+<h2 class="wp-block-heading" id="sovety-po-vyboru-oborudovaniya-2">Tips for choosing equipment</h2>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Power reserve:</strong> Always add <strong>10-15%</strong> to the calculated value. This is necessary to compensate for drops in gas pressure in winter or voltage drops in the electrical network.</li>
+<li><strong>Cascade connection:</strong> For houses with an area of ​​more than 300 m², it is more effective to use two lower-power boilers operating in a cascade than one powerful one. This increases system reliability.</li>
+<li><strong>Flame modulation:</strong> Choose boilers with deep modulation (for example, from 10% to 100%). This will allow the boiler to operate economically in the off-season, when full power is not required.</li>
+</ol>
+</div>
+    </div>
+</body>
+</html>

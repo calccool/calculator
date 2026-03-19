@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online ODS to XLSX converter - convert LibreOffice tables to Excel format</title>
+    <meta name="description" content="Online ODS to XLSX converter - convert LibreOffice tables to Excel format - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Online ODS to XLSX converter - convert LibreOffice tables to Excel format</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  let host = document.getElementById('converter-block');
+  if (!host) return;
+
+  let style = document.createElement('style');
+  style.textContent = `
+    .cv-wrap * { box-sizing: border-box; }
+    .cv-wrap .is-hidden { display: none !important; }
+    .cv-wrap .cv-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-bottom: 24px; }
+    .cv-wrap .cv-row.single { grid-template-columns: 1fr; }
+    .cv-wrap .cv-field { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+    
+    .cv-wrap .cv-label { font-weight: 700; font-size: 15px; color: #1a1a1a; display: flex; align-items: center; gap: 8px; margin: 0; }
+    .cv-wrap .cv-term { display: inline-flex; align-items: center; justify-content: center; height: 24px; min-width: 30px; padding: 0 8px; border-radius: 6px; font-weight: 700; font-size: 12px; color: #0693e3; background: #eef7ff; margin-left: auto; }
+
+    /* ЗОНА ЗАГРУЗКИ */
+    .cv-wrap .cv-drop-area { position: relative; background-color: #f8fbff; border-radius: 16px; padding: 40px 20px; text-align: center; cursor: pointer; transition: background-color 0.3s, transform 0.2s; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 280px; gap: 16px; z-index: 1; }
+    .cv-wrap .cv-drop-area::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 10px; background: linear-gradient(90deg, #0693e3 50%, transparent 50%), linear-gradient(90deg, #0693e3 50%, transparent 50%), linear-gradient(0deg, #0693e3 50%, transparent 50%), linear-gradient(0deg, #0693e3 50%, transparent 50%); background-repeat: repeat-x, repeat-x, repeat-y, repeat-y; background-size: 16px 2px, 16px 2px, 2px 16px, 2px 16px; background-position: 0 0, 100% 100%, 0 100%, 100% 0; animation: dash-move 1s infinite linear; pointer-events: none; opacity: 0.6; transition: opacity 0.3s; }
+    @keyframes dash-move { to { background-position: 16px 0, calc(100% - 16px) 100%, 0 calc(100% - 16px), 100% 16px; } }
+    .cv-wrap .cv-drop-area:hover { background-color: #f0f7ff; transform: translateY(-2px); }
+    .cv-wrap .cv-drop-area:hover::after { opacity: 1; }
+    
+    .cv-wrap .cv-drop-icon svg { width: 100px; height: auto; transition: transform 0.3s ease; }
+    .cv-wrap .cv-drop-area:hover .cv-drop-icon svg { transform: scale(1.05); }
+    .cv-wrap .cv-drop-title { font-size: 18px; font-weight: 600; color: #475569; pointer-events: none; margin-bottom: 5px; word-break: break-word; }
+    
+    /* КНОПКА ЗАГРУЗКИ */
+    .cv-wrap .cv-upload-btn-inner { display: inline-flex; align-items: center; gap: 10px; background: #fff; border: 1px solid #cbd5e1; color: #1e293b; font-weight: 600; font-size: 15px; padding: 12px 24px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); transition: all 0.2s; pointer-events: none; z-index: 2; position: relative; }
+    .cv-wrap .cv-drop-area:hover .cv-upload-btn-inner { background: #f8fafc; border-color: #94a3b8; box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
+
+    /* ТАБЫ */
+    .cv-wrap .cv-tabs { display: flex; gap: 8px; background: #f1f5f9; padding: 6px; border-radius: 14px; list-style: none; margin: 0 0 28px 0; }
+    .cv-wrap .cv-tab { padding: 12px 20px; cursor: pointer; border-radius: 10px; font-weight: 600; font-size: 15px; color: #64748b; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); flex: 1; text-align: center; }
+    .cv-wrap .cv-tab:hover { color: #0f172a; }
+    .cv-wrap .cv-tab.active { background: #fff; color: #0693e3; box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+    .cv-wrap .cv-tab-pane { display: none; animation: slideUp 0.4s ease; }
+    .cv-wrap .cv-tab-pane.active { display: block; }
+
+    /* ФОРМЫ */
+    .cv-wrap .cv-input, .cv-wrap .cv-select { width: 100%; padding: 14px 20px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 15px; background: #fff; transition: 0.2s; color: #1a1a1a; }
+    .cv-wrap .cv-input:focus, .cv-wrap .cv-select:focus { outline: none; border-color: #0693e3; box-shadow: 0 0 0 4px rgba(6,147,227,0.15); }
+    .cv-wrap .cv-range { -webkit-appearance: none; width: 100%; height: 8px; background: #e2e8f0; border-radius: 6px; outline: none; padding: 0; margin: 10px 0; }
+    .cv-wrap .cv-range::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%; background: #0693e3; cursor: pointer; border: 4px solid #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.2); transition: transform 0.1s; }
+    .cv-wrap .cv-range::-webkit-slider-thumb:hover { transform: scale(1.2); }
+
+    /* КНОПКИ ДЕЙСТВИЙ */
+    .cv-wrap .cv-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 10px; }
+    .cv-wrap .cv-btn { appearance: none; border: none; border-radius: 12px; padding: 14px 24px; cursor: pointer; font-weight: 700; font-size: 15px; transition: all 0.3s; flex: 1; min-width: 180px; display: flex; justify-content: center; align-items: center; gap: 10px; }
+    .cv-wrap .cv-btn-primary { background: linear-gradient(135deg, #0693e3 0%, #006eb5 100%); color: #fff; box-shadow: 0 4px 15px rgba(6,147,227,0.3); }
+    .cv-wrap .cv-btn-secondary { background: #f1f5f9; color: #475569; }
+    .cv-wrap .cv-btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(6,147,227,0.4); }
+    .cv-wrap .cv-btn-secondary:hover { background: #e2e8f0; color: #0f172a; transform: translateY(-2px); }
+    .cv-wrap .cv-btn:active { transform: translateY(1px); }
+
+    /* РЕЗУЛЬТАТЫ И ПРЕВЬЮ */
+    .cv-wrap .cv-result-wrap { margin-top: 30px; background: #fff; border-radius: 16px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
+    .cv-wrap .cv-resline { display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 16px 20px; border-bottom: 1px solid #f1f5f9; }
+    .cv-wrap .cv-resline:last-child { border-bottom: none; background: #f8fbff; }
+    .cv-wrap .cv-resleft { font-size: 14px; color: #64748b; font-weight: 600; }
+    .cv-wrap .cv-resval { font-weight: 700; font-size: 16px; color: #0f172a; word-break: break-word; text-align: right; flex: 1; }
+    
+    .cv-wrap .cv-preview-box { background: #1e293b; color: #a5b4fc; padding: 20px; border-radius: 12px; font-family: monospace; font-size: 13px; white-space: pre-wrap; line-height: 1.6; max-height: 300px; overflow-y: auto; margin-top: 10px; }
+
+    @keyframes slideUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+    @media (max-width: 600px) { 
+      .cv-wrap .cv-actions { flex-direction: column; } 
+      .cv-wrap .cv-tabs { flex-direction: column; } 
+      .cv-wrap .cv-resline { flex-direction: column; align-items: flex-start; gap: 6px; }
+      .cv-wrap .cv-resval { text-align: left; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  let wrap = document.createElement('div');
+  wrap.className = 'cv-wrap';
+  wrap.innerHTML = `
+<div class="cv-card">
+<div class="cv-row single" id="dropAreaWrap">
+<div class="cv-field">
+<div class="cv-drop-area" id="dropArea" role="button" tabindex="0">
+<div class="cv-drop-icon">
+<svg fill="none" viewbox="0 0 120 78" xmlns="http://www.w3.org/2000/svg">
+<path d="M76.7455 43.1092C76.41 43.5371 75.995 43.8933 75.5242 44.1575C75.0535 44.4218 74.5363 44.5889 74.0021 44.6492C73.468 44.7096 72.9274 44.6621 72.4112 44.5093C71.8951 44.3566 71.4136 44.1017 70.9943 43.7592L64.0166 38.0598V57.1688C64.0166 58.2737 63.5858 59.3334 62.8191 60.1147C62.0523 60.896 61.0124 61.335 59.9281 61.335C58.8437 61.335 57.8038 60.896 57.037 60.1147C56.2703 59.3334 55.8396 58.2737 55.8396 57.1688V38.0598L48.8509 43.7592C48.0037 44.4494 46.9221 44.7684 45.844 44.646C44.766 44.5236 43.7798 43.9698 43.1025 43.1065C42.4251 42.2431 42.1121 41.141 42.2322 40.0424C42.3523 38.9439 42.8958 37.939 43.743 37.2488L57.355 26.15C58.0817 25.5516 58.9883 25.226 59.9226 25.2279H59.9335C60.9148 25.2279 61.8088 25.5834 62.512 26.1723L76.1077 37.2488C76.5275 37.5907 76.8771 38.0135 77.1364 38.4932C77.3957 38.9729 77.5597 39.4999 77.6189 40.0443C77.6782 40.5886 77.6315 41.1394 77.4816 41.6654C77.3318 42.1913 77.0816 42.6819 76.7455 43.1092Z" fill="#0693e3"></path>
+<path clip-rule="evenodd" d="M40.1888 13.807C43.5529 8.47181 48.4871 4.3578 54.2851 2.05373C60.0831 -0.250342 66.4478 -0.626361 72.4683 0.979486C78.4888 2.58533 83.8565 6.09073 87.8031 10.994C91.7498 15.8973 94.0731 21.9471 94.4406 28.2776C97.6955 28.1214 100.948 28.6308 104.007 29.7759C107.066 30.9209 109.868 32.6784 112.25 34.9447C114.631 37.211 116.544 39.9402 117.874 42.9714C119.204 46.0027 119.925 49.2746 119.994 52.5944C120.064 55.9141 119.481 59.2144 118.279 62.3007C117.077 65.387 115.28 68.1969 112.996 70.5646C110.711 72.9323 107.985 74.81 104.977 76.087C101.969 77.364 98.7403 78.0143 95.4818 77.9998H31.9845C27.433 77.9937 22.935 76.999 18.7904 75.0822C14.6458 73.1654 10.9497 70.3703 7.94856 66.8834C4.9474 63.3965 2.71008 59.2978 1.38572 54.8604C0.0613673 50.4231 -0.319604 45.7491 0.268202 41.1499C0.856007 36.5507 2.39909 32.1321 4.79459 28.1884C7.1901 24.2447 10.383 20.8666 14.1605 18.2793C17.938 15.692 22.2133 13.9548 26.7015 13.1837C31.1896 12.4125 35.7876 12.625 40.1888 13.807ZM65.0033 8.32983C60.9897 8.3288 57.0574 9.48255 53.6589 11.6583C50.2603 13.834 47.5337 16.9434 45.7928 20.6284C45.3457 21.5721 44.566 22.3094 43.6093 22.6934C42.6525 23.0774 41.5889 23.0799 40.6303 22.7004C37.365 21.4125 33.8614 20.8729 30.3684 21.1202C26.8753 21.3674 23.4786 22.3954 20.4193 24.131C17.3601 25.8667 14.7134 28.2674 12.6673 31.1628C10.6212 34.0582 9.22578 37.3772 8.58023 40.884C7.93469 44.3908 8.05482 47.9994 8.9321 51.4536C9.80938 54.9078 11.4223 58.1227 13.6563 60.8702C15.8902 63.6176 18.6905 65.8301 21.8581 67.3505C25.0258 68.8709 28.4831 69.6619 31.9845 69.6674H95.4818C97.792 69.6666 100.075 69.1633 102.179 68.1913C104.284 67.2193 106.16 65.8009 107.683 64.0308C109.206 62.2608 110.341 60.1799 111.011 57.9272C111.682 55.6744 111.873 53.3018 111.572 50.9678C111.271 48.6338 110.484 46.3922 109.265 44.3928C108.045 42.3934 106.421 40.6822 104.501 39.3736C102.58 38.065 100.408 37.1891 98.1287 36.8045C95.8496 36.4199 93.5161 36.5354 91.2843 37.1432C90.6395 37.3193 89.9621 37.3318 89.3115 37.1797C88.6608 37.0275 88.0566 36.7153 87.5517 36.2704C87.0467 35.8254 86.6564 35.2612 86.4147 34.6271C86.1731 33.993 86.0875 33.3082 86.1654 32.6326C86.5229 29.5847 86.2423 26.4941 85.3421 23.5647C84.4419 20.6353 82.9426 17.9336 80.943 15.6378C78.9434 13.3419 76.4889 11.5041 73.7414 10.2453C70.9939 8.98663 68.0157 8.33012 65.0033 8.32983Z" fill="#a8d0f0" fill-rule="evenodd"></path>
+</svg>
+</div>
+<div class="cv-drop-title" id="dropTitle">Drag files here or click to upload</div>
+<div id="dropSubtitle" style="font-size: 14px; color: #64748b; margin-bottom: 10px;"></div>
+<div class="cv-upload-btn-inner">
+<svg fill="none" height="18" viewbox="0 0 16 18" width="18" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.4033 8.6V5L10.8033 1H2.40327C2.1911 1 1.98762 1.08429 1.83759 1.23431C1.68756 1.38434 1.60327 1.58783 1.60327 1.8V16.2C1.60327 16.4122 1.68756 16.6157 1.83759 16.7657C1.98762 16.9157 2.1911 17 2.40327 17H7.20327M11.6033 11V16.6M8.80327 13.8H14.4033" stroke="#1e293b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M10.4033 1V5H14.4033" stroke="#1e293b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>Select file</div>
+</div>
+<input accept=".ods,application/vnd.oasis.opendocument.spreadsheet,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" id="fileInput" style="position:absolute;left:-9999px;" type="file"/>
+</div>
+</div>
+<div class="is-hidden" id="converterControls">
+<ul class="cv-tabs">
+<li class="cv-tab active" data-target="tab-convert">Actions with the file</li>
+<li class="cv-tab" data-target="tab-settings">Export and Preview settings</li>
+</ul>
+<div class="cv-body">
+<div class="cv-tab-pane active" id="tab-convert">
+<div class="cv-row single">
+<div class="cv-actions">
+<button class="cv-btn cv-btn-primary" id="btnConvert" type="button">Download XLSX/ZIP</button>
+</div>
+</div>
+<div class="cv-result-wrap is-hidden" id="resultBox">
+<div class="cv-resline">
+<div class="cv-resleft">Source name</div>
+<div class="cv-resval" id="resultFile">—</div>
+</div>
+<div class="cv-resline">
+<div class="cv-resleft">Number of sheets</div>
+<div class="cv-resval" id="resultSheets">—</div>
+</div>
+<div class="cv-resline">
+<div class="cv-resleft">Status</div>
+<div class="cv-resval" style="color: #10b981;">Successfully generated</div>
+</div>
+</div>
+</div>
+<div class="cv-tab-pane" id="tab-settings">
+<div class="cv-row">
+<div class="cv-field">
+<label class="cv-label">Selecting a sheet to export</label>
+<select class="cv-select" id="sheetSelect"></select>
+<label style="display:flex; align-items:center; gap:10px; margin-top:8px; font-size:14px; cursor:pointer; color: #334155;">
+<input id="allSheets" style="width:18px; height:18px; accent-color:#0693e3;" type="checkbox"/>Pack all sheets into one ZIP archive</label>
+</div>
+<div class="cv-field">
+<label class="cv-label" for="previewRowsRange">Preview depth<span class="cv-term" id="previewRowsNum">20</span></label>
+<input class="cv-range" id="previewRowsRange" max="100" min="1" step="1" type="range" value="20"/>
+<div class="cv-actions" style="margin-top: 10px;">
+<button class="cv-btn cv-btn-secondary" id="btnPreview" type="button">Show sheet preview</button>
+</div>
+</div>
+</div>
+<div class="cv-row single is-hidden" id="previewWrap">
+<div class="cv-field">
+<label class="cv-label">Data Preview</label>
+<div class="cv-preview-box" id="previewBox"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  let dropArea = wrap.querySelector('#dropArea');
+  let dropTitle = wrap.querySelector('#dropTitle');
+  let dropSubtitle = wrap.querySelector('#dropSubtitle');
+  let fileInput = wrap.querySelector('#fileInput');
+  let converterControls = wrap.querySelector('#converterControls');
+  
+  let sheetSelect = wrap.querySelector('#sheetSelect');
+  let allSheetsChk = wrap.querySelector('#allSheets');
+  let btnPreview = wrap.querySelector('#btnPreview');
+  let btnConvert = wrap.querySelector('#btnConvert');
+  
+  let previewWrap = wrap.querySelector('#previewWrap');
+  let previewBox = wrap.querySelector('#previewBox');
+  let rangeSlider = wrap.querySelector('#previewRowsRange');
+  let numberBadge = wrap.querySelector('#previewRowsNum');
+  
+  let resultBox = wrap.querySelector('#resultBox');
+  let resultFile = wrap.querySelector('#resultFile');
+  let resultSheets = wrap.querySelector('#resultSheets');
+
+  let file = null;
+  let workbook = null;
+
+  let tabs = wrap.querySelectorAll('.cv-tab');
+  let panes = wrap.querySelectorAll('.cv-tab-pane');
+  
+  Array.from(tabs).forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      let targetId = tab.getAttribute('data-target');
+      Array.from(tabs).forEach(function(t) { t.classList.remove('active'); });
+      Array.from(panes).forEach(function(p) { p.classList.remove('active'); });
+      tab.classList.add('active');
+      let targetPane = wrap.querySelector('#' + targetId);
+      if (targetPane) targetPane.classList.add('active');
+    });
+  });
+
+  rangeSlider.addEventListener('input', function() { numberBadge.textContent = rangeSlider.value; });
+
+  function sanitizeBase(name) {
+    let validName = name ? name : 'sheet';
+    return String(validName).replace(/\.[^.]+$/, '').replace(/[\/\\?%*:|"\x3c\x3e]/g, '_');
+  }
+
+  function downloadBlob(blob, filename) {
+    let a = document.createElement('a');
+    let url = URL.createObjectURL(blob);
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(function() { URL.revokeObjectURL(url); }, 1500);
+  }
+
+  async function readFileAsArrayBuffer(f) { return await f.arrayBuffer(); }
+
+  dropArea.addEventListener('click', function() { fileInput.click(); });
+  dropArea.addEventListener('dragover', function(e) { e.preventDefault(); dropArea.style.backgroundColor = '#e6f3ff'; }, {passive: false});
+  dropArea.addEventListener('dragleave', function() { dropArea.style.backgroundColor = ''; });
+  
+  dropArea.addEventListener('drop', function(e) {
+    e.preventDefault();
+    dropArea.style.backgroundColor = '';
+    let dt = e.dataTransfer;
+    let fList = dt ? dt.files : null;
+    let hasFiles = fList ? (fList.length !== 0) : false;
+    if (hasFiles) { file = fList[0]; handleFile(file); }
+  });
+
+  fileInput.addEventListener('change', function() {
+    let fList = fileInput.files;
+    let hasFiles = fList ? (fList.length !== 0) : false;
+    if (hasFiles) { file = fList[0]; handleFile(file); }
+  });
+
+  async function handleFile(f) {
+    workbook = null;
+    sheetSelect.innerHTML = '';
+    resultBox.classList.add('is-hidden');
+    previewWrap.classList.add('is-hidden');
+    
+    dropTitle.textContent = 'Processing...';
+    dropSubtitle.textContent = 'Please wait';
+
+    try {
+      let arrayBuffer = await readFileAsArrayBuffer(f);
+      let hasXlsx = typeof XLSX !== 'undefined';
+      if (!hasXlsx) throw new Error('SheetJS error');
+      
+      workbook = XLSX.read(arrayBuffer, { type: 'array' });
+      let names = workbook.SheetNames ? workbook.SheetNames : [];
+      let noNames = names.length === 0;
+      if (noNames) { 
+          dropTitle.textContent = 'Error: Sheets not found'; 
+          dropSubtitle.textContent = 'Try uploading another file';
+          return; 
+      }
+
+      names.forEach(function(n) {
+        let opt = document.createElement('option');
+        opt.value = n;
+        opt.textContent = n;
+        sheetSelect.appendChild(opt);
+      });
+
+      dropTitle.textContent = f.name;
+      dropTitle.style.color = '#0693e3';
+      dropSubtitle.textContent = 'The file has been successfully uploaded. Click or drag to replace.';
+      
+      converterControls.classList.remove('is-hidden');
+      resultFile.textContent = f.name;
+      resultSheets.textContent = String(names.length);
+
+    } catch (err) {
+      dropTitle.textContent = 'Error reading file';
+      dropSubtitle.textContent = 'Make sure it\'s a valid ODS or XLSX file';
+      dropTitle.style.color = '#e11d48';
+    }
+  }
+
+  function sheetToPreview(sheetName, rowsCount) {
+    let isWb = workbook ? true : false;
+    if (!isWb) return '';
+    let ws = workbook.Sheets[sheetName];
+    if (!ws) return '';
+    try {
+      let csv = XLSX.utils.sheet_to_csv(ws, { FS: ' | ', strip: true });
+      let lines = csv.split(/\r?\n/).slice(0, rowsCount);
+      let res = lines.join('\n');
+      return res ? res : '(Blank sheet)';
+    } catch (e) {
+      return '(Error generating preview)';
+    }
+  }
+
+  btnPreview.addEventListener('click', function() {
+    let isWb = workbook ? true : false;
+    if (!isWb) return;
+    let rowsCount = parseInt(rangeSlider.value, 10);
+    let sn = allSheetsChk.checked ? workbook.SheetNames[0] : (sheetSelect.value ? sheetSelect.value : workbook.SheetNames[0]);
+    let text = sheetToPreview(sn, rowsCount);
+    previewBox.textContent = text;
+    previewWrap.classList.remove('is-hidden');
+  });
+
+  btnConvert.addEventListener('click', async function() {
+    let isWb = workbook ? true : false;
+    if (!isWb) return;
+
+    try {
+      let rawName = file ? file.name : 'document';
+      let sName = sanitizeBase(rawName);
+      let maxLen = 60;
+      let isTooLong = Math.max(sName.length, maxLen + 1) === sName.length;
+      if (isTooLong) sName = sName.slice(0, maxLen);
+      let baseName = sName;
+
+      btnConvert.textContent = 'Archiving...';
+
+      if (allSheetsChk.checked) {
+        let zip = new JSZip();
+        workbook.SheetNames.forEach(function(sn) {
+          let wb2 = XLSX.utils.book_new();
+          XLSX.utils.book_append_sheet(wb2, workbook.Sheets[sn], sn);
+          let out = XLSX.write(wb2, { bookType: 'xlsx', type: 'array' });
+          zip.file(baseName + '_' + sn + '.xlsx', out);
+        });
+        let zipBlob = await zip.generateAsync({ type: 'blob', compression: 'DEFLATE', compressionOptions: { level: 5 } });
+        downloadBlob(zipBlob, baseName + '_all_sheets.zip');
+      } else {
+        let sn = sheetSelect.value ? sheetSelect.value : workbook.SheetNames[0];
+        let wb2 = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(wb2, workbook.Sheets[sn], sn);
+        let out = XLSX.write(wb2, { bookType: 'xlsx', type: 'array' });
+        let blob = new Blob([out], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+        downloadBlob(blob, baseName + '_' + sn + '.xlsx');
+      }
+      
+      btnConvert.textContent = 'Download XLSX/ZIP';
+      resultBox.classList.remove('is-hidden');
+    } catch (e) {
+      btnConvert.textContent = 'Error!';
+      setTimeout(function() { btnConvert.textContent = 'Download XLSX/ZIP'; }, 2000);
+    }
+  });
+
+});
+</script>
+
+        <div class="post-content">
+<p>OpenDocument Spreadsheets (ODS), created in LibreOffice and Apache OpenOffice, are an excellent open-source solution. However, the de facto corporate standard remains the Microsoft Excel (XLSX) format. Our converter allows you to convert data from ODS to XLSX without distortion, ensuring full compatibility with Office 365, Google Sheets and other modern analytical systems.</p>
+<p>The main difference between this tool is its complete autonomy. Files are not uploaded to third-party servers, which guarantees absolute confidentiality of commercial and personal information.</p>
+<h2 class="wp-block-heading" id="tehnicheskoe-sravnenie-standartov-dannyh-2">Technical Comparison of Data Standards</h2>
+<p>To understand how the conversion occurs, it is important to consider the structural differences between both formats. Both file types are archives containing XML documents, but their architecture is different.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Characteristic</strong></td><td><strong>ODS format</strong></td><td><strong>XLSX format</strong></td></tr></thead><tbody><tr><td><strong>Approved Standard</strong></td><td>ISO/IEC 26300</td><td>ISO/IEC 29500</td></tr><tr><td><strong>Basic structure</strong></td><td>One file<code>content.xml</code>for data</td><td>Separate XML files for each sheet</td></tr><tr><td><strong>Macro support</strong></td><td>StarBasic Macros</td><td>VBA macros (requires resaving to XLSM)</td></tr><tr><td><strong>Parsing optimization</strong></td><td>Streaming reading is difficult</td><td>Ideal for fast streaming of big data</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="otsenka-effektivnosti-szhatiya-i-obrabotki-2">Evaluation of compression and processing efficiency</h2>
+<p>When the source XML tree is converted to the Office Open XML format, the data is repacked using the Deflate algorithm. The change in final file size can be predicted using a basic packaging efficiency ratio:</p>
+<p>$$C_{ratio} = \left( 1 — \frac{S_{xlsx}}{S_{ods}} \right) \times 100\%$$</p>
+<p><em>Where $C_{ratio}$ is the percentage of resizing, $S_{xlsx}$ is the size of the resulting Excel file in bytes, and $S_{ods}$ is the original size of the OpenDocument table.</em> In most cases, XLSX exhibits higher compression density for text nodes.</p>
+<h2 class="wp-block-heading" id="klyuchevye-vozmozhnosti-nashego-instrumenta-2">Key features of our tool</h2>
+<p>We have developed functionality that covers all the needs of data specialists, accountants and analysts:</p>
+<ul class="wp-block-list">
+<li><strong>Smart Preview:</strong> Evaluate the correct encoding and data integrity of the first lines of any sheet before downloading.</li>
+<li><strong>Selective export:</strong> Convert only the required sheet from a large book.</li>
+<li><strong>Batch archiving:</strong> Save all sheets of a document at once into a single ZIP archive, where each sheet becomes a separate XLSX file.</li>
+<li><strong>Client-Side processing:</strong> The entire computational load and conversion process is handled by your browser's resources (locally), reducing latency to milliseconds.</li>
+</ul>
+<h2 class="wp-block-heading" id="kak-preobrazovat-tablitsu-bez-poteri-dannyh-2">How to convert a table without losing data</h2>
+<p>The process of converting OpenDocument to Office Open XML is as simplified as possible and does not require the installation of additional software:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li>Download the original document with the extension<code>.ods</code>to the highlighted area on the screen (use button or drag).</li>
+<li>Select a specific sheet to export from the drop-down menu, or check the box to package the entire workbook in a ZIP archive.</li>
+<li>Use the preview depth slider to make sure you read the Cyrillic alphabet and special characters correctly.</li>
+<li>Click the generate button and download the finished XLSX file to your device.</li>
+</ol>
+<p>Modern browser technologies ensure that the resulting file maintains the accuracy of numerical values ​​and the structure of text cells, giving you a ready-to-use Excel document.</p>
+</div>
+    </div>
+</body>
+</html>

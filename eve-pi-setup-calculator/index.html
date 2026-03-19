@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planetary Production (PI) Calculator in EVE Online: Fitting and Chains</title>
+    <meta name="description" content="Planetary Production (PI) Calculator in EVE Online: Fitting and Chains - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Planetary Production (PI) Calculator in EVE Online: Fitting and Chains</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-row.cols-3 { grid-template-columns: repeat(3, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-receipt-wrap { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 15px; position: relative; overflow: hidden; }
+    .c-receipt-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: repeating-linear-gradient(45deg, #8b5cf6, #8b5cf6 10px, #a78bfa 10px, #a78bfa 20px); }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #fff; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #eff6ff; border: 1px solid #bae6fd; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05); }
+    .c-highlight-line:hover { background: #e0f2fe; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* Advanced PI Visuals */
+    .c-vis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 15px 0 25px; }
+    .c-gauge-box { padding: 20px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; display: flex; flex-direction: column; align-items: center; text-align: center; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); }
+    .c-gauge-svg { width: 120px; height: 120px; }
+    .c-gauge-bg { fill: none; stroke: #e2e8f0; stroke-width: 12; }
+    .c-gauge-fill { fill: none; stroke-width: 12; stroke-linecap: round; stroke-dasharray: 251.2; stroke-dashoffset: 251.2; transition: stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.5s; transform: rotate(-90deg); transform-origin: 50% 50%; }
+    .c-gauge-label { font-size: 14px; font-weight: 700; color: #0f172a; margin-top: -70px; margin-bottom: 50px; }
+    .c-gauge-val { font-size: 12px; color: #64748b; margin-top: 10px; font-weight: 600; }
+    
+    .c-flow-box { margin: 15px 0 25px; padding: 25px; background: #f8fafc; border-radius: 16px; border: 1px solid #e2e8f0; overflow: hidden; }
+    .c-flow-chain { display: flex; align-items: center; justify-content: space-between; position: relative; }
+    .c-flow-node { background: #fff; border: 2px solid #cbd5e1; border-radius: 12px; padding: 15px 10px; text-align: center; width: 30%; z-index: 2; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: border-color 0.3s; }
+    .c-flow-node.active { border-color: #0693e3; box-shadow: 0 4px 12px rgba(6, 147, 227, 0.15); }
+    .c-flow-title { font-size: 12px; font-weight: 700; color: #475569; text-transform: uppercase; margin-bottom: 5px; }
+    .c-flow-amount { font-size: 16px; font-weight: 800; color: #0f172a; }
+    .c-flow-sub { font-size: 11px; color: #888; margin-top: 4px; }
+    .c-flow-link { flex: 1; height: 4px; background: #e2e8f0; position: relative; z-index: 1; margin: 0 -5px; }
+    .c-flow-link-anim { position: absolute; top: 0; left: 0; height: 100%; width: 0%; background: linear-gradient(90deg, transparent, #0284c7, transparent); opacity: 0; }
+    .c-flow-link.active .c-flow-link-anim { opacity: 1; animation: flow-move 1.5s infinite linear; }
+    @keyframes flow-move { 0% { left: -50%; width: 50%; } 100% { left: 100%; width: 50%; } }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 520px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { 
+        .c-row.cols-2, .c-row.cols-3 { grid-template-columns: 1fr; } 
+        .c-vis-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-flow-chain { flex-direction: column; gap: 10px; }
+       .c-flow-node { width: 100%; }
+       .c-flow-link { width: 4px; height: 20px; margin: -5px 0; }
+       .c-flow-link-anim { width: 100%; height: 0%; background: linear-gradient(180deg, transparent, #0284c7, transparent); animation: flow-move-v 1.5s infinite linear; }
+       @keyframes flow-move-v { 0% { top: -50%; height: 50%; } 100% { top: 100%; height: 50%; } }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="pi-calc-wrapper">
+<div class="c-body">
+<div class="c-toggle" id="mode-tabs">
+<button class="c-toggle-btn active" data-mode="fitting">Colony fitting (PG/CPU)</button>
+<button class="c-toggle-btn" data-mode="throughput">Production chain</button>
+</div>
+<div id="mode-fitting-wrap">
+<div class="c-divider"><span class="icon">🛰️</span>Control Center</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Command Center Level<span class="c-help-icon" id="openPiInfo">?</span>
+</label>
+<select class="c-select" id="cc-level">
+<option value="0">Level 0 (Base)</option>
+<option value="1">Level 1</option>
+<option value="2">Level 2</option>
+<option value="3">Level 3</option>
+<option selected="" value="4">Level 4 (Standard)</option>
+<option value="5">Level 5 (Maximum)</option>
+</select>
+</div>
+</div>
+<div class="c-divider"><span class="icon">🏗️</span>Structures on the planet</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Extractors<span class="c-term">ECU</span></label>
+<div class="c-input-wrapper"><input class="c-input" id="b-ecu" placeholder="0" type="number" value="1"/></div>
+</div>
+<div class="c-field">
+<label class="c-label">Boers<span class="c-term">Heads</span></label>
+<div class="c-input-wrapper"><input class="c-input" id="b-heads" placeholder="0" type="number" value="10"/></div>
+</div>
+</div>
+<div class="c-row cols-3">
+<div class="c-field">
+<label class="c-label">Basic<span class="c-term">Basic</span></label>
+<div class="c-input-wrapper"><input class="c-input" id="b-basic" placeholder="0" type="number" value="2"/></div>
+</div>
+<div class="c-field">
+<label class="c-label">Advanced<span class="c-term">Adv.</span></label>
+<div class="c-input-wrapper"><input class="c-input" id="b-adv" placeholder="0" type="number" value="1"/></div>
+</div>
+<div class="c-field">
+<label class="c-label">Spaceports<span class="c-term">LP</span></label>
+<div class="c-input-wrapper"><input class="c-input" id="b-lp" placeholder="0" type="number" value="1"/></div>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field" style="grid-column: 1 / -1;">
+<label class="c-label">Reserve for links<span class="c-term">Links PG</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="b-links" placeholder="500" type="number" value="500"/>
+<span class="c-input-suffix">MW</span>
+</div>
+</div>
+</div>
+<div class="c-vis-grid is-hidden" id="fit-visuals">
+<div class="c-gauge-box">
+<svg class="c-gauge-svg" viewbox="0 0 100 100">
+<defs><lineargradient id="gradPg" x1="0%" x2="100%" y1="0%" y2="0%"><stop offset="0%" stop-color="#8b5cf6"></stop><stop offset="100%" stop-color="#3b82f6"></stop></lineargradient></defs>
+<circle class="c-gauge-bg" cx="50" cy="50" r="40"></circle>
+<circle class="c-gauge-fill" cx="50" cy="50" id="gauge-pg" r="40" stroke="url(#gradPg)"></circle>
+</svg>
+<div class="c-gauge-label" id="lbl-pg-pct">0%</div>
+<div class="c-gauge-val" id="lbl-pg-val">0 / 0 MW</div>
+<div style="font-weight:700; color:#333; margin-top:5px; font-size:13px;">Powergrid load</div>
+</div>
+<div class="c-gauge-box">
+<svg class="c-gauge-svg" viewbox="0 0 100 100">
+<defs><lineargradient id="gradCpu" x1="0%" x2="100%" y1="0%" y2="0%"><stop offset="0%" stop-color="#10b981"></stop><stop offset="100%" stop-color="#059669"></stop></lineargradient></defs>
+<circle class="c-gauge-bg" cx="50" cy="50" r="40"></circle>
+<circle class="c-gauge-fill" cx="50" cy="50" id="gauge-cpu" r="40" stroke="url(#gradCpu)"></circle>
+</svg>
+<div class="c-gauge-label" id="lbl-cpu-pct">0%</div>
+<div class="c-gauge-val" id="lbl-cpu-val">0 / 0 tf</div>
+<div style="font-weight:700; color:#333; margin-top:5px; font-size:13px;">CPU load</div>
+</div>
+</div>
+</div>
+<div class="is-hidden" id="mode-throughput-wrap">
+<div class="c-divider"><span class="icon">🏭</span>Target production</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">What do we produce?</label>
+<select class="c-select" id="t-tier">
+<option selected="" value="1">P1 (Processing R0)</option>
+<option value="2">P2 (Assembled from P1)</option>
+<option value="3">P3 (Assembled from P2)</option>
+</select>
+</div>
+<div class="c-field">
+<label class="c-label">Number of factories</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="t-count" placeholder="1" type="number" value="2"/>
+<span class="c-input-suffix">pcs</span>
+</div>
+</div>
+</div>
+<div style="display:flex; gap:8px; margin-bottom: 20px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-target="t-count" data-val="1" type="button">1 plant</button>
+<button class="c-quick-btn" data-target="t-count" data-val="2" type="button">2 factories</button>
+<button class="c-quick-btn" data-target="t-count" data-val="4" type="button">4 factories</button>
+<button class="c-quick-btn" data-target="t-count" data-val="8" type="button">8 factories</button>
+</div>
+<div class="c-flow-box is-hidden" id="flow-visual">
+<div class="c-flow-chain">
+<div class="c-flow-node active" id="flow-node-in">
+<div class="c-flow-title" id="flow-lbl-in">Raw materials (R0)</div>
+<div class="c-flow-amount" id="flow-val-in">0</div>
+<div class="c-flow-sub">units/hour</div>
+</div>
+<div class="c-flow-link active"><div class="c-flow-link-anim"></div></div>
+<div class="c-flow-node active">
+<div class="c-flow-title">Factories</div>
+<div class="c-flow-amount" id="flow-val-fac">0</div>
+<div class="c-flow-sub" id="flow-lbl-fac">Basic</div>
+</div>
+<div class="c-flow-link active"><div class="c-flow-link-anim"></div></div>
+<div class="c-flow-node active" id="flow-node-out" style="border-color: #8b5cf6;">
+<div class="c-flow-title" id="flow-lbl-out" style="color: #8b5cf6;">Product (P1)</div>
+<div class="c-flow-amount" id="flow-val-out">0</div>
+<div class="c-flow-sub">units/hour</div>
+</div>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">📊</span>System report</div>
+<div class="c-receipt-wrap" id="res-fitting-block">
+<div class="c-resline">
+<div class="c-resleft">Powergrid status<span class="c-subtext">Colony Energy</span></div>
+<div class="c-resval" id="resPgStatus"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">CPU status<span class="c-subtext">Computing power</span></div>
+<div class="c-resval" id="resCpuStatus"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+<div class="c-receipt-wrap is-hidden" id="res-throughput-block">
+<div class="c-resline c-highlight-line">
+<div class="c-resleft">Raw material consumption<span class="c-subtext">Per day (24h)</span></div>
+<div class="c-resval" id="resInDaily"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Product production<span class="c-subtext">Per day (24h)</span></div>
+<div class="c-resval" id="resOutDaily" style="color: #8b5cf6;"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline" style="border-bottom: none; border-top: 2px solid #e2e8f0; margin-top: 5px;">
+<div class="c-resleft">Output volume<span class="c-subtext">Product volume per 24 hours (m³)</span></div>
+<div class="c-resval" id="resVolDaily"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+</div>
+<div class="c-modal-overlay" id="piInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closePiInfo">×</button>
+<div class="c-modal-title"><span class="icon">📖</span>EVE PI Help</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">Command Center Features (Base + Upgrades):</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>Lv. 0:</b> 6 000 MW / 1 675 tf<br/>
+<b>Lv. 1:</b> 9 000 MW / 7 057 tf<br/>
+<b>Lv. 2:</b> 12 000 MW / 12 439 tf<br/>
+<b>Lv. 3:</b> 15 000 MW / 17 821 tf<br/>
+<b>Lv. 4 (Recommended):</b> 17 000 MW / 23 203 tf<br/>
+<b>Lv. 5 (Maximum):</b> 19 000 MW / 28 585 tf
+                </div>
+<div style="background: #eff6ff; padding: 12px; border-radius: 8px; border: 1px solid #bae6fd; font-size: 13px; color: #0284c7;">
+<b>Production:</b>The base plant processes 6000 R0 into 80 P1 per hour. Advanced P2 consumes 80 P1 (two types of 40 each) and produces 5 P2 per hour.</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let activeMode = 'fitting';
+  let isCalculated = false;
+
+  const CC_STATS = {
+      "0": { pg: 6000, cpu: 1675 },
+      "1": { pg: 9000, cpu: 7057 },
+      "2": { pg: 12000, cpu: 12439 },
+      "3": { pg: 15000, cpu: 17821 },
+      "4": { pg: 17000, cpu: 23203 },
+      "5": { pg: 19000, cpu: 28585 }
+  };
+
+  const STRUC_STATS = {
+      ecu: { pg: 2600, cpu: 400 },
+      head: { pg: 550, cpu: 10 },
+      basic: { pg: 800, cpu: 200 },
+      adv: { pg: 700, cpu: 500 },
+      lp: { pg: 700, cpu: 3600 }
+  };
+
+  const PROD_RATES = {
+      "1": { inName: "Raw materials (R0)", outName: "Product (P1)", facName: "Basic", inHr: 6000, outHr: 80, outVol: 0.38 },
+      "2": { inName: "Computers (P1)", outName: "Product (P2)", facName: "Advanced", inHr: 80, outHr: 5, outVol: 1.5 },
+      "3": { inName: "Computers (P2)", outName: "Product (P3)", facName: "Advanced", inHr: 20, outHr: 3, outVol: 8.0 }
+  };
+
+  $('#openPiInfo').addEventListener('click', () => { $('#piInfoModal').classList.add('show'); });
+  $('#closePiInfo').addEventListener('click', () => { $('#piInfoModal').classList.remove('show'); });
+  $('#piInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#piInfoModal').classList.remove('show');
+  });
+
+  function updateModeUI() {
+      if (Math.abs(activeMode === 'fitting') === 1) {
+          $('#mode-fitting-wrap').classList.remove('is-hidden');
+          $('#mode-throughput-wrap').classList.add('is-hidden');
+          $('#res-fitting-block').classList.remove('is-hidden');
+          $('#res-throughput-block').classList.add('is-hidden');
+      } else {
+          $('#mode-fitting-wrap').classList.add('is-hidden');
+          $('#mode-throughput-wrap').classList.remove('is-hidden');
+          $('#res-fitting-block').classList.add('is-hidden');
+          $('#res-throughput-block').classList.remove('is-hidden');
+      }
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  }
+
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeMode = btn.dataset.mode;
+        updateModeUI();
+    });
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          let targetId = btn.dataset.target;
+          let val = btn.dataset.val;
+          $('#' + targetId).value = val;
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  function formatNum(n) {
+      return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  }
+
+  function getSafeVal(id) {
+      let v = parseFloat($(id).value);
+      if (Math.abs(isNaN(v) === true) === 1) return 0;
+      if (Math.abs(Math.sign(v) === -1) === 1) return 0;
+      return v;
+  }
+
+  function updateGauge(gaugeId, lblPctId, lblValId, usage, max) {
+      let pct = (usage / max) * 100;
+      let safePct = pct;
+      
+      let isOver = false;
+      if (Math.abs(Math.sign(pct - 100) === 1) === 1) isOver = true;
+      if (Math.abs(isOver === true) === 1) safePct = 100;
+      
+      let c = 251.2; 
+      let offset = c - (safePct / 100) * c;
+      
+      $(gaugeId).style.strokeDashoffset = offset;
+      
+      let col = "";
+      if (Math.abs(isOver === true) === 1) {
+          col = "#d32f2f";
+      } else {
+          let isWarn = false;
+          if (Math.abs(Math.sign(pct - 90) === 1) === 1) isWarn = true;
+          if (Math.abs(isWarn === true) === 1) col = "#f59e0b";
+      }
+      
+      if (Math.abs(col !== "") === 1) {
+          $(gaugeId).style.stroke = col;
+          $(lblPctId).style.color = col;
+      } else {
+          $(gaugeId).style.stroke = ""; 
+          $(lblPctId).style.color = "#0f172a";
+      }
+      
+      $(lblPctId).textContent = pct.toFixed(1) + "%";
+      $(lblValId).textContent = formatNum(Math.round(usage)) + " / " + formatNum(max);
+      
+      return isOver;
+  }
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+
+    if (Math.abs(activeMode === 'fitting') === 1) {
+        let cc = $('#cc-level').value;
+        let maxPg = CC_STATS[cc].pg;
+        let maxCpu = CC_STATS[cc].cpu;
+
+        let nEcu = getSafeVal('#b-ecu');
+        let nHeads = getSafeVal('#b-heads');
+        let nBasic = getSafeVal('#b-basic');
+        let nAdv = getSafeVal('#b-adv');
+        let nLp = getSafeVal('#b-lp');
+        let linksPg = getSafeVal('#b-links');
+
+        let uPg = (nEcu * STRUC_STATS.ecu.pg) + (nHeads * STRUC_STATS.head.pg) + (nBasic * STRUC_STATS.basic.pg) + (nAdv * STRUC_STATS.adv.pg) + (nLp * STRUC_STATS.lp.pg) + linksPg;
+        let uCpu = (nEcu * STRUC_STATS.ecu.cpu) + (nHeads * STRUC_STATS.head.cpu) + (nBasic * STRUC_STATS.basic.cpu) + (nAdv * STRUC_STATS.adv.cpu) + (nLp * STRUC_STATS.lp.cpu);
+
+        let overPg = updateGauge('#gauge-pg', '#lbl-pg-pct', '#lbl-pg-val', uPg, maxPg);
+        let overCpu = updateGauge('#gauge-cpu', '#lbl-cpu-pct', '#lbl-cpu-val', uCpu, maxCpu);
+
+        if (Math.abs(overPg === true) === 1) {
+            $('#resPgStatus').textContent = "Overload (" + formatNum(uPg - maxPg) + " MW)";
+            $('#resPgStatus').style.color = "#d32f2f";
+        } else {
+            $('#resPgStatus').textContent = "Normal (Remainder:" + formatNum(maxPg - uPg) + ")";
+            $('#resPgStatus').style.color = "#0693e3";
+        }
+
+        if (Math.abs(overCpu === true) === 1) {
+            $('#resCpuStatus').textContent = "Overload (" + formatNum(uCpu - maxCpu) + " tf)";
+            $('#resCpuStatus').style.color = "#d32f2f";
+        } else {
+            $('#resCpuStatus').textContent = "Normal (Remainder:" + formatNum(maxCpu - uCpu) + ")";
+            $('#resCpuStatus').style.color = "#0693e3";
+        }
+
+        $('#fit-visuals').classList.remove('is-hidden');
+
+    } else {
+        let tType = $('#t-tier').value;
+        let tCount = getSafeVal('#t-count');
+        
+        let isZero = false;
+        if (Math.abs(Math.sign(tCount) === 0) === 1) isZero = true;
+        
+        if (Math.abs(isZero === true) === 1) {
+            $('#flow-visual').classList.add('is-hidden');
+            if (Math.abs(shouldScroll === true) === 1) {
+                $('#errorMsg').textContent = "Specify the number of plants greater than zero";
+                $('#errorMsg').classList.add('show');
+            }
+            return;
+        }
+
+        let rate = PROD_RATES[tType];
+        
+        let inHr = rate.inHr * tCount;
+        let outHr = rate.outHr * tCount;
+        
+        let inDay = inHr * 24;
+        let outDay = outHr * 24;
+        let volDay = outDay * rate.outVol;
+
+        $('#flow-lbl-in').textContent = rate.inName;
+        $('#flow-lbl-out').textContent = rate.outName;
+        $('#flow-lbl-fac').textContent = rate.facName + " x" + tCount;
+        
+        $('#flow-val-in').textContent = formatNum(inHr);
+        $('#flow-val-fac').textContent = tCount;
+        $('#flow-val-out').textContent = formatNum(outHr);
+        
+        $('#resInDaily').textContent = formatNum(inDay) + "units";
+        $('#resOutDaily').textContent = formatNum(outDay) + "units";
+        $('#resVolDaily').textContent = volDay.toFixed(1) + "m³";
+
+        $('#flow-visual').classList.remove('is-hidden');
+    }
+
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#resultBox').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(e.target.tagName === 'SELECT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    wrap.querySelectorAll('input[type="number"]').forEach(i => i.value = i.defaultValue || '');
+    $('#resultBox').classList.remove('show');
+    $('#fit-visuals').classList.add('is-hidden');
+    $('#flow-visual').classList.add('is-hidden');
+    isCalculated = false;
+    
+    // Reset gauges visually
+    $('#gauge-pg').style.strokeDashoffset = 251.2;
+    $('#gauge-cpu').style.strokeDashoffset = 251.2;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      let valClean = valRaw.replace(/[^\d\s\.]/g, '').replace(/\s/g, '').trim();
+      navigator.clipboard.writeText(valClean);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Planetary Interaction (PI) is one of the most stable ways to generate passive income in New Eden. However, setting up an effective colony requires an accurate calculation of Command Center resources and an understanding of the logistics of production cycles. Our calculator is designed to take the hassle out of routine calculations and help you create a colony gold standard.</p>
+<h2 class="wp-block-heading" id="kak-rabotaet-kalkulyator-pi-2">How the PI calculator works</h2>
+<p>The tool is divided into two key modules that cover all the capsuleer's planning needs:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Colony Fitting (PG/CPU):</strong> Allows you to find out in advance whether all planned factories, extractors and spaceports will fit within the limits of your command center. There is no longer a need to fly to a planet to check whether 100 MW of energy is enough for another drill.</li>
+<li><strong>Production chain:</strong> Calculates the actual output (P1, P2 or P3) per day and the required amount of raw materials. This is critical to setting up extraction cycles so that plants don't sit idle without resources.</li>
+</ol>
+<h3 class="wp-block-heading" id="tehnicheskie-harakteristiki-i-fiting-struktur-2">Specifications and fitting structures</h3>
+<p>The effectiveness of your base directly depends on your skill level <strong>Command Center Upgrades</strong>. Every structure on the planet consumes two types of resources: computing power (CPU) and energy (Powergrid).</p>
+<h2 class="wp-block-heading" id="tablitsa-potrebleniya-resursov-strukturami-2">Table of resource consumption by structures</h2>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Structure</strong></td><td><strong>Energy (PG), MW</strong></td><td><strong>Power (CPU), tf</strong></td><td><strong>Function</strong></td></tr></thead><tbody><tr><td><strong>Extractor Control Unit (ECU)</strong></td><td>2600</td><td>400</td><td>Raw material production management</td></tr><tr><td><strong>Extractor Head (Drill)</strong></td><td>550</td><td>10</td><td>Spot mining R0</td></tr><tr><td><strong>Basic Industry Facility</strong></td><td>800</td><td>200</td><td>Recycling R0 to P1</td></tr><tr><td><strong>Advanced Industry Facility</strong></td><td>700</td><td>500</td><td>Production P2 and P3</td></tr><tr><td><strong>Launchpad (Spaceport)</strong></td><td>700</td><td>3600</td><td>Storage and export</td></tr></tbody></table></div></figure>
+<p>To calculate the total load on the system, the formula is used:</p>
+<p>$$L_{total} = \sum_{i=1}^{n} (Count_i \times Cost_i) + Links_{res}$$</p>
+<p>Where $L_{total}$ is the total load, $Count$ is the number of buildings of a certain type, and $Links_{res}$ is the power reserve for planetary links (connecting circuits).</p>
+<h3 class="wp-block-heading" id="proizvodstvennye-tsikly-i-tiry-produktsii-2">Production cycles and ranges of products</h3>
+<p>In EVE Online, production is divided into several stages (tiers). The right balance between raw material extraction (R0) and plant speed determines your bottom line.</p>
+<h3 class="wp-block-heading" id="moshhnosti-pererabotki-po-urovnyam-2">Refining capacity by level</h3>
+<ul class="wp-block-list">
+<li><strong>Tier 1 (P1):</strong> The base plant consumes 6,000 units of raw materials (R0) per hour and produces 80 units of output P1.</li>
+<li><strong>Tier 2 (P2):</strong> An advanced plant consumes 80 units of P1 (usually two types of 40 each) and produces 5 units of P2 per hour.</li>
+<li><strong>Tier 3 (P3):</strong> An advanced plant consumes P2 components and produces 3 units of P3 per hour.</li>
+</ul>
+<p>To calculate daily output, the following formula is used:</p>
+<p>$$V_{day} = Factories \times Rate_{hr} \times 24$$</p>
+<p>Where $V_{day}$ is the volume of production for 24 hours, and $Rate_{hr}$ is the hourly production rate for the selected shooting range.</p>
+<h2 class="wp-block-heading" id="sovety-po-optimizatsii-pi-2">PI Optimization Tips</h2>
+<h3 class="wp-block-heading" id="maksimizatsiya-effektivnosti-linkov-2">Maximizing link efficiency</h3>
+<p>Links between buildings also consume PG resources. To minimize costs, try to locate factories as close to each other and to the spaceport as possible. Use a star design where Launchpad is the central node.</p>
+<h3 class="wp-block-heading" id="urovni-komandnogo-tsentra-2">Command Center Levels</h3>
+<p>Never skimp on the command center level. The difference between level 4 and 5 of the CC Upgrades skill can allow you to install 2 additional drills or one extra plant, which will increase the profitability of the planet by 15-20%.</p>
+<h3 class="wp-block-heading" id="balans-ekstraktsii-2">Extraction balance</h3>
+<p>If the calculator shows that your plants consume 144,000 R0 units per day, adjust the extractor cycle so that the Average Yield is slightly above this value. This will create a buffer in case of temporary depletion of resources in the mining spot.</p>
+<h3 class="wp-block-heading" id="pochemu-stoit-ispolzovat-nash-kalkulyator-2">Why you should use our calculator</h3>
+<ul class="wp-block-list">
+<li><strong>Data Accuracy:</strong> All PG/CPU values ​​and production rates correspond to the current EVE Online patch.</li>
+<li><strong>Visual control:</strong> Interactive load scales (Gauges) instantly show critical system overload.</li>
+<li><strong>Volume calculation:</strong> We take into account the volume of products in m³, which helps to calculate in advance how often you will have to take the goods to customs (Customs Office).</li>
+<li><strong>Speed:</strong> Instant recalculation when changing any parameter without reloading the page.</li>
+</ul>
+<p>Start planning your planetary empire now so that every unit of energy in your Command Center works towards your ISK profit!</p>
+</div>
+    </div>
+</body>
+</html>

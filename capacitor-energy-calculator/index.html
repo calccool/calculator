@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacitor energy and charge calculator: Online calculation of RC circuit</title>
+    <meta name="description" content="Capacitor energy and charge calculator: Online calculation of RC circuit - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Capacitor energy and charge calculator: Online calculation of RC circuit</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (Золотой стандарт + Мобильный фикс) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(220px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 10px; } 
+    .c-input-suffix {
+        position: absolute; right: 32px; top: 50%; transform: translateY(-50%);
+        color: #888; font-size: 14px; pointer-events: none; font-weight: 500;
+    }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 10px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+    
+    .c-divider { 
+        display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; 
+        font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; }
+
+    .c-result { border:1px dashed #0693e3; border-radius:10px; padding:10px; background:#fff; display:none; scroll-margin-top: 20px; }
+    .c-result.show { display:grid; }
+    
+    .c-result-title {
+        margin: 0 0 10px 0; padding: 0 12px;
+        font-size: 18px; font-weight: 700; color: #333;
+        display: flex; align-items: center; gap: 8px;
+    }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #0693e3; grid-template-columns: 1fr auto 30px; }
+    .c-resline:last-child { border-bottom:none; }
+    
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 4px; }
+    
+    .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden; padding: 3px;
+      background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+      background-repeat:no-repeat; background-position:center; background-size:20px 20px; opacity: 0.6;}
+    .c-copy:hover { opacity: 1; }
+
+    .c-error { color: #d32f2f; background: #ffebee; padding: 10px; border-radius: 8px; margin-bottom: 10px; display: none; font-size: 14px; }
+    .c-error.show { display: block; }
+    
+    /* Visualization */
+    .c-visual-box { text-align: center; margin-bottom: 20px; padding: 10px; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0; height: 160px; display:flex; align-items:center; justify-content:center; }
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    
+    /* Mobile Result Optimization (Обязательный блок!) */
+    @media (max-width: 480px) {
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 4px; padding: 12px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 19px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 24px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-visual-box" id="visualBox">
+<svg preserveaspectratio="xMidYMid meet" style="width:100%; height:100%;" viewbox="0 0 200 120">
+<line stroke="#555" stroke-width="2" x1="20" x2="80" y1="60" y2="60"></line>
+<line stroke="#555" stroke-width="2" x1="120" x2="180" y1="60" y2="60"></line>
+<line stroke="#555" stroke-width="4" x1="80" x2="80" y1="30" y2="90"></line>
+<line stroke="#555" stroke-width="4" x1="120" x2="120" y1="30" y2="90"></line>
+<text fill="#d32f2f" font-size="16" font-weight="bold" x="60" y="50">+</text>
+<text fill="#0288d1" font-size="16" font-weight="bold" x="130" y="50">−</text>
+<text fill="#333" font-size="12" text-anchor="middle" x="100" y="20">C</text>
+<text fill="#333" font-size="12" text-anchor="middle" x="100" y="110">E = ½CV²</text>
+</svg>
+</div>
+<div class="c-divider"><span class="icon">⚡</span>Circuit Parameters</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Voltage<span class="c-term">V</span></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="voltage" step="any" type="number" value="12"/>
+<span class="c-input-suffix">IN</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Capacity<span class="c-term">C</span></label>
+<div class="c-input-wrapper" style="display:flex; gap:5px;">
+<input class="c-input param-inp" id="cap" step="any" style="flex:1;" type="number" value="100"/>
+<select class="c-select" id="capUnit" style="width:80px; padding:12px 10px;">
+<option value="0.000001">µF</option>
+<option value="0.000000001">nF</option>
+<option value="0.000000000001">pF</option>
+<option value="1">F</option>
+</select>
+</div>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Circuit resistance<span class="c-term">R</span></label>
+<div class="c-input-wrapper" style="display:flex; gap:5px;">
+<input class="c-input param-inp" id="res" step="any" style="flex:1;" type="number" value="1000"/>
+<select class="c-select" id="resUnit" style="width:80px; padding:12px 10px;">
+<option value="1">Ohm</option>
+<option value="1000">kOhm</option>
+<option value="1000000">MOhm</option>
+</select>
+</div>
+<small style="font-size:11px; color:#888;">Needed to calculate discharge time</small>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate energy</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div aria-live="polite" class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">🔋</span>Results</div>
+<div class="c-resline" style="background:#e3f2fd;">
+<div class="c-resleft">Stored Energy (E)<span class="c-subtext">Field work</span>
+</div>
+<div class="c-resval" id="resEnergy"></div>
+<button class="c-copy" id="copyE"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Electric charge (Q)<span class="c-subtext">Accumulated charge</span>
+</div>
+<div class="c-resval" id="resCharge"></div>
+<button class="c-copy" id="copyQ"></button>
+</div>
+<div class="c-divider" style="margin-top:20px; margin-bottom:5px; font-size:12px;">Discharge dynamics</div>
+<div class="c-resline">
+<div class="c-resleft">Time constant (τ)<span class="c-subtext">RC chain</span>
+</div>
+<div class="c-resval" id="resTau"></div>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Time is full. category<span class="c-subtext">5 × τ</span>
+</div>
+<div class="c-resval" id="resTimeFull"></div>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Peak current (I)<span class="c-subtext">At the start of the discharge</span>
+</div>
+<div class="c-resval" id="resCurrent"></div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика =====
+  const $ = (s) => wrap.querySelector(s);
+  const $$ = (s) => wrap.querySelectorAll(s);
+  const resBox = $('#resultBox');
+  const errorEl = $('#errorMsg');
+  
+  const inpV = $('#voltage');
+  const inpC = $('#cap');
+  const selC = $('#capUnit');
+  const inpR = $('#res');
+  const selR = $('#resUnit');
+  
+  const out = {
+      E: $('#resEnergy'),
+      Q: $('#resCharge'),
+      tau: $('#resTau'),
+      t5: $('#resTimeFull'),
+      I: $('#resCurrent')
+  };
+
+  function num(el) { const n = parseFloat(el.value); return isNaN(n) ? 0 : n; }
+
+  // Подсветка
+  $$('.param-inp').forEach(inp => {
+      inp.addEventListener('input', () => {
+          if (inp.value) inp.classList.add('filled');
+          else inp.classList.remove('filled');
+      });
+  });
+
+  // Scientific notation formatter
+  function fmt(val, unit) {
+      if (val === 0) return "0 " + unit;
+      
+      const absVal = Math.abs(val);
+      
+      // Если число очень маленькое или очень большое, используем экспоненту
+      if (Math.sign(absVal - 0.0001) === -1 || Math.sign(absVal - 10000) === 1) {
+          return val.toExponential(2) + " " + unit;
+      }
+      
+      // Иначе обычный вывод
+      return parseFloat(val.toFixed(4)) + " " + unit;
+  }
+
+  function calc() {
+      errorEl.classList.remove('show');
+      
+      const V = num(inpV);
+      const rawC = num(inpC);
+      const multC = parseFloat(selC.value);
+      const rawR = num(inpR);
+      const multR = parseFloat(selR.value);
+      
+      // Convert to base units (Farads, Ohms)
+      const C = rawC * multC;
+      const R = rawR * multR;
+      
+      let err = false;
+      if (Math.sign(rawC) === -1 || Math.sign(rawR) === -1) err = true;
+      if (rawC === 0) err = true;
+      
+      if (err) {
+          errorEl.textContent = "Capacitance and Resistance must be positive.";
+          errorEl.classList.add('show'); resBox.classList.remove('show'); return;
+      }
+      
+      // 1. Energy E = 0.5 * C * V^2
+      const E = 0.5 * C * Math.pow(V, 2);
+      
+      // 2. Charge Q = C * V
+      const Q = C * V;
+      
+      // 3. Time Constant tau = R * C
+      const tau = R * C;
+      
+      // 4. Full Discharge ~ 5 * tau
+      const tFull = 5 * tau;
+      
+      // 5. Peak Current I = V / R (if R > 0)
+      let I = 0;
+      if (R !== 0) I = V / R;
+
+      // Output
+      out.E.textContent = fmt(E, "J");
+      out.Q.textContent = fmt(Q, "Cl");
+      out.tau.textContent = fmt(tau, "With");
+      out.t5.textContent = fmt(tFull, "With");
+      out.I.textContent = fmt(I, "A");
+
+      resBox.classList.add('show');
+      resBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  // Слушатели
+  $('#calcBtn').addEventListener('click', calc);
+  $('#resetBtn').addEventListener('click', () => {
+    $$('.param-inp').forEach(inp => {
+        inp.value = inp.defaultValue;
+        inp.classList.remove('filled');
+    });
+    // Defaults for selects
+    selC.value = "0.000001";
+    selR.value = "1";
+    
+    resBox.classList.remove('show');
+    errorEl.classList.remove('show');
+  });
+
+  wrap.addEventListener('click', (e) => {
+    if (e.target.classList.contains('c-copy')) {
+      const parent = e.target.parentElement;
+      const val = parent.querySelector('.c-resval').textContent;
+      if (val) navigator.clipboard.writeText(val);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>In modern electronics, capacitors play the role of temporary energy storage. Understanding how much energy a component can store and how quickly it releases it to the load is critical when designing power supplies, flash units, audio systems, and timing circuits. Our <strong>capacitor energy calculator</strong> allows you to instantly calculate key electric field parameters without complex manual calculations.</p>
+<h2 class="wp-block-heading" id="kak-rabotaet-kalkulyator-2">How does the calculator work?</h2>
+<p>The tool performs calculations based on the three basic laws of electrostatics and electrical engineering. To obtain the result, it is enough to enter the known parameters: voltage ( $V$ ), capacitance ( $C$ ) and, optionally, circuit resistance ( $R$ ).</p>
+<p>The calculator determines the following values:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Potential energy ( $E$ )</strong> - the work that can be done by the electric field of a capacitor during discharge.</li>
+<li><strong>Electric Charge ( $Q$ )</strong> - the amount of electricity accumulated on the plates.</li>
+<li><strong>Time constant ( $\tau$ )</strong> - an indicator of the inertia of the system, which determines the rate of charge or discharge through a resistor.</li>
+</ol>
+<h2 class="wp-block-heading" id="osnovnye-formuly-rascheta-2">Basic calculation formulas</h2>
+<p>For those who want to understand the physics of the process or check the calculations manually, we present the equations used.</p>
+<p>1. Energy stored in a capacitor ( $E$ )</p>
+<p>Energy is measured in Joules ( $J$ ) and is proportional to the square of the voltage. This means that when the voltage increases by 2 times, the stored energy will increase by 4 times.</p>
+<p>$$E = \frac{1}{2} \cdot C \cdot V^2$$</p>
+<p>2. Electric charge ( $Q$ )</p>
+<p>Charge is measured in Coulombs ( $C$ ) and shows the total number of charge carriers.</p>
+<p>$$Q = C \cdot V$$</p>
+<p>3. RC circuit time constant ( $\tau$ )</p>
+<p>This parameter shows the time during which the voltage on the capacitor will change by a factor of $e$ (approximately 63%). Measured in seconds ( $s$ ).</p>
+<p>$$\tau = R \cdot C$$</p>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p><strong>Important:</strong> In engineering practice, it is believed that a capacitor is fully charged or discharged in a time equal to <strong>$5\tau$</strong> (five time constants).</p>
+</blockquote>
+<h2 class="wp-block-heading" id="tablitsa-edinits-izmereniya-emkosti-2">Capacitance unit table</h2>
+<p>On capacitor housings, capacitance is often indicated in micro-, nano-, or picofarads. For correct calculation using formulas, it is necessary to convert them to Farads. Our calculator does this automatically, but the table below will help you navigate the markings.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Prefix</strong></td><td><strong>Designation</strong></td><td><strong>Multiplier (Farads)</strong></td><td><strong>Example</strong></td></tr></thead><tbody><tr><td><strong>Micro-</strong></td><td>µF ( $\mu F$ )</td><td>$10^{-6}$</td><td> $100 \text{ мкФ} = 0.0001 \text{ Ф}$ </td></tr><tr><td><strong>Nano-</strong></td><td>nF ( $nF$ )</td><td>$10^{-9}$</td><td> $10 \text{ нФ} = 0.00000001 \text{ Ф}$ </td></tr><tr><td><strong>Pico-</strong></td><td>pF ( $pF$ )</td><td>$10^{-12}$</td><td> $47 \text{ пФ} = 0.000000000047 \text{ Ф}$ </td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="prakticheskoe-primenenie-2">Practical Application</h2>
+<p>Calculation of capacitor energy is necessary in various areas:</p>
+<ul class="wp-block-list">
+<li><strong>Pulse technique:</strong> Calculation of the power of a camera flash or strobe.</li>
+<li><strong>Safety:</strong> Assess the danger of residual charge in high-voltage capacitors (such as microwave ovens or tube amplifiers) even after power has been turned off.</li>
+<li><strong>Car audio:</strong> Selection of a buffer capacitor (ionistor) to compensate for voltage drops on the subwoofer during peak loads.</li>
+<li><strong>Defibrillators:</strong> Calculation of the exact dose of energy (Joules) to restore heart rhythm.</li>
+</ul>
+<h2 class="wp-block-heading" id="primer-rascheta-2">Calculation example</h2>
+<p>Let's say we have a capacitor with a capacity <strong>470 µF</strong>, charged to voltage <strong>50 Volt</strong>, which is discharged through a resistor <strong>2 kOhm</strong>.</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Energy:</strong> $E = 0.5 \cdot 0.00047 \cdot 50^2 = \mathbf{0.5875 \text{ Дж}}$ </li>
+<li><strong>Charge:</strong> $Q = 0.00047 \cdot 50 = \mathbf{0.0235 \text{ Кл}}$ </li>
+<li><strong>Time constant:</strong> $\tau = 2000 \cdot 0.00047 = \mathbf{0.94 \text{ сек}}$ </li>
+<li><strong>Full rank:</strong> $t = 5 \cdot 0.94 = \mathbf{4.7 \text{ сек}}$ </li>
+</ol>
+<p>Use the form above to get instant results with any combination of parameters.</p>
+</div>
+    </div>
+</body>
+</html>

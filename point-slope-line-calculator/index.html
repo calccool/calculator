@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line equation calculator using point and slope</title>
+    <meta name="description" content="Line equation calculator using point and slope - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Line equation calculator using point and slope</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-row.cols-3 { grid-template-columns: repeat(3, minmax(220px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    .c-input, .c-select { width:100%; padding:12px 14px; border:1px solid #ccc; border-radius:8px; font-size:14px; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    /* Внутренние лейблы */
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 45px; } 
+    .c-input-suffix {
+        position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+        color: #888; font-size: 14px; pointer-events: none; font-weight: 500;
+    }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap;margin-bottom: 16px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+
+    /* Результат */
+    .c-result { border:1px dashed #4caf50; border-radius:10px; padding:10px; background:#fff; display:none; }
+    .c-result.show { display:grid; }
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #4caf50; grid-template-columns: 0.4fr 0.5fr 0.1fr; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; text-align: right; }
+    
+    /* График */
+    .c-graph-box {
+        width: 100%; height: 250px; background: #f9f9f9; border: 1px solid #eee;
+        margin-bottom: 20px; border-radius: 8px; position: relative; overflow: hidden;
+    }
+    .c-graph-svg { width: 100%; height: 100%; }
+    
+    /* Шаги решения */
+    .c-steps {
+        background: #f0f9ff; padding: 15px; border-radius: 8px; font-size: 14px; 
+        color: #333; margin-top: 10px; border-left: 4px solid #0693e3;
+        line-height: 1.6;
+    }
+
+    .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden;
+      background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+      background-repeat:no-repeat; background-position:center; background-size:20px 20px; }
+
+    .is-hidden { display:none !important; }
+    @media (max-width: 600px) { .c-row.cols-3 { grid-template-columns: 1fr; } }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-row cols-3">
+<div class="c-field">
+<label class="c-label" for="x1">Point X</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="x1" step="any" type="number" value="2"/>
+<span class="c-input-suffix">x₁</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label" for="y1">Point Y</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="y1" step="any" type="number" value="3"/>
+<span class="c-input-suffix">y₁</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label" for="slope">Slope</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="slope" step="any" type="number" value="-0.5"/>
+<span class="c-input-suffix">m</span>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Plot an equation</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-graph-box is-hidden" id="graphBox">
+<svg class="c-graph-svg" id="graphSvg" viewbox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+</svg>
+</div>
+<div aria-live="polite" class="c-result" id="resultBox">
+<div class="c-resline is-hidden" id="validationError" style="background:#ffdddd; color:#cc0000;">
+<div class="c-resleft">Error:</div>
+<div class="c-resval" id="errorMsg" style="color:#cc0000; font-weight: 500;"></div>
+<button class="c-copy is-hidden" disabled=""></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Equation (y = mx + b)</div>
+<div class="c-resval" id="resSlopeForm"></div>
+<button class="c-copy" id="copySlopeForm"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">General equation (Ax + By + C = 0)</div>
+<div class="c-resval" id="resGeneralForm"></div>
+<button class="c-copy" id="copyGeneralForm"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Tilt angle</div>
+<div class="c-resval" id="resAngle"></div>
+<button class="c-copy" id="copyAngle"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Intersection with X</div>
+<div class="c-resval" id="resXInt"></div>
+<button class="c-copy" id="copyXInt"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Intersection with Y</div>
+<div class="c-resval" id="resYInt"></div>
+<button class="c-copy" id="copyYInt"></button>
+</div>
+<div class="c-steps" id="stepsBox"></div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика =====
+  const $ = (s) => wrap.querySelector(s);
+  
+  const resBox = $('#resultBox');
+  const errorBox = $('#validationError');
+  const errorMsg = $('#errorMsg');
+  const graphBox = $('#graphBox');
+  const graphSvg = $('#graphSvg');
+  const stepsBox = $('#stepsBox');
+  
+  const outputs = {
+      slopeForm: $('#resSlopeForm'),
+      generalForm: $('#resGeneralForm'),
+      angle: $('#resAngle'),
+      xInt: $('#resXInt'),
+      yInt: $('#resYInt')
+  };
+
+  // ----- Вспомогательные функции (ИСПРАВЛЕНО) -----
+  function num(v){ const n = parseFloat(v); return Number.isFinite(n) ? n : NaN; }
+  
+  function fmt(v, d=2){ 
+      const n = Number(v);
+      const abs = Math.abs(n);
+      
+      // Замена оператора < на Math.sign
+      // Если abs < 0.0001 (т.е. 0.0001 - abs > 0)
+      if (Math.sign(0.0001 - abs) === 1) {
+          if (n !== 0) return n.toExponential(2);
+      }
+      return parseFloat(n.toFixed(d)); 
+  }
+
+  function setError(msg) {
+    errorMsg.textContent = msg;
+    errorBox.classList.remove('is-hidden');
+    resBox.classList.add('show');
+  }
+  function hideError() {
+    errorBox.classList.add('is-hidden');
+  }
+  
+  // Рисование графика SVG
+  function drawGraph(m, b, x1, y1) {
+      graphBox.classList.remove('is-hidden');
+      
+      const limit = Math.max(10, Math.abs(x1) + 5, Math.abs(y1) + 5, Math.abs(b) + 5);
+      
+      const w = 300;
+      const h = 200;
+      
+      const scaleX = w / (2 * limit);
+      const scaleY = h / (2 * limit);
+      
+      const toSvgX = (x) => 150 + x * scaleX;
+      const toSvgY = (y) => 100 - y * scaleY;
+      
+      let html = '';
+      
+      // Оси
+      html += `<line x1="0" y1="100" x2="300" y2="100" stroke="#ccc" stroke-width="1" />`;
+      html += `<line x1="150" y1="0" x2="150" y2="200" stroke="#ccc" stroke-width="1" />`;
+      
+      const xStart = -limit;
+      const yStart = m * xStart + b;
+      const xEnd = limit;
+      const yEnd = m * xEnd + b;
+      
+      // Линия
+      html += `<line x1="${toSvgX(xStart)}" y1="${toSvgY(yStart)}" x2="${toSvgX(xEnd)}" y2="${toSvgY(yEnd)}" stroke="#0693e3" stroke-width="2" />`;
+      
+      // Точка
+      html += `<circle cx="${toSvgX(x1)}" cy="${toSvgY(y1)}" r="4" fill="#ff5722" />`;
+      html += `<text x="${toSvgX(x1) + 5}" y="${toSvgY(y1) - 5}" font-size="10" fill="#333">(${x1}, ${y1})</text>`;
+
+      graphSvg.innerHTML = html;
+  }
+
+  // ----- Главный расчет -----
+  function calc() {
+    hideError();
+    stepsBox.innerHTML = '';
+    
+    // 1. Сбор данных
+    const x1 = num($('#x1').value);
+    const y1 = num($('#y1').value);
+    const m = num($('#slope').value);
+
+    // 2. Валидация
+    if (isNaN(x1) || isNaN(y1) || isNaN(m)) {
+        setError('Please enter correct numbers.');
+        return;
+    }
+
+    // 3. Расчет b (свободный член)
+    const b = y1 - (m * x1);
+    
+    // 4. Формирование строк
+    let signB = (Math.sign(b) === -1) ? '-' : '+';
+    let absB = Math.abs(b);
+    let eqSlope = `y = ${fmt(m)}x ${signB} ${fmt(absB)}`;
+    if (Math.sign(Math.abs(b)) === 0) eqSlope = `y = ${fmt(m)}x`;
+    
+    let signC = (Math.sign(b) === -1) ? '-' : '+';
+    let eqGeneral = `${fmt(m)}x - y ${signC} ${fmt(absB)} = 0`;
+    
+    // Angle
+    const angleRad = Math.atan(m);
+    const angleDeg = angleRad * (180 / Math.PI);
+    
+    // Intercepts
+    const yIntText = `(0, ${fmt(b)})`;
+    
+    let xIntText = 'No (parallel to X)';
+    // Проверка m != 0 без операторов сравнения
+    if (Math.sign(Math.abs(m) - 0.0000001) === 1) { 
+        const xIntVal = -b / m;
+        xIntText = `(${fmt(xIntVal)}, 0)`;
+    }
+
+    // 5. Вывод
+    outputs.slopeForm.textContent = eqSlope;
+    outputs.generalForm.textContent = eqGeneral;
+    outputs.angle.textContent = `${fmt(angleDeg)}°`;
+    outputs.xInt.textContent = xIntText;
+    outputs.yInt.textContent = yIntText;
+    
+    stepsBox.innerHTML = `
+<strong>Solution progress:</strong><br/>1. Equation of a straight line with an angular coefficient:<em>y = mx + b</em>.<br/>2. Substitute the values ​​(x₁=${x1}, y₁=${y1}, m=${m}):<br/>${y1}= (${m}×${x1}) + b<br/>3. Calculate the product m x:<br/>${y1}=${fmt(m * x1)}+ b<br/>4. Find b:<br/>
+            b =${y1}-${fmt(m * x1)}=${fmt(b)}<br/>5. Final equation:<strong>${eqSlope}</strong>
+`;
+    
+    drawGraph(m, b, x1, y1);
+
+    resBox.classList.add('show');
+  }
+
+  // ----- Слушатели -----
+  $('#calcBtn').addEventListener('click', calc);
+  $('#resetBtn').addEventListener('click', () => {
+    $('#x1').value = '2';
+    $('#y1').value = '3';
+    $('#slope').value = '-0.5';
+    resBox.classList.remove('show');
+    graphBox.classList.add('is-hidden');
+    hideError();
+  });
+
+  // Копирование
+  wrap.addEventListener('click', (e) => {
+    let targetId = e.target.id;
+    if (targetId.startsWith('copy')) {
+        let resId = targetId.replace('copy', 'res');
+        let el = $('#' + resId);
+        if (el) {
+             try { navigator.clipboard?.writeText(el.textContent); } catch (_) {}
+        }
+    }
+  });
+
+  // Enter
+  wrap.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      if (e.target.matches('input')) {
+        e.preventDefault();
+        calc();
+      }
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<h2 class="wp-block-heading" id="kak-najti-uravnenie-pryamoj-po-tochke-i-naklonu-2">How to find the equation of a line given a point and slope?</h2>
+<p>In analytical geometry, there are several ways to define a straight line. One of the most common and convenient is to use <strong>slope</strong> (slope, denoted as $m$ ) and the coordinates of one known <strong>points</strong> ( $x_1, y_1$ ) through which this line passes.</p>
+<p>Our calculator performs this task automatically, converting the data into a slope equation ( $y = mx + b$ ) and a general line equation ( $Ax + By + C = 0$ ).</p>
+<h2 class="wp-block-heading" id="osnovnaya-formula-2">Basic formula</h2>
+<p>To create an equation, use the formula of a straight line passing through a point with a given slope:</p>
+<p>$$y — y_1 = m(x — x_1)$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li><strong>$x, y$</strong> — variable coordinates of any point on a line.</li>
+<li><strong>$x_1, y_1$</strong> — coordinates of a known point.</li>
+<li><strong>$m$</strong> — angular coefficient (tangent of the angle of inclination of the straight line to the $X$ axis).</li>
+</ul>
+<h2 class="wp-block-heading" id="poshagovyj-algoritm-resheniya-2">Step-by-step solution algorithm</h2>
+<p>Let's say we have a point $A(4, 2)$ and a slope $m = 3$ . How to find the equation of a line manually?</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li>Substitute the values ​​into the formula: Replace $x_1$ , $y_1$ and $m$ with our numbers: $$y — 2 = 3(x — 4)$$ </li>
+<li>Expand the brackets: Multiply the slope by each term in the bracket on the right: $$y — 2 = 3x — 12$$ </li>
+<li>Express $y$ (reduce to $y = mx + b$ ):Move $-2$ to the right side of the equation, changing the sign: $$y = 3x — 12 + 2$$ $$y = 3x — 10$$ </li>
+</ol>
+<p>Now we know that the equation of our line is: <strong>$y = 3x — 10$</strong>, where is the free term $b = -10$ (the point of intersection with the axis $Y$ ).</p>
+<h2 class="wp-block-heading" id="formy-zapisi-uravneniya-pryamoj-2">Forms of writing the equation of a line</h2>
+<p>Our tool outputs the result in the two most popular formats. Understanding the difference between them is important for solving geometric problems.</p>
+<h3 class="wp-block-heading" id="1-uravnenie-s-uglovym-koeffitsientom-slope-intercept-form-2">1. Equation with slope (Slope-Intercept Form)</h3>
+<p>The most convenient view for plotting charts.</p>
+<p>$$y = mx + b$$</p>
+<ul class="wp-block-list">
+<li><strong>$m$</strong> — slope (steepness). If $m &gt; 0$ , the graph is growing; if $m &lt; 0$ , decreases.</li>
+<li><strong>$b$</strong> — point of intersection with the $Y$ axis (Y-intercept).</li>
+</ul>
+<h3 class="wp-block-heading" id="2-obshhee-uravnenie-pryamoj-general-form-2">2. General equation of a line (General Form)</h3>
+<p>Often used in algebra and computer graphics, as it allows you to describe even vertical lines.</p>
+<p>$$Ax + By + C = 0$$</p>
+<p>To get this view from the example above ( $y = 3x — 10$ ), you need to move all the terms to one side:</p>
+<p>$$3x — y — 10 = 0$$</p>
+<h2 class="wp-block-heading" id="tablitsa-znachenij-uglovogo-koeffitsienta-m-2">Table of slope values ​​( $m$ )</h2>
+<p>The slope determines the behavior of the straight line. Here's a cheat sheet for quickly assessing the result:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>m value</strong></td><td><strong>Description of direct</strong></td><td><strong>Tilt angle (α)</strong></td></tr></thead><tbody><tr><td><strong>$m &gt; 0$</strong></td><td>Increasing function (goes up from left to right)</td><td>Spicy ( $0^\circ &lt; \alpha &lt; 90^\circ$ )</td></tr><tr><td><strong>$m &lt; 0$</strong></td><td>Descending function (goes down from left to right)</td><td>Dumb ( $90^\circ &lt; \alpha &lt; 180^\circ$ )</td></tr><tr><td><strong>$m = 0$</strong></td><td>Horizontal line ( $y = b$ )</td><td> $0^\circ$ (parallel to the axis of $X$ )</td></tr><tr><td><strong>Not defined</strong></td><td>Vertical line ( $x = a$ )</td><td> $90^\circ$ (parallel to the axis of $Y$ )</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="chasto-zadavaemye-voprosy-2">Frequently Asked Questions</h2>
+<p><strong>How to find $m$ if only two points are given?</strong></p>
+<p>If you don't have a slope, but have two points $(x_1, y_1)$ and $(x_2, y_2)$ , first calculate $m$ using the formula:</p>
+<p>$$m = \frac{y_2 — y_1}{x_2 — x_1}$$</p>
+<p>Then use the resulting $m$ and any of the points in our calculator.</p>
+<p><strong>What is a free member of $b$ ?</strong></p>
+<p>This is the value of $y$ when $x = 0$ . Geometrically, this is the point at which the graph intersects the vertical coordinate axis. Calculated as:</p>
+<p>$$b = y_1 — m \cdot x_1$$</p>
+</div>
+    </div>
+</body>
+</html>

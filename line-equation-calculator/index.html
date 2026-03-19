@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Straight Line Calculator: Two Point Equation, Length and Angle</title>
+    <meta name="description" content="Straight Line Calculator: Two Point Equation, Length and Angle - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Straight Line Calculator: Two Point Equation, Length and Angle</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (Золотой стандарт) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(220px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    
+    /* Label + Term */
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    /* Input + Suffix */
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 10px; } 
+    
+    .c-input-suffix {
+        position: absolute; right: 32px; top: 50%; transform: translateY(-50%);
+        color: #888; font-size: 14px; pointer-events: none; font-weight: 500;
+    }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 10px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+    
+    .c-divider { 
+        display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; 
+        font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; }
+
+    /* Result Box */
+    .c-result { border:1px dashed #0693e3; border-radius:10px; padding:10px; background:#fff; display:none; scroll-margin-top: 20px; }
+    .c-result.show { display:grid; }
+    
+    .c-result-title {
+        margin: 0 0 10px 0; padding: 0 12px;
+        font-size: 18px; font-weight: 700; color: #333;
+        display: flex; align-items: center; gap: 8px;
+    }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #0693e3; grid-template-columns: 1fr auto 30px; }
+    .c-resline:last-child { border-bottom:none; }
+    
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 4px; }
+    
+    .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden; padding: 3px;
+      background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+      background-repeat:no-repeat; background-position:center; background-size:20px 20px; opacity: 0.6;}
+    .c-copy:hover { opacity: 1; }
+
+    .c-error { color: #d32f2f; background: #ffebee; padding: 10px; border-radius: 8px; margin-bottom: 10px; display: none; font-size: 14px; }
+    .c-error.show { display: block; }
+    .is-hidden { display:none !important; }
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    
+    /* Mobile Result Optimization */
+    @media (max-width: 480px) {
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 4px; padding: 12px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 19px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 24px; }
+    }
+    
+    .c-diagram-box { text-align: center; margin-bottom: 20px; padding: 10px; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0; height: 200px; position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center;}
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-diagram-box" id="graphContainer">
+<svg preserveaspectratio="xMidYMid meet" style="width:100%; height:100%;" viewbox="0 0 300 200">
+<rect fill="#fff" height="200" width="300"></rect>
+<line stroke="#ddd" stroke-width="1" x1="0" x2="300" y1="100" y2="100"></line>
+<line stroke="#ddd" stroke-width="1" x1="150" x2="150" y1="0" y2="200"></line>
+<text fill="#999" font-size="10" x="290" y="95">X</text>
+<text fill="#999" font-size="10" x="155" y="10">Y</text>
+<line id="svgLine" stroke="#0693e3" stroke-width="2" x1="150" x2="150" y1="100" y2="100"></line>
+<circle cx="150" cy="100" fill="#0693e3" id="pt1" r="4"></circle>
+<circle cx="150" cy="100" fill="#0693e3" id="pt2" r="4"></circle>
+<text fill="#333" font-size="10" id="txt1" x="155" y="95">A</text>
+<text fill="#333" font-size="10" id="txt2" x="155" y="95">B</text>
+</svg>
+</div>
+<div class="c-divider"><span class="icon">📐</span>Point coordinates</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Point A<span class="c-term">x₁</span></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="x1" placeholder="0" step="any" type="number"/>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Point A<span class="c-term">y₁</span></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="y1" placeholder="0" step="any" type="number"/>
+</div>
+</div>
+</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Point B<span class="c-term">x₂</span></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="x2" placeholder="3" step="any" type="number"/>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Point B<span class="c-term">y₂</span></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="y2" placeholder="4" step="any" type="number"/>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div aria-live="polite" class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">📏</span>Direct parameters</div>
+<div class="c-resline">
+<div class="c-resleft">Equation (with slope)<span class="c-subtext">y = mx + b</span>
+</div>
+<div class="c-resval" id="resEqSlope" style="font-family:monospace; font-size:18px;"></div>
+<button class="c-copy" id="copyEq1"></button>
+</div>
+<div class="c-resline" style="background:#f1f8e9;">
+<div class="c-resleft">General equation<span class="c-subtext">Ax + By + C = 0</span>
+</div>
+<div class="c-resval" id="resEqGen" style="font-family:monospace; font-size:18px;"></div>
+<button class="c-copy" id="copyEq2"></button>
+</div>
+<div class="c-divider" style="margin-top:20px; margin-bottom:5px; font-size:12px;">Properties of a segment</div>
+<div class="c-resline">
+<div class="c-resleft">Length of segment AB<span class="c-subtext">Distance</span>
+</div>
+<div class="c-resval" id="resDist"></div>
+<button class="c-copy" id="copyDist"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Slope factor<span class="c-subtext">m (slope)</span>
+</div>
+<div class="c-resval" id="resSlope"></div>
+<button class="c-copy" id="copySlope"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Tilt angle<span class="c-subtext">To X axis</span>
+</div>
+<div class="c-resval" id="resAngle"></div>
+<button class="c-copy" id="copyAngle"></button>
+</div>
+<div class="c-resline" style="background:#e3f2fd;">
+<div class="c-resleft">Midpoint of the segment<span class="c-subtext">Coordinates (x, y)</span>
+</div>
+<div class="c-resval" id="resMid"></div>
+<button class="c-copy" id="copyMid"></button>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика =====
+  const $ = (s) => wrap.querySelector(s);
+  const $$ = (s) => wrap.querySelectorAll(s);
+  const resBox = $('#resultBox');
+  const errorEl = $('#errorMsg');
+  
+  // Graph Elements
+  const svgLine = $('#svgLine');
+  const pt1 = $('#pt1');
+  const pt2 = $('#pt2');
+  const txt1 = $('#txt1');
+  const txt2 = $('#txt2');
+  
+  const inp = {
+      x1: $('#x1'), y1: $('#y1'),
+      x2: $('#x2'), y2: $('#y2')
+  };
+  
+  const out = {
+      eqS: $('#resEqSlope'),
+      eqG: $('#resEqGen'),
+      dist: $('#resDist'),
+      slope: $('#resSlope'),
+      ang: $('#resAngle'),
+      mid: $('#resMid')
+  };
+
+  function num(el){ const n = parseFloat(el.value); return isNaN(n) ? 0 : n; }
+  
+  // Подсветка заполненных
+  $$('.param-inp').forEach(i => {
+      i.addEventListener('input', () => {
+          if (i.value) i.classList.add('filled');
+          else i.classList.remove('filled');
+      });
+  });
+
+  function updateGraph(x1, y1, x2, y2) {
+      // Scale points to fit 300x200
+      // Find range
+      let minX = Math.min(x1, x2);
+      let maxX = Math.max(x1, x2);
+      let minY = Math.min(y1, y2);
+      let maxY = Math.max(y1, y2);
+      
+      let w = maxX - minX;
+      let h = maxY - minY;
+      
+      // Padding
+      if (Math.sign(w) === 0) w = 10;
+      if (Math.sign(h) === 0) h = 10;
+      
+      const pad = 40;
+      const scaleX = (300 - pad*2) / w;
+      const scaleY = (200 - pad*2) / h;
+      
+      // Keep aspect ratio close? No, fit to box is better for visibility
+      const mapX = (x) => pad + (x - minX) * scaleX;
+      const mapY = (y) => 200 - (pad + (y - minY) * scaleY); // Invert Y
+      
+      const px1 = mapX(x1);
+      const py1 = mapY(y1);
+      const px2 = mapX(x2);
+      const py2 = mapY(y2);
+      
+      svgLine.setAttribute('x1', px1);
+      svgLine.setAttribute('y1', py1);
+      svgLine.setAttribute('x2', px2);
+      svgLine.setAttribute('y2', py2);
+      
+      pt1.setAttribute('cx', px1); pt1.setAttribute('cy', py1);
+      pt2.setAttribute('cx', px2); pt2.setAttribute('cy', py2);
+      
+      txt1.setAttribute('x', px1 + 5); txt1.setAttribute('y', py1 - 5);
+      txt2.setAttribute('x', px2 + 5); txt2.setAttribute('y', py2 - 5);
+  }
+
+  function calc() {
+      errorEl.classList.remove('show');
+      
+      const x1 = num(inp.x1);
+      const y1 = num(inp.y1);
+      const x2 = num(inp.x2);
+      const y2 = num(inp.y2);
+      
+      // Проверка на совпадение точек
+      if (x1 === x2 && y1 === y2) {
+          errorEl.textContent = "The points coincide. It is impossible to construct a straight line.";
+          errorEl.classList.add('show'); resBox.classList.remove('show'); return;
+      }
+
+      const dx = x2 - x1;
+      const dy = y2 - y1;
+      
+      // 1. Длина
+      const dist = Math.sqrt(dx*dx + dy*dy);
+      
+      // 2. Угловой коэффициент и Уравнение
+      let slopeStr = "";
+      let eqSlope = "";
+      let angle = 0;
+      
+      // Вертикальная линия (dx = 0)
+      if (Math.sign(Math.abs(dx)) === 0) {
+          slopeStr = "Not defined (∞)";
+          eqSlope = `x = ${x1}`;
+          angle = 90;
+      } else {
+          const m = dy / dx;
+          slopeStr = m.toFixed(4);
+          
+          // y = mx + b  =>  b = y1 - m*x1
+          const b = y1 - (m * x1);
+          
+          const mPart = (m === 0) ? "" : (m === 1 ? "x" : (m === -1 ? "-x" : `${parseFloat(m.toFixed(3))}x`));
+          const bPart = (b === 0) ? "" : (Math.sign(b) === -1 ? ` - ${Math.abs(b).toFixed(3)}` : ` + ${b.toFixed(3)}`);
+          
+          eqSlope = `y = ${mPart}${bPart}`;
+          if (m === 0) eqSlope = `y = ${b}`;
+          
+          angle = Math.atan(m) * (180 / Math.PI);
+      }
+      
+      // 3. Общее уравнение Ax + By + C = 0
+      // A = -dy, B = dx, C = -A*x1 - B*y1
+      // Чтобы выглядело красиво, если A < 0, инвертируем все знаки
+      let A = -dy;
+      let B = dx;
+      let C = -(A * x1) - (B * y1);
+      
+      if (Math.sign(A) === -1) { A = -A; B = -B; C = -C; }
+      
+      // Форматирование общего уравнения
+      const termA = (A === 0) ? "" : (A === 1 ? "x" : `${parseFloat(A.toFixed(3))}x`);
+      const termB = (B === 0) ? "" : (Math.sign(B) === -1 ? ` - ${Math.abs(B).toFixed(3)}y` : (termA ? ` + ${parseFloat(B.toFixed(3))}y` : `${parseFloat(B.toFixed(3))}y`));
+      const termC = (C === 0) ? "" : (Math.sign(C) === -1 ? ` - ${Math.abs(C).toFixed(3)}` : ` + ${parseFloat(C.toFixed(3))}`);
+      
+      const eqGen = `${termA}${termB}${termC} = 0`;
+
+      // 4. Середина
+      const mx = (x1 + x2) / 2;
+      const my = (y1 + y2) / 2;
+      
+      // Вывод
+      out.eqS.textContent = eqSlope;
+      out.eqG.textContent = eqGen;
+      out.dist.textContent = parseFloat(dist.toFixed(4));
+      out.slope.textContent = parseFloat(slopeStr) ? parseFloat(slopeStr) : slopeStr;
+      out.ang.textContent = angle.toFixed(2) + "°";
+      out.mid.textContent = `(${parseFloat(mx.toFixed(3))}; ${parseFloat(my.toFixed(3))})`;
+      
+      updateGraph(x1, y1, x2, y2);
+
+      resBox.classList.add('show');
+      resBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  // Слушатели
+  $('#calcBtn').addEventListener('click', calc);
+  $('#resetBtn').addEventListener('click', () => {
+    $$('.param-inp').forEach(inp => {
+        inp.value = '';
+        inp.classList.remove('filled');
+    });
+    resBox.classList.remove('show');
+    errorEl.classList.remove('show');
+  });
+
+  // Копирование
+  wrap.addEventListener('click', (e) => {
+    if (e.target.classList.contains('c-copy')) {
+      const parent = e.target.parentElement;
+      const val = parent.querySelector('.c-resval').textContent;
+      if (val) navigator.clipboard.writeText(val);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>In analytical geometry, a straight line is one of the fundamental objects. Most often it is specified by two points on the plane. Our <strong>straight line calculator</strong> allows you to instantly obtain a complete mathematical description of a segment or an infinite straight line passing through points $A(x_1, y_1)$ and $B(x_2, y_2)$ .</p>
+<p>The tool not only displays the equation of a line in different formats, but also calculates geometric properties: length, slope and center coordinates.</p>
+<h2 class="wp-block-heading" id="kak-najti-uravnenie-pryamoj-po-dvum-tochkam-2">How to find the equation of a line from two points?</h2>
+<p>To create an equation, you need to follow several steps. The algorithm depends on what type of equation you need: with a slope or a general one.</p>
+<h3 class="wp-block-heading" id="1-uglovoj-koeffitsient-slope-2">1. Angular coefficient (Slope)</h3>
+<p>First, the slope of the line is calculated, which is denoted by the letter $m$ (or $k$ in the Russian tradition). It shows how steeply the line rises or falls.</p>
+<p>$$m = \frac{y_2 — y_1}{x_2 — x_1}$$</p>
+<h3 class="wp-block-heading" id="2-uravnenie-s-uglovym-koeffitsientom-2">2. Equation with slope</h3>
+<p>The most popular form of notation, convenient for plotting function graphs:</p>
+<p>$$y = mx + b$$</p>
+<p>Where $m$ is the slope and $b$ is the Y-intercept (offset). To find $b$ , we substitute the coordinates of the first point and the found slope into the formula: $b = y_1 — m \cdot x_1$ .</p>
+<h3 class="wp-block-heading" id="3-obshhee-uravnenie-pryamoj-2">3. General equation of a line</h3>
+<p>In geometric problems it is often necessary to reduce the answer to the form:</p>
+<p>$$Ax + By + C = 0$$</p>
+<p>Our calculator automatically performs the conversion, eliminating fractions so that the $A$ , $B$ and $C$ coefficients are integers (if possible) and easy to write.</p>
+<h2 class="wp-block-heading" id="dopolnitelnye-raschety-2">Additional calculations</h2>
+<p>In addition to equations, the tool calculates important metric characteristics of the segment between given points.</p>
+<p>Line Length (Distance)</p>
+<p>Calculated using the Pythagorean theorem. This is the hypotenuse of a right triangle, the legs of which are the differences in coordinates:</p>
+<p>$$d = \sqrt{(x_2 — x_1)^2 + (y_2 — y_1)^2}$$</p>
+<p>Midpoint</p>
+<p>The point that divides the segment $AB$ exactly in half. Its coordinates are the arithmetic mean of the coordinates of the ends:</p>
+<p>$$x_m = \frac{x_1 + x_2}{2}, \quad y_m = \frac{y_1 + y_2}{2}$$</p>
+<h2 class="wp-block-heading" id="svodnaya-tablitsa-formul-2">Summary table of formulas</h2>
+<p>For your convenience, we have collected all the formulas used in this calculator into one table:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Parameter</strong></td><td><strong>Designation</strong></td><td><strong>Formula</strong></td></tr></thead><tbody><tr><td><strong>Slope factor</strong></td><td>$m$</td><td>$\frac{\Delta y}{\Delta x}$</td></tr><tr><td><strong>Equation (Slope-Intercept)</strong></td><td>$y$</td><td>$mx + b$</td></tr><tr><td><strong>Equation (General)</strong></td><td>$0$</td><td>$Ax + By + C$</td></tr><tr><td><strong>Section length</strong></td><td>$d$</td><td>$\sqrt{\Delta x^2 + \Delta y^2}$</td></tr><tr><td><strong>Tilt angle</strong></td><td>$\alpha$</td><td>$\arctan(m)$</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="osobennosti-raboty-kalkulyatora-2">Features of the calculator</h2>
+<ul class="wp-block-list">
+<li><strong>Vertical lines:</strong> If $x_1 = x_2$ , the slope tends to infinity. Conventional formulas give a division by zero error, but our algorithm correctly handles this case, producing an equation of the form $x = const$ .</li>
+<li><strong>Visualization:</strong> An interactive graph plots a segment in real time, helping to visually assess the correctness of the entered coordinates.</li>
+<li><strong>Accuracy:</strong> Results are rounded to 4 decimal places for high accuracy of engineering and educational calculations.</li>
+</ul>
+</div>
+    </div>
+</body>
+</html>

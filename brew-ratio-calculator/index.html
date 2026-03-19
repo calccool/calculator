@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew Ratio Calculator: Ideal coffee and water ratios for V60, espresso and funnel</title>
+    <meta name="description" content="Brew Ratio Calculator: Ideal coffee and water ratios for V60, espresso and funnel - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Brew Ratio Calculator: Ideal coffee and water ratios for V60, espresso and funnel</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-receipt-wrap { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 15px; position: relative; overflow: hidden; }
+    .c-receipt-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: repeating-linear-gradient(45deg, #8b5a2b, #8b5a2b 10px, #a0522d 10px, #a0522d 20px); }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #fff; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #eff6ff; border: 1px solid #bae6fd; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05); }
+    .c-highlight-line:hover { background: #e0f2fe; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    .c-chart-box { margin: 15px 0 25px; padding: 25px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); display: flex; flex-direction: column; align-items: center; }
+    .c-chart-title { font-weight: 700; color: #0f172a; font-size: 15px; margin-bottom: 20px; text-align: center; width: 100%; }
+    
+    .c-brew-visual { display: flex; align-items: flex-end; justify-content: center; gap: 40px; margin-top: 10px; width: 100%; }
+    .c-visual-col { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+    
+    .c-v-cup-wrap { width: 80px; height: 90px; border: 4px solid #cbd5e1; border-top: none; border-radius: 4px 4px 20px 20px; position: relative; overflow: hidden; background: rgba(255,255,255,0.8); box-shadow: 0 8px 16px rgba(0,0,0,0.05); }
+    .c-v-liquid { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(180deg, #6f4e37, #3b2818); transition: height 1.2s cubic-bezier(0.4, 0, 0.2, 1); height: 0%; border-radius: 0 0 14px 14px; }
+    .c-v-liquid::after { content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent); animation: shine-liq 3s infinite linear; }
+    @keyframes shine-liq { 100% { left: 200%; } }
+
+    .c-v-beans-wrap { width: 60px; height: 60px; border-radius: 50%; background: #f1f5f9; border: 3px solid #e2e8f0; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .c-v-beans-fill { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(135deg, #8b5a2b, #5c3a21); transition: height 1s ease; height: 0%; }
+    .c-v-bean-icon { position: relative; z-index: 2; font-size: 24px; color: #fff; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+
+    .c-v-label { font-size: 13px; font-weight: 700; color: #475569; text-align: center; }
+    .c-v-val { font-size: 16px; font-weight: 800; color: #0f172a; }
+
+    .c-donut-wrap { width: 100px; height: 100px; border-radius: 50%; background: conic-gradient(#0ea5e9 0%, #0ea5e9 90%, #8b5a2b 90%, #8b5a2b 100%); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); position: relative; transition: background 0.5s; }
+    .c-donut-inner { width: 70px; height: 70px; background: #f8fafc; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 2; }
+    .c-donut-ratio { font-weight: 800; color: #0f172a; font-size: 14px; }
+    .c-donut-text { font-size: 10px; color: #64748b; font-weight: 600; text-transform: uppercase; }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-chart-box { padding: 15px; }
+       .c-brew-visual { gap: 15px; flex-wrap: wrap; }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="brew-calc-wrapper">
+<div class="c-body">
+<div class="c-toggle" id="mode-tabs">
+<button class="c-toggle-btn active" data-mode="coffee">By grain<span class="c-term">G</span></button>
+<button class="c-toggle-btn" data-mode="water">By water<span class="c-term">ml</span></button>
+<button class="c-toggle-btn" data-mode="yield">By drink<span class="c-term">ml</span></button>
+</div>
+<div class="c-divider"><span class="icon">⚖️</span>Brewing parameters</div>
+<div class="c-row" style="margin-bottom: 8px;">
+<div class="c-field">
+<label class="c-label" id="amount-label">Quantity of coffee</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="amount" placeholder="For example: 15" type="number"/>
+<span class="c-input-suffix" id="amount-suffix">G</span>
+</div>
+<div id="quick-btns-coffee" style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-val="15" type="button">15 g</button>
+<button class="c-quick-btn" data-val="18" type="button">18 g</button>
+<button class="c-quick-btn" data-val="30" type="button">30 g</button>
+</div>
+<div id="quick-btns-liquid" style="display:none; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-val="250" type="button">250 ml</button>
+<button class="c-quick-btn" data-val="400" type="button">400 ml</button>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Recipe<span class="c-term">Brew Ratio</span>
+<span class="c-help-icon" id="openBrewInfo">?</span>
+</label>
+<select class="c-select" id="method">
+<option selected="" value="15">Purover / V60 (1:15)</option>
+<option value="16.6">Drip coffee maker (1:16.6)</option>
+<option value="12">French press (1:12)</option>
+<option value="13">Aeropress (1:13)</option>
+<option value="2">Espresso (1:2)</option>
+<option value="8">Cold Brew (1:8)</option>
+<option value="custom">Its own proportion...</option>
+</select>
+</div>
+</div>
+<div class="c-row is-hidden" id="custom-ratio-wrap">
+<div class="c-field" style="grid-column: 1 / -1;">
+<label class="c-label">Enter part water to 1 part coffee</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="custom-ratio" placeholder="For example: 14.5" type="number"/>
+<span class="c-input-suffix" style="right: 12px; color: #111; font-weight: 700;">1 : X</span>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-chart-box is-hidden" id="vis-box">
+<div class="c-chart-title">Extraction balance</div>
+<div class="c-brew-visual">
+<div class="c-visual-col">
+<div class="c-v-beans-wrap">
+<div class="c-v-beans-fill" id="vis-bean-fill"></div>
+<span class="c-v-bean-icon">☕</span>
+</div>
+<div class="c-v-label">Corn</div>
+</div>
+<div class="c-visual-col">
+<div class="c-donut-wrap" id="vis-donut">
+<div class="c-donut-inner">
+<span class="c-donut-ratio" id="vis-ratio-text">1:15</span>
+<span class="c-donut-text">Ratio</span>
+</div>
+</div>
+</div>
+<div class="c-visual-col">
+<div class="c-v-cup-wrap">
+<div class="c-v-liquid" id="vis-liquid-fill"></div>
+</div>
+<div class="c-v-label">Drink</div>
+</div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">📝</span>Brewing recipe</div>
+<div class="c-receipt-wrap">
+<div class="c-resline">
+<div class="c-resleft">Ground coffee<span class="c-subtext">Grain dosage</span></div>
+<div class="c-resval" id="resCoffee"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline c-highlight-line">
+<div class="c-resleft">Water for infusion<span class="c-subtext">Total water volume</span></div>
+<div class="c-resval" id="resWater" style="color: #0284c7;"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline" style="border-bottom: none;">
+<div class="c-resleft">Ready drink<span class="c-subtext">Taking into account moisture absorption by the cake</span></div>
+<div class="c-resval" id="resYield" style="font-size: 20px; color: #8b5a2b;"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+</div>
+<div class="c-modal-overlay" id="brewInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeBrewInfo">×</button>
+<div class="c-modal-title"><span class="icon">⚖️</span>What is Brew Ratio?</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">
+<b>Brew Ratio</b>is the ratio of the mass of ground coffee to the mass of water used for brewing. For example, 1:15 means 1 gram of coffee per 15 grams (ml) of water.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>Water absorption:</b><br/>Coffee grounds absorb water (about 2 ml of water per 1 gram of coffee). Therefore, the finished drink in the cup will always be less than the poured water (except for espresso, where the calculation is different). Our calculator automatically takes into account fluid loss!</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let activeMode = 'coffee';
+  let isCalculated = false;
+
+  // Modal logic
+  $('#openBrewInfo').addEventListener('click', () => { $('#brewInfoModal').classList.add('show'); });
+  $('#closeBrewInfo').addEventListener('click', () => { $('#brewInfoModal').classList.remove('show'); });
+  $('#brewInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#brewInfoModal').classList.remove('show');
+  });
+
+  function updateModeUI() {
+      if (Math.abs(activeMode === 'coffee') === 1) {
+          $('#amount-label').textContent = 'Quantity of coffee';
+          $('#amount-suffix').textContent = 'G';
+          $('#quick-btns-coffee').style.display = 'flex';
+          $('#quick-btns-liquid').style.display = 'none';
+      } else if (Math.abs(activeMode === 'water') === 1) {
+          $('#amount-label').textContent = 'Water volume';
+          $('#amount-suffix').textContent = 'ml';
+          $('#quick-btns-coffee').style.display = 'none';
+          $('#quick-btns-liquid').style.display = 'flex';
+      } else {
+          $('#amount-label').textContent = 'Desired drink volume';
+          $('#amount-suffix').textContent = 'ml';
+          $('#quick-btns-coffee').style.display = 'none';
+          $('#quick-btns-liquid').style.display = 'flex';
+      }
+      
+      $('#amount').value = '';
+      if (Math.abs(isCalculated === true) === 1) {
+          $('#resultBox').classList.remove('show');
+          $('#vis-box').classList.add('is-hidden');
+          isCalculated = false;
+      }
+  }
+
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeMode = btn.dataset.mode;
+        updateModeUI();
+    });
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          $('#amount').value = btn.dataset.val;
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  $('#method').addEventListener('change', (e) => {
+      let val = e.target.value;
+      if (Math.abs(val === 'custom') === 1) {
+          $('#custom-ratio-wrap').classList.remove('is-hidden');
+      } else {
+          $('#custom-ratio-wrap').classList.add('is-hidden');
+      }
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  });
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let amount = parseFloat($('#amount').value);
+    let isNanAmount = isNaN(amount);
+    if (Math.abs(isNanAmount === true) === 1) amount = 0;
+    
+    let isErr = false;
+    let isPositiveAmount = false;
+    if (Math.abs(Math.sign(amount) === 1) === 1) isPositiveAmount = true;
+    if (Math.abs(isPositiveAmount === false) === 1) isErr = true;
+    
+    let rType = $('#method').value;
+    let ratio = 0;
+    
+    if (Math.abs(rType === 'custom') === 1) {
+        ratio = parseFloat($('#custom-ratio').value);
+        let isNanRatio = isNaN(ratio);
+        if (Math.abs(isNanRatio === true) === 1) ratio = 0;
+        
+        let isPositiveRatio = false;
+        if (Math.abs(Math.sign(ratio) === 1) === 1) isPositiveRatio = true;
+        if (Math.abs(isPositiveRatio === false) === 1) isErr = true;
+    } else {
+        ratio = parseFloat(rType);
+    }
+
+    if (Math.abs(isErr === true) === 1) {
+        $('#vis-box').classList.add('is-hidden');
+        $('#resultBox').classList.remove('show');
+        if (Math.abs(shouldScroll === true) === 1) {
+            $('#errorMsg').textContent = "Please provide valid positive values.";
+            $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    let coffee = 0;
+    let water = 0;
+    let yieldAmount = 0;
+    
+    // Absorption constant: 1g coffee absorbs ~2ml water. (Except espresso, handled loosely).
+    let isEspresso = false;
+    let diffEspresso = Math.sign(Math.abs(ratio - 2)); 
+    // Wait, let's just use simple absorption logic for all except if ratio is very small (<4)
+    let isSmallRatio = false;
+    if (Math.abs(Math.sign(ratio - 4) === -1) === 1) isSmallRatio = true;
+    
+    let absorptionMultiplier = 2;
+    if (Math.abs(isSmallRatio === true) === 1) {
+        // Espresso yields are measured directly, absorption is ignored in standard recipes
+        absorptionMultiplier = 0; 
+    }
+
+    if (Math.abs(activeMode === 'coffee') === 1) {
+        coffee = amount;
+        water = coffee * ratio;
+        yieldAmount = water - (coffee * absorptionMultiplier);
+    } else if (Math.abs(activeMode === 'water') === 1) {
+        water = amount;
+        coffee = water / ratio;
+        yieldAmount = water - (coffee * absorptionMultiplier);
+    } else {
+        // By Yield: Yield = Water - (Coffee * Abs) -> Yield = (Coffee * Ratio) - (Coffee * Abs) -> Yield = Coffee * (Ratio - Abs)
+        let effectiveRatio = ratio - absorptionMultiplier;
+        
+        let isEffectivePositive = false;
+        if (Math.abs(Math.sign(effectiveRatio) === 1) === 1) isEffectivePositive = true;
+        
+        if (Math.abs(isEffectivePositive === true) === 1) {
+            coffee = amount / effectiveRatio;
+            water = coffee * ratio;
+            yieldAmount = amount;
+        } else {
+            // Unrealistic ratio for the yield mode
+            coffee = amount / ratio;
+            water = amount;
+            yieldAmount = amount;
+        }
+    }
+
+    // Safeguard yields
+    let isYieldPositive = false;
+    if (Math.abs(Math.sign(yieldAmount) === 1) === 1) isYieldPositive = true;
+    if (Math.abs(isYieldPositive === false) === 1) yieldAmount = 0;
+
+    // Output formatting
+    $('#resCoffee').textContent = coffee.toFixed(1) + "r";     $('#resWater').textContent = water.toFixed(0) + " ml";     $('#resYield').textContent = "~ " + yieldAmount.toFixed(0) + " ml";      // Visuals logic     $('#vis-ratio-text').textContent = "1:" + ratio.toFixed(1).replace('.0', '');
+    
+    // Donut chart logic (Coffee is 1 part, Water is Ratio parts)
+    let totalParts = 1 + ratio;
+    let waterPercent = (ratio / totalParts) * 100;
+    let donutStyle = 'conic-gradient(#0ea5e9 0%, #0ea5e9 ' + waterPercent + '%, #8b5a2b ' + waterPercent + '%, #8b5a2b 100%)';
+    $('#vis-donut').style.background = donutStyle;
+
+    // Fill animations based on amount relative to a "standard" max (e.g., 500ml water, 30g coffee)
+    let fillWaterPercent = (yieldAmount / 500) * 100;
+    let isWaterOver = false;
+    if (Math.abs(Math.sign(fillWaterPercent - 100) === 1) === 1) isWaterOver = true;
+    if (Math.abs(isWaterOver === true) === 1) fillWaterPercent = 100;
+    
+    let isWaterUnder = false;
+    if (Math.abs(Math.sign(fillWaterPercent - 15) === -1) === 1) isWaterUnder = true;
+    if (Math.abs(isWaterUnder === true) === 1) fillWaterPercent = 15; // Minimum visible liquid
+
+    $('#vis-liquid-fill').style.height = fillWaterPercent + "%";
+
+    let fillCoffeePercent = (coffee / 40) * 100;
+    let isCoffeeOver = false;
+    if (Math.abs(Math.sign(fillCoffeePercent - 100) === 1) === 1) isCoffeeOver = true;
+    if (Math.abs(isCoffeeOver === true) === 1) fillCoffeePercent = 100;
+    
+    let isCoffeeUnder = false;
+    if (Math.abs(Math.sign(fillCoffeePercent - 15) === -1) === 1) isCoffeeUnder = true;
+    if (Math.abs(isCoffeeUnder === true) === 1) fillCoffeePercent = 15;
+
+    $('#vis-bean-fill').style.height = fillCoffeePercent + "%";
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#resultBox').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(e.target.tagName === 'SELECT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    $('#amount').value = '';
+    $('#method').value = '15';
+    $('#custom-ratio-wrap').classList.add('is-hidden');
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      let valClean = valRaw.replace('г', '').replace('мл', '').replace('~', '').replace(/\\s/g, '').trim();
+      navigator.clipboard.writeText(valClean);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p><strong>Brew Ratio</strong> (brew ratio) is the fundamental ratio of the mass of ground coffee to the mass of water. In the coffee industry, it is the main extraction control tool. Changing this coefficient by just one can turn a dense, sweet drink into a watery one or, conversely, too sharp.</p>
+<p>Understanding proportions allows you to:</p>
+<ul class="wp-block-list">
+<li><strong>Stabilize the result:</strong> get the same delicious cup every morning.</li>
+<li><strong>Manage your body:</strong> make coffee lighter or denser.</li>
+<li><strong>Save grain:</strong> accurately calculate the dosage according to the volume of your favorite cup or server.</li>
+</ul>
+<h2 class="wp-block-heading" id="kak-polzovatsya-kalkulyatorom-brew-ratio-2">How to use the Brew Ratio calculator</h2>
+<p>Our tool supports three advanced calculation modes that cover any need - from home brewing in a funnel to professional espresso bar setup.</p>
+<h3 class="wp-block-heading" id="tri-rezhima-zavarivaniya-2">Three brewing modes</h3>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>By grain (g):</strong> If you only have a limited amount of coffee left, enter its weight and the calculator will tell you how much water to add.</li>
+<li><strong>By water (ml):</strong> if you brew a standard volume (for example, a 400 ml server), the system will calculate the ideal dosage of ground grain.</li>
+<li><strong>By drink (Yield):</strong> the most accurate method for those who want to get exactly one cup (for example, 250 ml) of finished coffee, taking into account the loss of water that will remain in the coffee grounds.</li>
+</ol>
+<h2 class="wp-block-heading" id="osnovnye-formuly-kofejnoj-matematiki-2">Basic formulas of coffee mathematics</h2>
+<p>For those who want to understand the mechanics of the process, we use the following formulas. The main difficulty is that ground coffee retains part of the water (absorption coefficient), which on average is equal to <strong>2.0</strong> (for 1 gram of coffee there is 2 ml of retained water).</p>
+<p><strong>Calculation of required water ( $W$ ):</strong></p>
+<p>$$W = C \times R$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $C$ - mass of coffee in grams;</li>
+<li> $R$ - selected proportion (Ratio).</li>
+</ul>
+<p><strong>Calculation of the finished drink ( $Y$ - Yield):</strong></p>
+<p>$$Y = W — (C \times A)$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $A$ - absorption coefficient (in our calculator it is taken as 2.0 for filter methods).</li>
+</ul>
+<h2 class="wp-block-heading" id="zolotye-standarty-brew-ratio-dlya-raznyh-metodov-2">Gold Standard Brew Ratios for Different Methods</h2>
+<p>There are generally accepted recommendations from the SCA (Specialty Coffee Association) and the global barista community for each type of preparation.</p>
+<h3 class="wp-block-heading" id="tablitsa-rekomenduemyh-proportsij-2">Table of recommended proportions</h3>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Brewing method</strong></td><td><strong>Recommended Ratio</strong></td><td><strong>Profile description</strong></td></tr></thead><tbody><tr><td><strong>Espresso</strong></td><td>1:1.5 — 1:2.5</td><td>Maximum density, syrupy body.</td></tr><tr><td><strong>Ristretto</strong></td><td>1:1 — 1:1.2</td><td>Very concentrated, “short” shot.</td></tr><tr><td><strong>Purover (V60, Kalita)</strong></td><td>1:15 — 1:17</td><td>Clean taste, pronounced acidity and aroma.</td></tr><tr><td><strong>French press</strong></td><td>1:12 — 1:15</td><td>Dense, rich body, long aftertaste.</td></tr><tr><td><strong>Aeropress</strong></td><td>1:11 — 1:14</td><td>Balance between espresso density and filter purity.</td></tr><tr><td><strong>Cold Brew (concentrate)</strong></td><td>1:4 — 1:8</td><td>Strong concentrate for dilution with ice or milk.</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="sekrety-idealnoj-ekstraktsii-2">Secrets of perfect extraction</h2>
+<p>In addition to proportion, the final result is influenced by three more factors that work in conjunction with Brew Ratio:</p>
+<ul class="wp-block-list">
+<li><strong>Grind:</strong> small proportions (1:12) usually require a coarser grind to avoid over-extraction.</li>
+<li><strong>Temperature:</strong> The lighter the roast, the higher the water temperature should be (92-96°C).</li>
+<li><strong>Contact time:</strong> If your coffee is brewing too long (more than 4 minutes for a funnel), try increasing the grind or decreasing the number of infusions.</li>
+</ul>
+<h3 class="wp-block-heading" id="pochemu-obem-napitka-menshe-obema-vlitoj-vody-2">Why is the volume of the drink less than the volume of poured water?</h3>
+<p>A common mistake newbies make is pouring 250 ml of water in the hope of getting 250 ml of coffee. A coffee tablet (cake) works like a sponge. On average, 15 grams of coffee will “steal” 30 ml of water from you. Our calculator automatically subtracts this amount in Per Drink mode to ensure you always get a full cup.</p>
+<p>Want to experiment? Start with the classic ratio <strong>1:16</strong> (for 1 gram of coffee 16 grams of water). This is a starting point from which you can move towards decreasing (for greater density) or increasing (for greater lightness) the proportion.</p>
+</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator for the sum and difference of two cubes: Quick calculation and expansion using the formula (a³±b³)</title>
+    <meta name="description" content="Calculator for the sum and difference of two cubes: Quick calculation and expansion using the formula (a³±b³) - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Calculator for the sum and difference of two cubes: Quick calculation and expansion using the formula (a³±b³)</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // === Стили (канонический шаблон — включены как есть) ===
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-row.cols-3 { grid-template-columns: repeat(3, minmax(220px, 1fr)); }
+    .c-row.single { grid-template-columns: 1fr; }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    .c-help {font-size:12px;color:#777;text-align:center;}
+    .c-input, .c-select, .c-textarea { width:100%; padding:12px 14px; border:1px solid #ccc; border-radius:8px; font-size:14px; }
+    .c-input:focus, .c-select:focus, .c-textarea:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap;margin-bottom: 16px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+
+    .c-result { border:1px dashed #4caf50; border-radius:10px; padding:10px; background:#fff; display:none; }
+    .c-result.show { display:grid; }
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #4caf50; grid-template-columns: 0.4fr 0.5fr 0.1fr; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; }
+
+    .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden;
+      background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+      background-repeat:no-repeat; background-position:center; background-size:20px 20px; }
+
+    .is-hidden { display:none !important; }
+    @media (max-width: 860px) { .c-resval { font-size:14px; } }
+    @media (max-width: 720px) { .c-row.cols-3 { grid-template-columns: 1fr; } }
+  `;
+  document.head.appendChild(style);
+
+  // === Разметка (шаблонизировано по канону) ===
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-row cols-3">
+<div class="c-field">
+<label class="c-label" for="inpA">First number<span class="c-term">a</span></label>
+<input class="c-input" id="inpA" inputmode="decimal" step="any" type="number" value="2"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="inpB">Second number<span class="c-term">b</span></label>
+<input class="c-input" id="inpB" inputmode="decimal" step="any" type="number" value="3"/>
+</div>
+<div class="c-field">
+<label class="c-label">Mode</label>
+<select class="c-select" id="mode">
+<option value="sum">Sum of cubes (a³ + b³)</option>
+<option value="diff">Difference of cubes (a³ - b³)</option>
+</select>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div aria-live="polite" class="c-result" id="resultBox">
+<div class="c-resline">
+<div class="c-resleft">First number cube (a³)</div>
+<div class="c-resval" id="outA">—</div>
+<button aria-label="Copy a³" class="c-copy" id="copyA" title="Copy a³"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Cube of the second number (b³)</div>
+<div class="c-resval" id="outB">—</div>
+<button aria-label="Copy b³" class="c-copy" id="copyB" title="Copy b³"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft" id="sumLabel">Sum (a³ + b³)</div>
+<div class="c-resval" id="outSum">—</div>
+<button aria-label="Copy result" class="c-copy" id="copySum" title="Copy result"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Expansion by formula</div>
+<div class="c-resval" id="decomp">—</div>
+<div></div>
+</div>
+</div>
+</div>
+
+`;
+  host.appendChild(wrap);
+
+  // === Логика (без запрещённых операторов: && || < > <= >=) ===
+  const $ = function (s) { return wrap.querySelector(s); };
+
+  const inpA = $('#inpA');
+  const inpB = $('#inpB');
+  const modeSel = $('#mode');
+  const autoChk = $('#autoCalc');
+  const calcBtn = $('#calcBtn');
+  const resetBtn = $('#resetBtn');
+  const resBox = $('#resultBox');
+
+  const outA = $('#outA');
+  const outB = $('#outB');
+  const outSum = $('#outSum');
+  const decomp = $('#decomp');
+
+  function toNumber(v) {
+    const n = Number(String(v).replace(',', '.'));
+    if (Number.isFinite(n) === true) {
+      return n;
+    }
+    return NaN;
+  }
+
+  function fmt(n) {
+    if (Number.isFinite(n) === false) return '—';
+    // максимально аккуратно: если целое — без дробной части
+    const abs = Math.abs(n);
+    if (Math.abs(Math.round(n) - n) === 0) {
+      return String(Math.round(n));
+    }
+    // иначе формат с 8 значащими
+    const s = Number.parseFloat(n.toFixed(8)).toString();
+    return s.replace(/(\.\d*?[1-9])0+$|\.0+$/,'$1');
+  }
+
+  function computeAndShow() {
+    const a = toNumber(inpA.value);
+    const b = toNumber(inpB.value);
+
+    // валидация: оба должны быть числами
+    if (Number.isFinite(a) === false) {
+      showError('The first value is not a number');
+      return;
+    }
+    if (Number.isFinite(b) === false) {
+      showError('The second value is not a number');
+      return;
+    }
+
+    // вычисления
+    const a3 = Math.pow(a, 3);
+    const b3 = Math.pow(b, 3);
+
+    let sumVal = 0;
+    if (modeSel.value === 'sum') {
+      sumVal = a3 + b3;
+      $('#sumLabel').textContent = 'Sum (a³ + b³)';
+      // разложение: (a + b)(a^2 - a b + b^2)
+      const p = a + b;
+      const q = (Math.pow(a,2) - a * b + Math.pow(b,2));
+      decomp.textContent = '(' + fmt(p) + ') · (' + fmt(q) + ')';
+    } else {
+      // diff
+      sumVal = a3 - b3;
+      $('#sumLabel').textContent = 'Difference (a³ - b³)';
+      // разложение: (a - b)(a^2 + a b + b^2)
+      const p = a - b;
+      const q = (Math.pow(a,2) + a * b + Math.pow(b,2));
+      decomp.textContent = '(' + fmt(p) + ') · (' + fmt(q) + ')';
+    }
+
+    outA.textContent = fmt(a3);
+    outB.textContent = fmt(b3);
+    outSum.textContent = fmt(sumVal);
+
+    // показать результат
+    resBox.classList.add('show');
+  }
+
+  function showError(msg) {
+    // показываем кратко в поле разложения
+    decomp.textContent = msg;
+    resBox.classList.add('show');
+    outA.textContent = '—';
+    outB.textContent = '—';
+    outSum.textContent = '—';
+  }
+
+  // Копирование (делаем делегирование по id кнопок)
+  wrap.addEventListener('click', function (e) {
+    const t = e.target;
+    if (!t || !t.id) return;
+    try {
+      if (t.id === 'copyA') {
+        navigator.clipboard.writeText(outA.textContent.trim());
+        return;
+      }
+      if (t.id === 'copyB') {
+        navigator.clipboard.writeText(outB.textContent.trim());
+        return;
+      }
+      if (t.id === 'copySum') {
+        navigator.clipboard.writeText(outSum.textContent.trim());
+        return;
+      }
+    } catch (_) {}
+  });
+
+  // События
+  calcBtn.addEventListener('click', function () { computeAndShow(); });
+
+  resetBtn.addEventListener('click', function () {
+    inpA.value = '';
+    inpB.value = '';
+    modeSel.value = 'sum';
+    autoChk.checked = false;
+    outA.textContent = '—';
+    outB.textContent = '—';
+    outSum.textContent = '—';
+    decomp.textContent = '—';
+    resBox.classList.remove('show');
+  });
+
+  // Автопересчёт: слушаем вводы и пересчитываем без использования логических операторов в условии
+  inpA.addEventListener('input', function () {
+    if (autoChk.checked === true) {
+      computeAndShow();
+    }
+  });
+  inpB.addEventListener('input', function () {
+    if (autoChk.checked === true) {
+      computeAndShow();
+    }
+  });
+  modeSel.addEventListener('change', function () {
+    if (autoChk.checked === true) {
+      computeAndShow();
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Abbreviated multiplication formulas (FMF) are the basis of algebra. One of the most important is the formula <strong>sum of two cubes</strong>. It allows you not only to quickly calculate the sum of numbers to the third power, but also to decompose a complex expression into simple factors. Our online calculator will help you instantly perform calculations for any numbers <strong>a</strong> And <strong>b</strong>.</p>
+<h2 class="wp-block-heading" id="chto-takoe-summa-dvuh-kubov-2">What is the sum of two cubes?</h2>
+<p><strong>Sum of two cubes</strong> is an algebraic expression of the form $a^3 + b^3$ . The main value of this formula lies in its expansion, which helps you simplify expressions, reduce fractions, and solve equations.</p>
+<p>The decomposition formula looks like this:</p>
+<p>$$a^3 + b^3 = (a + b)(a^2 — ab + b^2)$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $(a+b)$ is <strong>sum of numbers</strong>.</li>
+<li>$(a^2 — ab + b^2)$ — <strong>partial squared difference</strong> these numbers.</li>
+</ul>
+<h2 class="wp-block-heading" id="kak-polzovatsya-kalkulyatorom-2">How to use the calculator?</h2>
+<p>Our calculator is designed for maximum simplicity and speed. To get the result, follow just two steps:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li>Enter <strong>First number ( $a$ )</strong> in the appropriate field.</li>
+<li>Enter <strong>Second number ( $b$ )</strong> in the appropriate field.</li>
+</ol>
+<p>Click the button <strong>"Calculate"</strong> to instantly get the full set of results, including the $a^3 + b^3$ value itself and its factorization.</p>
+<h2 class="wp-block-heading" id="primer-vychisleniya-2">Example calculation</h2>
+<p>Consider the classic example of $a = 2$ and $b = 3$ .</p>
+<h4 class="wp-block-heading">Step 1: Calculate cubes of numbers</h4>
+<ul class="wp-block-list">
+<li>$a^3 = 2^3 = 2 \cdot 2 \cdot 2 = **8**$</li>
+<li>$b^3 = 3^3 = 3 \cdot 3 \cdot 3 = **27**$</li>
+</ul>
+<h4 class="wp-block-heading">Step 2: Find the sum of cubes</h4>
+<ul class="wp-block-list">
+<li>$a^3 + b^3 = 8 + 27 = **35**$</li>
+</ul>
+<h4 class="wp-block-heading">Step 3: Check using the decomposition formula</h4>
+<ul class="wp-block-list">
+<li>Sum of numbers: $(a+b) = 2 + 3 = **5**$ </li>
+<li>Partial squared difference: $(a^2 — ab + b^2) = (2^2 — (2 \cdot 3) + 3^2) = (4 — 6 + 9) = **7**$ </li>
+<li>Product of multipliers: $5 \cdot 7 = **35**$ </li>
+</ul>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Calculation result</strong></td><td><strong>Meaning</strong></td></tr></thead><tbody><tr><td>Sum of cubes ( $a^3 + b^3$ )</td><td>35</td></tr><tr><td>Decomposition $(a+b)(a^2 — ab + b^2)$ </td><td>$5 \cdot 7 = 35$</td></tr></tbody></table></div></figure>
+<p>The results coincide, which confirms the correctness of the formula.</p>
+<h2 class="wp-block-heading" id="smezhnye-formuly-sokrashhennogo-umnozheniya-fsu-2">Related abbreviated multiplication formulas (FSU)</h2>
+<p>To complete the picture and better understand algebraic transformations, it is useful to know other formulas closely related to cubes and squares:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Formula name</strong></td><td><strong>Formula</strong></td><td><strong>Application</strong></td></tr></thead><tbody><tr><td><strong>Sum of cubes</strong></td><td>$a^3 + b^3 = (a + b)(a^2 — ab + b^2)$</td><td>Factorization.</td></tr><tr><td><strong>Difference of cubes</strong></td><td>$a^3 — b^3 = (a — b)(a^2 + ab + b^2)$</td><td>Factorization.</td></tr><tr><td><strong>Square of the sum</strong></td><td>$(a + b)^2 = a^2 + 2ab + b^2$</td><td>Expanding parentheses.</td></tr><tr><td><strong>Difference of squares</strong></td><td>$a^2 — b^2 = (a — b)(a + b)$</td><td>Reducing fractions.</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="pochemu-eta-formula-vazhna-v-matematike-2">Why is this formula important in mathematics?</h2>
+<p>Using the sum of two cubes formula has several key advantages:</p>
+<ul class="wp-block-list">
+<li><strong>Simplifying expressions:</strong> Allows you to replace a complex term in a cube with a product of simpler binomials.</li>
+<li><strong>Solving equations:</strong> Factoring often helps to find the roots of cubic equations.</li>
+<li><strong>Foundation for Higher Mathematics:</strong> The principles of FSU are actively used in integral calculus, as well as when working with complex numbers.</li>
+</ul>
+<p>Use our calculator to avoid wasting time on routine calculations and focus on more complex tasks!</p>
+</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fasteners and hardware calculator: Calculation of the weight and number of screws, nails, dowels</title>
+    <meta name="description" content="Fasteners and hardware calculator: Calculation of the weight and number of screws, nails, dowels - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Fasteners and hardware calculator: Calculation of the weight and number of screws, nails, dowels</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (Золотой стандарт + Mobile Fix + Fixed Copy) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; background:#fff; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 10px; } 
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 10px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+    
+    .c-divider { 
+        display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; 
+        font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; }
+
+    .c-result { border:1px dashed #0693e3; border-radius:10px; padding:10px; background:#fff; display:none; scroll-margin-top: 20px; }
+    .c-result.show { display:grid; }
+    
+    /* Desktop Default */
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #0693e3; grid-template-columns: 1fr auto 30px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-all; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 4px; }
+
+    /* Visualization Box */
+    .c-visual-box { text-align: center; margin-bottom: 20px; padding: 20px; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+    
+    /* --- MOBILE FIX: Кнопка справа --- */
+    @media (max-width: 480px) {
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 4px; padding: 12px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 19px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 24px; }
+    }
+    
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    
+    /* Correct Copy Button Style */
+    .c-copy { 
+      width: 28px; height: 28px; 
+      border: none; background-color: #fff; 
+      border-radius: 6px; cursor: pointer; 
+      text-indent: -9999px; overflow: hidden; padding: 3px; 
+      background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E'); 
+      background-repeat: no-repeat; background-position: center; background-size: 20px 20px; 
+      opacity: 0.6; transition: opacity 0.2s ease-in-out;
+    } 
+    .c-copy:hover { opacity: 1; }
+
+    .c-error { color: #d32f2f; background: #ffebee; padding: 10px; border-radius: 8px; margin-bottom: 10px; display: none; font-size: 14px; }
+    .c-error.show { display: block; }
+  `;
+  document.head.appendChild(style);
+
+  // ===== База данных весов (Справочные значения, кг/1000шт) =====
+  // w = weight per 1000 pcs
+  const db = {
+      wood: {
+          label: "Wood screws (Black)",
+          icon: "screw",
+          sizes: [
+              {n: "3.5 x 16", w: 0.88}, {n: "3.5 x 19", w: 1.02}, {n: "3.5 x 25", w: 1.25}, 
+              {n: "3.5 x 32", w: 1.52}, {n: "3.5 x 35", w: 1.63}, {n: "3.5 x 41", w: 1.85},
+              {n: "3.5 x 45", w: 2.05}, {n: "3.5 x 51", w: 2.25}, {n: "3.5 x 55", w: 2.45},
+              {n: "3.8 x 64", w: 3.40}, {n: "4.2 x 70", w: 4.40}, {n: "4.2 x 76", w: 4.75},
+              {n: "4.2 x 90", w: 5.60}, {n: "4.8 x 100", w: 8.20}, {n: "4.8 x 127", w: 10.3}
+          ]
+      },
+      metal: {
+          label: "Metal screws (Sharp/Drill)",
+          icon: "screw",
+          sizes: [
+             {n: "3.5 x 9.5 (Bedbug)", w: 0.90}, {n: "3.5 x 11 (Bedbug)", w: 0.95}, 
+             {n: "3.5 x 25", w: 1.45}, {n: "3.5 x 35", w: 1.90},
+             {n: "4.2 x 13 (PN)", w: 1.60}, {n: "4.2 x 16 (PN)", w: 1.80},
+             {n: "4.2 x 19 (PN)", w: 2.00}, {n: "4.2 x 32 (PN)", w: 3.00}
+          ]
+      },
+      roof: {
+          label: "Roofing (Hexagonal)",
+          icon: "hex",
+          sizes: [
+             {n: "4.8 x 19", w: 4.10}, {n: "4.8 x 29", w: 4.60}, {n: "4.8 x 35", w: 5.25},
+             {n: "4.8 x 50", w: 6.20}, {n: "4.8 x 70", w: 8.10}
+          ]
+      },
+      drywall: {
+          label: "Dowel-nail (Mushroom/Sunk)",
+          icon: "dowel",
+          sizes: [
+             {n: "6 x 40", w: 3.60}, {n: "6 x 60", w: 4.80}, {n: "6 x 80", w: 6.20},
+             {n: "8 x 60", w: 7.90}, {n: "8 x 80", w: 10.50}, {n: "8 x 100", w: 12.80}
+          ]
+      },
+      nail: {
+          label: "Construction nails",
+          icon: "nail",
+          sizes: [
+             {n: "2.5 x 50", w: 2.15}, {n: "2.5 x 60", w: 2.65}, 
+             {n: "3.0 x 70", w: 4.25}, {n: "3.0 x 80", w: 4.85},
+             {n: "3.5 x 90", w: 7.35}, {n: "4.0 x 100", w: 10.50},
+             {n: "4.0 x 120", w: 12.60}, {n: "5.0 x 150", w: 24.50}
+          ]
+      }
+  };
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-visual-box" id="visualBox">
+<svg height="100" id="visSvg" viewbox="0 0 100 100" width="100">
+</svg>
+</div>
+<div class="c-divider"><span class="icon">🔩</span>Hardware parameters</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Fastener type</label>
+<select class="c-select" id="selType">
+<option value="wood">Wood screws</option>
+<option value="metal">For metal / Bugs</option>
+<option value="roof">Roofing</option>
+<option value="drywall">Dowel-nails</option>
+<option value="nail">Construction nails</option>
+</select>
+</div>
+<div class="c-field">
+<label class="c-label">Size(mm)</label>
+<select class="c-select" id="selSize">
+</select>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Calculation mode</label>
+<select class="c-select" id="calcMode">
+<option value="to_qty">Weight (kg) → Pieces</option>
+<option value="to_weight">Pieces → Weight (kg)</option>
+</select>
+</div>
+<div class="c-field">
+<label class="c-label" id="lblInput">Weight<div class="c-term">kg</div></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="inVal" min="0" step="any" type="number" value="1"/>
+</div>
+</div>
+</div>
+<div class="c-divider"><span class="icon">💰</span>Cost (Optional)</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label" id="lblPrice">Price per<div class="c-term">1 kg</div></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="inPrice" min="0" placeholder="0.00" step="any" type="number" value=""/>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">📋</span>Calculation results</div>
+<div class="c-resline" style="background:#e3f2fd;">
+<div class="c-resleft" id="resMainLabel">Quantity<span class="c-subtext">Result</span>
+</div>
+<div class="c-resval" id="resMain"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Price<span class="c-subtext">Total amount</span>
+</div>
+<div class="c-resval" id="resCost"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Reference weight<span class="c-subtext">for 1000 pcs.</span>
+</div>
+<div class="c-resval" id="resRef"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Weight of 1 piece<span class="c-subtext">Average value</span>
+</div>
+<div class="c-resval" id="resSingle" style="font-weight:400; font-size:14px;"></div>
+<button class="c-copy"></button>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика =====
+  const $ = (s) => wrap.querySelector(s);
+  
+  const resBox = $('#resultBox');
+  const errorEl = $('#errorMsg');
+  
+  const selType = $('#selType');
+  const selSize = $('#selSize');
+  const calcMode = $('#calcMode');
+  const inVal = $('#inVal');
+  const inPrice = $('#inPrice');
+  
+  const lblInput = $('#lblInput');
+  const lblPrice = $('#lblPrice');
+  const resMainLabel = $('#resMainLabel');
+  
+  const visSvg = $('#visSvg');
+
+  // SVG Templates
+  const icons = {
+      screw: `<path d="M45 10 L55 10 L55 20 L50 90 L45 20 Z" fill="#333" /><path d="M40 10 L60 10 L60 15 L40 15 Z" fill="#111" /><path d="M50 20 L55 25 L50 30 L45 25 Z" fill="#555" transform="translate(0, 5)" />`,
+      hex: `<path d="M45 25 L55 25 L52 90 L48 90 Z" fill="#555" /><path d="M40 10 L60 10 L65 20 L35 20 Z" fill="#0693e3" />`,
+      dowel: `<rect x="42" y="20" width="16" height="60" rx="2" fill="#ddd" stroke="#999" stroke-width="2" /><path d="M45 20 L55 20 L52 85 L48 85 Z" fill="#333" />`,
+      nail: `<path d="M48 15 L52 15 L51 90 L49 90 Z" fill="#555" /><ellipse cx="50" cy="15" rx="8" ry="3" fill="#333" />`
+  };
+
+  function renderSizes() {
+      const type = selType.value;
+      const data = db[type];
+      
+      // Update sizes
+      selSize.innerHTML = '';
+      data.sizes.forEach((s, idx) => {
+          const opt = document.createElement('option');
+          opt.value = s.w; // Store weight in value for easier access
+          opt.textContent = s.n;
+          selSize.appendChild(opt);
+      });
+      
+      // Update Icon
+      let svgContent = icons.screw;
+      if (data.icon === 'hex') svgContent = icons.hex;
+      else if (data.icon === 'dowel') svgContent = icons.dowel;
+      else if (data.icon === 'nail') svgContent = icons.nail;
+      
+      visSvg.innerHTML = svgContent;
+      resBox.classList.remove('show');
+  }
+
+  function updateMode() {
+      const m = calcMode.value;
+      if (m === 'to_qty') {
+          lblInput.innerHTML = 'Weight <div class="c-term">kg</div>';
+          lblPrice.innerHTML = 'Price for <div class="c-term">1 kg</div>';
+          resMainLabel.innerHTML = 'Quantity <span class="c-subtext">Pieces</span>';
+      } else {
+          lblInput.innerHTML = 'Quantity <div class="c-term">pcs</div>';
+          lblPrice.innerHTML = 'Price for <div class="c-term">1 piece</div>';
+          resMainLabel.innerHTML = 'Weight <span class="c-subtext">Kilogram</span>';
+      }
+      resBox.classList.remove('show');
+  }
+
+  selType.addEventListener('change', renderSizes);
+  calcMode.addEventListener('change', updateMode);
+
+  function calculate() {
+      errorEl.classList.remove('show');
+      
+      const val = parseFloat(inVal.value);
+      const price = parseFloat(inPrice.value);
+      const weight1000 = parseFloat(selSize.value); // kg per 1000 pcs
+      const mode = calcMode.value;
+
+      if (isNaN(val) || Math.sign(val) !== 1) {
+           errorEl.textContent = "Enter a positive value.";
+           errorEl.classList.add('show');
+           resBox.classList.remove('show');
+           return;
+      }
+      
+      const weight1 = weight1000 / 1000; // kg per 1 piece
+      
+      let result = 0;
+      let totalCost = 0;
+      let resUnit = "";
+
+      if (mode === 'to_qty') {
+          // Input is kg -> output pcs
+          // pcs = kg / weight1
+          result = Math.round(val / weight1);
+          resUnit = "pcs.";
+          if (!isNaN(price) && Math.sign(price) === 1) {
+              totalCost = val * price; // price per kg
+          }
+      } else {
+          // Input is pcs -> output kg
+          // kg = pcs * weight1
+          result = val * weight1;
+          resUnit = "kg";
+          if (!isNaN(price) && Math.sign(price) === 1) {
+              totalCost = val * price; // price per piece
+          }
+      }
+
+      // Output
+      if (mode === 'to_qty') {
+          $('#resMain').textContent = result.toLocaleString() + " " + resUnit;
+      } else {
+          $('#resMain').textContent = result.toFixed(3) + " " + resUnit;
+      }
+      
+      if (Math.sign(totalCost) === 1) {
+          $('#resCost').textContent = totalCost.toFixed(2) + " ¤";
+      } else {
+          $('#resCost').textContent = "---";
+      }
+      
+      $('#resRef').textContent = weight1000.toFixed(2) + "kg";
+      $('#resSingle').textContent = (weight1 * 1000).toFixed(2) + "G"; // in grams
+
+      resBox.classList.add('show');
+      resBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  $('#calcBtn').addEventListener('click', calculate);
+  
+  $('#resetBtn').addEventListener('click', () => {
+      inVal.value = 1;
+      inPrice.value = '';
+      selType.value = 'wood';
+      calcMode.value = 'to_qty';
+      renderSizes();
+      updateMode();
+      resBox.classList.remove('show');
+      errorEl.classList.remove('show');
+  });
+
+  wrap.addEventListener('click', (e) => {
+    if (e.target.classList.contains('c-copy')) {
+      const parent = e.target.parentElement;
+      const val = parent.querySelector('.c-resval').textContent;
+      if (val) navigator.clipboard.writeText(val);
+    }
+  });
+  
+  // Init
+  renderSizes();
+});
+</script>
+
+        <div class="post-content">
+<p>During construction and renovation, an eternal dilemma arises: design documentation requires accurate <strong>quantities</strong> fasteners (in pieces), and hardware stores sell them <strong>by weight</strong> (in kilograms or packs). An error in calculations leads either to crew downtime due to a lack of a couple of dozen screws, or to overpayment for extra kilograms of metal.</p>
+<p>Our calculator solves this problem instantly. It uses current regulatory weight data for 1000 pieces. various hardware, allowing you to convert the purchase volume into piece quantities and vice versa.</p>
+<h2 class="wp-block-heading" id="kakie-tipy-krepezha-schitaem-2">What types of fasteners do we consider?</h2>
+<p>The tool supports 5 main categories of construction fasteners:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Black wood screws (GD):</strong> Large thread, countersunk head. The most popular type for drywall and wooden frames.</li>
+<li><strong>Metal screws (GM/Klopy):</strong> Fine thread, sharp tip or drill. Used for profiles and sheet metal.</li>
+<li><strong>Roofing screws:</strong> Hex head with EPDM washer. They are heavy due to the seal.</li>
+<li><strong>Dowel nails:</strong> Polypropylene dowel + nail-screw. Basic fasteners for concrete and brick.</li>
+<li><strong>Construction nails:</strong> Classic fasteners for rough work.</li>
+</ol>
+<h2 class="wp-block-heading" id="spravochnaya-tablitsa-ves-1000-sht-samorezov-2">Reference table: Weight 1000 pcs. self-tapping screws</h2>
+<p>Below are the average weight values ​​for the most popular sizes of black self-tapping screws (for wood), which are used in the calculator algorithm.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Size(mm)</strong></td><td><strong>Weight 1000 pcs. (kg)</strong></td><td><strong>Quantity per 1 kg (pcs.)</strong></td></tr></thead><tbody><tr><td><strong>3.5 x 16</strong></td><td>0.88</td><td>~1136</td></tr><tr><td><strong>3.5 x 25</strong></td><td>1.25</td><td>~800</td></tr><tr><td><strong>3.5 x 35</strong></td><td>1.63</td><td>~613</td></tr><tr><td><strong>3.5 x 41</strong></td><td>1.85</td><td>~540</td></tr><tr><td><strong>3.5 x 51</strong></td><td>2.25</td><td>~444</td></tr><tr><td><strong>4.2 x 76</strong></td><td>4.75</td><td>~210</td></tr><tr><td><strong>4.8 x 100</strong></td><td>8.20</td><td>~122</td></tr></tbody></table></div></figure>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p><strong>Important:</strong> Actual weight may vary slightly (3-5%) depending on manufacturer, rod thickness and alloy quality.</p>
+</blockquote>
+<h2 class="wp-block-heading" id="formuly-rascheta-2">Calculation formulas</h2>
+<p>To understand how the conversion is performed, we provide a mathematical basis.</p>
+<h3 class="wp-block-heading" id="1-perevod-vesa-v-kolichestvo-2">1. Converting weight to quantity</h3>
+<p>If you are buying fasteners by weight and want to know if it is enough for your scope of work:</p>
+<p>$$N = \frac{M_{total}}{m_{1}} \times 1000$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $N$ - total quantity (pcs).</li>
+<li> $M_{total}$ - total purchase weight (kg).</li>
+<li> $m_{1}$ - theoretical weight of 1000 pieces of the selected standard size (kg).</li>
+</ul>
+<h3 class="wp-block-heading" id="2-perevod-kolichestva-v-ves-2">2. Convert quantity to weight</h3>
+<p>If you know that you need to tighten 5000 screws and want to know how many kilograms to buy:</p>
+<p>$$M_{total} = \frac{N}{1000} \times m_{1}$$</p>
+<h2 class="wp-block-heading" id="sovety-po-zakupke-2">Purchasing Tips</h2>
+<ul class="wp-block-list">
+<li><strong>Safety factor.</strong> Always add <strong>5-7%</strong> to the estimated quantity. Hardware tends to get lost and bend during installation, and screwdriver bits can tear off splines.</li>
+<li><strong>Packing.</strong> Roofing screws are often sold in packs of 250 or 500 pieces. Use our calculator to find out the weight of such a package for transportation.</li>
+<li><strong>The price of a mistake.</strong> When working with dowel-nails (installing a profile to a wall), the lack of fasteners is critical. It’s better to buy an extra pack than to stop hammer drilling.</li>
+</ul>
+<p>Use the field <strong>"Price"</strong> in the calculator to instantly create an estimate not only in kilograms, but also in rubles.</p>
+</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accelerated loan repayment calculator: Payments every 2 weeks (Bi-weekly)</title>
+    <meta name="description" content="Accelerated loan repayment calculator: Payments every 2 weeks (Bi-weekly) - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Accelerated loan repayment calculator: Payments every 2 weeks (Bi-weekly)</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (Исправленный эталон) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(220px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    
+    /* Label + Term */
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    /* Input + Suffix (Corrected Position) */
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-input-wrapper { position: relative; width: 100%; }
+    
+    /* Паддинг справа маленький, так как там стрелки браузера */
+    .c-input-wrapper .c-input { padding-right: 10px; } 
+    
+    /* Суффикс сдвинут влево на 32px, чтобы быть левее стрелок */
+    .c-input-suffix {
+        position: absolute; right: 32px; top: 50%; transform: translateY(-50%);
+        color: #888; font-size: 14px; pointer-events: none; font-weight: 500;
+    }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 10px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+    
+    .c-divider { 
+        display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; 
+        font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; }
+
+    /* Result Box */
+    .c-result { border:1px dashed #0693e3; border-radius:10px; padding:10px; background:#fff; display:none; scroll-margin-top: 20px; }
+    .c-result.show { display:grid; }
+    
+    .c-result-title {
+        margin: 0 0 10px 0; padding: 0 12px;
+        font-size: 18px; font-weight: 700; color: #333;
+        display: flex; align-items: center; gap: 8px;
+    }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #0693e3; grid-template-columns: 1fr auto 30px; }
+    .c-resline:last-child { border-bottom:none; }
+    
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 4px; }
+    
+    .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden; padding: 3px;
+      background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+      background-repeat:no-repeat; background-position:center; background-size:20px 20px; opacity: 0.6;}
+    .c-copy:hover { opacity: 1; }
+
+    .c-error { color: #d32f2f; background: #ffebee; padding: 10px; border-radius: 8px; margin-bottom: 10px; display: none; font-size: 14px; }
+    .c-error.show { display: block; }
+    .is-hidden { display:none !important; }
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    
+    /* Mobile Result Optimization */
+    @media (max-width: 480px) {
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 4px; padding: 12px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 19px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 24px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-divider"><span class="icon">🏦</span>Loan parameters</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Loan amount</label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="loanAmount" placeholder="1000000" step="1000" type="number"/>
+<span class="c-input-suffix">$</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Interest rate<span class="c-term">% year</span></label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="interestRate" placeholder="12" step="0.1" type="number"/>
+<span class="c-input-suffix">%</span>
+</div>
+</div>
+</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Loan term</label>
+<div class="c-input-wrapper">
+<input class="c-input param-inp" id="loanTerm" placeholder="20" step="1" type="number"/>
+<span class="c-input-suffix">years</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Currency<span class="c-term">Symbol</span></label>
+<select class="c-select" id="currency">
+<option value="$">Dollar ($)</option>
+<option value="$">Ruble ($)</option>
+<option value="€">Euro (€)</option>
+</select>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div aria-live="polite" class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">📊</span>Payout comparison</div>
+<div class="c-resline">
+<div class="c-resleft">Expedited payment<span class="c-subtext">Every 2 weeks</span>
+</div>
+<div class="c-resval" id="resBiWeekly"></div>
+<button class="c-copy" id="copyBi"></button>
+</div>
+<div class="c-resline" style="background:#e8f5e9;">
+<div class="c-resleft">Interest savings<span class="c-subtext">Overall benefit</span>
+</div>
+<div class="c-resval" id="resSavings" style="color:#2e7d32; font-size:20px;"></div>
+<button class="c-copy" id="copySave"></button>
+</div>
+<div class="c-resline" style="background:#e3f2fd;">
+<div class="c-resleft">Reduced term<span class="c-subtext">Pay early on</span>
+</div>
+<div class="c-resval" id="resTimeSaved" style="color:#0277bd;"></div>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Standard payment<span class="c-subtext">Once a month</span>
+</div>
+<div class="c-resval" id="resMonthly" style="font-weight:normal;"></div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика =====
+  const $ = (s) => wrap.querySelector(s);
+  const $$ = (s) => wrap.querySelectorAll(s);
+  const resBox = $('#resultBox');
+  const errorEl = $('#errorMsg');
+  
+  const inpP = $('#loanAmount');
+  const inpR = $('#interestRate');
+  const inpT = $('#loanTerm');
+  const selCurr = $('#currency');
+  // Находим суффикс конкретно для суммы кредита
+  const suffixSign = inpP.parentElement.querySelector('.c-input-suffix'); 
+  
+  const out = {
+      bi: $('#resBiWeekly'),
+      save: $('#resSavings'),
+      time: $('#resTimeSaved'),
+      mon: $('#resMonthly')
+  };
+
+  // Обновление символа валюты в поле ввода при смене селекта
+  selCurr.addEventListener('change', () => {
+      suffixSign.textContent = selCurr.value;
+  });
+
+  function num(el){ const n = parseFloat(el.value); return isNaN(n) ? 0 : n; }
+  
+  function fmt(n) { 
+      return n.toLocaleString('ru-RU', { maximumFractionDigits: 0 }) + " " + selCurr.value; 
+  }
+  
+  // Подсветка заполненных полей
+  $$('.param-inp').forEach(inp => {
+      inp.addEventListener('input', () => {
+          if (inp.value) inp.classList.add('filled');
+          else inp.classList.remove('filled');
+      });
+  });
+
+  function calc() {
+      errorEl.classList.remove('show');
+      
+      const P = num(inpP);
+      const r_annual = num(inpR);
+      const years = num(inpT);
+      
+      // Валидация
+      if (Math.sign(P) !== 1 || Math.sign(r_annual) !== 1 || Math.sign(years) !== 1) {
+          errorEl.textContent = "Please fill in all fields with correct values.";
+          errorEl.classList.add('show'); resBox.classList.remove('show'); return;
+      }
+
+      // 1. Стандартный расчет (Ежемесячный)
+      const r_mon = r_annual / 100 / 12;
+      const n_mon = years * 12;
+      
+      // Формула аннуитета
+      const pow = Math.pow(1 + r_mon, n_mon);
+      const MonthlyPmt = P * r_mon * pow / (pow - 1);
+      
+      const TotalPayStd = MonthlyPmt * n_mon;
+      const TotalIntStd = TotalPayStd - P;
+
+      // 2. Ускоренный Bi-weekly
+      const BiWeeklyPmt = MonthlyPmt / 2;
+      
+      // Симуляция погашения
+      let balance = P;
+      let periods = 0;
+      let totalPaidAcc = 0;
+      const r_bi = r_annual / 100 / 26; // Ставка за 2 недели
+      const maxIter = 100 * 26; 
+      
+      for (let i = 0; i < maxIter; i++) {
+          if (Math.sign(balance) !== 1) break; 
+          
+          const interest = balance * r_bi;
+          let principal = BiWeeklyPmt - interest;
+          
+          if (Math.sign(balance - principal) === -1) {
+              totalPaidAcc += (balance + interest);
+              balance = 0;
+          } else {
+              balance -= principal;
+              totalPaidAcc += BiWeeklyPmt;
+          }
+          periods++;
+      }
+      
+      const TotalIntAcc = totalPaidAcc - P;
+      const Savings = TotalIntStd - TotalIntAcc;
+      
+      // Время
+      const yearsAcc = Math.floor(periods / 26);
+      const monthsAcc = Math.round((periods % 26) * 2 / 4.3);
+      
+      const savedPeriods = n_mon - (yearsAcc * 12 + monthsAcc);
+      const savedYears = Math.floor(savedPeriods / 12);
+      const savedMonths = savedPeriods % 12;
+
+      // Вывод
+      out.bi.textContent = fmt(BiWeeklyPmt);
+      out.mon.textContent = fmt(MonthlyPmt);
+      out.save.textContent = fmt(Savings);
+      out.time.textContent = savedYears + "G." + savedMonths + "months";
+
+      resBox.classList.add('show');
+      resBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  // Слушатели
+  $('#calcBtn').addEventListener('click', calc);
+  $('#resetBtn').addEventListener('click', () => {
+    $$('.param-inp').forEach(inp => {
+        inp.value = '';
+        inp.classList.remove('filled');
+    });
+    resBox.classList.remove('show');
+    errorEl.classList.remove('show');
+  });
+
+  // Копирование
+  wrap.addEventListener('click', (e) => {
+    if (e.target.classList.contains('c-copy')) {
+      const parent = e.target.parentElement;
+      const val = parent.querySelector('.c-resval').textContent;
+      if (val) navigator.clipboard.writeText(val);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Many borrowers are unaware that simply changing the frequency of payments can save hundreds of thousands of rubles (or dollars) and reduce the term of the mortgage by several years. Our <strong>biweekly payment calculator</strong> clearly demonstrates the magic of compound interest and the effect of the “thirteenth payment”.</p>
+<h2 class="wp-block-heading" id="v-chem-sut-metoda-bi-weekly-2">What is the essence of the “Bi-weekly” method?</h2>
+<p>The standard banking scheme involves 12 payments per year (once a month).</p>
+<p>The Bi-weekly strategy works differently: you split your regular monthly payment in half and pay that half every two weeks.</p>
+<p>There are 52 weeks in a year. This means that you will make 26 semi-payments:</p>
+<p>$$26 \times 0.5 = 13$$</p>
+<p>Thus, unnoticed by your budget, you contribute <strong>one full additional payment per year</strong>. This amount goes to repay the principal debt (the body of the loan), which dramatically reduces the overpayment.</p>
+<h2 class="wp-block-heading" id="sravnenie-strategij-mesyats-vs-2-nedeli-2">Comparison of strategies: Month vs 2 weeks</h2>
+<p>The table below shows an example calculation for a loan in <strong>1 000 000</strong> under <strong>12%</strong> per annum for <strong>20 years</strong>.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Parameter</strong></td><td><strong>Standard (Once a month)</strong></td><td><strong>Accelerated (Once every 2 weeks)</strong></td></tr></thead><tbody><tr><td><strong>Number of payments</strong></td><td>240 (12 per year)</td><td>520 (26 per year)</td></tr><tr><td><strong>Payment amount</strong></td><td>11 011</td><td>5 505</td></tr><tr><td><strong>Payment term</strong></td><td>20 years</td><td><strong>16 years and 2 months.</strong></td></tr><tr><td><strong>Overpayment (%)</strong></td><td>1 642 613</td><td>1 278 405</td></tr><tr><td><strong>Saving</strong></td><td>—</td><td><strong>364 208</strong></td></tr></tbody></table></div></figure>
+<p><em>As you can see from the example, you completely pay off your debt almost 4 years earlier simply by changing the frequency of transactions.</em></p>
+<h2 class="wp-block-heading" id="formuly-rascheta-2">Calculation formulas</h2>
+<p>To calculate the standard annuity payment ( $A$ ), the classic formula is used:</p>
+<p>$$A = P \cdot \frac{r \cdot (1+r)^n}{(1+r)^n — 1}$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $P$ - loan amount.</li>
+<li> $r$ - monthly interest rate ( $Годовая / 12$ ).</li>
+<li> $n$ - number of months.</li>
+</ul>
+<p>In the scheme <strong>Bi-weekly</strong> we are modifying the approach. The payment is $A / 2$ , but the accrued interest is recalculated every 14 days, and the loan body decreases faster.</p>
+<h2 class="wp-block-heading" id="glavnye-preimushhestva-shemy-2">Main advantages of the scheme</h2>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Tremendous savings:</strong> You do not pay interest to the bank for the “extra” years of using the money.</li>
+<li><strong>Psychological comfort:</strong> Paying half the amount every two weeks is often easier than parting with a large amount once a month (especially if your paycheck comes in twice a month).</li>
+<li><strong>Fast Freedom:</strong> A 30-year mortgage can turn into a 24-25 year mortgage without refinancing.</li>
+</ol>
+<h2 class="wp-block-heading" id="kak-primenit-eto-na-praktike-2">How to put this into practice?</h2>
+<p>Most banks offer a once-a-month schedule by default. To switch to this diagram:</p>
+<ul class="wp-block-list">
+<li><strong>Option A:</strong> Find out from your bank if they officially support the biweekly payment schedule.</li>
+<li><strong>Option B (Universal):</strong> If the bank does not change the schedule, you can simply set up automatic payment. Divide the monthly installment by 12 (for example, 5,000 / 12 = 416) and add this amount to each monthly prepayment payment. The effect will be identical to the Bi-weekly method.</li>
+</ul>
+</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power supply unit (PSU) power calculator for PC: online calculation</title>
+    <meta name="description" content="Power supply unit (PSU) power calculator for PC: online calculation - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Power supply unit (PSU) power calculator for PC: online calculation</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: end; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-row.cols-3 { grid-template-columns: repeat(3, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-receipt-wrap { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 15px; position: relative; overflow: hidden; }
+    .c-receipt-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: repeating-linear-gradient(45deg, #0693e3, #0693e3 10px, #38bdf8 10px, #38bdf8 20px); }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #fff; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #eff6ff; border: 1px solid #bae6fd; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05); }
+    .c-highlight-line:hover { background: #e0f2fe; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .c-switch-wrap { display: flex; align-items: center; gap: 12px; cursor: pointer; margin-bottom: 5px; padding: 14px 16px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 2px 6px rgba(0,0,0,0.02); transition: 0.3s; }
+    .c-switch-wrap:hover { border-color: #cbd5e1; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .c-switch-track { width: 44px; height: 24px; background: #cbd5e1; border-radius: 24px; position: relative; transition: 0.3s; flex-shrink: 0; }
+    .c-switch-thumb { width: 18px; height: 18px; background: #fff; border-radius: 50%; position: absolute; top: 3px; left: 3px; transition: 0.3s; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+    input:checked + .c-switch-track { background: #0693e3; }
+    input:checked + .c-switch-track .c-switch-thumb { left: 23px; }
+    .c-switch-label { font-weight: 600; font-size: 15px; color: #333; }
+    
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* Advanced Graphics: Donut Chart & Visuals */
+    .c-vis-area { display: flex; flex-direction: column; align-items: center; margin: 25px 0; padding: 30px 20px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); }
+    .c-vis-title { font-weight: 700; color: #0f172a; font-size: 16px; margin-bottom: 25px; display: flex; align-items: center; gap: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+    
+    .c-donut-wrapper { position: relative; width: 180px; height: 180px; margin-bottom: 25px; filter: drop-shadow(0 10px 15px rgba(2, 132, 199, 0.15)); }
+    .c-donut-chart { width: 100%; height: 100%; border-radius: 50%; background: conic-gradient(#0693e3 0deg var(--deg-cpu, 0deg), #10b981 var(--deg-cpu, 0deg) var(--deg-gpu, 0deg), #94a3b8 var(--deg-gpu, 0deg) 360deg); transition: background 1s cubic-bezier(0.4, 0, 0.2, 1); display: flex; align-items: center; justify-content: center; position: relative; }
+    .c-donut-hole { width: 130px; height: 130px; border-radius: 50%; background: #fff; box-shadow: inset 0 4px 10px rgba(0,0,0,0.05); display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 2; }
+    
+    .c-donut-total-val { font-size: 24px; font-weight: 800; color: #0f172a; line-height: 1; margin-bottom: 4px; }
+    .c-donut-total-lbl { font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase; }
+    
+    .c-legend-box { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; width: 100%; }
+    .c-legend-item { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #333; }
+    .c-legend-dot { width: 12px; height: 12px; border-radius: 4px; }
+    .c-dot-cpu { background: #0693e3; }
+    .c-dot-gpu { background: #10b981; }
+    .c-dot-sys { background: #94a3b8; }
+    
+    .c-badge-80plus { display: inline-flex; align-items: center; justify-content: center; padding: 4px 10px; border-radius: 6px; font-weight: 800; font-size: 11px; letter-spacing: 0.5px; text-transform: uppercase; background: #1e293b; color: #fff; border: 1px solid #475569; margin-left: auto; }
+    .c-badge-gold { background: linear-gradient(135deg, #d4af37, #b8860b); color: #fff; border-color: #daa520; box-shadow: 0 2px 6px rgba(212, 175, 55, 0.3); }
+    .c-badge-bronze { background: linear-gradient(135deg, #cd7f32, #a0522d); color: #fff; border-color: #8b4513; }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { .c-row.cols-2, .c-row.cols-3 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-vis-area { padding: 20px 15px; }
+       .c-donut-wrapper { width: 150px; height: 150px; }
+       .c-donut-hole { width: 100px; height: 100px; }
+       .c-donut-total-val { font-size: 20px; }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="psu-calc-wrapper">
+<div class="c-body">
+<div class="c-divider"><span class="icon">💻</span>Main consumers</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">CPU power consumption<span class="c-term">TDP CPU</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="cpu-tdp" placeholder="For example: 65" type="number"/>
+<span class="c-input-suffix">W</span>
+</div>
+<div style="display:flex; gap:6px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-target="cpu-tdp" data-val="65" type="button">Office (65W)</button>
+<button class="c-quick-btn" data-target="cpu-tdp" data-val="120" type="button">Gaming (120W)</button>
+<button class="c-quick-btn" data-target="cpu-tdp" data-val="250" type="button">Hi-End (250W)</button>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Power consumption of the video card<span class="c-term">TDP GPU</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="gpu-tdp" placeholder="For example: 200" type="number"/>
+<span class="c-input-suffix">W</span>
+</div>
+<div style="display:flex; gap:6px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-target="gpu-tdp" data-val="115" type="button">RTX 4060</button>
+<button class="c-quick-btn" data-target="gpu-tdp" data-val="285" type="button">RTX 4070 Ti</button>
+<button class="c-quick-btn" data-target="gpu-tdp" data-val="450" type="button">RTX 4090</button>
+</div>
+</div>
+</div>
+<div class="c-divider" style="margin-top: 25px;"><span class="icon">💽</span>Memory and storage</div>
+<div class="c-row cols-3">
+<div class="c-field">
+<label class="c-label">RAM modules</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="ram-qty" placeholder="2" type="number"/>
+<span class="c-input-suffix">pcs</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">SSD drives</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="ssd-qty" placeholder="1" type="number"/>
+<span class="c-input-suffix">pcs</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Hard drives<span class="c-term">HDD</span></label>
+<div class="c-input-wrapper">
+<input class="c-input" id="hdd-qty" placeholder="0" type="number"/>
+<span class="c-input-suffix">pcs</span>
+</div>
+</div>
+</div>
+<div class="c-divider" style="margin-top: 25px;"><span class="icon">⚙️</span>Cooling and tuning</div>
+<div class="c-row cols-2" style="margin-bottom: 25px;">
+<div class="c-field">
+<label class="c-label">Case fans</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="fan-qty" placeholder="3" type="number"/>
+<span class="c-input-suffix">pcs</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-switch-wrap" style="margin-top: auto; margin-bottom: 0; padding: 11px 16px;">
+<input class="is-hidden" id="liquidToggle" type="checkbox"/>
+<div class="c-switch-track"><div class="c-switch-thumb"></div></div>
+<span class="c-switch-label" style="font-size: 14px;">LSS pump<span class="c-term">Dropsy</span></span>
+</label>
+</div>
+</div>
+<label class="c-switch-wrap">
+<input class="is-hidden" id="ocToggle" type="checkbox"/>
+<div class="c-switch-track"><div class="c-switch-thumb"></div></div>
+<span class="c-switch-label">Overclocking is planned</span>
+</label>
+<span class="c-subtext" style="padding-left: 16px; margin-top: -5px; margin-bottom: 20px;">Takes into account increased CPU and GPU consumption when removing power limits.<span class="c-help-icon" id="openPsuInfo" style="margin-left: 5px;">?</span>
+</span>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-vis-area is-hidden" id="vis-box">
+<div class="c-vis-title"><span class="icon">⚡</span>Load distribution</div>
+<div class="c-donut-wrapper">
+<div class="c-donut-chart" id="donut-chart" style="--deg-cpu: 0deg; --deg-gpu: 0deg;">
+<div class="c-donut-hole">
+<div class="c-donut-total-val" id="vis-raw-pwr">0</div>
+<div class="c-donut-total-lbl">Watt</div>
+</div>
+</div>
+</div>
+<div class="c-legend-box">
+<div class="c-legend-item"><div class="c-legend-dot c-dot-cpu"></div>CPU:<span id="lbl-cpu-pwr">0</span>W</div>
+<div class="c-legend-item"><div class="c-legend-dot c-dot-gpu"></div>Video card:<span id="lbl-gpu-pwr">0</span>W</div>
+<div class="c-legend-item"><div class="c-legend-dot c-dot-sys"></div>System:<span id="lbl-sys-pwr">0</span>W</div>
+</div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">🔋</span>BP calculation results</div>
+<div class="c-receipt-wrap">
+<div class="c-resline">
+<div class="c-resleft">Peak consumption<span class="c-subtext">Total power of all nodes</span></div>
+<div class="c-resval" id="resPeak"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline c-highlight-line">
+<div class="c-resleft">Recommended power supply<span class="c-subtext" id="resRecSub">Safety margin +30-35%</span></div>
+<div class="c-resval" id="resRec" style="font-size: 24px;"></div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline" style="border-bottom: none; padding-bottom: 0; padding-top: 15px;">
+<div class="c-resleft" style="display:flex; align-items:center; width:100%;">Energy Efficiency Certificate<div class="c-badge-80plus" id="resBadge">80 PLUS</div>
+</div>
+</div>
+</div>
+</div>
+<div class="c-modal-overlay" id="psuInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closePsuInfo">×</button>
+<div class="c-modal-title"><span class="icon">📖</span>How is the power supply selected?</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">The power supply should not operate at its maximum capacity. Optimal load prolongs service life and reduces noise levels.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>Stock rule:</b><br/>We add about 30-40% to the peak system consumption. The maximum efficiency (efficiency factor) of most units is achieved precisely at a load of 50-70%.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>Overclocking:</b><br/>When overclocking is activated, the consumption of the processor and video card is multiplied by a factor of 1.2, since removing Power Limits exponentially increases energy consumption.</div>
+<div style="background: #eff6ff; padding: 12px; border-radius: 8px; border: 1px solid #bae6fd; font-size: 13px; color: #0284c7;">
+<b>Hidden consumers:</b>The calculation automatically includes 40-50 watts for the motherboard, chipset and USB peripherals.</div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let isCalculated = false;
+
+  $('#openPsuInfo').addEventListener('click', () => { $('#psuInfoModal').classList.add('show'); });
+  $('#closePsuInfo').addEventListener('click', () => { $('#psuInfoModal').classList.remove('show'); });
+  $('#psuInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#psuInfoModal').classList.remove('show');
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          let targetId = btn.dataset.target;
+          let val = btn.dataset.val;
+          $('#' + targetId).value = val;
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  function getVal(id, defaultVal = 0) {
+      let v = parseFloat($('#' + id).value);
+      let isNan = isNaN(v);
+      if (Math.abs(isNan === true) === 1) return defaultVal;
+      let isPositive = false;
+      if (Math.abs(Math.sign(v) === 1) === 1) isPositive = true;
+      if (Math.abs(Math.sign(v) === 0) === 1) isPositive = true;
+      if (Math.abs(isPositive === false) === 1) return defaultVal;
+      return v;
+  }
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let cpu = getVal('cpu-tdp', 0);
+    let gpu = getVal('gpu-tdp', 0);
+    
+    let isErr = false;
+    let hasCoreComps = Math.abs(Math.sign(cpu)) + Math.abs(Math.sign(gpu));
+    if (Math.abs(Math.sign(hasCoreComps) === 1) === 0) isErr = true;
+
+    if (Math.abs(isErr === true) === 1) {
+        $('#vis-box').classList.add('is-hidden');
+        $('#resultBox').classList.remove('show');
+        if (Math.abs(shouldScroll === true) === 1) {
+            $('#errorMsg').textContent = "Specify the TDP of at least one main component (CPU or GPU)";
+            $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    let ram = getVal('ram-qty', 0);
+    let ssd = getVal('ssd-qty', 0);
+    let hdd = getVal('hdd-qty', 0);
+    let fan = getVal('fan-qty', 0);
+    
+    let hasLiquid = $('#liquidToggle').checked;
+    let hasOc = $('#ocToggle').checked;
+
+    let ocFactor = 1.0;
+    if (Math.abs(hasOc === true) === 1) ocFactor = 1.2;
+
+    let finalCpu = cpu * ocFactor;
+    let finalGpu = gpu * ocFactor;
+
+    // Constants
+    let moboPwr = 45;
+    let ramPwr = ram * 4;
+    let ssdPwr = ssd * 5;
+    let hddPwr = hdd * 15;
+    let fanPwr = fan * 3;
+    let liquidPwr = 0;
+    if (Math.abs(hasLiquid === true) === 1) liquidPwr = 15;
+
+    let sysPwr = moboPwr + ramPwr + ssdPwr + hddPwr + fanPwr + liquidPwr;
+    let rawTotal = finalCpu + finalGpu + sysPwr;
+
+    // Recommended logic: +35% headroom, round up to nearest 50
+    let recPwrFloat = rawTotal * 1.35;
+    let recPwr = Math.ceil(recPwrFloat / 50) * 50;
+    
+    // Safety check: minimum 300W PSU
+    let isUnderMin = false;
+    let diffMin = Math.sign(recPwr - 300);
+    if (Math.abs(diffMin === -1) === 1) isUnderMin = true;
+    if (Math.abs(isUnderMin === true) === 1) recPwr = 300;
+
+    // UI Updates - Text Results
+    $('#resPeak').textContent = Math.round(rawTotal) + "W";
+    $('#resRec').textContent = recPwr + "W";
+    
+    // Badge Logic
+    let badgeEl = $('#resBadge');
+    badgeEl.className = 'c-badge-80plus'; 
+    badgeEl.textContent = '80 PLUS Standard';
+    
+    let isGold = false;
+    if (Math.abs(Math.sign(recPwr - 649) === 1) === 1) isGold = true;
+    
+    let isBronze = false;
+    let diffBronzeDown = Math.sign(recPwr - 449);
+    let diffBronzeUp = Math.sign(recPwr - 650);
+    let bronzeCond = Math.abs(diffBronzeDown === 1) + Math.abs(diffBronzeUp === -1);
+    if (Math.abs(bronzeCond === 2) === 1) isBronze = true;
+
+    if (Math.abs(isGold === true) === 1) {
+        badgeEl.classList.add('c-badge-gold');
+        badgeEl.textContent = '80 PLUS GOLD';
+    } else if (Math.abs(isBronze === true) === 1) {
+        badgeEl.classList.add('c-badge-bronze');
+        badgeEl.textContent = '80 PLUS BRONZE';
+    }
+
+    // Chart logic
+    let degCpu = (finalCpu / rawTotal) * 360;
+    let degGpu = degCpu + ((finalGpu / rawTotal) * 360);
+    
+    let chart = $('#donut-chart');
+    chart.style.setProperty('--deg-cpu', degCpu + 'deg');
+    chart.style.setProperty('--deg-gpu', degGpu + 'deg');
+    
+    $('#vis-raw-pwr').textContent = Math.round(rawTotal);
+    $('#lbl-cpu-pwr').textContent = Math.round(finalCpu);
+    $('#lbl-gpu-pwr').textContent = Math.round(finalGpu);
+    $('#lbl-sys-pwr').textContent = Math.round(sysPwr);
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#vis-box').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    wrap.querySelectorAll('input[type="number"]').forEach(i => i.value = '');
+    $('#liquidToggle').checked = false;
+    $('#ocToggle').checked = false;
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      let valClean = valRaw.replace('W', '').replace(/\\s/g, '').trim();
+      navigator.clipboard.writeText(valClean);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>The choice of power supply unit is the foundation for the stability of the entire system. An error in calculations can lead to sudden reboots under load, component degradation, or failure of an expensive video card. Our tool allows you to <strong>high-precision online power supply calculation</strong>, based on real TDP indicators and the specifics of modern components.</p>
+<h2 class="wp-block-heading" id="pochemu-vazhno-uchityvat-zapas-moshhnosti-2">Why is it important to consider power reserve?</h2>
+<p>Modern power supplies have an efficiency curve (COP). Peak efficiency is usually achieved at a load of <strong>50% to 70%</strong> from face value. If your computer draws 400 watts, buying a 400 watt unit will force it to operate at its limit, which will increase the noise level and shorten the life of the capacitors.</p>
+<p>The “gold standard” is included in the algorithm of our calculator - <strong>reserve of 30-35%</strong>, which guarantees:</p>
+<ul class="wp-block-list">
+<li>Quiet operation of the power supply cooling system.</li>
+<li>Stable nutrition during short-term spikes in consumption (Spikes).</li>
+<li>Possibility of a small system upgrade in the future.</li>
+</ul>
+<h3 class="wp-block-heading" id="formula-rascheta-moshhnosti-2">Power calculation formula</h3>
+<p>The calculator uses a complex algorithm that takes into account both TDP rating data and overclocking efficiency factors.</p>
+<p>$$P_{total} = (TDP_{cpu} + TDP_{gpu}) \cdot k_{oc} + \sum P_{periphery} + P_{base}$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $P_{total}$ - peak power consumption.</li>
+<li> $k_{oc}$ - acceleration factor (equal to <strong>1.2</strong> when the Overclocking option is enabled).</li>
+<li> $\sum P_{periphery}$ is the sum of the powers of all drives and fans.</li>
+<li> $P_{base}$ - basic consumption of the motherboard and chipset (taken as <strong>45 W</strong> ).</li>
+</ul>
+<p>The final recommendation is calculated using the formula, rounded to the nearest denomination (50 W increments):</p>
+<p>$$P_{rec} = \lceil (P_{total} \cdot 1.35) / 50 \rceil \cdot 50$$</p>
+<h2 class="wp-block-heading" id="energopotreblenie-tipovyh-komponentov-2">Power consumption of typical components</h2>
+<p>For accurate manual input, you can focus on the average consumption of nodes in maximum load mode (Stress Test):</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Component</strong></td><td><strong>Average consumption (W)</strong></td><td><strong>Peculiarities</strong></td></tr></thead><tbody><tr><td>Processor (Office/Entry)</td><td>35 – 65 W</td><td>Intel Core i3 / Ryzen 3</td></tr><tr><td>Processor (Gaming)</td><td>95 – 125 W</td><td>Intel Core i5/i7 / Ryzen 5/7</td></tr><tr><td>Video card (Mid-range)</td><td>150 – 250 W</td><td>RTX 4060 Ti / 4070</td></tr><tr><td>Video card (High-end)</td><td>320 – 450 W</td><td>RTX 4080 / 4090</td></tr><tr><td>HDD storage (7200 RPM)</td><td>15 W</td><td>Maximum at the time of promotion</td></tr><tr><td>SSD NVMe Drive</td><td>5 – 7 W</td><td>In active read/write mode</td></tr><tr><td>Pump SZhO (Dropsy)</td><td>15 – 25 W</td><td>Constant load</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="rekomendatsii-po-sertifikatsii-80-plus-2">80 PLUS Certification Guidelines</h2>
+<p>When choosing a power supply, it is not enough to know only the watts. Pay attention to the result of our calculator in the “Energy Efficiency Certificate” field.</p>
+<h3 class="wp-block-heading" id="1-80-plus-standard-bronze-2">1. 80 PLUS Standard / Bronze</h3>
+<p>The optimal choice for budget and mid-range gaming builds with a power of up to 500-600 W. Provides efficiency of about 82-85%.</p>
+<h3 class="wp-block-heading" id="2-80-plus-gold-2">2. 80 PLUS Gold</h3>
+<p>The "gold standard" for modern gaming PCs. We recommend this certification for any system with rated capacity <strong>over 650 W</strong>. This guarantees high-quality components and energy savings.</p>
+<h3 class="wp-block-heading" id="3-80-plus-platinum-titanium-2">3. 80 PLUS Platinum / Titanium</h3>
+<p>Required for workstations and Hi-End systems operating 24/7. Maximum voltage stability on 12V, 5V and 3.3V lines.</p>
+<h2 class="wp-block-heading" id="kak-polzovatsya-kalkulyatorom-poshagovaya-instruktsiya-2">How to use a calculator: step-by-step instructions</h2>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Enter CPU and GPU TDP:</strong> This data can be found in the specifications of your components. We've also added quick entry buttons for popular models (RTX 4060, 4090, etc.).</li>
+<li><strong>Specify the number of drives:</strong> HDDs consume significantly more than SSDs, especially at system startup.</li>
+<li><strong>Consider cooling:</strong> The pump of a liquid cooling system (dropsy) requires a separate power supply, unlike simple air coolers.</li>
+<li><strong>Overclocking option:</strong> If you plan to remove Power Limits in the BIOS, be sure to activate this switch - consumption will increase by 20%.</li>
+<li><strong>Get the result:</strong> The calculator will instantly build a load distribution diagram and give you a specific power supply rating that is worth buying.</li>
+</ol>
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<p><strong>Expert advice:</strong> Never buy a power supply close to peak power. Working at the limit causes the electrolytic capacitors to overheat, which over time causes voltage ripple that can kill your SSD or motherboard.</p>
+</div>
+    </div>
+</body>
+</html>

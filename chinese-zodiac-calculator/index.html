@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese horoscope: Animal and element calculator by date of birth</title>
+    <meta name="description" content="Chinese horoscope: Animal and element calculator by date of birth - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Chinese horoscope: Animal and element calculator by date of birth</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal { position: relative; overflow: hidden; width: 100%; }
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 2px; position: relative; z-index: 2; }
+
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 50%; background: #f3e8ff; color: #7e22ce; font-size: 13px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(126, 34, 206, 0.15); margin-left: auto; }
+    .c-help-icon:hover { background: #7e22ce; color: #fff; transform: scale(1.1); }
+
+    .c-input { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; font-family: inherit; }
+    .c-input:focus { outline:none; border-color:#8b5cf6; box-shadow:0 0 0 3px rgba(139, 92, 246, 0.2); }
+
+    .c-quick-wrap { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 2px; }
+    .c-quick-btn { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 8px 14px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.02); display: flex; align-items: center; gap: 6px;}
+    .c-quick-btn:hover { background: #f3e8ff; color: #5b21b6; border-color: #d8b4fe; transform: translateY(-1px); box-shadow: 0 4px 8px rgba(139, 92, 246, 0.1);}
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 25px; position: relative; z-index: 2; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:14px 24px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 16px; letter-spacing: 0.5px; }
+    .c-btn-primary { background: linear-gradient(135deg, #8b5cf6, #5b21b6); color:#fff; position: relative; overflow: hidden; }
+    .c-btn-primary::after { content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: 0.5s; }
+    .c-btn-primary:hover::after { left: 150%; }
+    .c-btn-primary:hover { box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; animation: shake 0.4s; }
+    .is-hidden { display: none !important; }
+
+    /* Загрузчик с вращающимся узором */
+    .c-app-loader { position: absolute; inset: 0; background: transparent; backdrop-filter: blur(8px); z-index: 50; display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s; border-radius: 16px; }
+    .c-app-loader.show { opacity: 1; pointer-events: all; }
+    .c-spinner-box { width: 50px; height: 50px; border: 4px solid #f3e8ff; border-top-color: #7e22ce; border-radius: 50%; animation: spin 1s infinite linear; margin-bottom: 20px; }
+    .c-loader-text { font-weight: 700; color: #5b21b6; font-size: 16px; letter-spacing: 1px; animation: pulseText 1s infinite alternate; }
+
+    /* Приложение: Результаты */
+    .c-result { border: 1px solid #e9d5ff; border-radius: 16px; padding: 25px; background: linear-gradient(180deg, #faf5ff 0%, #fff 100%); box-shadow: 0 10px 40px rgba(139, 92, 246, 0.08); display: none; scroll-margin-top: 30px; position: relative; z-index: 2; margin-top: 10px;}
+    .c-result.show { display: block; animation: fadeInUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1); }
+    .c-result-title { margin: 0 0 25px 0; font-size: 22px; font-weight: 700; color: #3b0764; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 5px;}
+    .c-result-subtitle { font-size: 13px; font-weight: 500; color: #8b5cf6; text-transform: uppercase; letter-spacing: 1px; }
+
+    .c-mystic-showcase { display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 30px; justify-content: center; align-items: stretch; }
+    .c-zodiac-card-wrap { position: relative; width: 200px; height: 260px; perspective: 1000px; flex-shrink: 0; }
+    
+    /* Карта динамически меняет цвет через JS */
+    .c-zodiac-card { width: 100%; height: 100%; border-radius: 16px; background: linear-gradient(135deg, #2e1065, #4c1d95); box-shadow: 0 15px 35px rgba(0,0,0,0.2), inset 0 0 20px rgba(255,255,255,0.15); display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; text-align: center; padding: 15px; position: relative; overflow: hidden; transform-style: preserve-3d; transition: background 0.8s ease; }
+    .c-zodiac-card::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 60%); animation: rotateGlow 10s linear infinite; pointer-events: none; }
+    .c-zodiac-icon { font-size: 70px; margin-bottom: 10px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3)); animation: floatCard 4s ease-in-out infinite; }
+    .c-zodiac-name { font-size: 20px; font-weight: 800; text-transform: uppercase; line-height: 1.2; text-shadow: 0 2px 4px rgba(0,0,0,0.5); letter-spacing: 1px; }
+    .c-zodiac-element { font-size: 14px; color: rgba(255,255,255,0.9); font-weight: 600; margin-top: 8px; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 8px; width: 80%; }
+    
+    /* Блок характеристик (Инфографика) */
+    .c-stats-box { flex: 1; min-width: 260px; background: #fff; border-radius: 16px; padding: 25px; border: 1px solid #e9d5ff; box-shadow: 0 4px 20px rgba(139, 92, 246, 0.05); display: flex; flex-direction: column; justify-content: center; gap: 15px;}
+    .c-stat-line { display: flex; justify-content: space-between; align-items: center; padding-bottom: 12px; border-bottom: 1px dashed #e2e8f0; }
+    .c-stat-line:last-child { border-bottom: none; padding-bottom: 0; }
+    .c-stat-label { font-size: 14px; color: #64748b; font-weight: 600; }
+    .c-stat-val { font-size: 15px; color: #1e293b; font-weight: 700; text-align: right; }
+    .c-pill { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 700; }
+
+    /* Детальная аналитика (Грид) */
+    .c-semantic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .c-info-block { padding: 20px; border-radius: 14px; border-top: 4px solid; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: transform 0.2s; }
+    .c-info-block:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.06); }
+    .c-info-title { font-size: 16px; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+    .c-info-text { font-size: 14px; line-height: 1.6; font-weight: 500; color: #334155; }
+    
+    .theme-main { border-color: #8b5cf6; } .theme-main .c-info-title { color: #5b21b6; }
+    .theme-love { border-color: #ec4899; } .theme-love .c-info-title { color: #be185d; }
+    .theme-work { border-color: #3b82f6; } .theme-work .c-info-title { color: #1d4ed8; }
+    .theme-elem { border-color: #10b981; } .theme-elem .c-info-title { color: #047857; }
+
+    /* Модальное окно */
+    .c-modal-overlay { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(5px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 25px; max-width: 500px; width: 90%; box-shadow: 0 20px 50px rgba(0,0,0,0.2); transform: translateY(20px) scale(0.95); transition: 0.3s; border: 1px solid #e2e8f0; position: relative;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0) scale(1); }
+    .c-modal-close { position: absolute; top: 20px; right: 20px; cursor: pointer; color: #94a3b8; border: none; background: #f1f5f9; width: 32px; height: 32px; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: 0.2s;}
+    .c-modal-close:hover { color: #fff; background: #ef4444; }
+    .c-modal-title { font-size: 20px; font-weight: 700; color: #1e293b; margin: 0 0 15px 0; display:flex; align-items:center; gap:10px;}
+
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    @keyframes pulseText { from { opacity: 0.6; } to { opacity: 1; } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes floatCard { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    @keyframes rotateGlow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
+
+    @media (max-width: 600px) {
+       .c-row { grid-template-columns: 1fr; gap: 15px; }
+       .c-result { padding: 20px 15px; }
+       .c-mystic-showcase { flex-direction: column; gap: 20px; align-items: center; }
+       .c-stats-box { width: 100%; min-width: unset; }
+       .c-semantic-grid { grid-template-columns: 1fr; }
+       .c-btn { width: 100%; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-app-loader" id="appLoader">
+<div class="c-spinner-box"></div>
+<div class="c-loader-text">Bazi analysis...</div>
+</div>
+<div class="c-body">
+<div id="dateFormFields">
+<div class="c-row">
+<div class="c-field" style="grid-column: 1 / -1;">
+<label class="c-label">Your date of birth<span class="c-term">Day, Month, Year</span> <span class="c-help-icon" id="openHelp">?</span></label>
+<input class="c-input" id="birthDate" type="date"/>
+<div class="c-quick-wrap" style="margin-top: 8px;">
+<button class="c-quick-btn" data-year="1990" type="button">1990</button>
+<button class="c-quick-btn" data-year="2000" type="button">2000</button>
+<button class="c-quick-btn" id="btnCurrentYear" type="button">Current year</button>
+</div>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title">
+<span class="c-result-subtitle">Eastern Horoscope</span>
+<span id="resMainTitle">Wooden Dragon</span>
+</div>
+<div class="c-mystic-showcase">
+<div class="c-zodiac-card-wrap">
+<div class="c-zodiac-card" id="visCard">
+<div class="c-zodiac-icon" id="resCardIcon">🐉</div>
+<div class="c-zodiac-name" id="resCardName">Dragon</div>
+<div class="c-zodiac-element" id="resCardElement">Element: Wood</div>
+</div>
+</div>
+<div class="c-stats-box">
+<div class="c-stat-line">
+<span class="c-stat-label">Energy (Polarity)</span>
+<span class="c-stat-val" id="resPolarity">Ian<span class="c-pill">Active</span></span>
+</div>
+<div class="c-stat-line">
+<span class="c-stat-label">Element of the year</span>
+<span class="c-stat-val" id="resElemStat">Tree</span>
+</div>
+<div class="c-stat-line">
+<span class="c-stat-label">Lucky colors</span>
+<span class="c-stat-val" id="resColors">Gold, White</span>
+</div>
+<div class="c-stat-line">
+<span class="c-stat-label">Perfect compatibility</span>
+<span class="c-stat-val" id="resComp">Rat, Monkey</span>
+</div>
+</div>
+</div>
+<div class="c-semantic-grid">
+<div class="c-info-block theme-main">
+<div class="c-info-title">Personality and Character</div>
+<div class="c-info-text" id="resMeaning"></div>
+</div>
+<div class="c-info-block theme-love">
+<div class="c-info-title">Love and Family</div>
+<div class="c-info-text" id="resLove"></div>
+</div>
+<div class="c-info-block theme-work">
+<div class="c-info-title">Career and Money</div>
+<div class="c-info-text" id="resWork"></div>
+</div>
+<div class="c-info-block theme-elem">
+<div class="c-info-title">Influence of the Element on the sign</div>
+<div class="c-info-text" id="resElementDesc"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="c-modal-overlay" id="helpModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeHelp">×</button>
+<div class="c-modal-title">What do we think?</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6;">
+<p style="margin-top:0;">Our calculator uses<b>professional Bazi system</b>(Four Pillars of Destiny), which is more accurate than ordinary horoscopes.</p>
+<ul style="padding-left: 20px; margin-bottom: 15px;">
+<li><b>Exact junction of years:</b>Unlike simple calculators, we take into account that the astrological Chinese year does not begin on January 1, but at the onset of the “Lichun” (Beginning of Spring) season -<b>strictly February 4</b>. If you were born before February 4th, your sign is from the previous year.</li>
+<li><b>Element (U-Sin):</b>Determined by the last digit of your lunar year of birth (Metal, Water, Wood, Fire, Earth).</li>
+<li><b>Polarity (Yin-Yang):</b>It alternates every year, forming a passive or active background of your personality.</li>
+</ul>
+<div style="background: #f3e8ff; padding: 12px; border-radius: 8px; border: 1px solid #d8b4fe; font-size: 13px; color: #5b21b6;">Each element radically changes the basic character of the animal, making it softer, more purposeful or passionate.</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  const $$ = (s) => wrap.querySelectorAll(s);
+  let isCalculated = false;
+
+  // База Знаков (12 животных)
+  const animalsDB = {
+    0: { n: "Monkey", icon: "🐒", comp: "Rat, Dragon", color: "White, Blue, Gold", 
+         t: "You have a brilliant intellect, cunning and incredible adaptability. The Monkey is a master of improvisation, able to find a way out of any situation thanks to his natural charm and wit.", 
+         l: "In relationships, you value freedom and intellectual stimulation. Routine kills your feelings. There's never a dull moment with you, but your partner will have to come to terms with your fickleness.", 
+         w: "You are capable of achieving success in any field that requires negotiation, creativity and quick response. Excellent businessmen and anti-crisis managers." },
+    1: { n: "Rooster", icon: "🐓", comp: "Bull, Snake", color: "Gold, Brown, Yellow", 
+         t: "You are a bright, confident and extremely hardworking person. The Rooster loves order, attention to detail and always strives for perfection. You are straightforward and honest.", 
+         l: "In love you are loyal but demanding. You need a partner who you can be proud of in society. Sometimes your criticism hurts your loved ones, but your intentions are always pure.", 
+         w: "Excellent organizational skills. You know how to manage finances and are not afraid of hard work. Professions that require accuracy and publicity are ideal." },
+    2: { n: "Dog", icon: "🐕", comp: "Tiger, Horse", color: "Red, Green, Purple", 
+         t: "The personification of fidelity, justice and honesty. You have a deep sense of duty and are always ready to help the weak. You have a heightened intuition for lies.", 
+         l: "For you, love is primarily about trust and partnership. You look closely at a person for a long time, but if you open your heart, you remain faithful to the end. Very caring.", 
+         w: "You are an ideal team player and reliable partner. You can always be relied upon. You excel in the social sphere, law and education." },
+    3: { n: "Pig", icon: "🐖", comp: "Rabbit, Goat", color: "Yellow, Grey, Brown", 
+         t: "You are kind, peaceful and know how to enjoy life. The Pig (Boar) is distinguished by its sincerity and generosity. You avoid conflicts and strive for comfort in everything.", 
+         l: "You are incredibly sensual and romantic. We are ready to give our partner all the best, creating a warm and cozy atmosphere in the house. The main danger is your gullibility.", 
+         w: "Material luck accompanies you. You know how to make money without going overboard. Success awaits in areas related to art, nutrition and caring for people." },
+    4: { n: "Rat", icon: "🐀", comp: "Dragon, Monkey", color: "Blue, Gold, Green", 
+         t: "You are distinguished by a sharp mind, insight and amazing survival. The Rat is ambitious, practical and knows how to benefit from even the most unfavorable circumstances.", 
+         l: "Externally calm, inside you are full of passion. You are very attached to your family and are ready to do anything for the well-being of “your pack,” but you are jealous and possessive.", 
+         w: "You have a nose for good deals and excellent financial intuition. You are thrifty, know how to hoard resources, and often achieve high leadership positions." },
+    5: { n: "Bull", icon: "🐂", comp: "Snake, Rooster", color: "Yellow, Green, White", 
+         t: "A symbol of fundamental reliability, calmness and incredible perseverance. You move towards your goal slowly but surely, without deviating from the path. You have enormous inner strength.", 
+         l: "In relationships you are stable and predictable. You are not a master of romantic surprises, but you provide the family with reinforced concrete protection and confidence in the future.", 
+         w: "Your success is the result of hard, methodical work. You don't believe in quick money. Excellent production managers, builders and managers." },
+    6: { n: "Tiger", icon: "🐅", comp: "Horse, Dog", color: "Blue, Grey, Orange", 
+         t: "You are a natural leader, full of passion, courage and a rebellious spirit. The tiger despises routine, loves risk and is always ready to challenge authority for the sake of justice.", 
+         l: "Your feelings flare up like gunpowder. Love for you is an adventure and a flurry of emotions. Your partner will have to come to terms with your desire for independence.", 
+         w: "You are great in crisis situations. Capable of inspiring a team to greatness. Suitable work involves risk, innovation and frequent changes of scenery." },
+    7: { n: "Rabbit", icon: "🐇", comp: "Goat, Pig", color: "Red, Pink, Purple", 
+         t: "You personify gentleness, diplomacy and impeccable taste. The Rabbit (Cat) knows how to get around sharp corners and values ​​peace and harmony. Your intuition protects you from many troubles.", 
+         l: "Home comfort and tenderness are extremely important to you. You cannot stand scandals and rudeness. In love, you are affectionate and caring, but tend to withdraw into yourself under pressure.", 
+         w: "You get your way through diplomacy, not aggression. You work well in the fields of art, design, consulting and any work that requires tact." },
+    8: { n: "Dragon", icon: "🐉", comp: "Rat, Monkey", color: "Gold, Silver, Gray-white", 
+         t: "Symbol of imperial power and good luck. You have magnetic charisma, a huge supply of energy and nobility. The dragon thinks big and does not waste time on trifles.", 
+         l: "You attract many admirers, but you need a partner who can share your high ideals without stifling your freedom. You are generous and proud.", 
+         w: "You are destined to shine. You are born for large-scale projects and high positions. The main thing is to avoid excessive arrogance and illusions." },
+    9: { n: "Snake", icon: "🐍", comp: "Bull, Rooster", color: "Red, Light Yellow, Black", 
+         t: "You have deep wisdom, strong intuition and innate elegance. The snake is mysterious, silent, but always calculates the situation several steps ahead.", 
+         l: "In love, you are extremely picky, passionate and... very jealous. You are used to completely owning your partner. Your relationship is full of depth and mystical affection.", 
+         w: "You have the potential to become an outstanding strategist, analyst or psychologist. You know how to wait for the perfect moment to throw. Financial luck often accompanies you." },
+    10: { n: "Horse", icon: "🐎", comp: "Tiger, Dog", color: "Yellow, Green, Red", 
+          t: "You are the embodiment of freedom, energy and optimism. The horse loves travel, communication and an active lifestyle. You make friends easily and make decisions quickly.", 
+          l: "You fall in love quickly and passionately. Relationships for you are about dynamics and joint development. Do not tolerate attempts to chain you or restrict your freedom.", 
+          w: "Your ability to work is astonishing if you get fired up by something. Don't like tight schedules. Professions related to travel, sports and communications are excellent choices." },
+    11: { n: "Goat", icon: "🐐", comp: "Rabbit, Pig", color: "Green, Red, Purple", 
+          t: "You are the most creative, artistic and sensitive nature of the entire zodiac. The Goat (Sheep) has a rich imagination and empathy, but often suffers from self-doubt and anxiety.", 
+          l: "You vitally need a strong and caring partner who will protect you from harsh realities. In return, you will give him an ocean of tenderness, romance and comfort.", 
+          w: "Routine office work is detrimental to you. Your path is art, design, literature and any activity where there are no strict boundaries and pressure." }
+  };
+
+  // База Стихий (0-9)
+  const elementsDB = {
+    0: { n: "Metal", c1: "#94a3b8", c2: "#475569", txt: "The element of Metal gives the sign unyielding will, rigidity and determination. Makes the character more independent, ambitious and uncompromising." },
+    1: { n: "Metal", c1: "#94a3b8", c2: "#475569", txt: "The element of Metal gives the sign unyielding will, rigidity and determination. Makes the character more independent, ambitious and uncompromising." },
+    2: { n: "Water", c1: "#3b82f6", c2: "#1e3a8a", txt: "The element of Water endows the sign with amazing intuition, flexibility and diplomacy. You easily bypass obstacles, know how to listen and deeply feel those around you." },
+    3: { n: "Water", c1: "#3b82f6", c2: "#1e3a8a", txt: "The element of Water endows the sign with amazing intuition, flexibility and diplomacy. You easily bypass obstacles, know how to listen and deeply feel those around you." },
+    4: { n: "Tree", c1: "#10b981", c2: "#065f46", txt: "The element of Wood gives the sign a desire for constant growth, creativity and social activity. You are responsive, easy to learn and able to work in a team." },
+    5: { n: "Tree", c1: "#10b981", c2: "#065f46", txt: "The element of Wood gives the sign a desire for constant growth, creativity and social activity. You are responsive, easy to learn and able to work in a team." },
+    6: { n: "Fire", c1: "#ef4444", c2: "#991b1b", txt: "The element of Fire greatly enhances the passion, leadership qualities and charisma of the sign. You become more decisive, impulsive and always strive to be the center of attention." },
+    7: { n: "Fire", c1: "#ef4444", c2: "#991b1b", txt: "The element of Fire greatly enhances the passion, leadership qualities and charisma of the sign. You become more decisive, impulsive and always strive to be the center of attention." },
+    8: { n: "Earth", c1: "#f59e0b", c2: "#92400e", txt: "The element of Earth grounds the sign, giving it phenomenal stability, practicality and prudence. You are reliable, avoid unnecessary risks and value material foundations." },
+    9: { n: "Earth", c1: "#f59e0b", c2: "#92400e", txt: "The element of Earth grounds the sign, giving it phenomenal stability, practicality and prudence. You are reliable, avoid unnecessary risks and value material foundations." }
+  };
+
+  // Модальное окно
+  $('#openHelp').addEventListener('click', () => { $('#helpModal').classList.add('show'); });
+  $('#closeHelp').addEventListener('click', () => { $('#helpModal').classList.remove('show'); });
+  $('#helpModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#helpModal').classList.remove('show');
+  });
+
+  // Быстрые кнопки
+  $('#btnCurrentYear').addEventListener('click', () => {
+      let d = new Date();
+      let mStr = (d.getMonth() + 1).toString();
+      let dStr = d.getDate().toString();
+      if (Math.abs(mStr.length === 1) === 1) mStr = "0" + mStr;
+      if (Math.abs(dStr.length === 1) === 1) dStr = "0" + dStr;
+      $('#birthDate').value = d.getFullYear() + "-" + mStr + "-" + dStr;
+      if (Math.abs(isCalculated === true) === 1) startAppFlow(false);
+  });
+
+  $$('.c-quick-btn[data-year]').forEach(btn => {
+      btn.addEventListener('click', () => {
+          $('#birthDate').value = btn.dataset.year + "-06-15"; // Середина года для точного попадания
+          if (Math.abs(isCalculated === true) === 1) startAppFlow(false);
+      });
+  });
+
+  function startAppFlow(shouldScroll) {
+      $('#errorMsg').classList.remove('show');
+      let bDate = $('#birthDate').value;
+      
+      let isBErr = false;
+      if (Math.abs(bDate.length === 0) === 1) isBErr = true;
+      if (Math.abs(isBErr === true) === 1) {
+          $('#resultBox').classList.remove('show');
+          if (Math.abs(shouldScroll === true) === 1) {
+              $('#errorMsg').textContent = "Please indicate your date of birth.";
+              $('#errorMsg').classList.add('show');
+          }
+          return;
+      }
+
+      // Извлекаем Год, Месяц и День
+      let parts = bDate.split('-');
+      let year = parseInt(parts[0]);
+      let month = parseInt(parts[1]);
+      let day = parseInt(parts[2]);
+
+      // Логика Бацзы: Солнечный Новый год начинается строго ~4 февраля (Личунь)
+      // Если месяц 1 (Январь) ИЛИ (месяц 2 (Февраль) и день <= 3), то год астрологически = год - 1.
+      let isJan = false;
+      if (Math.abs(month === 1) === 1) isJan = true;
+      
+      let isFeb = false;
+      if (Math.abs(month === 2) === 1) isFeb = true;
+      
+      let isEarlyFeb = false;
+      if (Math.abs(isFeb === true) === 1) {
+          if (Math.abs(Math.sign(day - 4) === -1) === 1) isEarlyFeb = true; // day < 4 (1, 2, 3)
+      }
+      
+      let shiftYear = false;
+      if (Math.abs(isJan === true) === 1) shiftYear = true;
+      if (Math.abs(isEarlyFeb === true) === 1) shiftYear = true;
+
+      let zYear = year;
+      if (Math.abs(shiftYear === true) === 1) {
+          zYear = year - 1;
+      }
+
+      // Вычисление Знака (Животного) и Стихии
+      // Цикл Животных: 1900 год был годом Крысы (4).
+      // Чтобы избежать отрицательных чисел при остатке от деления, добавим математическую хитрость.
+      let animalIndex = zYear % 12;
+      let elementIndex = zYear % 10;
+      
+      // Полярность (Четный год = Ян, Нечетный = Инь)
+      let isYin = false;
+      if (Math.abs((zYear % 2) === 1) === 1) isYin = true;
+
+      $('#resultBox').classList.remove('show');
+      $('#appLoader').classList.add('show');
+      
+      setTimeout(() => {
+          $('#appLoader').classList.remove('show');
+          renderResults(animalIndex, elementIndex, isYin, shouldScroll);
+      }, 1200); 
+  }
+
+  function renderResults(anIdx, elIdx, isYin, shouldScroll) {
+      let animal = animalsDB[anIdx];
+      let element = elementsDB[elIdx];
+      
+      // Заполнение заголовков
+      let fullName = element.n + " " + animal.n;
+      $('#resMainTitle').textContent = fullName;
+      $('#resCardIcon').textContent = animal.icon;
+      $('#resCardName').textContent = animal.n;
+      $('#resCardElement').textContent = "Element:" + element.n;
+      
+      // Настройка карточки (Цвет зависит от стихии)
+      $('#visCard').style.background = "linear-gradient(135deg, " + element.c1 + ", " + element.c2 + ")";
+
+      // Заполнение характеристик
+      let polText = "Ian";
+      let polBadge = '<span class="c-pill">Active energy</span>';
+      if (Math.abs(isYin === true) === 1) {
+          polText = "Yin";
+          polBadge = '<span class="c-pill">Passive energy</span>';
+      }
+      $('#resPolarity').innerHTML = polText + " " + polBadge;
+      $('#resElemStat').textContent = element.n;
+      $('#resColors').textContent = animal.color;
+      $('#resComp').textContent = animal.comp;
+
+      // Заполнение текстовых блоков
+      $('#resMeaning').textContent = animal.t;
+      $('#resLove').textContent = animal.l;
+      $('#resWork').textContent = animal.w;
+      $('#resElementDesc').textContent = element.txt;
+
+      $('#resultBox').classList.add('show');
+      
+      if (Math.abs(shouldScroll === true) === 1) {
+          setTimeout(() => {
+              $('#resultBox').scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 100);
+      }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; startAppFlow(true); });
+  
+  wrap.addEventListener('change', (e) => {
+      let isInput = false;
+      if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+      if (Math.abs(isCalculated === true) === 1) {
+          if (Math.abs(isInput === true) === 1) startAppFlow(false);
+      }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+      $('#birthDate').value = '';
+      $('#resultBox').classList.remove('show');
+      $('#errorMsg').classList.remove('show');
+      isCalculated = false;
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Eastern astrology is a complex mathematical system that combines the 12-year cycle of the earthly branches (animals) and the 10-year cycle of the celestial trunks (elements). Unlike Western tradition, Chinese New Year does not have a fixed date, making simple calculations by year often erroneous.</p>
+<p>Our calculator implements an algorithm based on the solar calendar <strong>Bazi (Four Pillars of Destiny)</strong>. This ensures that users born in January or early February will receive their true sign and not the previous or subsequent year's symbol.</p>
+<h2 class="wp-block-heading" id="matematicheskaya-model-rascheta-2">Mathematical calculation model</h2>
+<p>To determine your sign and element, the following formulas are used:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Animal Definition (Earthly Branch):</strong> The animal index $I_a$ is calculated by the remainder of the year divided by 12: $$I_a = Year \pmod{12}$$ <em>Where the remainder 4 corresponds to the Rat, 5 to the Ox, and so on.</em></li>
+<li><strong>Element definition (Heavenly trunk):</strong> The element is determined by the last digit of the year of birth: $$E = Year \pmod{10}$$ The resulting number corresponds to a pair of elements (Yang/Yin).</li>
+</ol>
+<h2 class="wp-block-heading" id="tablitsa-sootvetstviya-tsiklov-i-elementov-2">Correspondence table of cycles and elements</h2>
+<p>Below is the structure of the interaction of elements and signs that our algorithm uses:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Last digit of the year</strong></td><td><strong>Element (Element)</strong></td><td><strong>Energy (Polarity)</strong></td><td><strong>Characteristic property</strong></td></tr></thead><tbody><tr><td>0, 1</td><td>Metal</td><td>Yang/Yin</td><td>Durability and structure</td></tr><tr><td>2, 3</td><td>Water</td><td>Yang/Yin</td><td>Flexibility and intuition</td></tr><tr><td>4, 5</td><td>Tree</td><td>Yang/Yin</td><td>Growth and creativity</td></tr><tr><td>6, 7</td><td>Fire</td><td>Yang/Yin</td><td>Passion and dynamics</td></tr><tr><td>8, 9</td><td>Earth</td><td>Yang/Yin</td><td>Stability and reliability</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="pochemu-nash-kalkulyator-tochnee-konkurentov-2">Why is our calculator more accurate than our competitors?</h2>
+<p>Most services on the network use a simplified method, changing the sign of the animal on January 1st. This leads to the fact that millions of people consider themselves, for example, “Dragons”, while in fact they are “Rabbits”.</p>
+<h3 class="wp-block-heading" id="preimushhestva-tochnogo-rascheta-batszy-2">Advantages of accurate calculation of Bazi</h3>
+<ul class="wp-block-list">
+<li><strong>Taking into account the breaking point:</strong> The astrological year in China begins at the moment of "Lichun" (Becoming of Spring), which usually falls on <strong>February 4 or 5</strong>.</li>
+<li><strong>Deep analytics:</strong> We calculate not only the symbol, but also the dominant energy (Yin or Yang).</li>
+<li><strong>Shadow sides:</strong> The calculator shows not only positive traits, but also “shadow” aspects of personality for working on yourself.</li>
+<li><strong>Triads of harmony:</strong> The calculation of compatibility is based on classical alliances (for example, Rat-Dragon-Monkey), which provides a scientific basis for analyzing relationships.</li>
+</ul>
+<h3 class="wp-block-heading" id="vliyanie-pyati-stihij-na-sudbu-2">The influence of the five elements on fate</h3>
+<p>According to the Eastern philosophy of Wu Xing, the elements modify the behavior of the patron animal. For example, a Fire Dog will be significantly more impulsive and charismatic than an Earth Dog, which is focused on peace and security.</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Tree:</strong> Gives the sign goodwill and a desire for expansion.</li>
+<li><strong>Fire:</strong> Adds decisiveness, but can provoke aggression.</li>
+<li><strong>Earth:</strong> Guarantees a practical approach and the ability to get things done.</li>
+<li><strong>Metal:</strong> Strengthens ambition and ability to self-discipline.</li>
+<li><strong>Water:</strong> Improves communication skills and sensitivity.</li>
+</ol>
+<p>Use our tool for self-discovery and planning for important life events. Knowing your true sign according to the solar calendar system is the first step to understanding your inner nature and energy potential.</p>
+</div>
+    </div>
+</body>
+</html>

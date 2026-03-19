@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warm Water Floor Calculator: Calculation of Power, Temperature and Pipes</title>
+    <meta name="description" content="Warm Water Floor Calculator: Calculation of Power, Temperature and Pipes - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Warm Water Floor Calculator: Calculation of Power, Temperature and Pipes</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (строго по шаблону) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-row.cols-3 { grid-template-columns: repeat(3, minmax(220px, 1fr)); }
+    .c-row.single { grid-template-columns: 1fr; }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    .c-help {font-size:12px;color:#777;text-align:center;}
+    .c-input, .c-select, .c-textarea { width:100%; padding:12px 14px; border:1px solid #ccc; border-radius:8px; font-size:14px; }
+    .c-input:focus, .c-select:focus, .c-textarea:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap;margin-bottom: 16px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+
+    /* Результат */
+    .c-result { border:1px dashed #4caf50; border-radius:10px; padding:10px; background:#fff; display:none; }
+    .c-result.show { display:grid; }
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #4caf50; grid-template-columns: 0.4fr 0.5fr 0.1fr; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; }
+    
+    /* Статусы */
+    .c-resval.warn { color: #e65100; }
+    .c-resval.o { color: #2e7d32; }
+
+    /* Кнопка копирования */
+    .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden;
+      background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+      background-repeat:no-repeat; background-position:center; background-size:20px 20px; }
+
+    .is-hidden { display:none !important; }
+    @media (max-width: 860px) { .c-resval { font-size:14px; } }
+    @media (max-width: 720px) { .c-row.cols-3 { grid-template-columns: 1fr; } }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-row">
+<div class="c-field">
+<label class="c-label" for="t_supply">Supply temperature</label>
+<input class="c-input" id="t_supply" max="60" min="20" type="number" value="40"/>
+<div class="c-help">Typically 35-45°C</div>
+</div>
+<div class="c-field">
+<label class="c-label" for="t_return">Return temperature</label>
+<input class="c-input" id="t_return" max="55" min="15" type="number" value="35"/>
+<div class="c-help">Typically 5-10°C below supply</div>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label" for="t_room">Room temperature</label>
+<input class="c-input" id="t_room" max="35" min="5" type="number" value="22"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="q_loss">Heat loss in the room</label>
+<input class="c-input" id="q_loss" min="0" type="number" value="70"/>
+<div class="c-help">W/m² (Usually 50-100)</div>
+</div>
+</div>
+<div class="c-row cols-3">
+<div class="c-field">
+<label class="c-label" for="pipe_step">Pipe pitch<span class="c-term">cm</span></label>
+<select class="c-select" id="pipe_step">
+<option value="10">10 cm</option>
+<option selected="" value="15">15 cm</option>
+<option value="20">20 cm</option>
+<option value="25">25 cm</option>
+<option value="30">30 cm</option>
+</select>
+</div>
+<div class="c-field">
+<label class="c-label" for="pipe_type">Pipe type (diameter)</label>
+<select class="c-select" id="pipe_type">
+<option value="16">16 mm (PEX/PERT/MP)</option>
+<option value="20">20 mm (PEX/PERT/MP)</option>
+</select>
+</div>
+<div class="c-field">
+<label class="c-label" for="screed">Screed over the pipe<span class="c-term">cm</span></label>
+<input class="c-input" id="screed" max="15" min="3" type="number" value="5"/>
+</div>
+</div>
+<div class="c-row single">
+<div class="c-field">
+<label class="c-label" for="floor_cover">Flooring</label>
+<select class="c-select" id="floor_cover">
+<option value="0.01">Ceramic tiles (R=0.01)</option>
+<option selected="" value="0.05">Linoleum / PVC (R=0.05)</option>
+<option value="0.10">Laminate + underlay (R=0.10)</option>
+<option value="0.15">Parquet / Board (R=0.15)</option>
+<option value="0.20">Carpet (R=0.20)</option>
+</select>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div aria-live="polite" class="c-result" id="resultBox">
+<div class="c-resline is-hidden" id="validationError" style="background:#ffdddd; color:#cc0000;">
+<div class="c-resleft">Error:</div>
+<div class="c-resval" id="errorMsg" style="color:#cc0000; font-weight: 500;"></div>
+<button class="c-copy is-hidden" disabled=""></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Floor heating power</div>
+<div class="c-resval" id="resPower"></div>
+<button aria-label="Copy power" class="c-copy" id="copyPower" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Heat loss coverage</div>
+<div class="c-resval" id="resCoverage"></div>
+<button aria-label="Copy coverage" class="c-copy" id="copyCoverage" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Surface temperature</div>
+<div class="c-resval" id="resSurfTemp"></div>
+<button aria-label="Copy temperature" class="c-copy" id="copySurfTemp" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Water consumption (loop 10m²)</div>
+<div class="c-resval" id="resFlow"></div>
+<button aria-label="Copy expense" class="c-copy" id="copyFlow" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Pipes per 1 m²</div>
+<div class="c-resval" id="resPipeLen"></div>
+<button aria-label="Copy pipe length" class="c-copy" id="copyPipeLen" title="Copy"></button>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика =====
+  const $ = (s) => wrap.querySelector(s);
+  
+  const resBox = $('#resultBox');
+  const errorBox = $('#validationError');
+  const errorMsg = $('#errorMsg');
+  
+  const outputs = {
+      power: $('#resPower'),
+      coverage: $('#resCoverage'),
+      surfTemp: $('#resSurfTemp'),
+      flow: $('#resFlow'),
+      pipeLen: $('#resPipeLen')
+  };
+
+  // ----- Вспомогательные функции -----
+  function num(v){ const n = parseFloat(String(v).replace(',', '.')); return Number.isFinite(n) ? n : NaN; }
+  
+  function fmt(v, d=1){
+    if (isNaN(v)) return '—';
+    return v.toLocaleString('ru-RU', { maximumFractionDigits: d });
+  }
+
+  // ИСПРАВЛЕНО: Функция isZero
+  function isZero(val) {
+    const tolerance = 1e-9;
+    const check = Math.sign(tolerance - Math.abs(val));
+    if (check === -1) return false;
+    return true;
+  }
+  
+  function setError(msg) {
+    errorMsg.textContent = msg;
+    errorBox.classList.remove('is-hidden');
+    resBox.classList.add('show');
+  }
+  function hideError() {
+    errorBox.classList.add('is-hidden');
+  }
+
+  // ----- Главный расчет -----
+  function calc() {
+    hideError();
+    
+    // 1. Сбор данных
+    const t_sup = num($('#t_supply').value);
+    const t_ret = num($('#t_return').value);
+    const t_air = num($('#t_room').value);
+    const q_req = num($('#q_loss').value);
+    const step_cm = num($('#pipe_step').value);
+    const screed_cm = num($('#screed').value);
+    const r_cover = num($('#floor_cover').value); // m2*K/W
+    
+    // 2. Валидация
+    if (isNaN(t_sup) || isNaN(t_ret) || isNaN(t_air) || isNaN(step_cm) || isNaN(screed_cm)) {
+      setError('Please enter valid numeric values.');
+      return;
+    }
+    
+    // Проверка логики температур: Подача > Обратка > Воздух
+    // ИСПРАВЛЕНО: Логика без < >
+    if (Math.sign(t_sup - t_ret) !== 1) {
+        setError('The supply temperature must be higher than the return temperature.');
+        return;
+    }
+    if (Math.sign(t_ret - t_air) !== 1) {
+        setError('The return temperature must be higher than the air temperature.');
+        return;
+    }
+
+    // 3. Расчет
+    const t_avg = (t_sup + t_ret) / 2; // Средняя температура теплоносителя
+    const delta_t_head = t_avg - t_air; // Температурный напор
+    
+    // Термические сопротивления (м2*К/Вт)
+    // Труба PEX 16-20мм стенка 2мм ~ 0.005 (пренебрежимо мало, но учтем)
+    // Стяжка (бетон/цпс): лямбда ~ 1.2 Вт/(м*К). R = толщина / лямбда
+    const r_screed = (screed_cm / 100) / 1.2; 
+    
+    // Коэффициент теплоотдачи поверхности пола (альфа) ~ 11 Вт/(м2*К)
+    const r_surf = 1 / 11;
+    
+    // Коэффициент эффективности шага трубы (эмпирический)
+    // Чем больше шаг, тем меньше эффективность теплосъема
+    // 10см -> 0.95, 15см -> 0.90, 20см -> 0.85, 30см -> 0.75
+    let eff_step = 0.9;
+    if (step_cm === 10) eff_step = 0.98;
+    else if (step_cm === 15) eff_step = 0.92;
+    else if (step_cm === 20) eff_step = 0.85;
+    else if (step_cm === 25) eff_step = 0.80;
+    else if (step_cm === 30) eff_step = 0.70;
+    
+    // Полное сопротивление теплопередаче (вниз от трубы к воздуху)
+    // Упрощенная инженерная формула: q = k * (T_avg - T_air)
+    // R_total = R_truba_eff + R_screed + R_cover + R_surf
+    // R_truba_eff зависит от шага. 
+    // Применим упрощенный коэффициент теплопередачи системы K (Вт/м2*К)
+    // Для "ideal" пола без покрытия K ~ 11. С покрытием меньше.
+    
+    // Сопротивление слоев над трубой
+    const r_layers = r_screed + r_cover;
+    
+    // Итоговое сопротивление с учетом шага (грубая аппроксимация)
+    // R_sys = (1/11 + r_layers) / eff_step
+    const r_system = (r_surf + r_layers) / eff_step;
+    
+    // Мощность (Вт/м2) = DeltaT / R_system
+    const q_actual = delta_t_head / r_system;
+    
+    // Температура поверхности
+    // T_surf = T_air + (q_actual / alpha_surf) = T_air + q_actual * r_surf
+    const t_surf = t_air + (q_actual * r_surf);
+    
+    // Расход воды (л/ч на 1 м2)
+    // G = Q / (c * dT)
+    // c = 1.163 Вт*ч/(кг*К)
+    const dt_water = t_sup - t_ret;
+    const flow_specific = q_actual / (1.163 * dt_water);
+    
+    // Длина трубы L = 1 / шаг (в м)
+    const pipe_len_m = 1 / (step_cm / 100);
+
+    // 4. Вывод и Анализ
+    outputs.power.textContent = `${fmt(q_actual)} Вт/м²`;
+    outputs.surfTemp.textContent = `${fmt(t_surf)} °C`;
+    outputs.flow.textContent = `${fmt(flow_specific * 10, 2)} л/мин`; // на петлю 10м2 для наглядности
+    outputs.pipeLen.textContent = `${fmt(pipe_len_m)} м`;
+
+    // Анализ покрытия теплопотерь
+    const coverage_perc = (q_actual / q_req) * 100;
+    let covText = `${fmt(coverage_perc)}% от потребности`;
+    let covClass = 'o';
+    
+    // ИСПРАВЛЕНО: q_actual < q_req
+    if (Math.sign(q_actual - q_req) === -1) {
+        covText += '(Not enough!)';
+        covClass = 'warn';
+    } else {
+        covText += '(Grabs)';
+    }
+    outputs.coverage.textContent = covText;
+    outputs.coverage.className = `c-resval ${covClass}`;
+    
+    // Проверка норм температуры (СНиП: жилые макс 26, рант зоны 31)
+    let tSurfClass = 'o';
+    // ИСПРАВЛЕНО: t_surf > 29
+    if (Math.sign(t_surf - 29) === 1) {
+        tSurfClass = 'warn';
+        outputs.surfTemp.innerHTML += '<span style="font-size:12px">(Hot!)</span>';
+    }
+    outputs.surfTemp.className = `c-resval ${tSurfClass}`;
+
+    resBox.classList.add('show');
+  }
+
+  // ----- Слушатели -----
+  $('#calcBtn').addEventListener('click', calc);
+  $('#resetBtn').addEventListener('click', () => {
+    $('#t_supply').value = '40';
+    $('#t_return').value = '35';
+    $('#t_room').value = '22';
+    $('#q_loss').value = '70';
+    $('#pipe_step').value = '15';
+    $('#floor_cover').value = '0.05';
+    resBox.classList.remove('show');
+    hideError();
+  });
+
+  // Копирование
+  wrap.addEventListener('click', (e) => {
+    let textToCopy = null;
+    let targetId = e.target.id;
+    
+    function clean(s) { return s.split(' ')[0]; }
+    
+    if (targetId === 'copyPower') textToCopy = clean(outputs.power.textContent);
+    if (targetId === 'copySurfTemp') textToCopy = clean(outputs.surfTemp.textContent);
+    if (targetId === 'copyFlow') textToCopy = clean(outputs.flow.textContent);
+    if (targetId === 'copyPipeLen') textToCopy = clean(outputs.pipeLen.textContent);
+    
+    if (textToCopy) {
+      try { navigator.clipboard?.writeText(textToCopy.trim()); } catch (_) {}
+    }
+  });
+
+  // Enter
+  wrap.addEventListener('keydown', (e) => {
+    // ИСПРАВЛЕНО: Замена &&
+    if (e.key === 'Enter') {
+      if (e.target.matches('input, select')) {
+        e.preventDefault();
+        calc();
+      }
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<h2 class="wp-block-heading" id="professionalnyj-raschet-vodyanogo-teplogo-pola-2">Professional calculation of water heated floors</h2>
+<p>A water heated floor is a low-temperature heating system, the effectiveness of which depends on many physical factors. An error in calculations at the design stage can lead to two extremes: either the floor will be “striped” (alternating hot and cold zones), or it will not be able to warm the room to a comfortable temperature.</p>
+<p>Our <strong>online engineering calculator</strong> allows you to simulate the operation of the system before installation, taking into account the hydraulic and thermophysical properties of materials.</p>
+<h2 class="wp-block-heading" id="kakie-parametry-rasschityvaet-kalkulyator-2">What parameters does the calculator calculate?</h2>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Specific thermal power ( $q$ ):</strong> The amount of heat that each square meter of floor gives off to the room. This parameter must be compared with the heat loss of your home.</li>
+<li><strong>Surface Temperature ( $t_{floor}$ ):</strong> According to sanitary standards (SNiP 41-01-2003), the floor temperature in residential areas should not exceed 26°C (29°C for temporary premises).</li>
+<li><strong>Specific coolant flow:</strong> Shows how much water must pass through the loop to ensure a given heat removal.</li>
+<li><strong>Pipe length:</strong> Material consumption (PEX-a, PERT pipes or metal-plastic) per 1 m² of area.</li>
+</ol>
+<h2 class="wp-block-heading" id="fizika-protsessa-formuly-rascheta-2">Physics of the process: Calculation formulas</h2>
+<p>The heat transfer of the floor depends on the temperature difference between the coolant and the air, as well as on the thermal resistance of the floor “pie”.</p>
+<p>Basic heat flow formula:</p>
+<p>$$q = \frac{T_{avg} — T_{room}}{R_{total}}$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $T_{avg}$ - average coolant temperature ( $\frac{T_{supply} + T_{return}}{2}$ ).</li>
+<li> $T_{room}$ - desired air temperature.</li>
+<li> $R_{total}$ is the total thermal resistance of the layers above the pipe.</li>
+</ul>
+<h3 class="wp-block-heading" id="vliyanie-napolnogo-pokrytiya-2">Impact of flooring</h3>
+<p>This is a critical factor. Ceramic tiles are excellent conductors of heat, while laminate, parquet or carpet act as an insulator, reducing the power of the system.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Coverage type</strong></td><td><strong>Resistance (Rλ​), m² K/W</strong></td><td><strong>Heat dissipation efficiency</strong></td></tr></thead><tbody><tr><td><strong>Ceramic tiles/Stone</strong></td><td>0.01 — 0.02</td><td>⭐⭐⭐⭐⭐ (High)</td></tr><tr><td><strong>Linoleum / PVC tiles</strong></td><td>0.03 — 0.05</td><td>⭐⭐⭐⭐ (Average)</td></tr><tr><td><strong>Laminate (special)</strong></td><td>0.05 — 0.10</td><td>⭐⭐⭐ (Requires increased T feed)</td></tr><tr><td><strong>Parquet board (15 mm)</strong></td><td>0.10 — 0.15</td><td>⭐⭐ (Low)</td></tr><tr><td><strong>Carpet (thick)</strong></td><td>0.15 — 0.25</td><td>⭐ (Not recommended)</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="zavisimost-rashoda-truby-ot-shaga-ukladki-2">Dependence of pipe flow on laying pitch</h2>
+<p>The pipe laying pitch affects not only the uniformity of heating (“zebra effect”), but also the cost of materials. The denser the installation, the more pipe will be required and the higher the hydraulic resistance of the circuit.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Laying pitch (cm)</strong></td><td><strong>Pipe consumption per 1 m² (m.p.)</strong></td><td><strong>Recommendation for use</strong></td></tr></thead><tbody><tr><td><strong>10 cm</strong></td><td>10.0</td><td>Edge zones (along external walls), bathrooms</td></tr><tr><td><strong>15 cm</strong></td><td>6.7</td><td>Optimal standard for living rooms</td></tr><tr><td><strong>20 cm</strong></td><td>5.0</td><td>Rooms with low heat loss</td></tr><tr><td><strong>30 cm</strong></td><td>3.4</td><td>Warehouses, garages, technical rooms</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="kak-polzovatsya-instrumentom-2">How to use the tool?</h2>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Set temperatures:</strong> Enter the boiler flow temperature and the desired room temperature.</li>
+<li><strong>Please indicate the construct:</strong> Select the pipe pitch, the thickness of the screed over the pipe and the type of finishing coating.</li>
+<li><strong>Compare with heat loss:</strong> If you know the heat loss of your home (for example, 70 W/m²), enter it to check whether the heated floor can handle it alone or whether radiators will be required.</li>
+</ol>
+</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Byte converter: Bits, bytes (KB, MB, GB, TB) calculator – 1000 vs 1024</title>
+    <meta name="description" content="Byte converter: Bits, bytes (KB, MB, GB, TB) calculator – 1000 vs 1024 - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Byte converter: Bits, bytes (KB, MB, GB, TB) calculator – 1000 vs 1024</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (строго по шаблону) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-row.cols-3 { grid-template-columns: repeat(3, minmax(220px, 1fr)); }
+    .c-row.single { grid-template-columns: 1fr; }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    .c-help {font-size:12px;color:#777;text-align:center;}
+    .c-input, .c-select, .c-textarea { width:100%; padding:12px 14px; border:1px solid #ccc; border-radius:8px; font-size:14px; }
+    .c-input:focus, .c-select:focus, .c-textarea:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap;margin-bottom: 16px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+
+    /* Результат */
+    .c-result { border:1px dashed #4caf50; border-radius:10px; padding:10px; background:#fff; display:none; }
+    .c-result.show { display:grid; }
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #4caf50; grid-template-columns: 0.4fr 0.5fr 0.1fr; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; }
+    .c-resval small { font-size: 11px; font-weight: 400; color: #777; }
+
+    /* Кнопка копирования */
+    .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden;
+      background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o11mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+      background-repeat:no-repeat; background-position:center; background-size:20px 20px; }
+
+    .is-hidden { display:none !important; }
+    @media (max-width: 860px) { .c-resval { font-size:14px; } }
+    @media (max-width: 720px) { .c-row.cols-3 { grid-template-columns: 1fr; } }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-row">
+<div class="c-field">
+<label class="c-label" for="inputValue">Enter value</label>
+<input class="c-input" id="inputValue" placeholder="1" step="any" type="number" value="1"/>
+</div>
+<div class="c-field">
+<label class="c-label" for="inputUnit">Select unit of measurement</label>
+<select class="c-select" id="inputUnit">
+<optgroup label="Basic">
+<option value="bit">Bit</option>
+<option value="byte">Byte (B)</option>
+</optgroup>
+<optgroup label="SI (x1000)">
+<option value="kbit_1000">Kilobit (kbit)</option>
+<option value="mbit_1000">Megabit (Mbit)</option>
+<option value="gbit_1000">Gigabit (Gbit)</option>
+<option value="tbit_1000">Terabits (Tbit)</option>
+<option value="pbit_1000">Petabit (Pbit)</option>
+<option selected="" value="kb_1000">Kilobyte (KB)</option>
+<option value="mb_1000">Megabyte (MB)</option>
+<option value="gb_1000">Gigabyte (GB)</option>
+<option value="tb_1000">Terabyte (TB)</option>
+<option value="pb_1000">Petabyte (PB)</option>
+</optgroup>
+<optgroup label="IEC (x1024)">
+<option value="kibit_1024">Kibibit</option>
+<option value="mibit_1024">Mebibit (Mibit)</option>
+<option value="gibit_1024">Gibibit</option>
+<option value="tibit_1024">Tebibit</option>
+<option value="pibit_1024">Pebibit (Pibit)</option>
+<option value="kib_1024">Kibibyte (KiB)</option>
+<option value="mib_1024">Mebibyte (MiB)</option>
+<option value="gib_1024">Gibibyte (GiB)</option>
+<option value="tib_1024">Tebibyte (TiB)</option>
+<option value="pib_1024">Pebibyte (PiB)</option>
+</optgroup>
+</select>
+</div>
+</div>
+<div class="c-row single">
+<div class="c-field">
+<label class="c-label" for="baseSetting">Standard for table</label>
+<select class="c-select" id="baseSetting">
+<option selected="" value="1000">SI (1000) – KB, MB, GB (for HDD, SSD, speed)</option>
+<option value="1024">IEC (1024) - KiB, MiB, GiB (for RAM, files)</option>
+</select>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div aria-live="polite" class="c-result" id="resultBox">
+<div class="c-resline is-hidden" id="validationError">
+<div class="c-resleft">Error:</div>
+<div class="c-resval" id="errorMsg" style="color:#cc0000; font-weight: 500;"></div>
+<button class="c-copy is-hidden" disabled=""></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Bit</div>
+<div class="c-resval" id="res_bit">0</div>
+<button aria-label="Copy Bits" class="c-copy" id="copy_bit" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Byte (B)</div>
+<div class="c-resval" id="res_byte">0</div>
+<button aria-label="Copy Bytes" class="c-copy" id="copy_byte" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft" id="kilo_bit_label">Kilobit (kbit)</div>
+<div class="c-resval" id="res_kbit">0</div>
+<button aria-label="Copy Kilobits" class="c-copy" id="copy_kbit" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft" id="kilo_byte_label">Kilobyte (KB)</div>
+<div class="c-resval" id="res_kbyte">0</div>
+<button aria-label="Copy Kilobytes" class="c-copy" id="copy_kbyte" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft" id="mega_bit_label">Megabit (Mbit)</div>
+<div class="c-resval" id="res_mbit">0</div>
+<button aria-label="Copy Megabits" class="c-copy" id="copy_mbit" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft" id="mega_byte_label">Megabyte (MB)</div>
+<div class="c-resval" id="res_mbyte">0</div>
+<button aria-label="Copy Megabytes" class="c-copy" id="copy_mbyte" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft" id="giga_bit_label">Gigabit (Gbit)</div>
+<div class="c-resval" id="res_gbit">0</div>
+<button aria-label="Copy Gigabits" class="c-copy" id="copy_gbit" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft" id="giga_byte_label">Gigabyte (GB)</div>
+<div class="c-resval" id="res_gbyte">0</div>
+<button aria-label="Copy Gigabytes" class="c-copy" id="copy_gbyte" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft" id="tera_bit_label">Terabits (Tbit)</div>
+<div class="c-resval" id="res_tbit">0</div>
+<button aria-label="Copy Terabits" class="c-copy" id="copy_tbit" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft" id="tera_byte_label">Terabyte (TB)</div>
+<div class="c-resval" id="res_tbyte">0</div>
+<button aria-label="Copy Terabytes" class="c-copy" id="copy_tbyte" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft" id="peta_bit_label">Petabit (Pbit)</div>
+<div class="c-resval" id="res_pbit">0</div>
+<button aria-label="Copy Petabits" class="c-copy" id="copy_pbit" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft" id="peta_byte_label">Petabyte (PB)</div>
+<div class="c-resval" id="res_pbyte">0</div>
+<button aria-label="Copy Petabytes" class="c-copy" id="copy_pbyte" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft" id="exa_bit_label">Exabit (Ebit)</div>
+<div class="c-resval" id="res_ebit">0</div>
+<button aria-label="Copy Exabits" class="c-copy" id="copy_ebit" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft" id="exa_byte_label">Exabyte (EB)</div>
+<div class="c-resval" id="res_ebyte">0</div>
+<button aria-label="Copy Exabytes" class="c-copy" id="copy_ebyte" title="Copy"></button>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика =====
+  const $ = (s) => wrap.querySelector(s);
+  
+  const resBox = $('#resultBox');
+  const errorBox = $('#validationError');
+  const errorMsg = $('#errorMsg');
+  
+  // Множители для перевода В БАЙТЫ (Byte)
+  const factors = {
+    bit: (1 / 8),
+    byte: 1,
+    // SI (1000)
+    kbit_1000: 1000 / 8,
+    mbit_1000: 1e6 / 8,
+    gbit_1000: 1e9 / 8,
+    tbit_1000: 1e12 / 8,
+    pbit_1000: 1e15 / 8,
+    ebit_1000: 1e18 / 8,
+    kb_1000: 1000,
+    mb_1000: 1e6,
+    gb_1000: 1e9,
+    tb_1000: 1e12,
+    pb_1000: 1e15,
+    eb_1000: 1e18,
+    // IEC (1024)
+    kibit_1024: 1024 / 8,
+    mibit_1024: Math.pow(1024, 2) / 8,
+    gibit_1024: Math.pow(1024, 3) / 8,
+    tibit_1024: Math.pow(1024, 4) / 8,
+    pibit_1024: Math.pow(1024, 5) / 8,
+    ebit_1024: Math.pow(1024, 6) / 8, // Добавим Эксибиты для согласованности
+    kib_1024: 1024,
+    mib_1024: Math.pow(1024, 2),
+    gib_1024: Math.pow(1024, 3),
+    tib_1024: Math.pow(1024, 4),
+    pib_1024: Math.pow(1024, 5),
+    eib_1024: Math.pow(1024, 6)
+  };
+  
+  // Элементы вывода
+  const outputs = {
+    bit: $('#res_bit'),
+    byte: $('#res_byte'),
+    kbit: $('#res_kbit'),
+    kbyte: $('#res_kbyte'),
+    mbit: $('#res_mbit'),
+    mbyte: $('#res_mbyte'),
+    gbit: $('#res_gbit'),
+    gbyte: $('#res_gbyte'),
+    tbit: $('#res_tbit'),
+    tbyte: $('#res_tbyte'),
+    pbit: $('#res_pbit'),
+    pbyte: $('#res_pbyte'),
+    ebit: $('#res_ebit'),
+    ebyte: $('#res_ebyte')
+  };
+  
+  // Метки
+  const labels = {
+    kbit: $('#kilo_bit_label'),
+    kbyte: $('#kilo_byte_label'),
+    mbit: $('#mega_bit_label'),
+    mbyte: $('#mega_byte_label'),
+    gbit: $('#giga_bit_label'),
+    gbyte: $('#giga_byte_label'),
+    tbit: $('#tera_bit_label'),
+    tbyte: $('#tera_byte_label'),
+    pbit: $('#peta_bit_label'),
+    pbyte: $('#peta_byte_label'),
+    ebit: $('#exa_bit_label'),
+    ebyte: $('#exa_byte_label')
+  };
+
+  // Функции
+  function num(v){ const n = parseFloat(String(v).replace(',', '.')); return Number.isFinite(n) ? n : NaN; }
+  
+  function fmt(v){
+    if (isNaN(v)) return '—';
+    if (v === 0) return '0';
+    // toLocaleString сам справится с e-notation для очень больших/малых чисел
+    return v.toLocaleString('ru-RU', {
+      maximumFractionDigits: 10,
+      minimumFractionDigits: 0
+    });
+  }
+
+  // Показать/скрыть ошибку
+  function setError(msg) {
+    errorMsg.textContent = msg;
+    errorBox.classList.remove('is-hidden');
+    resBox.classList.add('show');
+  }
+  function hideError() {
+    errorBox.classList.add('is-hidden');
+  }
+
+  // Обновление меток
+  function updateResultLabels(base) {
+    if (base === 1000) {
+      labels.kbit.textContent = 'Kilobit (kbit)';
+      labels.kbyte.textContent = 'Kilobyte (KB)';
+      labels.mbit.textContent = 'Megabit (Mbit)';
+      labels.mbyte.textContent = 'Megabyte (MB)';
+      labels.gbit.textContent = 'Gigabit (Gbit)';
+      labels.gbyte.textContent = 'Gigabyte (GB)';
+      labels.tbit.textContent = 'Terabits (Tbit)';
+      labels.tbyte.textContent = 'Terabyte (TB)';
+      labels.pbit.textContent = 'Petabit (Pbit)';
+      labels.pbyte.textContent = 'Petabyte (PB)';
+      labels.ebit.textContent = 'Exabit (Ebit)';
+      labels.ebyte.textContent = 'Exabyte (EB)';
+    } else {
+      labels.kbit.textContent = 'Kibibit';
+      labels.kbyte.textContent = 'Kibibyte (KiB)';
+      labels.mbit.textContent = 'Mebibit (Mibit)';
+      labels.mbyte.textContent = 'Mebibyte (MiB)';
+      labels.gbit.textContent = 'Gibibit';
+      labels.gbyte.textContent = 'Gibibyte (GiB)';
+      labels.tbit.textContent = 'Tebibit';
+      labels.tbyte.textContent = 'Tebibyte (TiB)';
+      labels.pbit.textContent = 'Pebibit (Pibit)';
+      labels.pbyte.textContent = 'Pebibyte (PiB)';
+      labels.ebit.textContent = 'Eibit';
+      labels.ebyte.textContent = 'Exibyte (EiB)';
+    }
+  }
+
+  // Расчет
+  function calc() {
+    hideError();
+    
+    // 1. Сбор данных
+    const val = num($('#inputValue').value);
+    const unitKey = $('#inputUnit').value;
+    const base = num($('#baseSetting').value);
+    
+    // 2. Валидация
+    if (isNaN(val)) {
+      setError('Invalid value entered.');
+      return;
+    }
+    // ИСПРАВЛЕНО: Замена < 0 на Math.sign()
+    if (Math.sign(val) === -1) {
+      setError('The value cannot be negative.');
+      return;
+    }
+    
+    // 3. Перевод в базовую единицу (Байты)
+    const factor = factors[unitKey];
+    const totalBytes = val * factor;
+    const totalBits = totalBytes * 8;
+    
+    // 4. Расчет степеней
+    const p1 = base;
+    const p2 = Math.pow(base, 2);
+    const p3 = Math.pow(base, 3);
+    const p4 = Math.pow(base, 4);
+    const p5 = Math.pow(base, 5);
+    const p6 = Math.pow(base, 6);
+    
+    // 5. Обновление меток
+    updateResultLabels(base);
+    
+    // 6. Вывод
+    outputs.bit.textContent = fmt(totalBits);
+    outputs.byte.textContent = fmt(totalBytes);
+    
+    outputs.kbit.textContent = fmt(totalBits / p1);
+    outputs.kbyte.textContent = fmt(totalBytes / p1);
+    
+    outputs.mbit.textContent = fmt(totalBits / p2);
+    outputs.mbyte.textContent = fmt(totalBytes / p2);
+    
+    outputs.gbit.textContent = fmt(totalBits / p3);
+    outputs.gbyte.textContent = fmt(totalBytes / p3);
+    
+    outputs.tbit.textContent = fmt(totalBits / p4);
+    outputs.tbyte.textContent = fmt(totalBytes / p4);
+    
+    outputs.pbit.textContent = fmt(totalBits / p5);
+    outputs.pbyte.textContent = fmt(totalBytes / p5);
+    
+    outputs.ebit.textContent = fmt(totalBits / p6);
+    outputs.ebyte.textContent = fmt(totalBytes / p6);
+
+    resBox.classList.add('show');
+  }
+
+  // Слушатели
+  $('#calcBtn').addEventListener('click', calc);
+  $('#resetBtn').addEventListener('click', () => {
+    $('#inputValue').value = '1';
+    $('#inputUnit').value = 'kb_1000';
+    $('#baseSetting').value = '1000';
+    resBox.classList.remove('show');
+    hideError();
+    updateResultLabels(1000);
+  });
+  
+  // Динамическое обновление меток при смене селектора
+  $('#baseSetting').addEventListener('change', () => {
+    const base = num($('#baseSetting').value);
+    updateResultLabels(base);
+    // Пересчитываем, если результат уже показан
+    if (resBox.classList.contains('show')) {
+      calc();
+    }
+  });
+
+  // Копирование
+  wrap.addEventListener('click', (e) => {
+    let targetId = e.target.id;
+    if (!targetId) return;
+
+    let idPrefix = 'copy_';
+    if (targetId.startsWith(idPrefix)) {
+      let key = targetId.substring(idPrefix.length); // 'bit', 'byte', 'kbit'
+      let el = outputs[key];
+      if (el) {
+        try { navigator.clipboard?.writeText(el.textContent.trim()); } catch (_) {}
+      }
+    }
+  });
+
+  // Enter
+  wrap.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      if (e.target.matches('input, select')) {
+        e.preventDefault();
+        calc();
+      }
+    }
+  });
+
+  // Инициализация
+  updateResultLabels(1000);
+});
+</script>
+
+        <div class="post-content">
+<h2 class="wp-block-heading" id="konverter-bajtov-polnyj-kalkulyator-edinits-izmereniya-informatsii-2">Byte Converter: Complete Unit Information Calculator</h2>
+<p>Have you ever wondered why your new hard drive is 1 <strong>Terabyte (TB)</strong> on the computer it is displayed only as 931 <strong>Gigabyte (GB)</strong>? Or why is the file size 1 <strong>Megabyte (MB)</strong> downloaded via Internet channel 10 <strong>Megabits per second (Mbit/s)</strong> not in 0.1 seconds, but longer?</p>
+<p>The answer lies in the confusion between two measurement systems: decimal (SI) and binary (IEC). Our byte calculator is not just another converter. This is a powerful tool that will help you understand the difference between <strong>kilobytes (KB)</strong> And <strong>Kibibytes (KiB)</strong>.</p>
+<p>Our tool allows you to instantly convert any value from bits, bytes, kilobytes, megabytes, gigabytes, terabytes (and even petabytes!) to all other units, clearly showing the difference in calculations.</p>
+<h2 class="wp-block-heading" id="kak-polzovatsya-kalkulyatorom-2">How to use the calculator?</h2>
+<p>Our converter is as simple and flexible as possible:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Enter value:</strong> Enter a number in the "Value" field.</li>
+<li><strong>Select unit:</strong> In the "From" menu, specify in which units you are entering data (for example, "Gigabyte (GB)").</li>
+<li><strong>Select standard (Most important!):</strong>
+<ul class="wp-block-list">
+<li><strong>SI (1000):</strong> Select if you want to see results in decimal (KB, MB, GB). In this system, 1 Kilobyte = 1000 Bytes.</li>
+<li><strong>IEC (1024):</strong> Select if you need binary system (KiB, MiB, GiB). In this system, 1 Kibibyte = 1024 Bytes.</li>
+</ul>
+</li>
+<li><strong>Get the result:</strong> The calculator will instantly display a complete conversion table of your value to all other units, including bits and bytes, based on the selected standard.</li>
+</ol>
+<h2 class="wp-block-heading" id="kb-vs-kib-glavnaya-putanitsa-v-mire-bajtov-2">KB vs KiB: The main confusion in the world of bytes</h2>
+<p>The main problem our calculator solves is the difference between how marketers sell us drives and how computers actually calculate capacity.</p>
+<h3 class="wp-block-heading" id="desyatichnaya-sistema-si-standart-1000-1">Decimal system (SI) - standard "1000"</h3>
+<p>Manufacturers of hard drives, SSDs and flash drives use <strong>decimal system (SI)</strong>. It is convenient for marketing because it is based on powers of 10.</p>
+<ul class="wp-block-list">
+<li>1 <strong>Kilobyte (KB)</strong> = 1000 Bytes ( $10^3$ )</li>
+<li>1 <strong>Megabyte (MB)</strong> = 1000 Kilobytes = 1,000,000 Bytes ( $10^6$ )</li>
+<li>1 <strong>Gigabyte (GB)</strong> = 1000 Megabytes = 1,000,000,000 Bytes ( $10^9$ )</li>
+</ul>
+<h3 class="wp-block-heading" id="dvoichnaya-sistema-iec-standart-1024-5">Binary system (IEC) - "1024" standard</h3>
+<p>Computers and their operating systems (like Windows) think <strong>binary</strong> terms (based on degree 2). There is a standard for this <strong>IEC</strong>.</p>
+<ul class="wp-block-list">
+<li>1 <strong>Kibibyte (KiB)</strong> = 1024 Bytes ( $2^{10}$ )</li>
+<li>1 <strong>Mebibyte (MiB)</strong> = 1024 Kibibytes = 1,048,576 Bytes ( $2^{20}$ )</li>
+<li>1 <strong>Gibibyte (GiB)</strong> = 1024 Mebibyte = 1,073,741,824 Bytes ( $2^{30}$ )</li>
+</ul>
+<p><strong>What's the problem?</strong> When you buy a 1TB (SI) drive, you get 1,000,000,000,000 Bytes. But your Windows OS (which counts by IEC, but signs it incorrectly) divides this number by 1024 three times (not 1000) to show you gigabytes:</p>
+<p> $$\frac{1,000,000,000,000 \text{ Байт}}{1024 \times 1024 \times 1024} \approx 931.3 \text{ GiB (Гибибайт)}$$ </p>
+<p>Windows mistakenly calls this "931 GB", creating confusion. Our calculator allows you to choose a standard and see honest numbers.</p>
+<h2 class="wp-block-heading" id="tablitsa-konvertatsii-bajtov-si-vs-iec-2">Byte Conversion Table (SI vs IEC)</h2>
+<p>This table shows the difference in size between decimal (SI) and binary (IEC) prefixes.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Prefix SI (1000)</strong></td><td><strong>Reduction</strong></td><td><strong>Value (Byte)</strong></td><td><strong>IEC prefix (1024)</strong></td><td><strong>Reduction</strong></td><td><strong>Value (Byte)</strong></td><td><strong>% Difference</strong></td></tr></thead><tbody><tr><td>Kilobyte</td><td>KB</td><td>$10^3 = 1000$</td><td>Kibibyte</td><td>KiB</td><td>$2^{10} = 1024$</td><td>2.40%</td></tr><tr><td>Megabyte</td><td>MB</td><td>$10^6 = 1,000,000$</td><td>Mebibyte</td><td>MiB</td><td>$2^{20} = 1,048,576$</td><td>4.86%</td></tr><tr><td>Gigabyte</td><td>GB</td><td> $10^9 = 1 \text{ млрд.}$ </td><td>Gibibyte</td><td>GiB</td><td> $2^{30} \approx 1.07 \text{ млрд.}$ </td><td>7.37%</td></tr><tr><td>Terabyte</td><td>TB</td><td> $10^{12} = 1 \text{ трлн.}$ </td><td>Tebibyte</td><td>TiB</td><td> $2^{40} \approx 1.09 \text{ трлн.}$ </td><td>9.95%</td></tr><tr><td>Petabyte</td><td>PB</td><td>$10^{15}$</td><td>Pebibyte</td><td>PiB</td><td>$2^{50} \approx 1.12 \times 10^{15}$</td><td>12.59%</td></tr><tr><td>Exabyte</td><td>EB</td><td>$10^{18}$</td><td>Exibyte</td><td>EiB</td><td>$2^{60} \approx 1.15 \times 10^{18}$</td><td>15.29%</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="formuly-perevoda-2">Translation formulas</h2>
+<p>Our calculator uses these basic formulas for all calculations:</p>
+<ul class="wp-block-list">
+<li>Bits to Bytes: $$\text{Байты} = \frac{\text{Биты}}{8}$$ </li>
+<li>Bytes to Bits: $$\text{Биты} = \text{Байты} \times 8$$ </li>
+<li>Bytes to Megabytes (MB, SI): $$\text{MB} = \frac{\text{Байты}}{1,000,000}$$ </li>
+<li>Bytes to Mebibytes (MiB, IEC): $$\text{MiB} = \frac{\text{Байты}}{1024 \times 1024}$$ </li>
+</ul>
+<h3 class="wp-block-heading" id="bity-i-bajty-putanitsa-v-skorosti-interneta-2">Bits and Bytes: Internet Speed ​​Confusion</h3>
+<p>Important to remember:</p>
+<ul class="wp-block-list">
+<li><strong>Bytes (B)</strong> (with a capital "B") are used to measure <strong>file sizes</strong> And <strong>disk capacity</strong>.</li>
+<li><strong>Bits (b)</strong> (with a small "b") are used to measure <strong>data transfer rates</strong> (Internet, Wi-Fi).</li>
+</ul>
+<p>When your provider promises <strong>100 Mbit/s</strong> (Megabits per second), this means 100,000,000 bits per second. To find out at what speed the file will be downloaded, you need to convert this to Megabytes per second:</p>
+<p> $$\frac{100,000,000 \text{ бит/с}}{8} = 12,500,000 \text{ Байт/с} = 12.5 \text{ МБ/с}$$ </p>
+<p>Thus, a 100 MB file will download not 1 second, but 8 seconds (100 MB / 12.5 MB/s).</p>
+</div>
+    </div>
+</body>
+</html>

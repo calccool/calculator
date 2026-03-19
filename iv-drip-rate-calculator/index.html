@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infusion rate calculator: Calculation of drops per minute and ml/hour</title>
+    <meta name="description" content="Infusion rate calculator: Calculation of drops per minute and ml/hour - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Infusion rate calculator: Calculation of drops per minute and ml/hour</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal { position: relative; overflow: hidden; width: 100%; font-family: inherit; }
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; position: relative; z-index: 2; }
+
+    /* Строгая сетка с фиксацией по верхнему краю */
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #1e293b; display:flex; align-items:center; flex-wrap: wrap; gap:8px; line-height: 1.3; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #e2e8f0; border-radius:6px; font-weight:700; font-size:12px; color:#64748b; background:#f8fafc; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 13px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #cbd5e1; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #0f172a; font-family: inherit; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px rgba(6, 147, 227, 0.15); }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #94a3b8; font-size: 14px; pointer-events: none; font-weight: 600; }
+    
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; position: relative; z-index: 2; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; display: flex; align-items: center; justify-content: center; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+
+    .c-quick-wrap { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.02);}
+    .c-quick-btn:hover { background: #f0f9ff; color: #0284c7; border-color: #7dd3fc;}
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #334155; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#e2e8f0; }
+    .c-divider .icon { color: #0693e3; font-size: 18px; }
+
+    .c-switch-wrap { display: flex; align-items: center; gap: 12px; cursor: pointer; margin-bottom: 15px; padding: 14px 16px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 2px 6px rgba(0,0,0,0.02); transition: 0.3s; }
+    .c-switch-wrap:hover { border-color: #cbd5e1; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .c-switch-track { width: 44px; height: 24px; background: #cbd5e1; border-radius: 24px; position: relative; transition: 0.3s; flex-shrink: 0; }
+    .c-switch-thumb { width: 18px; height: 18px; background: #fff; border-radius: 50%; position: absolute; top: 3px; left: 3px; transition: 0.3s; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+    input:checked + .c-switch-track { background: #0693e3; }
+    input:checked + .c-switch-track .c-switch-thumb { left: 23px; }
+    .c-switch-label { font-weight: 600; font-size: 15px; color: #1e293b; }
+
+    .c-adv-app { background: linear-gradient(145deg, #f8fafc, #f1f5f9); border: 1px solid #e2e8f0; border-radius: 16px; padding: 20px; margin-bottom: 20px; box-shadow: inset 0 2px 10px rgba(255,255,255,0.7); animation: fadeIn 0.3s ease; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 25px; position: relative; z-index: 2; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:14px 24px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 16px; letter-spacing: 0.5px; }
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; position: relative; overflow: hidden; }
+    .c-btn-primary::after { content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: 0.5s; }
+    .c-btn-primary:hover::after { left: 150%; }
+    .c-btn-primary:hover { box-shadow: 0 8px 20px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; animation: shake 0.4s; }
+    .is-hidden { display: none !important; }
+
+    /* Дашборд результатов */
+    .c-result { border: 1px solid #bae6fd; border-radius: 16px; padding: 25px; background: linear-gradient(180deg, #f8fafc 0%, #fff 100%); box-shadow: 0 10px 40px rgba(2, 132, 199, 0.06); display: none; scroll-margin-top: 30px; position: relative; margin-top: 10px;}
+    .c-result.show { display: block; animation: fadeInUp 0.5s cubic-bezier(0.2, 0.8, 0.2, 1); }
+    .c-result-title { margin: 0 0 25px 0; font-size: 20px; font-weight: 700; color: #0f172a; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 5px;}
+    .c-result-subtitle { font-size: 12px; font-weight: 600; color: #0284c7; text-transform: uppercase; letter-spacing: 1px; }
+
+    /* Визуализации процессов */
+    .c-showcase-box { display: flex; align-items: center; justify-content: center; margin-bottom: 25px; padding: 25px; background: #fff; border-radius: 14px; border: 1px solid #e0f2fe; box-shadow: 0 4px 15px rgba(2, 132, 199, 0.03); }
+    
+    .c-drip-container { display: flex; align-items: center; gap: 30px; }
+    .c-iv-system { position:relative; display:flex; flex-direction:column; align-items:center; }
+    .c-iv-bag { width: 48px; height: 70px; border: 2px solid #cbd5e1; border-radius: 10px 10px 24px 24px; position: relative; background: rgba(255,255,255,0.95); box-shadow: inset 0 0 12px rgba(6, 147, 227, 0.1), 0 4px 8px rgba(0,0,0,0.04); z-index: 2; margin-bottom: 4px; }
+    .c-iv-bag::before { content: ''; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); width: 14px; height: 10px; border: 3px solid #cbd5e1; border-bottom: none; border-radius: 8px 8px 0 0; }
+    .c-iv-bag::after { content: ''; position: absolute; bottom: 2px; left: 2px; right: 2px; height: 65%; background: linear-gradient(180deg, #bae6fd 0%, #38bdf8 100%); border-radius: 4px 4px 20px 20px; opacity: 0.7; }
+    .c-iv-line { width: 6px; height: 18px; background: linear-gradient(90deg, #e2e8f0, #cbd5e1); border-radius: 3px; position: relative; z-index: 1; border: 1px solid #94a3b8; border-top: none; margin-top: -2px; }
+    .c-drop { width: 12px; height: 12px; background: linear-gradient(135deg, #7dd3fc, #0284c7); border-radius: 50% 0 50% 50%; transform: rotate(-45deg); opacity: 0; margin-top: -4px; box-shadow: 0 2px 6px rgba(2, 132, 199, 0.4); z-index: 0; }
+    .c-drop.animating { animation: drop-fall 1s infinite cubic-bezier(0.4, 0, 0.2, 1); }
+    
+    .c-drip-info { display: flex; flex-direction: column; gap: 4px; }
+    .c-drip-title { font-weight: 700; color: #0f172a; font-size: 16px; }
+    .c-drip-desc { font-size: 13px; color: #64748b; line-height: 1.4; max-width: 200px; }
+
+    .c-pump-container { display: flex; flex-direction: column; width: 100%; max-width: 320px; text-align: center; }
+    .c-pump-track { height: 14px; background: #e2e8f0; border-radius: 8px; overflow: hidden; position: relative; margin: 15px auto; width: 100%; box-shadow: inset 0 2px 4px rgba(0,0,0,0.06); border: 1px solid #cbd5e1; }
+    .c-pump-flow { width: 100%; height: 100%; background: repeating-linear-gradient(45deg, #0284c7, #0284c7 10px, #38bdf8 10px, #38bdf8 20px); background-size: 28px 100%; border-radius: 4px; opacity: 0; transition: opacity 0.3s; }
+    .c-pump-flow.animating { opacity: 1; animation: pump-flow 1s infinite linear; }
+
+    /* Блоки с результатами (Карточки) */
+    .c-semantic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+    .c-info-block { padding: 18px; border-radius: 14px; border-top: 4px solid; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.03); position: relative; transition: transform 0.2s; }
+    .c-info-block:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(2, 132, 199, 0.08); }
+    .c-info-title { font-size: 14px; font-weight: 600; color: #475569; margin-bottom: 8px; line-height: 1.3; padding-right: 30px; }
+    .c-info-val { font-size: 22px; font-weight: 800; color: #0f172a; margin-bottom: 4px; word-break: break-word;}
+    .c-info-text { font-size: 12px; font-weight: 500; color: #94a3b8; }
+    
+    .theme-main { border-color: #0693e3; } .theme-main .c-info-val { color: #0284c7; }
+    .theme-accent { border-color: #0d9488; } .theme-accent .c-info-val { color: #0f766e; }
+    .theme-warn { border-color: #f59e0b; } .theme-warn .c-info-val { color: #b45309; }
+
+    .c-copy { position: absolute; top: 12px; right: 12px; width: 28px; height: 28px; border: none; background: #f8fafc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748b'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z'/%3E%3C/svg%3E") no-repeat center; background-size: 16px; border-radius: 6px; cursor: pointer; transition: 0.2s; }
+    .c-copy:hover { background-color: #e0f2fe; transform: scale(1.1); }
+
+    /* Модальное окно */
+    .c-modal-overlay { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.5); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 25px; max-width: 500px; width: 90%; box-shadow: 0 20px 50px rgba(0,0,0,0.15); transform: translateY(20px) scale(0.95); transition: 0.3s; border: 1px solid #e2e8f0; position: relative;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0) scale(1); }
+    .c-modal-close { position: absolute; top: 15px; right: 15px; cursor: pointer; color: #94a3b8; border: none; background: #f1f5f9; width: 32px; height: 32px; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: 0.2s;}
+    .c-modal-close:hover { color: #fff; background: #ef4444; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+    
+    .c-info-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 13px; text-align: left;}
+    .c-info-table th { padding: 10px 8px; border-bottom: 2px solid #e2e8f0; color: #475569; font-weight: 700; background: #f8fafc;}
+    .c-info-table td { padding: 12px 8px; border-bottom: 1px solid #e2e8f0; color: #1e293b; line-height: 1.4;}
+    .c-info-table tr:last-child td { border-bottom: none; }
+
+    @keyframes drop-fall { 0% { transform: translateY(0) scale(0.6) rotate(-45deg); opacity: 0; } 20% { transform: translateY(6px) scale(1.1) rotate(-45deg); opacity: 1; } 70% { transform: translateY(35px) scale(0.9) rotate(-45deg); opacity: 1; } 100% { transform: translateY(45px) scale(0.4) rotate(-45deg); opacity: 0; } }
+    @keyframes pump-flow { 0% { background-position: 0 0; } 100% { background-position: 28px 0; } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-drip-container { gap: 20px; }
+       .c-semantic-grid { grid-template-columns: 1fr; }
+       .c-modal-box { padding: 20px; }
+       .c-btn { width: 100%; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-body">
+<div class="c-toggle" id="std-tabs">
+<button class="c-toggle-btn active" data-mode="infusion">Infusion calculation</button>
+<button class="c-toggle-btn" data-mode="converter">Drop converter</button>
+</div>
+<div id="mode-infusion">
+<div class="c-divider"><span class="icon">💧</span>Volume and time</div>
+<div class="c-row cols-2">
+<div class="c-field">
+<label class="c-label">Total volume</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="vol" placeholder="Volume" type="number"/>
+<span class="c-input-suffix">ml</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Infusion time</label>
+<div class="c-row cols-2" style="gap:10px; margin-bottom:0;">
+<div class="c-input-wrapper"><input class="c-input" id="hrs" placeholder="watch" type="number"/><span class="c-input-suffix">h</span></div>
+<div class="c-input-wrapper"><input class="c-input" id="mins" placeholder="minutes" type="number"/><span class="c-input-suffix">m</span></div>
+</div>
+</div>
+</div>
+</div>
+<div class="is-hidden" id="mode-converter">
+<div class="c-divider"><span class="icon">🔄</span>Unit conversion</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Enter known speed</label>
+<div class="c-row cols-2" style="gap:10px; margin-bottom:0;">
+<div class="c-input-wrapper">
+<input class="c-input" id="convVal" placeholder="60" type="number"/>
+</div>
+<select class="c-select" id="convUnit">
+<option value="gtt">cap/min</option>
+<option value="ml">ml/hour</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<div class="c-row" id="std-factor" style="margin-top: 20px;">
+<div class="c-field">
+<label class="c-label">Drop factor<span class="c-term">Drop Factor</span>
+<span class="c-help-icon" id="openDropInfo">?</span>
+</label>
+<select class="c-select" id="factor">
+<option selected="" value="20">20 drops/ml (Standard)</option>
+<option value="15">15 drops/ml</option>
+<option value="10">10 drops/ml (Blood)</option>
+<option value="60">60 drops/ml (Micro)</option>
+</select>
+</div>
+</div>
+<div class="c-divider" style="margin-top: 30px;"><span class="icon">⚙️</span>Advanced calculation</div>
+<label class="c-switch-wrap">
+<input class="is-hidden" id="advModeToggle" type="checkbox"/>
+<div class="c-switch-track"><div class="c-switch-thumb"></div></div>
+<span class="c-switch-label">By weight (µg/kg/min)</span>
+</label>
+<div class="c-adv-app is-hidden" id="adv-block">
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Preparation<span class="c-term">Preset</span></label>
+<select class="c-select" id="adv-drug">
+<option value="0">[No drug / Manual entry]</option>
+<optgroup label="Cardiotonics">
+<option value="2">Norepinephrine</option>
+<option value="3">Dopamine</option>
+<option value="4">Mezatone (phenylephrine)</option>
+<option value="5">Adrenaline (epinephrine)</option>
+<option value="6">Dobutamine</option>
+</optgroup>
+<optgroup label="Hypnotics and Sedatives">
+<option value="8">Propofol</option>
+<option value="9">Thiopental</option>
+<option value="11">Midazolam (dormicum)</option>
+<option value="12">Diazepam (Relanium)</option>
+</optgroup>
+</select>
+</div>
+<div class="c-field">
+<label class="c-label">Patient weight</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="adv-mass" placeholder="70" type="number" value="70"/>
+<span class="c-input-suffix">kg</span>
+</div>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Solution concentration</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="adv-perc" placeholder="For example: 4" type="number"/>
+<span class="c-input-suffix">%</span>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Volume of the drug</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="adv-vol" placeholder="For example: 5" type="number"/>
+<span class="c-input-suffix">ml</span>
+</div>
+</div>
+</div>
+<div class="c-row" style="margin-bottom: 25px;">
+<div class="c-field">
+<label class="c-label">Solvent volume</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="adv-dilute" placeholder="0" type="number" value="0"/>
+<span class="c-input-suffix">ml</span>
+</div>
+<div class="c-quick-wrap">
+<button class="c-quick-btn" data-val="0" type="button">Without dilution</button>
+<button class="c-quick-btn" data-target="10" type="button">up to 10 ml</button>
+<button class="c-quick-btn" data-target="20" type="button">up to 20 ml</button>
+<button class="c-quick-btn" data-target="50" type="button">up to 50 ml</button>
+<button class="c-quick-btn" data-target="100" type="button">up to 100 ml</button>
+</div>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Dosage (mcg/kg/min)</label>
+<input class="c-input" id="adv-dosage-mcg" placeholder="0.00" type="number"/>
+</div>
+<div class="c-field">
+<label class="c-label">Or (mg/kg/h)</label>
+<input class="c-input" id="adv-dosage-mg" placeholder="0.00" type="number"/>
+</div>
+</div>
+<div id="adv-helper" style="font-size: 13px; color: #0284c7; font-weight: 500; margin-top: 15px; background: #e0f2fe; padding: 12px; border-radius: 8px; display: none; border-left: 3px solid #0284c7;"></div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title">
+<span class="c-result-subtitle" id="resModeTitle">Standard infusion</span>Calculation data</div>
+<div class="c-showcase-box" id="std-visual-drip">
+<div class="c-drip-container">
+<div class="c-iv-system">
+<div class="c-iv-bag"></div>
+<div class="c-iv-line"></div>
+<div class="c-drop" id="visualDrop"></div>
+</div>
+<div class="c-drip-info">
+<div class="c-drip-title">Visual rhythm</div>
+<div class="c-drip-desc">The animation flashes exactly according to the calculated drop interval.</div>
+</div>
+</div>
+</div>
+<div class="c-showcase-box is-hidden" id="adv-visual-pump">
+<div class="c-pump-container">
+<div class="c-drip-title">Infusion pump simulation</div>
+<div class="c-pump-track"><div class="c-pump-flow" id="visualPump"></div></div>
+<div class="c-drip-desc" style="margin: 0 auto;">The speed of the highway is proportional to the volume per hour.</div>
+</div>
+</div>
+<div class="c-semantic-grid" id="res-grid-std">
+<div class="c-info-block theme-main">
+<div class="c-info-title">Drop speed</div>
+<div class="c-info-val" id="resGtt">-</div>
+<div class="c-info-text">Drops per minute (gtt/min)</div>
+<button class="c-copy"></button>
+</div>
+<div class="c-info-block theme-accent">
+<div class="c-info-title">Flow rate</div>
+<div class="c-info-val" id="resMl">-</div>
+<div class="c-info-text">For infusion pump (ml/hour)</div>
+<button class="c-copy"></button>
+</div>
+<div class="c-info-block theme-warn">
+<div class="c-info-title">Pace</div>
+<div class="c-info-val" id="resSec">-</div>
+<div class="c-info-text">Fall interval (sec)</div>
+<button class="c-copy"></button>
+</div>
+</div>
+<div class="c-semantic-grid is-hidden" id="res-grid-adv">
+<div class="c-info-block theme-main">
+<div class="c-info-title">Infusion rate</div>
+<div class="c-info-val" id="resAdvMlH">-</div>
+<div class="c-info-text">Volume per hour</div>
+<button class="c-copy"></button>
+</div>
+<div class="c-info-block theme-main">
+<div class="c-info-title">Infusion rate</div>
+<div class="c-info-val" id="resAdvMlM">-</div>
+<div class="c-info-text">Volume per minute</div>
+<button class="c-copy"></button>
+</div>
+<div class="c-info-block theme-accent">
+<div class="c-info-title">Final concentration</div>
+<div class="c-info-val" id="resAdvConcMg">-</div>
+<div class="c-info-text">Milligram per 1 ml</div>
+<button class="c-copy"></button>
+</div>
+<div class="c-info-block theme-warn">
+<div class="c-info-title">Solution (%)</div>
+<div class="c-info-val" id="resAdvConcP">-</div>
+<div class="c-info-text">Percentage concentration</div>
+<button class="c-copy"></button>
+</div>
+</div>
+</div>
+</div>
+<div class="c-modal-overlay" id="dropInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeDropInfo">×</button>
+<div class="c-modal-title"><span class="icon">ℹ️</span>Physics of drops (Drop Factor)</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.5;">The drop factor is a calibration of the infusion set that shows how many drops are contained in 1 milliliter of solution.</div>
+<div class="post-table"><table class="c-info-table">
+<thead>
+<tr>
+<th>Factor<br/>(drop/ml)</th>
+<th>Volume 1 drop</th>
+<th>Purpose of the system</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>20</b><br/><span style="font-size: 11px; color:#888;">Standard</span></td>
+<td>~0.05 ml<br/><span style="font-size: 11px; color:#888;">(50 µl / 50 mg water)</span></td>
+<td>Macrodroplet. Basic crystalloids and aqueous solutions.</td>
+</tr>
+<tr>
+<td><b>60</b><br/><span style="font-size: 11px; color:#888;">Pediatric</span></td>
+<td>~0.016 ml<br/><span style="font-size: 11px; color:#888;">(16 µl)</span></td>
+<td>Microdroplet. Strict volume control, drug titration.</td>
+</tr>
+<tr>
+<td><b>10 - 15</b><br/><span style="font-size: 11px; color:#888;">Bloody</span></td>
+<td>~ 0.06 – 0.1 ml</td>
+<td>Due to the viscosity of blood and plasma, large droplets form.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let activeMode = 'infusion';
+  let isAdvMode = false;
+  let isCalculated = false;
+
+  $('#openDropInfo').addEventListener('click', () => { $('#dropInfoModal').classList.add('show'); });
+  $('#closeDropInfo').addEventListener('click', () => { $('#dropInfoModal').classList.remove('show'); });
+  $('#dropInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (e.target.closest('.c-modal-box') !== null) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#dropInfoModal').classList.remove('show');
+  });
+
+  wrap.querySelectorAll('.c-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        wrap.querySelectorAll('.c-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeMode = btn.dataset.mode;
+        
+        if (activeMode === 'infusion') {
+            $('#mode-infusion').classList.remove('is-hidden');
+            $('#mode-converter').classList.add('is-hidden');
+            $('#resModeTitle').textContent = "Infusion calculation";
+        } else {
+            $('#mode-infusion').classList.add('is-hidden');
+            $('#mode-converter').classList.remove('is-hidden');
+            $('#resModeTitle').textContent = "Speed ​​converter";
+        }
+        
+        if (Math.abs(isCalculated === true) === 1) calc(false);
+        else $('#resultBox').classList.remove('show');
+    });
+  });
+
+  $('#advModeToggle').addEventListener('change', (e) => {
+      isAdvMode = e.target.checked;
+      
+      if (Math.abs(isAdvMode === true) === 1) {
+          $('#adv-block').classList.remove('is-hidden');
+          $('#std-tabs').classList.add('is-hidden');
+          $('#mode-infusion').classList.add('is-hidden');
+          $('#mode-converter').classList.add('is-hidden');
+          $('#std-factor').classList.add('is-hidden');
+          $('#resModeTitle').textContent = "Advanced calculation (by mass)";
+          
+          $('#res-grid-std').classList.add('is-hidden');
+          $('#res-grid-adv').classList.remove('is-hidden');
+          
+      } else {
+          $('#adv-block').classList.add('is-hidden');
+          $('#std-tabs').classList.remove('is-hidden');
+          if (activeMode === 'infusion') {
+              $('#mode-infusion').classList.remove('is-hidden');
+              $('#resModeTitle').textContent = "Infusion calculation";
+          } else {
+              $('#mode-converter').classList.remove('is-hidden');
+              $('#resModeTitle').textContent = "Speed ​​converter";
+          }
+          $('#std-factor').classList.remove('is-hidden');
+          
+          $('#res-grid-adv').classList.add('is-hidden');
+          $('#res-grid-std').classList.remove('is-hidden');
+      }
+      $('#resultBox').classList.remove('show');
+      isCalculated = false;
+  });
+
+  const advDrugs = {
+      "2": { name: "Norepinephrine", mcg: 0.1, help: "Recommended dose: 0.1 to 0.3 mcg/kg/min" },
+      "3": { name: "Dopamine", mcg: 5, help: "Start with 2 - 5 - 10 mcg/kg/min, up to 15 or more" },
+      "4": { name: "Mezaton", mcg: 0, help: "Intravenous: single 5 mg, daily 25 mg" },
+      "5": { name: "Adrenalin", mcg: 0.05, help: "Recommended dose: 0.01 to 0.3 mcg/kg/min" },
+      "6": { name: "Dobutamine", mcg: 2.5, help: "Recommended dose: 2.5 – 10 mcg/kg/min (up to 40)" },
+      "8": { name: "Propofol", mg: 2, help: "For sedation: 0.5 – 4 mg/kg/h" },
+      "9": { name: "Thiopental", mg: 2, help: "Infusion rate: 1 – 3 mg/kg/h" },
+      "11": { name: "Midazolam", mg: 0.1, help: "Maintenance dose: 0.03 – 0.3 mg/kg/h" },
+      "12": { name: "Diazepam", mg: 0.05, help: "Maintenance dose: 0.05 – 0.1 mg/kg/h" }
+  };
+
+  $('#adv-drug').addEventListener('change', (e) => {
+      let d = advDrugs[e.target.value];
+      let hasItem = false;
+      if (typeof d !== 'undefined') hasItem = true;
+
+      if (Math.abs(hasItem === true) === 1) {
+          $('#adv-helper').textContent = d.help;
+          $('#adv-helper').style.display = 'block';
+          
+          let isMcg = false;
+          if (typeof d.mcg !== 'undefined') isMcg = true;
+          
+          if (Math.abs(isMcg === true) === 1) {
+              $('#adv-dosage-mcg').value = d.mcg;
+              $('#adv-dosage-mg').value = (d.mcg * 1000 / 60).toFixed(2);
+          } else {
+              $('#adv-dosage-mg').value = d.mg;
+              $('#adv-dosage-mcg').value = (d.mg * 60 / 1000).toFixed(2);
+          }
+      } else { $('#adv-helper').style.display = 'none'; }
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  });
+
+  $('#adv-dosage-mcg').addEventListener('input', (e) => {
+      let val = parseFloat(e.target.value);
+      if (Math.sign(val) === 1) $('#adv-dosage-mg').value = (val * 1000 / 60).toFixed(3);
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  });
+  
+  $('#adv-dosage-mg').addEventListener('input', (e) => {
+      let val = parseFloat(e.target.value);
+      if (Math.sign(val) === 1) $('#adv-dosage-mcg').value = (val * 60 / 1000).toFixed(3);
+      if (Math.abs(isCalculated === true) === 1) calc(false);
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          let val = parseFloat($('#adv-vol').value);
+          if (Math.sign(val) !== 1) val = 0;
+          if (btn.dataset.val === "0") { $('#adv-dilute').value = 0; } 
+          else {
+              let target = parseFloat(btn.dataset.target);
+              let dilute = target - val;
+              if (Math.sign(dilute) === -1) dilute = 0;
+              $('#adv-dilute').value = dilute;
+          }
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    // Продвинутый режим (По массе)
+    if (Math.abs(isAdvMode === true) === 1) {
+        let perc = parseFloat($('#adv-perc').value);
+        let val = parseFloat($('#adv-vol').value);
+        let mass = parseFloat($('#adv-mass').value);
+        let dosage = parseFloat($('#adv-dosage-mcg').value);
+        let dilute = parseFloat($('#adv-dilute').value);
+
+        if (Math.sign(perc) !== 1) perc = 0;
+        if (Math.sign(val) !== 1) val = 0;
+        if (Math.sign(mass) !== 1) mass = 0;
+        if (Math.sign(dosage) !== 1) dosage = 0;
+        if (Math.sign(dilute) !== 1) dilute = 0;
+
+        let hasErr = false;
+        if (Math.sign(perc) !== 1) hasErr = true;
+        if (Math.sign(val) !== 1) hasErr = true;
+        if (Math.sign(mass) !== 1) hasErr = true;
+        if (Math.sign(dosage) !== 1) hasErr = true;
+
+        if (Math.abs(hasErr === true) === 1) {
+            $('#resultBox').classList.remove('show');
+            if (Math.abs(shouldScroll === true) === 1) {
+                $('#errorMsg').textContent = "Specify the concentration, volume, weight and dosage greater than zero";
+                $('#errorMsg').classList.add('show');
+            }
+            return;
+        }
+
+        let conc = perc * 10; 
+        let solMkg = (conc * val * 1000) / (val + dilute);
+        let speedM = (dosage * mass) / solMkg; 
+        let speedH = speedM * 60;
+
+        $('#resAdvMlH').textContent = speedH.toFixed(2) + "ml/h";
+        $('#resAdvMlM').textContent = speedM.toFixed(3) + "ml/min";
+        $('#resAdvConcMg').textContent = (solMkg / 1000).toFixed(2) + "mg/ml";
+        $('#resAdvConcP').textContent = (solMkg / 10000).toFixed(3) + " %";
+        
+        // Визуализация инфузомата
+        $('#std-visual-drip').classList.add('is-hidden');
+        $('#adv-visual-pump').classList.remove('is-hidden');
+        
+        const pump = $('#visualPump');
+        pump.classList.remove('animating');
+        void pump.offsetWidth;
+        if (Math.sign(speedH) === 1) {
+            let animSpd = 50 / speedH; 
+            if (Math.sign(animSpd - 0.2) === -1) animSpd = 0.2; 
+            if (Math.sign(10 - animSpd) === -1) animSpd = 10;   
+            pump.style.animationDuration = animSpd + 's';
+            pump.classList.add('animating');
+        }
+
+        $('#resultBox').classList.add('show');
+        if (Math.abs(shouldScroll === true) === 1) $('#resultBox').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
+    }
+
+    // Стандартный режим
+    const f = parseFloat($('#factor').value);
+    let gttMin = 0;
+    let mlHr = 0;
+
+    if (activeMode === 'infusion') {
+        let v = parseFloat($('#vol').value);
+        if (Math.sign(v) !== 1) v = 0;
+        let h = parseFloat($('#hrs').value);
+        if (Math.sign(h) !== 1) h = 0;
+        let m = parseFloat($('#mins').value);
+        if (Math.sign(m) !== 1) m = 0;
+        const totalMin = (h * 60) + m;
+
+        let hasError = false;
+        if (Math.sign(v) !== 1) hasError = true;
+        if (Math.sign(totalMin) !== 1) hasError = true;
+
+        if (Math.abs(hasError === true) === 1) {
+            $('#resultBox').classList.remove('show');
+            if (Math.abs(shouldScroll === true) === 1) {
+                $('#errorMsg').textContent = "Specify total volume and infusion time greater than zero";
+                $('#errorMsg').classList.add('show'); 
+            }
+            return;
+        }
+        gttMin = (v * f) / totalMin;
+        mlHr = v / (totalMin / 60);
+    } else {
+        let val = parseFloat($('#convVal').value);
+        if (Math.sign(val) !== 1) val = 0;
+        const unit = $('#convUnit').value;
+        if (Math.sign(val) !== 1) {
+            $('#resultBox').classList.remove('show');
+            if (Math.abs(shouldScroll === true) === 1) {
+                $('#errorMsg').textContent = "Enter the value of the known speed";
+                $('#errorMsg').classList.add('show');
+            }
+            return;
+        }
+        let isGtt = false;
+        if (unit === 'gtt') isGtt = true;
+        if (Math.abs(isGtt === true) === 1) { gttMin = val; mlHr = (val * 60) / f; } 
+        else { mlHr = val; gttMin = (val * f) / 60; }
+    }
+
+    const secPerDrop = 60 / gttMin;
+    $('#resGtt').textContent = Math.round(gttMin) + "cap/min";
+    $('#resMl').textContent = mlHr.toFixed(1) + "ml/hour";
+    
+    let isJet = false;
+    if (Math.sign(secPerDrop - 0.5) === -1) isJet = true;
+    if (Math.abs(isJet === true) === 1) $('#resSec').textContent = "Struino";
+    else $('#resSec').textContent = secPerDrop.toFixed(1) + "sec";
+
+    // Визуализация капельницы
+    $('#adv-visual-pump').classList.add('is-hidden');
+    $('#std-visual-drip').classList.remove('is-hidden');
+    
+    const drop = $('#visualDrop');
+    drop.classList.remove('animating');
+    void drop.offsetWidth;
+    if (Math.sign(gttMin) === 1) {
+        let animSpd = secPerDrop;
+        if (Math.sign(secPerDrop - 0.2) === -1) animSpd = 0.2;
+        drop.style.animationDuration = animSpd + 's';
+        drop.classList.add('animating');
+    }
+
+    $('#resultBox').classList.add('show');
+    if (Math.abs(shouldScroll === true) === 1) $('#resultBox').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (e.target.tagName === 'INPUT') isInput = true;
+        if (e.target.tagName === 'SELECT') isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    wrap.querySelectorAll('input').forEach(i => {
+        if (i.type !== 'checkbox') i.value = '';
+    });
+    $('#adv-mass').value = '70';
+    $('#adv-dilute').value = '0';
+    $('#resultBox').classList.remove('show');
+    $('#visualDrop').classList.remove('animating');
+    $('#adv-helper').style.display = 'none';
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    if (e.target.classList.contains('c-copy')) isCopy = true;
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.closest('.c-info-block').querySelector('.c-info-val').textContent;
+      navigator.clipboard.writeText(valRaw);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Intravenous therapy requires high precision. An error in the rate of drug administration can lead to insufficient treatment effectiveness or an overdose. Our <strong>infusion rate calculator</strong> Helps nurses, doctors and medical students quickly determine the correct drip rate (gtt/min) and set up the infusion pump (ml/hr).</p>
+<h2 class="wp-block-heading" id="kak-polzovatsya-kalkulyatorom-2">How to use the calculator</h2>
+<p>To get an accurate result, fill in three main fields:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Liquid volume (Volume):</strong> The total amount of solution that must be administered to the patient (usually indicated on the bottle, for example, 500 ml).</li>
+<li><strong>System / Drop Factor:</strong> Characteristics of your infusion system. This parameter is indicated on the system packaging. Standard values ​​are 10, 15, 20 or 60 drops per 1 ml.</li>
+<li><strong>Time:</strong> The period during which the solution must be completely administered. You can specify the time in hours and minutes.</li>
+</ol>
+<p>The calculator will automatically calculate the drop frequency and show a visual rhythm (metronome) so you can compare it to a real drip.</p>
+<h2 class="wp-block-heading" id="formula-rascheta-skorosti-infuzii-2">Formula for calculating infusion rate</h2>
+<p>If you don’t have a calculator at hand, the calculation is made using the classic medical formula. To calculate the rate in drops per minute (gtt/min), use the following equation:</p>
+<p>$$Rate = \frac{Volume \times Drop Factor}{Time}$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li><strong>Rate</strong> — Speed ​​(drops per minute).</li>
+<li><strong>Volume</strong> — Infusion volume (ml).</li>
+<li><strong>Drop Factor</strong> — Drip system factor (drops/ml).</li>
+<li><strong>Time</strong> — Total administration time (in minutes).</li>
+</ul>
+<p>Example:</p>
+<p>You need to administer 500 ml of saline solution over 4 hours (240 minutes) using the standard 20 drops/ml system.</p>
+<p>$$Rate = \frac{500 \times 20}{240} = 41.6$$</p>
+<p>Result: Round up to 42 drops per minute.</p>
+<h2 class="wp-block-heading" id="tipy-infuzionnyh-sistem-drop-factor-2">Types of infusion systems (Drop Factor)</h2>
+<p>The correct choice of system coefficient is critical. Depending on the manufacturer and purpose (adults, children, blood transfusion), the number of drops in one milliliter differs.</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>System type</strong></td><td><strong>Factor (gtt/ml)</strong></td><td><strong>Application</strong></td></tr></thead><tbody><tr><td><strong>Macro Dropper (Blood)</strong></td><td>10</td><td>For viscous liquids and blood. Forms large droplets.</td></tr><tr><td><strong>Macro dropper (Standard)</strong></td><td>15 / 20</td><td>The most common type for crystalloids (saline, glucose).</td></tr><tr><td><strong>Microdropper</strong></td><td>60</td><td>Pediatrics, neonatology or administration of potent drugs. 60 microdrops = 1 ml.</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="perevod-v-ml-chas-dlya-infuzomatov-2">Conversion to ml/hour (for infusion pumps)</h2>
+<p>Modern electric infusion pumps (infusion pumps) are adjusted not in drops, but in milliliters per hour. Our tool automatically converts the data.</p>
+<p>The formula for this is even simpler:</p>
+<p>$$Flow Rate (ml/hr) = \frac{Total Volume (ml)}{Hours}$$</p>
+<h2 class="wp-block-heading" id="pochemu-vazhen-kontrol-skorosti-2">Why is speed control important?</h2>
+<ul class="wp-block-list">
+<li><strong>Too fast:</strong> Risk of hypervolemia (volume overload), pulmonary edema, acute heart failure or phlebitis.</li>
+<li><strong>Too slow:</strong> The risk of catheter blockage (thrombosis) and failure to receive the therapeutic dose of medication on time.</li>
+</ul>
+<p>Use our visual drop timer to synchronize your injection pace without having to count drops with a stopwatch in hand.</p>
+</div>
+    </div>
+</body>
+</html>

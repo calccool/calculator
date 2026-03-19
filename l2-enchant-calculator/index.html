@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weapon sharpening chance calculator in Lineage 2 (calculation of probability in a row)</title>
+    <meta name="description" content="Weapon sharpening chance calculator in Lineage 2 (calculation of probability in a row) - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Weapon sharpening chance calculator in Lineage 2 (calculation of probability in a row)</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(host === null) === 1) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 16px; align-items: start; }
+    .c-row.cols-2 { grid-template-columns: repeat(2, minmax(80px, 1fr)); }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; flex-wrap: wrap; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    
+    .c-help-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: #e0f2fe; color: #0284c7; font-size: 12px; font-weight: 800; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(2, 132, 199, 0.15); }
+    .c-help-icon:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+
+    .c-input, .c-select { width:100%; padding:12px 20px; border:1px solid #ccc; border-radius:8px; font-size:14px; transition: 0.2s; background: #fff; color: #333; }
+    .c-input:focus, .c-select:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 12px; } 
+    .c-input-suffix { position: absolute; right: 34px; top: 50%; transform: translateY(-50%); color: #888; font-size: 14px; pointer-events: none; font-weight: 500; }
+    
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap; margin-bottom: 16px; margin-top: 20px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:all 0.3s ease; flex:1; min-width:180px; font-size: 15px;}
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color:#fff; }
+    .c-btn-primary:hover { box-shadow: 0 6px 15px rgba(6, 147, 227, 0.3); transform: translateY(-1px); }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn-secondary:hover { box-shadow: 0 4px 10px rgba(74, 85, 101, 0.2); }
+    
+    .c-divider { display: flex; align-items: center; gap: 10px; margin: 25px 0 15px; font-weight: 700; color: #444; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-divider::after { content:''; flex:1; height:1px; background:#ddd; }
+    .c-divider .icon { color: #0693e3; font-size: 16px; }
+    
+    .c-result { border: 1px dashed #0693e3; border-radius: 16px; padding: 15px; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); display: none; scroll-margin-top: 30px; }
+    .c-result.show { display:block; }
+    .c-result-title { margin: 0 0 15px 0; padding: 0 12px; font-size: 18px; font-weight: 700; color: #333; display: flex; align-items: center; gap: 8px; }
+    
+    .c-receipt-wrap { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 15px; position: relative; overflow: hidden; }
+    .c-receipt-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: repeating-linear-gradient(45deg, #0284c7, #0284c7 10px, #38bdf8 10px, #38bdf8 20px); }
+    
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:12px; border-bottom:1px dashed #cbd5e1; grid-template-columns: 1fr auto 30px; transition: background 0.2s; }
+    .c-resline:hover { background: #fff; border-radius: 8px; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; font-weight: 500; }
+    .c-resval { font-weight:700; font-size:18px; word-break: break-word; text-align: right; color:#0693e3; }
+    .c-subtext { display: block; font-size: 12px; color: #888; font-weight: 400; margin-top: 2px; }
+    
+    .c-highlight-line { background: #eff6ff; border: 1px solid #bae6fd; border-radius: 8px; margin: 8px 0; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05); }
+    .c-highlight-line:hover { background: #e0f2fe; }
+    
+    .c-copy { width: 28px; height: 28px; border: none; background: transparent url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%229%22 y=%229%22 width=%2213%22 height=%2213%22 rx=%222%22 ry=%222%22%3E%3C/rect%3E%3Cpath d=%22M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1%22%3E%3C/path%3E%3C/svg%3E') no-repeat center; background-size: 18px; border-radius: 6px; cursor: pointer; padding: 3px; opacity: 0.6; transition: 0.2s; }
+    .c-copy:hover { opacity: 1; background-color: #e2e8f0; }
+    
+    .c-error { color: #d32f2f; background: #ffebee; padding: 12px 16px; border-radius: 10px; margin-bottom: 15px; display: none; font-size: 14px; font-weight: 500; border-left: 4px solid #d32f2f; }
+    .c-error.show { display: block; }
+    .is-hidden { display: none !important; }
+
+    .c-toggle { display: flex; background: #f1f5f9; border-radius: 12px; padding: 6px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+    .c-toggle-btn { flex: 1; border: none; background: none; padding: 12px; font-weight: 600; font-size: 14px; color: #64748b; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    .c-toggle-btn.active { background: #fff; color: #0693e3; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .c-switch-wrap { display: flex; align-items: center; gap: 12px; cursor: pointer; margin-bottom: 5px; padding: 14px 16px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 2px 6px rgba(0,0,0,0.02); transition: 0.3s; }
+    .c-switch-wrap:hover { border-color: #cbd5e1; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .c-switch-track { width: 44px; height: 24px; background: #cbd5e1; border-radius: 24px; position: relative; transition: 0.3s; flex-shrink: 0; }
+    .c-switch-thumb { width: 18px; height: 18px; background: #fff; border-radius: 50%; position: absolute; top: 3px; left: 3px; transition: 0.3s; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+    input:checked + .c-switch-track { background: #0693e3; }
+    input:checked + .c-switch-track .c-switch-thumb { left: 23px; }
+    .c-switch-label { font-weight: 600; font-size: 15px; color: #333; }
+    
+    .c-quick-btn { background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: #475569; cursor: pointer; transition: 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+    .c-quick-btn:hover { background: #e2e8f0; color: #0f172a; border-color: #94a3b8;}
+
+    /* L2 specific Visuals */
+    .c-chart-box { margin: 15px 0 25px; padding: 25px; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); border-radius: 16px; border: 1px solid #e0f2fe; box-shadow: inset 0 2px 10px rgba(255,255,255,0.5); display: flex; flex-direction: column; align-items: center; }
+    .c-chart-title { font-weight: 700; color: #0f172a; font-size: 15px; margin-bottom: 25px; display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; text-align: center; }
+    
+    .c-pie-wrap { position: relative; width: 140px; height: 140px; margin-bottom: 25px; }
+    .c-pie-chart { width: 100%; height: 100%; border-radius: 50%; background: conic-gradient(#e2e8f0 100%, #e2e8f0 0%); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(2, 132, 199, 0.2); transition: background 0.5s; }
+    .c-pie-inner { width: 116px; height: 116px; background: #fff; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: inset 0 2px 6px rgba(0,0,0,0.08); z-index: 2; }
+    .c-pie-val { font-size: 24px; font-weight: 700; color: #0693e3; line-height: 1; }
+    .c-pie-label { font-size: 11px; color: #64748b; font-weight: 600; text-transform: uppercase; margin-top: 4px; letter-spacing: 0.5px; }
+    .c-pie-glow { position: absolute; top: -5px; left: -5px; right: -5px; bottom: -5px; border-radius: 50%; background: radial-gradient(circle, rgba(6, 147, 227, 0.4) 0%, transparent 70%); z-index: 0; opacity: 0; transition: opacity 0.5s; }
+    .c-pie-wrap.success .c-pie-glow { opacity: 1; animation: pulse-glow 2s infinite alternate; }
+    @keyframes pulse-glow { 0% { transform: scale(0.95); opacity: 0.5; } 100% { transform: scale(1.1); opacity: 1; } }
+
+    .c-step-flow { width: 100%; background: #fff; border: 1px solid #bae6fd; border-radius: 12px; padding: 15px; display: flex; gap: 10px; overflow-x: auto; scroll-behavior: smooth; box-shadow: 0 4px 10px rgba(0,0,0,0.02); }
+    .c-step-flow::-webkit-scrollbar { height: 6px; }
+    .c-step-flow::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 4px; }
+    .c-step-flow::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    .c-step-box { min-width: 64px; display: flex; flex-direction: column; align-items: center; gap: 4px; position: relative; }
+    .c-step-box:not(:last-child)::after { content: '→'; position: absolute; right: -12px; top: 12px; color: #cbd5e1; font-size: 12px; }
+    .c-step-lvl { width: 36px; height: 36px; border-radius: 8px; background: #f8fafc; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #1e293b; font-size: 14px; z-index: 1; transition: 0.3s; }
+    .c-step-prob { font-size: 11px; color: #0284c7; font-weight: 600; }
+    .c-step-box:last-child .c-step-lvl { background: linear-gradient(135deg, #0693e3, #0284c7); color: #fff; border-color: #0284c7; box-shadow: 0 2px 6px rgba(2, 132, 199, 0.3); }
+
+    .c-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: 0.3s; }
+    .c-modal-overlay.show { opacity: 1; pointer-events: auto; }
+    .c-modal-box { background: #fff; border-radius: 16px; padding: 24px; max-width: 480px; width: 90%; box-shadow: 0 20px 40px rgba(0,0,0,0.15); transform: translateY(20px); transition: 0.3s; border: 1px solid #e2e8f0;}
+    .c-modal-overlay.show .c-modal-box { transform: translateY(0); }
+    .c-modal-close { float: right; cursor: pointer; color: #94a3b8; border: none; background: none; font-size: 24px; line-height: 1; margin-top: -5px; padding: 5px; transition: 0.2s;}
+    .c-modal-close:hover { color: #d32f2f; }
+    .c-modal-title { font-size: 18px; font-weight: 700; color: #0f172a; margin: 0 0 15px 0; display:flex; align-items:center; gap:8px;}
+
+    @media (max-width: 600px) { .c-row.cols-2 { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) {
+       .c-toggle { flex-direction: column; gap: 8px; background: transparent; border: none; padding: 0; }
+       .c-toggle-btn { background: #f1f5f9; border: 1px solid #e2e8f0; }
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 6px; padding: 16px 14px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 20px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 20px; background-color: #f1f5f9; }
+       .c-chart-box { padding: 15px; }
+       .c-modal-box { padding: 18px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card" id="enchant-calc-wrapper">
+<div class="c-body">
+<div class="c-divider"><span class="icon">⚔️</span>Sharpening levels</div>
+<div class="c-row cols-2" style="margin-bottom: 8px;">
+<div class="c-field">
+<label class="c-label">Current sharpening</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="startLvl" placeholder="For example: 3" type="number" value="3"/>
+<span class="c-input-suffix">lvl</span>
+</div>
+<div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-target="startLvl" data-val="0" type="button">+0</button>
+<button class="c-quick-btn" data-target="startLvl" data-val="3" type="button">+3 <span class="c-term">Safe</span></button>
+</div>
+</div>
+<div class="c-field">
+<label class="c-label">Target sharpening</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="targetLvl" placeholder="For example: 16" type="number" value="16"/>
+<span class="c-input-suffix">lvl</span>
+</div>
+<div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-target="targetLvl" data-val="10" type="button">+10</button>
+<button class="c-quick-btn" data-target="targetLvl" data-val="16" type="button">+16 <span class="c-term">Max</span></button>
+</div>
+</div>
+</div>
+<div class="c-divider" style="margin-top: 30px;"><span class="icon">🎲</span>Server mechanics</div>
+<div class="c-row" style="margin-bottom: 8px;">
+<div class="c-field">
+<label class="c-label">Chance of success per scroll<span class="c-help-icon" id="openEnchantInfo">?</span>
+</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="chanceRate" placeholder="For example: 68" type="number" value="68"/>
+<span class="c-input-suffix">%</span>
+</div>
+<div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+<button class="c-quick-btn" data-target="chanceRate" data-val="68" type="button">68% <span class="c-term">Fighter</span></button>
+<button class="c-quick-btn" data-target="chanceRate" data-val="52" type="button">52% <span class="c-term">Mystic</span></button>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div class="c-error" id="errorMsg"></div>
+<div class="c-chart-box is-hidden" id="vis-box">
+<div class="c-chart-title"><span class="icon">🔮</span>Final probability of success</div>
+<div class="c-pie-wrap" id="pieWrap">
+<div class="c-pie-glow"></div>
+<div class="c-pie-chart" id="pieChart">
+<div class="c-pie-inner">
+<div class="c-pie-val" id="pieVal">0%</div>
+<div class="c-pie-label">Chance</div>
+</div>
+</div>
+</div>
+<div style="width: 100%; text-align: left; font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 8px;">Chance degradation steps:</div>
+<div class="c-step-flow" id="stepFlow"></div>
+</div>
+<div class="c-result" id="resultBox">
+<div class="c-result-title"><span class="icon">📜</span>Statistics and costs</div>
+<div class="c-receipt-wrap">
+<div class="c-resline">
+<div class="c-resleft">Number of scrolls<span class="c-subtext">For one successful pass</span></div>
+<div class="c-resval" id="resScrolls">0</div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline c-highlight-line">
+<div class="c-resleft">Final chance of success<span class="c-subtext">Sharpen in a row without breaking</span></div>
+<div class="c-resval" id="resProb">0%</div>
+<button class="c-copy"></button>
+</div>
+<div class="c-resline" style="border-bottom: none;">
+<div class="c-resleft">Average number of attempts<span class="c-subtext">Expected number of scraps + 1 success</span></div>
+<div class="c-resval" id="resTries" style="color: #4a5565;">0</div>
+<button class="c-copy"></button>
+</div>
+</div>
+</div>
+<div class="c-modal-overlay" id="enchantInfoModal">
+<div class="c-modal-box">
+<button class="c-modal-close" id="closeEnchantInfo">×</button>
+<div class="c-modal-title"><span class="icon">📖</span>Mechanics of sharpening L2</div>
+<div style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 15px;">In Lineage 2, Weapon Enchant is a sequential process, where each subsequent stage multiplies the overall chance of success.</div>
+<div style="background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; color: #1e293b; margin-bottom: 10px;">
+<b>Base odds:</b><br/>Warrior Weapon:<b>~68%</b>for each scroll.<br/>Mage Weapon:<b>~52%</b>for each scroll.<br/>
+<span style="color:#888; font-size:11px;">(Odds may vary depending on chronicles and server settings).</span>
+</div>
+<div style="background: #eff6ff; padding: 12px; border-radius: 8px; border: 1px solid #bae6fd; font-size: 13px; color: #0284c7;">
+<b>Probability formula in a row:</b><br/>Final chance = (Chance of one scroll)<sup>Number of steps</sup><br/><br/>If you are using<i>Blessed</i>scrolls, if you fail, the enchantment is reset to 0, and you will have to start the path again. This calculator shows the chance of passing<b>all the way in a row</b>.
+                </div>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (s) => wrap.querySelector(s);
+  let isCalculated = false;
+
+  // Modal logic
+  $('#openEnchantInfo').addEventListener('click', () => { $('#enchantInfoModal').classList.add('show'); });
+  $('#closeEnchantInfo').addEventListener('click', () => { $('#enchantInfoModal').classList.remove('show'); });
+  $('#enchantInfoModal').addEventListener('click', (e) => {
+      let isBox = false;
+      if (Math.abs(e.target.closest('.c-modal-box') !== null) === 1) isBox = true;
+      if (Math.abs(isBox === false) === 1) $('#enchantInfoModal').classList.remove('show');
+  });
+
+  wrap.querySelectorAll('.c-quick-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+          let targetId = btn.dataset.target;
+          let val = btn.dataset.val;
+          $('#' + targetId).value = val;
+          if (Math.abs(isCalculated === true) === 1) calc(false);
+      });
+  });
+
+  function calc(shouldScroll) {
+    $('#errorMsg').classList.remove('show');
+    
+    let startLvl = parseInt($('#startLvl').value);
+    let targetLvl = parseInt($('#targetLvl').value);
+    let chanceRate = parseFloat($('#chanceRate').value);
+    
+    let isNanStart = isNaN(startLvl);
+    if (Math.abs(isNanStart === true) === 1) startLvl = 0;
+    
+    let isNanTarget = isNaN(targetLvl);
+    if (Math.abs(isNanTarget === true) === 1) targetLvl = 0;
+    
+    let isNanChance = isNaN(chanceRate);
+    if (Math.abs(isNanChance === true) === 1) chanceRate = 0;
+
+    let isErr = false;
+    let steps = targetLvl - startLvl;
+
+    let isStepsPositive = false;
+    if (Math.abs(Math.sign(steps) === 1) === 1) isStepsPositive = true;
+    if (Math.abs(isStepsPositive === false) === 1) isErr = true;
+
+    let isChanceValid = false;
+    let isChancePositive = false;
+    if (Math.abs(Math.sign(chanceRate) === 1) === 1) isChancePositive = true;
+    
+    let diffChance = Math.sign(chanceRate - 100.0001); 
+    let isChanceUnderMax = false;
+    if (Math.abs(diffChance === -1) === 1) isChanceUnderMax = true;
+
+    let validCond = Math.abs(isChancePositive === true) + Math.abs(isChanceUnderMax === true);
+    if (Math.abs(validCond === 2) === 1) isChanceValid = true;
+    if (Math.abs(isChanceValid === false) === 1) isErr = true;
+
+    if (Math.abs(isErr === true) === 1) {
+        $('#vis-box').classList.add('is-hidden');
+        $('#resultBox').classList.remove('show');
+        if (Math.abs(shouldScroll === true) === 1) {
+            $('#errorMsg').textContent = "The target enchantment must be greater than the current one, and the chance must be from 0.01 to 100";
+            $('#errorMsg').classList.add('show');
+        }
+        return;
+    }
+
+    // Successive Probability calculation with strict JS loop equivalent
+    let currentProb = 100;
+    let stepsHtml = '';
+    let i = 1;
+    let loopCondition = true;
+    
+    while(Math.abs(loopCondition === true) === 1) {
+        currentProb = currentProb * (chanceRate / 100);
+        
+        stepsHtml = stepsHtml + '<div class="c-step-box"><div class="c-step-lvl">+' + (startLvl + i) + '</div><div class="c-step-prob">' + currentProb.toFixed(2) + '%</div></div>';
+
+        let isEnd = false;
+        if (Math.abs(i === steps) === 1) isEnd = true;
+        if (Math.abs(isEnd === true) === 1) {
+            loopCondition = false;
+        } else {
+            i = i + 1;
+        }
+        
+        // Safety break
+        let isTooMany = false;
+        if (Math.abs(Math.sign(i - 100) === 1) === 1) isTooMany = true;
+        if (Math.abs(isTooMany === true) === 1) loopCondition = false;
+    }
+
+    let finalProb = currentProb;
+    let expectedTries = 100 / finalProb;
+
+    // UI Update - Results
+    $('#resScrolls').textContent = steps + "pcs.";
+    
+    let probFormat = finalProb.toFixed(4);
+    let isHighProb = false;
+    if (Math.abs(Math.sign(finalProb - 1) === 1) === 1) isHighProb = true;
+    if (Math.abs(isHighProb === true) === 1) probFormat = finalProb.toFixed(2);
+    
+    $('#resProb').textContent = probFormat + "%";
+    
+    let triesFormat = Math.ceil(expectedTries);
+    let triesText = triesFormat + "attempts";
+    let isImpossible = false;
+    if (Math.abs(Math.sign(expectedTries - 1000000) === 1) === 1) isImpossible = true;
+    if (Math.abs(isImpossible === true) === 1) triesText = "Almost impossible";
+    
+    $('#resTries').textContent = triesText;
+
+    // UI Update - Visuals
+    $('#stepFlow').innerHTML = stepsHtml;
+
+    let chartColor = "#0693e3";
+    let isVeryLow = false;
+    if (Math.abs(Math.sign(5 - finalProb) === 1) === 1) isVeryLow = true;
+    if (Math.abs(isVeryLow === true) === 1) chartColor = "#d32f2f";
+
+    let displayProb = finalProb;
+    let isDisplayTiny = false;
+    if (Math.abs(Math.sign(1 - displayProb) === 1) === 1) isDisplayTiny = true;
+    // Ensure minimal slice is visible if > 0
+    let hasSomeChance = false;
+    if (Math.abs(Math.sign(displayProb) === 1) === 1) hasSomeChance = true;
+    
+    let visualPieVal = displayProb;
+    let bothCond = Math.abs(isDisplayTiny === true) + Math.abs(hasSomeChance === true);
+    if (Math.abs(bothCond === 2) === 1) visualPieVal = 1;
+
+    $('#pieChart').style.background = 'conic-gradient(' + chartColor + ' ' + visualPieVal + '%, #e2e8f0 0%)';
+    $('#pieVal').textContent = probFormat + '%';
+    $('#pieVal').style.color = chartColor;
+
+    let isSuccessLooks = false;
+    if (Math.abs(Math.sign(finalProb - 40) === 1) === 1) isSuccessLooks = true;
+    
+    if (Math.abs(isSuccessLooks === true) === 1) {
+        $('#pieWrap').classList.add('success');
+    } else {
+        $('#pieWrap').classList.remove('success');
+    }
+
+    $('#vis-box').classList.remove('is-hidden');
+    $('#resultBox').classList.add('show');
+    
+    if (Math.abs(shouldScroll === true) === 1) {
+        $('#vis-box').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  $('#calcBtn').addEventListener('click', () => { isCalculated = true; calc(true); });
+  
+  wrap.addEventListener('input', (e) => {
+    if (Math.abs(isCalculated === true) === 1) {
+        let isInput = false;
+        if (Math.abs(e.target.tagName === 'INPUT') === 1) isInput = true;
+        if (Math.abs(isInput === true) === 1) calc(false);
+    }
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    $('#startLvl').value = '3';
+    $('#targetLvl').value = '16';
+    $('#chanceRate').value = '68';
+    $('#resultBox').classList.remove('show');
+    $('#vis-box').classList.add('is-hidden');
+    isCalculated = false;
+  });
+
+  wrap.addEventListener('click', (e) => {
+    let isCopy = false;
+    let hasClass = e.target.classList.contains('c-copy');
+    if (Math.abs(hasClass === true) === 1) isCopy = true;
+    
+    if (Math.abs(isCopy === true) === 1) {
+      let valRaw = e.target.parentElement.querySelector('.c-resval').textContent;
+      let valClean = valRaw.replace(/\\s/g, '').trim();
+      navigator.clipboard.writeText(valClean);
+      e.target.style.transform = 'scale(0.9)';
+      setTimeout(() => e.target.style.transform = '', 150);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<p>Enchanting weapons in the world of Elmoreden is a complex mathematical process based on probability theory. Unlike simple systems, in L2 each subsequent level of enchantment requires successful completion of the previous one, which creates the effect of a “geometric progression” of difficulty.</p>
+<p>This calculator allows players to avoid wasting adena and resources by assessing the real risks in advance. The tool takes into account the current item level, target value and the server's base chance, giving the final probability of success for the entire series of modifications in a row.</p>
+<h2 class="wp-block-heading" id="formuly-i-matematicheskaya-model-2">Formulas and mathematical model</h2>
+<p>The independent events formula is used to calculate the final chance of success. The probability that a series of $n$ sharpening steps will be successful is calculated as the product of the probabilities of each individual step.</p>
+<p>$$P_{total} = (P_{single})^{n}$$</p>
+<p>Where:</p>
+<ul class="wp-block-list">
+<li> $P_{total}$ - final probability of success in percentage;</li>
+<li> $P_{single}$ - chance of success of one scroll (in fractions of 1);</li>
+<li> $n$ - number of sharpening steps (difference between target and initial level).</li>
+</ul>
+<p>The calculator also calculates <strong>Mathematical expectation of the number of attempts</strong> according to the formula:</p>
+<p>$$E = \frac{1}{P_{total}}$$</p>
+<p>This number shows how many “guns” you will have to break on average before you get one treasured item of the required level.</p>
+<h2 class="wp-block-heading" id="bazovye-shansy-zatochki-retail-standart-2">Basic chances of enchanting (Retail standard)</h2>
+<p>Most official and classic servers have standard probabilities that depend on the type of weapon. The table below shows typical values ​​for the Interlude, High Five and Essence chronicles:</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Weapon type</strong></td><td><strong>One step chance</strong></td><td><strong>Description</strong></td></tr></thead><tbody><tr><td><strong>Warrior Weapon</strong></td><td><strong>68%</strong></td><td>One-handed and two-handed swords, clubs, pikes, bows, brass knuckles.</td></tr><tr><td><strong>Mage Weapon</strong></td><td><strong>52%</strong></td><td>Magic swords, staves, accessories with magical powers.</td></tr><tr><td><strong>Jewelry / Armor</strong></td><td><strong>52% — 66%</strong></td><td>Depends on specific server settings (PTS/Java).</td></tr></tbody></table></div></figure>
+<h2 class="wp-block-heading" id="pochemu-vazhno-uchityvat-shagi-degradatsii-2">Why is it important to consider “steps of degradation”</h2>
+<p>Many players make the mistake of thinking that if the chance of enchanting is 68%, then making +10 is not that difficult. However, in practice the probability decreases with each step:</p>
+<ul class="wp-block-list">
+<li>Enchant at +4: chance <strong>68%</strong></li>
+<li>Sharpening at +5: $68\% \times 68\% \approx 46.2\%$ </li>
+<li>Sharpening at +6: $68\% \times 68\% \times 68\% \approx 31.4\%$ </li>
+</ul>
+<p>By the time you reach level +16, the final chance of success becomes negligible, which is what makes top weapons so rare and valuable.</p>
+<h3 class="wp-block-heading" id="sovety-po-ispolzovaniyu-kalkulyatora-2">Tips for using the calculator</h3>
+<ul class="wp-block-list">
+<li><strong>Use the "Safe" limit:</strong> Remember that weapons are sharpened up to +3 with 100% probability. Start the calculation with this value.</li>
+<li><strong>Consider the type of scrolls:</strong> If you are using <strong>Blessed Enchant</strong> (brilliant), the chance of success does not change, but if you fail, the item does not disappear, but is reset to 0. This does not change the probability of a “pass in a row”, but it significantly affects your costs.</li>
+<li><strong>Compare the risks:</strong> Sometimes buying a finished weapon on the market is cheaper than trying to sharpen it yourself, if the average number of attempts in the calculator exceeds 20-30 units.</li>
+</ul>
+<p>This calculator is your main assistant in the fight against Korean random. Plan your resources wisely and may luck accompany you in every attempt!</p>
+</div>
+    </div>
+</body>
+</html>

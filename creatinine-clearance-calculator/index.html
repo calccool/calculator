@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creatinine Clearance (GFR) Calculator - Calculation using 3 Formulas</title>
+    <meta name="description" content="Creatinine Clearance (GFR) Calculator - Calculation using 3 Formulas - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Creatinine Clearance (GFR) Calculator - Calculation using 3 Formulas</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (Math.abs(!!host === true) === 0) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 20px; }
+    .c-row.single { grid-template-columns: 1fr; }
+    
+    /* Типографика по стандарту */
+    .c-label { font-size: 14px; font-weight: 600; color: #111; margin-bottom: 8px; display: block; }
+    .c-term { font-size: 12px; font-weight: 700; padding: 0 6px; border: 1px solid #ddd; border-radius: 6px; background: #fff; color: #555; display: inline-flex; height: 22px; align-items: center; }
+    .c-resval { font-size: 18px; font-weight: 700; color: #111; }
+    .c-result-title { font-size: 18px; font-weight: 700; margin-bottom: 16px; text-transform: none; }
+    .c-subtext { font-size: 12px; font-weight: 400; color: #888; margin-top: 4px; }
+    .c-divider { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin: 20px 0 10px; }
+
+    /* Поля */
+    .c-input, .c-select { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 14px; }
+    .c-input:focus { outline: none; border-color: #0693e3; box-shadow: 0 0 0 3px rgba(6, 147, 227, 0.2); }
+
+    /* Кнопки Gold */
+    .c-actions { display: flex; gap: 12px; margin-bottom: 24px; }
+    .c-btn { border: none; border-radius: 10px; padding: 14px; font-weight: 600; cursor: pointer; transition: 0.2s; flex: 1; }
+    .c-btn-primary { background: linear-gradient(135deg, #0693e3, #006eb5); color: #fff; }
+    .c-btn-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(6, 147, 227, 0.3); }
+    .c-btn-secondary { background: #4a5565; color: #fff; }
+
+    /* Анимация потока */
+    .c-vis-wrap { 
+      background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%);
+      border-radius: 16px; padding: 20px; margin-bottom: 20px; border: 1px solid #f1f5f9;
+    }
+    .c-tube {
+      width: 100%; height: 20px; background: #bae6fd; border-radius: 10px;
+      position: relative; overflow: hidden; border: 1px solid #38bdf8;
+    }
+    .c-flow {
+      position: absolute; top: 0; left: -100%; width: 200%; height: 100%;
+      background: repeating-linear-gradient(45deg, #0284c7, #0284c7 10px, #38bdf8 10px, #38bdf8 20px);
+      animation: flow-run 2s linear infinite; animation-play-state: paused;
+    }
+    @keyframes flow-run { from { transform: translateX(0); } to { transform: translateX(50%); } }
+
+    /* Результаты */
+    .c-result-wrap { background: #fff; border-radius: 16px; padding: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 20px rgba(0,0,0,0.05); display: none; }
+    .c-result-wrap.is-visible { display: block; }
+    .c-res-row { display: grid; grid-template-columns: 1fr auto 34px; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid #f1f5f9; }
+    .c-res-row:last-child { border-bottom: none; }
+    
+    .c-copy { width: 34px; height: 34px; border: none; background: #fff; border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+    .c-error { background: #ffebee; color: #d32f2f; padding: 12px; border-left: 4px solid #d32f2f; border-radius: 4px; margin-bottom: 16px; font-size: 14px; display: none; }
+    
+    .is-hidden { display: none !important; }
+
+    @media (max-width: 480px) {
+      .c-res-row { grid-template-columns: 1fr 34px; }
+      .c-resval { grid-column: 1; font-size: 20px; }
+      .c-copy { grid-column: 2; grid-row: 1 / 3; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-row single">
+<div class="c-field">
+<label class="c-label">Calculation method</label>
+<select class="c-select" id="m_formula">
+<option value="ckd_epi">CKD-EPI 2021 (Modern)</option>
+<option value="cockcroft">Cockcroft-Gault (Classic)</option>
+<option value="jelliffe">Jelliffe (Alternate)</option>
+</select>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Age<span class="c-term">years</span></label>
+<input class="c-input" id="m_age" type="number" value="40"/>
+</div>
+<div class="c-field">
+<label class="c-label">Floor</label>
+<select class="c-select" id="m_sex">
+<option value="male">Male</option>
+<option value="female">Female</option>
+</select>
+</div>
+</div>
+<div class="c-row">
+<div class="c-field">
+<label class="c-label">Serum creatinine</label>
+<input class="c-input" id="m_crea" step="0.01" type="number" value="1.0"/>
+</div>
+<div class="c-field">
+<label class="c-label">Units</label>
+<select class="c-select" id="m_unit">
+<option value="mgdl">mg/dL (mg/dL)</option>
+<option value="umol">µmol/l (µmol/L)</option>
+</select>
+</div>
+</div>
+<div class="c-row single is-hidden" id="m_weight_box">
+<div class="c-field">
+<label class="c-label">Weight<span class="c-term">kg</span></label>
+<input class="c-input" id="m_weight" type="number" value="70"/>
+<div class="c-subtext">Only required for Cockcroft-Gault</div>
+</div>
+</div>
+<div class="c-error" id="m_err"></div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="m_calc">Calculate</button>
+<button class="c-btn c-btn-secondary" id="m_reset">Reset</button>
+</div>
+<div class="c-vis-wrap is-hidden" id="m_vis">
+<div class="c-label">Visualization of filtration flow</div>
+<div class="c-tube"><div class="c-flow" id="m_flow"></div></div>
+</div>
+<div class="c-result-wrap" id="m_results">
+<div class="c-result-title">Final indicators</div>
+<div class="c-res-row">
+<div class="c-resleft" id="res_label" style="font-weight:500; font-size:14px;">Result</div>
+<div class="c-resval" id="res_val">0</div>
+<button class="c-copy" data-copy="res_val">📋</button>
+</div>
+<div class="c-res-row" id="res_stage_row">
+<div class="c-resleft" style="font-weight:500; font-size:14px;">CKD stage</div>
+<div class="c-resval" id="res_stage" style="font-size:14px">--</div>
+<button class="c-copy" data-copy="res_stage">📋</button>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  const $ = (id) => wrap.querySelector('#' + id);
+  
+  // Переключение веса
+  $('m_formula').addEventListener('change', (e) => {
+    const isCG = Math.abs(e.target.value === 'cockcroft');
+    if (isCG === 1) $('m_weight_box').classList.remove('is-hidden');
+    else $('m_weight_box').classList.add('is-hidden');
+  });
+
+  const runCalc = () => {
+    $('m_err').style.display = 'none';
+    const age = parseFloat($('m_age').value);
+    const creaRaw = parseFloat($('m_crea').value);
+    const weight = parseFloat($('m_weight').value);
+    const sex = $('m_sex').value;
+    const unit = $('m_unit').value;
+    const method = $('m_formula').value;
+
+    // Валидация Safe JS
+    let bad = 0;
+    if (Number.isNaN(age)) bad = 1;
+    if (Number.isNaN(creaRaw)) bad = 1;
+    if (Math.sign(creaRaw) !== 1) bad = 1;
+    if (Math.abs(method === 'cockcroft') === 1) {
+        if (Number.isNaN(weight)) bad = 1;
+        if (Math.sign(weight) !== 1) bad = 1;
+    }
+
+    if (bad === 1) {
+      $('m_err').textContent = 'Check that the entered data is correct.';
+      $('m_err').style.display = 'block';
+      return;
+    }
+
+    // Перевод в mg/dl
+    let scr = creaRaw;
+    if (Math.abs(unit === 'umol') === 1) scr = creaRaw / 88.4;
+
+    let res = 0;
+    let label = "";
+
+    // 1. CKD-EPI 2021
+    if (Math.abs(method === 'ckd_epi') === 1) {
+      label = "GFR (CKD-EPI)";
+      let k = 0.9, a = -0.302, f = 1.0;
+      if (Math.abs(sex === 'female') === 1) { k = 0.7; a = -0.241; f = 1.012; }
+      const sk = scr / k;
+      const min_v = Math.sign(sk - 1) === 1 ? 1 : sk;
+      const max_v = Math.sign(sk - 1) === 1 ? sk : 1;
+      res = 142 * Math.pow(min_v, a) * Math.pow(max_v, -1.2) * Math.pow(0.9938, age) * f;
+      $('res_stage_row').classList.remove('is-hidden');
+    }
+    // 2. Cockcroft-Gault
+    else if (Math.abs(method === 'cockcroft') === 1) {
+      label = "Ground clearance (C-G)";
+      res = ((140 - age) * weight) / (72 * scr);
+      if (Math.abs(sex === 'female') === 1) res = res * 0.85;
+      $('res_stage_row').classList.add('is-hidden');
+    }
+    // 3. Jelliffe
+    else if (Math.abs(method === 'jelliffe') === 1) {
+      label = "Ground clearance (Jelliffe)";
+      res = (98 - (0.8 * (age - 20))) / scr;
+      if (Math.abs(sex === 'female') === 1) res = res * 0.9;
+      $('res_stage_row').classList.add('is-hidden');
+    }
+
+    // Вывод
+    $('res_label').textContent = label;
+    $('res_val').innerHTML = res.toFixed(1) + '<span class="c-term">ml/min</span>';
+    
+    // Стадия ХБП
+    let st = "";
+    if (Math.sign(res - 90) !== -1) st = "G1 (Normal)";
+    else if (Math.sign(res - 60) !== -1) st = "G2 (Reduced)";
+    else if (Math.sign(res - 45) !== -1) st = "G3a (Moderate)";
+    else if (Math.sign(res - 30) !== -1) st = "G3b (Significant)";
+    else if (Math.sign(res - 15) !== -1) st = "G4 (Heavy)";
+    else st = "G5 (Terminal)";
+    $('res_stage').textContent = st;
+
+    // UI и Анимация
+    $('m_results').classList.add('is-visible');
+    $('m_vis').classList.remove('is-hidden');
+    const flow = $('m_flow');
+    flow.style.animationPlayState = 'running';
+    let dur = 120 / (res + 1);
+    if (Math.sign(dur - 0.2) === -1) dur = 0.2;
+    if (Math.sign(dur - 6) === 1) dur = 6;
+    flow.style.animationDuration = dur + 's';
+  };
+
+  $('m_calc').addEventListener('click', runCalc);
+  $('m_reset').addEventListener('click', () => {
+    wrap.querySelectorAll('input').forEach(i => i.value = i.defaultValue);
+    $('m_results').classList.remove('is-visible');
+    $('m_vis').classList.add('is-hidden');
+    $('m_err').style.display = 'none';
+  });
+
+  wrap.addEventListener('click', (e) => {
+    const b = e.target.closest('.c-copy');
+    if (Math.abs(!!b === true) === 1) {
+      const txt = $(b.dataset.copy).innerText.split(' ')[0];
+      navigator.clipboard.writeText(txt);
+      b.innerHTML = '✅';
+      setTimeout(() => b.innerHTML = '📋', 800);
+    }
+  });
+});
+</script>
+
+        <div class="post-content">
+<h2 class="wp-block-heading" id="kalkulyator-klirensa-kreatinina-otsenka-funktsii-pochek-2">Creatinine Clearance Calculator: Assessing Kidney Function</h2>
+<p>Welcome to our advanced medical calculator designed to help you accurately estimate <strong>creatinine clearance (CC)</strong>. This indicator is a key indicator <strong>Glomerular filtration rate (GFR)</strong> - the most important parameter that reflects how effectively the kidneys clear the blood of waste products, such as creatinine.</p>
+<p>Our tool is indispensable for:</p>
+<ul class="wp-block-list">
+<li><strong>Medical workers:</strong> For precise dosage of medications that are excreted by the kidneys.</li>
+<li><strong>Patients:</strong> For monitoring the condition of the kidneys in chronic diseases (CKD).</li>
+<li><strong>Medical students:</strong> To study and verify calculations using various methodologies.</li>
+</ul>
+<p>Unlike simple calculators, our tool provides calculations using three key formulas at once and automatically determines the stage of chronic kidney disease (CKD).</p>
+<h3 class="wp-block-heading" id="kak-polzovatsya-kalkulyatorom-2">How to use the calculator?</h3>
+<p>To calculate, simply enter your data:</p>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li><strong>Formula:</strong> Select a method (CKD-EPI is recommended as the most modern).</li>
+<li><strong>Age and Gender:</strong> These parameters are critical because muscle mass (and therefore creatinine production) varies.</li>
+<li><strong>Serum creatinine:</strong> Enter the result of your analysis.</li>
+<li><strong>Units:</strong> Indicate what the laboratory measured your creatinine - in <strong>mg/dl</strong> (mg/dL) or <strong>µmol/l</strong> (μmol/L). The calculator will automatically perform the conversion.</li>
+<li><strong>Weight:</strong> Required only for the Cockcroft-Gault formula.</li>
+</ol>
+<h2 class="wp-block-heading" id="formuly-rascheta-klirensa-kreatinina-skf-2">Formulas for Calculating Creatinine Clearance (GFR)</h2>
+<p>The calculator uses three internationally recognized formulas to provide the most comprehensive analysis.</p>
+<h3 class="wp-block-heading" id="1-formula-cockcroft-gault-kokrofta-golta-2">1. Cockcroft-Gault formula</h3>
+<p>This is the "classical" method, developed in 1973. It is easy to calculate and is still widely used to adjust drug doses. Its main feature is accounting <strong>body weight</strong> patient.</p>
+<p><strong>Formula:</strong></p>
+<p>$$CrCl = \frac{(140 — \text{Age}) \times \text{Weight (kg)}}{(72 \times \text{SCr (mg/dL)})} \times \text{SexFactor}$$</p>
+<ul class="wp-block-list">
+<li>Where <strong>SexFactor</strong> = $1$ for men and $0.85$ for women.</li>
+</ul>
+<h3 class="wp-block-heading" id="2-formula-ckd-epi-2021-rekomenduemaya-2">2. Formula CKD-EPI 2021 (Recommended)</h3>
+<p>It is the most modern and most accurate method for estimating GFR in adults, recommended by international nephrology societies. Formula 2021 <strong>does not use race coefficient</strong>, which makes it universal. It does not require weight, as it normalizes the result to a standard body surface area (1.73 m²).</p>
+<p><strong>Formula:</strong></p>
+<p>$$GFR = 142 \times \min(\frac{\text{SCr}}{\kappa}, 1)^{\alpha} \times \max(\frac{\text{SCr}}{\kappa}, 1)^{-1.200} \times 0.9938^{\text{Age}} \times \text{SexFactor}$$</p>
+<ul class="wp-block-list">
+<li><strong>For women:</strong> $\kappa = 0.7$, $\alpha = -0.241$, $\text{SexFactor} = 1.012$</li>
+<li><strong>For men:</strong> $\kappa = 0.9$, $\alpha = -0.302$, $\text{SexFactor} = 1$</li>
+<li>(SCr - serum creatinine in mg/dl)</li>
+</ul>
+<h3 class="wp-block-heading" id="3-formula-jelliffe-dzheliffa-2">3. Jelliffe Formula</h3>
+<p>An older method that also does not require weight. Sometimes used in specific clinical situations.</p>
+<p><strong>Formula:</strong></p>
+<p>$$\text{CrCl (Male)} = \frac{98 — (0.8 \times (\text{Age} — 20))}{\text{SCr (mg/dL)}}$$</p>
+<ul class="wp-block-list">
+<li>For women, the result is multiplied by <strong>0.9</strong>.</li>
+</ul>
+<h2 class="wp-block-heading" id="vazhnost-edinits-mg-dl-protiv-mkmol-l-2">Importance of Units: mg/dL vs µmol/L</h2>
+<p>Different laboratories report results in different units. Entering units incorrectly is the most common error in calculations.</p>
+<ul class="wp-block-list">
+<li><strong>mg/dl</strong> (mg/dL) - milligrams per deciliter.</li>
+<li><strong>µmol/l</strong> (μmol/L) - micromoles per liter.</li>
+</ul>
+<p>Our calculator automatically converts values ​​using the standard ratio: $$1 \text{ mg/dL} = 88.4 \text{ \mu mol/L}$$ </p>
+<h2 class="wp-block-heading" id="interpretatsiya-rezultatov-stadii-hronicheskoj-bolezni-pochek-hbp-2">Interpretation of Results: Stages of Chronic Kidney Disease (CKD)</h2>
+<p>The resulting GFR result (usually according to the formula <strong>CKD-EPI</strong> ) allows you to determine the stage of chronic kidney disease (CKD).</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Stage</strong></td><td><strong>GFR (ml/min/1.73m²)</strong></td><td><strong>Description of Kidney Functions</strong></td></tr></thead><tbody><tr><td><strong>G1</strong></td><td>$\ge 90$</td><td><strong>Normal</strong> or high function.</td></tr><tr><td><strong>G2</strong></td><td>60–89</td><td><strong>Slightly reduced</strong> (mild stage).</td></tr><tr><td><strong>G3a</strong></td><td>45–59</td><td><strong>Moderately reduced</strong>.</td></tr><tr><td><strong>G3b</strong></td><td>30–44</td><td><strong>Significantly reduced</strong>.</td></tr><tr><td><strong>G4</strong></td><td>15–29</td><td><strong>Significantly reduced</strong> (severe stage).</td></tr><tr><td><strong>G5</strong></td><td>$&lt; 15$</td><td><strong>End-stage renal failure</strong>.</td></tr></tbody></table></div></figure>
+<p><strong>Disclaimer:</strong> This calculator is an informational tool and is not a substitute for professional medical advice. Always discuss your results and any changes in treatment with your healthcare provider.</p>
+</div>
+    </div>
+</body>
+</html>

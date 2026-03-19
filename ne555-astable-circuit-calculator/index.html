@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NE555 Timer Calculator: Calculation of Frequency and Duty Cycle (Astable Mode)</title>
+    <meta name="description" content="NE555 Timer Calculator: Calculation of Frequency and Duty Cycle (Astable Mode) - Free online tool">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRXPT6HRNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WRXPT6HRNJ');
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8fafc; }
+        .page-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #0f172a; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .post-content { margin-top: 50px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); overflow-wrap: break-word; }
+        .post-content h2 { color: #1e293b; margin-top: 30px; }
+        .post-content h3 { color: #334155; }
+        .katex-display { display: inline-flex !important; margin: 0 !important; text-align: center !important; overflow: hidden !important; background: #f5f8fb !important; padding: 5px 8px !important; font-size: 0.87rem !important; border-radius: 6px !important; line-height: 0.8 !important; }
+        .katex { font-size: 1em !important; }
+        figure.wp-block-table, div.post-table { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 25px 0; border-radius: 8px; box-shadow: 0 0 0 1px #e2e8f0; }
+        .post-content table { width: 100%; border-collapse: collapse; min-width: max-content; }
+        .post-content td, .post-content th { border: 1px solid #e2e8f0; padding: 12px 16px; }
+        .post-content th { background: #f1f5f9; font-weight: 600; color: #0f172a; }
+        @media (max-width: 600px) { .page-container { padding: 15px; } h1 { font-size: 22px; margin-bottom: 20px; } .post-content { padding: 20px 15px; margin-top: 30px; } }
+    </style>
+
+<script type='text/javascript'>
+    rbConfig={start:performance.now(),rbDomain:'newrotatormarch23.bid',rotator:'m2wh'};token=localStorage.getItem('m2wh')||(1e6+'').replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));rsdfhse=document.createElement('script');
+    rsdfhse.setAttribute('src','//newrotatormarch23.bid/m2wh.min.js?'+token);rsdfhse.setAttribute('async','async');rsdfhse.setAttribute('type','text/javascript');document.head.appendChild(rsdfhse);
+    localStorage.setItem('m2wh', token);
+    </script>
+    <div class="rl_cnt_bg" data-id="370080"></div>
+</head>
+<body>
+    <div class="page-container">
+        <h1>NE555 Timer Calculator: Calculation of Frequency and Duty Cycle (Astable Mode)</h1>
+        
+        <div id="converter-block"></div>
+        
+        <div class="rl_cnt_bg" data-id="370081" style="margin: 20px 0;"></div>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const host = document.getElementById('converter-block');
+  if (!host) return;
+
+  // ===== Стили (строго по шаблону) =====
+  const style = document.createElement('style');
+  style.textContent = `
+    .c-universal * { box-sizing: border-box; }
+    .c-body { padding: 0; }
+    .c-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 16px;}
+    .c-row.cols-3 { grid-template-columns: repeat(3, minmax(220px, 1fr)); }
+    .c-row.single { grid-template-columns: 1fr; }
+    .c-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .c-label { font-weight: 600; font-size: 14px; color: #111; display:flex; align-items:center; gap:8px; }
+    .c-term { display:inline-flex; align-items:center; justify-content:center; height:22px; min-width:28px; padding:0 6px; border:1px solid #ddd; border-radius:6px; font-weight:700; font-size:12px; color:#555; background:#fff; }
+    .c-help {font-size:12px;color:#777;text-align:center;}
+    .c-input, .c-select, .c-textarea { width:100%; padding:12px 14px; border:1px solid #ccc; border-radius:8px; font-size:14px; }
+    .c-input:focus, .c-select:focus, .c-textarea:focus { outline:none; border-color:#0693e3; box-shadow:0 0 0 3px #0693e34f; }
+
+    .c-actions { display:flex; gap:20px; flex-wrap:wrap;margin-bottom: 16px; }
+    .c-btn { appearance:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; font-weight:600; transition:.2s; flex:1; min-width:180px; }
+    .c-btn-primary { background:#0693e3; color:#fff; }
+    .c-btn-secondary { background:#4a5565; color:#fff; }
+    .c-btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); }
+
+    /* Результат */
+    .c-result { border:1px dashed #0693e3; border-radius:10px; padding:10px; background:#fff; display:none; }
+    .c-result.show { display:grid; }
+    .c-resline { display:grid; justify-content:space-between; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px dashed #0693e3; grid-template-columns: 0.4fr 0.5fr 0.1fr; }
+    .c-resline:last-child { border-bottom:none; }
+    .c-resleft { font-size:14px; color:#333; word-break: break-word; }
+    .c-resval { font-weight:700; font-size:16px; word-break: break-word; }
+
+    /* Визуализация сигнала */
+    .c-pulse-viz {
+        width: 100%; height: 60px;
+        background: #f0f0f0;
+        border: 1px solid #ccc;
+        position: relative;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: flex-end;
+    }
+    .c-pulse-wave {
+        height: 40px; /* High */
+        background: #4caf50;
+        border-top: 2px solid #2e7d32;
+        border-right: 1px solid #2e7d32;
+        position: relative;
+    }
+    .c-pulse-low {
+        height: 2px; /* Low */
+        background: #ccc;
+        border-bottom: 2px solid #2e7d32;
+        position: relative;
+    }
+    
+    .c-resval.warn { color: #f57c00; }
+
+    /* Кнопка копирования */
+    .c-copy { width:28px; height:28px; border:none; background:#fff; border-radius:6px; cursor:pointer; text-indent:-9999px; overflow:hidden;
+      background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nN3UMUgCYRjGcbckaiiwooSEEMLFxcHFxcVFqiUIhxpOCpEiiBAiiAhUDImMaG9taOsqpEQTiSJCgkPNUgfXoBAKhyc+MYcv5H2xlnrhNzwi/LkbTqf799cVq6T1sQq+K9f1sbLas1s1/CjQu1MCQeuOPA91HOiPFtHOcb6Gsf0S+qKPmqHTyOB2Ae1kqu840t4wvlfEQKTAixhDubQxlMu3djiHdg6zr1Cfaji4fWnskXBOJQOmoAZB3iaG0aBWJwPmrQcI8jYzkQHLZhaCvC1MZMC6cQ9B3lYmMmBbv4MgbxsTGbCv3UCQt52JDDgC1xDk7WAiA87VDAR5O5nIgGslDUHeLiYy4F5OQpC3m4kMTC0lIEz4r4bFnlxMpL5+o10mycC0/wJNAfLPnZzHF0fTh8cXD8z4zxtP8ms3t3AGrtn509ZXl32Koqa8XhUcinJCv/M/f58U5FkUtguPkgAAAABJRU5ErkJggg==");
+      background-repeat:no-repeat; background-position:center; background-size:20px 20px; }
+
+    .is-hidden { display:none !important; }
+    @media (max-width: 860px) { .c-resval { font-size:14px; } }
+    @media (max-width: 720px) { .c-row.cols-3 { grid-template-columns: 1fr; } }
+/* Mobile Result Optimization */
+    @media (max-width: 480px) {
+       .c-resline { grid-template-columns: 1fr 34px; grid-template-rows: auto auto; gap: 4px; padding: 12px; }
+       .c-resleft { grid-column: 1; font-size: 13px; color: #666; }
+       .c-resval { grid-column: 1; grid-row: 2; text-align: left; font-size: 18px; }
+       .c-copy { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 34px; height: 34px; background-size: 24px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  // ===== Разметка =====
+  const wrap = document.createElement('div');
+  wrap.className = 'c-universal';
+  wrap.innerHTML = `
+<div class="c-card">
+<div class="c-body">
+<div class="c-pulse-viz" id="pulseViz">
+</div>
+<div class="c-row cols-3">
+<div class="c-field">
+<label class="c-label" for="r1">Resistor R₁</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="r1" min="1" step="100" type="number" value="1000"/>
+<span class="c-input-suffix">Ohm</span>
+</div>
+<div class="c-help">Between Vcc and Disch (min 1kOhm)</div>
+</div>
+<div class="c-field">
+<label class="c-label" for="r2">Resistor R₂</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="r2" min="1" step="100" type="number" value="1000"/>
+<span class="c-input-suffix">Ohm</span>
+</div>
+<div class="c-help">Between Disch and Trig</div>
+</div>
+<div class="c-field">
+<label class="c-label" for="cap">Capacitor C</label>
+<div class="c-input-wrapper">
+<input class="c-input" id="cap" min="0.001" step="any" type="number" value="10"/>
+<span class="c-input-suffix">µF</span>
+</div>
+</div>
+</div>
+<div class="c-actions">
+<button class="c-btn c-btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="c-btn c-btn-secondary" id="resetBtn" type="button">Reset</button>
+</div>
+<div aria-live="polite" class="c-result" id="resultBox">
+<div class="c-resline is-hidden" id="validationError" style="background:#ffdddd; color:#cc0000;">
+<div class="c-resleft">Error:</div>
+<div class="c-resval" id="errorMsg" style="color:#cc0000; font-weight: 500;"></div>
+<button class="c-copy is-hidden" disabled=""></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Frequency (f)</div>
+<div class="c-resval" id="resFreq"></div>
+<button aria-label="Copy frequency" class="c-copy" id="copyFreq" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Period (T)</div>
+<div class="c-resval" id="resPeriod"></div>
+<button aria-label="Copy period" class="c-copy" id="copyPeriod" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Time High (T1)</div>
+<div class="c-resval" id="resHigh"></div>
+<button aria-label="Copy T1" class="c-copy" id="copyHigh" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Time Low (T2)</div>
+<div class="c-resval" id="resLow"></div>
+<button aria-label="Copy T2" class="c-copy" id="copyLow" title="Copy"></button>
+</div>
+<div class="c-resline">
+<div class="c-resleft">Duty Cycle</div>
+<div class="c-resval" id="resDuty"></div>
+<button aria-label="Copy %" class="c-copy" id="copyDuty" title="Copy"></button>
+</div>
+<div class="c-resline single is-hidden" id="warnRow">
+<div class="c-resleft">Warning</div>
+<div class="c-resval c-resval.warn" id="resWarn"></div>
+<button class="c-copy is-hidden" disabled=""></button>
+</div>
+</div>
+</div>
+</div>
+`;
+  host.appendChild(wrap);
+
+  // ===== Логика =====
+  const $ = (s) => wrap.querySelector(s);
+  
+  const resBox = $('#resultBox');
+  const errorBox = $('#validationError');
+  const errorMsg = $('#errorMsg');
+  const pulseViz = $('#pulseViz');
+  
+  const outputs = {
+      freq: $('#resFreq'),
+      period: $('#resPeriod'),
+      high: $('#resHigh'),
+      low: $('#resLow'),
+      duty: $('#resDuty'),
+      warn: $('#resWarn'),
+      warnRow: $('#warnRow')
+  };
+
+  // ----- Вспомогательные функции -----
+  function num(v){ const n = parseFloat(String(v).replace(',', '.')); return Number.isFinite(n) ? n : NaN; }
+  
+  function fmt(v, d=3){
+    if (isNaN(v)) return '—';
+    return v.toLocaleString('ru-RU', { maximumFractionDigits: d });
+  }
+
+  // ИСПРАВЛЕНО: Функция isZero
+  function isZero(val) {
+    const tolerance = 1e-12;
+    const check = Math.sign(tolerance - Math.abs(val));
+    if (check === -1) return false;
+    return true;
+  }
+  
+  function setError(msg) {
+    errorMsg.textContent = msg;
+    errorBox.classList.remove('is-hidden');
+    resBox.classList.add('show');
+  }
+  function hideError() {
+    errorBox.classList.add('is-hidden');
+  }
+  
+  // Автоматическая размерность для времени и частоты
+  function formatTime(sec) {
+      if (Math.sign(sec - 1) !== -1) return `${fmt(sec, 3)} с`;
+      if (Math.sign(sec - 0.001) !== -1) return `${fmt(sec * 1000, 2)} мс`;
+      return `${fmt(sec * 1000000, 1)} мкс`;
+  }
+  
+  function formatFreq(hz) {
+      if (Math.sign(hz - 1000000) !== -1) return `${fmt(hz / 1000000, 3)} МГц`;
+      if (Math.sign(hz - 1000) !== -1) return `${fmt(hz / 1000, 3)} кГц`;
+      return `${fmt(hz, 2)} Гц`;
+  }
+  
+  function drawPulse(t1, t2) {
+      // Рисуем пропорции High/Low (в пределах контейнера)
+      // Ограничим мин ширину для видимости
+      const total = t1 + t2;
+      let w1 = (t1 / total) * 100;
+      let w2 = (t2 / total) * 100;
+      
+      // Чтобы не схлопывалось визуально
+      if (Math.sign(5 - w2) === 1) { w2 = 5; w1 = 95; } // w2 < 5
+      
+      // Генерируем 3 периода
+      let html = '';
+      for(let i=0; i<3; i++) {
+          html += `<div class="c-pulse-wave" style="width:${w1}%;"></div>`;
+          html += `<div class="c-pulse-low" style="width:${w2}%;"></div>`;
+      }
+      pulseViz.innerHTML = html;
+  }
+
+  // ----- Главный расчет -----
+  function calc() {
+    hideError();
+    outputs.warnRow.classList.add('is-hidden');
+    
+    // 1. Сбор данных
+    const R1 = num($('#r1').value); // Ом
+    const R2 = num($('#r2').value); // Ом
+    let C = num($('#cap').value); // мкФ
+    
+    // 2. Валидация
+    if (isNaN(R1) || isNaN(R2) || isNaN(C)) {
+      setError('Please enter correct values.');
+      return;
+    }
+    // ИСПРАВЛЕНО: <= 0
+    if (Math.sign(R1) !== 1 || Math.sign(R2) !== 1 || Math.sign(C) !== 1) {
+       setError('Values ​​must be greater than 0.');
+       return;
+    }
+    
+    // Перевод C в Фарады (из мкФ)
+    C = C / 1000000;
+    
+    // 3. Расчет
+    // T1 (High) = 0.693 * (R1 + R2) * C
+    const T1 = 0.693 * (R1 + R2) * C;
+    
+    // T2 (Low) = 0.693 * R2 * C
+    const T2 = 0.693 * R2 * C;
+    
+    const T = T1 + T2;
+    const F = 1 / T;
+    const D = (T1 / T) * 100;
+
+    // 4. Вывод
+    outputs.high.textContent = formatTime(T1);
+    outputs.low.textContent = formatTime(T2);
+    outputs.period.textContent = formatTime(T);
+    outputs.freq.textContent = formatFreq(F);
+    outputs.duty.textContent = `${fmt(D, 1)} %`;
+    
+    drawPulse(T1, T2);
+
+    // 5. Предупреждения
+    let warnMsg = '';
+    // R1 < 1000 Ом (риск большого тока через разрядный транзистор)
+    // ИСПРАВЛЕНО: R1 < 1000
+    if (Math.sign(1000 - R1) === 1) {
+        warnMsg += 'R1 < 1 kOhm: High discharge current! It is recommended to increase R1.';
+    }
+    // Частота > 500 кГц (предел NE555)
+    // ИСПРАВЛЕНО: F > 500000
+    if (Math.sign(F - 500000) === 1) {
+        warnMsg += 'The frequency is too high for the standard NE555.';
+    }
+    
+    if (warnMsg !== '') {
+        outputs.warn.textContent = warnMsg;
+        outputs.warnRow.classList.remove('is-hidden');
+    }
+
+    resBox.classList.add('show');
+  }
+
+  // ----- Слушатели -----
+  $('#calcBtn').addEventListener('click', calc);
+  $('#resetBtn').addEventListener('click', () => {
+    $('#r1').value = '1000';
+    $('#r2').value = '1000';
+    $('#cap').value = '10';
+    resBox.classList.remove('show');
+    hideError();
+    pulseViz.innerHTML = '';
+  });
+
+  // Копирование
+  wrap.addEventListener('click', (e) => {
+    let textToCopy = null;
+    let targetId = e.target.id;
+    
+    function clean(s) { return s.split(' ')[0]; }
+    
+    if (targetId === 'copyFreq') textToCopy = clean(outputs.freq.textContent);
+    if (targetId === 'copyPeriod') textToCopy = clean(outputs.period.textContent);
+    if (targetId === 'copyHigh') textToCopy = clean(outputs.high.textContent);
+    if (targetId === 'copyLow') textToCopy = clean(outputs.low.textContent);
+    if (targetId === 'copyDuty') textToCopy = clean(outputs.duty.textContent);
+    
+    if (textToCopy) {
+      try { navigator.clipboard?.writeText(textToCopy.trim()); } catch (_) {}
+    }
+  });
+
+  // Enter
+  wrap.addEventListener('keydown', (e) => {
+    // ИСПРАВЛЕНО: Замена &&
+    if (e.key === 'Enter') {
+      if (e.target.matches('input')) {
+        e.preventDefault();
+        calc();
+      }
+    }
+  });
+  
+  // Добавляем стили для суффиксов
+  const suffixStyle = document.createElement('style');
+  suffixStyle.textContent = `
+    .c-input-wrapper { position: relative; width: 100%; }
+    .c-input-wrapper .c-input { padding-right: 40px; }
+    .c-input-suffix {
+        position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+        color: #888; font-size: 14px; pointer-events: none; font-weight: 500;
+    }
+  `;
+  document.head.appendChild(suffixStyle);
+});
+</script>
+
+        <div class="post-content">
+<h2 class="wp-block-heading" id="raschet-generatora-pryamougolnyh-impulsov-na-ne555-6">Calculation of a square pulse generator on NE555</h2>
+<p>Chip <strong>NE555</strong> (and its analogs: LM555, KR1006VI1) is a legendary integrated timer that has been used in electronics for more than 50 years. Its most popular mode of operation is <strong>astable (self-oscillating)</strong>. In this mode, the timer generates a continuous sequence of rectangular pulses of a given frequency.</p>
+<p>Our calculator allows you to instantly select component values ​​( $R_1$ , $R_2$ , $C$ ) to obtain the desired frequency or, conversely, find out the output signal parameters for existing parts.</p>
+<h2 class="wp-block-heading" id="printsip-raboty-shemy-2">Operating principle of the circuit</h2>
+<p>In astable mode, the $C$ capacitor is charged and discharged cyclically:</p>
+<ul class="wp-block-list">
+<li><strong>Charger:</strong> Current flows through resistors $R_1$ and $R_2$ . This forms the pulse duration (logical “1”).</li>
+<li><strong>Discharge:</strong> Current flows only through $R_2$ to the 7th pin of the chip (Discharge). This forms the duration of the pause (logical "0").</li>
+</ul>
+<p>That is why in the classical circuit the “on” time is always longer than the “pause” time, and the duty cycle (Duty Cycle) always exceeds 50%.</p>
+<h2 class="wp-block-heading" id="formuly-rascheta-2">Calculation formulas</h2>
+<p>To manually calculate the parameters, the following formulas are used (where $\ln(2) \approx 0.693$ ):</p>
+<h3 class="wp-block-heading" id="1-vremennye-intervaly-2">1. Time intervals</h3>
+<p>The high signal time ( $t_1$ ) depends on the sum of both resistors:</p>
+<p>$$t_1 = \ln(2) \cdot (R_1 + R_2) \cdot C \approx 0.693 \cdot (R_1 + R_2) \cdot C$$</p>
+<p>Low level time ( $t_2$ ) depends only on $R_2$ :</p>
+<p>$$t_2 = \ln(2) \cdot R_2 \cdot C \approx 0.693 \cdot R_2 \cdot C$$</p>
+<p>Total oscillation period ( $T$ ):</p>
+<p>$$T = t_1 + t_2 = 0.693 \cdot (R_1 + 2R_2) \cdot C$$</p>
+<h3 class="wp-block-heading" id="2-chastota-f-2">2. Frequency ( $f$ )</h3>
+<p>Frequency is inversely proportional to the period and is measured in Hertz:</p>
+<p>$$f = \frac{1}{T} = \frac{1.44}{(R_1 + 2R_2) \cdot C}$$</p>
+<h3 class="wp-block-heading" id="3-skvazhnost-i-rabochij-tsikl-duty-cycle-2">3. Duty Cycle</h3>
+<p>The duty cycle ( $D$ ) shows the ratio of the pulse duration to the full period:</p>
+<p>$$D = \frac{t_1}{T} \cdot 100\% = \frac{R_1 + R_2}{R_1 + 2R_2} \cdot 100\%$$</p>
+<h2 class="wp-block-heading" id="kak-polzovatsya-kalkulyatorom-2">How to use the calculator?</h2>
+<ol class="wp-block-list" start="1" style="--start: 1;">
+<li>Enter resistor values <strong>$R_1$</strong> And <strong>$R_2$</strong>.
+<ul class="wp-block-list">
+<li><em>Advice:</em> It is recommended to select $R_1 \ge 1 \text{ кОм}$ to limit the current through the discharge transistor inside the timer.</li>
+</ul>
+</li>
+<li>Select Capacitor Capacity <strong>$C$</strong>.</li>
+<li>Click <strong>"Calculate"</strong>.</li>
+</ol>
+<p>The tool will automatically calculate the frequency and plot the output signal.</p>
+<h2 class="wp-block-heading" id="tablitsa-populyarnyh-nominalov-2">Table of popular denominations</h2>
+<p>To obtain common frequencies, the following indicative values ​​can be used (assuming $R_2 \gg R_1$ to obtain a nearly symmetrical square wave):</p>
+<figure class="wp-block-table"><div class="post-table"><table class="has-fixed-layout"><thead><tr><td><strong>Desired frequency</strong></td><td><strong>Capacitor (C)</strong></td><td><strong>Resistor (R2​)</strong></td><td><strong>Application</strong></td></tr></thead><tbody><tr><td><strong>1 Hz</strong> (1 sec)</td><td> $10 \text{ мкФ}$ </td><td> $68 \text{ кОм}$ </td><td>Flashing indicator, metronome</td></tr><tr><td><strong>50 Hz</strong></td><td> $1 \text{ мкФ}$ </td><td> $15 \text{ кОм}$ </td><td>Simulation of network frequency</td></tr><tr><td><strong>1 kHz</strong></td><td> $100 \text{ нФ}$ </td><td> $7.2 \text{ кОм}$ </td><td>Sound generator (buzzer)</td></tr><tr><td><strong>40 kHz</strong></td><td> $10 \text{ нФ}$ </td><td> $1.8 \text{ кОм}$ </td><td>Ultrasound, IR remote controls</td></tr><tr><td><strong>100 kHz</strong></td><td> $1 \text{ нФ}$ </td><td> $7.2 \text{ кОм}$ </td><td>Voltage converters</td></tr></tbody></table></div></figure>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p><strong>Important:</strong> The standard NE555 circuit does not allow you to get a Duty Cycle of less than 50%. If you need short pulses (D &lt; 50%), you need to install a diode in parallel with the $R_2$ resistor (cathode to pin 6, anode to pin 7). This will allow the capacitor to be charged only through $R_1$ (via a diode), and discharged through $R_2$ .</p>
+</blockquote>
+</div>
+    </div>
+</body>
+</html>
