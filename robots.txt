@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://calccool.github.io/calculator/sitemap.xml
